@@ -6,23 +6,23 @@ import setupIntegration from "setupIntegration" /* 7794 */;
 
 export const generateIteratee = function generateIteratee(arg0) {
   ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (filename) => {
-    if (filename.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(filename.filename);
+  return (root) => {
+    if (root.filename) {
+      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
       if (!isMatch) {
-        filename = filename.filename;
+        let filename = root.filename;
         let hasItem = filename.includes("\\");
         if (hasItem) {
-          const filename2 = filename.filename;
+          const filename2 = root.filename;
           hasItem = !filename2.includes("/");
         }
         isMatch = hasItem;
       }
       if (fn) {
         if (root) {
-          filename = filename.filename;
-          if (0 === filename.indexOf(tmp13)) {
-            filename.filename = filename.replace(tmp13, prefix);
+          filename = root.filename;
+          if (0 === filename.indexOf(root)) {
+            root.filename = filename.replace(root, prefix);
           }
         }
       } else if (isMatch) {
@@ -34,17 +34,16 @@ export const generateIteratee = function generateIteratee(arg0) {
         }
         const obj2 = fn(root[2]);
         if (root) {
-          let relativeResult = obj2.relative(tmp7, replaced);
+          let relativeResult = obj2.relative(root, replaced);
         } else {
           relativeResult = obj2.basename(replaced);
         }
         const _HermesInternal = HermesInternal;
-        filename.filename = "" + prefix + relativeResult;
-        tmp7 = root;
+        root.filename = "" + prefix + relativeResult;
       }
-      return filename;
+      return root;
     } else {
-      return filename;
+      return root;
     }
   };
 };
@@ -60,24 +59,23 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
   }
   fn = obj.iteratee;
   if (!fn) {
-    fn = tmp3;
-    fn = (filename) => {
-      if (filename.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(filename.filename);
+    fn = (root) => {
+      if (root.filename) {
+        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
         if (!isMatch) {
-          filename = filename.filename;
+          let filename = root.filename;
           let hasItem = filename.includes("\\");
           if (hasItem) {
-            const filename2 = filename.filename;
+            const filename2 = root.filename;
             hasItem = !filename2.includes("/");
           }
           isMatch = hasItem;
         }
         if (fn) {
           if (root) {
-            filename = filename.filename;
-            if (0 === filename.indexOf(tmp13)) {
-              filename.filename = filename.replace(tmp13, prefix);
+            filename = root.filename;
+            if (0 === filename.indexOf(root)) {
+              root.filename = filename.replace(root, prefix);
             }
           }
         } else if (isMatch) {
@@ -89,17 +87,16 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
           }
           const obj2 = fn(root[2]);
           if (root) {
-            let relativeResult = obj2.relative(tmp7, replaced);
+            let relativeResult = obj2.relative(root, replaced);
           } else {
             relativeResult = obj2.basename(replaced);
           }
           const _HermesInternal = HermesInternal;
-          filename.filename = "" + prefix + relativeResult;
-          tmp7 = root;
+          root.filename = "" + prefix + relativeResult;
         }
-        return filename;
+        return root;
       } else {
-        return filename;
+        return root;
       }
     };
   }
@@ -120,12 +117,12 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
             obj = {};
             let merged1 = Object.assign(exception.exception);
             const values = exception.exception.values;
-            obj.values = values.map((stacktrace) => {
+            obj.values = values.map((item, index) => {
               let obj = {};
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
+              const merged = Object.assign(item);
+              let stacktrace = item.stacktrace;
               if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
+                const stacktrace2 = item.stacktrace;
                 obj = {};
                 const merged1 = Object.assign(stacktrace2);
                 let frames = stacktrace2;
@@ -134,7 +131,7 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
                 }
                 if (frames) {
                   frames = stacktrace2.frames;
-                  frames = frames.map((arg0) => callback(arg0));
+                  frames = frames.map((item, index) => callback(item));
                 }
                 obj = { stacktrace: null, frames };
                 obj[0] = obj;

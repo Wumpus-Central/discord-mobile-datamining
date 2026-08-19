@@ -68,13 +68,10 @@ QRPolynomial.prototype = {
     let num = 0;
     if (0 < this.getLength()) {
       do {
-        let tmp2 = num;
         let num2 = 0;
         if (0 < getLength.getLength()) {
           do {
             let sum = num + num2;
-            let tmp4 = require;
-            let tmp5 = dependencyMap;
             let obj = _mod12383;
             let obj2 = _mod12383;
             let glogResult = obj2.glog(self.get(num));
@@ -132,7 +129,6 @@ QRPolynomial.prototype = {
     if (length - getLength.getLength() < 0) {
       return self;
     } else {
-      const obj4 = _mod12383;
       const glogResult = _mod12383.glog(self.get(0));
       const _Array2 = Array;
       const diff = glogResult - _mod12383.glog(getLength.get(0));
@@ -148,8 +144,6 @@ QRPolynomial.prototype = {
       let num2 = 0;
       if (0 < getLength.getLength()) {
         do {
-          let tmp3 = require;
-          let tmp4 = dependencyMap;
           let obj = _mod12383;
           let obj2 = _mod12383;
           arr[num2] = arr[num2] ^ obj.gexp(obj2.glog(getLength.get(num2)) + diff);
@@ -192,7 +186,6 @@ QRPolynomial.prototype = {
         }
         return obj.mod(getLength);
       }
-      const obj5 = _mod12383;
     }
     length = this.getLength();
   }

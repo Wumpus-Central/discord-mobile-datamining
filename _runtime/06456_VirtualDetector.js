@@ -1,12 +1,12 @@
 // === Module 6456: VirtualDetector ===
 
 // Module 6456 (VirtualDetector)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c3, useEffect: c4, useMemo: c5, useRef: closure_6, useState: error } = noop);
 ({ findNodeHandle: closure_8, Platform } = get_ActivityIndicator);
 
@@ -61,7 +61,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           ({ userSelect: obj[4], touchAction: obj[5], enableContextMenu: obj[6] } = tmp2);
           register(obj);
           return () => {
-            closure_1_2(obj);
+            unregister(obj);
           };
         }
       }
@@ -74,7 +74,6 @@ export const VirtualDetector = function VirtualDetector(children) {
           num2 = -1;
         }
         callback(num2);
-        const tmp4 = callback;
       } else {
         callback(-1);
       }

@@ -1,7 +1,7 @@
 // === Module 1591: NavigationContent ===
 
 // Module 1591 (NavigationContent)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 function NavigationContent(render) {
@@ -24,7 +24,7 @@ export const useComponent = function useComponent(current) {
       const obj = { render: null, children: null };
       obj[0] = current;
       obj[1] = tmp;
-      return closure_1_1(closure_1_2, obj);
+      return <NavigationContent render={null}>{null}</NavigationContent>;
     }
   }).current;
 };

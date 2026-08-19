@@ -17,30 +17,30 @@ arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader
     return tmp3;
   }
 };
-arg5.getBodySize = function getBodySize(json) {
-  if (json) {
+arg5.getBodySize = function getBodySize(size) {
+  if (size) {
     try {
-      if (typeof json === "string") {
-        return encodeUTF8.encodeUTF8(json).length;
+      if (typeof size === "string") {
+        return encodeUTF8.encodeUTF8(size).length;
       } else {
         const _URLSearchParams = URLSearchParams;
-        if (json instanceof URLSearchParams) {
-          return encodeUTF8.encodeUTF8(json.toString()).length;
+        if (size instanceof URLSearchParams) {
+          return encodeUTF8.encodeUTF8(size.toString()).length;
         } else {
           const _FormData = FormData;
-          if (json instanceof FormData) {
-            const tmp = (function _serializeFormData(json) {
-              return new URLSearchParams(json).toString();
-            })(json);
+          if (size instanceof FormData) {
+            const tmp = (function _serializeFormData(size) {
+              return new URLSearchParams(size).toString();
+            })(size);
             return encodeUTF8.encodeUTF8(tmp).length;
           } else {
             const _Blob = Blob;
-            if (json instanceof Blob) {
-              return json.size;
+            if (size instanceof Blob) {
+              return size.size;
             } else {
               const _ArrayBuffer = ArrayBuffer;
-              if (json instanceof ArrayBuffer) {
-                return json.byteLength;
+              if (size instanceof ArrayBuffer) {
+                return size.byteLength;
               }
             }
           }

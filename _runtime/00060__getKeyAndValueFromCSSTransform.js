@@ -13,16 +13,12 @@ arg5.default = function processTransform(str) {
     let match = regExp.exec(str);
     tmp = items;
     while (match) {
-      let tmp2 = _getKeyAndValueFromCSSTransform;
       let tmp3 = match[1];
       str = match[2];
       if (typeof _getKeyAndValueFromCSSTransform !== "function") {
-        let str10 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       let _RegExp = RegExp;
-      let tmp4 = new.target;
-      let tmp5 = new.target;
       let regExp1 = new RegExp(/([+-]?\d+(\.\d+)?)([a-zA-Z]+|%)?/g);
       if ("matrix" === tmp3) {
         let obj = { key: null, value: null };
@@ -35,7 +31,6 @@ arg5.default = function processTransform(str) {
         }
         obj[1] = mapped;
       } else {
-        let tmp24 = regExp1;
         if ("translate" !== tmp3) {
           if ("translate3d" !== tmp3) {
             if ("translateX" !== tmp3) {
@@ -60,7 +55,6 @@ arg5.default = function processTransform(str) {
             }
             if (length) {
               let _Number2 = Number;
-              let tmp8 = match2[3];
               obj1 = { key: null, value: null };
               obj1[0] = tmp3;
               obj1[1] = Number(match2[1]);

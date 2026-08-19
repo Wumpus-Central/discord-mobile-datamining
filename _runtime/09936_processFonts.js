@@ -1,10 +1,12 @@
 // === Module 9936: processFonts ===
 
 // Module 9936 (processFonts)
-const module = arg2;
+import resultDefault from "result" /* 26 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.processFonts = function processFonts(items3) {
-  const fontFamily = module(26).fontFamily;
+  const fontFamily = resultDefault.fontFamily;
   let _process;
   if (fontFamily != null) {
     _process = fontFamily.process;

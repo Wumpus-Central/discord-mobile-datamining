@@ -8,13 +8,9 @@ function flattenStyle(obj) {
       if (Array.isArray(obj)) {
         obj = {};
         for (let num3 = 0; num3 < length; num3 = num3 + 1) {
-          let tmp2 = flattenStyle;
           let tmp3 = flattenStyle(obj[num3]);
-          let tmp4 = num3;
           if (tmp3) {
-            let tmp5 = tmp3;
             for (const key10019 in tmp3) {
-              let tmp6 = key10019;
               obj[key10019] = tmp3[key10019];
               continue;
             }
@@ -45,7 +41,6 @@ export default function DeprecatedStyleSheetPropType(arg0) {
             if (0 < arr.length) {
               do {
                 let arr2 = arr[num3];
-                let tmp5 = num3;
                 let tmp6;
                 if (null !== arr2) {
                   if (typeof arr2 === "object") {
@@ -58,13 +53,9 @@ export default function DeprecatedStyleSheetPropType(arg0) {
                       tmp6 = obj;
                       if (0 < length2) {
                         do {
-                          let tmp7 = closure_1_2;
-                          let tmp8 = closure_1_2(arr2[num4]);
-                          let tmp9 = num4;
+                          let tmp8 = flattenStyle(arr2[num4]);
                           if (tmp8) {
-                            let tmp10 = tmp8;
                             for (const key10029 in tmp8) {
-                              let tmp13 = key10029;
                               obj[key10029] = tmp8[key10029];
                               continue;
                             }
@@ -77,9 +68,7 @@ export default function DeprecatedStyleSheetPropType(arg0) {
                   }
                 }
                 if (tmp6) {
-                  let tmp11 = tmp6;
                   for (const key10032 in tmp6) {
-                    let tmp14 = key10032;
                     obj[key10032] = tmp6[key10032];
                     continue;
                   }

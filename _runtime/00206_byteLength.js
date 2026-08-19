@@ -48,7 +48,6 @@ arg5.toByteArray = function toByteArray(arr) {
     let num14 = 0;
     if (0 < diff) {
       do {
-        let tmp10 = dependencyMap2;
         let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
         let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
         let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
@@ -98,7 +97,6 @@ arg5.fromByteArray = function fromByteArray(arg0) {
       if (sum2 < tmp5) {
         do {
           let sum1 = (arg0[sum2] << 16 & 16711680) + (arg0[sum2 + 1] << 8 & 65280) + (255 & arg0[sum2 + 2]);
-          let tmp7 = dependencyMap;
           let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
           sum2 = sum2 + 3;
         } while (sum2 < tmp5);

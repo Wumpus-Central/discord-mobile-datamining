@@ -1,7 +1,10 @@
 // === Module 13730: ? ===
 
 // Module 13730
+import _mod13674 from "module_13674" /* 13674 */;
 import all from "all" /* 13699 */;
+import defineProperty from "defineProperty" /* 13727 */;
+import text from "text" /* 13731 */;
 
 
 export default (arg0, arg1, arg2, arg3) => {
@@ -15,13 +18,13 @@ export default (arg0, arg1, arg2, arg3) => {
     name = obj.name;
   }
   if (all(arg2)) {
-    tmp3(13731)(arg2, name, obj);
+    text(arg2, name, obj);
   }
   if (obj.global) {
     if (flag) {
       arg0[arg1] = arg2;
     } else {
-      tmp3(13674)(arg1, arg2);
+      _mod13674(arg1, arg2);
     }
   } else {
     try {
@@ -39,8 +42,8 @@ export default (arg0, arg1, arg2, arg3) => {
         obj[0] = arg2;
         obj[2] = !obj.nonConfigurable;
         obj[3] = !obj.nonWritable;
-        tmp3(13727).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(13727);
+        defineProperty.f(arg0, arg1, obj);
+        const tmp3Result = defineProperty;
       }
     } catch (err) {
     }

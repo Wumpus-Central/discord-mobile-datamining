@@ -4,7 +4,7 @@
 import extractOpacityDefault from "extractOpacity" /* 6577 */;
 import appendTransformPropsDefault from "appendTransformProps" /* 6579 */;
 import _modDef6649 from "module_6649" /* 6649 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { Children } from "noop" /* 19 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
 
@@ -24,11 +24,10 @@ export default function extractGradient(arg0, arg1) {
     }
     const items = [];
     let num7 = 0;
-    if (0 < mapped.length) {
+    if (0 < length) {
       while (true) {
         let props = mapped[num7].props;
         ({ style, offset } = props);
-        let tmp5 = num7;
         if (undefined === offset) {
           let offset2 = style;
           if (style) {
@@ -68,7 +67,6 @@ export default function extractGradient(arg0, arg1) {
           }
           let match = typeof num8 === "string";
           if (typeof num8 === "string") {
-            let tmp27 = closure_5;
             match = num8.match(closure_5);
           }
           if (match) {
@@ -77,21 +75,17 @@ export default function extractGradient(arg0, arg1) {
             let _console = console;
             let _HermesInternal = HermesInternal;
             let warnResult = console.warn("\"" + num8 + "\" is not a valid number or percentage string.");
-            let num10 = 0;
             num9 = 0;
           }
         }
         let tmp10 = stopColor;
         if (stopColor) {
-          let tmp11 = processColor;
           tmp10 = processColor(stopColor);
         }
         if (typeof tmp10 === "number") {
           let _isNaN = isNaN;
           if (!isNaN(num9)) {
             let _Math = Math;
-            let tmp12 = importDefault;
-            let tmp13 = dependencyMap;
             let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacityDefault(stopOpacity)) << 24];
             let arr = items.push(items1);
           }
@@ -99,11 +93,6 @@ export default function extractGradient(arg0, arg1) {
         }
         let _console2 = console;
         let _HermesInternal2 = HermesInternal;
-        let str7 = "\"";
-        let tmp15 = stopColor;
-        let str8 = "\" is not a valid color or \"";
-        let tmp16 = offset;
-        let str9 = "\" is not a valid offset";
         let warnResult1 = console.warn("\"" + stopColor + "\" is not a valid color or \"" + offset + "\" is not a valid offset");
       }
     }

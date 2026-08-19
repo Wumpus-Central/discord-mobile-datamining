@@ -28,12 +28,12 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
       if (null == arg0) {
         if (ref.current.length > 0) {
           let current = tmp3.current;
-          const item = current.forEach((arg0) => arg0());
+          const item = current.forEach((item, index) => item());
           tmp3.current = [];
         }
       } else {
-        const item1 = closure_1_4.forEach((arg0) => {
-          const tmp = arg0(ref);
+        const item1 = set.forEach((item, index) => {
+          const tmp = item(ref);
           if (null != tmp) {
             const current = ref.current;
             current.push(tmp);

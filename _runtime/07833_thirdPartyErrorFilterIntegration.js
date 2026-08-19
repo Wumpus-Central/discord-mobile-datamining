@@ -35,17 +35,17 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
       });
     },
     processEvent(tags) {
-      let obj = lib(closure_1_1[3]);
+      let obj = lib(dependencyMap[3]);
       const framesFromEvent = obj.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
+        let found = framesFromEvent.filter((item, index) => item.filename);
+        mapped = found.map((item, index) => {
+          if (item.module_metadata) {
             const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((str) => str.startsWith(closure_2));
-            let mapped = found.map((arr) => arr.slice(length.length));
+            const keys = Object.keys(item.module_metadata);
+            const found = keys.filter((item, index) => item.startsWith(closure_2));
+            let mapped = found.map((item, index) => item.slice(length.length));
           } else {
             mapped = [];
           }
@@ -58,12 +58,12 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         } else {
           str2 = "every";
         }
-        if (mapped[str2]((arr) => !arr.some((arg0) => {
+        if (mapped[str2]((arr) => !arr.some((item, index) => {
           filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(arg0);
+          return filterKeys.includes(item);
         }))) {
-          if ("drop-error-if-contains-third-party-frames" !== tmp2.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp2.behaviour) {
+          if ("drop-error-if-contains-third-party-frames" !== lib.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== lib.behaviour) {
               obj = {};
               const merged = Object.assign(tags.tags);
               obj.third_party_code = true;

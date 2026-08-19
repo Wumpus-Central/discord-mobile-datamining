@@ -63,7 +63,6 @@ arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forc
       const formatConfigOptions = items(closure_1[0]).resolveFormatConfigOptions(closure_1.list, format);
       obj = {};
       for (const key10015 in arg0) {
-        let tmp5 = key10015;
         obj["$+/-$placeholder." + key10015] = arg0[key10015];
         continue;
       }
@@ -75,12 +74,12 @@ arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forc
         merged = Object.assign(Object.assign({}, formatConfigOptions), { localeMatcher: "lookup" });
       }
       const listFormatter = dataFormatterCache.getListFormatter(obj, merged);
-      return listFormatter.formatToParts(Object.keys(obj)).map((value) => {
-        value = obj[value.value];
+      return listFormatter.formatToParts(Object.keys(obj)).map((item, index) => {
+        let value = obj[item.value];
         if (null === value) {
-          value = value.value;
+          value = item.value;
         }
-        value.value = value;
+        item.value = value;
         return value;
       });
     },

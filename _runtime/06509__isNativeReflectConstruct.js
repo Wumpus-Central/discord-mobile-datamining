@@ -3,16 +3,16 @@
 // Module 6509 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_8 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const TouchableHighlight = arg1;
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -55,7 +55,6 @@ class TouchableHighlight {
     tmp3Result.showUnderlay = () => {
       let obj = lib;
       if (lib.hasPressHandler()) {
-        obj = { extraChildStyle: null, extraUnderlayStyle: null };
         obj = { opacity: null };
         obj[0] = obj.props.activeOpacity;
         obj[0] = obj;
@@ -80,13 +79,13 @@ class TouchableHighlight {
       }
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === lib(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
+      if (arg1 === lib(dependencyMap[9]).TOUCHABLE_STATE.BEGAN) {
         lib.showUnderlay();
       } else {
         if (!tmp3) {
           lib.hideUnderlay();
         }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 = arg1 !== lib(dependencyMap[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== lib(dependencyMap[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };

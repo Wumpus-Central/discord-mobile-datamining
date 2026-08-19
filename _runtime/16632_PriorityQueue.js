@@ -1,7 +1,7 @@
 // === Module 16632: PriorityQueue ===
 
 // Module 16632 (PriorityQueue)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const PriorityQueue = require;
@@ -48,8 +48,8 @@ const items = [
     value: function filter(arg0) {
       closure_0 = arg0;
       const _queue = this._queue;
-      const found = _queue.filter((priority) => priority.priority === priority.priority);
-      return found.map((run) => run.run);
+      const found = _queue.filter((item, index) => item.priority === priority.priority);
+      return found.map((item, index) => item.run);
     }
   },
   {

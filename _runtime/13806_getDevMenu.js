@@ -1,7 +1,7 @@
 // === Module 13806: getDevMenu ===
 
 // Module 13806 (getDevMenu)
-import closure_0 from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 function getDevMenu() {
 

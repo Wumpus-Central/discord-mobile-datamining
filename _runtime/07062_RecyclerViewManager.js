@@ -3,7 +3,7 @@
 // Module 7062 (RecyclerViewManager)
 import _createClassDefault from "_createClass" /* 7051 */;
 import ViewabilityManagerDefault from "ViewabilityManager" /* 7066 */;
-import closure_3 from "_classCallCheck" /* 7050 */;
+import _classCallCheck from "_classCallCheck" /* 7050 */;
 
 const RecyclerViewManager = arg1;
 class RecyclerViewManager {
@@ -539,7 +539,6 @@ const items = [
             const point2 = layoutManager3.getLayout(initialScrollIndex);
             self = self.engagedIndicesTracker;
             self.scrollOffset = self.propsRef.horizontal ? point2.x : point2.y;
-            const tmp2 = self.propsRef.horizontal ? point2.x : point2.y;
           } else {
             const layoutManager = self.layoutManager;
             const point = layoutManager.getLayout(0);
@@ -558,7 +557,7 @@ const items = [
       if (layoutManager) {
         const result = self.applyInitialScrollAdjustment();
         const visibleIndices = self.computeVisibleIndices();
-        self.hasRenderedProgressively = visibleIndices.every((arg0) => layoutManager.getLayout(arg0).isHeightMeasured && layoutManager.getLayout(arg0).isWidthMeasured);
+        self.hasRenderedProgressively = visibleIndices.every((item, index) => layoutManager.getLayout(item).isHeightMeasured && layoutManager.getLayout(item).isWidthMeasured);
         if (self.hasRenderedProgressively) {
           self.isFirstLayoutComplete = true;
         }
@@ -590,13 +589,13 @@ const items = [
   },
   {
     key: "overrideItemLayout",
-    value: function overrideItemLayout(sum, spanSizeInfo, sum, numColumns, extraData) {
+    value: function overrideItemLayout(sum, data, sum, numColumns, extraData) {
       const self = this;
       const propsRef = this.propsRef;
       if (propsRef != null) {
         const overrideItemLayout = propsRef.overrideItemLayout;
         if (overrideItemLayout != null) {
-          overrideItemLayout(spanSizeInfo, self.propsRef.data[sum], sum, self.numColumns, self.propsRef.extraData);
+          overrideItemLayout(data, self.propsRef.data[sum], sum, self.numColumns, self.propsRef.extraData);
         }
       }
     }
@@ -608,6 +607,7 @@ const items = [
         const _console = console;
         console.warn(RecyclerViewManager(7081).WarningMessages.keyExtractorNotDefinedForMVCP);
       }
+      tmp = this.propsRef.onStartReached && !this.propsRef.keyExtractor;
     }
   }
 ];

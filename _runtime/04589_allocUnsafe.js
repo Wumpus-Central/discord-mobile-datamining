@@ -37,16 +37,16 @@ if (_Buffer) {
   allocUnsafe = _Buffer.allocUnsafe;
 }
 
-export default function cloneBuffer(arr) {
+export default function cloneBuffer(copy) {
   if (arg1) {
-    return arr.slice();
+    return copy.slice();
   } else {
     if (allocUnsafe) {
       let constructor = tmp(length);
     } else {
-      constructor = new arr.constructor(length);
+      constructor = new copy.constructor(length);
     }
-    arr.copy(constructor);
+    copy.copy(constructor);
     return constructor;
   }
 };

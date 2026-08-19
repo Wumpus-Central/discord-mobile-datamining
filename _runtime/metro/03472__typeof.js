@@ -37,18 +37,18 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp3;
 
-export default function toDate(num) {
+export default function toDate(getTime) {
   requiredArgs.default(1, arguments);
   const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(num);
-  if (!(num instanceof Date)) {
-    if ("object" === _typeof(num)) {
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
       return date;
     }
-    if (typeof num !== "number") {
+    if (typeof getTime !== "number") {
       if ("[object Number]" !== tmp2) {
-        let tmp4 = typeof num !== "string";
-        if (typeof num !== "string") {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
           tmp4 = "[object String]" !== tmp2;
         }
         if (!tmp4) {
@@ -68,8 +68,8 @@ export default function toDate(num) {
       }
     }
     const _Date2 = Date;
-    date = new Date(num);
+    date = new Date(getTime);
   }
-  date = new Date(num.getTime());
+  date = new Date(getTime.getTime());
 };
 export default exports.default;

@@ -1,9 +1,11 @@
 // === Module 360: shouldUseTurboAnimatedModule ===
 
 // Module 360 (shouldUseTurboAnimatedModule)
-const exports = arg3;
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+
+importAll = arg3;
 const dependencyMap = arg6;
 arg5.default = function shouldUseTurboAnimatedModule() {
-  const result = exports(27).cxxNativeAnimatedEnabled();
+  const result = javaScriptFlagGetterAll.cxxNativeAnimatedEnabled();
   return false;
 };

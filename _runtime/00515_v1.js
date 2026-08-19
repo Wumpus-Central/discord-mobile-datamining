@@ -1,14 +1,15 @@
 // === Module 515: v1 ===
 
 // Module 515 (v1)
+import uint8ArrayDefault from "uint8Array" /* 516 */;
 import unsafeStringify from "unsafeStringify" /* 517 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 let c5 = 0;
 let c6 = 0;
-arg5.default = function v1(arg0, arg1, arg2) {
+arg5.default = function v1(closure_1_2, arg1, arg2, arg3) {
   let unsafeStringifyResult = arg1;
   let num = arg1;
   if (arg1) {
@@ -22,8 +23,8 @@ arg5.default = function v1(arg0, arg1, arg2) {
     const _Array = Array;
     array = new Array(16);
   }
-  let obj = arg0;
-  if (!arg0) {
+  let obj = dependencyMap;
+  if (!dependencyMap) {
     obj = {};
   }
   const tmp7 = undefined !== obj.clockseq ? obj.clockseq : closure_4;
@@ -32,7 +33,7 @@ arg5.default = function v1(arg0, arg1, arg2) {
     if (!random) {
       let rng = obj.rng;
       if (!rng) {
-        rng = module(516);
+        rng = uint8ArrayDefault;
       }
       random = rng();
     }
@@ -110,7 +111,6 @@ arg5.default = function v1(arg0, arg1, arg2) {
     } while (num10 < 6);
     if (!unsafeStringifyResult) {
       unsafeStringifyResult = unsafeStringify.unsafeStringify(array);
-      const obj2 = unsafeStringify;
     }
     return unsafeStringifyResult;
   }

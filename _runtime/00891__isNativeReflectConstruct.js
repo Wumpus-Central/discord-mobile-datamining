@@ -2,12 +2,12 @@
 
 // Module 891 (_isNativeReflectConstruct)
 import isErrorEvent from "isErrorEvent" /* 876 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
-import closure_6 from "_get" /* 96 */;
+import c4 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 const ServerRuntimeClient = require;
@@ -104,7 +104,7 @@ let items = [
         }
       }
       const self = this;
-      let fn = callback4(callback3(self.prototype), "captureException", this);
+      let fn = _get(_getPrototypeOf(self.prototype), "captureException", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -154,7 +154,7 @@ let items = [
         const obj = ServerRuntimeClient(848);
       }
       const self = this;
-      let fn = callback4(callback3(self.prototype), "captureEvent", this);
+      let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -186,7 +186,7 @@ let items = [
             obj.monitor_config = obj;
           }
           const obj4 = ServerRuntimeClient(881);
-          [tmp11, tmp12] = callback(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
+          [tmp11, tmp12] = _slicedToArray(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
           if (tmp12) {
             obj1 = { trace: null };
             obj1[0] = tmp12;
@@ -196,7 +196,7 @@ let items = [
           const sdkMetadata = self.getSdkMetadata();
           const checkInEnvelope = tmp7Result.createCheckInEnvelope(obj, tmp11, sdkMetadata, tunnel, self.getDsn());
           if (ServerRuntimeClient(823).DEBUG_BUILD) {
-            const debug2 = tmp7(824).debug;
+            const debug2 = ServerRuntimeClient(824).debug;
             debug2.log("Sending checkin:", checkInId.monitorSlug, checkInId.status);
           }
           self.sendEnvelope(checkInEnvelope);
@@ -237,7 +237,7 @@ let items = [
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = callback4(callback3(self.prototype), "_prepareEvent", self);
+      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

@@ -20,7 +20,6 @@ function merge(arg0, obj) {
         obj = {};
         const merged = Object.assign(arg0);
         for (const key10016 in arg1) {
-          let tmp10 = key10016;
           let _Object2 = Object;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
@@ -31,7 +30,6 @@ function merge(arg0, obj) {
           if (!hasOwnPropertyResult) {
             continue;
           } else {
-            let tmp8 = merge;
             obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
             continue;
           }

@@ -12,7 +12,7 @@ export default {
   addListener(arg0, arg1, arg2) {
     return closure_4.addListener(arg0, arg1, arg2);
   },
-  sendRequest(arg0, trackingName, arg2, obj) {
+  sendRequest(arg0, trackingName, arg2, obj, arg4, arg5, arg6, arg7, fn) {
     const tmp3 = convertRequestBodyDefault(arg4);
     let formData = tmp3;
     if (tmp3) {
@@ -20,13 +20,12 @@ export default {
     }
     if (formData) {
       formData = tmp3.formData;
-      tmp3.formData = formData.map((headers) => {
+      tmp3.formData = formData.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(headers);
-        headers = headers.headers;
+        const merged = Object.assign(item);
+        const headers = item.headers;
         const items = [];
         for (const key10009 in headers) {
-          let tmp2 = key10009;
           let items1 = [key10009, headers[key10009]];
           let arr = items.push(items1);
           continue;
@@ -43,7 +42,6 @@ export default {
     }
     let items = [];
     for (const key10028 in arg3) {
-      let tmp9 = key10028;
       let items1 = [key10028, arg3[key10028]];
       let arr = items.push(items1);
       continue;
@@ -53,7 +51,8 @@ export default {
     obj.trackingName = trackingName;
     obj.devToolsRequestId = devToolsRequestId;
     NetworkingDefault.sendRequest(arg0, arg2, +closure_3, items, obj, arg5, arg6, arg7, arg9);
-    arg8(+closure_3);
+    fn(+closure_3);
+    const tmpResult = NetworkingDefault;
   },
   abortRequest(_requestId) {
     NetworkingDefault.abortRequest(_requestId);

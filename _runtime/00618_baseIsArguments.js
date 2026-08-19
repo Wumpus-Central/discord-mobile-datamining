@@ -14,22 +14,20 @@ if (baseIsArguments((() => arguments)())) {
       if (!tmp) {
         return tmp;
       } else {
-        const call2 = closure_3.call;
+        const call2 = callback2.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp5("callee");
+          let call2Result = callback2("callee");
         } else {
           call2Result = call2(arg0, "callee");
         }
-        tmp5 = closure_3;
       }
     } else {
-      const call = closure_2.call;
+      const call = callback.call;
       if (typeof call === "unknown") {
-        let callResult = tmp2("callee");
+        let callResult = callback("callee");
       } else {
         callResult = call(arg0, "callee");
       }
-      tmp2 = closure_2;
     }
   };
 }

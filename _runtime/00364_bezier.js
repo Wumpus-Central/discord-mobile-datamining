@@ -56,15 +56,10 @@ const obj = {
     if (arg0 === undefined) {
       num = 1;
     }
-    closure_0 = undefined;
     closure_0 = num * Math.PI;
     return (arg0) => 1 - Math.pow(Math.cos(arg0 * Math.PI / 2), 3) * Math.cos(arg0 * closure_0);
   },
   back() {
-    let num = arg0;
-    if (arg0 === undefined) {
-      num = 1.70158;
-    }
     return (arg0) => arg0 * arg0 * ((num + 1) * arg0 - num);
   },
   bounce(arg0) {

@@ -1,11 +1,11 @@
 // === Module 13603: formatToParts ===
 
 // Module 13603 (formatToParts)
-import digitsToString from "digitsToString" /* 13581 */;
+import digitsToString2 from "digitsToString" /* 13581 */;
 import _mod13604 from "module_13604" /* 13604 */;
 import e from "e" /* 1281 */;
 
-let closure_2 = e.__importDefault(digitsToString);
+const digitsToString = e.__importDefault(digitsToString2);
 const regExp = new RegExp("^".concat(_mod13604.S_UNICODE_REGEX.source));
 const regExp1 = new RegExp("".concat(_mod13604.S_UNICODE_REGEX.source, "$"));
 const re5 = /[#0](?:[\.,][#0]+)*/g;
@@ -15,7 +15,7 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
   let arr3;
   ({ sign, exponent } = magnitude);
   ({ notation, style, numberingSystem } = currencyDisplay);
-  let first = numbers.numbers.nu[0];
+  const first = numbers.numbers.nu[0];
   let tmp3 = null;
   if (tmp2) {
     ({ roundedNumber, sign: sign2 } = magnitude);
@@ -67,7 +67,6 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
           }
           const tmp12 = tmp11[arg2.select(arg2, roundedNumber.toNumber(roundedNumber))] || tmp11.other;
         }
-        const tmp10 = currency[numberingSystem] || currency[first1];
       }
       tmp3 = tmp9;
     }
@@ -76,7 +75,6 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     if (decimal[numberingSystem] || decimal[first1][compactDisplay][StringResult]) {
       arr = tmp8[arg2.select(arg2, roundedNumber.toNumber(roundedNumber))] || tmp8.other;
     }
-    const tmp7 = decimal[numberingSystem] || decimal[first1];
   }
   if ("currency" === style) {
     if ("name" !== currencyDisplay.currencyDisplay) {
@@ -122,7 +120,6 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
             }
           }
           str16 = tmp27;
-          const tmp24 = numbers.currency[numberingSystem] || numbers.numbers.currency[first];
         } else {
           arr2 = numbers.percent[numberingSystem] || numbers.numbers.percent[first];
           let str20 = arr2;
@@ -161,20 +158,14 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     const parts3 = str34.split(";");
     [tmp31, arr8] = parts3;
     if (0 === sign) {
-      let tmp32 = tmp31;
-    } else {
-      tmp32 = arr7;
-      if (-1 !== sign) {
-        if (arr7.indexOf("-") >= 0) {
-          let replaced4 = arr7.replace(/-/g, "+");
-        } else {
-          const concat8 = "+".concat;
-          replaced4 = "+".concat(tmp31);
-        }
-        tmp32 = replaced4;
+    } else if (-1 !== sign) {
+      if (arr7.indexOf("-") >= 0) {
+        let replaced4 = arr7.replace(/-/g, "+");
+      } else {
+        const concat8 = "+".concat;
+        replaced4 = "+".concat(tmp31);
       }
     }
-    const tmp29 = numbers.numbers.decimal[numberingSystem] || numbers.numbers.decimal[first];
   }
   const str40 = regex.exec(str16)[0];
   tmp2 = "compact" === notation && magnitude.magnitude;
@@ -211,7 +202,6 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
   if (0 < parts4.length) {
     while (true) {
       let str50 = parts4[num9];
-      let tmp43 = num9;
       if (str50) {
         if ("{0}" === str50) {
           break;
@@ -252,7 +242,6 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     if (!tmp3) {
       const useGrouping = currencyDisplay.useGrouping;
       items2 = null === useGrouping || undefined === useGrouping || useGrouping;
-      const tmp50 = null === useGrouping || undefined === useGrouping || useGrouping;
     }
     const roundingIncrement = currencyDisplay.roundingIncrement;
     let obj5 = dependencyMap;
@@ -273,7 +262,7 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     fn = fn(13605).digitMapping[numberingSystem];
     let replaced5 = formattedString2;
     if (fn) {
-      fn = (arg0) => fn[+arg0] || arg0;
+      fn = (dependencyMap) => fn[+dependencyMap] || dependencyMap;
       replaced5 = formattedString2.replace(/\d/g, fn);
     }
     const index = replaced5.indexOf(".");
@@ -365,7 +354,7 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
             fn = -exponent;
           }
           items2 = new.target;
-          let _default = new mod.default(fn);
+          let _default = new digitsToString.default(fn);
           const obj12 = { type: "exponentInteger", value: null };
           formattedString = fn(13601).ToRawFixed(_default, 0, 0, roundingIncrement, formattedString).formattedString;
           obj12[1] = formattedString;
@@ -390,31 +379,29 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     if ("name" === currencyDisplay.currencyDisplay) {
       if (numbers.currencies[currencyDisplay.currency]) {
         const roundedNumber5 = magnitude.roundedNumber;
-        first = mod;
-        const timesResult = roundedNumber5.times(mod.default.pow(10, exponent));
+        const timesResult = roundedNumber5.times(digitsToString.default.pow(10, exponent));
         const displayName = tmp99.displayName;
-        first = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
-        let currency3 = first;
-        const _default3 = mod.default;
+        let currency3 = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
+        const _default3 = digitsToString.default;
+        const tmp101 = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
       } else {
         currency3 = currencyDisplay.currency;
       }
       const items3 = [];
       const parts6 = numbers.numbers.currency[numberingSystem] || numbers.numbers.currency[first].unitPattern.split(/(\{[01]\})/g);
       for (let num18 = 0; num18 < parts6.length; num18 = num18 + 1) {
-        first = parts6[num18];
-        first = num18;
-        if ("{0}" === first) {
+        let tmp102 = parts6[num18];
+        if ("{0}" === tmp102) {
           let push4 = items3.push;
-          first = push4.apply(items3, items);
-        } else if ("{1}" === first) {
+          let applyResult1 = push4.apply(items3, items);
+        } else if ("{1}" === tmp102) {
           let obj15 = { type: "currency", value: null };
           obj15[1] = currency3;
-          first = items3.push(obj15);
-        } else if (first) {
+          let arr16 = items3.push(obj15);
+        } else if (tmp102) {
           let obj16 = { type: "literal", value: null };
-          obj16[1] = first;
-          first = items3.push(obj16);
+          obj16[1] = tmp102;
+          let arr17 = items3.push(obj16);
         }
       }
       return items3;
@@ -425,22 +412,21 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
     ({ unit, unitDisplay } = currencyDisplay);
     if (numbers.units.simple[unit]) {
       const roundedNumber4 = magnitude.roundedNumber;
-      const timesResult1 = roundedNumber4.times(mod.default.pow(10, exponent));
+      const timesResult1 = roundedNumber4.times(digitsToString.default.pow(10, exponent));
       let str59 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
-      const _default2 = mod.default;
+      const _default2 = digitsToString.default;
       const tmp90 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
     } else {
       const parts7 = unit.split("-per-");
       [tmp81, tmp82] = parts7;
       const roundedNumber3 = magnitude.roundedNumber;
-      _default = mod.default;
+      _default = digitsToString.default;
       const timesResult2 = roundedNumber3.times(_default.pow(10, exponent));
       const tmp86 = numbers.units.simple[tmp81][unitDisplay][arg2.select(arg2, timesResult2.toNumber(timesResult2))] || numbers.units.simple[tmp81][unitDisplay].other;
       const str53 = numbers.units.simple[tmp82].perUnit[unitDisplay];
       if (str53) {
         str59 = str53.replace("{0}", tmp86);
       } else {
-        const str54 = numbers.units.compound.per[unitDisplay];
         const str55 = numbers.units.simple[tmp82][unitDisplay][arg2.select(arg2, 1)] || numbers.units.simple[tmp82][unitDisplay].other;
         str59 = numbers.units.compound.per[unitDisplay].replace("{0}", tmp86).replace("{1}", str55.replace("{0}", ""));
         const str56 = numbers.units.compound.per[unitDisplay].replace("{0}", tmp86);
@@ -452,24 +438,23 @@ export default function formatToParts(magnitude, numbers, arg2, currencyDisplay)
       let tmp91 = parts8[num16];
       let obj23 = /^(\s*)\{0\}(\s*)$/;
       let match = obj23.exec(tmp91);
-      let tmp93 = num16;
       if (match) {
         if (match[1]) {
           let obj17 = { type: "literal", value: null };
           obj17[1] = match[1];
-          let arr16 = items4.push(obj17);
+          let arr18 = items4.push(obj17);
         }
         let push3 = items4.push;
-        let applyResult1 = push3.apply(items4, items);
+        let applyResult2 = push3.apply(items4, items);
         if (match[2]) {
           let obj18 = { type: "literal", value: null };
           obj18[1] = match[2];
-          let arr17 = items4.push(obj18);
+          let arr19 = items4.push(obj18);
         }
       } else if (tmp91) {
         let obj19 = { type: "unit", value: null };
         obj19[1] = tmp91;
-        let arr18 = items4.push(obj19);
+        let arr20 = items4.push(obj19);
       }
     }
     return items4;

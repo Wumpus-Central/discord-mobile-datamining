@@ -4,6 +4,7 @@
 import _mod9029 from "module_9029" /* 9029 */;
 import _mod9037 from "module_9037" /* 9037 */;
 import flattenStyle from "flattenStyle" /* 9030 */;
+import "emptyFunction";
 import emptyFunction from "emptyFunction" /* 4205 */;
 
 let obj = {};

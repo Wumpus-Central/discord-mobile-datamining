@@ -1,14 +1,14 @@
 // === Module 13805: _isNativeReflectConstruct ===
 
 // Module 13805 (_isNativeReflectConstruct)
-import StorybookSwitcher from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "get ActivityIndicator" /* 17 */;
-import closure_5 from "jsxProd" /* 21 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -47,7 +48,6 @@ if (!noop) {
         if (keys !== undefined) {
           value = obj;
           while (keys[tmp] !== undefined) {
-            let tmp21 = tmp12;
             let tmp22 = "default" !== tmp12;
             if (!tmp22) {
               if (!tmp22) {
@@ -114,6 +114,7 @@ class StorybookSwitcher {
     return tmp3Result;
   }
 }
+_classCallCheck = StorybookSwitcher;
 _inherits(StorybookSwitcher, value.Component);
 obj = {
   key: "render",
@@ -124,7 +125,7 @@ obj = {
       children = <tmp />;
     }
     obj[1] = children;
-    return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
+    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
   }
 };
 let items = [obj];

@@ -14,25 +14,17 @@ const memoResult = memo((nativeGestureRef) => {
   ({ style, children } = nativeGestureRef);
   const merged = Object.assign(nativeGestureRef, Object.create(null));
   let enableContentPanningGesture;
-  let simultaneousHandlers;
-  let waitFor;
-  let activeOffsetX;
-  let activeOffsetY;
-  let failOffsetX;
-  let failOffsetY;
-  let contentPanGestureHandler;
-  closure_10 = undefined;
   let obj = nativeGestureRef(enableContentPanningGesture[2]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
   enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  waitFor = bottomSheetInternal.waitFor;
-  activeOffsetX = bottomSheetInternal.activeOffsetX;
-  activeOffsetY = bottomSheetInternal.activeOffsetY;
-  failOffsetX = bottomSheetInternal.failOffsetX;
-  failOffsetY = bottomSheetInternal.failOffsetY;
+  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
+  const waitFor = bottomSheetInternal.waitFor;
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  const failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
   obj1 = nativeGestureRef(enableContentPanningGesture[2]);
-  contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
+  const contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
   let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
   const tmp3 = simultaneousHandlers(() => {
     const items = [];
@@ -45,12 +37,12 @@ const memoResult = memo((nativeGestureRef) => {
     if (simultaneousHandlers) {
       const _Array = Array;
       const push = items.push;
-      if (Array.isArray(tmp5)) {
+      if (Array.isArray(simultaneousHandlers)) {
         const items1 = [];
-        HermesBuiltin.arraySpread(tmp5, 0);
+        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
         HermesBuiltin.apply(items1, items);
       } else {
-        push(tmp5);
+        push(simultaneousHandlers);
       }
     }
     return items;
@@ -93,7 +85,6 @@ const memoResult = memo((nativeGestureRef) => {
     }
     return failOffsetYResult;
   }, items1);
-  obj = { gesture: tmp4, children: null };
   obj = { value: tmp4, children: null };
   obj1 = { style };
   const merged1 = Object.assign(merged);

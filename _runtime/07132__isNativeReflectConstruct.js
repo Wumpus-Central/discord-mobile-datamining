@@ -3,16 +3,16 @@
 // Module 7132 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 7133 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const LottieView = arg1;
+const LottieView = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -160,10 +160,10 @@ let items = [
           const colorFilters = self.props.colorFilters;
           let mapped;
           if (colorFilters != null) {
-            mapped = colorFilters.map((color) => {
+            mapped = colorFilters.map((item, index) => {
               const obj = {};
-              const merged = Object.assign(color);
-              obj.color = callback(color.color);
+              const merged = Object.assign(item);
+              obj.color = callback(item.color);
               return obj;
             });
           }

@@ -2,8 +2,8 @@
 
 // Module 319 (ViewabilityHelper)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const ViewabilityHelper = arg1;
 class ViewabilityHelper {
@@ -69,8 +69,6 @@ let items = [
           if (first <= last) {
             while (true) {
               let cellMetrics = getCellMetrics.getCellMetrics(first, getItemCount);
-              let tmp8 = first;
-              let tmp9 = num2;
               let tmp10 = num2;
               if (!cellMetrics) {
                 first = first + 1;
@@ -105,7 +103,6 @@ let items = [
                       let bound = Math.min(rounded1, arg2);
                       let _Math5 = Math;
                       let bound1 = Math.max(0, bound - Math.max(rounded, 0));
-                      let tmp16 = 100 * (tmp2 ? bound1 / arg2 : bound1 / cellMetrics.length) >= tmp3;
                     }
                   }
                 }
@@ -126,8 +123,7 @@ let items = [
   {
     key: "onUpdate",
     value: function onUpdate(getItemCount, arg1, arg2, getCellMetrics, closure_2, closure_3) {
-      let self = this;
-      self = this;
+      const self = this;
       closure_1 = getItemCount;
       const itemCount = getItemCount.getItemCount(getItemCount.data);
       if (!this._config.waitForInteraction) {
@@ -176,39 +172,33 @@ let items = [
   {
     key: "_onUpdateSync",
     value: function _onUpdateSync(closure_1, items, closure_3, closure_2) {
-      let self = this;
-      self = this;
+      const self = this;
       closure_0 = closure_2;
-      const found = items.filter((arg0) => {
+      const found = items.filter((item, index) => {
         const _viewableIndices = self._viewableIndices;
-        return _viewableIndices.includes(arg0);
+        return _viewableIndices.includes(item);
       });
       const _viewableItems = this._viewableItems;
-      const map = new Map(found.map((arg0) => {
-        const tmp = callback(arg0, true, closure_1);
+      const map = new Map(found.map((item, index) => {
+        const tmp = callback(item, true, closure_1);
         const items = [tmp.key, tmp];
         return items;
       }));
       items = [];
       while (tmp !== undefined) {
-        let tmp3 = self;
         let tmp4 = self(tmp2, 2);
         let tmp5 = tmp4[1];
         if (!_viewableItems.has(tmp4[0])) {
-          let tmp6 = tmp5;
           let arr = items.push(tmp5);
         }
         continue;
       }
       tmp = map[Symbol.iterator]();
       while (tmp8 !== undefined) {
-        let tmp10 = self;
         let tmp11 = self(tmp9, 2);
         let tmp12 = tmp11[1];
         if (!map.has(tmp11[0])) {
           let obj = {};
-          let tmp13 = tmp12;
-          let tmp14 = obj;
           let merged = Object.assign(tmp12);
           obj.isViewable = false;
           arr = items.push(obj);
@@ -222,7 +212,7 @@ let items = [
         obj[0] = Array.from(map.values());
         obj[1] = items;
         obj[2] = self._config;
-        closure_3(obj);
+        callback(obj);
       }
     }
   }

@@ -1,10 +1,10 @@
 // === Module 1806: useSharedValue ===
 
 // Module 1806 (useSharedValue)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useEffect: c3, useState: c4 } = noop);
 
 export const useSharedValue = function useSharedValue(UNDETERMINED) {
@@ -12,7 +12,7 @@ export const useSharedValue = function useSharedValue(UNDETERMINED) {
   const first = callback(callback3(() => UNDETERMINED(first[2]).makeMutable(UNDETERMINED)), 1)[0];
   const items = [first];
   callback2(() => () => {
-    closure_1_0(closure_1_1[3]).cancelAnimation(closure_1);
+    UNDETERMINED(first[3]).cancelAnimation(closure_1);
   }, items);
   return first;
 };

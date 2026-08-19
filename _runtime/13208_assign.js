@@ -26,9 +26,7 @@ setTyped.assign = (arg0) => {
         if (typeof arr !== "object") {
           break;
         } else {
-          let tmp10 = arr;
           for (const key10013 in arr) {
-            let tmp11 = key10013;
             let _Object = Object;
             let call2 = hasOwnProperty.call;
             if (typeof call2 === "unknown") {

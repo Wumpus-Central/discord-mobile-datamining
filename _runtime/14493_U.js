@@ -3,7 +3,6 @@
 // Module 14493 (U)
 import "module_0";
 
-let f94619 = global;
 function U(arg0, arg1) {
   if (typeof Symbol !== "undefined") {
     const _Symbol2 = Symbol;
@@ -37,9 +36,6 @@ function Pe(str) {
       }
       if ("Map" !== name) {
         if ("Set" !== name) {
-          if ("Arguments" !== name) {
-            const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
-          }
           let length2 = length;
           if (tmp3) {
             length2 = str.length;
@@ -134,12 +130,10 @@ function De(arg0, key10009) {
         while (true) {
           let _Object = Object;
           let call2 = hasOwnProperty2.call;
-          let tmp5 = tmp3;
           tmp = tmp3;
           if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp3, key10009)) {
             break;
           } else {
-            let tmp6 = callback;
             tmp3 = callback(tmp3);
             tmp = tmp3;
             if (null === tmp3) {
@@ -188,7 +182,6 @@ function qt(stateData, arr) {
       const keys = Object.keys(stateData);
       for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
         let tmp2 = keys[num3];
-        let tmp3 = num3;
         if (arr.indexOf(tmp2) < 0) {
           obj[tmp2] = stateData[tmp2];
         }
@@ -218,27 +211,25 @@ function qt(stateData, arr) {
 function ue(arg0) {
   closure_0 = arg0;
   for (let num = 1; num < arguments.length; num = num + 1) {
-    let tmp = num;
     let tmp2 = null != arguments[num] ? arguments[num] : {};
     closure_1 = tmp2;
     let _Object = Object;
     let keys = Object.keys(tmp2);
     let _Object2 = Object;
-    let tmp3 = tmp2;
     let combined = keys;
     if (typeof Object.getOwnPropertySymbols === "function") {
       let _Object3 = Object;
       let ownPropertySymbols = Object.getOwnPropertySymbols(tmp2);
-      combined = keys.concat(ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_1, arg0).enumerable));
+      combined = keys.concat(ownPropertySymbols.filter((item, index) => Object.getOwnPropertyDescriptor(closure_1, item).enumerable));
     }
-    let item = combined.forEach((arg0) => {
-      if (arg0 in closure_0) {
+    let item = combined.forEach((item, index) => {
+      if (item in closure_0) {
         const _Object = Object;
         const obj = { value: null, enumerable: true, configurable: true, writable: true };
         obj[0] = tmp2;
-        Object.defineProperty(tmp, arg0, obj);
+        Object.defineProperty(closure_0, item, obj);
       } else {
-        tmp[arg0] = tmp2;
+        closure_0[item] = tmp2;
       }
     });
   }
@@ -247,4886 +238,10 @@ function ue(arg0) {
 function pt(arg0, arg1, arg2, arg3) {
 
 }
-f94619 = () => {
-  if (typeof f94626 !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (c0) {
-    c0 = 0;
-    closure_1 = tmp(0);
-  }
-};
-create = undefined;
-let f94626 = () => {
+const f94626 = () => {
 
 };
-f94619 = () => {
-
-};
-create = undefined;
-f94626 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  arg1.exports = function Ca(arg0, arg1) {
-    let tmp = arg0;
-    if (!("length" in arg0)) {
-      items = [arg0];
-      tmp = items;
-    }
-    const call = slice.call;
-    let arr2 = typeof call === "unknown" ? slice() : call(tmp);
-    if (arr2.length) {
-      const arr = arr2.shift();
-      const tmp4 = arg1(arr);
-      while (!tmp4) {
-        let tmp5 = arr.childNodes && arr.childNodes.length;
-        let tmp6 = arr2;
-        if (!tmp5) {
-          arr2 = arr3;
-        } else {
-          let tmp7 = slice;
-          let call2 = slice.call;
-          let concat = arr.childNodes;
-          let tmp8 = typeof call2 === "unknown" ? tmp7() : call2(concat);
-          concat = tmp8.concat;
-          let combined = concat(arr2);
-        }
-      }
-      return tmp4;
-    }
-  };
-};
-create = undefined;
-let f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class ve {
-    constructor(arg0, arg1) {
-      self = this;
-      tmp = c0;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        tmp3 = arg0;
-        tmp4 = arg1;
-        if (tmp2) {
-          self.data = arg0;
-          self.nodeValue = arg0;
-          self.length = arg0.length;
-          if (!tmp4) {
-            tmp4 = null;
-          }
-          self.ownerDocument = tmp4;
-          return;
-        } else {
-          tmpResult = tmp(arg0, tmp4);
-          tmp6 = tmpResult;
-          return tmpResult;
-        }
-      }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-      }
-      tmp2 = closure_1_8(self, tmp);
-      return;
-    }
-    toString() {
-      return "[object Comment]";
-    }
-  }
-  c0 = ve;
-  if (typeof f94626 !== "function") {
-    class ve {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          tmp4 = arg1;
-          if (tmp2) {
-            self.data = arg0;
-            self.nodeValue = arg0;
-            self.length = arg0.length;
-            if (!tmp4) {
-              tmp4 = null;
-            }
-            self.ownerDocument = tmp4;
-            return;
-          } else {
-            tmpResult = tmp(arg0, tmp4);
-            tmp6 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return "[object Comment]";
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (c0) {
-    class ve {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          tmp4 = arg1;
-          if (tmp2) {
-            self.data = arg0;
-            self.nodeValue = arg0;
-            self.length = arg0.length;
-            if (!tmp4) {
-              tmp4 = null;
-            }
-            self.ownerDocument = tmp4;
-            return;
-          } else {
-            tmpResult = tmp(arg0, tmp4);
-            tmp6 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return "[object Comment]";
-      }
-    }
-    c0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = ve;
-  ve.prototype.nodeType = 8;
-  ve.prototype.nodeName = "#comment";
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class ae {
-    constructor(arg0, arg1) {
-      self = this;
-      tmp = c0;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        tmp3 = arg0;
-        if (tmp2) {
-          str = arg0;
-          if (!arg0) {
-            str = "";
-          }
-          tmp6 = arg1;
-          self.data = str;
-          self.length = self.data.length;
-          if (!arg1) {
-            tmp6 = null;
-          }
-          self.ownerDocument = tmp6;
-          return;
-        } else {
-          tmpResult = tmp(arg0);
-          tmp5 = tmpResult;
-          return tmpResult;
-        }
-      }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-      }
-      tmp2 = closure_1_8(self, tmp);
-      return;
-    }
-    toString() {
-      return this.data;
-    }
-    replaceData(arg0, arg1, arg2) {
-      str = this.data;
-      substr = str.substring(0, arg0);
-      this.data = substr + arg2 + str.substring(arg0 + arg1, str.length);
-      this.length = this.data.length;
-      return;
-    }
-  }
-  c0 = ae;
-  if (typeof f94626 !== "function") {
-    class ae {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            str = arg0;
-            if (!arg0) {
-              str = "";
-            }
-            tmp6 = arg1;
-            self.data = str;
-            self.length = self.data.length;
-            if (!arg1) {
-              tmp6 = null;
-            }
-            self.ownerDocument = tmp6;
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return this.data;
-      }
-      replaceData(arg0, arg1, arg2) {
-        str = this.data;
-        substr = str.substring(0, arg0);
-        this.data = substr + arg2 + str.substring(arg0 + arg1, str.length);
-        this.length = this.data.length;
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (c0) {
-    class ae {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            str = arg0;
-            if (!arg0) {
-              str = "";
-            }
-            tmp6 = arg1;
-            self.data = str;
-            self.length = self.data.length;
-            if (!arg1) {
-              tmp6 = null;
-            }
-            self.ownerDocument = tmp6;
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return this.data;
-      }
-      replaceData(arg0, arg1, arg2) {
-        str = this.data;
-        substr = str.substring(0, arg0);
-        this.data = substr + arg2 + str.substring(arg0 + arg1, str.length);
-        this.length = this.data.length;
-        return;
-      }
-    }
-    c0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = ae;
-  ae.prototype.type = "DOMTextNode";
-  ae.prototype.nodeType = 3;
-  ae.prototype.nodeName = "#text";
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  arg1.exports = function Ma(target) {
-    let self = this;
-    closure_0 = target;
-    self = this;
-    if (!target.target) {
-      target.target = self;
-    }
-    if (!self.listeners) {
-      self.listeners = {};
-    }
-    if (self.listeners[target.type]) {
-      return arr.forEach((fn) => {
-        closure_0.currentTarget = self;
-        if (typeof fn === "function") {
-          fn(tmp);
-        } else {
-          fn.handleEvent(tmp);
-        }
-      });
-    } else if (self.parentNode) {
-      const parentNode = self.parentNode;
-      parentNode.dispatchEvent(target);
-    }
-  };
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  arg1.exports = function Ha(arg0, arg1) {
-    const self = this;
-    if (!this.listeners) {
-      self.listeners = {};
-    }
-    if (!self.listeners[arg0]) {
-      self.listeners[arg0] = [];
-    }
-    let arr = self.listeners[arg0];
-    if (-1 === arr.indexOf(arg1)) {
-      arr = self.listeners[arg0].push(arg1);
-      const arr2 = self.listeners[arg0];
-    }
-  };
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  arg1.exports = function Ba(arg0, arg1) {
-    const self = this;
-    if (this.listeners) {
-      if (self.listeners[arg0]) {
-        const index = arr.indexOf(arg1);
-        if (-1 !== index) {
-          arr.splice(index, 1);
-        }
-      }
-    }
-  };
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  function br(nodeType) {
-    nodeType = nodeType.nodeType;
-    if (3 === nodeType) {
-      let str37 = str36;
-      if (typeof nodeType.data !== "string") {
-        str37 = "";
-        if (str36) {
-          str37 = str36.toString();
-        }
-      }
-      const str39 = str37.replace(/&/g, "&amp;");
-      return str37.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    } else if (8 === nodeType) {
-      return "<!--" + nodeType.data + "-->";
-    } else {
-      let formatted = str43;
-      if ("http://www.w3.org/1999/xhtml" === nodeType.namespaceURI) {
-        formatted = str43.toLowerCase();
-      }
-      items = [];
-      const items1 = [];
-      let text = `<${tmp2}`;
-      for (const key10026 in arg0) {
-        let tmp24 = key10026;
-        let tmp25 = arg0[key10026];
-        if (tmp25) {
-          let _Symbol = Symbol;
-          if (typeof Symbol !== "undefined") {
-            let _Symbol2 = Symbol;
-            let str14 = "symbol";
-          }
-          let tmp6 = "style" === key10026;
-          if (tmp6) {
-            let _Object = Object;
-            tmp6 = Object.keys(arg0.style).length > 0;
-          }
-          if (!tmp6) {
-            let hasOwnPropertyResult = arg0.hasOwnProperty(key10026);
-            if (hasOwnPropertyResult) {
-              let tmp8 = "string" === str14;
-              if (!tmp8) {
-                tmp8 = "boolean" === str14;
-              }
-              if (!tmp8) {
-                tmp8 = "number" === str14;
-              }
-              hasOwnPropertyResult = tmp8;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "nodeName" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "className" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "tagName" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "textContent" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "innerText" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "namespaceURI" !== key10026;
-            }
-            if (hasOwnPropertyResult) {
-              hasOwnPropertyResult = "innerHTML" !== key10026;
-            }
-            tmp6 = hasOwnPropertyResult;
-          }
-          if (!tmp6) {
-            continue;
-          } else {
-            let obj = { name: null, value: null };
-            obj[0] = key10026;
-            obj[1] = arg0[key10026];
-            let arr = items1.push(obj);
-            continue;
-          }
-          continue;
-        }
-        str14 = typeof tmp25;
-      }
-      for (const key10046 in arg0._attributes) {
-        let tmp26 = key10046;
-        let keys = Object.keys();
-        if (keys === undefined) {
-          continue;
-        } else {
-          let tmp10 = keys[tmp];
-          while (tmp10 !== undefined) {
-            let tmp28 = tmp10;
-            let iter = arg0._attributes[key10046][tmp10];
-            let str17 = "";
-            if (iter.prefix) {
-              str17 = `${iter.prefix}:`;
-            }
-            obj = { name: null, value: null };
-            obj[0] = str17 + tmp10;
-            obj[1] = iter.value;
-            arr = items1.push(obj);
-            continue;
-          }
-        }
-        continue;
-      }
-      if (nodeType.className) {
-        obj = { name: "class", value: null };
-        obj[1] = nodeType.className;
-        items1.push(obj);
-      }
-      let str18 = "";
-      if (items1.length) {
-        const items2 = [];
-        let items4 = items2;
-        let item = items1.forEach((arg0) => {
-          ({ name, value } = arg0);
-          let str = value;
-          if ("style" === name) {
-            items4 = value;
-            let tmp = value;
-            if (typeof value !== "string") {
-              c1 = "";
-              const _Object = Object;
-              const keys = Object.keys(value);
-              const item = keys.forEach((arg0) => {
-                closure_1 = `${closure_1}${arg0.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
-              });
-              tmp = c1;
-            }
-            str = tmp;
-          }
-          let str2 = str;
-          const text = `${name}="`;
-          if (typeof str !== "string") {
-            str2 = "";
-            if (str) {
-              str2 = str.toString();
-            }
-          }
-          const str3 = str2.replace(/&/g, "&amp;");
-          const str4 = str2.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-          items4.push(`${tmp3}${str2.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")}"`);
-        });
-        let str19 = "";
-        if (items2.length) {
-          str19 = ` ${arr3.join(" ")}`;
-        }
-        str18 = str19;
-      }
-      const dataset = nodeType.dataset;
-      const items3 = [];
-      for (const key10076 in dataset) {
-        let tmp29 = key10076;
-        obj1 = { name: null, value: null };
-        obj1[0] = "data-" + key10076;
-        obj1[1] = dataset[key10076];
-        let arr2 = items3.push(obj1);
-        continue;
-      }
-      let str22 = "";
-      if (items3.length) {
-        items4 = [];
-        const item1 = items3.forEach((arg0) => {
-          ({ name, value } = arg0);
-          let str = value;
-          if ("style" === name) {
-            items4 = value;
-            let tmp = value;
-            if (typeof value !== "string") {
-              c1 = "";
-              const _Object = Object;
-              const keys = Object.keys(value);
-              const item = keys.forEach((arg0) => {
-                closure_1 = `${closure_1}${arg0.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
-              });
-              tmp = c1;
-            }
-            str = tmp;
-          }
-          let str2 = str;
-          const text = `${name}="`;
-          if (typeof str !== "string") {
-            str2 = "";
-            if (str) {
-              str2 = str.toString();
-            }
-          }
-          const str3 = str2.replace(/&/g, "&amp;");
-          const str4 = str2.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-          items4.push(`${tmp3}${str2.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")}"`);
-        });
-        let str23 = "";
-        if (items4.length) {
-          str23 = ` ${arr5.join(" ")}`;
-        }
-        str22 = str23;
-      }
-      const _HermesInternal = HermesInternal;
-      if (items4.indexOf(formatted) > -1) {
-        items.push(" />");
-      } else {
-        if (nodeType.childNodes.length) {
-          const push = items.push;
-          const childNodes = nodeType.childNodes;
-          push.apply(items, childNodes.map(closure_1));
-        } else {
-          if (!nodeType.textContent) {
-            if (!nodeType.innerText) {
-              if (nodeType.innerHTML) {
-                items.push(nodeType.innerHTML);
-              }
-            }
-          }
-          let str25 = nodeType.textContent;
-          if (!str25) {
-            str25 = nodeType.innerText;
-          }
-          let str26 = str25;
-          if (typeof str25 !== "string") {
-            str26 = "";
-            if (str25) {
-              str26 = str25.toString();
-            }
-          }
-          const str28 = str26.replace(/&/g, "&amp;");
-          items.push(str26.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"));
-          const str30 = str26.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-        }
-        items.push(`</${tmp2}>`);
-        arr5 = items.push(">");
-      }
-      return items.join("");
-    }
-  }
-  closure_1 = br;
-  if (typeof f94626 !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (closure_0) {
-    closure_0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = br;
-  closure_0 = ["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr"];
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class I {
-    constructor(arg0, arg1, arg2) {
-      self = this;
-      tmp = I;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        tmp3 = arg0;
-        if (tmp2) {
-          tmp6 = arg2;
-          if (undefined === arg2) {
-            tmp6 = c2;
-          } else if (!tmp6) {
-            tmp6 = null;
-          }
-          tmp7 = c2;
-          formatted = arg0;
-          if (tmp6 === c2) {
-            _String = String;
-            str = String(arg0);
-            formatted = str.toUpperCase();
-          }
-          tmp9 = arg1;
-          self.tagName = formatted;
-          self.nodeName = self.tagName;
-          str2 = "";
-          self.className = "";
-          self.dataset = {};
-          self.childNodes = [];
-          tmp10 = null;
-          self.parentNode = null;
-          self.style = {};
-          if (!arg1) {
-            tmp9 = null;
-          }
-          self.ownerDocument = tmp9;
-          self.namespaceURI = tmp6;
-          self._attributes = {};
-          str3 = "INPUT";
-          if ("INPUT" === self.tagName) {
-            str4 = "text";
-            self.type = "text";
-          }
-          return;
-        } else {
-          tmpResult = tmp(arg0);
-          tmp5 = tmpResult;
-          return tmpResult;
-        }
-      }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-      }
-      tmp2 = closure_1_8(self, tmp);
-      return;
-    }
-    appendChild(arg0) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      childNodes = this.childNodes;
-      arr = childNodes.push(arg0);
-      arg0.parentNode = this;
-      return arg0;
-    }
-    replaceChild(arg0, arg1) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      childNodes = this.childNodes;
-      arg1.parentNode = null;
-      this.childNodes[childNodes.indexOf(arg1)] = arg0;
-      arg0.parentNode = this;
-      return arg1;
-    }
-    removeChild(arg0) {
-      ({ childNodes, childNodes: childNodes2 } = this);
-      spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-      arg0.parentNode = null;
-      return arg0;
-    }
-    insertBefore(arg0, arg1) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      self = this;
-      num = -1;
-      if (null != arg1) {
-        childNodes = self.childNodes;
-        num = childNodes.indexOf(arg1);
-      }
-      if (num > -1) {
-        childNodes1 = self.childNodes;
-        num2 = 0;
-        spliceResult = childNodes1.splice(num, 0, arg0);
-      } else {
-        childNodes2 = self.childNodes;
-        arr = childNodes2.push(arg0);
-      }
-      arg0.parentNode = self;
-      return arg0;
-    }
-    setAttributeNS(arg0, arg1, arg2) {
-      index = arg1.indexOf(":");
-      substr1 = arg1;
-      substr = null;
-      if (index > -1) {
-        num = 0;
-        substr = arg1.substr(0, index);
-        num2 = 1;
-        substr1 = arg1.substr(index + 1);
-      }
-      self = this;
-      if ("INPUT" === this.tagName) {
-        str = "type";
-        if ("type" === arg1) {
-          self.type = arg2;
-        }
-        return;
-      }
-      tmp4 = self._attributes[arg0];
-      if (!tmp4) {
-        obj = {};
-        self._attributes[arg0] = obj;
-        tmp4 = obj;
-      }
-      tmp4[substr1] = { value: arg2, prefix: substr };
-      return;
-    }
-    getAttributeNS(arg0, arg1) {
-      self = this;
-      tmp = this._attributes[arg0];
-      value = tmp;
-      if (tmp) {
-        value = tmp[arg1];
-      }
-      if (value) {
-        value = tmp[arg1].value;
-      }
-      if ("INPUT" === self.tagName) {
-        str = "type";
-        if ("type" === arg1) {
-          type = self.type;
-        }
-        return type;
-      }
-      type = null;
-      if (typeof value === "string") {
-        type = value;
-      }
-      return;
-    }
-    removeAttributeNS(arg0, arg1) {
-      if (this._attributes[arg0]) {
-        tmp3 = arg1;
-        delete tmp2[tmp];
-      }
-      return;
-    }
-    hasAttributeNS(arg0, arg1) {
-      tmp = this._attributes[arg0];
-      tmp2 = tmp;
-      if (tmp2) {
-        tmp3 = arg1;
-        tmp2 = arg1 in tmp;
-      }
-      return tmp2;
-    }
-    setAttribute(arg0, arg1) {
-      return this.setAttributeNS(null, arg0, arg1);
-    }
-    getAttribute(arg0) {
-      return this.getAttributeNS(null, arg0);
-    }
-    removeAttribute(arg0) {
-      return this.removeAttributeNS(null, arg0);
-    }
-    hasAttribute(arg0) {
-      return this.hasAttributeNS(null, arg0);
-    }
-    focus() {
-      return;
-    }
-    toString() {
-      return closure_1(this);
-    }
-    getElementsByClassName(arg0) {
-      closure_0 = arg0.split(" ");
-      items = [];
-      closure_1 = items;
-      tmp = closure_0(this, () => { ... });
-      return items;
-    }
-    getElementsByTagName(arg0) {
-      closure_0 = arg0.toLowerCase();
-      items = [];
-      closure_1 = items;
-      tmp = closure_0(this.childNodes, () => { ... });
-      return items;
-    }
-    contains(arg0) {
-      closure_0 = arg0;
-      tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-      return tmp;
-    }
-  }
-  closure_3 = I;
-  if (typeof f94626 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (callback) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    callback = 0;
-    let lib = tmp(0);
-  }
-  if (typeof f94627 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    let obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  callback = lib.exports;
-  if (typeof f94627 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  if (typeof f94627 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  if (typeof f94627 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj1 = { exports: null };
-    obj1[0] = {};
-    lib = obj1;
-    callback(obj1.exports, lib);
-  }
-  if (typeof f94627 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F111570 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    const obj2 = { exports: null };
-    obj2[0] = {};
-    lib = obj2;
-    callback(obj2.exports, lib);
-  }
-  lib = lib.exports;
-  c2 = "http://www.w3.org/1999/xhtml";
-  arg1.exports = I;
-  I.prototype.type = "DOMElement";
-  I.prototype.nodeType = 1;
-  I.prototype.removeEventListener = lib.exports;
-  I.prototype.addEventListener = lib.exports;
-  I.prototype.dispatchEvent = lib.exports;
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class K {
-    constructor(arg0) {
-      self = this;
-      tmp = c0;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        if (tmp2) {
-          tmp5 = arg0;
-          self.childNodes = [];
-          tmp6 = null;
-          self.parentNode = null;
-          if (!arg0) {
-            tmp5 = null;
-          }
-          self.ownerDocument = tmp5;
-          return;
-        } else {
-          tmpResult = tmp();
-          tmp4 = tmpResult;
-          return tmpResult;
-        }
-      }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-      }
-      tmp2 = closure_1_8(self, tmp);
-      return;
-    }
-    toString() {
-      childNodes = this.childNodes;
-      mapped = childNodes.map(() => { ... });
-      return mapped.join("");
-    }
-  }
-  let callback = K;
-  if (typeof f94626 !== "function") {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (callback) {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    callback = 0;
-    let obj = tmp(0);
-  }
-  if (typeof f94627 !== "function") {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj) {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    callback(obj.exports, obj);
-  }
-  const _exports = obj.exports;
-  arg1.exports = K;
-  K.prototype.type = "DocumentFragment";
-  K.prototype.nodeType = 11;
-  K.prototype.nodeName = "#document-fragment";
-  K.prototype.appendChild = _exports.prototype.appendChild;
-  K.prototype.replaceChild = _exports.prototype.replaceChild;
-  K.prototype.removeChild = _exports.prototype.removeChild;
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class it {
-    constructor(arg0) {
-      return;
-    }
-    initEvent(arg0, arg1, arg2) {
-      return;
-    }
-    preventDefault() {
-      return;
-    }
-  }
-  arg1.exports = it;
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
-  class Ue {
-    constructor() {
-      self = this;
-      tmp = Ue;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        if (tmp2) {
-          str = "head";
-          self.head = self.createElement("head");
-          str2 = "body";
-          self.body = self.createElement("body");
-          str3 = "html";
-          self.documentElement = self.createElement("html");
-          documentElement = self.documentElement;
-          appendChildResult = documentElement.appendChild(self.head);
-          documentElement2 = self.documentElement;
-          appendChildResult1 = documentElement2.appendChild(self.body);
-          items = [];
-          items[0] = self.documentElement;
-          self.childNodes = items;
-          num = 9;
-          self.nodeType = 9;
-          return;
-        } else {
-          tmpResult = tmp();
-          tmp4 = tmpResult;
-          return tmpResult;
-        }
-      }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-      }
-      tmp2 = closure_1_8(self, tmp);
-      return;
-    }
-  }
-  if (typeof f94626 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (callback) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    callback = 0;
-    let obj6 = tmp(0);
-  }
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    let obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  callback = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  obj6 = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  closure_2 = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj1 = { exports: null };
-    obj1[0] = {};
-    obj6 = obj1;
-    callback(obj1.exports, obj6);
-  }
-  const _exports = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj2 = { exports: null };
-    obj2[0] = {};
-    obj6 = obj2;
-    callback(obj2.exports, obj6);
-  }
-  closure_4 = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj3 = { exports: null };
-    obj3[0] = {};
-    obj6 = obj3;
-    callback(obj3.exports, obj6);
-  }
-  closure_5 = obj6.exports;
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj4 = { exports: null };
-    obj4[0] = {};
-    obj6 = obj4;
-    callback(obj4.exports, obj6);
-  }
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj5 = { exports: null };
-    obj5[0] = {};
-    obj6 = obj5;
-    callback(obj5.exports, obj6);
-  }
-  if (typeof f94627 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj6 = { exports: null };
-    obj6[0] = {};
-    callback(obj6.exports, obj6);
-  }
-  arg1.exports = Ue;
-  const prototype = Ue.prototype;
-  prototype.createTextNode = function(arg0) {
-    return new closure_2(arg0, this);
-  };
-  prototype.createElementNS = function(arg0, arg1) {
-    let StringResult = null;
-    if (null !== arg0) {
-      const _String = String;
-      StringResult = String(arg0);
-    }
-    return new _exports(arg1, this, StringResult);
-  };
-  prototype.createElement = function(arg0) {
-    return new _exports(arg0, this);
-  };
-  prototype.createDocumentFragment = function() {
-    return new closure_4(this);
-  };
-  prototype.createEvent = (arg0) => new closure_5(arg0);
-  prototype.createComment = function(arg0) {
-    return new obj6(arg0, this);
-  };
-  prototype.getElementById = function(arg0) {
-    let callback = arg0;
-    callback = String(arg0);
-    return callback(this.childNodes, (id) => {
-      if (String(id.id) === closure_0) {
-        return id;
-      }
-    }) || null;
-  };
-  prototype.getElementsByClassName = _exports.prototype.getElementsByClassName;
-  prototype.getElementsByTagName = _exports.prototype.getElementsByTagName;
-  prototype.contains = _exports.prototype.contains;
-  prototype.removeEventListener = obj6.exports;
-  prototype.addEventListener = obj6.exports;
-  prototype.dispatchEvent = obj6.exports;
-};
-create = undefined;
-f94627 = () => {
-
-};
-f94619 = (arg0, arg1) => {
+let f94619 = (arg0, arg1) => {
   if (typeof f94627 !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -5138,18 +253,16 @@ f94619 = (arg0, arg1) => {
   const _exports = new obj.exports();
   arg1.exports = _exports;
 };
-create = undefined;
-f94627 = () => {
+let create;
+const f94627 = () => {
 
 };
-let obj = {};
-obj = {
+let obj = {
   default() {
     return ne;
   }
 };
 for (const key10058 in obj) {
-  let tmp36 = key10058;
   obj = { get: null, enumerable: true };
   obj[0] = obj[key10058];
   let definePropertyResult = defineProperty(obj, key10058, obj);
@@ -5163,7 +276,6 @@ if (typeof obj === "object") {
     do {
       let tmp3 = ownPropertyNames[num];
       let call = hasOwnProperty.call;
-      let tmp4 = num;
       let tmp5 = typeof call === "unknown" ? hasOwnProperty(tmp3) : call(definePropertyResult1, tmp3);
       let tmp6 = !tmp5;
       if (!tmp5) {
@@ -5366,7 +478,6 @@ function se(nodeName) {
       str2 = "";
       if (element.nodeName) {
         str2 = element.nodeName.toLowerCase();
-        const str3 = element.nodeName;
       }
     }
     items = [element, tmp2, str2];
@@ -5381,12 +492,7 @@ let c35 = 2;
 let c36 = 3;
 let c37 = 4;
 let tmp11 = ((arg0) => {
-  let num = 3;
   if (arguments.length > 1) {
-    num = 3;
-    if (undefined !== arguments[1]) {
-      num = arguments[1];
-    }
   }
   const _console = console;
   if (arg0) {
@@ -5640,9 +746,9 @@ function Nt(requestEndDate, getMetricsFor) {
             str3 = "";
           }
           const parts = str3.trim().split(/[\r\n]+/);
-          const item = parts.forEach((str) => {
-            if (str) {
-              const parts = str.split(": ");
+          const item = parts.forEach((item, index) => {
+            if (item) {
+              const parts = item.split(": ");
               const str2 = parts.shift();
               let tmp = str2;
               if (str2) {
@@ -5675,7 +781,7 @@ function Nt(requestEndDate, getMetricsFor) {
           obj = tmp20;
           let tmp23;
           if (tmp20) {
-            const found = items.find((arg0) => undefined !== obj[arg0]);
+            const found = items.find((item, index) => undefined !== obj[item]);
             let tmp26;
             if (found) {
               tmp26 = tmp20[found];
@@ -5703,9 +809,9 @@ let fn2 = function r() {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f94619[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f94619[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_listeners" in self) {
@@ -5722,14 +828,13 @@ let fn2 = function r() {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f94619[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f94619[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f94619);
 };
-f94619 = fn2;
 let items2 = [
   {
     key: "on",
@@ -5765,9 +870,9 @@ let items2 = [
         _listeners = tmp._listeners[arg0];
       }
       if (_listeners) {
-        const item = _listeners.forEach((_eventEmitterGuid) => {
-          if (_eventEmitterGuid._eventEmitterGuid === _eventEmitterGuid._eventEmitterGuid) {
-            _listeners.splice(arg1, 1);
+        const item = _listeners.forEach((item, index) => {
+          if (item._eventEmitterGuid === _eventEmitterGuid._eventEmitterGuid) {
+            _listeners.splice(index, 1);
           }
         });
       }
@@ -5776,11 +881,10 @@ let items2 = [
   {
     key: "one",
     value(arg0, _eventEmitterGuid) {
-      let self = this;
       closure_0 = arg0;
       closure_1 = _eventEmitterGuid;
       closure_2 = arg2;
-      self = this;
+      let self = this;
       _eventEmitterGuid = _eventEmitterGuid._eventEmitterGuid;
       if (!_eventEmitterGuid) {
         const sum = c57 + 1;
@@ -5808,58 +912,48 @@ let items2 = [
   {
     key: "emit",
     value(arg0, arg1) {
-      let self = this;
-      let obj = arg0;
-      self = this;
+      const self = this;
       if (this._listeners) {
-        obj = arg1;
-        if (!arg1) {
-          obj = {};
-        }
         const substr = self._listeners["before" + arg0] || [].slice();
-        const item = substr.forEach((call) => {
-          call = call.call;
+        const item = substr.forEach((item, index) => {
+          const call = item.call;
           obj = { type: obj };
           if (typeof call === "unknown") {
-            call(obj, tmp2);
+            item(obj, tmp2);
           } else {
             call(self, obj, tmp2);
           }
         });
         const substr1 = self._listeners["before*"] || [].slice();
-        const item1 = substr1.forEach((call) => {
-          call = call.call;
+        const item1 = substr1.forEach((item, index) => {
+          const call = item.call;
           obj = { type: obj };
           if (typeof call === "unknown") {
-            call(obj, tmp2);
+            item(obj, tmp2);
           } else {
             call(self, obj, tmp2);
           }
         });
         const substr2 = self._listeners[arg0] || [].slice();
-        const item2 = substr2.forEach((call) => {
-          call = call.call;
+        const item2 = substr2.forEach((item, index) => {
+          const call = item.call;
           obj = { type: obj };
           if (typeof call === "unknown") {
-            call(obj, tmp2);
+            item(obj, tmp2);
           } else {
             call(self, obj, tmp2);
           }
         });
         const substr3 = self._listeners["after" + arg0] || [].slice();
-        const item3 = substr3.forEach((call) => {
-          call = call.call;
+        const item3 = substr3.forEach((item, index) => {
+          const call = item.call;
           obj = { type: obj };
           if (typeof call === "unknown") {
-            call(obj, tmp2);
+            item(obj, tmp2);
           } else {
             call(self, obj, tmp2);
           }
         });
-        const arr = self._listeners["before" + arg0] || [];
-        const arr2 = self._listeners["before*"] || [];
-        const arr3 = self._listeners[arg0] || [];
-        const arr4 = self._listeners["after" + arg0] || [];
       }
     }
   }
@@ -5867,9 +961,8 @@ let items2 = [
 N(fn2, items2);
 let closure_58 = G(obj2.exports);
 let fn3 = function r(pm) {
-  let self = this;
   closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -5935,9 +1028,9 @@ let fn3 = function r(pm) {
       pm.on("adbreakend", _stopPlaybackHeartbeatInterval8.bind(self));
       pm.on("seeked", () => {
         if (pm.data.player_is_paused) {
-          const result = obj._stopPlaybackHeartbeatInterval();
+          const result = self._stopPlaybackHeartbeatInterval();
         } else {
-          const result1 = obj._startPlaybackHeartbeatInterval();
+          const result1 = self._startPlaybackHeartbeatInterval();
         }
       });
       pm.on("timeupdate", () => {
@@ -5947,11 +1040,11 @@ let fn3 = function r(pm) {
       });
       pm.on("devicesleep", (arg0, viewer_time) => {
         if (null !== self._playbackHeartbeatInterval) {
-          closure_1_58.default.clearInterval(tmp._playbackHeartbeatInterval);
+          closure_1_58.default.clearInterval(self._playbackHeartbeatInterval);
           const obj = { viewer_time: null };
           obj[0] = viewer_time.viewer_time;
           pm.emit("playbackheartbeatend", obj);
-          tmp._playbackHeartbeatInterval = null;
+          self._playbackHeartbeatInterval = null;
           const _default = closure_1_58.default;
         }
       });
@@ -5970,13 +1063,11 @@ let fn3 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn3;
 let items3 = [
   {
     key: "_startPlaybackHeartbeatInterval",
     value() {
-      let self = this;
-      self = this;
+      const self = this;
       if (null === this._playbackHeartbeatInterval) {
         let pm = self.pm;
         pm.emit("playbackheartbeat");
@@ -6005,14 +1096,13 @@ let items3 = [
 ];
 N(fn3, items3);
 let fn4 = function r(on) {
-  let self = this;
   closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn4[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn4[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("viewErrored" in self) {
@@ -6034,27 +1124,27 @@ let fn4 = function r(on) {
             if (!player_error_code) {
               player_error_code = player_error_code.player_error_code;
             }
-            tmp3.data.player_error_code = player_error_code;
+            on.data.player_error_code = player_error_code;
             let player_error_message = tmp5.player_error_message;
             if (!player_error_message) {
               player_error_message = player_error_code.player_error_message;
             }
-            tmp3.data.player_error_message = player_error_message;
+            on.data.player_error_message = player_error_message;
             let player_error_context = tmp5.player_error_context;
             if (!player_error_context) {
               player_error_context = player_error_code.player_error_context;
             }
-            tmp3.data.player_error_context = player_error_context;
+            on.data.player_error_context = player_error_context;
             let player_error_severity = tmp5.player_error_severity;
             if (!player_error_severity) {
               player_error_severity = player_error_code.player_error_severity;
             }
-            tmp3.data.player_error_severity = player_error_severity;
+            on.data.player_error_severity = player_error_severity;
             let player_error_business_exception = errorTranslatorResult.player_error_business_exception;
             if (!player_error_business_exception) {
               player_error_business_exception = player_error_code.player_error_business_exception;
             }
-            tmp3.data.player_error_business_exception = player_error_business_exception;
+            on.data.player_error_business_exception = player_error_business_exception;
             self.viewErrored = true;
           }
         } catch (tmp16) {
@@ -6072,7 +1162,7 @@ let fn4 = function r(on) {
         if (!tmp5) {
           delete tmp3[tmp2];
         }
-        const data2 = tmp4.data;
+        const data2 = on.data;
         let tmp6 = null === data2;
         if (!tmp6) {
           tmp6 = undefined === data2;
@@ -6080,7 +1170,7 @@ let fn4 = function r(on) {
         if (!tmp6) {
           delete tmp3[tmp2];
         }
-        const data3 = tmp4.data;
+        const data3 = on.data;
         let tmp7 = null === data3;
         if (!tmp7) {
           tmp7 = undefined === data3;
@@ -6088,7 +1178,7 @@ let fn4 = function r(on) {
         if (!tmp7) {
           delete tmp3[tmp2];
         }
-        const data4 = tmp4.data;
+        const data4 = on.data;
         let tmp8 = null === data4;
         if (!tmp8) {
           tmp8 = undefined === data4;
@@ -6096,7 +1186,7 @@ let fn4 = function r(on) {
         if (!tmp8) {
           delete tmp3[tmp2];
         }
-        const data5 = tmp4.data;
+        const data5 = on.data;
         let tmp9 = null === data5;
         if (!tmp9) {
           tmp9 = undefined === data5;
@@ -6113,20 +1203,20 @@ let fn4 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn4[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn4[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn4);
 };
 let fn5 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f94619[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f94619[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_watchTimeTrackerLastCheckedTime" in self) {
@@ -6155,14 +1245,13 @@ let fn5 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f94619[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f94619[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f94619);
 };
-f94619 = fn5;
 let items4 = [
   {
     key: "_updateWatchTime",
@@ -6192,8 +1281,7 @@ let items4 = [
 ];
 N(fn5, items4);
 let fn6 = function r(pm) {
-  let self = this;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6270,7 +1358,7 @@ let fn6 = function r(pm) {
       });
       pm.on("viewinit", () => {
         self._playbackTimeTrackerLastPlayheadPosition = -1;
-        self._lastTime = closure_1_27.now();
+        self._lastTime = obj3.now();
         self._isAdPlaying = false;
         self._callbackUpdatePlaybackTime = null;
       });
@@ -6289,7 +1377,6 @@ let fn6 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn6;
 const items5 = [
   {
     key: "_startPlaybackTimeTracking",
@@ -6402,7 +1489,6 @@ let fn7 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn7;
 const items6 = [
   {
     key: "_updateMaxPlayheadPosition",
@@ -6453,9 +1539,9 @@ let fn8 = function r(disableRebufferTracking) {
   closure_0 = disableRebufferTracking;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn8[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn8[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if (!disableRebufferTracking.disableRebufferTracking) {
@@ -6475,17 +1561,18 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_duration = data.view_rebuffer_duration + diff;
             viewer_time = viewer_time.viewer_time;
             if (disableRebufferTracking.data.view_rebuffer_duration > closure_1_64) {
-              obj.emit("viewend");
-              obj.send("viewend");
-              const log = obj.mux.log;
+              disableRebufferTracking.emit("viewend");
+              disableRebufferTracking.send("viewend");
+              const log = disableRebufferTracking.mux.log;
               const concat = "Ending view after rebuffering for longer than ".concat;
               log.warn("Ending view after rebuffering for longer than ".concat(tmp4, "ms, future events will be ignored unless a programchange or videochange occurs."));
             }
           }
           if (tmp9) {
-            tmp8.data.view_rebuffer_frequency = tmp8.data.view_rebuffer_count / tmp8.data.view_watch_time;
-            tmp8.data.view_rebuffer_percentage = tmp8.data.view_rebuffer_duration / tmp8.data.view_watch_time;
+            disableRebufferTracking.data.view_rebuffer_frequency = disableRebufferTracking.data.view_rebuffer_count / disableRebufferTracking.data.view_watch_time;
+            disableRebufferTracking.data.view_rebuffer_percentage = disableRebufferTracking.data.view_rebuffer_duration / disableRebufferTracking.data.view_watch_time;
           }
+          tmp9 = disableRebufferTracking.data.view_watch_time >= 0 && disableRebufferTracking.data.view_rebuffer_count > 0;
         }
         disableRebufferTracking.on("playbackheartbeat", (arg0, arg1) => {
           a(arg1);
@@ -6497,8 +1584,6 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_count = data.view_rebuffer_count + 1;
             viewer_time = viewer_time.viewer_time;
             disableRebufferTracking.one("rebufferend", i);
-            const obj = disableRebufferTracking;
-            const tmp = data.view_rebuffer_count || 0;
           }
         });
         disableRebufferTracking.on("viewinit", () => {
@@ -6514,16 +1599,15 @@ let fn8 = function r(disableRebufferTracking) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn8[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn8[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn8);
 };
 const fn9 = function r(pm) {
-  let self = this;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6576,7 +1660,7 @@ const fn9 = function r(pm) {
         const _cleanupRebufferTracker = self._cleanupRebufferTracker;
         pm.on("playbackheartbeatend", _cleanupRebufferTracker.bind(self));
         pm.on("seeking", () => {
-          const result = self._cleanupRebufferTracker(null, { viewer_time: closure_1_27.now() });
+          const result = self._cleanupRebufferTracker(null, { viewer_time: obj3.now() });
         });
       }
     } else {
@@ -6594,7 +1678,6 @@ const fn9 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn9;
 const items7 = [
   {
     key: "_checkIfRebuffering",
@@ -6689,9 +1772,8 @@ const items7 = [
 ];
 N(fn9, items7);
 const fn10 = function r(pm) {
-  let self = this;
   closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6729,7 +1811,7 @@ const fn10 = function r(pm) {
             }
             if (tmp) {
               if (!viewer_time) {
-                viewer_time = closure_2_27.now();
+                viewer_time = obj3.now();
               }
               const result = fn.calculateTimeToFirstFrame(viewer_time, view_id);
             }
@@ -6757,7 +1839,6 @@ const fn10 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn10;
 const items8 = [
   {
     key: "_inPrerollPosition",
@@ -6789,14 +1870,13 @@ const items8 = [
 ];
 N(fn10, items8);
 const fn11 = function r(on) {
-  let self = this;
   closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn11[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn11[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_lastPlayerHeight" in self) {
@@ -6833,20 +1913,20 @@ const fn11 = function r(on) {
         self._lastPlayheadPosition = -1;
       });
       items = ["pause", "rebufferstart", "seeking", "error", "adbreakstart", "hb", "renditionchange", "orientationchange", "viewend", "playbackmodechange"];
-      const item = items.forEach((arg0) => {
-        on.on(arg0, () => {
+      const item = items.forEach((item, index) => {
+        on.on(item, () => {
           if (obj._lastPlayheadPosition >= 0) {
             if (data.data.player_playhead_time >= 0) {
-              if (tmp._lastPlayerWidth >= 0) {
-                if (tmp._lastSourceWidth > 0) {
-                  if (tmp._lastPlayerHeight >= 0) {
-                    if (tmp._lastSourceHeight > 0) {
-                      const diff = tmp4.data.player_playhead_time - tmp._lastPlayheadPosition;
+              if (obj._lastPlayerWidth >= 0) {
+                if (obj._lastSourceWidth > 0) {
+                  if (obj._lastPlayerHeight >= 0) {
+                    if (obj._lastSourceHeight > 0) {
+                      const diff = tmp4.data.player_playhead_time - obj._lastPlayheadPosition;
                       if (diff < 0) {
-                        tmp._lastPlayheadPosition = -1;
+                        obj._lastPlayheadPosition = -1;
                       } else {
                         const _Math = Math;
-                        const bound = Math.min(tmp._lastPlayerWidth / tmp._lastSourceWidth, tmp._lastPlayerHeight / tmp._lastSourceHeight);
+                        const bound = Math.min(obj._lastPlayerWidth / obj._lastSourceWidth, obj._lastPlayerHeight / obj._lastSourceHeight);
                         const _Math2 = Math;
                         const bound1 = Math.max(0, bound - 1);
                         const _Math3 = Math;
@@ -6891,8 +1971,8 @@ const fn11 = function r(on) {
         });
       });
       const items1 = ["playing", "hb", "renditionchange", "orientationchange", "playbackmodechange"];
-      const item1 = items1.forEach((arg0) => {
-        on.on(arg0, () => {
+      const item1 = items1.forEach((item, index) => {
+        on.on(item, () => {
           closure_1._lastPlayheadPosition = closure_0.data.player_playhead_time;
           closure_1._lastPlayerWidth = closure_0.data.player_width;
           closure_1._lastPlayerHeight = closure_0.data.player_height;
@@ -6908,22 +1988,21 @@ const fn11 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn11[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn11[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn11);
 };
 const fn12 = function r(on) {
-  let self = this;
   closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn12[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn12[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("isSeeking" in self) {
@@ -6948,27 +2027,26 @@ const fn12 = function r(on) {
           if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const nowResult = closure_1_27.now();
+          const nowResult = obj3.now();
           let tmp8 = viewer_time;
           if (!viewer_time) {
             tmp8 = nowResult;
           }
-          const diff = (obj.data.viewer_time || nowResult) - tmp8;
-          const data = obj.data;
+          const diff = (on.data.viewer_time || nowResult) - tmp8;
+          const data = on.data;
           data.view_seek_duration = data.view_seek_duration || 0;
           data.view_seek_duration = data.view_seek_duration + diff;
-          let num2 = obj.data.view_max_seek_time;
+          let num2 = on.data.view_max_seek_time;
           if (!num2) {
             num2 = 0;
           }
-          obj.data.view_max_seek_time = Math.max(num2, diff);
-          tmp2.isSeeking = false;
+          on.data.view_max_seek_time = Math.max(num2, diff);
+          self.isSeeking = false;
           viewer_time = -1;
-          const tmp7 = obj.data.viewer_time || nowResult;
         }
         self.isSeeking = true;
         viewer_time = viewer_time.viewer_time;
-        const data2 = obj.data;
+        const data2 = on.data;
         data2.view_seek_count = data2.view_seek_count || 0;
         data2.view_seek_count = data2.view_seek_count + 1;
         on.send("seeking");
@@ -6977,15 +2055,15 @@ const fn12 = function r(on) {
         if (typeof a !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const nowResult = closure_1_27.now();
+        const nowResult = obj3.now();
         let tmp4 = c2;
         if (!c2) {
           tmp4 = nowResult;
         }
         const diff = (on.data.viewer_time || nowResult) - tmp4;
-        const data = tmp2.data;
+        const data = on.data;
         data.view_seek_duration = data.view_seek_duration + diff;
-        let num = tmp2.data.view_max_seek_time;
+        let num = on.data.view_max_seek_time;
         if (!num) {
           num = 0;
         }
@@ -6998,24 +2076,23 @@ const fn12 = function r(on) {
           if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const nowResult = closure_1_27.now();
+          const nowResult = obj3.now();
           let tmp6 = c2;
           if (!c2) {
             tmp6 = nowResult;
           }
           const diff = (on.data.viewer_time || nowResult) - tmp6;
-          const data = obj.data;
+          const data = on.data;
           data.view_seek_duration = data.view_seek_duration || 0;
           data.view_seek_duration = data.view_seek_duration + diff;
-          let num = obj.data.view_max_seek_time;
+          let num = on.data.view_max_seek_time;
           if (!num) {
             num = 0;
           }
           on.data.view_max_seek_time = Math.max(num, diff);
-          tmp.isSeeking = false;
+          self.isSeeking = false;
           c2 = -1;
           on.send("seeked");
-          const tmp5 = on.data.viewer_time || nowResult;
         }
         self.isSeeking = false;
         c2 = -1;
@@ -7028,21 +2105,20 @@ const fn12 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn12[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn12[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn12);
 };
 function Xt(arg0, arg1) {
 
 }
 let closure_71 = ["adbreakstart", "adrequest", "adresponse", "adplay", "adplaying", "adpause", "adended", "adbreakend", "aderror", "adclicked", "adskipped"];
 const fn13 = function r(pm) {
-  let self = this;
   closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -7115,9 +2191,9 @@ const fn13 = function r(pm) {
         self._wouldBeNewAdPlay = true;
         self._prerollPlayTime = undefined;
       });
-      const item = closure_71.forEach((arg0) => {
+      const item = closure_71.forEach((item, index) => {
         const _updateAdData = self._updateAdData;
-        return pm.on(arg0, _updateAdData.bind(self));
+        return pm.on(item, _updateAdData.bind(self));
       });
       const fn = function i() {
         self.isAdBreak = false;
@@ -7132,7 +2208,7 @@ const fn13 = function r(pm) {
         self._currentAdRequestNumber = +self._currentAdRequestNumber + 1;
         const _adRequests = self._adRequests;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
-        if (typeof closure_1_70 !== "function") {
+        if (typeof Xt !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adRequests.push(merged);
@@ -7141,9 +2217,9 @@ const fn13 = function r(pm) {
         data.view_ad_request_count = data.view_ad_request_count || 0;
         data.view_ad_request_count = data.view_ad_request_count + 1;
         if (self.inPrerollPosition()) {
-          tmp5.data.view_preroll_requested = true;
-          if (!obj2._adHasPlayed) {
-            const data2 = tmp5.data;
+          pm.data.view_preroll_requested = true;
+          if (!self._adHasPlayed) {
+            const data2 = pm.data;
             data2.view_preroll_request_count = data2.view_preroll_request_count || 0;
             data2.view_preroll_request_count = data2.view_preroll_request_count + 1;
           }
@@ -7153,7 +2229,7 @@ const fn13 = function r(pm) {
         self._currentAdResponseNumber = +self._currentAdResponseNumber + 1;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
         const _adResponses = self._adResponses;
-        if (typeof closure_1_70 !== "function") {
+        if (typeof Xt !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adResponses.push(merged);
@@ -7174,26 +2250,26 @@ const fn13 = function r(pm) {
       pm.on("adplay", (arg0, viewer_time) => {
         self._adHasPlayed = true;
         if (self._wouldBeNewAdPlay) {
-          obj._wouldBeNewAdPlay = false;
+          self._wouldBeNewAdPlay = false;
           const data = pm.data;
           data.view_ad_played_count = data.view_ad_played_count || 0;
           data.view_ad_played_count = data.view_ad_played_count + 1;
         }
-        let inPrerollPositionResult = obj.inPrerollPosition();
+        let inPrerollPositionResult = self.inPrerollPosition();
         if (inPrerollPositionResult) {
           inPrerollPositionResult = !pm.data.view_preroll_played;
         }
         if (inPrerollPositionResult) {
           pm.data.view_preroll_played = true;
-          if (obj._adRequests.length > 0) {
+          if (self._adRequests.length > 0) {
             const _Math = Math;
-            tmp5.data.view_preroll_request_time = Math.max(0, viewer_time.viewer_time - obj._adRequests[0].viewer_time);
+            pm.data.view_preroll_request_time = Math.max(0, viewer_time.viewer_time - self._adRequests[0].viewer_time);
           }
           if (pm.data.view_start) {
             const _Math2 = Math;
-            tmp5.data.view_startup_preroll_request_time = Math.max(0, viewer_time.viewer_time - tmp5.data.view_start);
+            pm.data.view_startup_preroll_request_time = Math.max(0, viewer_time.viewer_time - pm.data.view_start);
           }
-          obj._prerollPlayTime = viewer_time.viewer_time;
+          self._prerollPlayTime = viewer_time.viewer_time;
         }
       });
       pm.on("adplaying", (arg0, viewer_time) => {
@@ -7202,11 +2278,11 @@ const fn13 = function r(pm) {
           inPrerollPositionResult = undefined === pm.data.view_preroll_load_time;
         }
         if (inPrerollPositionResult) {
-          inPrerollPositionResult = undefined !== tmp._prerollPlayTime;
+          inPrerollPositionResult = undefined !== self._prerollPlayTime;
         }
         if (inPrerollPositionResult) {
-          pm.data.view_preroll_load_time = viewer_time.viewer_time - tmp._prerollPlayTime;
-          pm.data.view_startup_preroll_load_time = viewer_time.viewer_time - tmp._prerollPlayTime;
+          pm.data.view_preroll_load_time = viewer_time.viewer_time - self._prerollPlayTime;
+          pm.data.view_startup_preroll_load_time = viewer_time.viewer_time - self._prerollPlayTime;
         }
       });
       pm.on("adclicked", (arg0, arg1) => {
@@ -7244,7 +2320,6 @@ const fn13 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f94619 = fn13;
 const items9 = [
   {
     key: "inPrerollPosition",
@@ -7300,38 +2375,37 @@ const items9 = [
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
+                    let prop = typeof Symbol !== "undefined";
                     if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
+                      prop = items[Symbol.iterator];
                     }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
+                    if (!prop) {
+                      prop = items[Symbol.iterator];
                     }
-                    tmp6 = iterable;
+                    tmp6 = prop;
                   }
                   if (null != tmp6) {
                     let flag2 = false;
                     try {
                       items = [];
                       try {
-                        const call = tmp8.call;
+                        const call = tmp9.call;
                         if (typeof call === "unknown") {
-                          let iter = tmp8();
+                          let iter = tmp9();
                         } else {
                           iter = call(items);
                         }
                         const iter3 = iter.next();
                         const done = iter3.done;
-                        let tmp10 = done;
+                        let tmp11 = done;
                         if (!done) {
                           items.push(iter4.value);
                           if (!arg1) {
                             const iter5 = iter2.next();
                             const done2 = iter5.done;
-                            tmp10 = done2;
+                            tmp11 = done2;
                             while (!done2) {
-                              let tmp15 = iter5;
                               let arr = items.push(iter6.value);
                               if (!arg1) {
                                 continue;
@@ -7343,11 +2417,11 @@ const items9 = [
                           }
                         }
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          let tmp19 = !tmp11;
+                          if (!tmp11) {
+                            tmp19 = null != iter2.return;
                           }
-                          if (tmp18) {
+                          if (tmp19) {
                             iter2.return();
                           }
                           if (flag2) {
@@ -7355,35 +2429,35 @@ const items9 = [
                           } else {
                             return items;
                           }
-                        } catch (tmp24) {
+                        } catch (tmp25) {
                           if (tmp2) {
                             throw tmp;
                           } else {
-                            throw tmp24;
+                            throw tmp25;
                           }
                         }
                       } catch (tmp5) {
                         flag2 = true;
                       }
-                    } catch (tmp27) {
+                    } catch (tmp28) {
                       try {
-                        let tmp29 = !tmp3;
+                        let tmp30 = !tmp3;
                         if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
+                          tmp30 = tmp4 != obj.return;
                         }
-                        if (tmp29) {
+                        if (tmp30) {
                           obj.return();
                         }
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp27;
+                          throw tmp28;
                         }
-                      } catch (tmp35) {
+                      } catch (tmp36) {
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp35;
+                          throw tmp36;
                         }
                       }
                     }
@@ -7430,38 +2504,37 @@ const items9 = [
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
+                    let prop = typeof Symbol !== "undefined";
                     if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
+                      prop = items[Symbol.iterator];
                     }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
+                    if (!prop) {
+                      prop = items[Symbol.iterator];
                     }
-                    tmp6 = iterable;
+                    tmp6 = prop;
                   }
                   if (null != tmp6) {
                     let flag2 = false;
                     try {
                       items = [];
                       try {
-                        const call = tmp8.call;
+                        const call = tmp9.call;
                         if (typeof call === "unknown") {
-                          let iter = tmp8();
+                          let iter = tmp9();
                         } else {
                           iter = call(items);
                         }
                         const iter3 = iter.next();
                         const done = iter3.done;
-                        let tmp10 = done;
+                        let tmp11 = done;
                         if (!done) {
                           items.push(iter4.value);
                           if (!arg1) {
                             const iter5 = iter2.next();
                             const done2 = iter5.done;
-                            tmp10 = done2;
+                            tmp11 = done2;
                             while (!done2) {
-                              let tmp15 = iter5;
                               let arr = items.push(iter6.value);
                               if (!arg1) {
                                 continue;
@@ -7473,11 +2546,11 @@ const items9 = [
                           }
                         }
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          let tmp19 = !tmp11;
+                          if (!tmp11) {
+                            tmp19 = null != iter2.return;
                           }
-                          if (tmp18) {
+                          if (tmp19) {
                             iter2.return();
                           }
                           if (flag2) {
@@ -7485,35 +2558,35 @@ const items9 = [
                           } else {
                             return items;
                           }
-                        } catch (tmp24) {
+                        } catch (tmp25) {
                           if (tmp2) {
                             throw tmp;
                           } else {
-                            throw tmp24;
+                            throw tmp25;
                           }
                         }
                       } catch (tmp5) {
                         flag2 = true;
                       }
-                    } catch (tmp27) {
+                    } catch (tmp28) {
                       try {
-                        let tmp29 = !tmp3;
+                        let tmp30 = !tmp3;
                         if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
+                          tmp30 = tmp4 != obj.return;
                         }
-                        if (tmp29) {
+                        if (tmp30) {
                           obj.return();
                         }
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp27;
+                          throw tmp28;
                         }
-                      } catch (tmp35) {
+                      } catch (tmp36) {
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp35;
+                          throw tmp36;
                         }
                       }
                     }
@@ -7568,19 +2641,19 @@ const items9 = [
         }
         self.pm.data.ad_type = ad_type;
       }
+      tmp30 = null != ad_tag_url && ad_tag_url.ad_type;
     }
   }
 ];
 N(fn13, items9);
 const fn14 = function r(one) {
-  let self = this;
   closure_0 = one;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn14[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn14[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("lastWallClockTime" in self) {
@@ -7590,11 +2663,11 @@ const fn14 = function r(one) {
         self.lastWallClockTime = undefined;
       }
       const fn = function i() {
-        self.lastWallClockTime = closure_1_27.now();
+        self.lastWallClockTime = obj3.now();
         one.on("before*", a);
       };
       function a(arg0) {
-        const nowResult = closure_1_27.now();
+        const nowResult = obj3.now();
         const lastWallClockTime = self.lastWallClockTime;
         self.lastWallClockTime = nowResult;
         if (nowResult - lastWallClockTime > 30000) {
@@ -7629,12 +2702,12 @@ const fn14 = function r(one) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn14[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn14[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn14);
 };
 let closure_74 = G(obj2.exports);
 const fn15 = function e(arg0) {
@@ -7657,7 +2730,7 @@ const fn15 = function e(arg0) {
             tmp2 = json;
           }
           if (lib.write) {
-            let writeResult = obj5.write(tmp2, arg0);
+            let writeResult = lib.write(tmp2, arg0);
           } else {
             const _encodeURIComponent = encodeURIComponent;
             const _String = String;
@@ -7669,7 +2742,6 @@ const fn15 = function e(arg0) {
           const _String2 = String;
           const _decodeURIComponent4 = decodeURIComponent;
           obj4 = /^[\{\[]/;
-          obj5 = lib;
           const str9 = encodeURIComponent(String(arg0));
           const _escape = escape;
           items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7707,7 +2779,6 @@ const fn15 = function e(arg0) {
         if (document.cookie) {
           const _document2 = document;
           let parts = document.cookie.split("; ");
-          const str = document.cookie;
         } else {
           parts = [];
         }
@@ -7725,9 +2796,9 @@ const fn15 = function e(arg0) {
             const _decodeURIComponent = decodeURIComponent;
             const replaced = parts1[0].replace(tmp4, decodeURIComponent);
             if (lib.read) {
-              let readResult = obj3.read(substr1, replaced);
+              let readResult = lib.read(substr1, replaced);
             } else {
-              readResult = obj3(substr1, replaced);
+              readResult = lib(substr1, replaced);
               if (!readResult) {
                 const _decodeURIComponent2 = decodeURIComponent;
                 readResult = substr1.replace(tmp4, decodeURIComponent);
@@ -7749,19 +2820,17 @@ const fn15 = function e(arg0) {
               }
               num4 = num4 + 1;
             }
-            const str7 = parts1[0];
           } catch (err) {
           }
-          const str5 = parts[num4];
         }
         return obj;
       }
     }
   };
   fn.set = fn;
-  fn.get = (arg0) => {
+  fn.get = (closure_1_1) => {
     const call = fn.call;
-    return typeof call === "unknown" ? fn(arg0) : call(fn, arg0);
+    return typeof call === "unknown" ? fn(closure_1_1) : call(fn, closure_1_1);
   };
   fn.getJSON = () => {
     const slice = [].slice;
@@ -7780,7 +2849,6 @@ const fn15 = function e(arg0) {
   fn.withConverter = fn;
   return fn;
 };
-create = fn15;
 f94619 = () => {
 
 };
@@ -7802,7 +2870,7 @@ const fn16 = function i(arg0, arg1, arg2) {
           tmp2 = json;
         }
         if (lib.write) {
-          let writeResult = obj5.write(tmp2, arg0);
+          let writeResult = lib.write(tmp2, arg0);
         } else {
           const _encodeURIComponent = encodeURIComponent;
           const _String = String;
@@ -7814,7 +2882,6 @@ const fn16 = function i(arg0, arg1, arg2) {
         const _String2 = String;
         const _decodeURIComponent4 = decodeURIComponent;
         obj4 = /^[\{\[]/;
-        obj5 = lib;
         const str9 = encodeURIComponent(String(arg0));
         const _escape = escape;
         items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7852,7 +2919,6 @@ const fn16 = function i(arg0, arg1, arg2) {
       if (document.cookie) {
         const _document2 = document;
         let parts = document.cookie.split("; ");
-        const str = document.cookie;
       } else {
         parts = [];
       }
@@ -7870,9 +2936,9 @@ const fn16 = function i(arg0, arg1, arg2) {
           const _decodeURIComponent = decodeURIComponent;
           const replaced = parts1[0].replace(tmp4, decodeURIComponent);
           if (lib.read) {
-            let readResult = obj3.read(substr1, replaced);
+            let readResult = lib.read(substr1, replaced);
           } else {
-            readResult = obj3(substr1, replaced);
+            readResult = lib(substr1, replaced);
             if (!readResult) {
               const _decodeURIComponent2 = decodeURIComponent;
               readResult = substr1.replace(tmp4, decodeURIComponent);
@@ -7894,10 +2960,8 @@ const fn16 = function i(arg0, arg1, arg2) {
             }
             num4 = num4 + 1;
           }
-          const str7 = parts1[0];
         } catch (err) {
         }
-        const str5 = parts[num4];
       }
       return obj;
     }
@@ -7905,9 +2969,9 @@ const fn16 = function i(arg0, arg1, arg2) {
 };
 create = fn16;
 fn16.set = fn16;
-fn16.get = (arg0) => {
+fn16.get = (closure_1_1) => {
   const call = fn.call;
-  return typeof call === "unknown" ? fn(arg0) : call(fn, arg0);
+  return typeof call === "unknown" ? fn(closure_1_1) : call(fn, closure_1_1);
 };
 fn16.getJSON = () => {
   const slice = [].slice;
@@ -7933,8 +2997,8 @@ function tr() {
     }
     let obj = ((str) => {
       let parts = str.split("&");
-      return parts.reduce((arg0, str) => {
-        const parts = str.split("=");
+      return parts.reduce((acc, item, index) => {
+        const parts = item.split("=");
         let tmp2;
         if (Array.isArray(parts)) {
           tmp2 = parts;
@@ -7944,38 +3008,37 @@ function tr() {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol !== "undefined";
+              let prop = typeof Symbol !== "undefined";
               if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
-                iterable = items[Symbol.iterator];
+                prop = items[Symbol.iterator];
               }
-              if (!iterable) {
-                iterable = items[Symbol.iterator];
+              if (!prop) {
+                prop = items[Symbol.iterator];
               }
-              tmp6 = iterable;
+              tmp6 = prop;
             }
             if (null != tmp6) {
               let flag2 = false;
               try {
                 items = [];
                 try {
-                  const call = tmp8.call;
+                  const call = tmp9.call;
                   if (typeof call === "unknown") {
-                    let iter = tmp8();
+                    let iter = tmp9();
                   } else {
                     iter = call(items);
                   }
                   const iter3 = iter.next();
                   const done = iter3.done;
-                  let tmp10 = done;
+                  let tmp11 = done;
                   if (!done) {
                     items.push(iter4.value);
                     if (!arg1) {
                       const iter5 = iter2.next();
                       const done2 = iter5.done;
-                      tmp10 = done2;
+                      tmp11 = done2;
                       while (!done2) {
-                        let tmp15 = iter5;
                         let arr = items.push(iter6.value);
                         if (!arg1) {
                           continue;
@@ -7987,11 +3050,11 @@ function tr() {
                     }
                   }
                   try {
-                    let tmp18 = !tmp10;
-                    if (!tmp10) {
-                      tmp18 = null != iter2.return;
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
                     }
-                    if (tmp18) {
+                    if (tmp19) {
                       iter2.return();
                     }
                     if (flag2) {
@@ -7999,35 +3062,35 @@ function tr() {
                     } else {
                       return items;
                     }
-                  } catch (tmp24) {
+                  } catch (tmp25) {
                     if (tmp2) {
                       throw tmp;
                     } else {
-                      throw tmp24;
+                      throw tmp25;
                     }
                   }
                 } catch (tmp5) {
                   flag2 = true;
                 }
-              } catch (tmp27) {
+              } catch (tmp28) {
                 try {
-                  let tmp29 = !tmp3;
+                  let tmp30 = !tmp3;
                   if (!tmp3) {
-                    tmp29 = tmp4 != obj.return;
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp29) {
+                  if (tmp30) {
                     obj.return();
                   }
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp27;
+                    throw tmp28;
                   }
-                } catch (tmp35) {
+                } catch (tmp36) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp35;
+                    throw tmp36;
                   }
                 }
               }
@@ -8045,8 +3108,8 @@ function tr() {
               tmp10 = tmp9;
             }
           }
-          arg0[tmp2[0]] = tmp10;
-          return arg0;
+          acc[tmp2[0]] = tmp10;
+          return acc;
         } else {
           const _TypeError = TypeError;
           const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -8063,48 +3126,47 @@ function rr(arg0) {
   try {
     const result = fn16.set(muxData, ((arg0) => {
       const entries = Object.entries(arg0);
-      const mapped = entries.map((items) => {
+      const mapped = entries.map((item, index) => {
         let tmp;
-        if (Array.isArray(items)) {
-          tmp = items;
+        if (Array.isArray(item)) {
+          tmp = item;
         }
         if (!tmp) {
           tmp = (function vt(items, arg1) {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol !== "undefined";
+              let prop = typeof Symbol !== "undefined";
               if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
-                iterable = items[Symbol.iterator];
+                prop = items[Symbol.iterator];
               }
-              if (!iterable) {
-                iterable = items[Symbol.iterator];
+              if (!prop) {
+                prop = items[Symbol.iterator];
               }
-              tmp6 = iterable;
+              tmp6 = prop;
             }
             if (null != tmp6) {
               let flag2 = false;
               try {
                 items = [];
                 try {
-                  const call = tmp8.call;
+                  const call = tmp9.call;
                   if (typeof call === "unknown") {
-                    let iter = tmp8();
+                    let iter = tmp9();
                   } else {
                     iter = call(items);
                   }
                   const iter3 = iter.next();
                   const done = iter3.done;
-                  let tmp10 = done;
+                  let tmp11 = done;
                   if (!done) {
                     items.push(iter4.value);
                     if (!arg1) {
                       const iter5 = iter2.next();
                       const done2 = iter5.done;
-                      tmp10 = done2;
+                      tmp11 = done2;
                       while (!done2) {
-                        let tmp15 = iter5;
                         let arr = items.push(iter6.value);
                         if (!arg1) {
                           continue;
@@ -8116,11 +3178,11 @@ function rr(arg0) {
                     }
                   }
                   try {
-                    let tmp18 = !tmp10;
-                    if (!tmp10) {
-                      tmp18 = null != iter2.return;
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
                     }
-                    if (tmp18) {
+                    if (tmp19) {
                       iter2.return();
                     }
                     if (flag2) {
@@ -8128,43 +3190,43 @@ function rr(arg0) {
                     } else {
                       return items;
                     }
-                  } catch (tmp24) {
+                  } catch (tmp25) {
                     if (tmp2) {
                       throw tmp;
                     } else {
-                      throw tmp24;
+                      throw tmp25;
                     }
                   }
                 } catch (tmp5) {
                   flag2 = true;
                 }
-              } catch (tmp27) {
+              } catch (tmp28) {
                 try {
-                  let tmp29 = !tmp3;
+                  let tmp30 = !tmp3;
                   if (!tmp3) {
-                    tmp29 = tmp4 != obj.return;
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp29) {
+                  if (tmp30) {
                     obj.return();
                   }
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp27;
+                    throw tmp28;
                   }
-                } catch (tmp35) {
+                } catch (tmp36) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp35;
+                    throw tmp36;
                   }
                 }
               }
             }
-          })(items, 2);
+          })(item, 2);
         }
         if (!tmp) {
-          tmp = callback(items, 2);
+          tmp = callback(item, 2);
         }
         if (tmp) {
           const concat = "".concat;
@@ -8190,7 +3252,6 @@ function or() {
   let tmp = _navigator;
   if (_navigator) {
     tmp = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-    const tmp2 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
   }
   let type = tmp;
   if (tmp) {
@@ -8215,7 +3276,6 @@ function sr() {
   let tmp = _navigator;
   if (_navigator) {
     tmp = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-    const tmp2 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
   }
   let type = tmp;
   if (tmp) {
@@ -8225,9 +3285,7 @@ function sr() {
 }
 or.getConnectionFromAPI = sr;
 const obj12 = { a: "env", b: "beacon", c: "custom", d: "ad", e: "event", f: "experiment", i: "internal", m: "mux", n: "response", p: "player", q: "request", r: "retry", s: "session", t: "timestamp", u: "viewer", v: "video", w: "page", x: "view", y: "sub" };
-const obj13 = {};
 for (const key10232 in obj12) {
-  let tmp38 = key10232;
   if (!obj12.hasOwnProperty(key10232)) {
     continue;
   } else {
@@ -8237,9 +3295,7 @@ for (const key10232 in obj12) {
   continue;
 }
 const obj14 = { ad: "ad", af: "affiliate", ag: "aggregate", ap: "api", al: "application", ao: "audio", ar: "architecture", as: "asset", au: "autoplay", av: "average", bi: "bitrate", bn: "brand", br: "break", bw: "browser", by: "bytes", bz: "business", ca: "cached", cb: "cancel", cc: "codec", cd: "code", cg: "category", ch: "changed", ci: "client", ck: "clicked", cl: "canceled", cm: "cmcd", cn: "config", co: "count", ce: "counter", cp: "complete", cq: "creator", cr: "creative", cs: "captions", ct: "content", cu: "current", cv: "cumulative", cx: "connection", cz: "context", da: "data", dg: "downscaling", dm: "domain", dn: "cdn", do: "downscale", dr: "drm", dp: "dropped", du: "duration", dv: "device", dy: "dynamic", eb: "enabled", ec: "encoding", ed: "edge", en: "end", eg: "engine", em: "embed", er: "error", ep: "experiments", es: "errorcode", et: "errortext", ee: "event", ev: "events", ex: "expires", ez: "exception", fa: "failed", fi: "first", fm: "family", ft: "format", fp: "fps", fq: "frequency", fr: "frame", fs: "fullscreen", ha: "has", hb: "holdback", he: "headers", ho: "host", hn: "hostname", ht: "height", id: "id", ii: "init", in: "instance", ip: "ip", is: "is", ke: "key", la: "language", lb: "labeled", le: "level", li: "live", ld: "loaded", lo: "load", ls: "lists", lt: "latency", ma: "max", md: "media", me: "message", mf: "manifest", mi: "mime", ml: "midroll", mm: "min", mn: "manufacturer", mo: "model", mp: "mode", ms: "ms", mx: "mux", ne: "newest", nm: "name", no: "number", on: "on", or: "origin", os: "os", pa: "paused", pb: "playback", pd: "producer", pe: "percentage", pf: "played", pg: "program", ph: "playhead", pi: "plugin", pl: "preroll", pn: "playing", po: "poster", pp: "pip", pr: "preload", ps: "position", pt: "part", pv: "previous", py: "property", px: "pop", pz: "plan", ra: "rate", rd: "requested", re: "rebuffer", rf: "rendition", rg: "range", rm: "remote", ro: "ratio", rp: "response", rq: "request", rs: "requests", sa: "sample", sd: "skipped", se: "session", sh: "shift", sk: "seek", sm: "stream", so: "source", sq: "sequence", sr: "series", ss: "status", st: "start", su: "startup", sv: "server", sw: "software", sy: "severity", ta: "tag", tc: "tech", te: "text", tg: "target", th: "throughput", ti: "time", tl: "total", to: "to", tt: "title", ty: "type", ug: "upscaling", un: "universal", up: "upscale", ur: "url", us: "user", va: "variant", vd: "viewed", vi: "video", ve: "version", vw: "view", vr: "viewer", wd: "width", wa: "watch", wt: "waiting" };
-const obj15 = {};
 for (const key10238 in obj14) {
-  let tmp39 = key10238;
   if (!obj14.hasOwnProperty(key10238)) {
     continue;
   } else {
@@ -8259,17 +3315,17 @@ const fn17 = (arg0, arg1) => {
       f94619(obj.exports, obj);
     }
     const _exports = obj.exports;
-    const _document = document;
+    let _document = document;
     if (typeof document !== "undefined") {
-      __GLOBAL_DOCUMENT_CACHE_4 = document;
+      _document = document;
     } else {
-      __GLOBAL_DOCUMENT_CACHE_4 = tmp["__GLOBAL_DOCUMENT_CACHE@4"];
-      if (!__GLOBAL_DOCUMENT_CACHE_4) {
-        tmp["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
-        __GLOBAL_DOCUMENT_CACHE_4 = _exports;
+      _document = f94619["__GLOBAL_DOCUMENT_CACHE@4"];
+      if (!_document) {
+        f94619["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
+        _document = _exports;
       }
     }
-    arg1.exports = __GLOBAL_DOCUMENT_CACHE_4;
+    arg1.exports = _document;
   } else {
     const _window = window;
   }
@@ -8377,38 +3433,38 @@ class $ {
       closure_2 = obj1;
       _Object2 = Object;
       keys = Object.keys(obj);
-      item = keys.forEach((key10009) => {
+      item = keys.forEach((item, index) => {
         c1 = false;
-        if (key10009.hasOwnProperty(key10009)) {
-          if (undefined !== tmp[key10009]) {
-            const parts = key10009.split("_");
+        if (item.hasOwnProperty(item)) {
+          if (undefined !== tmp[item]) {
+            const parts = item.split("_");
             const first = parts[0];
             closure_2 = tmp12;
-            if (!closure_1_82[first]) {
-              closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+            if (!obj13[first]) {
+              closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
               closure_2 = `${tmp10}_`;
             }
-            const item = parts.splice(1).forEach((arg0) => {
-              if ("url" === arg0) {
+            item = parts.splice(1).forEach((item, index) => {
+              if ("url" === item) {
                 c1 = true;
               }
-              if (closure_1_83[arg0]) {
-                closure_2 = closure_2 + tmp[arg0];
+              if (closure_1_83[item]) {
+                closure_2 = closure_2 + tmp[item];
               } else {
                 const _Number = Number;
                 const _Number2 = Number;
-                if (Number.isInteger(Number(arg0))) {
-                  closure_2 = closure_2 + arg0;
+                if (Number.isInteger(Number(item))) {
+                  closure_2 = closure_2 + item;
                 } else {
-                  closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                  closure_2 = `${closure_2}_${arg0}_`;
+                  closure_1_38.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                  closure_2 = `${closure_2}_${item}_`;
                 }
               }
             });
             if (c1) {
-              closure_2[closure_2] = tmp[key10009];
+              closure_2[closure_2] = tmp[item];
             } else {
-              c1[closure_2] = tmp[key10009];
+              c1[closure_2] = tmp[item];
             }
             const spliceResult = parts.splice(1);
           }
@@ -8445,15 +3501,15 @@ class $ {
       num2 = 0;
       tmp5 = Mr(self._beaconUrl, _createPayloadResult, false, (arg0, arg1) => {
         if (arg1) {
-          tmp._eventQueue = substr.concat(tmp._eventQueue);
-          tmp._failureCount = tmp._failureCount + 1;
+          self._eventQueue = substr.concat(self._eventQueue);
+          self._failureCount = self._failureCount + 1;
           closure_1_38.info(`Error sending beacon: ${arg1}`);
-          let obj = tmp;
+          let obj = self;
         } else {
-          tmp._failureCount = 0;
-          obj = tmp;
+          self._failureCount = 0;
+          obj = self;
         }
-        obj._roundTripTime = closure_1_27.now() - closure_2;
+        obj._roundTripTime = obj3.now() - closure_2;
         obj._postInFlight = false;
         if (obj._resendAfterPost) {
           obj._resendAfterPost = false;
@@ -8489,7 +3545,7 @@ class $ {
       _default2 = tmp.default;
       self._sendTimeout = _default2.setTimeout(() => {
         if (self._eventQueue.length) {
-          obj._sendBeaconQueue();
+          self._sendBeaconQueue();
         }
         self._startBeaconSending();
       }, self._getNextBeaconTime());
@@ -8512,7 +3568,7 @@ class $ {
       str = " kb). Removing unnecessary events.";
       str2 = "Payload size is too big (";
       infoResult = closure_38.info(`Payload size is too big (${tmp} kb). Removing unnecessary events.`);
-      found = global.filter((arg0) => -1 === closure_86.indexOf(arg0.e));
+      found = global.filter((item, index) => -1 === closure_86.indexOf(item.e));
       obj1 = { metadata: null, events: null };
       obj1[0] = obj;
       tmp7 = found;
@@ -8531,9 +3587,8 @@ class $ {
       str3 = " kb). Cropping fields..";
       str4 = "Payload size still too big (";
       infoResult1 = closure_38.info(`Payload size still too big (${tmp2} kb). Cropping fields..`);
-      item = arr2.forEach((obj) => {
+      item = arr2.forEach((item, index) => {
         for (const key10005 in arg0) {
-          let tmp = key10005;
           let arr = arg0[key10005];
           let tmp2 = typeof arr === "string";
           if (typeof arr === "string") {
@@ -8562,8 +3617,8 @@ class $ {
   }
 }
 let closure_87 = typeof G(obj16.exports).default.exitPictureInPicture === "function" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
-function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
-  closure_0 = arg3;
+function Mr(_beaconUrl, _createPayloadResult, arg2, fn) {
+  closure_0 = fn;
   if (arg2) {
     const _navigator = navigator;
     if (navigator) {
@@ -8571,7 +3626,7 @@ function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
       if (navigator.sendBeacon) {
         const _navigator3 = navigator;
         if (navigator.sendBeacon(_beaconUrl, _createPayloadResult)) {
-          arg3();
+          fn();
         }
       }
     }
@@ -8582,19 +3637,19 @@ function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
     obj[2] = { "Content-Type": "text/plain" };
     obj[3] = callback2(_createPayloadResult);
     const response = _default.fetch(_beaconUrl, obj);
-    response.then((ok) => {
+    response.then((result) => {
       let tmp2 = "Error";
-      if (ok.ok) {
+      if (result.ok) {
         tmp2 = null;
       }
-      return closure_0(null, tmp2);
-    }).catch((arg0) => callback(null, arg0));
-    const nextPromise = response.then((ok) => {
+      return callback(null, tmp2);
+    }).catch((error) => callback(null, error));
+    const nextPromise = response.then((result) => {
       let tmp2 = "Error";
-      if (ok.ok) {
+      if (result.ok) {
         tmp2 = null;
       }
-      return closure_0(null, tmp2);
+      return callback(null, tmp2);
     });
   } else if (_default.XMLHttpRequest) {
     const xMLHttpRequest = new tmp2.default.XMLHttpRequest();
@@ -8604,14 +3659,14 @@ function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
         if (200 !== tmp.status) {
           str = "error";
         }
-        return closure_0(null, str);
+        return callback(null, str);
       }
     };
     xMLHttpRequest.open("POST", _beaconUrl);
     xMLHttpRequest.setRequestHeader("Content-Type", "text/plain");
     xMLHttpRequest.send(_createPayloadResult);
   } else {
-    arg3();
+    fn();
   }
 }
 let closure_89 = $;
@@ -8625,9 +3680,9 @@ const fn18 = function r(mux, envKey) {
     const _Symbol = Symbol;
     if (typeof Symbol !== "undefined") {
       const _Symbol5 = Symbol;
-      if (tmp2[Symbol.hasInstance]) {
+      if (f94619[Symbol.hasInstance]) {
         const _Symbol4 = Symbol;
-        let tmp5 = tmp2[Symbol.hasInstance](self);
+        let tmp5 = f94619[Symbol.hasInstance](self);
       }
       if (tmp5) {
         if ("mux" in self) {
@@ -8836,7 +3891,6 @@ const fn18 = function r(mux, envKey) {
         let tmp41 = _navigator;
         if (_navigator) {
           tmp41 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-          const tmp42 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
         }
         let type = tmp41;
         if (tmp41) {
@@ -8857,8 +3911,8 @@ const fn18 = function r(mux, envKey) {
         obj[12] = str18;
         let href;
         if (null !== mod6.default) {
-          if (undefined !== tmp43.default) {
-            const _location = tmp43.default.location;
+          if (undefined !== mod6.default) {
+            const _location = mod6.default.location;
             if (null !== _location) {
               if (undefined !== _location) {
                 href = _location.href;
@@ -8897,15 +3951,14 @@ const fn18 = function r(mux, envKey) {
     const _Symbol2 = Symbol;
     if (typeof Symbol !== "undefined") {
       const _Symbol6 = Symbol;
-      if (tmp2[Symbol.hasInstance]) {
+      if (f94619[Symbol.hasInstance]) {
         const _Symbol3 = Symbol;
-        tmp5 = tmp2[Symbol.hasInstance](self);
+        tmp5 = f94619[Symbol.hasInstance](self);
       }
     }
-    tmp5 = U(self, tmp2);
+    tmp5 = U(self, f94619);
   }
 };
-f94619 = fn18;
 const items10 = [
   {
     key: "send",
@@ -8917,8 +3970,7 @@ const items10 = [
             if (this.respectDoNotTrack) {
               let doNotTrack = mod3.default.doNotTrack;
               if (!doNotTrack) {
-                doNotTrack = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
-                const tmp7 = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
+                doNotTrack = mod3.default.navigator && mod3.default.navigator.doNotTrack;
               }
               if ("1" === doNotTrack) {
                 return logger.info("Not sending `" + arg0 + "` because Do Not Track is enabled");
@@ -8979,8 +4031,8 @@ const items10 = [
                     const push = keys.push;
                     push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
                   }
-                  let item = keys.forEach((arg0) => {
-                    Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
+                  let item = keys.forEach((item, index) => {
+                    Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
                   });
                 }
                 if (obj.user_id) {
@@ -9003,38 +4055,38 @@ const items10 = [
                 let obj4 = obj2;
                 const _Object7 = Object;
                 const keys1 = Object.keys(result);
-                const item1 = keys1.forEach((key10009) => {
+                const item1 = keys1.forEach((item, index) => {
                   c1 = false;
-                  if (key10009.hasOwnProperty(key10009)) {
-                    if (undefined !== tmp[key10009]) {
-                      const parts = key10009.split("_");
+                  if (item.hasOwnProperty(item)) {
+                    if (undefined !== tmp[item]) {
+                      const parts = item.split("_");
                       const first = parts[0];
                       closure_2 = tmp12;
-                      if (!closure_1_82[first]) {
-                        closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+                      if (!obj13[first]) {
+                        closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
                         closure_2 = `${tmp10}_`;
                       }
-                      const item = parts.splice(1).forEach((arg0) => {
-                        if ("url" === arg0) {
+                      item = parts.splice(1).forEach((item, index) => {
+                        if ("url" === item) {
                           c1 = true;
                         }
-                        if (closure_1_83[arg0]) {
-                          closure_2 = closure_2 + tmp[arg0];
+                        if (closure_1_83[item]) {
+                          closure_2 = closure_2 + tmp[item];
                         } else {
                           const _Number = Number;
                           const _Number2 = Number;
-                          if (Number.isInteger(Number(arg0))) {
-                            closure_2 = closure_2 + arg0;
+                          if (Number.isInteger(Number(item))) {
+                            closure_2 = closure_2 + item;
                           } else {
-                            closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                            closure_2 = `${closure_2}_${arg0}_`;
+                            closure_1_38.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                            closure_2 = `${closure_2}_${item}_`;
                           }
                         }
                       });
                       if (c1) {
-                        closure_2[closure_2] = tmp[key10009];
+                        closure_2[closure_2] = tmp[item];
                       } else {
-                        c1[closure_2] = tmp[key10009];
+                        c1[closure_2] = tmp[item];
                       }
                       const spliceResult = parts.splice(1);
                     }
@@ -9071,38 +4123,38 @@ const items10 = [
                         obj4 = {};
                         const _Object9 = Object;
                         const keys2 = Object.keys(obj);
-                        const item2 = keys2.forEach((key10009) => {
+                        const item2 = keys2.forEach((item, index) => {
                           c1 = false;
-                          if (key10009.hasOwnProperty(key10009)) {
-                            if (undefined !== tmp[key10009]) {
-                              const parts = key10009.split("_");
+                          if (item.hasOwnProperty(item)) {
+                            if (undefined !== tmp[item]) {
+                              const parts = item.split("_");
                               const first = parts[0];
                               closure_2 = tmp12;
-                              if (!closure_1_82[first]) {
-                                closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+                              if (!obj13[first]) {
+                                closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
                                 closure_2 = `${tmp10}_`;
                               }
-                              const item = parts.splice(1).forEach((arg0) => {
-                                if ("url" === arg0) {
+                              item = parts.splice(1).forEach((item, index) => {
+                                if ("url" === item) {
                                   c1 = true;
                                 }
-                                if (closure_1_83[arg0]) {
-                                  closure_2 = closure_2 + tmp[arg0];
+                                if (closure_1_83[item]) {
+                                  closure_2 = closure_2 + tmp[item];
                                 } else {
                                   const _Number = Number;
                                   const _Number2 = Number;
-                                  if (Number.isInteger(Number(arg0))) {
-                                    closure_2 = closure_2 + arg0;
+                                  if (Number.isInteger(Number(item))) {
+                                    closure_2 = closure_2 + item;
                                   } else {
-                                    closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                                    closure_2 = `${closure_2}_${arg0}_`;
+                                    closure_1_38.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                                    closure_2 = `${closure_2}_${item}_`;
                                   }
                                 }
                               });
                               if (c1) {
-                                closure_2[closure_2] = tmp[key10009];
+                                closure_2[closure_2] = tmp[item];
                               } else {
-                                c1[closure_2] = tmp[key10009];
+                                c1[closure_2] = tmp[item];
                               }
                               const spliceResult = parts.splice(1);
                             }
@@ -9111,14 +4163,13 @@ const items10 = [
                         const _Object10 = Object;
                         const eventQueue4 = self.eventQueue;
                         eventQueue4.queueEvent(obj.event, Object.assign(obj3, obj4));
-                        return obj6.error("Beaconing disabled due to rate limit.");
+                        return logger.error("Beaconing disabled due to rate limit.");
                       }
                     }
                     if (closure_93.indexOf(arg0) >= 0) {
                       const eventQueue2 = self.eventQueue;
                       eventQueue2.flushEvents();
                     }
-                    obj6 = logger;
                   }
                 }
                 tmp26 = num4 >= self.sampleRate;
@@ -9140,9 +4191,8 @@ const items10 = [
   {
     key: "_deduplicateBeaconData",
     value(arr, view_id) {
-      let self = this;
       closure_0 = arr;
-      self = this;
+      const self = this;
       let obj = {};
       view_id = view_id.view_id;
       if ("-1" !== view_id) {
@@ -9154,48 +4204,47 @@ const items10 = [
                 closure_3 = 0 === arr.indexOf("request");
                 const _Object = Object;
                 const entries = Object.entries(view_id);
-                const item = entries.forEach((items) => {
+                const item = entries.forEach((item, index) => {
                   let tmp;
-                  if (Array.isArray(items)) {
-                    tmp = items;
+                  if (Array.isArray(item)) {
+                    tmp = item;
                   }
                   if (!tmp) {
                     tmp = (function vt(items, arg1) {
                       let tmp6 = null;
                       if (null != items) {
                         const _Symbol = Symbol;
-                        iterable = typeof Symbol !== "undefined";
+                        let prop = typeof Symbol !== "undefined";
                         if (typeof Symbol !== "undefined") {
                           const _Symbol2 = Symbol;
-                          iterable = items[Symbol.iterator];
+                          prop = items[Symbol.iterator];
                         }
-                        if (!iterable) {
-                          iterable = items[Symbol.iterator];
+                        if (!prop) {
+                          prop = items[Symbol.iterator];
                         }
-                        tmp6 = iterable;
+                        tmp6 = prop;
                       }
                       if (null != tmp6) {
                         let flag2 = false;
                         try {
                           items = [];
                           try {
-                            const call = tmp8.call;
+                            const call = tmp9.call;
                             if (typeof call === "unknown") {
-                              let iter = tmp8();
+                              let iter = tmp9();
                             } else {
                               iter = call(items);
                             }
                             const iter3 = iter.next();
                             const done = iter3.done;
-                            let tmp10 = done;
+                            let tmp11 = done;
                             if (!done) {
                               items.push(iter4.value);
                               if (!arg1) {
                                 const iter5 = iter2.next();
                                 const done2 = iter5.done;
-                                tmp10 = done2;
+                                tmp11 = done2;
                                 while (!done2) {
-                                  let tmp15 = iter5;
                                   let arr = items.push(iter6.value);
                                   if (!arg1) {
                                     continue;
@@ -9207,11 +4256,11 @@ const items10 = [
                               }
                             }
                             try {
-                              let tmp18 = !tmp10;
-                              if (!tmp10) {
-                                tmp18 = null != iter2.return;
+                              let tmp19 = !tmp11;
+                              if (!tmp11) {
+                                tmp19 = null != iter2.return;
                               }
-                              if (tmp18) {
+                              if (tmp19) {
                                 iter2.return();
                               }
                               if (flag2) {
@@ -9219,63 +4268,63 @@ const items10 = [
                               } else {
                                 return items;
                               }
-                            } catch (tmp24) {
+                            } catch (tmp25) {
                               if (tmp2) {
                                 throw tmp;
                               } else {
-                                throw tmp24;
+                                throw tmp25;
                               }
                             }
                           } catch (tmp5) {
                             flag2 = true;
                           }
-                        } catch (tmp27) {
+                        } catch (tmp28) {
                           try {
-                            let tmp29 = !tmp3;
+                            let tmp30 = !tmp3;
                             if (!tmp3) {
-                              tmp29 = tmp4 != obj.return;
+                              tmp30 = tmp4 != obj.return;
                             }
-                            if (tmp29) {
+                            if (tmp30) {
                               obj.return();
                             }
                             if (tmp2) {
                               throw tmp;
                             } else {
-                              throw tmp27;
+                              throw tmp28;
                             }
-                          } catch (tmp35) {
+                          } catch (tmp36) {
                             if (tmp2) {
                               throw tmp;
                             } else {
-                              throw tmp35;
+                              throw tmp36;
                             }
                           }
                         }
                       }
-                    })(items, 2);
+                    })(item, 2);
                   }
                   if (!tmp) {
-                    tmp = closure_1_23(items, 2);
+                    tmp = Pe(item, 2);
                   }
                   if (tmp) {
                     [tmp7, tmp8] = tmp;
                     let previousBeaconData = self.previousBeaconData;
                     if (previousBeaconData) {
-                      let eventRequiresKeyResult = tmp8 !== obj.previousBeaconData[tmp7];
+                      let eventRequiresKeyResult = tmp8 !== self.previousBeaconData[tmp7];
                       if (!eventRequiresKeyResult) {
                         eventRequiresKeyResult = closure_1_90.indexOf(tmp7) > -1;
                       }
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = obj.objectHasChanged(closure_3, tmp7, tmp8, obj.previousBeaconData[tmp7]);
+                        eventRequiresKeyResult = self.objectHasChanged(closure_3, tmp7, tmp8, self.previousBeaconData[tmp7]);
                       }
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = obj.eventRequiresKey(closure_0, tmp7);
+                        eventRequiresKeyResult = self.eventRequiresKey(closure_0, tmp7);
                       }
                       previousBeaconData = eventRequiresKeyResult;
                     }
                     if (previousBeaconData) {
-                      obj[tmp7] = tmp8;
-                      obj.previousBeaconData[tmp7] = tmp8;
+                      self[tmp7] = tmp8;
+                      self.previousBeaconData[tmp7] = tmp8;
                     }
                   } else {
                     const _TypeError = TypeError;
@@ -9355,9 +4404,9 @@ const fn19 = function r(on) {
   closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn19[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn19[Symbol.hasInstance](self);
     }
     if (tmp2) {
       c1 = 0;
@@ -9408,12 +4457,12 @@ const fn19 = function r(on) {
               on.data.view_request_count = closure_4;
               if (tmp2 > 0) {
                 closure_1 = closure_1 + tmp2;
-                let num6 = tmp14.data.view_max_request_latency;
+                let num6 = on.data.view_max_request_latency;
                 if (!num6) {
                   num6 = 0;
                 }
-                tmp14.data.view_max_request_latency = Math.max(num6, tmp2);
-                tmp14.data.view_average_request_latency = closure_1 / closure_5;
+                on.data.view_max_request_latency = Math.max(num6, tmp2);
+                on.data.view_average_request_latency = closure_1 / closure_5;
               }
             }
           }
@@ -9439,22 +4488,21 @@ const fn19 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn19[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn19[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn19);
 };
 const fn20 = function r(on) {
-  let self = this;
   closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn20[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn20[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_lastEventTime" in self) {
@@ -9465,7 +4513,7 @@ const fn20 = function r(on) {
       }
       on.on("before*", (type, viewer_time) => {
         viewer_time = viewer_time.viewer_time;
-        const nowResult = closure_1_27.now();
+        const nowResult = obj3.now();
         const _lastEventTime = self._lastEventTime;
         self._lastEventTime = nowResult;
         if (_lastEventTime) {
@@ -9473,21 +4521,21 @@ const fn20 = function r(on) {
             let _Object = Object;
             const keys = Object.keys(on.data);
             const log = on.mux.log;
-            const reduced = keys.reduce((arg0, arr) => {
-              if (0 !== arr.indexOf("video_")) {
-                return arg0;
+            const reduced = keys.reduce((acc, item, index) => {
+              if (0 !== item.indexOf("video_")) {
+                return acc;
               } else {
                 let definePropertyResult = globalThis;
                 let obj = {};
-                if (arr in obj) {
+                if (item in obj) {
                   const _Object = definePropertyResult.Object;
                   obj = { value: null, enumerable: true, configurable: true, writable: true };
                   obj[0] = tmp3;
-                  definePropertyResult = _Object.defineProperty(obj, arr, obj);
+                  definePropertyResult = _Object.defineProperty(obj, item, obj);
                 } else {
-                  obj[arr] = tmp3;
+                  obj[item] = tmp3;
                 }
-                const merged = Object.assign(arg0, obj);
+                const merged = Object.assign(acc, obj);
               }
             }, {});
             log.info("Received event after at least an hour inactivity, creating a new view");
@@ -9506,11 +4554,11 @@ const fn20 = function r(on) {
             if (_playheadShouldBeProgressing) {
               obj = { viewer_time: null };
               obj[0] = viewer_time;
-              obj3.emit("play", obj);
+              on.emit("play", obj);
               if ("playing" !== type.type) {
                 obj = { viewer_time: null };
                 obj[0] = viewer_time;
-                obj3.emit("playing", obj);
+                on.emit("playing", obj);
               }
             }
           }
@@ -9524,21 +4572,21 @@ const fn20 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn20[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn20[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn20);
 };
 const fn21 = function r(on) {
   const self = this;
   closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn21[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn21[Symbol.hasInstance](self);
     }
     if (tmp2) {
       function t(arg0) {
@@ -9562,7 +4610,6 @@ const fn21 = function r(on) {
         let tmp2 = video_cdn;
         if (video_cdn) {
           tmp2 = undefined === video_cdn.video_previous_cdn || null === video_cdn.video_previous_cdn;
-          const tmp3 = undefined === video_cdn.video_previous_cdn || null === video_cdn.video_previous_cdn;
         }
         if (tmp2) {
           let formatted;
@@ -9652,22 +4699,21 @@ const fn21 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn21[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn21[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn21);
 };
 const fn22 = function r(on) {
-  let self = this;
   closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn22[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn22[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_emittingAutomaticEvent" in self) {
@@ -9684,10 +4730,10 @@ const fn22 = function r(on) {
       }
       on.on("viewstart", () => {
         if (!self._hasInitialized) {
-          tmp._hasInitialized = true;
-          tmp._emittingAutomaticEvent = true;
+          self._hasInitialized = true;
+          self._emittingAutomaticEvent = true;
           on.emit("playbackmodechange", { player_playback_mode: "standard", player_playback_mode_data: "{}" });
-          tmp._emittingAutomaticEvent = false;
+          self._emittingAutomaticEvent = false;
         }
       });
       on.on("viewend", () => {
@@ -9725,15 +4771,15 @@ const fn22 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn22[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn22[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn22);
 };
 let closure_99 = ["viewstart", "ended", "loadstart", "pause", "play", "playing", "ratechange", "waiting", "adplay", "adpause", "adended", "aderror", "adplaying", "adrequest", "adresponse", "adbreakstart", "adbreakend", "adfirstquartile", "admidpoint", "adthirdquartile", "rebufferstart", "rebufferend", "seeked", "error", "hb", "requestcompleted", "requestfailed", "requestcanceled", "renditionchange", "cdnchange", "playbackmodechange"];
-const set = new Set(["requestcompleted", "requestfailed", "requestcanceled"]);
+new Set(["requestcompleted", "requestfailed", "requestcanceled"]);
 f94619 = undefined;
 class t {
   constructor(arg0, arg1, arg2) {
@@ -9753,10 +4799,11 @@ class t {
         tmp10 = undefined === obj;
         if (tmp10) {
           _ReferenceError47 = ReferenceError;
-          referenceError = new.target;
+          tmp300 = new.target;
           str88 = "this hasn't been initialised - super() hasn't been called";
-          referenceError = new.target;
+          tmp301 = new.target;
           referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp303 = referenceError;
           throw referenceError;
         } else {
           str2 = "pageLoadEndTime";
@@ -9768,11 +4815,12 @@ class t {
           }
           if (tmp10) {
             _ReferenceError46 = ReferenceError;
-            referenceError = new.target;
+            tmp296 = new.target;
             str87 = "this hasn't been initialised - super() hasn't been called";
-            referenceError = new.target;
-            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            throw referenceError;
+            tmp297 = new.target;
+            referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            tmp299 = referenceError1;
+            throw referenceError1;
           } else {
             str3 = "pageLoadInitTime";
             if ("pageLoadInitTime" in obj) {
@@ -9783,11 +4831,12 @@ class t {
             }
             if (tmp10) {
               _ReferenceError45 = ReferenceError;
-              referenceError = new.target;
+              tmp292 = new.target;
               str86 = "this hasn't been initialised - super() hasn't been called";
-              referenceError = new.target;
-              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-              throw referenceError;
+              tmp293 = new.target;
+              referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+              tmp295 = referenceError2;
+              throw referenceError2;
             } else {
               str4 = "_destroyed";
               if ("_destroyed" in obj) {
@@ -9798,11 +4847,12 @@ class t {
               }
               if (tmp10) {
                 _ReferenceError44 = ReferenceError;
-                referenceError = new.target;
+                tmp288 = new.target;
                 str85 = "this hasn't been initialised - super() hasn't been called";
-                referenceError = new.target;
-                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                throw referenceError;
+                tmp289 = new.target;
+                referenceError3 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                tmp291 = referenceError3;
+                throw referenceError3;
               } else {
                 str5 = "_heartBeatTimeout";
                 if ("_heartBeatTimeout" in obj) {
@@ -9813,11 +4863,12 @@ class t {
                 }
                 if (tmp10) {
                   _ReferenceError43 = ReferenceError;
-                  referenceError = new.target;
+                  tmp284 = new.target;
                   str84 = "this hasn't been initialised - super() hasn't been called";
-                  referenceError = new.target;
-                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                  throw referenceError;
+                  tmp285 = new.target;
+                  referenceError4 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                  tmp287 = referenceError4;
+                  throw referenceError4;
                 } else {
                   str6 = "adTracker";
                   if ("adTracker" in obj) {
@@ -9828,11 +4879,12 @@ class t {
                   }
                   if (tmp10) {
                     _ReferenceError42 = ReferenceError;
-                    referenceError = new.target;
+                    tmp280 = new.target;
                     str83 = "this hasn't been initialised - super() hasn't been called";
-                    referenceError = new.target;
-                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                    throw referenceError;
+                    tmp281 = new.target;
+                    referenceError5 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                    tmp283 = referenceError5;
+                    throw referenceError5;
                   } else {
                     str7 = "dashjs";
                     if ("dashjs" in obj) {
@@ -9843,11 +4895,12 @@ class t {
                     }
                     if (tmp10) {
                       _ReferenceError41 = ReferenceError;
-                      referenceError = new.target;
+                      tmp276 = new.target;
                       str82 = "this hasn't been initialised - super() hasn't been called";
-                      referenceError = new.target;
-                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                      throw referenceError;
+                      tmp277 = new.target;
+                      referenceError6 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                      tmp279 = referenceError6;
+                      throw referenceError6;
                     } else {
                       str8 = "data";
                       if ("data" in obj) {
@@ -9858,11 +4911,12 @@ class t {
                       }
                       if (tmp10) {
                         _ReferenceError40 = ReferenceError;
-                        referenceError = new.target;
+                        tmp272 = new.target;
                         str81 = "this hasn't been initialised - super() hasn't been called";
-                        referenceError = new.target;
-                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                        throw referenceError;
+                        tmp273 = new.target;
+                        referenceError7 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                        tmp275 = referenceError7;
+                        throw referenceError7;
                       } else {
                         str9 = "disablePlayheadRebufferTracking";
                         if ("disablePlayheadRebufferTracking" in obj) {
@@ -9873,11 +4927,12 @@ class t {
                         }
                         if (tmp10) {
                           _ReferenceError39 = ReferenceError;
-                          referenceError = new.target;
+                          tmp268 = new.target;
                           str80 = "this hasn't been initialised - super() hasn't been called";
-                          referenceError = new.target;
-                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                          throw referenceError;
+                          tmp269 = new.target;
+                          referenceError8 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                          tmp271 = referenceError8;
+                          throw referenceError8;
                         } else {
                           str10 = "disableRebufferTracking";
                           if ("disableRebufferTracking" in obj) {
@@ -9888,11 +4943,12 @@ class t {
                           }
                           if (tmp10) {
                             _ReferenceError38 = ReferenceError;
-                            referenceError = new.target;
+                            tmp264 = new.target;
                             str79 = "this hasn't been initialised - super() hasn't been called";
-                            referenceError = new.target;
-                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                            throw referenceError;
+                            tmp265 = new.target;
+                            referenceError9 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            tmp267 = referenceError9;
+                            throw referenceError9;
                           } else {
                             str11 = "errorTracker";
                             if ("errorTracker" in obj) {
@@ -9903,11 +4959,12 @@ class t {
                             }
                             if (tmp10) {
                               _ReferenceError37 = ReferenceError;
-                              referenceError = new.target;
+                              tmp260 = new.target;
                               str78 = "this hasn't been initialised - super() hasn't been called";
-                              referenceError = new.target;
-                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                              throw referenceError;
+                              tmp261 = new.target;
+                              referenceError10 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                              tmp263 = referenceError10;
+                              throw referenceError10;
                             } else {
                               str12 = "errorTranslator";
                               if ("errorTranslator" in obj) {
@@ -9918,11 +4975,12 @@ class t {
                               }
                               if (tmp10) {
                                 _ReferenceError36 = ReferenceError;
-                                referenceError = new.target;
+                                tmp256 = new.target;
                                 str77 = "this hasn't been initialised - super() hasn't been called";
-                                referenceError = new.target;
-                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                throw referenceError;
+                                tmp257 = new.target;
+                                referenceError11 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                tmp259 = referenceError11;
+                                throw referenceError11;
                               } else {
                                 str13 = "emitTranslator";
                                 if ("emitTranslator" in obj) {
@@ -9933,11 +4991,12 @@ class t {
                                 }
                                 if (tmp10) {
                                   _ReferenceError35 = ReferenceError;
-                                  referenceError = new.target;
+                                  tmp252 = new.target;
                                   str76 = "this hasn't been initialised - super() hasn't been called";
-                                  referenceError = new.target;
-                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                  throw referenceError;
+                                  tmp253 = new.target;
+                                  referenceError12 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                  tmp255 = referenceError12;
+                                  throw referenceError12;
                                 } else {
                                   str14 = "getAdData";
                                   if ("getAdData" in obj) {
@@ -9948,11 +5007,12 @@ class t {
                                   }
                                   if (tmp10) {
                                     _ReferenceError34 = ReferenceError;
-                                    referenceError = new.target;
+                                    tmp248 = new.target;
                                     str75 = "this hasn't been initialised - super() hasn't been called";
-                                    referenceError = new.target;
-                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                    throw referenceError;
+                                    tmp249 = new.target;
+                                    referenceError13 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                    tmp251 = referenceError13;
+                                    throw referenceError13;
                                   } else {
                                     str15 = "getPlayheadTime";
                                     if ("getPlayheadTime" in obj) {
@@ -9963,11 +5023,12 @@ class t {
                                     }
                                     if (tmp10) {
                                       _ReferenceError33 = ReferenceError;
-                                      referenceError = new.target;
+                                      tmp244 = new.target;
                                       str74 = "this hasn't been initialised - super() hasn't been called";
-                                      referenceError = new.target;
-                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                      throw referenceError;
+                                      tmp245 = new.target;
+                                      referenceError14 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                      tmp247 = referenceError14;
+                                      throw referenceError14;
                                     } else {
                                       str16 = "getStateData";
                                       if ("getStateData" in obj) {
@@ -9978,11 +5039,12 @@ class t {
                                       }
                                       if (tmp10) {
                                         _ReferenceError32 = ReferenceError;
-                                        referenceError = new.target;
+                                        tmp240 = new.target;
                                         str73 = "this hasn't been initialised - super() hasn't been called";
-                                        referenceError = new.target;
-                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                        throw referenceError;
+                                        tmp241 = new.target;
+                                        referenceError15 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                        tmp243 = referenceError15;
+                                        throw referenceError15;
                                       } else {
                                         str17 = "stateDataTranslator";
                                         if ("stateDataTranslator" in obj) {
@@ -9993,11 +5055,12 @@ class t {
                                         }
                                         if (tmp10) {
                                           _ReferenceError31 = ReferenceError;
-                                          referenceError = new.target;
+                                          tmp236 = new.target;
                                           str72 = "this hasn't been initialised - super() hasn't been called";
-                                          referenceError = new.target;
-                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                          throw referenceError;
+                                          tmp237 = new.target;
+                                          referenceError16 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                          tmp239 = referenceError16;
+                                          throw referenceError16;
                                         } else {
                                           str18 = "hlsjs";
                                           if ("hlsjs" in obj) {
@@ -10008,11 +5071,12 @@ class t {
                                           }
                                           if (tmp10) {
                                             _ReferenceError30 = ReferenceError;
-                                            referenceError = new.target;
+                                            tmp232 = new.target;
                                             str71 = "this hasn't been initialised - super() hasn't been called";
-                                            referenceError = new.target;
-                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                            throw referenceError;
+                                            tmp233 = new.target;
+                                            referenceError17 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                            tmp235 = referenceError17;
+                                            throw referenceError17;
                                           } else {
                                             str19 = "id";
                                             if ("id" in obj) {
@@ -10023,11 +5087,12 @@ class t {
                                             }
                                             if (tmp10) {
                                               _ReferenceError29 = ReferenceError;
-                                              referenceError = new.target;
+                                              tmp228 = new.target;
                                               str70 = "this hasn't been initialised - super() hasn't been called";
-                                              referenceError = new.target;
-                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                              throw referenceError;
+                                              tmp229 = new.target;
+                                              referenceError18 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                              tmp231 = referenceError18;
+                                              throw referenceError18;
                                             } else {
                                               str20 = "longResumeTracker";
                                               if ("longResumeTracker" in obj) {
@@ -10038,11 +5103,12 @@ class t {
                                               }
                                               if (tmp10) {
                                                 _ReferenceError28 = ReferenceError;
-                                                referenceError = new.target;
+                                                tmp224 = new.target;
                                                 str69 = "this hasn't been initialised - super() hasn't been called";
-                                                referenceError = new.target;
-                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                throw referenceError;
+                                                tmp225 = new.target;
+                                                referenceError19 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                tmp227 = referenceError19;
+                                                throw referenceError19;
                                               } else {
                                                 str21 = "minimumRebufferDuration";
                                                 if ("minimumRebufferDuration" in obj) {
@@ -10053,11 +5119,12 @@ class t {
                                                 }
                                                 if (tmp10) {
                                                   _ReferenceError27 = ReferenceError;
-                                                  referenceError = new.target;
+                                                  tmp220 = new.target;
                                                   str68 = "this hasn't been initialised - super() hasn't been called";
-                                                  referenceError = new.target;
-                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                  throw referenceError;
+                                                  tmp221 = new.target;
+                                                  referenceError20 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                  tmp223 = referenceError20;
+                                                  throw referenceError20;
                                                 } else {
                                                   str22 = "mux";
                                                   if ("mux" in obj) {
@@ -10068,11 +5135,12 @@ class t {
                                                   }
                                                   if (tmp10) {
                                                     _ReferenceError26 = ReferenceError;
-                                                    referenceError = new.target;
+                                                    tmp216 = new.target;
                                                     str67 = "this hasn't been initialised - super() hasn't been called";
-                                                    referenceError = new.target;
-                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                    throw referenceError;
+                                                    tmp217 = new.target;
+                                                    referenceError21 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                    tmp219 = referenceError21;
+                                                    throw referenceError21;
                                                   } else {
                                                     str23 = "playbackEventDispatcher";
                                                     if ("playbackEventDispatcher" in obj) {
@@ -10083,11 +5151,12 @@ class t {
                                                     }
                                                     if (tmp10) {
                                                       _ReferenceError25 = ReferenceError;
-                                                      referenceError = new.target;
+                                                      tmp212 = new.target;
                                                       str66 = "this hasn't been initialised - super() hasn't been called";
-                                                      referenceError = new.target;
-                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                      throw referenceError;
+                                                      tmp213 = new.target;
+                                                      referenceError22 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                      tmp215 = referenceError22;
+                                                      throw referenceError22;
                                                     } else {
                                                       str24 = "playbackHeartbeat";
                                                       if ("playbackHeartbeat" in obj) {
@@ -10098,11 +5167,12 @@ class t {
                                                       }
                                                       if (tmp10) {
                                                         _ReferenceError24 = ReferenceError;
-                                                        referenceError = new.target;
+                                                        tmp208 = new.target;
                                                         str65 = "this hasn't been initialised - super() hasn't been called";
-                                                        referenceError = new.target;
-                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                        throw referenceError;
+                                                        tmp209 = new.target;
+                                                        referenceError23 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                        tmp211 = referenceError23;
+                                                        throw referenceError23;
                                                       } else {
                                                         str25 = "playbackHeartbeatTime";
                                                         if ("playbackHeartbeatTime" in obj) {
@@ -10113,11 +5183,12 @@ class t {
                                                         }
                                                         if (tmp10) {
                                                           _ReferenceError23 = ReferenceError;
-                                                          referenceError = new.target;
+                                                          tmp204 = new.target;
                                                           str64 = "this hasn't been initialised - super() hasn't been called";
-                                                          referenceError = new.target;
-                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                          throw referenceError;
+                                                          tmp205 = new.target;
+                                                          referenceError24 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                          tmp207 = referenceError24;
+                                                          throw referenceError24;
                                                         } else {
                                                           str26 = "playheadTime";
                                                           if ("playheadTime" in obj) {
@@ -10128,11 +5199,12 @@ class t {
                                                           }
                                                           if (tmp10) {
                                                             _ReferenceError22 = ReferenceError;
-                                                            referenceError = new.target;
+                                                            tmp200 = new.target;
                                                             str63 = "this hasn't been initialised - super() hasn't been called";
-                                                            referenceError = new.target;
-                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                            throw referenceError;
+                                                            tmp201 = new.target;
+                                                            referenceError25 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                            tmp203 = referenceError25;
+                                                            throw referenceError25;
                                                           } else {
                                                             str27 = "seekingTracker";
                                                             if ("seekingTracker" in obj) {
@@ -10143,11 +5215,12 @@ class t {
                                                             }
                                                             if (tmp10) {
                                                               _ReferenceError21 = ReferenceError;
-                                                              referenceError = new.target;
+                                                              tmp196 = new.target;
                                                               str62 = "this hasn't been initialised - super() hasn't been called";
-                                                              referenceError = new.target;
-                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                              throw referenceError;
+                                                              tmp197 = new.target;
+                                                              referenceError26 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                              tmp199 = referenceError26;
+                                                              throw referenceError26;
                                                             } else {
                                                               str28 = "sustainedRebufferThreshold";
                                                               if ("sustainedRebufferThreshold" in obj) {
@@ -10158,11 +5231,12 @@ class t {
                                                               }
                                                               if (tmp10) {
                                                                 _ReferenceError20 = ReferenceError;
-                                                                referenceError = new.target;
+                                                                tmp192 = new.target;
                                                                 str61 = "this hasn't been initialised - super() hasn't been called";
-                                                                referenceError = new.target;
-                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                throw referenceError;
+                                                                tmp193 = new.target;
+                                                                referenceError27 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                tmp195 = referenceError27;
+                                                                throw referenceError27;
                                                               } else {
                                                                 str29 = "watchTimeTracker";
                                                                 if ("watchTimeTracker" in obj) {
@@ -10173,11 +5247,12 @@ class t {
                                                                 }
                                                                 if (tmp10) {
                                                                   _ReferenceError19 = ReferenceError;
-                                                                  referenceError = new.target;
+                                                                  tmp188 = new.target;
                                                                   str60 = "this hasn't been initialised - super() hasn't been called";
-                                                                  referenceError = new.target;
-                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                  throw referenceError;
+                                                                  tmp189 = new.target;
+                                                                  referenceError28 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                  tmp191 = referenceError28;
+                                                                  throw referenceError28;
                                                                 } else {
                                                                   str30 = "currentFragmentPDT";
                                                                   if ("currentFragmentPDT" in obj) {
@@ -10188,11 +5263,12 @@ class t {
                                                                   }
                                                                   if (tmp10) {
                                                                     _ReferenceError18 = ReferenceError;
-                                                                    referenceError = new.target;
+                                                                    tmp184 = new.target;
                                                                     str59 = "this hasn't been initialised - super() hasn't been called";
-                                                                    referenceError = new.target;
-                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                    throw referenceError;
+                                                                    tmp185 = new.target;
+                                                                    referenceError29 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                    tmp187 = referenceError29;
+                                                                    throw referenceError29;
                                                                   } else {
                                                                     str31 = "currentFragmentStart";
                                                                     if ("currentFragmentStart" in obj) {
@@ -10276,11 +5352,12 @@ class t {
                                                                     };
                                                                     if (tmp10) {
                                                                       _ReferenceError17 = ReferenceError;
-                                                                      referenceError = new.target;
+                                                                      tmp180 = new.target;
                                                                       str58 = "this hasn't been initialised - super() hasn't been called";
-                                                                      referenceError = new.target;
-                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                      throw referenceError;
+                                                                      tmp181 = new.target;
+                                                                      referenceError30 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                      tmp183 = referenceError30;
+                                                                      throw referenceError30;
                                                                     } else {
                                                                       closure_1 = tmp54(obj);
                                                                       str35 = "viewinit";
@@ -10322,7 +5399,7 @@ class t {
                                                                         if (typeof window.addEventListener === "function") {
                                                                           _window3 = window;
                                                                           if (typeof window.removeEventListener === "function") {
-                                                                            fn2 = function f() {
+                                                                            fn2 = function f(event) {
                                                                               let WINDOW_HIDDEN = undefined !== obj.data.view_start;
                                                                               obj.mux.WINDOW_HIDDEN = "hidden" === document.visibilityState;
                                                                               if (WINDOW_HIDDEN) {
@@ -10338,17 +5415,17 @@ class t {
                                                                             _window4 = window;
                                                                             flag = false;
                                                                             str89 = "visibilitychange";
-                                                                            referenceError = window.addEventListener("visibilitychange", fn2, false);
-                                                                            fn3 = function g(persisted) {
-                                                                              if (!persisted.persisted) {
+                                                                            listener = window.addEventListener("visibilitychange", fn2, false);
+                                                                            fn3 = function g(event) {
+                                                                              if (!event.persisted) {
                                                                                 obj.destroy();
                                                                               }
                                                                             };
                                                                             g = fn3;
                                                                             _window5 = window;
                                                                             str90 = "pagehide";
-                                                                            referenceError = window.addEventListener("pagehide", fn3, false);
-                                                                            referenceError = obj.on("destroy", () => {
+                                                                            listener1 = window.addEventListener("pagehide", fn3, false);
+                                                                            onResult5 = obj.on("destroy", () => {
                                                                               const removed = window.removeEventListener("visibilitychange", fn2);
                                                                               const removed1 = window.removeEventListener("pagehide", fn3);
                                                                             });
@@ -10356,20 +5433,20 @@ class t {
                                                                         }
                                                                       }
                                                                       str40 = "playerready";
-                                                                      onResult5 = obj.on("playerready", function(arg0, arg1) {
+                                                                      onResult6 = obj.on("playerready", function(arg0, arg1) {
                                                                         const merged = Object.assign(this.data, arg1);
                                                                       });
                                                                       tmp61 = closure_99;
-                                                                      item = closure_99.forEach((arg0) => {
-                                                                        arg0.on(arg0, function(arg0, arg1) {
+                                                                      item = closure_99.forEach((item, index) => {
+                                                                        item.on(item, function(arg0, arg1) {
                                                                           const self = this;
-                                                                          if (0 !== closure_0.indexOf("ad")) {
+                                                                          if (0 !== item.indexOf("ad")) {
                                                                             self._updateStateData();
                                                                           }
                                                                           const merged = Object.assign(self.data, arg1);
                                                                           self._sanitizeData();
                                                                         });
-                                                                        arg0.on(`after${arg0}`, function() {
+                                                                        item.on(`after${item}`, function() {
                                                                           const self = this;
                                                                           let viewErrored = "error" !== closure_0;
                                                                           if (!viewErrored) {
@@ -10381,7 +5458,7 @@ class t {
                                                                         });
                                                                       });
                                                                       str41 = "viewend";
-                                                                      onResult6 = obj.on("viewend", (arg0, arg1) => {
+                                                                      onResult7 = obj.on("viewend", (arg0, arg1) => {
                                                                         const merged = Object.assign(obj.data, arg1);
                                                                       });
                                                                       oneResult = obj.one("playerready", function(arg0) {
@@ -10404,7 +5481,6 @@ class t {
                                                                               num = Infinity;
                                                                             }
                                                                             self.data.page_load_time = Math.min(num, self.pageLoadEndTime || Infinity) - self.pageLoadInitTime;
-                                                                            const tmp7 = self.pageLoadEndTime || Infinity;
                                                                           }
                                                                           tmp5 = self.data.player_init_time || self.pageLoadEndTime;
                                                                         }
@@ -10414,178 +5490,194 @@ class t {
                                                                       });
                                                                       if (tmp10) {
                                                                         _ReferenceError16 = ReferenceError;
-                                                                        referenceError = new.target;
+                                                                        tmp176 = new.target;
                                                                         str57 = "this hasn't been initialised - super() hasn't been called";
-                                                                        referenceError = new.target;
-                                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                        throw referenceError;
+                                                                        tmp177 = new.target;
+                                                                        referenceError31 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                        tmp179 = referenceError31;
+                                                                        throw referenceError31;
                                                                       } else {
                                                                         tmp66 = new.target;
                                                                         tmp65Result = tmp65(obj);
                                                                         obj.longResumeTracker = new.target;
                                                                         if (tmp10) {
                                                                           _ReferenceError15 = ReferenceError;
-                                                                          referenceError = new.target;
+                                                                          tmp172 = new.target;
                                                                           str56 = "this hasn't been initialised - super() hasn't been called";
-                                                                          referenceError = new.target;
-                                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                          throw referenceError;
+                                                                          tmp173 = new.target;
+                                                                          referenceError32 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                          tmp175 = referenceError32;
+                                                                          throw referenceError32;
                                                                         } else {
                                                                           tmp69 = new.target;
                                                                           tmp68Result = tmp68(obj);
                                                                           obj.errorTracker = new.target;
                                                                           if (tmp10) {
                                                                             _ReferenceError14 = ReferenceError;
-                                                                            referenceError = new.target;
+                                                                            tmp168 = new.target;
                                                                             str55 = "this hasn't been initialised - super() hasn't been called";
-                                                                            referenceError = new.target;
-                                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                            throw referenceError;
+                                                                            tmp169 = new.target;
+                                                                            referenceError33 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                            tmp171 = referenceError33;
+                                                                            throw referenceError33;
                                                                           } else {
                                                                             tmp72 = new.target;
                                                                             tmp71Result = tmp71(obj);
                                                                             if (tmp10) {
                                                                               _ReferenceError13 = ReferenceError;
-                                                                              referenceError = new.target;
+                                                                              tmp164 = new.target;
                                                                               str54 = "this hasn't been initialised - super() hasn't been called";
-                                                                              referenceError = new.target;
-                                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                              throw referenceError;
+                                                                              tmp165 = new.target;
+                                                                              referenceError34 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                              tmp167 = referenceError34;
+                                                                              throw referenceError34;
                                                                             } else {
                                                                               tmp75 = new.target;
                                                                               tmp74Result = tmp74(obj);
                                                                               obj.seekingTracker = new.target;
                                                                               if (tmp10) {
                                                                                 _ReferenceError12 = ReferenceError;
-                                                                                referenceError = new.target;
+                                                                                tmp160 = new.target;
                                                                                 str53 = "this hasn't been initialised - super() hasn't been called";
-                                                                                referenceError = new.target;
-                                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                throw referenceError;
+                                                                                tmp161 = new.target;
+                                                                                referenceError35 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                tmp163 = referenceError35;
+                                                                                throw referenceError35;
                                                                               } else {
                                                                                 tmp78 = new.target;
                                                                                 tmp77Result = tmp77(obj);
                                                                                 obj.playheadTime = new.target;
                                                                                 if (tmp10) {
                                                                                   _ReferenceError11 = ReferenceError;
-                                                                                  referenceError = new.target;
+                                                                                  tmp156 = new.target;
                                                                                   str52 = "this hasn't been initialised - super() hasn't been called";
-                                                                                  referenceError = new.target;
-                                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                  throw referenceError;
+                                                                                  tmp157 = new.target;
+                                                                                  referenceError36 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                  tmp159 = referenceError36;
+                                                                                  throw referenceError36;
                                                                                 } else {
                                                                                   tmp81 = new.target;
                                                                                   tmp80Result = tmp80(obj);
                                                                                   obj.playbackHeartbeat = new.target;
                                                                                   if (tmp10) {
                                                                                     _ReferenceError10 = ReferenceError;
-                                                                                    referenceError = new.target;
+                                                                                    tmp152 = new.target;
                                                                                     str51 = "this hasn't been initialised - super() hasn't been called";
-                                                                                    referenceError = new.target;
-                                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                    throw referenceError;
+                                                                                    tmp153 = new.target;
+                                                                                    referenceError37 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                    tmp155 = referenceError37;
+                                                                                    throw referenceError37;
                                                                                   } else {
                                                                                     tmp84 = new.target;
                                                                                     tmp83Result = tmp83(obj);
                                                                                     if (tmp10) {
                                                                                       _ReferenceError9 = ReferenceError;
-                                                                                      referenceError = new.target;
+                                                                                      tmp148 = new.target;
                                                                                       str50 = "this hasn't been initialised - super() hasn't been called";
-                                                                                      referenceError = new.target;
-                                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                      throw referenceError;
+                                                                                      tmp149 = new.target;
+                                                                                      referenceError38 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                      tmp151 = referenceError38;
+                                                                                      throw referenceError38;
                                                                                     } else {
                                                                                       tmp87 = new.target;
                                                                                       tmp86Result = tmp86(obj);
                                                                                       obj.watchTimeTracker = new.target;
                                                                                       if (tmp10) {
                                                                                         _ReferenceError8 = ReferenceError;
-                                                                                        referenceError = new.target;
+                                                                                        tmp144 = new.target;
                                                                                         str49 = "this hasn't been initialised - super() hasn't been called";
-                                                                                        referenceError = new.target;
-                                                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                        throw referenceError;
+                                                                                        tmp145 = new.target;
+                                                                                        referenceError39 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                        tmp147 = referenceError39;
+                                                                                        throw referenceError39;
                                                                                       } else {
                                                                                         tmp90 = new.target;
                                                                                         tmp89Result = tmp89(obj);
                                                                                         if (tmp10) {
                                                                                           _ReferenceError7 = ReferenceError;
-                                                                                          referenceError = new.target;
+                                                                                          tmp140 = new.target;
                                                                                           str48 = "this hasn't been initialised - super() hasn't been called";
-                                                                                          referenceError = new.target;
-                                                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                          throw referenceError;
+                                                                                          tmp141 = new.target;
+                                                                                          referenceError40 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                          tmp143 = referenceError40;
+                                                                                          throw referenceError40;
                                                                                         } else {
                                                                                           tmp93 = new.target;
                                                                                           tmp92Result = tmp92(obj);
                                                                                           obj.adTracker = new.target;
                                                                                           if (tmp10) {
                                                                                             _ReferenceError6 = ReferenceError;
-                                                                                            referenceError = new.target;
+                                                                                            tmp136 = new.target;
                                                                                             str47 = "this hasn't been initialised - super() hasn't been called";
-                                                                                            referenceError = new.target;
-                                                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                            throw referenceError;
+                                                                                            tmp137 = new.target;
+                                                                                            referenceError41 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                            tmp139 = referenceError41;
+                                                                                            throw referenceError41;
                                                                                           } else {
                                                                                             tmp96 = new.target;
                                                                                             tmp95Result = tmp95(obj);
                                                                                             if (tmp10) {
                                                                                               _ReferenceError5 = ReferenceError;
-                                                                                              referenceError = new.target;
+                                                                                              tmp132 = new.target;
                                                                                               str46 = "this hasn't been initialised - super() hasn't been called";
-                                                                                              referenceError = new.target;
-                                                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                              throw referenceError;
+                                                                                              tmp133 = new.target;
+                                                                                              referenceError42 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                              tmp135 = referenceError42;
+                                                                                              throw referenceError42;
                                                                                             } else {
                                                                                               tmp99 = new.target;
-                                                                                              referenceError = tmp98(obj);
+                                                                                              tmp98Result = tmp98(obj);
                                                                                               if (tmp10) {
                                                                                                 _ReferenceError4 = ReferenceError;
-                                                                                                referenceError = new.target;
+                                                                                                tmp128 = new.target;
                                                                                                 str45 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                referenceError = new.target;
-                                                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                throw referenceError;
+                                                                                                tmp129 = new.target;
+                                                                                                referenceError43 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                tmp131 = referenceError43;
+                                                                                                throw referenceError43;
                                                                                               } else {
-                                                                                                referenceError = new.target;
-                                                                                                referenceError = referenceError(obj);
+                                                                                                tmp102 = new.target;
+                                                                                                tmp101Result = tmp101(obj);
                                                                                                 if (tmp10) {
                                                                                                   _ReferenceError3 = ReferenceError;
-                                                                                                  referenceError = new.target;
+                                                                                                  tmp124 = new.target;
                                                                                                   str44 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                  referenceError = new.target;
-                                                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                  throw referenceError;
+                                                                                                  tmp125 = new.target;
+                                                                                                  referenceError44 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                  tmp127 = referenceError44;
+                                                                                                  throw referenceError44;
                                                                                                 } else {
-                                                                                                  referenceError = new.target;
-                                                                                                  referenceError = referenceError(obj);
+                                                                                                  tmp105 = new.target;
+                                                                                                  tmp104Result = tmp104(obj);
                                                                                                   if (tmp10) {
                                                                                                     _ReferenceError2 = ReferenceError;
-                                                                                                    referenceError = new.target;
+                                                                                                    tmp120 = new.target;
                                                                                                     str43 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                    referenceError = new.target;
-                                                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                    throw referenceError;
+                                                                                                    tmp121 = new.target;
+                                                                                                    referenceError45 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                    tmp123 = referenceError45;
+                                                                                                    throw referenceError45;
                                                                                                   } else {
-                                                                                                    referenceError = new.target;
-                                                                                                    referenceError = referenceError(obj);
+                                                                                                    tmp108 = new.target;
+                                                                                                    tmp107Result = tmp107(obj);
                                                                                                     if (tmp10) {
                                                                                                       _ReferenceError = ReferenceError;
-                                                                                                      referenceError = new.target;
+                                                                                                      tmp116 = new.target;
                                                                                                       str42 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                      referenceError = new.target;
-                                                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                      throw referenceError;
+                                                                                                      tmp117 = new.target;
+                                                                                                      referenceError46 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                      tmp119 = referenceError46;
+                                                                                                      throw referenceError46;
                                                                                                     } else {
-                                                                                                      referenceError = new.target;
-                                                                                                      referenceError = referenceError(obj);
+                                                                                                      tmp111 = new.target;
+                                                                                                      tmp110Result = tmp110(obj);
                                                                                                       if (merged.hlsjs) {
-                                                                                                        referenceError = obj.addHLSJS(merged);
+                                                                                                        addHLSJSResult = obj.addHLSJS(merged);
                                                                                                       }
                                                                                                       if (merged.dashjs) {
-                                                                                                        referenceError = obj.addDashJS(merged);
+                                                                                                        addDashJSResult = obj.addDashJS(merged);
                                                                                                       }
-                                                                                                      referenceError = obj.emit("viewinit", merged.data);
+                                                                                                      emitResult = obj.emit("viewinit", merged.data);
                                                                                                       return obj;
                                                                                                     }
                                                                                                   }
@@ -10655,10 +5747,8 @@ class t {
     return;
   }
 }
-create = t;
 t.prototype = Object.create(fn2.prototype, { constructor: { value: t, writable: true, configurable: true } });
 Le(t, fn2);
-f94619 = t;
 create = (function Rt() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
@@ -10748,6 +5838,7 @@ const items11 = [
         const items1 = [self];
         call.apply(tmp9, items1.concat(V(emitTranslatorResult)));
       }
+      const obj = { viewer_time: utils.now() };
     }
   },
   {
@@ -10789,8 +5880,8 @@ const items11 = [
         }
         if (!merged.video_source_is_live) {
           items = ["player_program_time", "player_manifest_newest_program_time", "player_live_edge_program_time", "player_program_time", "video_holdback", "video_part_holdback", "video_target_duration", "video_part_target_duration"];
-          const item = items.forEach((arg0) => {
-            merged[arg0] = undefined;
+          const item = items.forEach((item, index) => {
+            merged[item] = undefined;
           });
         }
         merged.video_source_url = merged.video_source_url || merged.player_source_url;
@@ -10819,38 +5910,37 @@ const items11 = [
                 let tmp6 = null;
                 if (null != items) {
                   const _Symbol = Symbol;
-                  iterable = typeof Symbol !== "undefined";
+                  let prop = typeof Symbol !== "undefined";
                   if (typeof Symbol !== "undefined") {
                     const _Symbol2 = Symbol;
-                    iterable = items[Symbol.iterator];
+                    prop = items[Symbol.iterator];
                   }
-                  if (!iterable) {
-                    iterable = items[Symbol.iterator];
+                  if (!prop) {
+                    prop = items[Symbol.iterator];
                   }
-                  tmp6 = iterable;
+                  tmp6 = prop;
                 }
                 if (null != tmp6) {
                   let flag2 = false;
                   try {
                     items = [];
                     try {
-                      const call = tmp8.call;
+                      const call = tmp9.call;
                       if (typeof call === "unknown") {
-                        let iter = tmp8();
+                        let iter = tmp9();
                       } else {
                         iter = call(items);
                       }
                       const iter3 = iter.next();
                       const done = iter3.done;
-                      let tmp10 = done;
+                      let tmp11 = done;
                       if (!done) {
                         items.push(iter4.value);
                         if (!arg1) {
                           const iter5 = iter2.next();
                           const done2 = iter5.done;
-                          tmp10 = done2;
+                          tmp11 = done2;
                           while (!done2) {
-                            let tmp15 = iter5;
                             let arr = items.push(iter6.value);
                             if (!arg1) {
                               continue;
@@ -10862,11 +5952,11 @@ const items11 = [
                         }
                       }
                       try {
-                        let tmp18 = !tmp10;
-                        if (!tmp10) {
-                          tmp18 = null != iter2.return;
+                        let tmp19 = !tmp11;
+                        if (!tmp11) {
+                          tmp19 = null != iter2.return;
                         }
-                        if (tmp18) {
+                        if (tmp19) {
                           iter2.return();
                         }
                         if (flag2) {
@@ -10874,35 +5964,35 @@ const items11 = [
                         } else {
                           return items;
                         }
-                      } catch (tmp24) {
+                      } catch (tmp25) {
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp24;
+                          throw tmp25;
                         }
                       }
                     } catch (tmp5) {
                       flag2 = true;
                     }
-                  } catch (tmp27) {
+                  } catch (tmp28) {
                     try {
-                      let tmp29 = !tmp3;
+                      let tmp30 = !tmp3;
                       if (!tmp3) {
-                        tmp29 = tmp4 != obj.return;
+                        tmp30 = tmp4 != obj.return;
                       }
-                      if (tmp29) {
+                      if (tmp30) {
                         obj.return();
                       }
                       if (tmp2) {
                         throw tmp;
                       } else {
-                        throw tmp27;
+                        throw tmp28;
                       }
-                    } catch (tmp35) {
+                    } catch (tmp36) {
                       if (tmp2) {
                         throw tmp;
                       } else {
-                        throw tmp35;
+                        throw tmp36;
                       }
                     }
                   }
@@ -10984,26 +6074,25 @@ const items11 = [
     value() {
       const self = this;
       items = ["player_width", "player_height", "video_source_width", "video_source_height", "player_playhead_time", "video_source_bitrate"];
-      const item = items.forEach((arg0) => {
-        const parsed = parseInt(self.data[arg0], 10);
+      const item = items.forEach((item, index) => {
+        const parsed = parseInt(self.data[item], 10);
         let tmp2;
         if (!isNaN(parsed)) {
           tmp2 = parsed;
         }
-        self.data[arg0] = tmp2;
+        self.data[item] = tmp2;
       });
       const items1 = ["player_source_url", "video_source_url"];
-      const item1 = items1.forEach((arg0) => {
-        if (self.data[arg0]) {
-          const formatted = tmp.data[arg0].toLowerCase();
+      const item1 = items1.forEach((item, index) => {
+        if (self.data[item]) {
+          const formatted = self.data[item].toLowerCase();
           let tmp2 = 0 === formatted.indexOf("data:");
           if (!tmp2) {
             tmp2 = 0 === formatted.indexOf("blob:");
           }
           if (tmp2) {
-            tmp.data[arg0] = "MSE style URL";
+            self.data[item] = "MSE style URL";
           }
-          const str = tmp.data[arg0];
         }
       });
     }
@@ -11013,8 +6102,8 @@ const items11 = [
     value() {
       const self = this;
       const keys = Object.keys(this.data);
-      const item = keys.forEach((arr) => {
-        if (0 === arr.indexOf("video_")) {
+      const item = keys.forEach((item, index) => {
+        if (0 === item.indexOf("video_")) {
           const data = self.data;
           delete tmp[tmp2];
         }
@@ -11026,8 +6115,8 @@ const items11 = [
     value() {
       const self = this;
       const keys = Object.keys(this.data);
-      const item = keys.forEach((arr) => {
-        if (0 === arr.indexOf("view_")) {
+      const item = keys.forEach((item, index) => {
+        if (0 === item.indexOf("view_")) {
           const data = self.data;
           delete tmp[tmp2];
         }
@@ -11048,8 +6137,7 @@ const items11 = [
   {
     key: "_initializeViewData",
     value() {
-      let self = this;
-      self = this;
+      const self = this;
       const tmp = ee();
       this.data.view_id = tmp;
       closure_1 = tmp;
@@ -11120,11 +6208,11 @@ const items11 = [
                 let obj2 = obj;
                 obj = {};
                 obj3 = obj;
-                const item = levels.forEach((width) => {
-                  obj2[arg1] = { width: width.width, height: width.height, bitrate: width.bitrate, attrs: width.attrs };
+                const item = levels.forEach((item, index) => {
+                  obj2[index] = { width: item.width, height: item.height, bitrate: item.bitrate, attrs: item.attrs };
                 });
-                const item1 = audioTracks.forEach((name) => {
-                  obj3[arg1] = { name: name.name, language: name.lang, bitrate: name.bitrate };
+                const item1 = audioTracks.forEach((item, index) => {
+                  obj3[index] = { name: item.name, language: item.lang, bitrate: item.bitrate };
                 });
                 if (typeof closure_1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
@@ -11144,7 +6232,6 @@ const items11 = [
                   _Math = Math;
                   stats = Math.round;
                   loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp5 = loading ? loading.end : stats.tload;
                 } else {
                   obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
@@ -11152,10 +6239,9 @@ const items11 = [
                     HermesBuiltin.throwTypeError();
                   }
                   for (const key10049 in sessionData) {
-                    let tmp32 = key10049;
                     let tmp33 = sessionData[key10049];
-                    DATA_ID = tmp33["DATA-ID"];
-                    if (-1 === DATA_ID.search("io.litix.data.")) {
+                    let prop = tmp33["DATA-ID"];
+                    if (-1 === prop.search("io.litix.data.")) {
                       continue;
                     } else {
                       ({ DATA-ID: str3, VALUE: obj5[str3.replace(str3, "io.litix.data.", "")] } = tmp33);
@@ -11202,9 +6288,9 @@ const items11 = [
                           str5 = "";
                         }
                         const parts = str5.trim().split(/[\r\n]+/);
-                        const item2 = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
+                        const item2 = parts.forEach((item, index) => {
+                          if (item) {
+                            const parts = item.split(": ");
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
@@ -11246,19 +6332,16 @@ const items11 = [
                         const push = keys.push;
                         push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
                       }
-                      const item3 = keys.forEach((arg0) => {
-                        Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
+                      const item3 = keys.forEach((item, index) => {
+                        Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
                       });
                     }
-                    if (typeof tmp8 !== "function") {
+                    if (typeof u !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj2.emit(obj3, "requestcompleted", obj2);
                   }
                   items = ["localhost"];
-                  obj1 = {};
-                  tmp8 = u;
-                  const tmp9 = closure_1_48;
                 }
               };
               hlsjs.on(tmp.Events.MANIFEST_LOADED, fn);
@@ -11282,7 +6365,6 @@ const items11 = [
                   _Math = Math;
                   stats = Math.round;
                   loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
                 } else {
                   let obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
@@ -11344,9 +6426,9 @@ const items11 = [
                           str3 = "";
                         }
                         const parts = str3.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
+                        const item = parts.forEach((item, index) => {
+                          if (item) {
+                            const parts = item.split(": ");
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
@@ -11367,13 +6449,13 @@ const items11 = [
                       }
                     }
                     obj[8] = tmp26;
-                    obj[9] = details.holdBack && tmp17(details.holdBack);
-                    const tmp28 = details.holdBack && tmp17(details.holdBack);
-                    obj[10] = details.partHoldBack && tmp17(details.partHoldBack);
-                    const tmp29 = details.partHoldBack && tmp17(details.partHoldBack);
-                    obj[11] = details.partTarget && tmp17(details.partTarget);
-                    const tmp30 = details.partTarget && tmp17(details.partTarget);
-                    obj[12] = details.targetduration && tmp17(details.targetduration);
+                    obj[9] = details.holdBack && secondsToMs(details.holdBack);
+                    const tmp28 = details.holdBack && secondsToMs(details.holdBack);
+                    obj[10] = details.partHoldBack && secondsToMs(details.partHoldBack);
+                    const tmp29 = details.partHoldBack && secondsToMs(details.partHoldBack);
+                    obj[11] = details.partTarget && secondsToMs(details.partTarget);
+                    const tmp30 = details.partTarget && secondsToMs(details.partTarget);
+                    obj[12] = details.targetduration && secondsToMs(details.targetduration);
                     obj[13] = details.live;
                     const _isNaN = isNaN;
                     let tmp32;
@@ -11381,13 +6463,13 @@ const items11 = [
                       tmp32 = sum;
                     }
                     obj[14] = tmp32;
-                    if (typeof tmp19 !== "function") {
+                    if (typeof u !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
+                    const tmp31 = details.targetduration && secondsToMs(details.targetduration);
                   }
                   items = ["localhost"];
-                  tmp19 = u;
                 }
               };
               hlsjs.on(tmp.Events.LEVEL_LOADED, fn2);
@@ -11411,10 +6493,8 @@ const items11 = [
                   _Math = Math;
                   stats = Math.round;
                   loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
                 } else {
-                  let obj = {};
-                  obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
+                  let obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
                   obj[0] = arg0;
                   ({ bytesLoaded: obj3[1], requestStart: obj3[2], responseStart: obj3[3], responseEnd: obj3[4] } = obj);
                   if (typeof closure_1_44 !== "function") {
@@ -11447,9 +6527,9 @@ const items11 = [
                           str3 = "";
                         }
                         const parts = str3.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
+                        const item = parts.forEach((item, index) => {
+                          if (item) {
+                            const parts = item.split(": ");
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
@@ -11470,13 +6550,12 @@ const items11 = [
                       }
                     }
                     obj[7] = tmp14;
-                    if (typeof tmp7 !== "function") {
+                    if (typeof u !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
                   }
                   items = ["localhost"];
-                  tmp7 = u;
                 }
               };
               hlsjs.on(tmp.Events.AUDIO_TRACK_LOADED, fn3);
@@ -11503,7 +6582,6 @@ const items11 = [
                   _Math = Math;
                   stats = Math.round;
                   loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
                 } else {
                   let obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
@@ -11511,7 +6589,6 @@ const items11 = [
                     if (typeof closure_1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    let tmp8;
                     if (networkDetails) {
                       if (typeof networkDetails.getAllResponseHeaders === "function") {
                         let str = networkDetails.getAllResponseHeaders();
@@ -11520,9 +6597,9 @@ const items11 = [
                           str = "";
                         }
                         const parts = str.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
+                        const item = parts.forEach((item, index) => {
+                          if (item) {
+                            const parts = item.split(": ");
                             const str2 = parts.shift();
                             let tmp = str2;
                             if (str2) {
@@ -11538,7 +6615,6 @@ const items11 = [
                             }
                           }
                         });
-                        tmp8 = obj;
                         const str2 = str.trim();
                       }
                     }
@@ -11556,7 +6632,7 @@ const items11 = [
                       obj = tmp6;
                       let tmp18;
                       if (tmp6) {
-                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
+                        const found = closure_1_49.find((item, index) => undefined !== obj[item]);
                         let tmp21;
                         if (found) {
                           tmp21 = tmp6[found];
@@ -11579,9 +6655,6 @@ const items11 = [
                       obj.request_video_width = hlsjs.levels[frag.level] || {}.width;
                       obj.request_video_height = hlsjs.levels[frag.level] || {}.height;
                       obj.request_labeled_bitrate = hlsjs.levels[frag.level] || {}.bitrate;
-                      const tmp25 = hlsjs.levels[frag.level] || {};
-                      const tmp26 = hlsjs.levels[frag.level] || {};
-                      const tmp27 = hlsjs.levels[frag.level] || {};
                     } else {
                       obj.request_type = frag.type;
                     }
@@ -11658,7 +6731,6 @@ const items11 = [
                   if (typeof closure_1_53 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  let tmp3;
                   if (networkDetails) {
                     if (typeof networkDetails.getAllResponseHeaders === "function") {
                       let str2 = networkDetails.getAllResponseHeaders();
@@ -11667,9 +6739,9 @@ const items11 = [
                         str2 = "";
                       }
                       let parts = str2.trim().split(/[\r\n]+/);
-                      const item = parts.forEach((str) => {
-                        if (str) {
-                          const parts = str.split(": ");
+                      const item = parts.forEach((item, index) => {
+                        if (item) {
+                          const parts = item.split(": ");
                           const str2 = parts.shift();
                           let tmp = str2;
                           if (str2) {
@@ -11685,7 +6757,6 @@ const items11 = [
                           }
                         }
                       });
-                      tmp3 = obj;
                       const str3 = str2.trim();
                     }
                   }
@@ -11717,7 +6788,7 @@ const items11 = [
                       obj = tmp;
                       let tmp14;
                       if (tmp) {
-                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
+                        const found = closure_1_49.find((item, index) => undefined !== obj[item]);
                         let tmp17;
                         if (found) {
                           tmp17 = tmp[found];
@@ -11728,18 +6799,18 @@ const items11 = [
                     }
                     obj[3] = tmp13;
                     let str6 = "media";
-                    if (details !== tmp5.ErrorDetails.FRAG_LOAD_ERROR) {
+                    if (details !== closure_3.ErrorDetails.FRAG_LOAD_ERROR) {
                       str6 = "media";
-                      if (details !== tmp5.ErrorDetails.FRAG_LOAD_TIMEOUT) {
+                      if (details !== closure_3.ErrorDetails.FRAG_LOAD_TIMEOUT) {
                         let str7 = "audio";
-                        if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
+                        if (details !== closure_3.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
                           str7 = "audio";
-                          if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
+                          if (details !== closure_3.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
                             let str9 = "subtitle";
-                            if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_ERROR) {
+                            if (details !== closure_3.ErrorDetails.SUBTITLE_LOAD_ERROR) {
                               str9 = "subtitle";
-                              if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
-                                if (details === tmp5.ErrorDetails.KEY_LOAD_ERROR) {
+                              if (details !== closure_3.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
+                                if (details === closure_3.ErrorDetails.KEY_LOAD_ERROR) {
                                   let str10 = "encryption";
                                 } else {
                                   str10 = "manifest";
@@ -11764,13 +6835,12 @@ const items11 = [
                       text = response.text;
                     }
                     obj[6] = text;
-                    if (typeof tmp7 !== "function") {
+                    if (typeof u !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestfailed", obj);
                   }
                   items = ["localhost"];
-                  tmp7 = u;
                 }
                 if (fatal) {
                   let str13 = "";
@@ -11845,6 +6915,7 @@ const items11 = [
                   }
                   obj.emit(closure_1, "error", obj);
                 }
+                tmp6 = details === closure_3.ErrorDetails.MANIFEST_LOAD_ERROR || details === closure_3.ErrorDetails.MANIFEST_LOAD_TIMEOUT || details === closure_3.ErrorDetails.FRAG_LOAD_ERROR || details === closure_3.ErrorDetails.FRAG_LOAD_TIMEOUT || details === closure_3.ErrorDetails.LEVEL_LOAD_ERROR || details === closure_3.ErrorDetails.LEVEL_LOAD_TIMEOUT || details === closure_3.ErrorDetails.AUDIO_TRACK_LOAD_ERROR || details === closure_3.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT || details === closure_3.ErrorDetails.SUBTITLE_LOAD_ERROR || details === closure_3.ErrorDetails.SUBTITLE_LOAD_TIMEOUT || details === closure_3.ErrorDetails.KEY_LOAD_ERROR || details === closure_3.ErrorDetails.KEY_LOAD_TIMEOUT;
               };
               hlsjs.on(tmp.Events.ERROR, fn6);
               fn7 = function w(request_event_type, frag) {
@@ -11904,11 +6975,10 @@ const items11 = [
                           videoCodec = tmp.videoCodec;
                         }
                         obj[5] = videoCodec;
-                        if (typeof tmp7 !== "function") {
+                        if (typeof u !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         mux.emit(closure_1, "renditionchange", obj);
-                        tmp7 = u;
                       } else {
                         log.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js");
                       }
@@ -11992,7 +7062,7 @@ const items11 = [
                       if (null !== callResult) {
                         if (undefined !== str) {
                           const parts = str.split(".");
-                          first = parts.map((joined) => parseInt(joined))[0];
+                          first = parts.map((item, index) => parseInt(item))[0];
                         }
                       }
                     }
@@ -12014,7 +7084,7 @@ const items11 = [
                 if (typeof closure_1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof closure_1_45 !== "function") {
+                if (typeof re !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof data.url === "string") {
@@ -12052,10 +7122,10 @@ const items11 = [
                 if (!bitrateList) {
                   bitrateList = [];
                 }
-                const item = bitrateList.forEach((arg0, arg1) => {
-                  obj[arg1] = {};
-                  ({ width: obj[arg1].width, height: obj[arg1].height, bandwidth: obj[arg1].bitrate } = arg0);
-                  obj[arg1].attrs = {};
+                const item = bitrateList.forEach((item, index) => {
+                  obj[index] = {};
+                  ({ width: obj[index].width, height: obj[index].height, bandwidth: obj[index].bitrate } = item);
+                  obj[index].attrs = {};
                 });
                 if ("video" === type2) {
                   closure_6.video = obj;
@@ -12067,7 +7137,7 @@ const items11 = [
                   tmp2 = closure_6;
                   closure_6.media = obj;
                 }
-                const tmp5 = closure_1_54(request, dashjs);
+                const tmp5 = Nt(request, dashjs);
                 obj = { request_event_type: type, request_start: tmp5.requestStart, request_response_start: tmp5.requestResponseStart, request_response_end: tmp5.requestResponseEnd, request_bytes_loaded: -1, request_type: `${type2}_init`, request_response_headers: tmp5.requestResponseHeaders, request_hostname: tmp5.requestHostname, request_id: tmp5.requestId, request_url: tmp5.requestUrl, request_media_duration: tmp5.requestMediaDuration, request_rendition_lists: tmp2 };
                 if (typeof o !== "function") {
                   HermesBuiltin.throwTypeError();
@@ -12105,7 +7175,7 @@ const items11 = [
                   mediaInfo = {};
                 }
                 const type2 = mediaInfo.type;
-                ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = closure_1_54(request, dashjs));
+                ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = Nt(request, dashjs));
                 const qualityFor = dashjs.getQualityFor(type2);
                 const bitrateList = dashjs.getCurrentTrackFor(type2).bitrateList;
                 if (bitrateList) {
@@ -12152,11 +7222,11 @@ const items11 = [
                   if ("audio" === mediaType) {
                     obj = dashjs;
                     const bitrateInfoListFor = dashjs.getBitrateInfoListFor(mediaType);
-                    const found = bitrateInfoListFor.find((qualityIndex) => qualityIndex.qualityIndex === obj.newQuality);
+                    const found = bitrateInfoListFor.find((item, index) => item.qualityIndex === obj.newQuality);
                     if (found) {
                       if (typeof found.bitrate === "number") {
                         obj = {};
-                        closure_1_48(obj, found);
+                        ue(obj, found);
                         obj = { codec: null };
                         obj[0] = obj.getCurrentTrackFor(mediaType).codec;
                         const _Object5 = Object;
@@ -12175,31 +7245,31 @@ const items11 = [
                             const push = keys.push;
                             push.apply(keys, Object.getOwnPropertySymbols(_Object6Result));
                           }
-                          const item = keys.forEach((arg0) => {
-                            Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
+                          const item = keys.forEach((item, index) => {
+                            Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
                           });
                         }
                         closure_10[mediaType] = obj;
                         let tmp6;
                         if (closure_10.video) {
-                          if (typeof tmp22.video.bitrate === "number") {
-                            if (tmp22.video.width) {
-                              if (tmp22.video.height) {
-                                const bitrate = tmp22.video.bitrate;
+                          if (typeof closure_10.video.bitrate === "number") {
+                            if (closure_10.video.width) {
+                              if (closure_10.video.height) {
+                                const bitrate = closure_10.video.bitrate;
                                 let sum = bitrate;
                                 if (tmp9) {
-                                  sum = bitrate + tmp22.audio.bitrate;
+                                  sum = bitrate + closure_10.audio.bitrate;
                                 }
-                                if (sum !== tmp22.totalBitrate) {
-                                  tmp22.totalBitrate = sum;
+                                if (sum !== closure_10.totalBitrate) {
+                                  closure_10.totalBitrate = sum;
                                   obj1 = { video_source_bitrate: null, video_source_height: null, video_source_width: null, video_source_codec: null };
                                   obj1[0] = sum;
-                                  obj1[1] = tmp22.video.height;
-                                  obj1[2] = tmp22.video.width;
-                                  if (typeof closure_1_55 !== "function") {
+                                  obj1[1] = closure_10.video.height;
+                                  obj1[2] = closure_10.video.width;
+                                  if (typeof pa !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
-                                  const match = tmp22.video.codec.match(/.*codecs\*?="(.*)"/);
+                                  const match = closure_10.video.codec.match(/.*codecs\*?="(.*)"/);
                                   let tmp13;
                                   if (null !== match) {
                                     if (undefined !== match) {
@@ -12208,9 +7278,8 @@ const items11 = [
                                   }
                                   obj1[3] = tmp13;
                                   tmp6 = obj1;
-                                  const str7 = tmp22.video.codec;
                                 }
-                                tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "number";
+                                tmp9 = closure_10.audio && typeof closure_10.audio.bitrate === "number";
                               }
                             }
                             log2.warn("have bitrate info for video but missing width/height");
@@ -12241,7 +7310,7 @@ const items11 = [
                 if (typeof closure_1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof closure_1_45 !== "function") {
+                if (typeof re !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof request.url === "string") {
@@ -12301,7 +7370,7 @@ const items11 = [
                   if (typeof closure_1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof closure_1_45 !== "function") {
+                  if (typeof re !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (typeof request.url === "string") {
@@ -12318,13 +7387,12 @@ const items11 = [
                     obj[2] = items[0];
                     obj[3] = request.mediaType;
                     ({ status: obj5[4], statusText: obj5[5] } = response);
-                    if (typeof tmp20 !== "function") {
+                    if (typeof o !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     mux.emit(id, "requestfailed", obj);
                   }
                   items = ["localhost"];
-                  tmp20 = o;
                 }
                 if (null != request) {
                   if (request.url) {
@@ -12559,19 +7627,17 @@ class Ve {
                         items2[0] = require("module_0");
                         num4 = 1;
                         items2[1] = arr5.slice(searchResult + 1);
-                        item = items2.forEach((str) => {
-                          const parts = str.replace(/['"]+/g, "").split("=");
+                        item = items2.forEach((item, index) => {
+                          const parts = item.replace(/['"]+/g, "").split("=");
                           for (let num = 0; num < parts.length; num = num + 1) {
-                            let tmp = num;
                             if ("DATA-ID" === parts[num]) {
-                              let tmp2 = obj;
                               obj["DATA-ID"] = parts[1 - num];
                             }
                             if ("VALUE" === parts[num]) {
-                              let tmp3 = obj;
                               obj.VALUE = parts[1 - num];
                             }
                           }
+                          const str = item.replace(/['"]+/g, "");
                         });
                         obj = { data: null };
                         obj[0] = obj;
@@ -12589,8 +7655,8 @@ class Ve {
                       for (const key10063 in tmp7) {
                         tmp43 = key10063;
                         tmp44 = tmp7[key10063];
-                        DATA_ID = tmp44["DATA-ID"];
-                        if (-1 === DATA_ID.search("io.litix.data.")) {
+                        prop = tmp44["DATA-ID"];
+                        if (-1 === prop.search("io.litix.data.")) {
                           continue;
                         } else {
                           ({ DATA-ID: str7, VALUE: obj3[str7.replace(str7, "io.litix.data.", "")] } = tmp44);
@@ -12690,7 +7756,6 @@ function ct(arg0, arg1) {
   if (typeof Jr !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const str = arg1[0];
   const str2 = arg1[0].replace("#EXT-X-", "");
   const replaced = arg1[0].replace("#EXT-X-", "").toLowerCase().replace(/-(\w)/g, (arg0) => arg0[1].toUpperCase());
   if (typeof Oi !== "function") {
@@ -12707,11 +7772,7 @@ function ct(arg0, arg1) {
     if (parts.length > 0) {
       while (true) {
         let str12 = parts[num];
-        let tmp8 = Ai;
-        let tmp9 = num;
-        let tmp10 = merged;
         if (typeof Ai !== "function") {
-          let str20 = "Trying to call a non-function";
           let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
         }
         let obj = {};
@@ -12748,10 +7809,8 @@ function ct(arg0, arg1) {
       }
       parsed = "yes" === str14.toLowerCase();
       const str13 = parts1[0].toLowerCase();
-      const str21 = parts1[0];
     }
     let merged1 = Object.assign(tmp7, {});
-    const str7 = arg1[1];
   } else {
     if (typeof _t !== "function") {
       HermesBuiltin.throwTypeError();
@@ -12772,6 +7831,8 @@ function ct(arg0, arg1) {
     merged1 = "yes" === str17.toLowerCase();
   }
   arg0[replaced] = merged1;
+  arr = arg1[1];
+  const str3 = arg1[0].replace("#EXT-X-", "").toLowerCase();
 }
 function Jr(arg0) {
 
@@ -12807,7 +7868,7 @@ function ne(key10009) {
         } else {
           spliceResult = call(spliceResult, 1);
         }
-        closure_1_123[closure_0].apply(null, spliceResult);
+        ne[closure_0].apply(null, spliceResult);
       }, 0);
       const _default2 = GResult.default;
     } else {
@@ -12815,7 +7876,7 @@ function ne(key10009) {
     }
   } else if (typeof key10009 === "function") {
     const timerId1 = GResult.default.setTimeout(() => {
-      key10009(closure_1_123);
+      key10009(ne);
     }, 0);
     const _default = GResult.default;
   } else {
@@ -12825,8 +7886,7 @@ function ne(key10009) {
 function ce() {
   let doNotTrack = mod3.default.doNotTrack;
   if (!doNotTrack) {
-    doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-    const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+    doNotTrack = mod3.default.navigator && mod3.default.navigator.doNotTrack;
   }
   return "1" === doNotTrack;
 }
@@ -12853,7 +7913,6 @@ let merged = Object.assign(ne, {
         str2 = "";
         if (element.nodeName) {
           str2 = element.nodeName.toLowerCase();
-          let str3 = element.nodeName;
         }
       }
       items = [element, tmp4, str2];
@@ -12867,38 +7926,37 @@ let merged = Object.assign(ne, {
           let tmp6 = null;
           if (null != items) {
             const _Symbol = Symbol;
-            iterable = typeof Symbol !== "undefined";
+            let prop = typeof Symbol !== "undefined";
             if (typeof Symbol !== "undefined") {
               const _Symbol2 = Symbol;
-              iterable = items[Symbol.iterator];
+              prop = items[Symbol.iterator];
             }
-            if (!iterable) {
-              iterable = items[Symbol.iterator];
+            if (!prop) {
+              prop = items[Symbol.iterator];
             }
-            tmp6 = iterable;
+            tmp6 = prop;
           }
           if (null != tmp6) {
             let flag2 = false;
             try {
               items = [];
               try {
-                const call = tmp8.call;
+                const call = tmp9.call;
                 if (typeof call === "unknown") {
-                  let iter = tmp8();
+                  let iter = tmp9();
                 } else {
                   iter = call(items);
                 }
                 const iter3 = iter.next();
                 const done = iter3.done;
-                let tmp10 = done;
+                let tmp11 = done;
                 if (!done) {
                   items.push(iter4.value);
                   if (!arg1) {
                     const iter5 = iter2.next();
                     const done2 = iter5.done;
-                    tmp10 = done2;
+                    tmp11 = done2;
                     while (!done2) {
-                      let tmp15 = iter5;
                       let arr = items.push(iter6.value);
                       if (!arg1) {
                         continue;
@@ -12910,11 +7968,11 @@ let merged = Object.assign(ne, {
                   }
                 }
                 try {
-                  let tmp18 = !tmp10;
-                  if (!tmp10) {
-                    tmp18 = null != iter2.return;
+                  let tmp19 = !tmp11;
+                  if (!tmp11) {
+                    tmp19 = null != iter2.return;
                   }
-                  if (tmp18) {
+                  if (tmp19) {
                     iter2.return();
                   }
                   if (flag2) {
@@ -12922,35 +7980,35 @@ let merged = Object.assign(ne, {
                   } else {
                     return items;
                   }
-                } catch (tmp24) {
+                } catch (tmp25) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp24;
+                    throw tmp25;
                   }
                 }
               } catch (tmp5) {
                 flag2 = true;
               }
-            } catch (tmp27) {
+            } catch (tmp28) {
               try {
-                let tmp29 = !tmp3;
+                let tmp30 = !tmp3;
                 if (!tmp3) {
-                  tmp29 = tmp4 != obj.return;
+                  tmp30 = tmp4 != obj.return;
                 }
-                if (tmp29) {
+                if (tmp30) {
                   obj.return();
                 }
                 if (tmp2) {
                   throw tmp;
                 } else {
-                  throw tmp27;
+                  throw tmp28;
                 }
-              } catch (tmp35) {
+              } catch (tmp36) {
                 if (tmp2) {
                   throw tmp;
                 } else {
-                  throw tmp35;
+                  throw tmp36;
                 }
               }
             }
@@ -13004,8 +8062,7 @@ let merged = Object.assign(ne, {
             const obj = { player_is_paused: closure_2.paused, player_width: parseInt(getComputedStyle(closure_2, "width")), player_height: parseInt(getComputedStyle(closure_2, "height")), player_autoplay_on: closure_2.autoplay, player_preload_on: closure_2.preload, player_language_code: closure_2.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
             let _default = closure_1_102.default;
             if (_default) {
-              _default = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
-              const tmp7 = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
+              _default = closure_1_102.default.fullscreenElement || closure_1_102.default.webkitFullscreenElement || closure_1_102.default.mozFullScreenElement || closure_1_102.default.msFullscreenElement;
             }
             obj[6] = _default;
             obj[7] = closure_2.poster;
@@ -13025,7 +8082,6 @@ let merged = Object.assign(ne, {
                 if (undefined !== getVideoPlaybackQuality) {
                   const call2 = getVideoPlaybackQuality.call;
                   const droppedVideoFrames = typeof call2 === "unknown" ? getVideoPlaybackQuality() : call2(closure_2).droppedVideoFrames;
-                  const tmp11 = closure_2;
                 }
               }
             }
@@ -13073,8 +8129,8 @@ let merged = Object.assign(ne, {
           }
           defineProperty.mux.destroy = () => {
             const keys = Object.keys(closure_2.mux.listeners);
-            const item = keys.forEach((arg0) => {
-              const removed = closure_2.removeEventListener(arg0, closure_2.mux.listeners[arg0], false);
+            const item = keys.forEach((item, index) => {
+              const removed = closure_2.removeEventListener(item, closure_2.mux.listeners[item], false);
             });
             delete tmp2[tmp];
             closure_2.mux.destroy = h;
@@ -13092,7 +8148,7 @@ let merged = Object.assign(ne, {
             store.emit(closure_3, "destroy");
           };
           defineProperty.mux.swapElement = (nodeName) => {
-            if (typeof closure_1_31 !== "function") {
+            if (typeof se !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (nodeName) {
@@ -13105,7 +8161,6 @@ let merged = Object.assign(ne, {
                 str2 = "";
                 if (element.nodeName) {
                   str2 = element.nodeName.toLowerCase();
-                  const str3 = element.nodeName;
                 }
               }
               items = [element, tmp6, str2];
@@ -13119,38 +8174,37 @@ let merged = Object.assign(ne, {
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
+                    let prop = typeof Symbol !== "undefined";
                     if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
+                      prop = items[Symbol.iterator];
                     }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
+                    if (!prop) {
+                      prop = items[Symbol.iterator];
                     }
-                    tmp6 = iterable;
+                    tmp6 = prop;
                   }
                   if (null != tmp6) {
                     let flag2 = false;
                     try {
                       items = [];
                       try {
-                        const call = tmp8.call;
+                        const call = tmp9.call;
                         if (typeof call === "unknown") {
-                          let iter = tmp8();
+                          let iter = tmp9();
                         } else {
                           iter = call(items);
                         }
                         const iter3 = iter.next();
                         const done = iter3.done;
-                        let tmp10 = done;
+                        let tmp11 = done;
                         if (!done) {
                           items.push(iter4.value);
                           if (!arg1) {
                             const iter5 = iter2.next();
                             const done2 = iter5.done;
-                            tmp10 = done2;
+                            tmp11 = done2;
                             while (!done2) {
-                              let tmp15 = iter5;
                               let arr = items.push(iter6.value);
                               if (!arg1) {
                                 continue;
@@ -13162,11 +8216,11 @@ let merged = Object.assign(ne, {
                           }
                         }
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          let tmp19 = !tmp11;
+                          if (!tmp11) {
+                            tmp19 = null != iter2.return;
                           }
-                          if (tmp18) {
+                          if (tmp19) {
                             iter2.return();
                           }
                           if (flag2) {
@@ -13174,35 +8228,35 @@ let merged = Object.assign(ne, {
                           } else {
                             return items;
                           }
-                        } catch (tmp24) {
+                        } catch (tmp25) {
                           if (tmp2) {
                             throw tmp;
                           } else {
-                            throw tmp24;
+                            throw tmp25;
                           }
                         }
                       } catch (tmp5) {
                         flag2 = true;
                       }
-                    } catch (tmp27) {
+                    } catch (tmp28) {
                       try {
-                        let tmp29 = !tmp3;
+                        let tmp30 = !tmp3;
                         if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
+                          tmp30 = tmp4 != obj.return;
                         }
-                        if (tmp29) {
+                        if (tmp30) {
                           obj.return();
                         }
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp27;
+                          throw tmp28;
                         }
-                      } catch (tmp35) {
+                      } catch (tmp36) {
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp35;
+                          throw tmp36;
                         }
                       }
                     }
@@ -13210,7 +8264,7 @@ let merged = Object.assign(ne, {
                 })(items, 3);
               }
               if (!tmp9) {
-                tmp9 = closure_1_23(items, 3);
+                tmp9 = Pe(items, 3);
               }
               if (tmp9) {
                 const first = tmp9[0];
@@ -13226,9 +8280,9 @@ let merged = Object.assign(ne, {
                     delete tmp4[tmp3];
                     const _Object2 = Object;
                     const keys = Object.keys(first.mux.listeners);
-                    const item = keys.forEach((arg0) => {
-                      const removed = first.removeEventListener(arg0, first.mux.listeners[arg0], false);
-                      const listener = first.addEventListener(arg0, first.mux.listeners[arg0], false);
+                    const item = keys.forEach((item, index) => {
+                      const removed = first.removeEventListener(item, first.mux.listeners[item], false);
+                      const listener = first.addEventListener(item, first.mux.listeners[item], false);
                     });
                     first.mux.swapElement = first.mux.swapElement;
                     first.mux.destroy = first.mux.destroy;
@@ -13242,6 +8296,7 @@ let merged = Object.assign(ne, {
                   log = first.log;
                   return log.error("No element was found with the `" + `The element of \`${tmp16}` + "` query selector.");
                 }
+                tmp17 = tmp9[2];
               } else {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -13284,16 +8339,16 @@ let merged = Object.assign(ne, {
             }
           }
           defineProperty.mux.listeners = {};
-          let item = closure_103.forEach((arg0) => {
-            closure_0 = arg0;
-            let tmp = "error" === arg0;
+          let item = closure_103.forEach((item, index) => {
+            closure_0 = item;
+            let tmp = "error" === item;
             if (tmp) {
               tmp = !merged.automaticErrorTracking;
             }
             if (!tmp) {
-              closure_2.mux.listeners[arg0] = () => {
+              closure_2.mux.listeners[item] = () => {
                 const obj = {};
-                if ("error" === closure_0) {
+                if ("error" === item) {
                   if (closure_1_2.error) {
                     if (1 !== closure_1_2.error.code) {
                       obj.player_error_code = closure_1_2.error.code;
@@ -13305,12 +8360,11 @@ let merged = Object.assign(ne, {
                     }
                   }
                 }
-                closure_0.emit(closure_1_3, closure_0, obj);
+                item.emit(closure_1_3, item, obj);
               };
-              const listener = closure_2.addEventListener(arg0, closure_2.mux.listeners[arg0], false);
+              const listener = closure_2.addEventListener(item, closure_2.mux.listeners[item], false);
             }
           });
-          const tmp22 = defineProperty;
         } else {
           errorResult = log.error(`No element was found with the \`${tmp13}\` query selector.`);
         }
@@ -13338,7 +8392,6 @@ let merged = Object.assign(ne, {
         str2 = "";
         if (element.nodeName) {
           str2 = element.nodeName.toLowerCase();
-          const str3 = element.nodeName;
         }
       }
       items = [element, tmp2, str2];
@@ -13352,38 +8405,37 @@ let merged = Object.assign(ne, {
           let tmp6 = null;
           if (null != items) {
             const _Symbol = Symbol;
-            iterable = typeof Symbol !== "undefined";
+            let prop = typeof Symbol !== "undefined";
             if (typeof Symbol !== "undefined") {
               const _Symbol2 = Symbol;
-              iterable = items[Symbol.iterator];
+              prop = items[Symbol.iterator];
             }
-            if (!iterable) {
-              iterable = items[Symbol.iterator];
+            if (!prop) {
+              prop = items[Symbol.iterator];
             }
-            tmp6 = iterable;
+            tmp6 = prop;
           }
           if (null != tmp6) {
             let flag2 = false;
             try {
               items = [];
               try {
-                const call = tmp8.call;
+                const call = tmp9.call;
                 if (typeof call === "unknown") {
-                  let iter = tmp8();
+                  let iter = tmp9();
                 } else {
                   iter = call(items);
                 }
                 const iter3 = iter.next();
                 const done = iter3.done;
-                let tmp10 = done;
+                let tmp11 = done;
                 if (!done) {
                   items.push(iter4.value);
                   if (!arg1) {
                     const iter5 = iter2.next();
                     const done2 = iter5.done;
-                    tmp10 = done2;
+                    tmp11 = done2;
                     while (!done2) {
-                      let tmp15 = iter5;
                       let arr = items.push(iter6.value);
                       if (!arg1) {
                         continue;
@@ -13395,11 +8447,11 @@ let merged = Object.assign(ne, {
                   }
                 }
                 try {
-                  let tmp18 = !tmp10;
-                  if (!tmp10) {
-                    tmp18 = null != iter2.return;
+                  let tmp19 = !tmp11;
+                  if (!tmp11) {
+                    tmp19 = null != iter2.return;
                   }
-                  if (tmp18) {
+                  if (tmp19) {
                     iter2.return();
                   }
                   if (flag2) {
@@ -13407,35 +8459,35 @@ let merged = Object.assign(ne, {
                   } else {
                     return items;
                   }
-                } catch (tmp24) {
+                } catch (tmp25) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp24;
+                    throw tmp25;
                   }
                 }
               } catch (tmp5) {
                 flag2 = true;
               }
-            } catch (tmp27) {
+            } catch (tmp28) {
               try {
-                let tmp29 = !tmp3;
+                let tmp30 = !tmp3;
                 if (!tmp3) {
-                  tmp29 = tmp4 != obj.return;
+                  tmp30 = tmp4 != obj.return;
                 }
-                if (tmp29) {
+                if (tmp30) {
                   obj.return();
                 }
                 if (tmp2) {
                   throw tmp;
                 } else {
-                  throw tmp27;
+                  throw tmp28;
                 }
-              } catch (tmp35) {
+              } catch (tmp36) {
                 if (tmp2) {
                   throw tmp;
                 } else {
-                  throw tmp35;
+                  throw tmp36;
                 }
               }
             }
@@ -13469,7 +8521,6 @@ let merged = Object.assign(ne, {
     const tmp = J(closure_3);
     if (dependencyMap[tmp]) {
       tmp2[tmp].addHLSJS(closure_3);
-      const obj = tmp2[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
@@ -13478,7 +8529,6 @@ let merged = Object.assign(ne, {
     const tmp = J(closure_3);
     if (dependencyMap[tmp]) {
       tmp2[tmp].addDashJS(closure_3);
-      const obj = tmp2[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
@@ -13487,7 +8537,6 @@ let merged = Object.assign(ne, {
     const tmp = J(closure_3);
     if (dependencyMap[tmp]) {
       dependencyMap[tmp].removeHLSJS();
-      const obj = dependencyMap[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
@@ -13496,7 +8545,6 @@ let merged = Object.assign(ne, {
     const tmp = J(closure_3);
     if (dependencyMap[tmp]) {
       dependencyMap[tmp].removeDashJS();
-      const obj = dependencyMap[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
@@ -13504,14 +8552,15 @@ let merged = Object.assign(ne, {
   init(arg0, respectDoNotTrack) {
     let doNotTrack = mod3.default.doNotTrack;
     if (!doNotTrack) {
-      doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-      const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+      doNotTrack = mod3.default.navigator && mod3.default.navigator.doNotTrack;
     }
     if (tmp3) {
       logger.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
     }
     const tmp6 = J(arg0);
     closure_122[tmp6] = t(ne, tmp6, respectDoNotTrack);
+    tmp3 = "1" === doNotTrack && respectDoNotTrack && respectDoNotTrack.respectDoNotTrack;
+    const tmp7 = t(ne, tmp6, respectDoNotTrack);
   },
   emit(arg0, arg1, arg2) {
     const tmp3 = J(arg0);
@@ -13520,7 +8569,6 @@ let merged = Object.assign(ne, {
       if ("destroy" === arg1) {
         delete tmp[tmp2];
       }
-      const obj = tmp4[tmp3];
     } else {
       logger.error(`A monitor for \`${tmp3}\` has not been initialized.`);
     }
@@ -13529,7 +8577,6 @@ let merged = Object.assign(ne, {
     const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       tmp2[tmp].emit("hb", arg1);
-      const obj = tmp2[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
@@ -13567,7 +8614,6 @@ let merged = Object.assign(ne, {
         if (typeof arg0[arg1] === "function") {
           try {
             applyResult = arg0[arg1].apply(arg0, arg2);
-            const obj = arg0[arg1];
           } catch (tmp4) {
             logger.info("safeCall error", tmp4);
           }
@@ -13590,23 +8636,23 @@ let merged = Object.assign(ne, {
           str = "";
           if (GResult1.default) {
             str = "";
-            if (typeof tmp2.default.getComputedStyle === "function") {
+            if (typeof GResult1.default.getComputedStyle === "function") {
               let hasItem = weakMap;
               if (weakMap) {
-                hasItem = obj.has(arg0);
+                hasItem = weakMap.has(arg0);
               }
               let value;
               if (hasItem) {
-                value = obj.get(arg0);
+                value = weakMap.get(arg0);
               }
               if (!value) {
-                const computedStyle = tmp2.default.getComputedStyle(arg0, null);
+                const computedStyle = GResult1.default.getComputedStyle(arg0, null);
                 value = computedStyle;
-                if (obj) {
-                  const result = obj.set(arg0, computedStyle);
+                if (weakMap) {
+                  const result = weakMap.set(arg0, computedStyle);
                   value = computedStyle;
                 }
-                const _default = tmp2.default;
+                const _default = GResult1.default;
               }
               str = value.getPropertyValue(arg1);
             }
@@ -13626,9 +8672,9 @@ let merged = Object.assign(ne, {
         str = "";
       }
       const parts = str.trim().split(/[\r\n]+/);
-      const item = parts.forEach((str) => {
-        if (str) {
-          const parts = str.split(": ");
+      const item = parts.forEach((item, index) => {
+        if (item) {
+          const parts = item.split(": ");
           const str2 = parts.shift();
           let tmp = str2;
           if (str2) {
@@ -13649,7 +8695,7 @@ let merged = Object.assign(ne, {
     cdnHeadersToRequestId: function de(arg0) {
       closure_0 = arg0;
       if (arg0) {
-        const found = items.find((arg0) => undefined !== obj[arg0]);
+        const found = items.find((item, index) => undefined !== obj[item]);
         let tmp3;
         if (found) {
           tmp3 = arg0[found];
@@ -13670,12 +8716,841 @@ let merged = Object.assign(ne, {
   WINDOW_UNLOADING: false
 });
 if (tmp34) {
-  let listener = GResult.default.addEventListener("pagehide", (persisted) => {
-    if (!persisted.persisted) {
+  let listener = GResult.default.addEventListener("pagehide", (event) => {
+    if (!event.persisted) {
       ne.WINDOW_UNLOADING = true;
     }
   }, false);
   let _default = GResult.default;
 }
+const obj13 = {};
+const obj15 = {};
+const obj21 = {
+  loaded: obj3.now(),
+  NAME: "mux-embed",
+  VERSION: "5.13.0",
+  API_VERSION: "2.1",
+  PLAYER_TRACKED: false,
+  monitor(videoElement, arg1) {
+    let obj = ne;
+    closure_0 = ne;
+    let merged = arg1;
+    if (typeof se !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    if (videoElement) {
+      if (undefined !== videoElement.nodeName) {
+        let tmp4 = J(videoElement);
+        let element = videoElement;
+      }
+      let str2 = "";
+      if (element) {
+        str2 = "";
+        if (element.nodeName) {
+          str2 = element.nodeName.toLowerCase();
+        }
+      }
+      items = [element, tmp4, str2];
+      let _Array = Array;
+      let tmp7;
+      if (Array.isArray(items)) {
+        tmp7 = items;
+      }
+      if (!tmp7) {
+        tmp7 = (function vt(items, arg1) {
+          let tmp6 = null;
+          if (null != items) {
+            const _Symbol = Symbol;
+            let prop = typeof Symbol !== "undefined";
+            if (typeof Symbol !== "undefined") {
+              const _Symbol2 = Symbol;
+              prop = items[Symbol.iterator];
+            }
+            if (!prop) {
+              prop = items[Symbol.iterator];
+            }
+            tmp6 = prop;
+          }
+          if (null != tmp6) {
+            let flag2 = false;
+            try {
+              items = [];
+              try {
+                const call = tmp9.call;
+                if (typeof call === "unknown") {
+                  let iter = tmp9();
+                } else {
+                  iter = call(items);
+                }
+                const iter3 = iter.next();
+                const done = iter3.done;
+                let tmp11 = done;
+                if (!done) {
+                  items.push(iter4.value);
+                  if (!arg1) {
+                    const iter5 = iter2.next();
+                    const done2 = iter5.done;
+                    tmp11 = done2;
+                    while (!done2) {
+                      let arr = items.push(iter6.value);
+                      if (!arg1) {
+                        continue;
+                      } else if (items.length === arg1) {
+                        break;
+                      }
+                      continue;
+                    }
+                  }
+                }
+                try {
+                  let tmp19 = !tmp11;
+                  if (!tmp11) {
+                    tmp19 = null != iter2.return;
+                  }
+                  if (tmp19) {
+                    iter2.return();
+                  }
+                  if (flag2) {
+                    throw tmp5;
+                  } else {
+                    return items;
+                  }
+                } catch (tmp25) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp25;
+                  }
+                }
+              } catch (tmp5) {
+                flag2 = true;
+              }
+            } catch (tmp28) {
+              try {
+                let tmp30 = !tmp3;
+                if (!tmp3) {
+                  tmp30 = tmp4 != obj.return;
+                }
+                if (tmp30) {
+                  obj.return();
+                }
+                if (tmp2) {
+                  throw tmp;
+                } else {
+                  throw tmp28;
+                }
+              } catch (tmp36) {
+                if (tmp2) {
+                  throw tmp;
+                } else {
+                  throw tmp36;
+                }
+              }
+            }
+          }
+        })(items, 3);
+      }
+      if (!tmp7) {
+        tmp7 = Pe(items, 3);
+      }
+      if (tmp7) {
+        [defineProperty, tmp13] = tmp7;
+        getOwnPropertyDescriptor = tmp13;
+        let log = obj.log;
+        const getComputedStyle = obj.utils.getComputedStyle;
+        const secondsToMs = obj.utils.secondsToMs;
+        if (defineProperty) {
+          if ("video" !== tmp14) {
+            if ("audio" !== tmp14) {
+              let errorResult = log.error(`The element of \`${tmp13}\` was not a media element.`);
+            }
+          }
+          if (tmp15.mux) {
+            let mux = defineProperty.mux;
+            mux.destroy();
+            delete tmp2[tmp];
+            log.warn("Already monitoring this video element, replacing existing event listeners");
+          }
+          obj = { getPlayheadTime: null, getStateData: null };
+          obj[0] = function getPlayheadTime() {
+            return secondsToMs(closure_2.currentTime);
+          };
+          obj[1] = function getStateData() {
+            const self = this;
+            const getPlayheadTime = this.getPlayheadTime;
+            let tmp;
+            if (null !== getPlayheadTime) {
+              if (undefined !== getPlayheadTime) {
+                const call = getPlayheadTime.call;
+                typeof call === "unknown" ? getPlayheadTime() : call(self);
+              }
+            }
+            if (!tmp) {
+              tmp = secondsToMs(closure_2.currentTime);
+            }
+            let currentSrc = self.hlsjs && self.hlsjs.url;
+            let source = self.dashjs && typeof self.dashjs.getSource === "function";
+            if (source) {
+              const dashjs = self.dashjs;
+              source = dashjs.getSource();
+            }
+            const obj = { player_is_paused: closure_2.paused, player_width: parseInt(getComputedStyle(closure_2, "width")), player_height: parseInt(getComputedStyle(closure_2, "height")), player_autoplay_on: closure_2.autoplay, player_preload_on: closure_2.preload, player_language_code: closure_2.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
+            let _default = closure_1_102.default;
+            if (_default) {
+              _default = closure_1_102.default.fullscreenElement || closure_1_102.default.webkitFullscreenElement || closure_1_102.default.mozFullScreenElement || closure_1_102.default.msFullscreenElement;
+            }
+            obj[6] = _default;
+            obj[7] = closure_2.poster;
+            if (!currentSrc) {
+              currentSrc = source;
+            }
+            if (!currentSrc) {
+              currentSrc = closure_2.currentSrc;
+            }
+            obj[8] = currentSrc;
+            obj[9] = secondsToMs(closure_2.duration);
+            obj[10] = closure_2.videoHeight;
+            obj[11] = closure_2.videoWidth;
+            if (null != closure_2) {
+              const getVideoPlaybackQuality = closure_2.getVideoPlaybackQuality;
+              if (null !== getVideoPlaybackQuality) {
+                if (undefined !== getVideoPlaybackQuality) {
+                  const call2 = getVideoPlaybackQuality.call;
+                  const droppedVideoFrames = typeof call2 === "unknown" ? getVideoPlaybackQuality() : call2(closure_2).droppedVideoFrames;
+                }
+              }
+            }
+            obj[12] = undefined;
+            if (closure_2.getStartDate) {
+              if (tmp > 0) {
+                const startDate = closure_2.getStartDate();
+                if (startDate) {
+                  if (typeof startDate.getTime === "function") {
+                    if (startDate.getTime()) {
+                      const time = startDate.getTime();
+                      obj.player_program_time = time + tmp;
+                      if (closure_2.seekable.length > 0) {
+                        const seekable = closure_2.seekable;
+                        obj.player_live_edge_program_time = time + seekable.end(closure_2.seekable.length - 1);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            return obj;
+          };
+          let _Object = Object;
+          merged = Object.assign({ automaticErrorTracking: true }, arg1, obj);
+          let _Object2 = Object;
+          obj = { player_software: "HTML5 Video Element", player_mux_plugin_name: "VideoElementMonitor", player_mux_plugin_version: null };
+          obj[2] = obj.VERSION;
+          merged.data = Object.assign(obj, merged.data);
+          mux = defineProperty.mux;
+          if (!mux) {
+            mux = {};
+          }
+          defineProperty.mux = mux;
+          defineProperty.mux.deleted = false;
+          defineProperty.mux.emit = (arg0, arg1) => {
+            store.emit(closure_3, arg0, arg1);
+          };
+          defineProperty.mux.updateData = (arg0) => {
+            const mux = closure_2.mux;
+            mux.emit("hb", arg0);
+          };
+          function h() {
+            log.error("The monitor for this video element has already been destroyed.");
+          }
+          defineProperty.mux.destroy = () => {
+            const keys = Object.keys(closure_2.mux.listeners);
+            const item = keys.forEach((item, index) => {
+              const removed = closure_2.removeEventListener(item, closure_2.mux.listeners[item], false);
+            });
+            delete tmp2[tmp];
+            closure_2.mux.destroy = h;
+            closure_2.mux.swapElement = h;
+            closure_2.mux.emit = h;
+            closure_2.mux.addHLSJS = h;
+            closure_2.mux.addDashJS = h;
+            closure_2.mux.removeHLSJS = h;
+            closure_2.mux.removeDashJS = h;
+            closure_2.mux.updateData = h;
+            closure_2.mux.setEmitTranslator = h;
+            closure_2.mux.setStateDataTranslator = h;
+            closure_2.mux.setGetPlayheadTime = h;
+            closure_2.mux.deleted = true;
+            store.emit(closure_3, "destroy");
+          };
+          defineProperty.mux.swapElement = (nodeName) => {
+            if (typeof se !== "function") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (nodeName) {
+              if (undefined !== nodeName.nodeName) {
+                let tmp6 = closure_1_30(nodeName);
+                let element = nodeName;
+              }
+              let str2 = "";
+              if (element) {
+                str2 = "";
+                if (element.nodeName) {
+                  str2 = element.nodeName.toLowerCase();
+                }
+              }
+              items = [element, tmp6, str2];
+              const _Array = Array;
+              let tmp9;
+              if (Array.isArray(items)) {
+                tmp9 = items;
+              }
+              if (!tmp9) {
+                tmp9 = (function vt(items, arg1) {
+                  let tmp6 = null;
+                  if (null != items) {
+                    const _Symbol = Symbol;
+                    let prop = typeof Symbol !== "undefined";
+                    if (typeof Symbol !== "undefined") {
+                      const _Symbol2 = Symbol;
+                      prop = items[Symbol.iterator];
+                    }
+                    if (!prop) {
+                      prop = items[Symbol.iterator];
+                    }
+                    tmp6 = prop;
+                  }
+                  if (null != tmp6) {
+                    let flag2 = false;
+                    try {
+                      items = [];
+                      try {
+                        const call = tmp9.call;
+                        if (typeof call === "unknown") {
+                          let iter = tmp9();
+                        } else {
+                          iter = call(items);
+                        }
+                        const iter3 = iter.next();
+                        const done = iter3.done;
+                        let tmp11 = done;
+                        if (!done) {
+                          items.push(iter4.value);
+                          if (!arg1) {
+                            const iter5 = iter2.next();
+                            const done2 = iter5.done;
+                            tmp11 = done2;
+                            while (!done2) {
+                              let arr = items.push(iter6.value);
+                              if (!arg1) {
+                                continue;
+                              } else if (items.length === arg1) {
+                                break;
+                              }
+                              continue;
+                            }
+                          }
+                        }
+                        try {
+                          let tmp19 = !tmp11;
+                          if (!tmp11) {
+                            tmp19 = null != iter2.return;
+                          }
+                          if (tmp19) {
+                            iter2.return();
+                          }
+                          if (flag2) {
+                            throw tmp5;
+                          } else {
+                            return items;
+                          }
+                        } catch (tmp25) {
+                          if (tmp2) {
+                            throw tmp;
+                          } else {
+                            throw tmp25;
+                          }
+                        }
+                      } catch (tmp5) {
+                        flag2 = true;
+                      }
+                    } catch (tmp28) {
+                      try {
+                        let tmp30 = !tmp3;
+                        if (!tmp3) {
+                          tmp30 = tmp4 != obj.return;
+                        }
+                        if (tmp30) {
+                          obj.return();
+                        }
+                        if (tmp2) {
+                          throw tmp;
+                        } else {
+                          throw tmp28;
+                        }
+                      } catch (tmp36) {
+                        if (tmp2) {
+                          throw tmp;
+                        } else {
+                          throw tmp36;
+                        }
+                      }
+                    }
+                  }
+                })(items, 3);
+              }
+              if (!tmp9) {
+                tmp9 = Pe(items, 3);
+              }
+              if (tmp9) {
+                const first = tmp9[0];
+                let text = tmp9[1];
+                if (first) {
+                  if ("video" === tmp17) {
+                    first.muxId = first.muxId;
+                    delete tmp4[tmp3];
+                    first.mux = first.mux || {};
+                    const _Object = Object;
+                    first.mux.listeners = Object.assign({}, first.mux.listeners);
+                    const mux = first.mux;
+                    delete tmp4[tmp3];
+                    const _Object2 = Object;
+                    const keys = Object.keys(first.mux.listeners);
+                    const item = keys.forEach((item, index) => {
+                      const removed = first.removeEventListener(item, first.mux.listeners[item], false);
+                      const listener = first.addEventListener(item, first.mux.listeners[item], false);
+                    });
+                    first.mux.swapElement = first.mux.swapElement;
+                    first.mux.destroy = first.mux.destroy;
+                    delete tmp2[tmp];
+                    let errorResult;
+                  }
+                  const log2 = first.log;
+                  text = `The element of \`${tmp16}`;
+                  errorResult = log2.error(`${`The element of \`${tmp16}`}\` was not a media element.`);
+                } else {
+                  log = first.log;
+                  return log.error("No element was found with the `" + `The element of \`${tmp16}` + "` query selector.");
+                }
+                tmp17 = tmp9[2];
+              } else {
+                const _TypeError = TypeError;
+                const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                throw typeError;
+              }
+            }
+            element = document.querySelector(nodeName);
+            tmp6 = nodeName;
+          };
+          defineProperty.mux.addHLSJS = (closure_3) => {
+            store.addHLSJS(closure_3, closure_3);
+          };
+          defineProperty.mux.addDashJS = (closure_3) => {
+            store.addDashJS(closure_3, closure_3);
+          };
+          defineProperty.mux.removeHLSJS = () => {
+            store.removeHLSJS(closure_3);
+          };
+          defineProperty.mux.removeDashJS = () => {
+            store.removeDashJS(closure_3);
+          };
+          defineProperty.mux.setEmitTranslator = (emitTranslator) => {
+            store.setEmitTranslator(closure_3, emitTranslator);
+          };
+          defineProperty.mux.setStateDataTranslator = (stateDataTranslator) => {
+            const result = store.setStateDataTranslator(closure_3, stateDataTranslator);
+          };
+          defineProperty.mux.setGetPlayheadTime = (getPlayheadTime) => {
+            if (!getPlayheadTime) {
+              getPlayheadTime = merged.getPlayheadTime;
+            }
+            store.setGetPlayheadTime(closure_3, getPlayheadTime);
+          };
+          obj.init(tmp13, merged);
+          obj.emit(tmp13, "playerready");
+          if (!defineProperty.paused) {
+            obj.emit(tmp13, "play");
+            if (defineProperty.readyState > 2) {
+              obj.emit(tmp13, "playing");
+            }
+          }
+          defineProperty.mux.listeners = {};
+          let item = closure_103.forEach((item, index) => {
+            closure_0 = item;
+            let tmp = "error" === item;
+            if (tmp) {
+              tmp = !merged.automaticErrorTracking;
+            }
+            if (!tmp) {
+              closure_2.mux.listeners[item] = () => {
+                const obj = {};
+                if ("error" === item) {
+                  if (closure_1_2.error) {
+                    if (1 !== closure_1_2.error.code) {
+                      obj.player_error_code = closure_1_2.error.code;
+                      let message = closure_2_104[closure_1_2.error.code];
+                      if (!message) {
+                        message = closure_1_2.error.message;
+                      }
+                      obj.player_error_message = message;
+                    }
+                  }
+                }
+                item.emit(closure_1_3, item, obj);
+              };
+              const listener = closure_2.addEventListener(item, closure_2.mux.listeners[item], false);
+            }
+          });
+        } else {
+          errorResult = log.error(`No element was found with the \`${tmp13}\` query selector.`);
+        }
+        return errorResult;
+      } else {
+        let _TypeError = TypeError;
+        let typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        throw typeError;
+      }
+    }
+    element = document.querySelector(videoElement);
+    tmp4 = videoElement;
+  },
+  destroyMonitor(videoElement) {
+    if (typeof se !== "function") {
+      HermesBuiltin.throwTypeError();
+    }
+    if (videoElement) {
+      if (undefined !== videoElement.nodeName) {
+        let tmp2 = J(videoElement);
+        let element = videoElement;
+      }
+      let str2 = "";
+      if (element) {
+        str2 = "";
+        if (element.nodeName) {
+          str2 = element.nodeName.toLowerCase();
+        }
+      }
+      items = [element, tmp2, str2];
+      const _Array = Array;
+      let tmp5;
+      if (Array.isArray(items)) {
+        tmp5 = items;
+      }
+      if (!tmp5) {
+        tmp5 = (function vt(items, arg1) {
+          let tmp6 = null;
+          if (null != items) {
+            const _Symbol = Symbol;
+            let prop = typeof Symbol !== "undefined";
+            if (typeof Symbol !== "undefined") {
+              const _Symbol2 = Symbol;
+              prop = items[Symbol.iterator];
+            }
+            if (!prop) {
+              prop = items[Symbol.iterator];
+            }
+            tmp6 = prop;
+          }
+          if (null != tmp6) {
+            let flag2 = false;
+            try {
+              items = [];
+              try {
+                const call = tmp9.call;
+                if (typeof call === "unknown") {
+                  let iter = tmp9();
+                } else {
+                  iter = call(items);
+                }
+                const iter3 = iter.next();
+                const done = iter3.done;
+                let tmp11 = done;
+                if (!done) {
+                  items.push(iter4.value);
+                  if (!arg1) {
+                    const iter5 = iter2.next();
+                    const done2 = iter5.done;
+                    tmp11 = done2;
+                    while (!done2) {
+                      let arr = items.push(iter6.value);
+                      if (!arg1) {
+                        continue;
+                      } else if (items.length === arg1) {
+                        break;
+                      }
+                      continue;
+                    }
+                  }
+                }
+                try {
+                  let tmp19 = !tmp11;
+                  if (!tmp11) {
+                    tmp19 = null != iter2.return;
+                  }
+                  if (tmp19) {
+                    iter2.return();
+                  }
+                  if (flag2) {
+                    throw tmp5;
+                  } else {
+                    return items;
+                  }
+                } catch (tmp25) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp25;
+                  }
+                }
+              } catch (tmp5) {
+                flag2 = true;
+              }
+            } catch (tmp28) {
+              try {
+                let tmp30 = !tmp3;
+                if (!tmp3) {
+                  tmp30 = tmp4 != obj.return;
+                }
+                if (tmp30) {
+                  obj.return();
+                }
+                if (tmp2) {
+                  throw tmp;
+                } else {
+                  throw tmp28;
+                }
+              } catch (tmp36) {
+                if (tmp2) {
+                  throw tmp;
+                } else {
+                  throw tmp36;
+                }
+              }
+            }
+          }
+        })(items, 1);
+      }
+      if (!tmp5) {
+        tmp5 = Pe(items, 1);
+      }
+      if (tmp5) {
+        const first = tmp5[0];
+        if (first) {
+          if (first.mux) {
+            if (typeof first.mux.destroy === "function") {
+              const mux = first.mux;
+              mux.destroy();
+            }
+          }
+        }
+        logger.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
+      } else {
+        const _TypeError = TypeError;
+        const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+        throw typeError;
+      }
+    }
+    element = document.querySelector(videoElement);
+    tmp2 = videoElement;
+  },
+  addHLSJS(closure_3, closure_3) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].addHLSJS(closure_3);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  addDashJS(closure_3, closure_3) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].addDashJS(closure_3);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  removeHLSJS(closure_3) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      dependencyMap[tmp].removeHLSJS();
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  removeDashJS(closure_3) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      dependencyMap[tmp].removeDashJS();
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  init(arg0, respectDoNotTrack) {
+    let doNotTrack = mod3.default.doNotTrack;
+    if (!doNotTrack) {
+      doNotTrack = mod3.default.navigator && mod3.default.navigator.doNotTrack;
+    }
+    if (tmp3) {
+      logger.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
+    }
+    const tmp6 = J(arg0);
+    closure_122[tmp6] = t(ne, tmp6, respectDoNotTrack);
+    tmp3 = "1" === doNotTrack && respectDoNotTrack && respectDoNotTrack.respectDoNotTrack;
+    const tmp7 = t(ne, tmp6, respectDoNotTrack);
+  },
+  emit(arg0, arg1, arg2) {
+    const tmp3 = J(arg0);
+    if (dependencyMap[tmp3]) {
+      tmp4[tmp3].emit(arg1, arg2);
+      if ("destroy" === arg1) {
+        delete tmp[tmp2];
+      }
+    } else {
+      logger.error(`A monitor for \`${tmp3}\` has not been initialized.`);
+    }
+  },
+  updateData(arg0, arg1) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].emit("hb", arg1);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setEmitTranslator(closure_3, emitTranslator) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].emitTranslator = emitTranslator;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setStateDataTranslator(closure_3, stateDataTranslator) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].stateDataTranslator = stateDataTranslator;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setGetPlayheadTime(closure_3, getPlayheadTime) {
+    const tmp = J(closure_3);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].getPlayheadTime = getPlayheadTime;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  checkDoNotTrack: ce,
+  log: tmp11,
+  utils: {
+    safeCall: function ut(arg0, arg1, arg2, arg3) {
+      let applyResult = arg3;
+      if (arg0) {
+        if (typeof arg0[arg1] === "function") {
+          try {
+            applyResult = arg0[arg1].apply(arg0, arg2);
+          } catch (tmp4) {
+            logger.info("safeCall error", tmp4);
+          }
+        }
+      }
+      return applyResult;
+    },
+    safeIncrement: function P(arg0, arg1, arg2) {
+      let num = 1;
+      if (undefined !== arg2) {
+        num = arg2;
+      }
+      arg0[arg1] = arg0[arg1] + num;
+    },
+    getComputedStyle: function dt(arg0, arg1) {
+      let str = "";
+      if (arg0) {
+        str = "";
+        if (arg1) {
+          str = "";
+          if (GResult1.default) {
+            str = "";
+            if (typeof GResult1.default.getComputedStyle === "function") {
+              let hasItem = weakMap;
+              if (weakMap) {
+                hasItem = weakMap.has(arg0);
+              }
+              let value;
+              if (hasItem) {
+                value = weakMap.get(arg0);
+              }
+              if (!value) {
+                const computedStyle = GResult1.default.getComputedStyle(arg0, null);
+                value = computedStyle;
+                if (weakMap) {
+                  const result = weakMap.set(arg0, computedStyle);
+                  value = computedStyle;
+                }
+                const _default = GResult1.default;
+              }
+              str = value.getPropertyValue(arg1);
+            }
+          }
+        }
+      }
+      return str;
+    },
+    secondsToMs: function lt(arg0) {
+      return Math.floor(1000 * arg0);
+    },
+    assign: Object.assign,
+    headersStringToObject: function pe(arg0) {
+      let str = arg0;
+      const obj = {};
+      if (!arg0) {
+        str = "";
+      }
+      const parts = str.trim().split(/[\r\n]+/);
+      const item = parts.forEach((item, index) => {
+        if (item) {
+          const parts = item.split(": ");
+          const str2 = parts.shift();
+          let tmp = str2;
+          if (str2) {
+            let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
+            if (!tmp3) {
+              const formatted = str2.toLowerCase();
+              tmp3 = 0 === formatted.indexOf("x-litix-");
+            }
+            tmp = tmp3;
+          }
+          if (tmp) {
+            obj[str2] = parts.join(": ");
+          }
+        }
+      });
+      return obj;
+    },
+    cdnHeadersToRequestId: function de(arg0) {
+      closure_0 = arg0;
+      if (arg0) {
+        const found = items.find((item, index) => undefined !== obj[item]);
+        let tmp3;
+        if (found) {
+          tmp3 = arg0[found];
+        }
+        return tmp3;
+      }
+    },
+    extractHostnameAndDomain: re,
+    extractHostname: F,
+    manifestParser: Ve,
+    generateShortID: Oe,
+    generateUUID: ee,
+    now: obj3.now,
+    findMediaElement: se
+  },
+  events: { PLAYER_READY: "playerready", VIEW_INIT: "viewinit", VIDEO_CHANGE: "videochange", PLAY: "play", PAUSE: "pause", PLAYING: "playing", TIME_UPDATE: "timeupdate", SEEKING: "seeking", SEEKED: "seeked", REBUFFER_START: "rebufferstart", REBUFFER_END: "rebufferend", ERROR: "error", ENDED: "ended", RENDITION_CHANGE: "renditionchange", ORIENTATION_CHANGE: "orientationchange", PLAYBACK_MODE_CHANGE: "playbackmodechange", AD_REQUEST: "adrequest", AD_RESPONSE: "adresponse", AD_BREAK_START: "adbreakstart", AD_PLAY: "adplay", AD_PLAYING: "adplaying", AD_PAUSE: "adpause", AD_FIRST_QUARTILE: "adfirstquartile", AD_MID_POINT: "admidpoint", AD_THIRD_QUARTILE: "adthirdquartile", AD_ENDED: "adended", AD_BREAK_END: "adbreakend", AD_ERROR: "aderror", REQUEST_COMPLETED: "requestcompleted", REQUEST_FAILED: "requestfailed", REQUEST_CANCELLED: "requestcanceled", HEARTBEAT: "hb", DESTROY: "destroy" },
+  WINDOW_HIDDEN: false,
+  WINDOW_UNLOADING: false
+};
+tmp28 = GResult1.default && GResult1.default.WeakMap;
+tmp34 = undefined !== GResult.default && typeof GResult.default.addEventListener === "function";
 
 export default definePropertyResult1;

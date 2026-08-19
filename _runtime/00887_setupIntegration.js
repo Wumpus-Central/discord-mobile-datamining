@@ -1,6 +1,8 @@
 // === Module 887: setupIntegration ===
 
 // Module 887 (setupIntegration)
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 823 */;
+import consoleSandbox from "consoleSandbox" /* 824 */;
 import getClient from "getClient" /* 848 */;
 
 require = arg1;
@@ -53,8 +55,8 @@ arg5.addIntegration = function addIntegration(name) {
   const client = getClient.getClient();
   if (client) {
     client.addIntegration(name);
-  } else if (tmp(823).DEBUG_BUILD) {
-    const debug = tmp(824).debug;
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
     const _HermesInternal = HermesInternal;
     debug.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
   }
@@ -69,7 +71,6 @@ arg5.afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
       afterAllSetup = nextResult.afterAllSetup;
     }
     if (afterAllSetup) {
-      let tmp3 = nextResult;
       let afterAllSetupResult = obj.afterAllSetup(arg0);
     }
     continue;
@@ -81,8 +82,8 @@ arg5.defineIntegration = function defineIntegration(arg0) {
 arg5.getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
   const arr = defaultIntegrations.defaultIntegrations || [];
   const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((arg0) => {
-    arg0.isDefaultInstance = true;
+  const item = arr.forEach((item, index) => {
+    item.isDefaultInstance = true;
   });
   if (Array.isArray(integrations)) {
     items = [];
@@ -102,17 +103,17 @@ arg5.getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegration
     }
   }
   const obj = {};
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
+  const item1 = arr2.forEach((item, index) => {
+    const name = item.name;
     let isDefaultInstance = tmp2;
     if (obj[name]) {
       isDefaultInstance = !tmp2.isDefaultInstance;
     }
     if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
+      isDefaultInstance = item.isDefaultInstance;
     }
     if (!isDefaultInstance) {
-      obj[name] = name;
+      obj[name] = item;
     }
   });
   return Object.values(obj);
@@ -122,9 +123,9 @@ arg5.setupIntegration = setupIntegration;
 arg5.setupIntegrations = function setupIntegrations(arg0, arr) {
   closure_0 = arg0;
   const obj = {};
-  const item = arr.forEach((arg0) => {
-    if (arg0) {
-      closure_1_3(closure_0, arg0, obj);
+  const item = arr.forEach((item, index) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
     }
   });
   return obj;

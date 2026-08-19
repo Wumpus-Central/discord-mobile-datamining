@@ -9,7 +9,6 @@ importAllResult.registerComponent("LogBox", () => function NoOp() {
 });
 global.RN$AppRegistry = importAllResult;
 global.RN$SurfaceRegistry = { renderSurface: importAllResult.runApplication, setSurfaceProps: importAllResult.setSurfaceProps };
-const obj = { renderSurface: importAllResult.runApplication, setSurfaceProps: importAllResult.setSurfaceProps };
 MessageQueueDefault("AppRegistry", importAllResult);
 
 export const AppRegistry = importAllResult;

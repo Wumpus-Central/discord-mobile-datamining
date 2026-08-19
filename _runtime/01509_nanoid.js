@@ -23,10 +23,6 @@ arg5.nanoid = () => {
 };
 arg5.customAlphabet = (arg0) => {
   closure_0 = arg0;
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 21;
-  }
   return () => {
     let tmp5;
     let tmp = arg0;
@@ -38,7 +34,6 @@ arg5.customAlphabet = (arg0) => {
     let str2 = "";
     if (tmp | 0) {
       do {
-        let tmp4 = length;
         let _Math = Math;
         str = `${closure_0[Math.random(Math) * closure_0.length | 0]}`;
         tmp5 = diff;

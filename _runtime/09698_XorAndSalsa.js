@@ -4,7 +4,7 @@
 import _asyncLoop from "_asyncLoop" /* 9699 */;
 import pbkdf2Init from "pbkdf2Init" /* 9702 */;
 import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 9704 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   let tmp81;
@@ -23,27 +23,21 @@ function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   let tmp94;
   let tmp95;
   let tmp96;
-  let tmp = +sum;
-  const tmp6 = B32[+tmp + 1] ^ V[++result1 + 1];
+  const tmp6 = B32[++sum + 1] ^ V[++result1 + 1];
+  const tmp7 = +++sum + 1 + 1;
   const tmp8 = +++result1 + 1 + 1;
-  const tmp9 = B32[++tmp + 1 + 1] ^ V[tmp8];
-  const tmp10 = +++tmp + 1 + 1 + 1;
-  const tmp15 = B32[+tmp10 + 1] ^ V[++tmp8 + 1 + 1];
+  const tmp15 = B32[++tmp7 + 1 + 1] ^ V[++tmp8 + 1 + 1];
+  const tmp16 = +++tmp7 + 1 + 1 + 1;
   const tmp17 = +++tmp8 + 1 + 1 + 1;
-  const tmp18 = B32[++tmp10 + 1 + 1] ^ V[tmp17];
-  const tmp19 = +++tmp10 + 1 + 1 + 1;
-  const tmp24 = B32[+tmp19 + 1] ^ V[++tmp17 + 1 + 1];
+  const tmp24 = B32[++tmp16 + 1 + 1] ^ V[++tmp17 + 1 + 1];
+  const tmp25 = +++tmp16 + 1 + 1 + 1;
   const tmp26 = +++tmp17 + 1 + 1 + 1;
-  const tmp27 = B32[++tmp19 + 1 + 1] ^ V[tmp26];
-  const tmp28 = +++tmp19 + 1 + 1 + 1;
-  const tmp33 = B32[+tmp28 + 1] ^ V[++tmp26 + 1 + 1];
+  const tmp33 = B32[++tmp25 + 1 + 1] ^ V[++tmp26 + 1 + 1];
+  const tmp34 = +++tmp25 + 1 + 1 + 1;
   const tmp35 = +++tmp26 + 1 + 1 + 1;
-  const tmp36 = B32[++tmp28 + 1 + 1] ^ V[tmp35];
-  const tmp37 = +++tmp28 + 1 + 1 + 1;
-  const tmp42 = B32[+tmp37 + 1] ^ V[++tmp35 + 1 + 1];
+  const tmp42 = B32[++tmp34 + 1 + 1] ^ V[++tmp35 + 1 + 1];
+  const tmp43 = +++tmp34 + 1 + 1 + 1;
   const tmp44 = +++tmp35 + 1 + 1 + 1;
-  const tmp45 = B32[++tmp37 + 1 + 1] ^ V[tmp44];
-  const tmp46 = B32[+++tmp37 + 1 + 1 + 1] ^ V[+tmp44 + 1];
   let num = 0;
   let tmp47 = tmp46;
   let tmp48 = tmp45;
@@ -62,8 +56,6 @@ function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
   let tmp61 = tmp6;
   let tmp62 = tmp3;
   do {
-    let tmp63 = require;
-    let tmp64 = dependencyMap;
     let tmp65 = tmp58 ^ _asyncLoop.rotl(tmp62 + tmp50 | 0, 7);
     let tmp66 = tmp54 ^ _asyncLoop.rotl(tmp65 + tmp62 | 0, 9);
     let tmp67 = tmp50 ^ _asyncLoop.rotl(tmp66 + tmp65 | 0, 13);
@@ -114,35 +106,27 @@ function XorAndSalsa(B32, sum, V, result1, B322, sum13) {
     tmp61 = tmp81;
     tmp62 = tmp84;
   } while (num < 8);
-  B322[+sum13] = (B32[tmp] ^ V[+result1]) + tmp84 | 0;
+  B322[+sum13] = (B32[+sum] ^ V[+result1]) + tmp84 | 0;
   B322[++sum13 + 1] = tmp6 + tmp81 | 0;
   const tmp99 = +++sum13 + 1 + 1;
-  B322[tmp99] = tmp9 + tmp82 | 0;
-  tmp = +tmp99 + 1;
-  B322[tmp] = (B32[tmp10] ^ V[+tmp8 + 1]) + tmp83 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp15 + tmp87 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp18 + tmp88 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = (B32[tmp19] ^ V[+tmp17 + 1]) + tmp85 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp24 + tmp86 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp27 + tmp90 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = (B32[tmp28] ^ V[+tmp26 + 1]) + tmp91 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp33 + tmp92 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp36 + tmp89 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = (B32[tmp37] ^ V[+tmp35 + 1]) + tmp93 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp42 + tmp94 | 0;
-  tmp = +tmp + 1;
-  B322[tmp] = tmp45 + tmp95 | 0;
-  B322[+tmp + 1] = tmp46 + tmp96 | 0;
+  B322[tmp99] = (B32[tmp7] ^ V[tmp8]) + tmp82 | 0;
+  B322[+tmp99 + 1] = (B32[+tmp7 + 1] ^ V[+tmp8 + 1]) + tmp83 | 0;
+  B322[++tmp99 + 1 + 1] = tmp15 + tmp87 | 0;
+  const tmp102 = +++tmp99 + 1 + 1 + 1;
+  B322[tmp102] = (B32[tmp16] ^ V[tmp17]) + tmp88 | 0;
+  B322[+tmp102 + 1] = (B32[+tmp16 + 1] ^ V[+tmp17 + 1]) + tmp85 | 0;
+  B322[++tmp102 + 1 + 1] = tmp24 + tmp86 | 0;
+  const tmp105 = +++tmp102 + 1 + 1 + 1;
+  B322[tmp105] = (B32[tmp25] ^ V[tmp26]) + tmp90 | 0;
+  B322[+tmp105 + 1] = (B32[+tmp25 + 1] ^ V[+tmp26 + 1]) + tmp91 | 0;
+  B322[++tmp105 + 1 + 1] = tmp33 + tmp92 | 0;
+  const tmp108 = +++tmp105 + 1 + 1 + 1;
+  B322[tmp108] = (B32[tmp34] ^ V[tmp35]) + tmp89 | 0;
+  B322[+tmp108 + 1] = (B32[+tmp34 + 1] ^ V[+tmp35 + 1]) + tmp93 | 0;
+  B322[++tmp108 + 1 + 1] = tmp42 + tmp94 | 0;
+  const tmp111 = +++tmp108 + 1 + 1 + 1;
+  B322[tmp111] = (B32[tmp43] ^ V[tmp44]) + tmp95 | 0;
+  B322[+tmp111 + 1] = (B32[+tmp43 + 1] ^ V[+tmp44 + 1]) + tmp96 | 0;
 }
 function BlockMix(V, result1, B32, sum13) {
   let sum4 = result1;
@@ -156,32 +140,14 @@ function BlockMix(V, result1, B32, sum13) {
   let num2 = 0;
   if (0 < arg4) {
     do {
-      let num3 = 0;
-      let tmp5 = B32;
-      let tmp6 = sum;
-      let tmp7 = V;
-      let tmp8 = sum4;
-      let tmp9 = B32;
-      let tmp10 = sum3;
-      let tmp4 = XorAndSalsa;
       let tmp11 = XorAndSalsa(B32, sum, V, sum4, B32, sum3);
-      let tmp12 = num2;
-      let tmp13 = sum;
-      let tmp15 = sum4;
       let sum1 = sum;
       let tmp14 = sum3;
       if (0 < num2) {
         sum1 = sum + 16;
       }
       let sum2 = sum4 + 16;
-      let num4 = 0;
-      let tmp18 = B32;
-      let tmp19 = sum3;
-      let tmp20 = V;
-      let tmp21 = sum2;
-      let tmp22 = B32;
-      let tmp23 = sum1;
-      let tmp4Result = tmp4(B32, tmp14, V, sum2, B32, sum1);
+      let tmp4Result = XorAndSalsa(B32, tmp14, V, sum2, B32, sum1);
       num2 = num2 + 1;
       sum3 = sum3 + 16;
       sum4 = sum2 + 16;
@@ -221,16 +187,16 @@ function scryptInit(B, B, arg2) {
                 } else {
                   let obj = { c: 1, dkLen: null };
                   obj[1] = result * p;
-                  const pbkdf2Result = tmp(tmp2[3]).pbkdf2(tmp(tmp2[4]).sha256, B, B, obj);
+                  const pbkdf2Result = onProgress(tmp2[3]).pbkdf2(onProgress(tmp2[4]).sha256, B, B, obj);
                   const _Uint8Array = Uint8Array;
                   const uint8Array = new Uint8Array(result * N);
-                  const u32Result = tmp(tmp2[1]).u32(pbkdf2Result);
+                  const u32Result = onProgress(tmp2[1]).u32(pbkdf2Result);
                   const _Uint8Array2 = Uint8Array;
                   const uint8Array1 = new Uint8Array(result);
                   function blockMixCb() {
 
                   }
-                  const u32Result1 = tmp(tmp2[1]).u32(uint8Array);
+                  const u32Result1 = onProgress(tmp2[1]).u32(uint8Array);
                   if (onProgress) {
                     result2 = 2 * N * p;
                     const _Math = Math;
@@ -261,7 +227,7 @@ function scryptInit(B, B, arg2) {
                   obj[5] = u32Result1;
                   obj[6] = u32Result;
                   obj[7] = pbkdf2Result;
-                  obj[8] = tmp(tmp2[1]).u32(uint8Array1);
+                  obj[8] = onProgress(tmp2[1]).u32(uint8Array1);
                   obj[9] = blockMixCb;
                   obj[10] = asyncTick;
                   return obj;
@@ -290,7 +256,7 @@ function scryptOutput(B, dkLen, arr, arr2, arr3) {
 }
 function _scryptAsync() {
   const self = this;
-  let tmp = callback((arg0, arg1, arg2) => {
+  let tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -378,17 +344,10 @@ function _scryptAsync() {
                         c0 = tmp5;
                         c0 = undefined;
                         c1 = undefined;
-                        const result = closure_1_5 * closure_1_13;
+                        const result = next * closure_1_13;
                         c0 = result;
-                        let num9 = 0;
-                        if (0 < closure_1_5) {
-                          do {
-                            let tmp6 = closure_1_6;
-                            let tmp7 = closure_1_7;
-                            closure_1_6[num9] = closure_1_7[result + num9];
-                            num9 = num9 + 1;
-                            let tmp8 = closure_1_5;
-                          } while (num9 < closure_1_5);
+                        for (let num9 = 0; num9 < next; num9 = num9 + 1) {
+                          iter3[num9] = B32[result + num9];
                         }
                         c1 = 0;
                         c2 = 1;
@@ -401,44 +360,26 @@ function _scryptAsync() {
                           let sum1 = sum + 16 * c2;
                           let num = 0;
                           do {
-                            tmp[sum1 + num] = tmp[sum5 + 16 * (2 * tmp4 - 1) + num];
+                            closure_1_6[sum1 + num] = closure_1_6[sum5 + 16 * (2 * c2 - 1) + num];
                             num = num + 1;
                           } while (num < 16);
                           let sum4 = sum;
                           let num2 = 0;
                           if (0 < c2) {
                             do {
-                              let num3 = 0;
-                              let tmp8 = tmp;
-                              let tmp9 = sum1;
-                              let tmp10 = tmp;
-                              let tmp11 = sum5;
-                              let tmp12 = tmp;
-                              let tmp13 = sum4;
-                              let tmp7 = v3;
-                              let tmp14 = v3(tmp, sum1, tmp, sum5, tmp, sum4);
-                              let tmp15 = num2;
-                              let tmp16 = sum1;
-                              let tmp18 = sum5;
+                              let tmp14 = v3(closure_1_6, sum1, closure_1_6, sum5, closure_1_6, sum4);
                               let sum2 = sum1;
                               let tmp17 = sum4;
                               if (0 < num2) {
                                 sum2 = sum1 + 16;
                               }
                               let sum3 = sum5 + 16;
-                              let num4 = 0;
-                              let tmp21 = tmp;
-                              let tmp22 = sum4;
-                              let tmp23 = tmp;
-                              let tmp24 = sum3;
-                              let tmp25 = tmp;
-                              let tmp26 = sum2;
-                              let tmp7Result = tmp7(tmp, tmp17, tmp, sum3, tmp, sum2);
+                              let tmp7Result = v3(closure_1_6, tmp17, closure_1_6, sum3, closure_1_6, sum2);
                               num2 = num2 + 1;
                               sum4 = sum4 + 16;
                               sum5 = sum3 + 16;
                               sum1 = sum2;
-                            } while (num2 < tmp4);
+                            } while (num2 < c2);
                           }
                           closure_1_10();
                         });
@@ -454,7 +395,7 @@ function _scryptAsync() {
                         obj2[0] = arg1;
                         return obj2;
                       } else {
-                        closure_1_4(closure_6, (c1 - 1) * closure_5, closure_7, c0, c2);
+                        iter4(closure_6, (c1 - 1) * closure_5, closure_7, c0, c2);
                         callback();
                         c2 = 2;
                         c3 = 1;
@@ -465,11 +406,6 @@ function _scryptAsync() {
                           let num = 0;
                           if (0 < closure_1_5) {
                             do {
-                              let tmp4 = closure_1_9;
-                              let tmp5 = closure_1_7;
-                              let tmp6 = c0;
-                              let tmp7 = closure_1_6;
-                              let tmp8 = closure_1_5;
                               closure_1_9[num] = closure_1_7[c0 + num] ^ closure_1_6[tmp3 * closure_1_5 + num];
                               num = num + 1;
                               tmp = closure_1_7;
@@ -479,7 +415,7 @@ function _scryptAsync() {
                           let sum = tmp2 + 16 * c2;
                           let num2 = 0;
                           do {
-                            tmp[sum + num2] = tmp9[16 * (2 * tmp10 - 1) + num2];
+                            tmp[sum + num2] = closure_1_9[16 * (2 * c2 - 1) + num2];
                             num2 = num2 + 1;
                           } while (num2 < 16);
                           let sum3 = tmp2;
@@ -487,37 +423,19 @@ function _scryptAsync() {
                           let num4 = 0;
                           if (0 < c2) {
                             do {
-                              let num5 = 0;
-                              let tmp14 = tmp;
-                              let tmp15 = sum;
-                              let tmp16 = tmp9;
-                              let tmp17 = num4;
-                              let tmp18 = tmp;
-                              let tmp19 = sum3;
-                              let tmp13 = v3;
-                              let tmp20 = v3(tmp, sum, tmp9, num4, tmp, sum3);
-                              let tmp21 = num3;
-                              let tmp22 = sum;
-                              let tmp24 = num4;
+                              let tmp20 = v3(tmp, sum, closure_1_9, num4, tmp, sum3);
                               let sum1 = sum;
                               let tmp23 = sum3;
                               if (0 < num3) {
                                 sum1 = sum + 16;
                               }
                               let sum2 = num4 + 16;
-                              let num6 = 0;
-                              let tmp27 = tmp;
-                              let tmp28 = sum3;
-                              let tmp29 = tmp9;
-                              let tmp30 = sum2;
-                              let tmp31 = tmp;
-                              let tmp32 = sum1;
-                              let tmp13Result = tmp13(tmp, tmp23, tmp9, sum2, tmp, sum1);
+                              let tmp13Result = v3(tmp, tmp23, closure_1_9, sum2, tmp, sum1);
                               num3 = num3 + 1;
                               sum3 = sum3 + 16;
                               num4 = sum2 + 16;
                               sum = sum1;
-                            } while (num3 < tmp10);
+                            } while (num3 < c2);
                           }
                           closure_1_10();
                         });
@@ -654,7 +572,6 @@ export const scrypt = function scrypt(B, B) {
   }
   for (let num = 0; num < p; num = num + 1) {
     let result = blockSize32 * num;
-    let tmp7 = num;
     for (let num2 = 0; num2 < blockSize32; num2 = num2 + 1) {
       V[num2] = B32[result + num2];
     }
@@ -664,7 +581,6 @@ export const scrypt = function scrypt(B, B) {
       let sum = num3 + blockSize32;
       let sum1 = sum + 16 * r;
       let sum5 = num3;
-      let tmp11 = num4;
       let num5 = 0;
       do {
         do {
@@ -675,32 +591,14 @@ export const scrypt = function scrypt(B, B) {
         let num6 = 0;
         if (0 < r) {
           do {
-            let num7 = 0;
-            let tmp14 = V;
-            let tmp15 = sum1;
-            let tmp16 = V;
-            let tmp17 = sum5;
-            let tmp18 = V;
-            let tmp19 = sum4;
-            let tmp13 = XorAndSalsa;
             let tmp20 = XorAndSalsa(V, sum1, V, sum5, V, sum4);
-            let tmp21 = num6;
-            let tmp22 = sum1;
-            let tmp24 = sum5;
             let sum2 = sum1;
             let tmp23 = sum4;
             if (0 < num6) {
               sum2 = sum1 + 16;
             }
             let sum3 = sum5 + 16;
-            let num8 = 0;
-            let tmp27 = V;
-            let tmp28 = sum4;
-            let tmp29 = V;
-            let tmp30 = sum3;
-            let tmp31 = V;
-            let tmp32 = sum2;
-            let tmp13Result = tmp13(V, tmp23, V, sum3, V, sum2);
+            let tmp13Result = XorAndSalsa(V, tmp23, V, sum3, V, sum2);
             num6 = num6 + 1;
             sum4 = sum4 + 16;
             sum5 = sum3 + 16;
@@ -724,32 +622,14 @@ export const scrypt = function scrypt(B, B) {
     let sum9 = tmp37;
     if (0 < r) {
       do {
-        let num11 = 0;
-        let tmp40 = B32;
-        let tmp41 = sum6;
-        let tmp42 = V;
-        let tmp43 = result1;
-        let tmp44 = B32;
-        let tmp45 = sum9;
-        let tmp39 = XorAndSalsa;
         let tmp46 = XorAndSalsa(B32, sum6, V, result1, B32, sum9);
-        let tmp47 = num10;
-        let tmp48 = sum6;
-        let tmp50 = result1;
         let sum7 = sum6;
         let tmp49 = sum9;
         if (0 < num10) {
           sum7 = sum6 + 16;
         }
         let sum8 = result1 + 16;
-        let num12 = 0;
-        let tmp53 = B32;
-        let tmp54 = sum9;
-        let tmp55 = V;
-        let tmp56 = sum8;
-        let tmp57 = B32;
-        let tmp58 = sum7;
-        let tmp39Result = tmp39(B32, tmp49, V, sum8, B32, sum7);
+        let tmp39Result = XorAndSalsa(B32, tmp49, V, sum8, B32, sum7);
         num10 = num10 + 1;
         sum9 = sum9 + 16;
         result1 = sum8 + 16;
@@ -758,7 +638,6 @@ export const scrypt = function scrypt(B, B) {
     }
     let blockMixCbResult1 = blockMixCb();
     for (let num13 = 0; num13 < N; num13 = num13 + 1) {
-      let tmp62 = num13;
       for (let num14 = 0; num14 < blockSize32; num14 = num14 + 1) {
         tmp2[num14] = B32[result + num14] ^ V[tmp61 * blockSize32 + num14];
       }
@@ -773,32 +652,14 @@ export const scrypt = function scrypt(B, B) {
       let num17 = 0;
       if (0 < r) {
         do {
-          let num18 = 0;
-          let tmp66 = B32;
-          let tmp67 = sum10;
-          let tmp68 = tmp2;
-          let tmp69 = num17;
-          let tmp70 = B32;
-          let tmp71 = sum13;
-          let tmp65 = XorAndSalsa;
           let tmp72 = XorAndSalsa(B32, sum10, tmp2, num17, B32, sum13);
-          let tmp73 = num16;
-          let tmp74 = sum10;
-          let tmp76 = num17;
           let sum11 = sum10;
           let tmp75 = sum13;
           if (0 < num16) {
             sum11 = sum10 + 16;
           }
           let sum12 = num17 + 16;
-          let num19 = 0;
-          let tmp79 = B32;
-          let tmp80 = sum13;
-          let tmp81 = tmp2;
-          let tmp82 = sum12;
-          let tmp83 = B32;
-          let tmp84 = sum11;
-          let tmp65Result = tmp65(B32, tmp75, tmp2, sum12, B32, sum11);
+          let tmp65Result = XorAndSalsa(B32, tmp75, tmp2, sum12, B32, sum11);
           num16 = num16 + 1;
           sum13 = sum13 + 16;
           num17 = sum12 + 16;
@@ -809,7 +670,7 @@ export const scrypt = function scrypt(B, B) {
     }
   }
   if (!_asyncLoop.isLE) {
-    tmp87(9699).byteSwap32(B32);
+    _asyncLoop.byteSwap32(B32);
   }
   B.fill(0);
   V.fill(0);

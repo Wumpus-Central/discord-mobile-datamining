@@ -14,7 +14,6 @@ if (setPrototypeOf) {
       const tmp5 = new _mod541("Reflect.setPrototypeOf: failed to set [[Prototype]]");
       throw tmp5;
     }
-    const tmp = require;
   }
 } else {
   setProto = _mod4435;

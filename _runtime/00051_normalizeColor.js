@@ -2,9 +2,10 @@
 
 // Module 51 (normalizeColor)
 import PlatformColor from "PlatformColor" /* 52 */;
+import hslToRgbDefault from "hslToRgb" /* 53 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function normalizeColor(obj) {
   if (typeof obj === "object") {
@@ -15,5 +16,5 @@ arg5.default = function normalizeColor(obj) {
       }
     }
   }
-  return module(53)(obj);
+  return hslToRgbDefault(obj);
 };

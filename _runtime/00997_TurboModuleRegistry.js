@@ -8,41 +8,8 @@ import _symbolicateStackTrace from "_symbolicateStackTrace" /* 998 */;
 import getDevServer from "getDevServer" /* 999 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-obj = { Devtools: obj, Promise: _mod175, Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
-obj = {
-  parseErrorStack(arg0) {
-    const obj = parseErrorStack;
-    if (obj.default) {
-      if (typeof obj.default === "function") {
-        let defaultResult = obj.default(arg0);
-      }
-      return defaultResult;
-    }
-    defaultResult = obj(arg0);
-  },
-  symbolicateStackTrace(arg0, arg1) {
-    const obj = _symbolicateStackTrace;
-    if (obj.default) {
-      if (typeof obj.default === "function") {
-        let defaultResult = obj.default(arg0, arg1);
-      }
-      return defaultResult;
-    }
-    defaultResult = obj(arg0, arg1);
-  },
-  getDevServer() {
-    const obj = getDevServer;
-    if (obj.default) {
-      if (typeof obj.default === "function") {
-        let defaultResult = obj.default();
-      }
-      return defaultResult;
-    }
-    defaultResult = obj();
-  }
-};
 ({ AppRegistry, Platform, TurboModuleRegistry } = get_ActivityIndicator);
-obj = {
+let obj = {
   polyfillGlobal(arg0, arg1) {
     polyfillObjectProperty.polyfillGlobal(arg0, arg1);
   }

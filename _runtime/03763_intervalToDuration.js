@@ -60,7 +60,7 @@ if (!differenceInMonths) {
 }
 differenceInMonths = tmp13;
 if (!differenceInSeconds) {
-  let obj4 = { default: null };
+  const obj4 = { default: null };
   obj4[0] = differenceInSeconds;
   let tmp15 = obj4;
 } else {
@@ -107,35 +107,35 @@ export default function intervalToDuration(start) {
       const rangeError1 = new RangeError("End Date is invalid");
       throw rangeError1;
     } else {
-      let obj = {};
+      const time = {};
       const _Math = Math;
-      obj.years = Math.abs(differenceInYears.default(defaultResult2, defaultResult1));
+      time.years = Math.abs(differenceInYears.default(defaultResult2, defaultResult1));
       const defaultResult3 = compareAsc.default(defaultResult2, defaultResult1);
-      obj = { years: null };
-      obj[0] = defaultResult3 * obj.years;
+      let obj = { years: null };
+      obj[0] = defaultResult3 * time.years;
       const defaultResult4 = _typeof.default(defaultResult1, obj);
       const _Math2 = Math;
-      obj.months = Math.abs(differenceInMonths.default(defaultResult2, defaultResult4));
-      obj1 = { months: null };
-      obj1[0] = defaultResult3 * obj.months;
-      const defaultResult5 = _typeof.default(defaultResult4, obj1);
+      time.months = Math.abs(differenceInMonths.default(defaultResult2, defaultResult4));
+      obj = { months: null };
+      obj[0] = defaultResult3 * time.months;
+      const defaultResult5 = _typeof.default(defaultResult4, obj);
       const _Math3 = Math;
-      obj.days = Math.abs(compareLocalAsc.default(defaultResult2, defaultResult5));
-      const obj2 = { days: null };
-      obj2[0] = defaultResult3 * obj.days;
-      const defaultResult6 = _typeof.default(defaultResult5, obj2);
+      time.days = Math.abs(compareLocalAsc.default(defaultResult2, defaultResult5));
+      obj1 = { days: null };
+      obj1[0] = defaultResult3 * time.days;
+      const defaultResult6 = _typeof.default(defaultResult5, obj1);
       const _Math4 = Math;
-      obj.hours = Math.abs(differenceInHours.default(defaultResult2, defaultResult6));
-      const obj3 = { hours: null };
-      obj3[0] = defaultResult3 * obj.hours;
-      const defaultResult7 = _typeof.default(defaultResult6, obj3);
+      time.hours = Math.abs(differenceInHours.default(defaultResult2, defaultResult6));
+      const obj2 = { hours: null };
+      obj2[0] = defaultResult3 * time.hours;
+      const defaultResult7 = _typeof.default(defaultResult6, obj2);
       const _Math5 = Math;
-      obj.minutes = Math.abs(differenceInMinutes.default(defaultResult2, defaultResult7));
-      const obj4 = { minutes: null };
-      obj4[0] = defaultResult3 * obj.minutes;
+      time.minutes = Math.abs(differenceInMinutes.default(defaultResult2, defaultResult7));
+      const obj3 = { minutes: null };
+      obj3[0] = defaultResult3 * time.minutes;
       const _Math6 = Math;
-      obj.seconds = Math.abs(differenceInSeconds.default(defaultResult2, _typeof.default(defaultResult7, obj4)));
-      return obj;
+      time.seconds = Math.abs(differenceInSeconds.default(defaultResult2, _typeof.default(defaultResult7, obj3)));
+      return time;
     }
   }
 };

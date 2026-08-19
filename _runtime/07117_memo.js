@@ -2,11 +2,11 @@
 
 // Module 7117 (memo)
 import noopDefault from "noop" /* 19 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: closure_8, memo } = noop);
 noopDefault;
 let closure_10 = { code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
@@ -41,9 +41,6 @@ const memoResult = memo((animatedIndex) => {
   if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
     DEFAULT_ACCESSIBILITY_HINT = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_HINT;
   }
-  let snapToIndex;
-  let close;
-  let callback;
   opacity = undefined;
   appearsOnIndex = undefined;
   disappearsOnIndex = undefined;
@@ -53,9 +50,9 @@ const memoResult = memo((animatedIndex) => {
   let animatedStyle;
   let obj = animatedIndex(onPress[5]);
   const bottomSheet = obj.useBottomSheet();
-  snapToIndex = bottomSheet.snapToIndex;
-  close = bottomSheet.close;
-  callback = opacity(false);
+  const snapToIndex = bottomSheet.snapToIndex;
+  const close = bottomSheet.close;
+  const callback = opacity(false);
   if (opacity == null) {
     opacity = tmp13(tmp14[3]).DEFAULT_OPACITY;
   }
@@ -81,10 +78,10 @@ const memoResult = memo((animatedIndex) => {
     }
     if ("close" === pressBehavior) {
       close();
-    } else if ("collapse" === tmp3) {
+    } else if ("collapse" === pressBehavior) {
       snapToIndex(disappearsOnIndex);
-    } else if (typeof tmp3 === "number") {
-      snapToIndex(tmp3);
+    } else if (typeof pressBehavior === "number") {
+      snapToIndex(pressBehavior);
     }
   }, items);
   closure_11 = tmp18;
@@ -94,8 +91,7 @@ const memoResult = memo((animatedIndex) => {
       if (arg0) {
         str = "none";
       }
-      closure_10(str);
-      const tmp2 = closure_10;
+      callback(str);
     }
   }, []);
   closure_12 = tmp19;
@@ -121,11 +117,10 @@ const memoResult = memo((animatedIndex) => {
   const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
   animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
   const items3 = [style, animatedStyle];
-  const tmp16 = appearsOnIndex;
   const tmp20 = callback(() => {
     const Gesture = animatedIndex(onPress[6]).Gesture;
     const fn = function n() {
-      closure_1_0(closure_1_2[4]).runOnJS(closure_11)();
+      animatedIndex(onPress[4]).runOnJS(closure_11)();
     };
     const TapResult = Gesture.Tap();
     fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleOnPress: closure_11 };

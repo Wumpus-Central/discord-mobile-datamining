@@ -69,15 +69,14 @@ export default function lightFormat(arg0, str) {
     let match = str.match(closure_6);
     let str3 = "";
     if (match) {
-      const mapped = match.map((arg0) => {
-        let str = arg0;
-        if ("''" === arg0) {
+      const mapped = match.map((item, index) => {
+        let str = item;
+        if ("''" === item) {
           return "'";
         } else if ("'" === str[0]) {
           const match = str.match(closure_1_7);
           if (match) {
             str = match[1].replace(closure_1_8, "'");
-            const str4 = match[1];
           }
           return str;
         } else if (closure_1_1.default[str6]) {

@@ -1,13 +1,13 @@
 // === Module 169: _isNativeReflectConstruct ===
 
 // Module 169 (_isNativeReflectConstruct)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
-let PerformanceMeasureTemplate = arg1;
+let PerformanceMeasureTemplate = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,8 +34,8 @@ class PerformanceMarkTemplate {
     tmp2 = closure_2(this, PerformanceMeasureTemplate);
     obj = { name: global, startTime: null, duration: 0 };
     startTime = undefined;
-    if (arg1 != null) {
-      startTime = arg1.startTime;
+    if (fn != null) {
+      startTime = fn.startTime;
     }
     if (startTime == null) {
       tmp4 = PerformanceMeasureTemplate;
@@ -58,8 +58,8 @@ class PerformanceMarkTemplate {
     }
     tmp7Result = tmp7(self, constructResult);
     detail = undefined;
-    if (arg1 != null) {
-      detail = arg1.detail;
+    if (fn != null) {
+      detail = fn.detail;
     }
     if (detail == null) {
       detail = null;
@@ -81,8 +81,8 @@ class PerformanceMark {
   constructor(arg0, arg1) {
     obj = { __entryType: "mark", __name: global };
     startTime = undefined;
-    if (arg1 != null) {
-      startTime = arg1.startTime;
+    if (fn != null) {
+      startTime = fn.startTime;
     }
     if (startTime == null) {
       tmp2 = PerformanceMeasureTemplate;
@@ -93,8 +93,8 @@ class PerformanceMark {
     obj.__startTime = startTime;
     obj.__duration = 0;
     detail = undefined;
-    if (arg1 != null) {
-      detail = arg1.detail;
+    if (fn != null) {
+      detail = fn.detail;
     }
     if (detail == null) {
       detail = null;

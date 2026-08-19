@@ -2,10 +2,10 @@
 
 // Module 428 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import { cloneElement } from "noop" /* 19 */;
@@ -70,8 +70,7 @@ let items = [
   {
     key: "_createPressabilityConfig",
     value: function _createPressabilityConfig() {
-      let self = this;
-      self = this;
+      const self = this;
       const obj = { cancelable: !this.props.rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, android_disableSound: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
       if (null != this.props.disabled) {
         let disabled = self.props.disabled;
@@ -89,7 +88,7 @@ let items = [
       obj[7] = self.props.pressRetentionOffset;
       obj[8] = self.props.touchSoundDisabled;
       obj[9] = function onBlur(arg0) {
-        if (self(closure_1_1[9]).isTV) {
+        if (self(dependencyMap[9]).isTV) {
           self._hideUnderlay();
         }
         if (null != self.props.onBlur) {
@@ -98,7 +97,7 @@ let items = [
         }
       };
       obj[10] = function onFocus(arg0) {
-        if (self(closure_1_1[9]).isTV) {
+        if (self(dependencyMap[9]).isTV) {
           self._showUnderlay();
         }
         if (null != self.props.onFocus) {
@@ -110,41 +109,41 @@ let items = [
       obj[12] = function onPress(arg0) {
         if (null != self._hideTimeout) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(obj._hideTimeout);
+          clearTimeout(self._hideTimeout);
         }
-        if (!self(closure_1_1[9]).isTV) {
-          obj._showUnderlay();
-          let num = obj.props.delayPressOut;
+        if (!self(dependencyMap[9]).isTV) {
+          self._showUnderlay();
+          let num = self.props.delayPressOut;
           if (num == null) {
             num = 0;
           }
-          obj._hideTimeout = setTimeout(() => {
+          self._hideTimeout = setTimeout(() => {
             closure_0._hideUnderlay();
           }, num);
         }
         if (null != self.props.onPress) {
-          const props = obj.props;
+          const props = self.props;
           props.onPress(arg0);
         }
       };
       obj[13] = function onPressIn(arg0) {
         if (null != self._hideTimeout) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(obj._hideTimeout);
-          obj._hideTimeout = null;
+          clearTimeout(self._hideTimeout);
+          self._hideTimeout = null;
         }
         self._showUnderlay();
         if (null != self.props.onPressIn) {
-          const props = obj.props;
+          const props = self.props;
           props.onPressIn(arg0);
         }
       };
       obj[14] = function onPressOut(arg0) {
         if (null == self._hideTimeout) {
-          obj._hideUnderlay();
+          self._hideUnderlay();
         }
         if (null != self.props.onPressOut) {
-          const props = obj.props;
+          const props = self.props;
           props.onPressOut(arg0);
         }
       };
@@ -225,46 +224,46 @@ let items = [
       } else {
         accessibilityState = self.props.accessibilityState;
       }
-      aria_valuemax = self.props["aria-valuemax"];
-      if (aria_valuemax == null) {
+      let prop = self.props["aria-valuemax"];
+      if (prop == null) {
         const accessibilityValue = self.props.accessibilityValue;
         let max;
         if (accessibilityValue != null) {
           max = accessibilityValue.max;
         }
-        aria_valuemax = max;
+        prop = max;
       }
-      obj = { max: aria_valuemax, min: null, now: null, text: null };
-      aria_valuemin = self.props["aria-valuemin"];
-      if (aria_valuemin == null) {
+      obj = { max: prop, min: null, now: null, text: null };
+      let prop1 = self.props["aria-valuemin"];
+      if (prop1 == null) {
         const accessibilityValue2 = self.props.accessibilityValue;
         let min;
         if (accessibilityValue2 != null) {
           min = accessibilityValue2.min;
         }
-        aria_valuemin = min;
+        prop1 = min;
       }
-      obj[1] = aria_valuemin;
-      aria_valuenow = self.props["aria-valuenow"];
-      if (aria_valuenow == null) {
+      obj[1] = prop1;
+      let prop2 = self.props["aria-valuenow"];
+      if (prop2 == null) {
         const accessibilityValue3 = self.props.accessibilityValue;
         let now;
         if (accessibilityValue3 != null) {
           now = accessibilityValue3.now;
         }
-        aria_valuenow = now;
+        prop2 = now;
       }
-      obj[2] = aria_valuenow;
-      aria_valuetext = self.props["aria-valuetext"];
-      if (aria_valuetext == null) {
+      obj[2] = prop2;
+      let prop3 = self.props["aria-valuetext"];
+      if (prop3 == null) {
         const accessibilityValue4 = self.props.accessibilityValue;
         let text;
         if (accessibilityValue4 != null) {
           text = accessibilityValue4.text;
         }
-        aria_valuetext = text;
+        prop3 = text;
       }
-      obj[3] = aria_valuetext;
+      obj[3] = prop3;
       let str = "none";
       if ("off" !== self.props["aria-live"]) {
         let accessibilityLiveRegion = self.props["aria-live"];
@@ -279,7 +278,6 @@ let items = [
       }
       obj = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState, accessibilityValue: obj, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, onLayout: null, hitSlop: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, focusable: null, nativeID: null, testID: null, ref: null };
       let str2 = "no-hide-descendants";
-      const tmp10 = closure_10;
       const tmp3 = callback(eventHandlers, closure_2);
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
@@ -296,13 +294,13 @@ let items = [
         accessibilityElementsHidden = self.props.accessibilityElementsHidden;
       }
       obj[12] = accessibilityElementsHidden;
-      let tmp11Result = tmp11(254);
+      let tmp15Result = TouchableHighlightImpl(254);
       const extraStyles = self.state.extraStyles;
       let underlay;
       if (extraStyles != null) {
         underlay = extraStyles.underlay;
       }
-      obj[13] = tmp11Result.compose(self.props.style, underlay);
+      obj[13] = tmp15Result.compose(self.props.style, underlay);
       obj[14] = self.props.onLayout;
       obj[15] = self.props.hitSlop;
       obj[16] = self.props.hasTVPreferredFocus;
@@ -320,17 +318,16 @@ let items = [
       obj[24] = self.props.testID;
       obj[25] = self.props.hostRef;
       const merged1 = Object.assign(tmp3);
-      tmp11Result = tmp11(254);
+      tmp15Result = TouchableHighlightImpl(254);
       const extraStyles2 = self.state.extraStyles;
       let child;
       if (extraStyles2 != null) {
         child = extraStyles2.child;
       }
-      const tmp13 = TouchableHighlightImpl(108);
-      const tmp16 = cloneElement;
-      const items = [tmp16(onlyResult, { style: tmp11Result.compose(onlyResult.props.style, child) }), null];
+      const tmp17 = TouchableHighlightImpl(108);
+      const items = [cloneElement(onlyResult, { style: tmp15Result.compose(onlyResult.props.style, child) }), null];
       obj.children = items;
-      return tmp10(tmp13, obj);
+      return callback2(tmp17, obj);
     }
   },
   {

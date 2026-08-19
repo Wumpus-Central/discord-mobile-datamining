@@ -2,7 +2,7 @@
 
 // Module 1696 (isAffineMatrixFlat)
 import t from "t" /* 1665 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function isAffineMatrixFlat(arr) {
@@ -11,11 +11,11 @@ function isAffineMatrixFlat(arr) {
     isArray = 16 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((num) => {
-      let tmp = typeof num === "number";
-      if (typeof num === "number") {
+    isArray = arr.every((item, index) => {
+      let tmp = typeof item === "number";
+      if (typeof item === "number") {
         const _isNaN = isNaN;
-        tmp = !isNaN(num);
+        tmp = !isNaN(item);
       }
       return tmp;
     });
@@ -31,17 +31,17 @@ function isAffineMatrix(arr) {
     isArray = 4 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -84,17 +84,17 @@ function maybeFlattenMatrix(arr) {
     isArray = 4 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -137,11 +137,11 @@ function subtractMatrices(arr, arr2) {
     isArray = 16 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((num) => {
-      let tmp = typeof num === "number";
-      if (typeof num === "number") {
+    isArray = arr.every((item, index) => {
+      let tmp = typeof item === "number";
+      if (typeof item === "number") {
         const _isNaN = isNaN;
-        tmp = !isNaN(num);
+        tmp = !isNaN(item);
       }
       return tmp;
     });
@@ -157,17 +157,17 @@ function subtractMatrices(arr, arr2) {
     isArray1 = 4 === arr.length;
   }
   if (isArray1) {
-    isArray1 = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray1 = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -194,17 +194,17 @@ function subtractMatrices(arr, arr2) {
     isArray2 = 4 === arr2.length;
   }
   if (isArray2) {
-    isArray2 = arr2.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray2 = arr2.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -212,14 +212,13 @@ function subtractMatrices(arr, arr2) {
       return isArray;
     });
   }
-  let flatResult1 = arr2;
   if (isArray2) {
     if (typeof flatten !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    flatResult1 = arr2.flat();
+    arr2.flat();
   }
-  const mapped = flatResult.map((arg0, arg1) => table[arg1] - flatResult1[arg1]);
+  const mapped = flatResult.map((item, index) => table[index] - flatResult1[index]);
   let tmp10 = mapped;
   if (!isArray) {
     if (typeof unflatten !== "function") {
@@ -250,11 +249,11 @@ function addMatrices(arr, arr2) {
     isArray = 16 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((num) => {
-      let tmp = typeof num === "number";
-      if (typeof num === "number") {
+    isArray = arr.every((item, index) => {
+      let tmp = typeof item === "number";
+      if (typeof item === "number") {
         const _isNaN = isNaN;
-        tmp = !isNaN(num);
+        tmp = !isNaN(item);
       }
       return tmp;
     });
@@ -270,17 +269,17 @@ function addMatrices(arr, arr2) {
     isArray1 = 4 === arr.length;
   }
   if (isArray1) {
-    isArray1 = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray1 = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -307,17 +306,17 @@ function addMatrices(arr, arr2) {
     isArray2 = 4 === arr2.length;
   }
   if (isArray2) {
-    isArray2 = arr2.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray2 = arr2.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -325,14 +324,13 @@ function addMatrices(arr, arr2) {
       return isArray;
     });
   }
-  let flatResult1 = arr2;
   if (isArray2) {
     if (typeof flatten !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    flatResult1 = arr2.flat();
+    arr2.flat();
   }
-  const mapped = flatResult.map((arg0, arg1) => table[arg1] + flatResult1[arg1]);
+  const mapped = flatResult.map((item, index) => table[index] + flatResult1[index]);
   let tmp10 = mapped;
   if (!isArray) {
     if (typeof unflatten !== "function") {
@@ -354,8 +352,8 @@ function addMatrices(arr, arr2) {
 addMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
 addMatrices.__workletHash = 17429737879880;
 addMatrices.__initData = { code: "function addMatrices_Pnpm_matrixUtilsTsx8(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]+b[i];});return isFlatOnStart?c:unflatten(c);}" };
-function scaleMatrix(arr, arg1) {
-  closure_0 = arg1;
+function scaleMatrix(arr, closure_1) {
+  closure_0 = closure_1;
   if (typeof isAffineMatrixFlat !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -364,11 +362,11 @@ function scaleMatrix(arr, arg1) {
     isArray = 16 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((num) => {
-      let tmp = typeof num === "number";
-      if (typeof num === "number") {
+    isArray = arr.every((item, index) => {
+      let tmp = typeof item === "number";
+      if (typeof item === "number") {
         const _isNaN = isNaN;
-        tmp = !isNaN(num);
+        tmp = !isNaN(item);
       }
       return tmp;
     });
@@ -384,17 +382,17 @@ function scaleMatrix(arr, arg1) {
     isArray1 = 4 === arr.length;
   }
   if (isArray1) {
-    isArray1 = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray1 = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -409,7 +407,7 @@ function scaleMatrix(arr, arg1) {
     }
     flatResult = arr.flat();
   }
-  const mapped = flatResult.map((arg0) => arg0 * closure_0);
+  const mapped = flatResult.map((item, index) => item * closure_0);
   let tmp5 = mapped;
   if (!isArray) {
     if (typeof unflatten !== "function") {
@@ -431,9 +429,9 @@ function scaleMatrix(arr, arg1) {
 scaleMatrix.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
 scaleMatrix.__workletHash = 11907224908685;
 scaleMatrix.__initData = { code: "function scaleMatrix_Pnpm_matrixUtilsTsx9(maybeFlatA,scalar){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=a.map(function(x){return x*scalar;});return isFlatOnStart?b:unflatten(b);}" };
-function getRotationMatrix(sum, arg1) {
-  let str = arg1;
-  if (arg1 === undefined) {
+function getRotationMatrix(sum, item) {
+  let str = item;
+  if (item === undefined) {
     str = "z";
   }
   const cosResult = Math.cos(sum);
@@ -502,7 +500,7 @@ function innerProduct(arr) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  return arr.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
 }
 innerProduct.__closure = { assertVectorsHaveEqualLengths };
 innerProduct.__workletHash = 6022428100775;
@@ -519,7 +517,7 @@ function projection(arr, arr) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const reduced = arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  const reduced = arr.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -528,8 +526,8 @@ function projection(arr, arr) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  closure_0 = reduced / arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
-  return arr.map((arg0) => arg0 * closure_0);
+  closure_0 = reduced / arr.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
+  return arr.map((item, index) => item * closure_0);
 }
 projection.__closure = { assertVectorsHaveEqualLengths, innerProduct };
 projection.__workletHash = 12191208971941;
@@ -540,21 +538,20 @@ function subtractVectors(arr) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return arr.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
+  return arr.map((item, index) => arr11[index] - arr3[index]);
 }
 subtractVectors.__closure = { assertVectorsHaveEqualLengths };
 subtractVectors.__workletHash = 9047017498478;
 subtractVectors.__initData = { code: "function subtractVectors_Pnpm_matrixUtilsTsx16(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.map(function(_,i){return a[i]-b[i];});}" };
 function scaleVector(arr) {
   closure_0 = arg1;
-  return arr.map((arg0) => arg0 * closure_0);
+  return arr.map((item, index) => item * closure_0);
 }
 scaleVector.__closure = {};
 scaleVector.__workletHash = 11236256734309;
 scaleVector.__initData = { code: "function scaleVector_Pnpm_matrixUtilsTsx17(u,a){return u.map(function(e){return e*a;});}" };
 function gramSchmidtAlgorithm(items7) {
   [tmp3, arr, arr2, arr3] = callback(items7, 4);
-  const tmp = callback;
   const tmp2 = callback(items7, 4);
   if (typeof subtractVectors !== "function") {
     HermesBuiltin.throwTypeError();
@@ -564,8 +561,8 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const mapped = arr.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
-  let tmp5Result = tmp5(tmp3, arr2);
+  const mapped = arr.map((item, index) => arr11[index] - arr3[index]);
+  let tmp5Result = projection(tmp3, arr2);
   if (typeof subtractVectors !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -574,8 +571,8 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const mapped1 = arr2.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
-  tmp5Result = tmp5(mapped, arr2);
+  const mapped1 = arr2.map((item, index) => arr11[index] - arr3[index]);
+  tmp5Result = projection(mapped, arr2);
   if (typeof subtractVectors !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -584,7 +581,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const mapped2 = mapped1.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
+  const mapped2 = mapped1.map((item, index) => arr11[index] - arr3[index]);
   const items = [tmp3, mapped, mapped2, ];
   const tmp6 = projection(tmp3, arr);
   if (typeof subtractVectors !== "function") {
@@ -595,7 +592,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const mapped3 = arr3.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
+  const mapped3 = arr3.map((item, index) => arr11[index] - arr3[index]);
   const tmp5Result1 = projection(tmp3, arr3);
   if (typeof subtractVectors !== "function") {
     HermesBuiltin.throwTypeError();
@@ -605,7 +602,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const mapped4 = mapped3.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
+  const mapped4 = mapped3.map((item, index) => arr11[index] - arr3[index]);
   const tmp5Result2 = projection(mapped, arr3);
   if (typeof subtractVectors !== "function") {
     HermesBuiltin.throwTypeError();
@@ -615,23 +612,23 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items[3] = mapped4.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
+  items[3] = mapped4.map((item, index) => arr11[index] - arr3[index]);
   const tmp5Result3 = projection(mapped2, arr3);
-  [arr8, arr9, arr10, arr11] = tmp(items.map((arr) => {
+  [arr8, arr9, arr10, arr11] = callback(items.map((item, index) => {
     if (typeof closure_11 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    closure_0 = arr;
-    closure_1 = arr;
+    closure_0 = item;
+    closure_1 = item;
     if (typeof closure_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const result = 1 / Math.sqrt(arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0));
+    const result = 1 / Math.sqrt(item.reduce((acc, item, index) => acc + item[index] * item2[index], 0));
     if (typeof closure_14 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = result;
-    return arr.map((arg0) => arg0 * closure_0);
+    return item.map((item, index) => item * closure_0);
   }), 4);
   const items1 = [arr8[0], arr9[0], arr10[0], arr11[0]];
   const items2 = [items1, , , ];
@@ -649,7 +646,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const items6 = [arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0), , , ];
+  const items6 = [arr8.reduce((acc, item, index) => acc + item[index] * item2[index], 0), , , ];
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -658,7 +655,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items6[1] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items6[1] = arr8.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -667,7 +664,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items6[2] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items6[2] = arr8.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -675,7 +672,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items6[3] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items6[3] = arr8.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   items7 = [items6, , , ];
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
@@ -685,7 +682,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const items8 = [0, arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
+  const items8 = [0, arr9.reduce((acc, item, index) => acc + item[index] * item2[index], 0)];
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -694,7 +691,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items8[2] = arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items8[2] = arr9.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -702,7 +699,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items8[3] = arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items8[3] = arr9.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   items7[1] = items8;
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
@@ -712,7 +709,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const items9 = [0, 0, arr10.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
+  const items9 = [0, 0, arr10.reduce((acc, item, index) => acc + item[index] * item2[index], 0)];
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -720,7 +717,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  items9[3] = arr10.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
+  items9[3] = arr10.reduce((acc, item, index) => acc + item[index] * item2[index], 0);
   items7[2] = items9;
   if (typeof innerProduct !== "function") {
     HermesBuiltin.throwTypeError();
@@ -728,7 +725,7 @@ function gramSchmidtAlgorithm(items7) {
   if (typeof assertVectorsHaveEqualLengths !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const items10 = [0, 0, 0, arr11.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
+  const items10 = [0, 0, 0, arr11.reduce((acc, item, index) => acc + item[index] * item2[index], 0)];
   items7[3] = items10;
   if (typeof transposeMatrix !== "function") {
     HermesBuiltin.throwTypeError();
@@ -780,17 +777,17 @@ function decomposeMatrix(arr) {
     isArray = 4 === arr.length;
   }
   if (isArray) {
-    isArray = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
+    isArray = arr.every((item, index) => {
+      let isArray = Array.isArray(item);
       if (isArray) {
-        isArray = 4 === arr.length;
+        isArray = 4 === item.length;
       }
       if (isArray) {
-        isArray = arr.every((num) => {
-          let tmp = typeof num === "number";
-          if (typeof num === "number") {
+        isArray = item.every((item, index) => {
+          let tmp = typeof item === "number";
+          if (typeof item === "number") {
             const _isNaN = isNaN;
-            tmp = !isNaN(num);
+            tmp = !isNaN(item);
           }
           return tmp;
         });
@@ -810,9 +807,9 @@ function decomposeMatrix(arr) {
     const reanimatedError = new t.ReanimatedError("Invalid transform matrix.");
     throw reanimatedError;
   } else {
-    const item = flatResult.forEach((arg0, arg1) => {
-      const result = dependencyMap[arg1] / dependencyMap[15];
-      dependencyMap[arg1] = result;
+    const item = flatResult.forEach((item, index) => {
+      const result = dependencyMap[index] / dependencyMap[15];
+      dependencyMap[index] = result;
       return result;
     });
     const items = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], ];

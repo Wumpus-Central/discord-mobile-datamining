@@ -2,7 +2,7 @@
 
 // Module 266 (IntersectionObserverEntry)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
 const IntersectionObserverEntry = importDefault;
@@ -10,7 +10,7 @@ class IntersectionObserverEntry {
   constructor(arg0, arg1) {
     tmp = closure_2(this, IntersectionObserverEntry);
     this._nativeEntry = global;
-    this._target = arg1;
+    this._target = fn;
     return;
   }
 }

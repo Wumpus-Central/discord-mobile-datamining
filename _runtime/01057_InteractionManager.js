@@ -1,7 +1,7 @@
 // === Module 1057: InteractionManager ===
 
 // Module 1057 (InteractionManager)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const InteractionManager = require;

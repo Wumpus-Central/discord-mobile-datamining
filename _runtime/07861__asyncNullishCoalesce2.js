@@ -1,11 +1,11 @@
 // === Module 7861: _asyncNullishCoalesce2 ===
 
 // Module 7861 (_asyncNullishCoalesce2)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _asyncNullishCoalesce2() {
   const self = this;
-  const tmp = callback((arg0, arg1) => {
+  const tmp = asyncGeneratorStep((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c2 = 0;

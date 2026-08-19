@@ -14,8 +14,7 @@ function getStatics(arg0) {
 }
 let closure_2 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
 let closure_3 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
-let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
-obj = {};
+let obj = {};
 obj[num2.ForwardRef] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
 obj[num2.Memo] = obj;
 let closure_12 = Object.prototype;
@@ -38,7 +37,6 @@ function hoistNonReactStatics(arg0, headers) {
     }
     let num = 0;
     const tmp9 = getStatics(arg0);
-    const tmp10 = getStatics(headers);
     if (0 < combined.length) {
       if (!table[combined[num]]) {
         if (!arg2) {
@@ -54,6 +52,7 @@ function hoistNonReactStatics(arg0, headers) {
       }
       num = num + 1;
     }
+    tmp10 = getStatics(headers);
   }
   return arg0;
 }

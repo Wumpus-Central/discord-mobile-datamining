@@ -24,7 +24,7 @@ arg5.checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbedde
         let someResult = tmp(1028).WINDOW === tmp(1028).WINDOW.top;
         if (someResult) {
           const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
-          someResult = items.some((arg0) => closure_0.startsWith("" + arg0 + "://"));
+          someResult = items.some((item, index) => closure_0.startsWith("" + item + "://"));
         }
         flag = !someResult;
       }

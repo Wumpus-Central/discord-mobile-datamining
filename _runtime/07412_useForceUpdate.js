@@ -1,7 +1,7 @@
 // === Module 7412: useForceUpdate ===
 
 // Module 7412 (useForceUpdate)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
 ({ useCallback: closure_1, useState: obj1 } = noop);

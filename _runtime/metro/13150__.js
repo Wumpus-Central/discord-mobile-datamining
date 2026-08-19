@@ -3,6 +3,7 @@
 // Module 13150
 import SemVer from "SemVer" /* 13122 */;
 import SemVer2 from "SemVer" /* 13123 */;
+import items from "items" /* 13127 */;
 
 
 export default (num) => {
@@ -22,8 +23,8 @@ export default (num) => {
         obj = {};
       }
       if (obj.rtl) {
-        const safeRe2 = tmp(13127).safeRe;
-        const t2 = tmp(13127).t;
+        const safeRe2 = items.safeRe;
+        const t2 = items.t;
         if (obj.includePrerelease) {
           let obj2 = safeRe2[t2.COERCERTLFULL];
         } else {
@@ -34,7 +35,6 @@ export default (num) => {
         let tmp8 = null;
         if (match) {
           while (true) {
-            let tmp9 = match;
             let tmp10 = tmp6;
             let tmp11 = tmp6;
             if (tmp6) {
@@ -68,8 +68,8 @@ export default (num) => {
         obj2.lastIndex = -1;
         let match2 = tmp8;
       } else {
-        const safeRe = tmp(13127).safeRe;
-        const t = tmp(13127).t;
+        const safeRe = items.safeRe;
+        const t = items.t;
         if (obj.includePrerelease) {
           let tmp3 = safeRe[t.COERCEFULL];
         } else {

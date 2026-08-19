@@ -30,12 +30,10 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   let traceId = arg0;
   if (arg0 === undefined) {
     traceId = generatePropagationContext.generateTraceId();
-    const obj = generatePropagationContext;
   }
   let spanId = arg1;
   if (arg1 === undefined) {
     spanId = generatePropagationContext.generateSpanId();
-    const obj2 = generatePropagationContext;
   }
   let str = "";
   if (undefined !== arg2) {
@@ -70,7 +68,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
     if (tmp.traceId) {
       obj = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
       ({ traceId: obj7[0], parentSpanId: obj7[1], parentSampled } = tmp);
-      let tmp4Result = tmp4(7748);
+      let tmp4Result = generatePropagationContext;
       obj[2] = tmp4Result.generateSpanId();
       obj[3] = parentSampled;
       if (!result) {
@@ -81,9 +79,8 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
     }
   }
   obj = { traceId: null, spanId: null };
-  tmp4Result = tmp4(7748);
+  tmp4Result = generatePropagationContext;
   obj[0] = tmp4Result.generateTraceId();
-  const obj2 = baggageHeaderToDynamicSamplingContext;
   obj[1] = generatePropagationContext.generateSpanId();
   return obj;
 };

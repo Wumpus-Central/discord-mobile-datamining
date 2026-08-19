@@ -2,40 +2,37 @@
 
 // Module 15363 (frozen)
 import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
-import closure_10 from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import cancelAnimation from "cancelAnimation" /* 1654 */;
 
-let noop = require;
-let obj = dependencyMap;
 let closure_4 = ["id", "horizontal", "style", "refView", "stickyScrollOffset", "stickyHeaderConfig", "children"];
 let closure_5 = ["id", "horizontal", "style", "refView", "children", "recycleItems", "layoutTransition"];
 let closure_6 = ["itemLayoutAnimation", "recycleItems", "refLegendList", "renderScrollComponent", "sharedValues"];
 let closure_7 = ["ref"];
 let closure_8 = ["refScrollView"];
-obj = undefined;
+let obj;
 if (!noop) {
   let _Object = Object;
   obj = Object.create(null);
   if (noop) {
     const _Object2 = Object;
     const keys = Object.keys(noop);
-    const item = keys.forEach((arg0) => {
-      closure_0 = arg0;
-      if ("default" !== arg0) {
+    const item = keys.forEach((item, index) => {
+      closure_0 = item;
+      if ("default" !== item) {
         const _Object = Object;
-        let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, arg0);
+        let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(closure_0, item);
         if (!ownPropertyDescriptor.get) {
           obj = { enumerable: true, get: null };
           obj[1] = function get() {
-            return table[table];
+            return item[item];
           };
           ownPropertyDescriptor = obj;
         }
-        Object.defineProperty(obj, arg0, ownPropertyDescriptor);
-        const tmp4 = obj;
+        Object.defineProperty(obj, item, ownPropertyDescriptor);
       }
     });
   }
@@ -111,8 +108,7 @@ let closure_25 = typedMemo(function StickyOverlayComponent(stickyHeaderConfig) {
     if (null != stickyHeaderConfig) {
       backdropComponent1 = stickyHeaderConfig.backdropComponent;
     }
-    element = <RN.View style={null}>{getComponent(backdropComponent1)}</RN.View>;
-    const tmp5 = getComponent;
+    element = <get ActivityIndicator.View style={null}>{getComponent(backdropComponent1)}</get ActivityIndicator.View>;
   }
   return element;
 });
@@ -146,7 +142,7 @@ let closure_27 = typedMemo(function ReanimatedPositionViewStickyComponent(ref) {
   }
   obj = frozen;
   let items1 = [tmp.state, tmp3[4], tmp3[3], num3];
-  const memo = frozen.useMemo(() => closure_1_15(state.state, closure_6, closure_5), items1);
+  const memo = frozen.useMemo(() => getStickyPushLimit(state.state, closure_6, closure_5), items1);
   let offset;
   if (null != stickyHeaderConfig) {
     offset = stickyHeaderConfig.offset;
@@ -207,7 +203,7 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
   style = style.style;
   const layoutTransition = style.layoutTransition;
   ({ refView, children, recycleItems } = style);
-  const tmp2 = callback2(style, closure_5);
+  const tmp2 = _objectWithoutProperties(style, closure_5);
   let items = ["containerPosition" + id];
   first = first(useArr$(items), 1)[0];
   if (undefined === first) {
@@ -258,6 +254,7 @@ let closure_28 = typedMemo(function ReanimatedPositionViewComponent(style) {
   }
   ref.current = undefined;
   flag = false;
+  tmp = useStateContext();
 });
 let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRef(function LegendListForwardedRef2(refLegendList, refScrollView) {
   ({ itemLayoutAnimation, recycleItems } = refLegendList);
@@ -346,16 +343,16 @@ let closure_29 = tmp7.default.createAnimatedComponent(typedMemo(frozen.forwardRe
 
 export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedLegendList2(sharedValues, forwardedRef) {
   sharedValues = sharedValues.sharedValues;
-  let tmp = callback2(sharedValues, closure_8);
-  [tmp3, noop] = callback(frozen.useState(null), 2);
+  let tmp = _objectWithoutProperties(sharedValues, closure_8);
+  [tmp3, noop] = _slicedToArray(frozen.useState(null), 2);
   noop = tmp3;
   let items = [tmp3, sharedValues];
-  const tmp2 = callback(frozen.useState(null), 2);
+  const tmp2 = _slicedToArray(frozen.useState(null), 2);
   const effect = frozen.useEffect(() => {
     if (items) {
       if (sharedValues) {
-        const state = items.getState();
-        let activeStickyIndex = tmp.activeStickyIndex;
+        const state = obj.getState();
+        let activeStickyIndex = sharedValues.activeStickyIndex;
         const activeStickyIndex2 = state.activeStickyIndex;
         if (activeStickyIndex) {
           if (typeof activeStickyIndex.set === "function") {
@@ -364,7 +361,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             activeStickyIndex.value = activeStickyIndex2;
           }
         }
-        let isAtEnd = tmp.isAtEnd;
+        let isAtEnd = sharedValues.isAtEnd;
         const isAtEnd2 = state.isAtEnd;
         if (isAtEnd) {
           if (typeof isAtEnd.set === "function") {
@@ -373,7 +370,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             isAtEnd.value = isAtEnd2;
           }
         }
-        let isAtStart = tmp.isAtStart;
+        let isAtStart = sharedValues.isAtStart;
         const isAtStart2 = state.isAtStart;
         if (isAtStart) {
           if (typeof isAtStart.set === "function") {
@@ -382,7 +379,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             isAtStart.value = isAtStart2;
           }
         }
-        let isNearEnd = tmp.isNearEnd;
+        let isNearEnd = sharedValues.isNearEnd;
         const isNearEnd2 = state.isNearEnd;
         if (isNearEnd) {
           if (typeof isNearEnd.set === "function") {
@@ -391,7 +388,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             isNearEnd.value = isNearEnd2;
           }
         }
-        let isNearStart = tmp.isNearStart;
+        let isNearStart = sharedValues.isNearStart;
         const isNearStart2 = state.isNearStart;
         if (isNearStart) {
           if (typeof isNearStart.set === "function") {
@@ -400,7 +397,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             isNearStart.value = isNearStart2;
           }
         }
-        let isWithinMaintainScrollAtEndThreshold = tmp.isWithinMaintainScrollAtEndThreshold;
+        let isWithinMaintainScrollAtEndThreshold = sharedValues.isWithinMaintainScrollAtEndThreshold;
         const isWithinMaintainScrollAtEndThreshold2 = state.isWithinMaintainScrollAtEndThreshold;
         if (isWithinMaintainScrollAtEndThreshold) {
           if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
@@ -409,7 +406,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
             isWithinMaintainScrollAtEndThreshold.value = isWithinMaintainScrollAtEndThreshold2;
           }
         }
-        const scrollOffset = tmp.scrollOffset;
+        const scrollOffset = sharedValues.scrollOffset;
         const scroll = state.scroll;
         if (scrollOffset) {
           if (typeof scrollOffset.set === "function") {
@@ -419,7 +416,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           }
         }
         let listenResult;
-        if (tmp.activeStickyIndex) {
+        if (sharedValues.activeStickyIndex) {
           listenResult = state.listen("activeStickyIndex", (value) => {
             const activeStickyIndex = closure_1.activeStickyIndex;
             if (activeStickyIndex) {
@@ -433,7 +430,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         }
         items = [listenResult, , , , , ];
         let listenResult1;
-        if (tmp.isAtEnd) {
+        if (sharedValues.isAtEnd) {
           listenResult1 = state.listen("isAtEnd", (value) => {
             const isAtEnd = closure_1.isAtEnd;
             if (isAtEnd) {
@@ -447,7 +444,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         }
         items[1] = listenResult1;
         let listenResult2;
-        if (tmp.isAtStart) {
+        if (sharedValues.isAtStart) {
           listenResult2 = state.listen("isAtStart", (value) => {
             const isAtStart = closure_1.isAtStart;
             if (isAtStart) {
@@ -461,7 +458,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         }
         items[2] = listenResult2;
         let listenResult3;
-        if (tmp.isNearEnd) {
+        if (sharedValues.isNearEnd) {
           listenResult3 = state.listen("isNearEnd", (value) => {
             const isNearEnd = closure_1.isNearEnd;
             if (isNearEnd) {
@@ -475,7 +472,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         }
         items[3] = listenResult3;
         let listenResult4;
-        if (tmp.isNearStart) {
+        if (sharedValues.isNearStart) {
           listenResult4 = state.listen("isNearStart", (value) => {
             const isNearStart = closure_1.isNearStart;
             if (isNearStart) {
@@ -489,7 +486,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         }
         items[4] = listenResult4;
         let listenResult5;
-        if (tmp.isWithinMaintainScrollAtEndThreshold) {
+        if (sharedValues.isWithinMaintainScrollAtEndThreshold) {
           listenResult5 = state.listen("isWithinMaintainScrollAtEndThreshold", (value) => {
             const isWithinMaintainScrollAtEndThreshold = closure_1.isWithinMaintainScrollAtEndThreshold;
             if (isWithinMaintainScrollAtEndThreshold) {
@@ -507,7 +504,6 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           const nextResult = iter.next();
           while (iter !== undefined) {
             if (null != nextResult) {
-              let tmp4 = nextResult;
               let tmp3Result = tmp3();
             }
             continue;
@@ -515,6 +511,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         };
       }
     }
+    obj = items;
   }, items);
   obj = {};
   const merged = Object.assign(tmp);

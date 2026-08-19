@@ -33,10 +33,10 @@ export const useScrollable = () => {
         id = null;
       }
       if (id !== id.id) {
-        if (tmp.current) {
-          closure_1.current = tmp.current;
+        if (ref.current) {
+          closure_1.current = ref.current;
         }
-        tmp.current = id;
+        ref.current = id;
       }
     }, []),
     removeScrollableRef: callback((current) => {
@@ -53,6 +53,7 @@ export const useScrollable = () => {
         if (findNodeHandleResult === id) {
           ref.current = ref2.current;
         }
+        const obj = ref(ref2[3]);
       } catch (err) {
         return tmp;
       }

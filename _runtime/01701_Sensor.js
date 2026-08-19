@@ -2,7 +2,7 @@
 
 // Module 1701 (Sensor)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const Sensor = arg1;
 class Sensor {

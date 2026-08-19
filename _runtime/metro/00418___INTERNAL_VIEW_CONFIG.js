@@ -7,7 +7,7 @@ import processColorElement from "processColorElement" /* 80 */;
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let obj = { uiViewClassName: "AndroidSwipeRefreshLayout", directEventTypes: { topRefresh: { registrationName: "onRefresh" } }, validAttributes: null };
 if ("default" in processColorElement) {

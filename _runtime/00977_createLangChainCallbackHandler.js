@@ -9,12 +9,11 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
   if (arg0 === undefined) {
     obj = {};
   }
-  let flag;
   let flag2;
   let map;
   let exitSpan;
   obj = undefined;
-  flag = obj.recordInputs;
+  let flag = obj.recordInputs;
   if (flag == null) {
     flag = false;
   }
@@ -43,18 +42,18 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
     ignoreCustomEvent: false,
     raiseError: true,
     awaitHandlers: null,
-    handleLLMStart(arg0, arr, closure_0, arg3, arg4, invocation_params, ls_provider) {
+    handleLLMStart(kwargs, arr, closure_0, arg3, arg4, invocation_params, ls_provider) {
       obj = flag(flag2[0]);
       const invocationParams = obj.getInvocationParams(invocation_params);
-      let result = flag(flag2[0]).extractLLMRequestAttributes(arg0, arr, closure_0, invocationParams, ls_provider);
+      let result = flag(flag2[0]).extractLLMRequestAttributes(kwargs, arr, closure_0, invocationParams, ls_provider);
       const obj2 = flag(flag2[0]);
-      obj = { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.pipeline", attributes: null };
+      { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.pipeline", attributes: null };
       obj = {};
       const merged = Object.assign(result);
       obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.pipeline";
       obj[2] = obj;
       flag(flag2[2]).startSpanManual(obj, (arg0) => {
-        const result = closure_1_2.set(closure_0, arg0);
+        const result = map.set(closure_0, arg0);
         return arg0;
       });
     },
@@ -63,13 +62,13 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       const invocationParams = obj.getInvocationParams(invocation_params);
       let result = flag(flag2[0]).extractChatModelRequestAttributes(id, arr, closure_0, invocationParams, ls_provider);
       const obj2 = flag(flag2[0]);
-      obj = { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.chat", attributes: null };
+      { name: "" + result[flag(undefined, flag2[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] + " " + result[flag(undefined, flag2[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE], op: "gen_ai.chat", attributes: null };
       obj = {};
       const merged = Object.assign(result);
       obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.chat";
       obj[2] = obj;
       flag(flag2[2]).startSpanManual(obj, (arg0) => {
-        const result = closure_1_2.set(closure_0, arg0);
+        const result = map.set(closure_0, arg0);
         return arg0;
       });
     },
@@ -87,14 +86,14 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        value = obj.get(arg1);
+        value = map.get(arg1);
         let isRecordingResult1;
         if (value != null) {
           isRecordingResult1 = value.isRecording();
         }
         if (isRecordingResult1) {
           value.end();
-          obj.delete(arg1);
+          map.delete(arg1);
         }
         const obj3 = flag(flag2[0]);
       }
@@ -127,6 +126,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       const obj5 = flag(flag2[5]);
       obj[0] = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".llm_error_handler" };
       obj5.captureException(arg0, obj);
+      obj1 = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".llm_error_handler" };
     },
     handleChainStart(name) {
       closure_0 = arg2;
@@ -135,15 +135,16 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         const _JSON = JSON;
         obj["langchain.chain.inputs"] = JSON.stringify(arg1);
       }
-      obj = { name: "chain " + tmp, op: "gen_ai.invoke_agent", attributes: null };
+      { name: "chain " + tmp, op: "gen_ai.invoke_agent", attributes: null };
       obj = {};
       const merged = Object.assign(obj);
       obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.invoke_agent";
       obj[2] = obj;
       flag(flag2[2]).startSpanManual(obj, (arg0) => {
-        const result = closure_1_2.set(closure_0, arg0);
+        const result = map.set(closure_0, arg0);
         return arg0;
       });
+      const tmp2Result = flag(flag2[2]);
     },
     handleChainEnd(arg0, arg1) {
       obj = map;
@@ -201,6 +202,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       const obj5 = flag(flag2[5]);
       obj[0] = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".chain_error_handler" };
       obj5.captureException(arg0, obj);
+      obj1 = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".chain_error_handler" };
     },
     handleToolStart(name, gen_ai_tool_input) {
       closure_0 = arg2;
@@ -210,15 +212,16 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       if (closure_0) {
         obj["gen_ai.tool.input"] = gen_ai_tool_input;
       }
-      obj = { name: "execute_tool " + tmp, op: "gen_ai.execute_tool", attributes: null };
+      { name: "execute_tool " + tmp, op: "gen_ai.execute_tool", attributes: null };
       obj = {};
       const merged = Object.assign(obj);
       obj[flag(flag2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "gen_ai.execute_tool";
       obj[2] = obj;
       flag(flag2[2]).startSpanManual(obj, (arg0) => {
-        const result = closure_1_2.set(closure_0, arg0);
+        const result = map.set(closure_0, arg0);
         return arg0;
       });
+      const tmp2Result = flag(flag2[2]);
     },
     handleToolEnd(arg0, arg1) {
       obj = map;
@@ -276,6 +279,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       const obj5 = flag(flag2[5]);
       obj[0] = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".tool_error_handler" };
       obj5.captureException(arg0, obj);
+      obj1 = { handled: false, type: "" + flag(flag2[6]).LANGCHAIN_ORIGIN + ".tool_error_handler" };
     },
     copy() {
       return obj;

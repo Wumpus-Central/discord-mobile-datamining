@@ -38,7 +38,6 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
           if (sum < items1.length) {
             text1 = `${arr[num4]},`;
           }
-          let str2 = text1;
           str4 = text1;
           num4 = sum;
         } while (sum < items1.length);

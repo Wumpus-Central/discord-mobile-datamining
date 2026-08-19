@@ -4,10 +4,9 @@
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let closure_0 = arg1;
 ({ Linking: obj1, NativeModules } = get_ActivityIndicator);
 ({ RNIapModule: c3, RNIapModule } = NativeModules);
-closure_0 = importDefaultResult((arg0) => {
+importDefaultResult((arg0) => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -56,7 +55,7 @@ closure_0 = importDefaultResult((arg0) => {
             obj1[0] = arg1;
             return obj1;
           } else {
-            let obj2 = callback(closure_1_1[3]);
+            let obj2 = callback(dependencyMap[3]);
             const result = obj2.checkNativeAndroidAvailable();
             closure_2 = closure_1_2;
             const openURL = closure_1_2.openURL;
@@ -90,7 +89,7 @@ closure_0 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult((arg0) => {
+let closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c3 = 0;

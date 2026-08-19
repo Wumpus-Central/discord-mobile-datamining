@@ -3,18 +3,19 @@
 // Module 6673 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 6579 */;
 import extractFontDefault from "extractFont" /* 6593 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
 import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6670 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6674 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const TextPath = arg1;
+const TextPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -59,16 +60,17 @@ class TextPath {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = closure_1_1(closure_1_2[8])(matrix);
+        tmp = appendTransformPropsDefault(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const merged = Object.assign(matrix, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(matrix, true)));
+      const merged = Object.assign(matrix, lib(dependencyMap[9]).pickNotNil(extractFontDefault(matrix, true)));
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(matrix);
       }
+      const obj = lib(dependencyMap[9]);
     };
     return tmp3Result;
   }

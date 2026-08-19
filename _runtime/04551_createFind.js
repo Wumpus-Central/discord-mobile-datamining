@@ -9,10 +9,10 @@ export default function createFind(arg0) {
     const callback = ObjectResult;
     let fn = arg1;
     let tmp5 = arg0;
-    if (!callback(closure_1_1[0])(arg0)) {
-      const tmp6 = tmp2(tmp3[1])(arg1, 3);
+    if (!callback(dependencyMap[0])(arg0)) {
+      const tmp6 = tmp2(dependencyMap[1])(arg1, 3);
       closure_1 = tmp6;
-      tmp5 = tmp2(tmp3[2])(arg0);
+      tmp5 = tmp2(dependencyMap[2])(arg0);
       fn = function u(arg0) {
         return callback(ObjectResult[arg0], arg0, ObjectResult);
       };

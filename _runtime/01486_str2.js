@@ -5,9 +5,7 @@
 export default (arg0, arg1, arg2, arg3) => {
   c0 = arg0;
   let str = arg1;
-  str = arg1;
   let str2 = arg2;
-  str2 = arg2;
   if (!arg1) {
     str = "&";
   }
@@ -20,20 +18,20 @@ export default (arg0, arg1, arg2, arg3) => {
   if (typeof arg0 === "object") {
     const _Object = Object;
     const keys = Object.keys(tmp);
-    let mapped = keys.map((arg0) => {
-      str = arg0;
-      if ("string" !== typeof arg0) {
+    let mapped = keys.map((item, index) => {
+      str = item;
+      if ("string" !== typeof item) {
         if ("boolean" === tmp) {
           let str5 = "false";
-          if (arg0) {
+          if (item) {
             str5 = "true";
           }
           str = str5;
         } else if ("number" === tmp) {
           let _isFinite = isFinite;
           let str4 = "";
-          if (isFinite(arg0)) {
-            str4 = arg0;
+          if (isFinite(item)) {
+            str4 = item;
           }
           str = str4;
         } else {
@@ -42,21 +40,21 @@ export default (arg0, arg1, arg2, arg3) => {
       }
       const sum = encodeURIComponent(str) + str2;
       const _undefined = sum;
-      if (Array.isArray(_undefined[arg0])) {
-        const mapped = tmp3[arg0].map((arg0) => {
-          str = arg0;
-          if ("string" !== typeof arg0) {
+      if (Array.isArray(_undefined[item])) {
+        const mapped = tmp3[item].map((item, index) => {
+          str = item;
+          if ("string" !== typeof item) {
             if ("boolean" === tmp2) {
               let str5 = "false";
-              if (arg0) {
+              if (item) {
                 str5 = "true";
               }
               str = str5;
             } else if ("number" === tmp2) {
               const _isFinite = isFinite;
               let str4 = "";
-              if (isFinite(arg0)) {
-                str4 = arg0;
+              if (isFinite(item)) {
+                str4 = item;
               }
               str = str4;
             } else {
@@ -66,10 +64,9 @@ export default (arg0, arg1, arg2, arg3) => {
           return closure_0 + encodeURIComponent(str);
         });
         let joined = mapped.join(str);
-        const arr = tmp3[arg0];
       } else {
         let str6 = tmp4;
-        if ("string" !== typeof tmp3[arg0]) {
+        if ("string" !== typeof tmp3[item]) {
           if ("boolean" === tmp5) {
             let str10 = "false";
             if (tmp4) {
@@ -102,16 +99,8 @@ export default (arg0, arg1, arg2, arg3) => {
       const _encodeURIComponent = encodeURIComponent;
       if ("string" !== typeof arg3) {
         if ("boolean" === tmp2) {
-          let str6 = "false";
-          if (arg3) {
-            str6 = "true";
-          }
         } else if ("number" === tmp2) {
           let _isFinite = isFinite;
-          let tmp4 = str9;
-          if (isFinite(arg3)) {
-            tmp4 = arg3;
-          }
         }
       }
       let tmp7 = tmp;

@@ -1,8 +1,8 @@
 // === Module 6539: CardContent ===
 
 // Module 6539 (CardContent)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -35,7 +35,7 @@ export const CardContent = function CardContent(layout) {
               element = <style />;
             }
             element.id = "__react-navigation-stack-mobile-chrome-viewport-fix";
-            function updateStyle() {
+            function updateStyle(event) {
               const items = [":root { --vh: " + 0.01 * window.innerHeight + "px; }", "body { height: calc(var(--vh, 1vh) * 100); }"];
               element.textContent = items.join("\n");
             }

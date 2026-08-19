@@ -2,11 +2,11 @@
 
 // Module 1030 (_isNativeReflectConstruct)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 const BrowserClient = require;
@@ -113,17 +113,17 @@ class BrowserClient {
     if (_document) {
       _document2 = require("ignoreNextOnError").WINDOW.document;
       str2 = "visibilitychange";
-      listener = _document2.addEventListener("visibilitychange", () => {
+      listener = _document2.addEventListener("visibilitychange", (event) => {
         if ("hidden" === lib(sendClientReports[6]).WINDOW.document.visibilityState) {
           if (sendClientReports) {
             lib._flushOutcomes();
           }
           if (enableLogs) {
-            let tmpResult = tmp(tmp2[7]);
+            let tmpResult = lib(sendClientReports[7]);
             const result = tmpResult._INTERNAL_flushLogsBuffer(lib);
           }
           if (enableMetrics) {
-            tmpResult = tmp(tmp2[7]);
+            tmpResult = lib(sendClientReports[7]);
             const result1 = tmpResult._INTERNAL_flushMetricsBuffer(lib);
           }
         }
@@ -159,8 +159,7 @@ let items = [
     value: function _prepareEvent(platform) {
       platform.platform = platform.platform || "javascript";
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "_prepareEvent", this);
+      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

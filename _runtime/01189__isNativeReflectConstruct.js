@@ -2,14 +2,14 @@
 
 // Module 1189 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const RNSentryOnDrawReporterNoop = arg1;
+const RNSentryOnDrawReporterNoop = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -72,7 +72,7 @@ export const getRNSentryOnDrawReporter = () => {
   } else {
     if (!obj.isExpoGo()) {
       if (closure_10) {
-        const ReactNative = tmp(997).ReactNativeLibraries.ReactNative;
+        const ReactNative = RNSentryOnDrawReporterNoop(997).ReactNativeLibraries.ReactNative;
         let prop;
         if (null !== ReactNative) {
           if (undefined !== ReactNative) {
@@ -80,7 +80,7 @@ export const getRNSentryOnDrawReporter = () => {
           }
         }
         if (prop) {
-          const ReactNative2 = tmp(997).ReactNativeLibraries.ReactNative;
+          const ReactNative2 = RNSentryOnDrawReporterNoop(997).ReactNativeLibraries.ReactNative;
           result = ReactNative2.requireNativeComponent(RNSentryOnDrawReporter);
         }
       }

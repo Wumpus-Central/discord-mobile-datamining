@@ -4,7 +4,7 @@
 import noopAll from "noop" /* 19 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 349 */;
 import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,10 +14,8 @@ function AnimatedScrollViewWithInvertedRefreshControl(ref) {
   let merged = Object.assign(ref, Object.create(null));
   const items = [merged];
   ({ intermediatePropsForRefreshControl, intermediatePropsForScrollView } = callback3(() => {
-    const tmpResult = merged(closure_1_1[3])(merged(closure_1_1[4])(merged.style));
-    obj = { intermediatePropsForRefreshControl: obj, intermediatePropsForScrollView: null };
-    obj = { style: tmpResult.outer };
-    obj = {};
+    const tmpResult = merged(dependencyMap[3])(merged(dependencyMap[4])(merged.style));
+    const obj = {};
     merged = Object.assign(merged);
     obj.style = tmpResult.inner;
     obj[1] = obj;
@@ -29,10 +27,8 @@ function AnimatedScrollViewWithInvertedRefreshControl(ref) {
   const merged1 = Object.assign(first);
   obj.ref = tmp3[1];
   const tmp2 = callback3(() => {
-    const tmpResult = merged(closure_1_1[3])(merged(closure_1_1[4])(merged.style));
-    obj = { intermediatePropsForRefreshControl: obj, intermediatePropsForScrollView: null };
-    obj = { style: tmpResult.outer };
-    obj = {};
+    const tmpResult = merged(dependencyMap[3])(merged(dependencyMap[4])(merged.style));
+    const obj = {};
     merged = Object.assign(merged);
     obj.style = tmpResult.inner;
     obj[1] = obj;

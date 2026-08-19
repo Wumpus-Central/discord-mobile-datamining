@@ -2,10 +2,10 @@
 
 // Module 1776 (_isNativeReflectConstruct)
 import PinwheelOut from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,9 +56,8 @@ class PinwheelIn {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { scale: delayFunction(delay, first(1, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("0rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
@@ -116,9 +115,8 @@ class PinwheelOut {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { scale: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("5rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;

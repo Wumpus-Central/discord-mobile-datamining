@@ -16,7 +16,6 @@ import _isNativeReflectConstruct5 from "_isNativeReflectConstruct" /* 1205 */;
 import warn from "warn" /* 1207 */;
 
 for (const key10013 in require("debugSymbolicatorIntegration")) {
-  let tmp2 = key10013;
   arg5[key10013] = require("debugSymbolicatorIntegration")[key10013];
   continue;
 }

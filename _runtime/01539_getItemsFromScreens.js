@@ -2,26 +2,26 @@
 
 // Module 1539 (getItemsFromScreens)
 import useRoute from "useRoute" /* 1540 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["screen", "if"];
 let closure_3 = ["screens", "groups"];
 let c5 = importAllResult;
 const memoResult = importAllResult.memo((component) => {
   let obj = useRoute;
   obj = { route: obj.useRoute() };
-  return importAllResult.createElement(component.component, { route: obj.useRoute() });
+  return <component.component route={obj.useRoute()} />;
 });
 let error = memoResult;
 memoResult.displayName = "Memo(Screen)";
-function getItemsFromScreens(arg0, arg1) {
-  closure_0 = arg0;
-  const entries = Object.entries(arg1);
-  return entries.map((arg0) => {
-    [tmp, obj] = arg0;
+function getItemsFromScreens(merged, screens) {
+  closure_0 = merged;
+  const entries = Object.entries(screens);
+  return entries.map((item, index) => {
+    [tmp, obj] = item;
     let _if;
     let element;
     closure_2 = {};
@@ -38,7 +38,7 @@ function getItemsFromScreens(arg0, arg1) {
           flag = true;
         }
       }
-      obj3 = Screen(closure_1_1[4]);
+      obj3 = Screen(dependencyMap[4]);
     } else {
       flag = false;
       component = obj;
@@ -49,7 +49,7 @@ function getItemsFromScreens(arg0, arg1) {
           flag = true;
         }
       }
-      obj2 = Screen(closure_1_1[4]);
+      obj2 = Screen(dependencyMap[4]);
     }
     if (null == component) {
       const _Error = Error;
@@ -62,7 +62,7 @@ function getItemsFromScreens(arg0, arg1) {
       } else {
         obj = { component: null };
         obj[0] = component;
-        element = closure_1_6(closure_1_7, obj);
+        element = <closure_1_7 component={null} />;
       }
       return () => {
         if (null == _if) {
@@ -72,7 +72,7 @@ function getItemsFromScreens(arg0, arg1) {
           obj.children = function children() {
             return closure_3;
           };
-          let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
+          let tmp2 = <Screen key={closure_0} name={null} />;
         } else {
           tmp2 = null;
         }
@@ -99,25 +99,20 @@ export const createComponentForStaticNavigation = function createComponentForSta
   }
   items = [];
   for (const key10019 in config) {
-    let tmp26 = key10019;
     let tmp = "screens" === key10019;
     if (tmp) {
       tmp = screens;
     }
     if (tmp) {
       let push = items.push;
-      let tmp2 = getItemsFromScreens;
       if (typeof getItemsFromScreens !== "function") {
-        let str3 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       let _Object = Object;
       let entries = Object.entries(screens);
       let items1 = [];
-      let tmp3 = items1;
-      let num = 0;
-      let arraySpreadResult = HermesBuiltin.arraySpread(entries.map((arg0) => {
-        [tmp, obj] = arg0;
+      let arraySpreadResult = HermesBuiltin.arraySpread(entries.map((item, index) => {
+        [tmp, obj] = item;
         let _if;
         let element;
         closure_2 = {};
@@ -134,7 +129,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               flag = true;
             }
           }
-          obj3 = Screen(closure_1_1[4]);
+          obj3 = Screen(dependencyMap[4]);
         } else {
           flag = false;
           component = obj;
@@ -145,7 +140,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               flag = true;
             }
           }
-          obj2 = Screen(closure_1_1[4]);
+          obj2 = Screen(dependencyMap[4]);
         }
         if (null == component) {
           const _Error = Error;
@@ -158,7 +153,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
           } else {
             obj = { component: null };
             obj[0] = component;
-            element = closure_1_6(closure_1_7, obj);
+            element = <closure_1_7 component={null} />;
           }
           return () => {
             if (null == _if) {
@@ -168,7 +163,7 @@ export const createComponentForStaticNavigation = function createComponentForSta
               obj.children = function children() {
                 return closure_3;
               };
-              let tmp2 = closure_2_6(closure_1_0, obj, closure_0);
+              let tmp2 = <Screen key={closure_0} name={null} />;
             } else {
               tmp2 = null;
             }
@@ -176,9 +171,6 @@ export const createComponentForStaticNavigation = function createComponentForSta
           };
         }
       }), 0);
-      let tmp5 = push;
-      let tmp6 = items1;
-      let tmp7 = items;
       let applyResult = HermesBuiltin.apply(items1, items);
     }
     let tmp9 = "groups" === key10019;
@@ -192,28 +184,22 @@ export const createComponentForStaticNavigation = function createComponentForSta
       let _Object2 = Object;
       let entries1 = Object.entries(groups);
       let items2 = [];
-      let tmp10 = items2;
-      let num2 = 0;
-      arraySpreadResult = HermesBuiltin.arraySpread(entries1.map((arg0) => {
-        [Screen, ] = arg0;
-        closure_3 = undefined;
-        closure_3 = closure_1_8(merged, merged.screens);
+      arraySpreadResult = HermesBuiltin.arraySpread(entries1.map((item, index) => {
+        [Screen, ] = item;
+        closure_3 = getItemsFromScreens(merged, merged.screens);
         return () => {
           if (null == _if) {
             const obj = { navigationKey: null };
             obj[0] = closure_0;
             merged = Object.assign(merged);
             obj.children = tmp;
-            let tmp3 = closure_2_6(_if, obj, closure_0);
+            let tmp3 = <_if key={closure_0} navigationKey={null} />;
           } else {
             tmp3 = null;
           }
           return tmp3;
         };
       }), 0);
-      let tmp12 = push2;
-      let tmp13 = items2;
-      let tmp14 = items;
       let applyResult1 = HermesBuiltin.apply(items2, items);
       continue;
     }
@@ -269,9 +255,9 @@ export const createComponentForStaticNavigation = function createComponentForSta
             obj = {};
             const merged = Object.assign(screenListeners);
             if (typeof screenOptions.screenListeners === "function") {
-              let screenListeners2 = obj3.screenListeners(arg0);
+              let screenListeners2 = screenOptions.screenListeners(arg0);
             } else {
-              screenListeners2 = obj3.screenListeners;
+              screenListeners2 = screenOptions.screenListeners;
             }
             const merged1 = Object.assign(screenListeners2);
             return obj;
@@ -305,7 +291,7 @@ export const createComponentForStaticNavigationDeprecated = function createCompo
   console.warn("`createComponentForStaticNavigation` is deprecated. Use `tree.getComponent()` instead.");
   return getComponent.getComponent();
 };
-export const createPathConfigForStaticNavigation = function createPathConfigForStaticNavigation(config, initialRouteName, arg2) {
+export const createPathConfigForStaticNavigation = function createPathConfigForStaticNavigation(linking, initialRouteName, arg2) {
   let tmp = arg2;
   closure_0 = arg2;
   c2 = false;
@@ -336,7 +322,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
       for (const item10023 of values) {
         let _Object = Object;
         let keys = Object.keys(item10023.screens);
-        let item = keys.forEach((arg0) => set.add(arg0));
+        let item = keys.forEach((item, index) => set.add(item));
         continue;
       }
       if (!set.has(initialRouteName)) {
@@ -362,8 +348,8 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
         return num;
       });
-      const mapped = sorted.map((arg0) => {
-        [str, tmp] = arg0;
+      const mapped = sorted.map((item, index) => {
+        [str, tmp] = item;
         obj = {};
         if (tmp2) {
           if (typeof tmp.linking === "string") {
@@ -385,18 +371,16 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
         if (typeof obj.path === "string") {
           obj.path = obj.path.replace(/^\/+|\/+$/g, "");
-          const str15 = obj.path;
         }
         if (null != obj.alias) {
           const alias = obj.alias;
-          obj.alias = alias.map((str) => {
-            if (typeof str === "string") {
-              let replaced = str.replace(/^\/+|\/+$/g, "");
+          obj.alias = alias.map((item, index) => {
+            if (typeof item === "string") {
+              let replaced = item.replace(/^\/+|\/+$/g, "");
             } else {
               replaced = {};
-              const merged = Object.assign(str);
-              replaced.path = str.path.replace(/^\/+|\/+$/g, "");
-              const str2 = str.path;
+              const merged = Object.assign(item);
+              replaced.path = item.path.replace(/^\/+|\/+$/g, "");
             }
             return replaced;
           });
@@ -434,7 +418,6 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         let tmp19 = closure_1_3;
         if (closure_1_3) {
           tmp19 = null == closure_0 || str === closure_0;
-          const tmp20 = null == closure_0 || str === closure_0;
         }
         if (!("screens" in obj && null != obj.screens)) {
           if (!tmp8) {
@@ -447,14 +430,13 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
             let tmp34 = !closure_0;
             if (closure_0) {
               tmp34 = "screens" in obj && obj.screens;
-              const tmp35 = "screens" in obj && obj.screens;
             }
             if (!tmp34) {
               tmp34 = tmp8;
             }
             if (!tmp34) {
               if (null != obj.path) {
-                if (!tmp15) {
+                if (!closure_1_2) {
                   if ("" === obj.path) {
                     obj = undefined;
                     c3 = true;
@@ -478,13 +460,12 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
                   }
                 }
               } else {
-                let tmp36 = tmp15;
-                if (!tmp15) {
+                let tmp36 = closure_1_2;
+                if (!closure_1_2) {
                   tmp36 = !tmp18;
                 }
                 if (!tmp36) {
                   tmp36 = null != closure_0 && str !== closure_0;
-                  const tmp37 = null != closure_0 && str !== closure_0;
                 }
                 if (!tmp36) {
                   tmp36 = c3;
@@ -514,20 +495,19 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         }
         if (tmp27) {
           tmp27 = tmp.screen.config.screens || tmp.screen.config.groups;
-          const tmp28 = tmp.screen.config.screens || tmp.screen.config.groups;
         }
         if (tmp27) {
           tmp26 = set(tmp.screen, tmp9, tmp16, tmp19);
         }
+        tmp2 = "linking" in tmp && undefined !== tmp.linking;
       });
-      return Object.fromEntries(mapped.filter((arg0) => {
-        [, tmp] = arg0;
+      return Object.fromEntries(mapped.filter((item, index) => {
+        [, tmp] = item;
         return Object.keys(tmp).length > 0;
       }));
     }
     obj = {};
     for (const key10053 in arg0.config) {
-      let tmp17 = key10053;
       screens = "screens" === key10053;
       if (screens) {
         screens = arg0.config.screens;
@@ -551,8 +531,8 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
       } else {
         let _Object2 = Object;
         let entries = Object.entries(arg0.config.groups);
-        let item1 = entries.forEach((arg0) => {
-          [, tmp] = arg0;
+        let item1 = entries.forEach((item, index) => {
+          [, tmp] = item;
           let initialRouteName;
           if (obj != null) {
             initialRouteName = obj.initialRouteName;
@@ -570,7 +550,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
       return obj;
     }
   }
-  const pathConfigForTree = createPathConfigForTree(config, initialRouteName, false, true);
+  const pathConfigForTree = createPathConfigForTree(linking, initialRouteName, false, true);
   if (arg2) {
     tmp = dependencyMap;
   }

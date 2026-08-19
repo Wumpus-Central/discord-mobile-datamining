@@ -3,7 +3,7 @@
 // Module 7783 (normalize)
 import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
 import memoBuilder from "memoBuilder" /* 7784 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 function normalize(arg0) {
   let num = arg1;
@@ -23,8 +23,8 @@ function normalize(arg0) {
     return obj;
   }
 }
-function visit(arg0, num) {
-  num = arg2;
+function visit(arg0, __sentry_skip_normalization__) {
+  let num = arg2;
   if (arg2 === undefined) {
     num = Infinity;
   }
@@ -35,21 +35,20 @@ function visit(arg0, num) {
   let memoBuilderResult = arg4;
   if (arg4 === undefined) {
     memoBuilderResult = memoBuilder.memoBuilder();
-    let obj = memoBuilder;
   }
-  callback(memoBuilderResult, 2);
-  if (null != num) {
+  _slicedToArray(memoBuilderResult, 2);
+  if (null != __sentry_skip_normalization__) {
     const items = ["boolean", "string"];
-    if (!items.includes(typeof num)) {
-      if (typeof num === "number") {
+    if (!items.includes(typeof __sentry_skip_normalization__)) {
+      if (typeof __sentry_skip_normalization__ === "number") {
         let _Number = Number;
       }
-      let str = (function stringifyValue(arg0, obj) {
+      let str = (function stringifyValue(arg0, _events) {
         try {
           if ("domain" === arg0) {
-            if (obj) {
-              if (typeof obj === "object") {
-                if (obj._events) {
+            if (_events) {
+              if (typeof _events === "object") {
+                if (_events._events) {
                   return "[Domain]";
                 }
               }
@@ -59,59 +58,59 @@ function visit(arg0, num) {
             return "[DomainEmitter]";
           } else {
             if (undefined !== closure_0) {
-              if (obj === closure_0) {
+              if (_events === closure_0) {
                 return "[Global]";
               }
             }
             const _window = window;
             if (typeof window !== "undefined") {
               const _window2 = window;
-              if (obj === window) {
+              if (_events === window) {
                 return "[Window]";
               }
             }
             const _document = document;
             if (typeof document !== "undefined") {
               const _document2 = document;
-              if (obj === document) {
+              if (_events === document) {
                 return "[Document]";
               }
             }
-            if (obj.isVueViewModel(obj)) {
+            if (obj.isVueViewModel(_events)) {
               return "[VueViewModel]";
             } else {
-              let tmp4Result = tmp4(tmp5[3]);
-              if (tmp4Result.isSyntheticEvent(obj)) {
+              let tmp4Result = callback(table[3]);
+              if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
-                if (typeof obj === "number") {
+                if (typeof _events === "number") {
                   const _Number = Number;
-                  if (!Number.isFinite(obj)) {
+                  if (!Number.isFinite(_events)) {
                     const _HermesInternal = HermesInternal;
-                    return "[" + obj + "]";
+                    return "[" + _events + "]";
                   }
                 }
-                if (typeof obj === "function") {
-                  tmp4Result = tmp4(tmp5[4]);
+                if (typeof _events === "function") {
+                  tmp4Result = callback(table[4]);
                   const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4Result.getFunctionName(obj) + "]";
-                } else if (typeof obj === "symbol") {
+                  return "[Function: " + tmp4Result.getFunctionName(_events) + "]";
+                } else if (typeof _events === "symbol") {
                   const _String2 = String;
                   const _HermesInternal3 = HermesInternal;
-                  return "[" + String(obj) + "]";
-                } else if (typeof obj === "bigint") {
+                  return "[" + String(_events) + "]";
+                } else if (typeof _events === "bigint") {
                   const _String = String;
                   const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(obj) + "]";
+                  return "[BigInt: " + String(_events) + "]";
                 } else {
-                  const tmp9 = (function getConstructorName(arg0) {
-                    const prototypeOf = Object.getPrototypeOf(arg0);
+                  const tmp9 = (function getConstructorName(_events) {
+                    const prototypeOf = Object.getPrototypeOf(_events);
                     let str = "null prototype";
                     if (prototypeOf) {
                       str = prototypeOf.constructor.name;
                     }
                     return str;
-                  })(obj);
+                  })(_events);
                   const _HermesInternal6 = HermesInternal;
                   if (obj4.test(tmp9)) {
                     let combined = concat(tmp10, "]");
@@ -128,31 +127,30 @@ function visit(arg0, num) {
           const _HermesInternal5 = HermesInternal;
           return "**non-serializable** (" + tmp7 + ")";
         }
-      })(arg0, num);
+      })(arg0, __sentry_skip_normalization__);
       if (str.startsWith("[object ")) {
-        if (num.__sentry_skip_normalization__) {
-          return num;
+        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
+          return __sentry_skip_normalization__;
         } else {
-          if (typeof num.__sentry_override_normalization_depth__ === "number") {
-            num = num.__sentry_override_normalization_depth__;
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
+            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
           }
           if (0 === num) {
             return str.replace("object ", "");
-          } else if (tmp6(num)) {
+          } else if (tmp6(__sentry_skip_normalization__)) {
             return "[Circular ~]";
           } else {
-            if (num) {
-              if (typeof num.toJSON === "function") {
+            if (__sentry_skip_normalization__) {
+              if (typeof __sentry_skip_normalization__.toJSON === "function") {
                 try {
-                  return visit("", num.toJSON(), num - 1, num2, tmp8);
+                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
                 } catch (err) {
                 }
               }
             }
             const _Array = Array;
-            const tmp14 = Array.isArray(num) ? [] : {};
-            const convertToPlainObjectResult = addNonEnumerableProperty.convertToPlainObject(num);
-            let num6 = 0;
+            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
+            const convertToPlainObjectResult = addNonEnumerableProperty.convertToPlainObject(__sentry_skip_normalization__);
             const keys = Object.keys();
             if (keys !== undefined) {
               while (keys[tmp] !== undefined) {
@@ -163,16 +161,10 @@ function visit(arg0, num) {
                   continue;
                 } else {
                   if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
                     tmp14[tmp21] = "[MaxProperties ~]";
                     break;
                   } else {
-                    let tmp22 = visit;
-                    let tmp23 = tmp21;
-                    let tmp24 = num2;
-                    let tmp25 = memoBuilderResult;
                     tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    num6 = tmp20 + 1;
                     continue;
                   }
                   break;
@@ -180,7 +172,7 @@ function visit(arg0, num) {
                 break;
               }
             }
-            tmp7(num);
+            tmp7(__sentry_skip_normalization__);
             return tmp14;
           }
         }
@@ -189,7 +181,7 @@ function visit(arg0, num) {
       }
     }
   }
-  return num;
+  return __sentry_skip_normalization__;
 }
 function normalizeToSize(arg0) {
   let num = arg1;

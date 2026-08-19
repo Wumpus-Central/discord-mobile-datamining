@@ -1,6 +1,7 @@
 // === Module 1093: addPreviousTraceSpanLink ===
 
 // Module 1093 (addPreviousTraceSpanLink)
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import ignoreNextOnError from "ignoreNextOnError" /* 1028 */;
 import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 1033 */;
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
@@ -76,7 +77,6 @@ function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
         const _HermesInternal2 = HermesInternal;
         const attr = spanContext2.setAttribute(c3, "" + traceId + "-" + spanId + "-" + num2);
         tmp4 = obj;
-        const tmp11 = c3;
       }
     }
     return tmp4;
@@ -91,10 +91,9 @@ function storePreviousTraceInSessionStorage(arg0) {
     const result = sessionStorage.setItem(sentry_previous_trace, JSON.stringify(arg0));
   } catch (tmp9) {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const debug = tmp10(817).debug;
+      const debug = registerSpanErrorInstrumentation.debug;
       debug.warn("Could not store previous trace in sessionStorage", tmp9);
     }
-    tmp10 = require;
   }
 }
 function getPreviousTraceFromSessionStorage() {
@@ -128,16 +127,18 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
     tmp2 = getPreviousTraceFromSessionStorage();
   }
   closure_1 = tmp2;
-  on.on("spanStart", (arg0) => {
-    if (obj.getRootSpan(arg0) === arg0) {
-      const currentScope = callback(closure_1[9]).getCurrentScope();
-      const tmp5 = closure_1_4(closure_1, arg0, currentScope.getPropagationContext());
+  on.on("spanStart", (spanContext2) => {
+    if (obj.getRootSpan(spanContext2) === spanContext2) {
+      const currentScope = callback(tmp2[9]).getCurrentScope();
+      const tmp5 = addPreviousTraceSpanLink(closure_1, spanContext2, currentScope.getPropagationContext());
       closure_1 = tmp5;
       if (callback) {
-        closure_1_5(tmp5);
+        storePreviousTraceInSessionStorage(tmp5);
       }
-      const tmpResult = callback(closure_1[9]);
+      const tmpResult = callback(tmp2[9]);
     }
+    obj = callback(closure_1[9]);
+    tmp2 = closure_1;
   });
   c2 = true;
   if (linkPreviousTrace.consistentTraceSampling) {
@@ -151,7 +152,6 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
             c2 = false;
           }
         }
-        obj = {};
         const merged = Object.assign(propagationContext);
         obj = {};
         const merged1 = Object.assign(propagationContext.dsc);
@@ -168,8 +168,6 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
         const merged2 = Object.assign(spanAttributes.spanAttributes);
         obj1[callback(closure_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = closure_1.sampleRate;
         spanAttributes.spanAttributes = obj1;
-        const tmp = callback;
-        const tmp2 = closure_1;
       }
     });
   }

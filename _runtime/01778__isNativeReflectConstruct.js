@@ -2,10 +2,10 @@
 
 // Module 1778 (_isNativeReflectConstruct)
 import RotateOutUpRight from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,9 +56,8 @@ class RotateInDownLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
@@ -118,9 +117,8 @@ class RotateInDownRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
@@ -180,9 +178,8 @@ class RotateInUpLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
@@ -242,9 +239,8 @@ class RotateInUpRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("0deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(0, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(0, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(0, closure_2)) };
@@ -305,9 +301,8 @@ class RotateOutDownLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
@@ -368,9 +363,8 @@ class RotateOutDownRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
@@ -431,9 +425,8 @@ class RotateOutUpLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("-90deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
@@ -494,9 +487,8 @@ class RotateOutUpRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { rotate: delayFunction(delay, first("90deg", closure_2)) };
         const items = [obj, { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) }, ];
         obj1 = { translateX: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };
         items[2] = { translateY: delayFunction(delay, first(-currentWidth.currentWidth / 2 - currentWidth.currentHeight / 2, closure_2)) };

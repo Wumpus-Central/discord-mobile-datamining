@@ -28,13 +28,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -47,7 +45,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -664,7 +661,6 @@ if (self2) {
                 }
                 const _HermesInternal12 = HermesInternal;
                 let combined3 = "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " + str29 + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str28 + " " + str + " " + str36;
-                const str35 = code.maximum;
               } else {
                 let str30 = str29;
                 if (str29 == null) {
@@ -672,7 +668,6 @@ if (self2) {
                 }
                 const _HermesInternal11 = HermesInternal;
                 combined3 = "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " + str30 + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str28 + " " + code.maximum.toString();
-                const str31 = code.maximum;
               }
               return combined3;
             case "D":

@@ -2,10 +2,10 @@
 
 // Module 1781 (_isNativeReflectConstruct)
 import ZoomOutEasyDown from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,9 +56,7 @@ class ZoomIn {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        const obj = { scale: delayFunction(delay, first(1, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -120,9 +118,7 @@ class ZoomInRotate {
       const callbackV = tmp.callbackV;
       const initialValues = tmp.initialValues;
       const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        const obj = { scale: delayFunction(delay, first(1, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -184,9 +180,7 @@ class ZoomInLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -244,9 +238,7 @@ class ZoomInRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -305,9 +297,7 @@ class ZoomInUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -366,9 +356,7 @@ class ZoomInDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(translateY) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -427,9 +415,7 @@ class ZoomInEasyUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(targetHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -488,9 +474,7 @@ class ZoomInEasyDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(targetHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(1, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -549,9 +533,7 @@ class ZoomOut {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        const obj = { scale: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -614,9 +596,7 @@ class ZoomOutRotate {
       const callbackV = tmp.callbackV;
       const initialValues = tmp.initialValues;
       const fn = function t() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        const obj = { scale: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first(str, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -675,9 +655,7 @@ class ZoomOutLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -736,9 +714,7 @@ class ZoomOutRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -797,9 +773,7 @@ class ZoomOutUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(-windowHeight.windowHeight, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(-windowHeight.windowHeight, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -858,9 +832,7 @@ class ZoomOutDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(windowHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(windowHeight.windowHeight, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(windowHeight.windowHeight, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -919,9 +891,7 @@ class ZoomOutEasyUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(currentHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(-currentHeight.currentHeight, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -980,9 +950,7 @@ class ZoomOutEasyDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function t(currentHeight) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) };
+        const obj = { translateY: delayFunction(delay, first(currentHeight.currentHeight, closure_2)) };
         const items = [obj, { scale: delayFunction(delay, first(0, closure_2)) }];
         obj[0] = items;
         obj[0] = obj;

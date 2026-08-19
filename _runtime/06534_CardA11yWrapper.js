@@ -1,7 +1,7 @@
 // === Module 6534: CardA11yWrapper ===
 
 // Module 6534 (CardA11yWrapper)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

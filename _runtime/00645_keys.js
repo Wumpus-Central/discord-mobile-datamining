@@ -1,7 +1,7 @@
 // === Module 645: keys ===
 
 // Module 645 (keys)
-function createStoreImpl(arg0) {
+function createStoreImpl(fn) {
   const set = new Set();
   function setState(fn) {
     let tmp = fn;
@@ -22,7 +22,7 @@ function createStoreImpl(arg0) {
         const _Object = Object;
         merged = Object.assign({}, merged, tmp);
       }
-      const item = set.forEach((arg0) => arg0(merged, merged));
+      const item = set.forEach((item, index) => item(merged, merged));
     }
   }
   function getState() {
@@ -37,16 +37,16 @@ function createStoreImpl(arg0) {
     subscribe(arg0) {
       closure_0 = arg0;
       set.add(arg0);
-      return () => closure_1_1.delete(closure_0);
+      return () => set.delete(closure_0);
     }
   };
-  const tmp2 = arg0(setState, getState, obj);
+  const tmp2 = fn(setState, getState, obj);
   closure_0 = tmp2;
   closure_2 = tmp2;
   return obj;
 }
-arg5.createStore = (arg0) => {
-  if (arg0) {
+arg5.createStore = (fn) => {
+  if (fn) {
     const _Set = Set;
     const set = new Set();
     function setState(fn) {
@@ -68,7 +68,7 @@ arg5.createStore = (arg0) => {
           const _Object = Object;
           merged = Object.assign({}, merged, tmp);
         }
-        const item = set.forEach((arg0) => arg0(merged, merged));
+        const item = set.forEach((item, index) => item(merged, merged));
       }
     }
     function getState() {
@@ -83,9 +83,9 @@ arg5.createStore = (arg0) => {
     obj[3] = function subscribe(arg0) {
       closure_0 = arg0;
       set.add(arg0);
-      return () => closure_1_1.delete(closure_0);
+      return () => set.delete(closure_0);
     };
-    const tmp7 = arg0(setState, getState, obj);
+    const tmp7 = fn(setState, getState, obj);
     closure_0 = tmp7;
     closure_2 = tmp7;
     let tmp = obj;

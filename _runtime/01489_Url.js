@@ -1009,7 +1009,7 @@ arg5.parse = function urlParse(obj) {
       }
     }
   }
-  obj = Object.create(Url.prototype);
+  Object.create(Url.prototype);
   obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
   const parsed = obj.parse(obj, arg1, arg2);
   return obj;
@@ -1021,7 +1021,7 @@ arg5.resolve = function urlResolve(obj) {
     }
     return obj2.resolve(arg1);
   }
-  obj = Object.create(Url.prototype);
+  Object.create(Url.prototype);
   obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
   const parsed = obj.parse(obj, false, true);
   obj2 = obj;
@@ -1035,7 +1035,7 @@ arg5.resolveObject = function urlResolveObject(obj) {
       }
       object = obj2.resolveObject(arg1);
     }
-    obj = Object.create(Url.prototype);
+    Object.create(Url.prototype);
     obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
     const parsed = obj.parse(obj, false, true);
     obj2 = obj;
@@ -1051,7 +1051,7 @@ arg5.format = function urlFormat(str) {
       }
       obj = tmp5;
     }
-    obj = Object.create(Url.prototype);
+    Object.create(Url.prototype);
     obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
     const parsed = obj.parse(str, undefined, undefined);
     tmp5 = obj;

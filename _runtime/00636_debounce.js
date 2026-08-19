@@ -42,7 +42,7 @@ export default function debounce(fn, arg1, leading) {
       const diff1 = dependencyMap - (tmp - closure_7);
       let tmp14 = diff1;
       if (closure_10) {
-        tmp14 = closure_1_3(diff1, closure_4 - (tmp - closure_8));
+        tmp14 = min(diff1, closure_4 - (tmp - closure_8));
       }
       timeout = setTimeout(timerExpired, tmp14);
     }
@@ -50,7 +50,6 @@ export default function debounce(fn, arg1, leading) {
   c8 = 0;
   leading = false;
   closure_10 = false;
-  let flag = true;
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
@@ -64,14 +63,9 @@ export default function debounce(fn, arg1, leading) {
       let tmp5Result;
       if ("maxWait" in leading) {
         tmp5Result = max(tmp12(637)(leading.maxWait) || 0, tmp);
-        let tmp5 = max;
         let tmp6 = tmp12(637)(leading.maxWait) || 0;
       }
       closure_4 = tmp5Result;
-      flag = true;
-      if ("trailing" in leading) {
-        flag = leading.trailing;
-      }
     }
     function debounced() {
       const tmp = callback(641)();

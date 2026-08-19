@@ -3,8 +3,8 @@
 // Module 7773 (handleCallbackErrors)
 const require = arg1;
 const dependencyMap = arg6;
-arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
-  let fn = arg2;
+arg5.handleCallbackErrors = function handleCallbackErrors(fn) {
+  fn = arg2;
   if (arg2 === undefined) {
     fn = function t() {
 
@@ -15,9 +15,9 @@ arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
       const callback = arg1;
       const table = fn;
       if (obj.isThenable(promise)) {
-        return promise.then((arg0) => {
+        return promise.then((result) => {
           callback2();
-          return arg0;
+          return result;
         }, (arg0) => {
           callback(arg0);
           callback2();
@@ -28,7 +28,7 @@ arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
         return promise;
       }
       obj = callback(table[0]);
-    })(arg0(), arg1, fn);
+    })(fn(), arg1, fn);
   } catch (tmp5) {
     tmp3(tmp5);
     tmp2();

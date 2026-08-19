@@ -1,13 +1,13 @@
 // === Module 4242: createJSONStorage ===
 
 // Module 4242 (createJSONStorage)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-function createJSONStorage(arg0) {
+function createJSONStorage(fn) {
   closure_0 = arg1;
   try {
-    closure_1 = arg0();
+    closure_1 = fn();
     const obj = { getItem: null, setItem: null, removeItem: null };
     obj[0] = function getItem(arg0) {
       const value = store.getItem(arg0);
@@ -16,14 +16,14 @@ function createJSONStorage(arg0) {
         tmp2 = value;
       }
       if (tmp2 instanceof Promise) {
-        let nextPromise = tmp2.then(function parse(arg0) {
+        let nextPromise = tmp2.then(function parse(result) {
           let parsed = null;
-          if (null !== arg0) {
+          if (null !== result) {
             let reviver;
             if (null != reviver) {
               reviver = reviver.reviver;
             }
-            parsed = JSON.parse(arg0, reviver);
+            parsed = JSON.parse(result, reviver);
           }
           return parsed;
         });
@@ -62,12 +62,12 @@ function getTrackedConnectionState(arg0) {
 function findCallerName(arg0) {
 
 }
-function parseJsonThen(arg0, arg1) {
+function parseJsonThen(arg0, fn) {
   try {
     const _JSON = JSON;
     const parsed = JSON.parse(arg0);
     if (undefined !== parsed) {
-      arg1(parsed);
+      fn(parsed);
     }
   } catch (tmp4) {
     const _console = console;
@@ -86,10 +86,6 @@ export function combine(arg0, arg1) {
 export { createJSONStorage };
 export function devtools(arg0) {
   closure_0 = arg0;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
   return (arg0, arg1, setState) => {
     const callback = arg0;
     closure_1 = arg1;
@@ -123,17 +119,16 @@ export function devtools(arg0) {
               obj = { connection: null, stores: null };
               obj[0] = connect.connect(name);
               obj[1] = {};
-              const result = obj5.set(name.name, obj);
+              const result = store.set(name.name, obj);
               obj1 = { type: "tracked", store: null };
               obj1[1] = store;
               const merged1 = Object.assign(obj);
               return obj1;
             }
-            obj5 = store;
           }
         })(store, tmp5, tmp2);
         const connection = tmp9.connection;
-        const tmpResult = obj(tmp9, closure_1_3);
+        const tmpResult = tmp(tmp9, closure_1_3);
         closure_7 = tmpResult;
         c8 = true;
         setState.setState = (arg0, arg1, str) => {
@@ -150,7 +145,7 @@ export function devtools(arg0) {
                 let tmp10;
                 if (error.stack) {
                   const parts = str2.split("\n");
-                  const findIndexResult = parts.findIndex((arr) => arr.includes("api.setState"));
+                  const findIndexResult = parts.findIndex((item, index) => item.includes("api.setState"));
                   if (findIndexResult >= 0) {
                     let str5;
                     if (null != parts[findIndexResult + 1]) {
@@ -186,37 +181,33 @@ export function devtools(arg0) {
             }
             if (undefined === store) {
               if (null != connection) {
-                obj6.send(tmp3, callback2());
+                connection.send(tmp3, callback2());
               }
-              obj6 = connection;
-            } else {
-              if (null != connection) {
-                obj1 = {};
-                const merged = Object.assign(tmp3);
-                const _HermesInternal = HermesInternal;
-                obj1.type = "" + tmp15 + "/" + tmp3.type;
-                if (typeof user !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const value = store.get(user.name);
-                if (value) {
-                  const _Object = Object;
-                  const _Object2 = Object;
-                  const entries = Object.entries(value.stores);
-                  let fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                    [tmp, obj] = arg0;
-                    const items = [tmp, obj.getState()];
-                    return items;
-                  }));
-                } else {
-                  fromEntriesResult = {};
-                }
-                const obj2 = {};
-                const merged1 = Object.assign(fromEntriesResult);
-                obj2[tmp15] = setState.getState();
-                obj8.send(obj1, obj2);
+            } else if (null != connection) {
+              obj1 = {};
+              const merged = Object.assign(tmp3);
+              const _HermesInternal = HermesInternal;
+              obj1.type = "" + store + "/" + tmp3.type;
+              if (typeof user !== "function") {
+                HermesBuiltin.throwTypeError();
               }
-              obj8 = connection;
+              const value = store.get(user.name);
+              if (value) {
+                const _Object = Object;
+                const _Object2 = Object;
+                const entries = Object.entries(value.stores);
+                let fromEntriesResult = Object.fromEntries(entries.map((item, index) => {
+                  [tmp, obj] = item;
+                  const items = [tmp, obj.getState()];
+                  return items;
+                }));
+              } else {
+                fromEntriesResult = {};
+              }
+              const obj2 = {};
+              const merged1 = Object.assign(fromEntriesResult);
+              obj2[store] = setState.getState();
+              connection.send(obj1, obj2);
             }
             return tmp;
           } else {
@@ -227,10 +218,10 @@ export function devtools(arg0) {
         obj[0] = function cleanup() {
           let tmp3 = connection;
           if (connection) {
-            tmp3 = typeof obj.unsubscribe === "function";
+            tmp3 = typeof connection.unsubscribe === "function";
           }
           if (tmp3) {
-            obj.unsubscribe();
+            connection.unsubscribe();
           }
           const name = user.name;
           if (undefined !== store) {
@@ -240,10 +231,9 @@ export function devtools(arg0) {
               delete tmp[tmp2];
               const _Object = Object;
               if (0 === Object.keys(value.stores).length) {
-                obj2.delete(name);
+                store.delete(name);
               }
             }
-            obj2 = store;
           }
         };
         setState.devtools = obj;
@@ -263,8 +253,8 @@ export function devtools(arg0) {
             let _Object = Object;
             let _Object2 = Object;
             let entries = Object.entries(tmpResult.stores);
-            connection.init(Object.fromEntries(entries.map((arg0) => {
-              [tmp, obj] = arg0;
+            connection.init(Object.fromEntries(entries.map((item, index) => {
+              [tmp, obj] = item;
               const items = [tmp, ];
               if (tmp === lib.store) {
                 let state = closure_10;
@@ -294,7 +284,7 @@ export function devtools(arg0) {
               lib(type.payload, (type) => {
                 if ("__setState" !== type.type) {
                   if (tmp10) {
-                    obj.dispatch(type);
+                    store.dispatch(type);
                   }
                   tmp10 = store.dispatchFromDevtools && typeof store.dispatch === "function";
                 } else if (undefined === closure_4) {
@@ -324,62 +314,54 @@ export function devtools(arg0) {
               if (undefined === store) {
                 let initResult;
                 if (null != connection) {
-                  initResult = obj5.init(setState.getState());
+                  initResult = connection.init(setState.getState());
                 }
-                obj5 = connection;
                 const tmp38 = initResult;
-              } else {
-                if (null != connection) {
-                  if (typeof user !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  let mapped = store.get(user.name);
-                  if (mapped) {
-                    const _Object3 = Object;
-                    const _Object4 = Object;
-                    let entries = Object.entries(mapped.stores);
-                    mapped = entries.map((arg0) => {
-                      [tmp, obj] = arg0;
-                      const items = [tmp, obj.getState()];
-                      return items;
-                    });
-                    let fromEntriesResult = Object.fromEntries(mapped);
-                  } else {
-                    fromEntriesResult = {};
-                  }
-                  obj7.init(fromEntriesResult);
+              } else if (null != connection) {
+                if (typeof user !== "function") {
+                  HermesBuiltin.throwTypeError();
                 }
-                obj7 = connection;
+                let mapped = store.get(user.name);
+                if (mapped) {
+                  const _Object3 = Object;
+                  const _Object4 = Object;
+                  let entries = Object.entries(mapped.stores);
+                  mapped = entries.map((item, index) => {
+                    [tmp, obj] = item;
+                    const items = [tmp, obj.getState()];
+                    return items;
+                  });
+                  let fromEntriesResult = Object.fromEntries(mapped);
+                } else {
+                  fromEntriesResult = {};
+                }
+                connection.init(fromEntriesResult);
               }
               return tmp38;
             } else if ("COMMIT" === type2) {
               if (undefined === store) {
                 if (null != connection) {
-                  obj3.init(setState.getState());
+                  connection.init(setState.getState());
                 }
-                obj3 = connection;
-              } else {
-                if (null != connection) {
-                  if (typeof user !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  let value = store.get(user.name);
-                  if (value) {
-                    let _Object = Object;
-                    let _Object2 = Object;
-                    const entries1 = Object.entries(value.stores);
-                    value = entries1.map((arg0) => {
-                      [tmp, obj] = arg0;
-                      const items = [tmp, obj.getState()];
-                      return items;
-                    });
-                    let fromEntriesResult1 = Object.fromEntries(value);
-                  } else {
-                    fromEntriesResult1 = {};
-                  }
-                  obj6.init(fromEntriesResult1);
+              } else if (null != connection) {
+                if (typeof user !== "function") {
+                  HermesBuiltin.throwTypeError();
                 }
-                obj6 = connection;
+                let value = store.get(user.name);
+                if (value) {
+                  let _Object = Object;
+                  let _Object2 = Object;
+                  const entries1 = Object.entries(value.stores);
+                  value = entries1.map((item, index) => {
+                    [tmp, obj] = item;
+                    const items = [tmp, obj.getState()];
+                    return items;
+                  });
+                  let fromEntriesResult1 = Object.fromEntries(value);
+                } else {
+                  fromEntriesResult1 = {};
+                }
+                connection.init(fromEntriesResult1);
               }
               return tmp24;
             } else if ("ROLLBACK" === type2) {
@@ -400,8 +382,8 @@ export function devtools(arg0) {
                       const _Object = Object;
                       const _Object2 = Object;
                       const entries = Object.entries(mapped.stores);
-                      mapped = entries.map((arg0) => {
-                        [tmp, obj] = arg0;
+                      mapped = entries.map((item, index) => {
+                        [tmp, obj] = item;
                         const items = [tmp, obj.getState()];
                         return items;
                       });
@@ -409,9 +391,8 @@ export function devtools(arg0) {
                     } else {
                       fromEntriesResult = {};
                     }
-                    obj3.init(fromEntriesResult);
+                    closure_6.init(fromEntriesResult);
                   }
-                  obj3 = closure_6;
                 }
               });
             } else {
@@ -446,8 +427,8 @@ export function devtools(arg0) {
                   const _JSON = JSON;
                   const _JSON2 = JSON;
                   const json = JSON.stringify(store.getState());
-                  if (json !== JSON.stringify(arg0[tmp])) {
-                    callback(arg0[tmp]);
+                  if (json !== JSON.stringify(arg0[closure_4])) {
+                    callback(arg0[closure_4]);
                   }
                 } else {
                   callback(arg0);
@@ -462,6 +443,7 @@ export function devtools(arg0) {
       }
     } catch (err) {
     }
+    tmp = obj;
   };
 }
 export function persist(arg0, arg1) {
@@ -471,7 +453,7 @@ export function persist(arg0, arg1) {
     const callback = arg0;
     closure_1 = arg1;
     let obj = {
-      storage: closure_1_8(() => globalThis.localStorage),
+      storage: createJSONStorage(() => globalThis.localStorage),
       partialize(arg0) {
         return arg0;
       },
@@ -517,12 +499,12 @@ export function persist(arg0, arg1) {
       function hydrate() {
         if (storage) {
           c3 = false;
-          let item = set.forEach((arg0) => {
+          let item = set.forEach((item, index) => {
             let tmp = callback();
             if (null == tmp) {
               tmp = closure_10;
             }
-            return arg0(tmp);
+            return item(tmp);
           });
           const onRehydrateStorage = obj.onRehydrateStorage;
           if (null == onRehydrateStorage) {
@@ -600,15 +582,15 @@ export function persist(arg0, arg1) {
                 };
                 return obj;
               }
-            })(obj.name).then((version) => {
-              if (version) {
-                if (typeof version.version === "number") {
-                  if (version.version !== closure_2.version) {
+            })(obj.name).then((result) => {
+              if (result) {
+                if (typeof result.version === "number") {
+                  if (result.version !== closure_2.version) {
                     if (closure_2.migrate) {
-                      const migrateResult = closure_2.migrate(version.state, version.version);
+                      const migrateResult = closure_2.migrate(result.state, result.version);
                       if (migrateResult instanceof Promise) {
-                        let nextPromise = migrateResult.then((arg0) => {
-                          const items = [true, arg0];
+                        let nextPromise = migrateResult.then((result) => {
+                          const items = [true, result];
                           return items;
                         });
                       } else {
@@ -621,7 +603,7 @@ export function persist(arg0, arg1) {
                     }
                   }
                 }
-                let items = [false, version.state];
+                let items = [false, result.state];
                 return items;
               }
               const items1 = [false, undefined];
@@ -660,15 +642,15 @@ export function persist(arg0, arg1) {
                 };
                 return obj;
               }
-            })(obj.name).then((version) => {
-              if (version) {
-                if (typeof version.version === "number") {
-                  if (version.version !== closure_2.version) {
+            })(obj.name).then((result) => {
+              if (result) {
+                if (typeof result.version === "number") {
+                  if (result.version !== closure_2.version) {
                     if (closure_2.migrate) {
-                      const migrateResult = closure_2.migrate(version.state, version.version);
+                      const migrateResult = closure_2.migrate(result.state, result.version);
                       if (migrateResult instanceof Promise) {
-                        let nextPromise = migrateResult.then((arg0) => {
-                          const items = [true, arg0];
+                        let nextPromise = migrateResult.then((result) => {
+                          const items = [true, result];
                           return items;
                         });
                       } else {
@@ -681,13 +663,13 @@ export function persist(arg0, arg1) {
                     }
                   }
                 }
-                let items = [false, version.state];
+                let items = [false, result.state];
                 return items;
               }
               const items1 = [false, undefined];
               return items1;
-            }).then((arg0) => {
-              [tmp2, tmp3] = bindResult(arg0, 2);
+            }).then((result) => {
+              [tmp2, tmp3] = bindResult(result, 2);
               let tmp6 = callback();
               if (null == tmp6) {
                 tmp6 = closure_10;
@@ -699,15 +681,13 @@ export function persist(arg0, arg1) {
                 if (typeof closure_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                obj = {};
-                const merged = Object.assign(tmp5());
+                const merged = Object.assign(callback());
                 obj = { state: null, version: null };
                 obj[0] = closure_2.partialize(obj);
                 obj[1] = closure_2.version;
                 return item.setItem(closure_2.name, obj);
               }
-              const tmp = bindResult(arg0, 2);
-              tmp5 = callback;
+              const tmp = bindResult(result, 2);
             });
             return ((closure_0) => {
               try {
@@ -742,15 +722,15 @@ export function persist(arg0, arg1) {
                 };
                 return obj;
               }
-            })(obj.name).then((version) => {
-              if (version) {
-                if (typeof version.version === "number") {
-                  if (version.version !== closure_2.version) {
+            })(obj.name).then((result) => {
+              if (result) {
+                if (typeof result.version === "number") {
+                  if (result.version !== closure_2.version) {
                     if (closure_2.migrate) {
-                      const migrateResult = closure_2.migrate(version.state, version.version);
+                      const migrateResult = closure_2.migrate(result.state, result.version);
                       if (migrateResult instanceof Promise) {
-                        let nextPromise = migrateResult.then((arg0) => {
-                          const items = [true, arg0];
+                        let nextPromise = migrateResult.then((result) => {
+                          const items = [true, result];
                           return items;
                         });
                       } else {
@@ -763,13 +743,13 @@ export function persist(arg0, arg1) {
                     }
                   }
                 }
-                let items = [false, version.state];
+                let items = [false, result.state];
                 return items;
               }
               const items1 = [false, undefined];
               return items1;
-            }).then((arg0) => {
-              [tmp2, tmp3] = bindResult(arg0, 2);
+            }).then((result) => {
+              [tmp2, tmp3] = bindResult(result, 2);
               let tmp6 = callback();
               if (null == tmp6) {
                 tmp6 = closure_10;
@@ -781,25 +761,23 @@ export function persist(arg0, arg1) {
                 if (typeof closure_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                obj = {};
-                const merged = Object.assign(tmp5());
+                const merged = Object.assign(callback());
                 obj = { state: null, version: null };
                 obj[0] = closure_2.partialize(obj);
                 obj[1] = closure_2.version;
                 return item.setItem(closure_2.name, obj);
               }
-              const tmp = bindResult(arg0, 2);
-              tmp5 = callback;
-            }).then(() => {
+              const tmp = bindResult(result, 2);
+            }).then((result) => {
               if (null != closure_0) {
                 tmp(closure_9, undefined);
               }
               closure_9 = closure_1_1();
               c3 = true;
-              const item = closure_1_5.forEach((arg0) => arg0(closure_9));
-            }).catch((arg0) => {
+              const item = set1.forEach((item, index) => item(closure_9));
+            }).catch((error) => {
               if (null != closure_0) {
-                tmp(undefined, arg0);
+                tmp(undefined, error);
               }
             });
           } else {
@@ -809,7 +787,6 @@ export function persist(arg0, arg1) {
               tmp8 = closure_10;
             }
             typeof call === "unknown" ? onRehydrateStorage(tmp8) : call(obj, tmp8);
-            let tmp6 = obj;
           }
         }
       }
@@ -840,14 +817,14 @@ export function persist(arg0, arg1) {
         closure_0 = arg0;
         set.add(arg0);
         return () => {
-          closure_1_4.delete(closure_0);
+          set.delete(closure_0);
         };
       };
       obj[6] = function onFinishHydration(arg0) {
         closure_0 = arg0;
         set1.add(arg0);
         return () => {
-          closure_1_5.delete(closure_0);
+          set1.delete(closure_0);
         };
       };
       setState.persist = obj;
@@ -894,11 +871,11 @@ export function subscribeWithSelector(arg0) {
   return (arg0, arg1, subscribe) => {
     const callback = subscribe;
     subscribe = subscribe.subscribe;
-    subscribe.subscribe = (arg0, arg1, equalityFn) => {
-      subscribe = arg0;
-      const subscribe2 = arg1;
-      let tmp = arg0;
-      if (arg1) {
+    subscribe.subscribe = (fn, fn2, equalityFn) => {
+      subscribe = fn;
+      const subscribe2 = fn2;
+      let tmp = fn;
+      if (fn2) {
         equalityFn = undefined;
         if (null != equalityFn) {
           equalityFn = equalityFn.equalityFn;
@@ -907,13 +884,13 @@ export function subscribeWithSelector(arg0) {
           const _Object = Object;
           equalityFn = Object.is;
         }
-        closure_3 = arg0(subscribe.getState());
+        closure_3 = fn(subscribe.getState());
         let fireImmediately;
         if (null != equalityFn) {
           fireImmediately = equalityFn.fireImmediately;
         }
-        const fn = function o(arg0) {
-          const tmp = callback(arg0);
+        fn = function o(state) {
+          const tmp = callback(state);
           if (!equalityFn(closure_3, tmp)) {
             closure_3 = tmp;
             callback2(tmp, closure_3);
@@ -921,7 +898,7 @@ export function subscribeWithSelector(arg0) {
         };
         tmp = fn;
         if (fireImmediately) {
-          arg1(closure_3, closure_3);
+          fn2(closure_3, closure_3);
           tmp = fn;
         }
       }

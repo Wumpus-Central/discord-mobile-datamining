@@ -2,11 +2,11 @@
 
 // Module 10344 (PaginationItem)
 import noopDefault from "noop" /* 19 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];
 let closure_4 = ["width", "height", "borderRadius", "backgroundColor"];
 noopDefault;
@@ -121,7 +121,6 @@ export const PaginationItem = (animValue) => {
     }
     const items = [0, 1, 2];
     obj = { width: null, height: null, borderRadius: null, backgroundColor: null };
-    const tmp = size;
     tmpResult = size(size2, count);
     const items1 = [width2, width, width];
     obj[0] = iter(activeDotStyle[4]).interpolate(absolute, items, items1, iter(activeDotStyle[4]).Extrapolation.CLAMP);

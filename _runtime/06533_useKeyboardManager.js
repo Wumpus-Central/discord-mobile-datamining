@@ -1,7 +1,7 @@
 // === Module 6533: useKeyboardManager ===
 
 // Module 6533 (useKeyboardManager)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 ({ Keyboard: closure_1, TextInput: obj1 } = get_ActivityIndicator);
@@ -9,21 +9,15 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 export const useKeyboardManager = function useKeyboardManager(enabled) {
   enabled = enabled.enabled;
   const focused = enabled.focused;
-  closure_2 = undefined;
-  closure_3 = undefined;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  let callback;
-  let onPageChangeCancel;
   closure_2 = enabled.useRef(undefined);
   closure_3 = enabled.useRef(0);
   closure_4 = enabled.useRef(undefined);
   closure_5 = enabled.useRef(enabled);
-  callback = enabled.useCallback(() => {
+  const callback = enabled.useCallback(() => {
     if (undefined !== ref3.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = undefined;
+      clearTimeout(ref3.current);
+      ref3.current = undefined;
     }
   }, []);
   const items = [callback];
@@ -41,7 +35,7 @@ export const useKeyboardManager = function useKeyboardManager(enabled) {
       closure_3.current = Date.now();
     }
   }, items);
-  onPageChangeCancel = enabled.useCallback(() => {
+  const onPageChangeCancel = enabled.useCallback(() => {
     if (closure_5.current) {
       callback();
       const current = ref.current;

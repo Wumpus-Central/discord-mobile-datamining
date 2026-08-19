@@ -12,14 +12,12 @@ export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   if (arg0 === undefined) {
     obj = { isStatusBarTranslucentAndroid: "r", isNavigationBarTranslucentAndroid: "accessibilityRole" };
   }
-  dependencyMap = undefined;
-  let callback;
   let callback2;
   obj = undefined;
   const tmp = callback2(null);
   dependencyMap = tmp;
   const tmp2 = callback2(-1);
-  callback = tmp2;
+  const callback = tmp2;
   const tmp3 = callback2(false);
   callback2 = tmp3;
   if (null === tmp.current) {
@@ -46,7 +44,7 @@ export const useAnimatedKeyboard = function useAnimatedKeyboard() {
     if (false === ref2.current) {
       if (null !== ref.current) {
         const current = ref.current;
-        obj = obj(ref[1]);
+        obj(ref[1]);
         const fn = function u(value, value2) {
           current.state.value = value;
           current.height.value = value2;

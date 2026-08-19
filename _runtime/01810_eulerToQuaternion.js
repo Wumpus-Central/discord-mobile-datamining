@@ -25,12 +25,12 @@ function adjustRotationToInterfaceOrientation(pitch) {
     pitch.roll = -pitch;
     const _Math2 = Math;
     pitch.yaw = yaw - Math.PI / 2;
-  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_270) {
     pitch.pitch = -roll;
     pitch.roll = pitch;
     const _Math = Math;
     pitch.yaw = yaw + Math.PI / 2;
-  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_180) {
     pitch.pitch = pitch.pitch * -1;
     pitch.roll = pitch.roll * -1;
     pitch.yaw = pitch.yaw * -1;
@@ -58,10 +58,10 @@ function adjustVectorToInterfaceOrientation(arg0) {
   if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
-  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_270) {
     arg0.x = y;
     arg0.y = -x;
-  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_180) {
     arg0.x = arg0.x * -1;
     arg0.y = arg0.y * -1;
   }
@@ -146,44 +146,45 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     sensor = ref2.current.sensor;
     const adjustToInterfaceOrientation = ref2.current.config.adjustToInterfaceOrientation;
     const obj2 = callback(ref[2]);
-    const fn = function n(arg0) {
+    const fn = function n(pitch) {
       if (adjustToInterfaceOrientation) {
         if (sensor === sensor(adjustToInterfaceOrientation[1]).SensorType.ROTATION) {
-          closure_2_6(arg0);
+          adjustRotationToInterfaceOrientation(pitch);
         } else {
-          if (typeof closure_2_7 !== "function") {
+          if (typeof adjustVectorToInterfaceOrientation !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          ({ interfaceOrientation, x, y } = arg0);
+          ({ interfaceOrientation, x, y } = pitch);
           if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_90) {
-            arg0.x = -y;
-            arg0.y = x;
+            pitch.x = -y;
+            pitch.y = x;
           } else if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_270) {
-            arg0.x = y;
-            arg0.y = -x;
+            pitch.x = y;
+            pitch.y = -x;
           } else if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_180) {
-            arg0.x = arg0.x * -1;
-            arg0.y = arg0.y * -1;
+            pitch.x = pitch.x * -1;
+            pitch.y = pitch.y * -1;
           }
         }
       }
-      sensor.value = arg0;
+      sensor.value = pitch;
       sensor(adjustToInterfaceOrientation[3]).callMicrotasks();
+      const obj = sensor(adjustToInterfaceOrientation[3]);
     };
-    obj = { adjustToInterfaceOrientation, sensorType: sensor, SensorType: callback(ref[1]).SensorType, adjustRotationToInterfaceOrientation: closure_1_6, adjustVectorToInterfaceOrientation: closure_1_7, sensorData: sensor, callMicrotasks: callback(ref[3]).callMicrotasks };
+    obj = { adjustToInterfaceOrientation, sensorType: sensor, SensorType: callback(ref[1]).SensorType, adjustRotationToInterfaceOrientation, adjustVectorToInterfaceOrientation, sensorData: sensor, callMicrotasks: callback(ref[3]).callMicrotasks };
     fn.__closure = obj;
     fn.__workletHash = 6807952122364;
     fn.__initData = closure_1_8;
     const registerSensorResult = callback(ref[2]).registerSensor(sensor, closure_2, fn);
     closure_2 = registerSensorResult;
     if (-1 !== registerSensorResult) {
-      tmp.current.unregister = () => sensor(adjustToInterfaceOrientation[2]).unregisterSensor(closure_2);
-      tmp.current.isAvailable = true;
+      ref2.current.unregister = () => sensor(adjustToInterfaceOrientation[2]).unregisterSensor(closure_2);
+      ref2.current.isAvailable = true;
     } else {
-      tmp.current.unregister = () => {
+      ref2.current.unregister = () => {
 
       };
-      tmp.current.isAvailable = false;
+      ref2.current.isAvailable = false;
     }
     return () => {
       const current = ref.current;

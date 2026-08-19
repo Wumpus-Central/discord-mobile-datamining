@@ -6,7 +6,7 @@ import disabledDefault from "disabled" /* 1873 */;
 import itemsDefault from "items" /* 1874 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopDefault;
 require("noop").useCallback;
 
@@ -41,7 +41,7 @@ export default function _default(icon) {
         tmp(isDefaultPrevented);
       }
       if (!isDefaultPrevented.isDefaultPrevented()) {
-        const KeyboardController = onPress(closure_1_2[5]).KeyboardController;
+        const KeyboardController = onPress(dependencyMap[5]).KeyboardController;
         KeyboardController.setFocusTo("prev");
       }
     }, items),
@@ -51,7 +51,7 @@ export default function _default(icon) {
     obj = { disabled: null, theme: null, type: "prev" };
     obj[0] = disabled;
     obj[1] = theme;
-    children = tmp9(icon, obj);
+    children = <icon disabled={null} theme={null} type="prev" />;
   }
   obj[8] = children;
   return <button accessibilityHint="Moves focus to the previous field" accessibilityLabel="Previous" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={onPress(1872).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS} theme={theme} onPress={useCallback((isDefaultPrevented) => {
@@ -59,7 +59,7 @@ export default function _default(icon) {
       tmp(isDefaultPrevented);
     }
     if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = onPress(closure_1_2[5]).KeyboardController;
+      const KeyboardController = onPress(dependencyMap[5]).KeyboardController;
       KeyboardController.setFocusTo("prev");
     }
   }, items)}>{null}</button>;

@@ -13,8 +13,8 @@ arg5.primitiveTagIntegration = () => ({
       if (tags.tags) {
         const _Object = Object;
         const keys = Object.keys(tags.tags);
-        const item = keys.forEach((arg0) => {
-          tags.tags[arg0] = tags(closure_1_1[0]).PrimitiveToString(tags.tags[arg0]);
+        const item = keys.forEach((item, index) => {
+          tags.tags[item] = tags(closure_1_1[0]).PrimitiveToString(tags.tags[item]);
         });
       }
     });

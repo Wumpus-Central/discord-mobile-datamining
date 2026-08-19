@@ -14,10 +14,10 @@ function _wrapAndCaptureBooleanResult(arg0) {
       tmp3 = typeof applyResult === "boolean";
     }
     if (tmp3) {
-      const result = callback(closure_1_1[2])._INTERNAL_insertFlagToScope(first, applyResult);
-      const obj = callback(closure_1_1[2]);
-      const result1 = callback(closure_1_1[2])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
-      const obj2 = callback(closure_1_1[2]);
+      const result = callback(dependencyMap[2])._INTERNAL_insertFlagToScope(first, applyResult);
+      const obj = callback(dependencyMap[2]);
+      const result1 = callback(dependencyMap[2])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
+      const obj2 = callback(dependencyMap[2]);
     }
     return applyResult;
   };
@@ -31,12 +31,12 @@ export const growthbookIntegration = setupIntegration.defineIntegration((growthb
     setupOnce() {
       const prototype = growthbookClass.prototype;
       if (typeof prototype.isOn === "function") {
-        growthbookClass(closure_1_1[1]).fill(prototype, "isOn", closure_1_2);
-        const obj = growthbookClass(closure_1_1[1]);
+        growthbookClass(dependencyMap[1]).fill(prototype, "isOn", _wrapAndCaptureBooleanResult);
+        const obj = growthbookClass(dependencyMap[1]);
       }
       if (typeof prototype.getFeatureValue === "function") {
-        growthbookClass(closure_1_1[1]).fill(prototype, "getFeatureValue", closure_1_2);
-        const obj2 = growthbookClass(closure_1_1[1]);
+        growthbookClass(dependencyMap[1]).fill(prototype, "getFeatureValue", _wrapAndCaptureBooleanResult);
+        const obj2 = growthbookClass(dependencyMap[1]);
       }
     },
     processEvent(contexts) {

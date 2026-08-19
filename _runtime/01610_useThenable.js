@@ -1,22 +1,21 @@
 // === Module 1610: useThenable ===
 
 // Module 1610 (useThenable)
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import closure_1 from "_slicedToArray" /* 32 */;
-import closure_2 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
 
 export const useThenable = function useThenable(arg0) {
   const first = items(React.useState(arg0), 1)[0];
   items = [false, undefined];
-  first.then((arg0) => {
-    items = [true, arg0];
+  first.then((result) => {
+    items = [true, result];
   });
   [tmp3, closure_2] = items(React.useState(items), 2);
   const first1 = items(tmp3, 1)[0];
   let items1 = [first, first1];
   const effect = React.useEffect(() => {
-    closure_0 = false;
     closure_0 = first(function*() {
       if (c5 === 2) {
         c5 = 3;

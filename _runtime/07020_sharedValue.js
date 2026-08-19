@@ -12,24 +12,19 @@ noopDefault;
 export default function _default(children) {
   let sharedValue;
   let sharedValue1;
-  let callback;
   let callback2;
   let callback3;
-  let callback4;
-  let callback5;
-  closure_7 = undefined;
-  closure_8 = undefined;
   let obj = sharedValue(sharedValue1[2]);
   sharedValue = obj.useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_HEIGHT);
   sharedValue1 = sharedValue(sharedValue1[2]).useSharedValue(sharedValue(sharedValue1[3]).INITIAL_CONTAINER_OFFSET);
   let tmp3 = callback2(() => "bottom-sheet-portal-" + sharedValue(sharedValue1[4]).id(), []);
-  callback = tmp3;
+  const callback = tmp3;
   callback2 = callback3([]);
-  const tmp4 = callback((arg0, current) => {
+  let tmp4 = callback((arg0, current) => {
     closure_0 = arg0;
     current = closure_3.current;
     const substr = current.slice();
-    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    const findIndexResult = substr.findIndex((item, index) => item.key === closure_0);
     if (-1 === findIndexResult) {
       let tmp5 = tmp4;
       if (substr[substr.length - 1]) {
@@ -43,7 +38,7 @@ export default function _default(children) {
               current2.dismiss();
             }
           }
-        } else if (arg2 === tmp7(tmp8[5]).MODAL_STACK_BEHAVIOR.switch) {
+        } else if (arg2 === sharedValue(sharedValue1[5]).MODAL_STACK_BEHAVIOR.switch) {
           if (tmp4.ref != null) {
             current = ref.current;
             if (current != null) {
@@ -51,8 +46,6 @@ export default function _default(children) {
             }
           }
         }
-        tmp7 = sharedValue;
-        tmp8 = sharedValue1;
       }
       if (-1 !== findIndexResult) {
         substr.splice(findIndexResult, 1);
@@ -75,7 +68,7 @@ export default function _default(children) {
     closure_0 = arg0;
     let current = closure_3.current;
     const substr = current.slice();
-    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    const findIndexResult = substr.findIndex((item, index) => item.key === closure_0);
     let tmp3 = findIndexResult === substr.length - 1;
     substr.splice(findIndexResult, 1);
     closure_3.current = substr;
@@ -89,7 +82,7 @@ export default function _default(children) {
       tmp3 = !tmp5.willUnmount;
     }
     if (tmp3) {
-      const ref = tmp.current[tmp.current.length - 1].ref;
+      const ref = closure_3.current[closure_3.current.length - 1].ref;
       if (ref != null) {
         current = ref.current;
         if (current != null) {
@@ -98,12 +91,12 @@ export default function _default(children) {
       }
     }
   }, []);
-  callback4 = tmp5;
+  const callback4 = tmp5;
   const tmp6 = callback((arg0) => {
     closure_0 = arg0;
     let current = closure_3.current;
     const substr = current.slice();
-    const findIndexResult = substr.findIndex((key) => key.key === closure_0);
+    const findIndexResult = substr.findIndex((item, index) => item.key === closure_0);
     const diff = substr.length - 1;
     if (-1 !== findIndexResult) {
       substr[findIndexResult].willUnmount = true;
@@ -117,13 +110,14 @@ export default function _default(children) {
       }
     }
     closure_3.current = substr;
+    tmp4 = findIndexResult === diff && substr.length > 1;
   }, []);
-  callback5 = tmp6;
-  let tmp7 = callback((arg0) => {
+  const callback5 = tmp6;
+  const tmp7 = callback((arg0) => {
     closure_0 = arg0;
     let current = closure_3.current;
     if (arg0) {
-      let found = current.find((key) => key.key === closure_0);
+      let found = current.find((item, index) => item.key === closure_0);
     } else {
       found = current[tmp.current.length - 1];
     }
@@ -142,10 +136,10 @@ export default function _default(children) {
     return flag;
   }, []);
   closure_7 = tmp7;
-  let tmp8 = callback(() => {
+  const tmp8 = callback(() => {
     let current = closure_3.current;
-    const mapped = current.map((ref) => {
-      if (ref.ref != null) {
+    const mapped = current.map((item, index) => {
+      if (item.ref != null) {
         const current = ref.current;
         if (current != null) {
           current.dismiss();
@@ -158,7 +152,6 @@ export default function _default(children) {
   const items1 = [tmp3, sharedValue, sharedValue1, tmp4, tmp5, tmp6];
   const obj2 = sharedValue(sharedValue1[2]);
   const tmp9 = callback2(() => ({ dismiss: closure_7, dismissAll: closure_8 }), items);
-  obj = { value: tmp9, children: null };
   obj = { value: callback2(() => ({ hostName: closure_2, containerHeight: sharedValue, containerOffset: sharedValue1, mountSheet: closure_4, unmountSheet: closure_5, willUnmountSheet: closure_6 }), items1), children: null };
   const items2 = [callback4(sharedValue(sharedValue1[7]).BottomSheetHostingContainer, { containerOffset: sharedValue1, containerHeight: sharedValue }), callback4(sharedValue(sharedValue1[8]).PortalProvider, { rootHostName: tmp3, children: children.children })];
   obj[1] = items2;

@@ -68,7 +68,6 @@ let closure_0 = asyncGeneratorStepDefault((arg0, arg1) => {
             obj1 = fetch(closure_0, obj1);
             c4 = 1;
             c5 = 1;
-            const tmp28 = closure_0;
           }
         } else if (arg0 === 1) {
           c5 = 3;

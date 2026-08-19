@@ -1,6 +1,8 @@
 // === Module 626: baseIsTypedArray ===
 
 // Module 626 (baseIsTypedArray)
+import isLength from "isLength" /* 604 */;
+import toStringTag from "toStringTag" /* 607 */;
 import isObjectLike from "isObjectLike" /* 620 */;
 
 const obj = {};
@@ -30,9 +32,9 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = isObjectLike(arg0) && tmp(604)(arg0.length);
+  let tmp3 = isObjectLike(arg0) && isLength(arg0.length);
   if (tmp3) {
-    tmp3 = obj[tmp(undefined, 607)(undefined, arg0)];
+    tmp3 = obj[toStringTag(undefined, arg0)];
   }
   return tmp3;
 };

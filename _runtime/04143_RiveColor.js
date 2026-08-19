@@ -21,7 +21,6 @@ let obj = {
     if (tmp) {
       const self = this;
       tmp = this.r === arg0.r && self.g === arg0.g && self.b === arg0.b && self.a === arg0.a;
-      const tmp2 = this.r === arg0.r && self.g === arg0.g && self.b === arg0.b && self.a === arg0.a;
     }
     return tmp;
   }
@@ -62,7 +61,7 @@ obj = {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.warn("Rive invalid hex color: " + str);
+      console.warn("Rive invalid hex color: " + "Rive invalid hex color: ");
       obj = Object.create(RiveColor.prototype);
       RiveColor(obj, RiveColor);
       obj.r = 0;

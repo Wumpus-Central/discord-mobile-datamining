@@ -2,7 +2,7 @@
 
 // Module 318 (Info)
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const FillRateHelper = global;
 class Info {
@@ -76,7 +76,7 @@ const items = [
             const diff = _performance.now() - _samplesStartTime;
             const merged = Object.assign(self._info);
             obj.total_time_spent = diff;
-            const item = arr.forEach((arg0) => arg0(obj));
+            const item = arr.forEach((item, index) => item(obj));
             self._resetData();
           }
         }
@@ -258,7 +258,7 @@ obj = {
     }
     return {
       remove() {
-        closure_3 = closure_3.filter((arg0) => closure_0 !== arg0);
+        closure_3 = closure_3.filter((item, index) => closure_0 !== item);
       }
     };
   }

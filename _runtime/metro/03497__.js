@@ -20,8 +20,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^(\d+)(\.)?/i,
   parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined);
+  valueCallback(match) {
+    return parseInt(match);
   }
 };
 const items = [/^v/i, /^n/i];

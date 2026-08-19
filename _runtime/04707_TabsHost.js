@@ -1,14 +1,14 @@
 // === Module 4707: TabsHost ===
 
 // Module 4707 (TabsHost)
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
 import { useState } from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["onNativeFocusChange", "experimentalControlNavigationStateInJS", "bottomAccessory", "nativeContainerStyle"];
 ({ Platform, StyleSheet, findNodeHandle: closure_8 } = get_ActivityIndicator);
 ({ jsx, jsxs: c9 } = jsxProd);
@@ -33,7 +33,6 @@ export default function TabsHost(onNativeFocusChange) {
         num2 = -1;
       }
       closure_2.current = num2;
-      const tmp3 = closure_2;
     } else {
       closure_2.current = -1;
     }
@@ -53,7 +52,6 @@ export default function TabsHost(onNativeFocusChange) {
   obj = { style: fillParent.fillParent, onNativeFocusChange: callback, controlNavigationStateInJS: controlledBottomTabs, nativeContainerBackgroundColor: null, ref: null };
   let backgroundColor;
   const tmp8 = callback(useState("regular"), 2);
-  const tmp9 = closure_9;
   if (nativeContainerStyle != null) {
     backgroundColor = nativeContainerStyle.backgroundColor;
   }
@@ -66,5 +64,5 @@ export default function TabsHost(onNativeFocusChange) {
   }
   items1[1] = bottomAccessory;
   obj.children = items1;
-  return tmp9(ref(4709), obj);
+  return callback(ref(4709), obj);
 };

@@ -3,10 +3,10 @@
 // Module 7820 (getNumberOfUrlSegments)
 arg5.getNumberOfUrlSegments = function getNumberOfUrlSegments(str) {
   const parts = str.split(/\\?\//);
-  return parts.filter((arg0) => {
-    let tmp = arg0.length > 0;
+  return parts.filter((item, index) => {
+    let tmp = item.length > 0;
     if (tmp) {
-      tmp = "," !== arg0;
+      tmp = "," !== item;
     }
     return tmp;
   }).length;

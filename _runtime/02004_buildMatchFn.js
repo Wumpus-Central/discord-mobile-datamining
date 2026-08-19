@@ -47,7 +47,6 @@ export default function buildMatchFn(arg0) {
           const keys = Object.keys();
           if (keys !== undefined) {
             while (keys[tmp] !== undefined) {
-              let tmp20 = tmp14;
               if (!arr2.hasOwnProperty(tmp14)) {
                 continue;
               } else {

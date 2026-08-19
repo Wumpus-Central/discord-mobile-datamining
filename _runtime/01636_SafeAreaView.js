@@ -17,11 +17,11 @@ export const SafeAreaView = noopAll.forwardRef((edges, ref) => {
       return closure_1_4;
     } else {
       const _Array = Array;
-      let rect = arr;
-      if (Array.isArray(arr)) {
-        rect = arr.reduce((arg0, arg1) => {
-          arg0[arg1] = "additive";
-          return arg0;
+      let rect = edges;
+      if (Array.isArray(edges)) {
+        rect = edges.reduce((acc, item, index) => {
+          acc[item] = "additive";
+          return acc;
         }, {});
       }
       let str = rect.top;

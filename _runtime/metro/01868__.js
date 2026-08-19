@@ -6,7 +6,7 @@ import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopDefault;
 let closure_4 = cancelAnimationDefault.createAnimatedComponent(require("nativeEventEmitter").ClippingScrollView);
 let closure_5 = { code: "function pnpm_indexTsx1(){const{inverted,bottomPadding,contentInset}=this.__closure;var _contentInset,_contentInset2,_contentInset3,_contentInset4;const dynamicTop=inverted?bottomPadding.value:0;const dynamicBottom=!inverted?bottomPadding.value:0;return{dynamic:{top:dynamicTop,bottom:dynamicBottom},effective:{top:dynamicTop+(((_contentInset=contentInset)===null||_contentInset===void 0?void 0:_contentInset.top)||0),bottom:dynamicBottom+(((_contentInset2=contentInset)===null||_contentInset2===void 0?void 0:_contentInset2.bottom)||0),left:((_contentInset3=contentInset)===null||_contentInset3===void 0?void 0:_contentInset3.left)||0,right:((_contentInset4=contentInset)===null||_contentInset4===void 0?void 0:_contentInset4.right)||0}};}" };
@@ -24,10 +24,9 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   const onContentInsetChange = bottomPadding.onContentInsetChange;
   ({ ScrollViewComponent, applyWorkaroundForContentInsetHitTestBug, children } = bottomPadding);
   const merged = Object.assign(bottomPadding, Object.create(null));
-  let sharedValue;
   let derivedValue;
   let obj = bottomPadding(contentInset[3]);
-  sharedValue = obj.useSharedValue(null);
+  const sharedValue = obj.useSharedValue(null);
   obj1 = bottomPadding(contentInset[3]);
   class T {
     constructor() {

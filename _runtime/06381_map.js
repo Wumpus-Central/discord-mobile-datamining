@@ -11,18 +11,17 @@ const map2 = new Map();
 const map3 = new Map();
 arg5.handlerIDToTag = {};
 arg5.registerGesture = function registerGesture(closure_2, closure_7) {
-  const obj = tagMessage;
   if (tmp) {
     const result = map.set(closure_2, closure_7);
     const result1 = map3.set(closure_7.config.testID, closure_2);
   }
+  tmp = tagMessage.isTestEnv() && closure_7.config.testID;
 };
 arg5.unregisterGesture = function unregisterGesture(closure_2) {
   const value = map.get(closure_2);
   let testID = value;
   if (value) {
     testID = tagMessage.isTestEnv();
-    const obj2 = tagMessage;
   }
   if (testID) {
     testID = value.config.testID;
@@ -34,10 +33,10 @@ arg5.unregisterGesture = function unregisterGesture(closure_2) {
 };
 arg5.registerHandler = function registerHandler(handlerTag, item10022, testId) {
   const result = map1.set(handlerTag, item10022);
-  const obj = tagMessage;
   if (tmp2) {
     const result1 = map3.set(testId, handlerTag);
   }
+  tmp2 = tagMessage.isTestEnv() && testId;
 };
 arg5.registerOldGestureHandler = function registerOldGestureHandler(handlerTag, arg1) {
   const result = map2.set(handlerTag, arg1);
@@ -47,10 +46,10 @@ arg5.unregisterOldGestureHandler = function unregisterOldGestureHandler(handlerT
 };
 arg5.unregisterHandler = function unregisterHandler(handlerTag, testId) {
   map1.delete(handlerTag);
-  const obj = tagMessage;
   if (tmp2) {
     map3.delete(testId);
   }
+  tmp2 = tagMessage.isTestEnv() && testId;
 };
 arg5.findHandler = function findHandler(handlerTag) {
   return map1.get(handlerTag);

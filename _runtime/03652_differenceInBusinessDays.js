@@ -94,17 +94,12 @@ export default function differenceInBusinessDays(arg0, arg1) {
       let tmp13 = result;
       if (!isSameDay.default(defaultResult1, defaultResult5)) {
         do {
-          let tmp14 = isWeekend;
-          let tmp15 = sum;
-          let tmp16 = defaultResult5;
           let num5 = 0;
           if (!isWeekend.default(defaultResult5)) {
             num5 = num2;
           }
           sum = sum + num5;
-          let tmp17 = addDays;
           defaultResult6 = addDays.default(defaultResult5, num2);
-          let tmp19 = isSameDay;
           defaultResult5 = defaultResult6;
           tmp13 = sum;
         } while (!isSameDay.default(defaultResult1, defaultResult6));

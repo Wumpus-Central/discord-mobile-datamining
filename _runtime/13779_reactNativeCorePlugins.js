@@ -108,8 +108,8 @@ const defaultResult = obj30.default();
 const model = defaultResult.model;
 const systemName = defaultResult.systemName;
 const obj18 = {
-  createSocket(url) {
-    const webSocket = new WebSocket(url);
+  createSocket(dependencyMap) {
+    const webSocket = new WebSocket(dependencyMap);
     return webSocket;
   },
   host: ((localhost) => {
@@ -270,10 +270,10 @@ let closure_13 = asyncGeneratorStep((arg0) => {
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } else if (closure_1_18.asyncStorageHandler) {
+        } else if (client.asyncStorageHandler) {
           c1 = 3;
           obj = { value: null, done: true };
-          obj[0] = closure_1_18.asyncStorageHandler.setItem(closure_1_15, tmp4);
+          obj[0] = client.asyncStorageHandler.setItem(closure_1_15, tmp4);
           return obj;
         } else {
           c1 = 3;

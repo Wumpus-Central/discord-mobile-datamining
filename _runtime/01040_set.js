@@ -35,7 +35,6 @@ function onVisibilityUpdate(type) {
           num2 = type.timeStamp;
         }
         addPageListener.removePageListener("prerenderingchange", onVisibilityUpdate, true);
-        const obj = addPageListener;
       }
     }
   }
@@ -50,10 +49,10 @@ arg5.getVisibilityWatcher = () => {
         const _globalThis = globalThis;
         const _performance = performance;
         const entriesByType = _performance.getEntriesByType("visibility-state");
-        const first = entriesByType.filter((name) => {
-          let tmp = "hidden" === name.name;
+        const first = entriesByType.filter((item, index) => {
+          let tmp = "hidden" === item.name;
           if (tmp) {
-            tmp = name.startTime > closure_0;
+            tmp = item.startTime > closure_0;
           }
           return tmp;
         })[0];

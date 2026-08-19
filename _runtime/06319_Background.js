@@ -9,7 +9,6 @@ import registerAssetDefault5 from "registerAsset" /* 6324 */;
 
 const items = [registerAssetDefault, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault5];
 for (const key10025 in require("module_6325")) {
-  let tmp2 = key10025;
   arg5[key10025] = require("module_6325")[key10025];
   continue;
 }

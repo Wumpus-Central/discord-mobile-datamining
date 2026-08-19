@@ -49,7 +49,7 @@ if (!isSunday) {
 }
 isSunday = tmp11;
 if (!isSaturday) {
-  let obj3 = { default: null };
+  const obj3 = { default: null };
   obj3[0] = isSaturday;
   let tmp13 = obj3;
 } else {
@@ -74,20 +74,18 @@ export default function addBusinessDays(arg0, arg1) {
     if (defaultResult3 < 0) {
       num3 = -1;
     }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * obj3.default(defaultResult3 / 5));
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * toInteger.default(defaultResult3 / 5));
     const _Math = Math;
     let absolute = Math.abs(defaultResult3 % 5);
     if (absolute > 0) {
       do {
         let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        let tmp9 = isWeekend;
-        let tmp10 = absolute;
         diff = absolute;
         if (!isWeekend.default(defaultResult1)) {
           diff = absolute - 1;
         }
         absolute = diff;
-        obj2 = tmp9;
+        obj2 = isWeekend;
       } while (diff > 0);
     }
     if (defaultResult2) {
@@ -117,6 +115,5 @@ export default function addBusinessDays(arg0, arg1) {
     defaultResult1.setHours(hours);
     return defaultResult1;
   }
-  obj3 = toInteger;
 };
 export default exports.default;

@@ -2,21 +2,19 @@
 
 // Module 797 (arrayFilter)
 
-export default function arrayFilter(arg0, arg1) {
+export default function arrayFilter(arr, fn) {
   let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
+  if (null != arr) {
+    num = arr.length;
   }
   const items = [];
   let num2 = 0;
   let num3 = 0;
   if (0 < num) {
     do {
-      let tmp = arg0[num3];
-      let tmp2 = num2;
-      let tmp3 = num3;
+      let tmp = arr[num3];
       let sum = num2;
-      if (arg1(tmp, num3, arg0)) {
+      if (fn(tmp, num3, arr)) {
         sum = num2 + 1;
         items[num2] = tmp;
       }

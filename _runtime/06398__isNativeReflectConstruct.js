@@ -1,11 +1,11 @@
 // === Module 6398: _isNativeReflectConstruct ===
 
 // Module 6398 (_isNativeReflectConstruct)
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_inherits" /* 98 */;
 import importDefaultResult1 from "_createClass" /* 42 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 let ContinousBaseGesture = arg1;
 function _isNativeReflectConstruct() {
@@ -177,8 +177,8 @@ let items = [
   },
   {
     key: "hitSlop",
-    value: function hitSlop(closure_22) {
-      this.config.hitSlop = closure_22;
+    value: function hitSlop(pressRetentionOffset) {
+      this.config.hitSlop = pressRetentionOffset;
       return this;
     }
   },
@@ -212,7 +212,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("simultaneousWith", tmp2);
         }
         continue;
@@ -229,7 +228,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("requireToFail", tmp2);
         }
         continue;
@@ -246,7 +244,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("blocksHandlers", tmp2);
         }
         continue;

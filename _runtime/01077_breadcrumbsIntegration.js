@@ -11,58 +11,55 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
   obj = { console: true, dom: true, fetch: true, history: true, sentry: true, xhr: true };
   let merged = Object.assign(obj);
   obj = {
     name: "Breadcrumbs",
     setup(on) {
       if (obj.console) {
-        obj = obj(closure_1_1[0]);
+        obj(dependencyMap[0]);
         obj = on;
         const result = obj.addConsoleInstrumentationHandler(function _consoleBreadcrumb(args) {
           obj = on(dom[0]);
           if (obj.getClient() === on) {
-            obj = { category: "console", data: null, level: null, message: null };
             obj = { arguments: null, logger: "console" };
             obj[0] = args.args;
             obj[1] = obj;
-            let tmpResult = tmp(tmp2[0]);
+            let tmpResult = on(dom[0]);
             obj[2] = tmpResult.severityLevelFromString(args.level);
-            tmpResult = tmp(tmp2[0]);
+            tmpResult = on(dom[0]);
             obj[3] = tmpResult.safeJoin(args.args, " ");
             if ("assert" === args.level) {
               if (false === args.args[0]) {
                 args = args.args;
-                const tmpResult1 = tmp(tmp2[0]);
+                const tmpResult1 = on(dom[0]);
                 const _HermesInternal = HermesInternal;
-                obj.message = "Assertion failed: " + tmp(tmp2[0]).safeJoin(args.slice(1), " ") || "console.assert";
+                obj.message = "Assertion failed: " + on(dom[0]).safeJoin(args.slice(1), " ") || "console.assert";
                 const args1 = args.args;
                 obj.data.arguments = args1.slice(1);
-                const tmp3 = tmp(tmp2[0]).safeJoin(args.slice(1), " ") || "console.assert";
+                const tmp3 = on(dom[0]).safeJoin(args.slice(1), " ") || "console.assert";
               }
             }
             ({ args: obj3[0], level: obj3[1] } = args);
-            tmp(tmp2[0]).addBreadcrumb(obj, { input: null, level: null });
-            obj1 = { input: null, level: null };
-            const tmpResult2 = tmp(tmp2[0]);
+            on(dom[0]).addBreadcrumb(obj, { input: null, level: null });
+            const tmpResult2 = on(dom[0]);
           }
         });
       }
       if (obj.dom) {
         obj = on;
         const dom = tmp.dom;
-        const result1 = obj(closure_1_1[1]).addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
+        const result1 = obj(dependencyMap[1]).addClickKeypressInstrumentationHandler(function _innerDomBreadcrumb(event) {
           obj = on(dom[0]);
           if (obj.getClient() === on) {
             let serializeAttribute;
             if (typeof dom === "object") {
-              serializeAttribute = tmp15.serializeAttribute;
+              serializeAttribute = dom.serializeAttribute;
             }
             let maxStringLength;
             if (typeof dom === "object") {
-              if (typeof tmp15.maxStringLength === "number") {
-                maxStringLength = tmp15.maxStringLength;
+              if (typeof dom.maxStringLength === "number") {
+                maxStringLength = dom.maxStringLength;
               }
             }
             let tmp4 = maxStringLength;
@@ -71,8 +68,8 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             let tmp6 = maxStringLength;
             if (tmp4) {
-              if (tmp(tmp2[2]).DEBUG_BUILD) {
-                const debug = tmp(tmp2[0]).debug;
+              if (on(dom[2]).DEBUG_BUILD) {
+                const debug = on(dom[0]).debug;
                 const _HermesInternal = HermesInternal;
                 debug.warn("`dom.maxStringLength` cannot exceed 1024, but a value of " + maxStringLength + " was configured. Sentry will use 1024 instead.");
               }
@@ -92,12 +89,12 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
               } else {
                 target = event;
               }
-              let tmpResult = tmp(tmp2[0]);
+              let tmpResult = on(dom[0]);
               obj = { keyAttrs: null, maxStringLength: null };
               obj[0] = tmp9;
               obj[1] = tmp6;
               let str3 = tmpResult.htmlTreeAsString(target, obj);
-              tmpResult = tmp(tmp2[0]);
+              tmpResult = on(dom[0]);
               const componentName = tmpResult.getComponentName(target);
               if (0 !== str3.length) {
                 obj = { category: null, message: null };
@@ -110,25 +107,24 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                   obj.data = obj1;
                 }
                 ({ event: obj7[0], name: obj7[1], global: obj7[2] } = event);
-                tmp(tmp2[0]).addBreadcrumb(obj, { event: null, name: null, global: null });
-                const obj2 = { event: null, name: null, global: null };
-                const tmpResult1 = tmp(tmp2[0]);
+                on(dom[0]).addBreadcrumb(obj, { event: null, name: null, global: null });
+                const tmpResult1 = on(dom[0]);
               }
             } catch (err) {
               str3 = "<unknown>";
             }
           }
         });
-        let obj2 = obj(closure_1_1[1]);
+        let obj2 = obj(dependencyMap[1]);
       }
       if (obj.xhr) {
         obj = on;
-        const result2 = obj(closure_1_1[1]).addXhrInstrumentationHandler(function _xhrBreadcrumb(xhr) {
+        const result2 = obj(dependencyMap[1]).addXhrInstrumentationHandler(function _xhrBreadcrumb(xhr) {
           obj = on(dom[0]);
           obj1 = on;
           if (obj.getClient() === on) {
             ({ startTimestamp, endTimestamp, xhr } = xhr);
-            const tmp6 = xhr[tmp(undefined, tmp2[1]).SENTRY_XHR_DATA_KEY];
+            const tmp6 = xhr[on(undefined, dom[1]).SENTRY_XHR_DATA_KEY];
             if (startTimestamp) {
               if (endTimestamp) {
                 if (tmp6) {
@@ -143,21 +139,21 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                   obj[3] = endTimestamp;
                   obj1 = { category: "xhr", data: null, type: "http", level: null };
                   obj1[1] = obj;
-                  let tmpResult = tmp(tmp2[0]);
+                  let tmpResult = on(dom[0]);
                   obj1[3] = tmpResult.getBreadcrumbLogLevelFromHttpStatusCode(status_code);
                   obj1.emit("beforeOutgoingRequestBreadcrumb", obj1, obj);
-                  tmpResult = tmp(tmp2[0]);
+                  tmpResult = on(dom[0]);
                   tmpResult.addBreadcrumb(obj1, obj);
                 }
               }
             }
           }
         });
-        let obj3 = obj(closure_1_1[1]);
+        let obj3 = obj(dependencyMap[1]);
       }
       if (obj.fetch) {
         obj = on;
-        const result3 = obj(closure_1_1[0]).addFetchInstrumentationHandler(function _fetchBreadcrumb(fetchData) {
+        const result3 = obj(dependencyMap[0]).addFetchInstrumentationHandler(function _fetchBreadcrumb(fetchData) {
           obj = on(dom[0]);
           obj1 = on;
           if (obj.getClient() === on) {
@@ -174,7 +170,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                   obj = { category: "fetch", data: null, level: "error", type: "http" };
                   obj[1] = fetchData.fetchData;
                   obj1.emit("beforeOutgoingRequestBreadcrumb", obj, obj);
-                  let tmpResult = tmp(tmp2[0]);
+                  let tmpResult = on(dom[0]);
                   tmpResult.addBreadcrumb(obj, obj);
                 } else {
                   const response = fetchData.response;
@@ -194,33 +190,33 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
                   obj2[3] = endTimestamp;
                   const obj3 = { category: "fetch", data: null, type: "http", level: null };
                   obj3[1] = obj1;
-                  tmpResult = tmp(tmp2[0]);
+                  tmpResult = on(dom[0]);
                   obj3[3] = tmpResult.getBreadcrumbLogLevelFromHttpStatusCode(obj1.status_code);
                   obj1.emit("beforeOutgoingRequestBreadcrumb", obj3, obj2);
-                  tmp(tmp2[0]).addBreadcrumb(obj3, obj2);
-                  const tmpResult1 = tmp(tmp2[0]);
+                  on(dom[0]).addBreadcrumb(obj3, obj2);
+                  const tmpResult1 = on(dom[0]);
                 }
               }
               str = fetchData.fetchData.url;
             }
           }
         });
-        const obj4 = obj(closure_1_1[0]);
+        const obj4 = obj(dependencyMap[0]);
       }
       if (obj.history) {
         obj = on;
-        const result4 = obj(closure_1_1[1]).addHistoryInstrumentationHandler(function _historyBreadcrumb(arg0) {
+        const result4 = obj(dependencyMap[1]).addHistoryInstrumentationHandler(function _historyBreadcrumb(arg0) {
           obj = on(dom[0]);
           if (obj.getClient() === on) {
             ({ from, to } = arg0);
-            let tmpResult = tmp(tmp2[0]);
-            const url2 = tmpResult.parseUrl(tmp(tmp2[3]).WINDOW.location.href);
+            let tmpResult = on(dom[0]);
+            const url2 = tmpResult.parseUrl(on(dom[3]).WINDOW.location.href);
             let parseUrlResult;
             if (from) {
-              tmpResult = tmp(tmp2[0]);
+              tmpResult = on(dom[0]);
               parseUrlResult = tmpResult.parseUrl(from);
             }
-            const url = tmp(tmp2[0]).parseUrl(to);
+            const url = on(dom[0]).parseUrl(to);
             let path;
             if (parseUrlResult != null) {
               path = parseUrlResult.path;
@@ -237,24 +233,23 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             tmp6 = url2.protocol === url.protocol && url2.host === url.host;
             tmp7 = url2.protocol === parseUrlResult.protocol && url2.host === parseUrlResult.host;
-            const tmpResult1 = tmp(tmp2[0]);
-            obj = { category: "navigation", data: null };
+            const tmpResult1 = on(dom[0]);
             obj = { from: null, to: null };
             obj[0] = relative;
             obj[1] = to;
             obj[1] = obj;
-            tmp(tmp2[0]).addBreadcrumb(obj);
-            const tmpResult2 = tmp(tmp2[0]);
+            on(dom[0]).addBreadcrumb(obj);
+            const tmpResult2 = on(dom[0]);
           }
         });
-        const obj5 = obj(closure_1_1[1]);
+        const obj5 = obj(dependencyMap[1]);
       }
       if (obj.sentry) {
         obj = on;
         on.on("beforeSendEvent", function addSentryBreadcrumb(type) {
           obj = on(dom[0]);
           if (obj.getClient() === on) {
-            let tmpResult = tmp(tmp2[0]);
+            let tmpResult = on(dom[0]);
             let str = "event";
             if ("transaction" === type.type) {
               str = "transaction";
@@ -262,7 +257,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             obj = { category: null, event_id: null, level: null, message: null };
             obj[0] = `sentry.${str}`;
             ({ event_id: obj2[1], level: obj2[2] } = type);
-            tmpResult = tmp(tmp2[0]);
+            tmpResult = on(dom[0]);
             obj[3] = tmpResult.getEventDescription(type);
             obj = { event: null };
             obj[0] = type;

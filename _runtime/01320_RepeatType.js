@@ -76,13 +76,11 @@ ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   localName = localName.localName;
   if (null === localName) {
     localName = lowerCamelCase.lowerCamelCase(localName.name);
-    const obj = lowerCamelCase;
   }
   localName.localName = localName;
   let jsonName = localName.jsonName;
   if (null === jsonName) {
     jsonName = lowerCamelCase.lowerCamelCase(localName.name);
-    const obj2 = lowerCamelCase;
   }
   localName.jsonName = jsonName;
   let NO = localName.repeat;
@@ -110,10 +108,10 @@ ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
 ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, fromJson) {
   closure_0 = arg1;
   fields = fields.fields;
-  const found = fields.find((localName) => {
-    let tmp2 = localName.localName == closure_0;
+  const found = fields.find((item, index) => {
+    let tmp2 = item.localName == closure_0;
     if (!tmp2) {
-      tmp2 = arg1 == tmp;
+      tmp2 = index == tmp;
     }
     return tmp2;
   });
@@ -134,10 +132,10 @@ ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, from
 ScalarType.readFieldOption = function readFieldOption(fields, arg1, arg2, fromJson) {
   closure_0 = arg1;
   fields = fields.fields;
-  const found = fields.find((localName) => {
-    let tmp2 = localName.localName == closure_0;
+  const found = fields.find((item, index) => {
+    let tmp2 = item.localName == closure_0;
     if (!tmp2) {
-      tmp2 = arg1 == tmp;
+      tmp2 = index == tmp;
     }
     return tmp2;
   });

@@ -2,7 +2,7 @@
 
 // Module 11580 (RNCPushNotificationIOS)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const PushNotificationIOS = importDefault;
@@ -25,11 +25,11 @@ class PushNotificationIOS {
       tmp2 = globalThis;
       _Object = Object;
       keys = Object.keys(global);
-      item = keys.forEach((arg0) => {
-        if ("aps" === arg0) {
+      item = keys.forEach((item, index) => {
+        if ("aps" === item) {
           ({ alert: obj._alert, sound: obj._sound, badge: obj._badgeCount, category: obj._category, content-available: obj._contentAvailable, thread-id: obj._threadID } = tmp);
         } else {
-          obj._data[arg0] = tmp;
+          obj._data[item] = tmp;
         }
       });
     } else {
@@ -46,6 +46,7 @@ let obj = {
       self._remoteNotificationCompleteCallbackCalled = true;
       const result = RNCPushNotificationIOS.onFinishRemoteNotification(self._notificationId, arg0);
     }
+    tmp = this._isRemote && self._notificationId && !self._remoteNotificationCompleteCallbackCalled;
   }
 };
 const items = [
@@ -190,11 +191,11 @@ const items1 = [
           if (remote.remote) {
             const _Object = Object;
             const keys = Object.keys(remote);
-            const item = keys.forEach((arg0) => {
-              if ("aps" === arg0) {
+            const item = keys.forEach((item, index) => {
+              if ("aps" === item) {
                 ({ alert: obj._alert, sound: obj._sound, badge: obj._badgeCount, category: obj._category, content-available: obj._contentAvailable, thread-id: obj._threadID } = tmp);
               } else {
-                obj._data[arg0] = tmp;
+                obj._data[item] = tmp;
               }
             });
           } else {
@@ -216,11 +217,11 @@ const items1 = [
           if (remote.remote) {
             const _Object = Object;
             const keys = Object.keys(remote);
-            const item = keys.forEach((arg0) => {
-              if ("aps" === arg0) {
+            const item = keys.forEach((item, index) => {
+              if ("aps" === item) {
                 ({ alert: obj._alert, sound: obj._sound, badge: obj._badgeCount, category: obj._category, content-available: obj._contentAvailable, thread-id: obj._threadID } = tmp);
               } else {
-                obj._data[arg0] = tmp;
+                obj._data[item] = tmp;
               }
             });
           } else {
@@ -238,6 +239,7 @@ const items1 = [
         });
       }
       const result = map.set(arg0, addListenerResult);
+      const tmp = PushNotificationIOS(38);
     }
   },
   {
@@ -259,6 +261,7 @@ const items1 = [
         value.remove();
         map.delete(arg0);
       }
+      const tmp = PushNotificationIOS(38);
     }
   },
   {
@@ -292,31 +295,31 @@ const items1 = [
     key: "getInitialNotification",
     value: function getInitialNotification() {
       const initialNotification = RNCPushNotificationIOS.getInitialNotification();
-      return initialNotification.then((remote) => {
-        let tmp = remote;
-        if (remote) {
+      return initialNotification.then((result) => {
+        let tmp = result;
+        if (result) {
           const obj = Object.create(ctor.prototype);
-          ctor = remote;
+          ctor = result;
           closure_1_2(obj, ctor);
           obj._data = {};
           obj._remoteNotificationCompleteCallbackCalled = false;
-          obj._isRemote = remote.remote;
+          obj._isRemote = result.remote;
           if (obj._isRemote) {
-            obj._notificationId = remote.notificationId;
+            obj._notificationId = result.notificationId;
           }
-          if (remote.remote) {
+          if (result.remote) {
             const _Object = Object;
-            const keys = Object.keys(remote);
-            const item = keys.forEach((arg0) => {
-              if ("aps" === arg0) {
+            const keys = Object.keys(result);
+            const item = keys.forEach((item, index) => {
+              if ("aps" === item) {
                 ({ alert: obj._alert, sound: obj._sound, badge: obj._badgeCount, category: obj._category, content-available: obj._contentAvailable, thread-id: obj._threadID } = tmp);
               } else {
-                obj._data[arg0] = tmp;
+                obj._data[item] = tmp;
               }
             });
             tmp = obj;
           } else {
-            ({ applicationIconBadgeNumber: tmp3._badgeCount, soundName: tmp3._sound, alertBody: tmp3._alert, userInfo: tmp3._data, category: tmp3._category } = remote);
+            ({ applicationIconBadgeNumber: tmp3._badgeCount, soundName: tmp3._sound, alertBody: tmp3._alert, userInfo: tmp3._data, category: tmp3._category } = result);
             tmp = obj;
           }
         }

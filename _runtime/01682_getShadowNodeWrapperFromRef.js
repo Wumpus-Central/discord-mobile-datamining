@@ -35,7 +35,6 @@ arg5.getShadowNodeWrapperFromRef = function getShadowNodeWrapperFromRef(self, fi
     let __internalInstanceHandle = self._reactInternals;
     if (__internalInstanceHandle) {
       __internalInstanceHandle = findHostInstance.findHostInstance(self).__internalInstanceHandle;
-      const obj = findHostInstance;
     }
     prop = __internalInstanceHandle;
   }

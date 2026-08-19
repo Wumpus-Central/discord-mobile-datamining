@@ -21,9 +21,9 @@ arg5.withPrevAndCurrent = function withPrevAndCurrent(arg0, arg1) {
   closure_1 = [null];
   const items = [...arg0];
   const items1 = [];
-  const item = items.forEach((arg0, arg1) => {
-    const tmp = callback(arr[arg1], arg0);
-    arr = arr.push(tmp);
+  const item = items.forEach((item, index) => {
+    const tmp = callback(arr[index], item);
+    arr.push(tmp);
     arr = items1.push(tmp);
   });
   return items1;
@@ -64,12 +64,6 @@ function deepEqual(obj, obj2) {
               return false;
             } else {
               for (const item10007 of keys) {
-                let tmp3 = item10007;
-                if (keys1.includes(item10007)) {
-                  let tmp4 = deepEqual;
-                  let tmp5 = item10007;
-                }
-                let tmp6 = obj;
                 obj.return();
                 let flag = false;
                 return false;

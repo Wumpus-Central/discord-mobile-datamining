@@ -2,15 +2,15 @@
 
 // Module 1180 (init)
 import NativeModules from "NativeModules" /* 1001 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-require = arg1;
-let fn = this;
+require = fn;
+fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
+  fn = (arg0) => {
     closure_0 = arg0;
     closure_1 = arg1;
     let _Promise = arg2;
@@ -18,12 +18,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -43,8 +43,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -58,13 +58,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -190,10 +190,6 @@ export const init = function init(maxQueueSize) {
         if (undefined !== data) {
           url = data.url;
         }
-      }
-      let str = "";
-      if (typeof url === "string") {
-        str = tmpResult.data.url;
       }
       if ("http" === tmp5) {
         if (!url) {
@@ -431,7 +427,7 @@ export const withScope = function withScope(arg0) {
     try {
       return callback(arg0);
     } catch (tmp3) {
-      const debug = callback(closure_1_1[6]).debug;
+      const debug = callback(dependencyMap[6]).debug;
       debug.error("Error while running withScope callback", tmp3);
     }
   });

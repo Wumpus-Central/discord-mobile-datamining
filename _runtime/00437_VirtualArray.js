@@ -2,7 +2,7 @@
 
 // Module 437 (VirtualArray)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class VirtualArray {
   constructor(arg0) {

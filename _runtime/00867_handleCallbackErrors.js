@@ -4,8 +4,8 @@
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
-  let fn = arg2;
+arg5.handleCallbackErrors = function handleCallbackErrors(fn) {
+  fn = arg2;
   if (arg2 === undefined) {
     fn = function t() {
 
@@ -18,16 +18,16 @@ arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
     };
   }
   try {
-    const tmp5 = arg0();
+    const tmp5 = fn();
     return (function maybeHandlePromiseRejection(promise, arg1, fn, fn2) {
       const callback = arg1;
       const table = fn;
       closure_2 = fn2;
       if (obj.isThenable(promise)) {
-        return promise.then((arg0) => {
+        return promise.then((result) => {
           callback2();
-          callback3(arg0);
-          return arg0;
+          callback3(result);
+          return result;
         }, (arg0) => {
           callback(arg0);
           callback2();

@@ -3,9 +3,8 @@
 // Module 7741 (createStackParser)
 function createStackParser() {
   let items = [...arguments];
-  closure_0 = undefined;
   const sorted = items.sort((arg0, arg1) => arg0[0] - arg1[0]);
-  closure_0 = sorted.map((arg0) => arg0[1]);
+  closure_0 = sorted.map((item, index) => item[1]);
   return (str) => {
     let num = arg1;
     if (arg1 === undefined) {
@@ -20,23 +19,16 @@ function createStackParser() {
     if (num < parts.length) {
       while (true) {
         let arr3 = parts[num];
-        let tmp = num;
         if (arr3.length <= 1024) {
-          let tmp10 = regex;
           str = arr3;
           if (regex.test(arr3)) {
-            str = arr3.replace(tmp10, "$1");
+            str = arr3.replace(regex, "$1");
           }
-          let tmp2 = str;
           if (!str.match(/\S*Error: /)) {
-            let tmp3 = regex;
-            let tmp4 = regex;
             for (const item10026 of closure_0) {
               let item10026Result = item10026(str);
               if (item10026Result) {
-                let tmp7 = item10026Result;
                 let arr = items.push(tmp6);
-                let tmp9 = obj;
                 obj.return();
                 break;
               }
@@ -54,15 +46,14 @@ function createStackParser() {
         }
       }
     }
-    return closure_1_3(items.slice(num2));
+    return stripSentryFramesAndReverse(items.slice(num2));
   };
 }
 function stripSentryFramesAndReverse(arg0) {
   if (arg0.length) {
     const _Array = Array;
     let arr = Array.from(arg0);
-    let obj = /sentryWrapped/;
-    obj = arr[arr.length - 1];
+    let obj = arr[arr.length - 1];
     if (!obj) {
       obj = {};
     }
@@ -86,16 +77,15 @@ function stripSentryFramesAndReverse(arg0) {
       tmp7 = obj1.function || "";
     }
     const substr = arr.slice(0, 50);
-    return substr.map((filename) => {
+    return substr.map((item, index) => {
       const obj = {};
-      const merged = Object.assign(filename);
-      filename = filename.filename;
+      const merged = Object.assign(item);
+      let filename = item.filename;
       if (!filename) {
         filename = arr[arr.length - 1] || {}.filename;
-        const tmp3 = arr[arr.length - 1] || {};
       }
       obj.filename = filename;
-      obj.function = filename.function || "?";
+      obj.function = item.function || "?";
       return obj;
     });
   } else {
@@ -113,11 +103,11 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     let items = [];
     try {
       const values = exception.values;
-      const item = values.forEach((stacktrace) => {
-        if (stacktrace.stacktrace.frames) {
+      const item = values.forEach((item, index) => {
+        if (item.stacktrace.frames) {
           const push = items.push;
           items = [];
-          HermesBuiltin.arraySpread(stacktrace.stacktrace.frames, 0);
+          HermesBuiltin.arraySpread(item.stacktrace.frames, 0);
           HermesBuiltin.apply(items, items);
         }
       });
@@ -126,14 +116,13 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     }
   }
 };
-arg5.getFunctionName = function getFunctionName(fn) {
+arg5.getFunctionName = function getFunctionName(name) {
   try {
-    let name = fn;
-    if (fn) {
-      name = typeof fn === "function";
+    if (name) {
+      name = typeof name === "function";
     }
     if (name) {
-      name = fn.name;
+      name = name.name;
     }
     if (!name) {
       name = c4;

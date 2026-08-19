@@ -3,7 +3,6 @@
 // Module 3793 (_typeof)
 import Parser2 from "Parser" /* 3778 */;
 
-let _createSuperInternal = require;
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -59,7 +58,7 @@ function _getPrototypeOf(arg0) {
 let closure_5 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 let closure_6 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const Parser = Parser2.Parser;
-_createSuperInternal = undefined;
+let _createSuperInternal;
 class DateParser {
   constructor() {
     if (this instanceof closure_1) {
@@ -168,7 +167,6 @@ DateParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
   _setPrototypeOf(DateParser, Parser);
 }
-_createSuperInternal = DateParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -273,7 +271,6 @@ if (0 < items.length) {
   do {
     let tmp5 = items[num];
     let flag = tmp5.enumerable;
-    let tmp6 = num;
     if (!flag) {
       flag = false;
     }

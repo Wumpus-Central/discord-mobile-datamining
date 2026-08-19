@@ -1,20 +1,20 @@
 // === Module 4859: ? ===
 
 // Module 4859
-const dependencyMap = arg4;
+const module = arg4;
 const exports = arg5;
-((arg0) => {
+((fn) => {
   if (typeof exports === "object") {
-    dependencyMap.exports = arg0();
+    module.exports = fn();
   } else {
     if (typeof globalThis.define === "function") {
       if (globalThis.define.amd) {
-        globalThis.define(arg0);
+        globalThis.define(fn);
       }
     }
     try {
       let _self = window;
-      _self.SparkMD5 = arg0();
+      _self.SparkMD5 = fn();
     } catch (err) {
       _self = tmp.self;
     }
@@ -22,12 +22,11 @@ const exports = arg5;
 })((arg0) => {
   closure_0 = arg0;
   function md5cycle(items, items2) {
-    let sum47 = items[1];
-    const sum = items[0] + ((sum47 & tmp2 | ~sum47 & tmp3) + items2[0] - 680876936 | 0);
-    const sum1 = tmp3 + ((tmp5 & sum47 | ~tmp5 & tmp2) + items2[1] - 389564586 | 0);
-    const tmp7 = (sum1 << 12 | sum1 >>> 20) + ((sum << 7 | sum >>> 25) + sum47 | 0) | 0;
-    const sum2 = tmp2 + ((tmp7 & tmp5 | ~tmp7 & sum47) + items2[2] + 606105819 | 0);
-    const sum3 = sum47 + ((tmp9 & tmp7 | ~tmp9 & tmp5) + items2[3] - 1044525330 | 0);
+    const sum = items[0] + ((tmp & tmp2 | ~tmp & tmp3) + items2[0] - 680876936 | 0);
+    const sum1 = tmp3 + ((tmp5 & tmp | ~tmp5 & tmp2) + items2[1] - 389564586 | 0);
+    const tmp7 = (sum1 << 12 | sum1 >>> 20) + ((sum << 7 | sum >>> 25) + items[1] | 0) | 0;
+    const sum2 = tmp2 + ((tmp7 & tmp5 | ~tmp7 & tmp) + items2[2] + 606105819 | 0);
+    const sum3 = tmp + ((tmp9 & tmp7 | ~tmp9 & tmp5) + items2[3] - 1044525330 | 0);
     const tmp11 = (sum3 << 22 | sum3 >>> 10) + ((sum2 << 17 | sum2 >>> 15) + tmp7 | 0) | 0;
     const sum4 = tmp5 + ((tmp11 & tmp9 | ~tmp11 & tmp7) + items2[4] - 176418897 | 0);
     const sum5 = tmp7 + ((tmp13 & tmp11 | ~tmp13 & tmp9) + items2[5] + 1200080426 | 0);
@@ -94,43 +93,35 @@ const exports = arg5;
     const sum45 = tmp89 + ((tmp95 ^ tmp93 ^ tmp91) + items2[12] - 421815835 | 0);
     const tmp97 = (sum45 << 11 | sum45 >>> 21) + ((sum44 << 4 | sum44 >>> 28) + tmp93 | 0) | 0;
     const sum46 = tmp91 + ((tmp97 ^ tmp95 ^ tmp93) + items2[15] + 530742520 | 0);
-    sum47 = tmp93 + ((tmp99 ^ tmp97 ^ tmp95) + items2[2] - 995338651 | 0);
-    sum47 = (sum47 << 23 | sum47 >>> 9) + tmp99 | 0;
-    sum47 = tmp95 + ((tmp99 ^ (sum47 | ~tmp97)) + items2[0] - 198630844 | 0);
-    sum47 = (sum47 << 6 | sum47 >>> 26) + sum47 | 0;
-    sum47 = tmp97 + ((sum47 ^ (sum47 | ~tmp99)) + items2[7] + 1126891415 | 0);
-    sum47 = (sum47 << 10 | sum47 >>> 22) + sum47 | 0;
-    sum47 = tmp99 + ((sum47 ^ (sum47 | ~sum47)) + items2[14] - 1416354905 | 0);
-    sum47 = (sum47 << 15 | sum47 >>> 17) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[5] - 57434055 | 0);
-    sum47 = (sum47 << 21 | sum47 >>> 11) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[12] + 1700485571 | 0);
-    sum47 = (sum47 << 6 | sum47 >>> 26) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[3] - 1894986606 | 0);
-    sum47 = (sum47 << 10 | sum47 >>> 22) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[10] - 1051523 | 0);
-    sum47 = (sum47 << 15 | sum47 >>> 17) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[1] - 2054922799 | 0);
-    sum47 = (sum47 << 21 | sum47 >>> 11) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[8] + 1873313359 | 0);
-    sum47 = (sum47 << 6 | sum47 >>> 26) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[15] - 30611744 | 0);
-    sum47 = (sum47 << 10 | sum47 >>> 22) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[6] - 1560198380 | 0);
-    sum47 = (sum47 << 15 | sum47 >>> 17) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[13] + 1309151649 | 0);
-    sum47 = (sum47 << 21 | sum47 >>> 11) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[4] - 145523070 | 0);
-    sum47 = (sum47 << 6 | sum47 >>> 26) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[11] - 1120210379 | 0);
-    sum47 = (sum47 << 10 | sum47 >>> 22) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[2] + 718787259 | 0);
-    sum47 = (sum47 << 15 | sum47 >>> 17) + sum47 | 0;
-    sum47 = sum47 + ((sum47 ^ (sum47 | ~sum47)) + items2[9] - 343485551 | 0);
-    items[0] = sum47 + items[0] | 0;
-    items[1] = ((sum47 << 21 | sum47 >>> 11) + sum47 | 0) + items[1] | 0;
-    items[2] = sum47 + items[2] | 0;
-    items[3] = sum47 + items[3] | 0;
+    const sum47 = tmp93 + ((tmp99 ^ tmp97 ^ tmp95) + items2[2] - 995338651 | 0);
+    const tmp101 = (sum47 << 23 | sum47 >>> 9) + ((sum46 << 16 | sum46 >>> 16) + tmp97 | 0) | 0;
+    const sum48 = tmp95 + ((tmp99 ^ (tmp101 | ~tmp97)) + items2[0] - 198630844 | 0);
+    const sum49 = tmp97 + ((tmp101 ^ (tmp103 | ~tmp99)) + items2[7] + 1126891415 | 0);
+    const tmp105 = (sum49 << 10 | sum49 >>> 22) + ((sum48 << 6 | sum48 >>> 26) + tmp101 | 0) | 0;
+    const sum50 = tmp99 + ((tmp103 ^ (tmp105 | ~tmp101)) + items2[14] - 1416354905 | 0);
+    const sum51 = tmp101 + ((tmp105 ^ (tmp107 | ~tmp103)) + items2[5] - 57434055 | 0);
+    const tmp109 = (sum51 << 21 | sum51 >>> 11) + ((sum50 << 15 | sum50 >>> 17) + tmp105 | 0) | 0;
+    const sum52 = tmp103 + ((tmp107 ^ (tmp109 | ~tmp105)) + items2[12] + 1700485571 | 0);
+    const sum53 = tmp105 + ((tmp109 ^ (tmp111 | ~tmp107)) + items2[3] - 1894986606 | 0);
+    const tmp113 = (sum53 << 10 | sum53 >>> 22) + ((sum52 << 6 | sum52 >>> 26) + tmp109 | 0) | 0;
+    const sum54 = tmp107 + ((tmp111 ^ (tmp113 | ~tmp109)) + items2[10] - 1051523 | 0);
+    const sum55 = tmp109 + ((tmp113 ^ (tmp115 | ~tmp111)) + items2[1] - 2054922799 | 0);
+    const tmp117 = (sum55 << 21 | sum55 >>> 11) + ((sum54 << 15 | sum54 >>> 17) + tmp113 | 0) | 0;
+    const sum56 = tmp111 + ((tmp115 ^ (tmp117 | ~tmp113)) + items2[8] + 1873313359 | 0);
+    const sum57 = tmp113 + ((tmp117 ^ (tmp119 | ~tmp115)) + items2[15] - 30611744 | 0);
+    const tmp121 = (sum57 << 10 | sum57 >>> 22) + ((sum56 << 6 | sum56 >>> 26) + tmp117 | 0) | 0;
+    const sum58 = tmp115 + ((tmp119 ^ (tmp121 | ~tmp117)) + items2[6] - 1560198380 | 0);
+    const sum59 = tmp117 + ((tmp121 ^ (tmp123 | ~tmp119)) + items2[13] + 1309151649 | 0);
+    const tmp125 = (sum59 << 21 | sum59 >>> 11) + ((sum58 << 15 | sum58 >>> 17) + tmp121 | 0) | 0;
+    const sum60 = tmp119 + ((tmp123 ^ (tmp125 | ~tmp121)) + items2[4] - 145523070 | 0);
+    const sum61 = tmp121 + ((tmp125 ^ (tmp127 | ~tmp123)) + items2[11] - 1120210379 | 0);
+    const tmp129 = (sum61 << 10 | sum61 >>> 22) + ((sum60 << 6 | sum60 >>> 26) + tmp125 | 0) | 0;
+    const sum62 = tmp123 + ((tmp127 ^ (tmp129 | ~tmp125)) + items2[2] + 718787259 | 0);
+    const sum63 = tmp125 + ((tmp129 ^ (tmp131 | ~tmp127)) + items2[9] - 343485551 | 0);
+    items[0] = ((sum60 << 6 | sum60 >>> 26) + tmp125 | 0) + items[0] | 0;
+    items[1] = ((sum63 << 21 | sum63 >>> 11) + ((sum62 << 15 | sum62 >>> 17) + tmp129 | 0) | 0) + items[1] | 0;
+    items[2] = ((sum62 << 15 | sum62 >>> 17) + tmp129 | 0) + items[2] | 0;
+    items[3] = tmp129 + items[3] | 0;
   }
   function md51(hello) {
     items = [1732584193, -271733879, -1732584194, 271733878];
@@ -148,11 +139,10 @@ const exports = arg5;
           items1[num3 >> 2] = sum + tmp5 + (substr.charCodeAt(num3 + 3) << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmpResult = tmp(items, items1);
+        let tmpResult = md5cycle(items, items1);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp = md5cycle;
     }
     const substr1 = hello.substring(num2 - 64);
     const items2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -177,7 +167,6 @@ const exports = arg5;
     }
     const match = 8 * hello.length.toString(16).match(/(.*?)(.{0,8})$/);
     const parsed = parseInt(match[2], 16);
-    const str = 8 * hello.length;
     const str2 = 8 * hello.length.toString(16);
     items2[14] = parsed;
     items2[15] = parseInt(match[1], 16) || 0;
@@ -401,7 +390,6 @@ const exports = arg5;
         let result = 8 * num2;
         let text = `${arr[tmp >> tmp3 + 4 & 15] + arr[tmp >> tmp3 & 15]}`;
         num2 = num2 + 1;
-        let str = text;
       } while (num2 < 4);
       md51Result[num] = text;
       num = num + 1;
@@ -475,11 +463,10 @@ const exports = arg5;
           items[num3 >> 2] = subarrayResult[num3] + (subarrayResult[num3 + 1] << 8) + (subarrayResult[num3 + 2] << 16) + (subarrayResult[num3 + 3] << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmp5Result = tmp5(tmp6, items);
+        let tmp5Result = md5cycle(tmp6, items);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp5 = md5cycle;
     }
     const diff = num2 - 64;
     if (diff < uint8Array.length) {
@@ -509,11 +496,9 @@ const exports = arg5;
       let num3 = 0;
       do {
         do {
-          let tmp5 = items;
           let result = 8 * num3;
           let text = `${items[tmp3 >> tmp6 + 4 & 15] + items[tmp3 >> tmp6 & 15]}`;
           num3 = num3 + 1;
-          let str = text;
         } while (num3 < 4);
         _hash[num2] = text;
         num2 = num2 + 1;
@@ -586,11 +571,10 @@ const exports = arg5;
           items1[num3 >> 2] = subarrayResult[num3] + (subarrayResult[num3 + 1] << 8) + (subarrayResult[num3 + 2] << 16) + (subarrayResult[num3 + 3] << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmpResult = tmp(items, items1);
+        let tmpResult = md5cycle(items, items1);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp = md5cycle;
     }
     const diff = num2 - 64;
     if (diff < uint8Array.length) {
@@ -621,7 +605,6 @@ const exports = arg5;
     }
     const match = 8 * uint8Array.length.toString(16).match(/(.*?)(.{0,8})$/);
     const parsed = parseInt(match[2], 16);
-    const str = 8 * uint8Array.length;
     const str2 = 8 * uint8Array.length.toString(16);
     items2[14] = parsed;
     items2[15] = parseInt(match[1], 16) || 0;
@@ -631,11 +614,9 @@ const exports = arg5;
       let num9 = 0;
       do {
         do {
-          let tmp18 = items;
           let result = 8 * num9;
           let text = `${items[tmp16 >> tmp19 + 4 & 15] + items[tmp16 >> tmp19 & 15]}`;
           num9 = num9 + 1;
-          let str3 = text;
         } while (num9 < 4);
         items[num8] = text;
         num8 = num8 + 1;

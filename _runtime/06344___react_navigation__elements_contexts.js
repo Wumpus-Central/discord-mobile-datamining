@@ -1,10 +1,8 @@
 // === Module 6344: __react_navigation__elements_contexts ===
 
 // Module 6344 (__react_navigation__elements_contexts)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-let __react_navigation__elements_contexts = "__react_navigation__elements_contexts";
-__react_navigation__elements_contexts = globalThis.__react_navigation__elements_contexts;
 if (__react_navigation__elements_contexts == null) {
   const _Map = Map;
   __react_navigation__elements_contexts = new Map();
@@ -17,9 +15,8 @@ export const getNamedContext = function getNamedContext(FrameContext, arg1) {
     const context = React.createContext(arg1);
     context.displayName = FrameContext;
     const _globalThis = globalThis;
-    const result = globalThis[tmp].set(FrameContext, context);
+    const result = globalThis[__react_navigation__elements_contexts].set(FrameContext, context);
     value = context;
-    const obj2 = globalThis[tmp];
   }
   return value;
 };

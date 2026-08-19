@@ -3,22 +3,22 @@
 // Module 13752
 
 export default {
-  isASCIIDigit(arg0) {
-    let tmp = arg0 >= 48;
+  isASCIIDigit(decodeResult) {
+    let tmp = decodeResult >= 48;
     if (tmp) {
-      tmp = arg0 <= 57;
+      tmp = decodeResult <= 57;
     }
     return tmp;
   },
-  isASCIIAlpha(buffer) {
-    let tmp = buffer >= 65;
+  isASCIIAlpha(input) {
+    let tmp = input >= 65;
     if (tmp) {
-      tmp = buffer <= 90;
+      tmp = input <= 90;
     }
     if (!tmp) {
-      let tmp2 = buffer >= 97;
+      let tmp2 = input >= 97;
       if (tmp2) {
-        tmp2 = buffer <= 122;
+        tmp2 = input <= 122;
       }
       tmp = tmp2;
     }
@@ -45,22 +45,22 @@ export default {
     }
     return tmp;
   },
-  isASCIIHex(arg0) {
-    let tmp = arg0 >= 48;
+  isASCIIHex(decodeResult) {
+    let tmp = decodeResult >= 48;
     if (tmp) {
-      tmp = arg0 <= 57;
+      tmp = decodeResult <= 57;
     }
     if (!tmp) {
-      let tmp2 = arg0 >= 65;
+      let tmp2 = decodeResult >= 65;
       if (tmp2) {
-        tmp2 = arg0 <= 70;
+        tmp2 = decodeResult <= 70;
       }
       tmp = tmp2;
     }
     if (!tmp) {
-      let tmp3 = arg0 >= 97;
+      let tmp3 = decodeResult >= 97;
       if (tmp3) {
-        tmp3 = arg0 <= 102;
+        tmp3 = decodeResult <= 102;
       }
       tmp = tmp3;
     }

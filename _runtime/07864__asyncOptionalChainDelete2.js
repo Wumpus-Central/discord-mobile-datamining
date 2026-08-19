@@ -1,11 +1,11 @@
 // === Module 7864: _asyncOptionalChainDelete2 ===
 
 // Module 7864 (_asyncOptionalChainDelete2)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _asyncOptionalChainDelete2() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;

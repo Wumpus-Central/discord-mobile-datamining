@@ -8,22 +8,21 @@ function registerHost(arg0, arg1) {
 }
 function removePortal(closure_21) {
   const _require = arg2;
-  if (arg1 in closure_21) {
-    const findIndexResult = closure_21[arg1].findIndex((name) => name.name === portalName);
+  if (arg1 in dependencyMap) {
+    const findIndexResult = dependencyMap[arg1].findIndex((item, index) => item.name === portalName);
     if (-1 !== findIndexResult) {
-      closure_21[arg1].splice(findIndexResult, 1);
-      const arr = closure_21[arg1];
+      dependencyMap[arg1].splice(findIndexResult, 1);
     }
-    return closure_21;
+    return dependencyMap;
   } else {
-    let obj = _require(4253);
-    obj = { component: null, method: null, params: null };
+    _require(4253);
+    const obj = { component: null, method: null, params: null };
     obj[0] = reducer.name;
     obj[1] = removePortal.name;
     const _HermesInternal = HermesInternal;
     obj[2] = "Failed to remove portal '" + arg2 + "', '" + arg1 + "' was not registered!";
     obj.print(obj);
-    return closure_21;
+    return dependencyMap;
   }
 }
 function reducer(arg0, type) {
@@ -54,7 +53,7 @@ function reducer(arg0, type) {
         obj[hostName2] = [];
       }
     }
-    const findIndexResult = obj[hostName2].findIndex((name) => name.name === portalName);
+    const findIndexResult = obj[hostName2].findIndex((item, index) => item.name === portalName);
     if (-1 !== findIndexResult) {
       obj[hostName2][findIndexResult].node = node;
     } else {
@@ -62,7 +61,6 @@ function reducer(arg0, type) {
       obj[0] = portalName2;
       obj[1] = node;
       let arr = obj[hostName2].push(obj);
-      const arr2 = obj[hostName2];
     }
     return obj;
   } else if (tmp4(4248).ACTIONS.REMOVE_PORTAL === type) {
@@ -71,12 +69,11 @@ function reducer(arg0, type) {
       HermesBuiltin.throwTypeError();
     }
     if (hostName in obj) {
-      const findIndexResult1 = obj[hostName].findIndex((name) => name.name === portalName);
+      const findIndexResult1 = obj[hostName].findIndex((item, index) => item.name === portalName);
       if (-1 !== findIndexResult1) {
         arr = obj[hostName];
         arr.splice(findIndexResult1, 1);
       }
-      const obj4 = obj[hostName];
     } else {
       obj = { component: null, method: null, params: null };
       obj[0] = reducer.name;

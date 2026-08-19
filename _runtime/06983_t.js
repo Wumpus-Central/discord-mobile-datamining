@@ -3,8 +3,8 @@
 // Module 6983 (t)
 const fn = function t(arg0, arg1, arr) {
   closure_0 = arg0 + 0.2 * arg1;
-  closure_1 = min.apply(null, arr.map((arg0) => Math.abs(closure_0 - arg0)));
-  return arr.filter((arg0) => Math.abs(closure_0 - arg0) === closure_1)[0];
+  closure_1 = min.apply(null, arr.map((item, index) => Math.abs(closure_0 - item)));
+  return arr.filter((item, index) => Math.abs(closure_0 - item) === closure_1)[0];
 };
 fn.__closure = {};
 fn.__workletHash = 8913698095371;

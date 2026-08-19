@@ -23,7 +23,7 @@ function primitiveEq(arg0, arg1, arg2) {
     return true;
   }
 }
-function repeatedPrimitiveEq(arg0, arg1, arg2) {
+function repeatedPrimitiveEq(T, arg1, arg2) {
   if (arg1.length !== arg2.length) {
     return false;
   } else {
@@ -32,19 +32,15 @@ function repeatedPrimitiveEq(arg0, arg1, arg2) {
       while (true) {
         let arr = arg1[num2];
         let arr2 = arg2[num2];
-        let tmp = num2;
         let flag = true;
         if (arr !== arr2) {
-          let tmp2 = require;
-          let tmp3 = dependencyMap;
           flag = false;
-          if (arg0 === RepeatType.ScalarType.BYTES) {
+          if (T === RepeatType.ScalarType.BYTES) {
             flag = false;
             if (arr.length === arr2.length) {
               let num = 0;
               flag = true;
               if (0 < arr.length) {
-                let tmp4 = num;
                 flag = false;
                 while (arr[num] == arr2[num]) {
                   let sum = num + 1;
@@ -96,80 +92,48 @@ arg5.reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
           let obj = nextResult;
           let localName = nextResult.localName;
           if (nextResult.oneof) {
-            let tmp8 = nextResult;
-            let tmp9 = localName;
             let tmp7 = arg1[obj.oneof][localName];
           } else {
-            let tmp6 = localName;
             tmp7 = arg1[localName];
           }
           let tmp10 = tmp7;
-          let tmp11 = nextResult;
           if (obj.oneof) {
-            let tmp14 = nextResult;
-            let tmp15 = localName;
             let tmp13 = arg2[obj.oneof][localName];
           } else {
-            let tmp12 = localName;
             tmp13 = arg2[localName];
           }
           let tmp16 = tmp13;
-          let tmp17 = nextResult;
           let kind = obj.kind;
           if ("enum" !== kind) {
             if ("scalar" !== kind) {
               if ("map" === kind) {
-                let tmp27 = nextResult;
                 if ("message" == obj.V.kind) {
-                  let tmp38 = repeatedMsgEq;
-                  let tmp39 = nextResult;
                   let V = obj.V;
-                  let tmp41 = values;
-                  let tmp42 = tmp7;
                   let TResult = V.T();
-                  let tmp44 = tmp13;
                   let tmp43 = values(tmp10);
                   let tmp28Result = repeatedMsgEq(TResult, tmp43, values(tmp16));
                 } else {
-                  let tmp29 = nextResult;
-                  let tmp28 = repeatedPrimitiveEq;
                   if ("enum" == obj.V.kind) {
-                    let tmp31 = require;
-                    let tmp32 = dependencyMap;
                     let T = RepeatType.ScalarType.INT32;
                   } else {
-                    let tmp30 = nextResult;
                     T = obj.V.T;
                   }
-                  let tmp33 = values;
-                  let tmp34 = tmp7;
-                  let tmp36 = tmp13;
                   let tmp35 = values(tmp10);
-                  tmp28Result = tmp28(T, tmp35, values(tmp16));
+                  tmp28Result = repeatedPrimitiveEq(T, tmp35, values(tmp16));
                 }
                 if (!tmp28Result) {
-                  let tmp45 = iter;
                   iter.return();
                   let flag3 = false;
                   return false;
                 }
               } else if ("message" === kind) {
-                let tmp62 = nextResult;
                 let TResult1 = obj.T();
                 if (obj.repeat) {
-                  let tmp22 = repeatedMsgEq;
-                  let tmp23 = TResult1;
-                  let tmp24 = tmp7;
-                  let tmp25 = tmp13;
                   let equalsResult = repeatedMsgEq(TResult1, tmp10, tmp16);
                 } else {
-                  let tmp18 = TResult1;
-                  let tmp19 = tmp7;
-                  let tmp20 = tmp13;
                   equalsResult = TResult1.equals(tmp10, tmp16);
                 }
                 if (!equalsResult) {
-                  let tmp26 = iter;
                   iter.return();
                   let flag2 = false;
                   return false;
@@ -178,32 +142,18 @@ arg5.reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
             }
             continue;
           }
-          let tmp46 = nextResult;
           if ("enum" == obj.kind) {
-            let tmp48 = require;
-            let tmp49 = dependencyMap;
             let T2 = RepeatType.ScalarType.INT32;
           } else {
-            let tmp47 = nextResult;
             T2 = obj.T;
           }
           let tmp50 = T2;
-          let tmp51 = nextResult;
           if (obj.repeat) {
-            let tmp57 = repeatedPrimitiveEq;
-            let tmp58 = T2;
-            let tmp59 = tmp7;
-            let tmp60 = tmp13;
             let tmp56 = repeatedPrimitiveEq(tmp50, tmp10, tmp16);
           } else {
-            let tmp52 = primitiveEq;
-            let tmp53 = T2;
-            let tmp54 = tmp7;
-            let tmp55 = tmp13;
             tmp56 = primitiveEq(tmp50, tmp10, tmp16);
           }
           if (!tmp56) {
-            let tmp61 = iter;
             iter.return();
             let flag4 = false;
             return false;

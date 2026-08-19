@@ -40,14 +40,13 @@ DepGraph.prototype = {
       delete tmp[tmp2];
       const items = [, ];
       ({ incomingEdges: arr[0], outgoingEdges: arr[1] } = self);
-      let item = items.forEach(function(arg0) {
-        closure_0 = arg0;
-        const keys = Object.keys(arg0);
-        const item = keys.forEach((arg0) => {
-          const index = table[arg0].indexOf(table);
+      let item = items.forEach(function(item, index) {
+        closure_0 = item;
+        const keys = Object.keys(item);
+        item = keys.forEach((item, index) => {
+          index = item[item].indexOf(item);
           if (index >= 0) {
-            table[arg0].splice(index, 1);
-            const arr2 = table[arg0];
+            item[item].splice(index, 1);
           }
         }, this);
       });
@@ -57,12 +56,12 @@ DepGraph.prototype = {
     const nodes = this.nodes;
     return nodes.hasOwnProperty(key10009);
   },
-  getNodeData(arg0) {
-    if (this.hasNode(arg0)) {
-      return this.nodes[arg0];
+  getNodeData(prop) {
+    if (this.hasNode(prop)) {
+      return this.nodes[prop];
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + prop);
       throw error;
     }
   },
@@ -82,11 +81,9 @@ DepGraph.prototype = {
         let arr = self.outgoingEdges[arg0];
         if (-1 === arr.indexOf(arg1)) {
           arr = self.outgoingEdges[arg0].push(arg1);
-          const arr2 = self.outgoingEdges[arg0];
         }
         if (-1 === arr3.indexOf(arg0)) {
           arr = self.incomingEdges[arg1].push(arg0);
-          const arr4 = self.incomingEdges[arg1];
         }
         return true;
       } else {
@@ -107,22 +104,18 @@ DepGraph.prototype = {
       const index = self.outgoingEdges[arg0].indexOf(arg1);
       hasNodeResult = index >= 0;
       let tmp2 = index;
-      const arr = self.outgoingEdges[arg0];
     }
     if (hasNodeResult) {
       self.outgoingEdges[arg0].splice(tmp2, 1);
-      const arr2 = self.outgoingEdges[arg0];
     }
     let hasNodeResult1 = self.hasNode(arg1);
     if (hasNodeResult1) {
       const index1 = self.incomingEdges[arg1].indexOf(arg0);
       hasNodeResult1 = index1 >= 0;
       tmp2 = index1;
-      const arr3 = self.incomingEdges[arg1];
     }
     if (hasNodeResult1) {
       self.incomingEdges[arg1].splice(tmp2, 1);
-      const arr4 = self.incomingEdges[arg1];
     }
   },
   clone() {
@@ -132,16 +125,16 @@ DepGraph.prototype = {
     }
     const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
     const keys = Object.keys(this.nodes);
-    const item = keys.forEach((arg0) => {
-      obj.nodes[arg0] = self.nodes[arg0];
-      obj.outgoingEdges[arg0] = self.outgoingEdges[arg0].slice(0);
-      obj.incomingEdges[arg0] = self.incomingEdges[arg0].slice(0);
+    const item = keys.forEach((item, index) => {
+      obj.nodes[item] = self.nodes[item];
+      obj.outgoingEdges[item] = self.outgoingEdges[item].slice(0);
+      obj.incomingEdges[item] = self.incomingEdges[item].slice(0);
     });
     return obj;
   },
-  dependenciesOf(arg0, arg1) {
+  dependenciesOf(item) {
     const self = this;
-    if (this.hasNode(arg0)) {
+    if (this.hasNode(item)) {
       const items = [];
       const outgoingEdges = self.outgoingEdges;
       closure_1 = arg1;
@@ -152,15 +145,15 @@ DepGraph.prototype = {
       closure_7 = {};
       class DFS {
         constructor(arg0) {
-          closure_5[arg0] = true;
-          arr = closure_4.push(arg0);
-          closure_7[arg0] = true;
+          closure_5[item] = true;
+          arr = closure_4.push(item);
+          closure_7[item] = true;
           tmp4 = outgoingEdges;
           num = 0;
-          if (0 < outgoingEdges[arg0].length) {
+          if (0 < outgoingEdges[item].length) {
             while (true) {
               tmp5 = outgoingEdges;
-              tmp6 = outgoingEdges[arg0][num];
+              tmp6 = outgoingEdges[item][num];
               tmp7 = closure_5;
               tmp8 = num;
               if (closure_5[tmp6]) {
@@ -209,36 +202,36 @@ DepGraph.prototype = {
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
-            tmp24 = 0 !== tmp4[arg0].length;
+            tmp24 = 0 !== tmp4[item].length;
           }
           if (!tmp24) {
             tmp25 = closure_6;
-            tmp24 = closure_6[arg0];
+            tmp24 = closure_6[item];
           }
           if (!tmp24) {
             tmp26 = DFS;
-            arr3 = DFS.push(arg0);
+            arr3 = DFS.push(item);
             tmp28 = closure_6;
-            closure_6[arg0] = true;
+            closure_6[item] = true;
           }
           return;
         }
       }
-      DFS(arg0);
-      const index = items.indexOf(arg0);
+      DFS(item);
+      const index = items.indexOf(item);
       if (index >= 0) {
         items.splice(index, 1);
       }
       return items;
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + item);
       throw error;
     }
   },
-  dependantsOf(arg0, arg1) {
+  dependantsOf(item) {
     const self = this;
-    if (this.hasNode(arg0)) {
+    if (this.hasNode(item)) {
       const items = [];
       const incomingEdges = self.incomingEdges;
       closure_1 = arg1;
@@ -249,15 +242,15 @@ DepGraph.prototype = {
       closure_7 = {};
       class DFS {
         constructor(arg0) {
-          closure_5[arg0] = true;
-          arr = closure_4.push(arg0);
-          closure_7[arg0] = true;
+          closure_5[item] = true;
+          arr = closure_4.push(item);
+          closure_7[item] = true;
           tmp4 = outgoingEdges;
           num = 0;
-          if (0 < outgoingEdges[arg0].length) {
+          if (0 < outgoingEdges[item].length) {
             while (true) {
               tmp5 = outgoingEdges;
-              tmp6 = outgoingEdges[arg0][num];
+              tmp6 = outgoingEdges[item][num];
               tmp7 = closure_5;
               tmp8 = num;
               if (closure_5[tmp6]) {
@@ -306,30 +299,30 @@ DepGraph.prototype = {
           delete tmp2[tmp];
           tmp24 = closure_1;
           if (closure_1) {
-            tmp24 = 0 !== tmp4[arg0].length;
+            tmp24 = 0 !== tmp4[item].length;
           }
           if (!tmp24) {
             tmp25 = closure_6;
-            tmp24 = closure_6[arg0];
+            tmp24 = closure_6[item];
           }
           if (!tmp24) {
             tmp26 = DFS;
-            arr3 = DFS.push(arg0);
+            arr3 = DFS.push(item);
             tmp28 = closure_6;
-            closure_6[arg0] = true;
+            closure_6[item] = true;
           }
           return;
         }
       }
-      DFS(arg0);
-      const index = items.indexOf(arg0);
+      DFS(item);
+      const index = items.indexOf(item);
       if (index >= 0) {
         items.splice(index, 1);
       }
       return items;
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      error = new Error("Node does not exist: " + item);
       throw error;
     }
   },
@@ -423,9 +416,8 @@ DepGraph.prototype = {
           return;
         }
       }
-      closure_1 = DFS;
-      const item = keys.forEach((arg0) => {
-        callback(arg0);
+      const item = keys.forEach((item, index) => {
+        callback(item);
       });
       outgoingEdges = self.outgoingEdges;
       closure_1 = arg0;
@@ -509,9 +501,9 @@ DepGraph.prototype = {
           return;
         }
       }
-      const found = keys.filter((arg0) => 0 === outgoingEdges.incomingEdges[arg0].length);
-      const item1 = found.forEach((arg0) => {
-        DFS(arg0);
+      const found = keys.filter((item, index) => 0 === outgoingEdges.incomingEdges[item].length);
+      const item1 = found.forEach((item, index) => {
+        DFS(item);
       });
       return items;
     }

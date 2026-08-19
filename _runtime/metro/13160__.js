@@ -11,8 +11,8 @@ export default (arg0, arg1, arg2, arg3) => {
   const tmp4 = new _require(13152)(arg1, arg3);
   if (">" === arg2) {
     dependencyMap = tmp(13143);
-    let tmpResult = tmp(13148);
-    tmpResult = tmp(13144);
+    tmp(13148);
+    let tmpResult = tmp(13144);
     closure_2 = tmpResult;
     let str3 = ">=";
     let str = ">";
@@ -41,9 +41,9 @@ export default (arg0, arg1, arg2, arg3) => {
         let arr = tmp4.set[num3];
         _require = null;
         dependencyMap = null;
-        let item = arr.forEach((semver) => {
-          let tmp = semver;
-          if (semver.semver === Comparator.ANY) {
+        let item = arr.forEach((item, index) => {
+          let tmp = item;
+          if (item.semver === Comparator.ANY) {
             tmp = new Comparator(">=0.0.0");
           }
           let tmp6 = _null;
@@ -62,24 +62,15 @@ export default (arg0, arg1, arg2, arg3) => {
             _null2 = tmp;
           }
         });
-        let tmp15 = _require;
-        let tmp16 = num;
         if (_require.operator !== str) {
-          let tmp22 = _require;
           if (_require.operator !== str3) {
-            let tmp17 = dependencyMap;
             if (!dependencyMap.operator) {
-              let tmp19 = dependencyMap;
               if (tmpResult(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }
-            } else {
-              let tmp18 = dependencyMap;
             }
-            let tmp20 = dependencyMap;
             obj = undefined;
             if (dependencyMap.operator === str3) {
-              let tmp21 = dependencyMap;
               if (tmpResult1(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }

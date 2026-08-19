@@ -1,12 +1,12 @@
 // === Module 1098: _push ===
 
 // Module 1098 (_push)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _push(arg0, arg1, arg2) {
+function _push(fn) {
   closure_0 = arg1;
   closure_1 = arg2;
-  return arg0((getAllKeys) => {
+  return fn((getAllKeys) => {
     const allKeys = getAllKeys.getAllKeys();
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
@@ -17,11 +17,11 @@ function _push(arg0, arg1, arg2) {
       const fn2 = () => callback(lib.error);
       closure_0.onerror = fn2;
       closure_0.onabort = fn2;
-    }).then((arg0) => {
-      if (arg0.length < closure_1_1) {
+    }).then((result) => {
+      if (result.length < closure_1_1) {
         const _Math = Math;
         const items = [];
-        items[HermesBuiltin.arraySpread(arg0, 0)] = 0;
+        items[HermesBuiltin.arraySpread(result, 0)] = 0;
         const _Math2 = Math;
         transaction.put(closure_0, HermesBuiltin.apply(items, Math) + 1);
         transaction = transaction.transaction;
@@ -40,10 +40,10 @@ function _push(arg0, arg1, arg2) {
     });
   });
 }
-function _unshift(arg0, arg1, arg2) {
+function _unshift(fn) {
   closure_0 = arg1;
   closure_1 = arg2;
-  return arg0((getAllKeys) => {
+  return fn((getAllKeys) => {
     const allKeys = getAllKeys.getAllKeys();
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
@@ -54,11 +54,11 @@ function _unshift(arg0, arg1, arg2) {
       const fn2 = () => callback(lib.error);
       closure_0.onerror = fn2;
       closure_0.onabort = fn2;
-    }).then((arg0) => {
-      if (arg0.length < closure_1_1) {
+    }).then((result) => {
+      if (result.length < closure_1_1) {
         const _Math = Math;
         const items = [];
-        items[HermesBuiltin.arraySpread(arg0, 0)] = 0;
+        items[HermesBuiltin.arraySpread(result, 0)] = 0;
         const _Math2 = Math;
         transaction.put(closure_0, HermesBuiltin.apply(items, Math) - 1);
         transaction = transaction.transaction;
@@ -77,8 +77,8 @@ function _unshift(arg0, arg1, arg2) {
     });
   });
 }
-function _shift(arg0) {
-  return arg0((getAllKeys) => {
+function _shift(fn) {
+  return fn((getAllKeys) => {
     const allKeys = getAllKeys.getAllKeys();
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
@@ -89,8 +89,8 @@ function _shift(arg0) {
       const fn2 = () => callback(lib.error);
       closure_0.onerror = fn2;
       closure_0.onabort = fn2;
-    }).then((arg0) => {
-      const first = arg0[0];
+    }).then((result) => {
+      const first = result[0];
       closure_0 = first;
       if (null != first) {
         closure_0 = closure_0.get(first);
@@ -104,8 +104,8 @@ function _shift(arg0) {
           closure_0.onerror = fn2;
           closure_0.onabort = fn2;
         });
-        return promise.then((arg0) => {
-          let transaction = arg0;
+        return promise.then((result) => {
+          let transaction = result;
           set.delete(transaction);
           transaction = set.transaction;
           return new Promise((arg0, arg1) => {
@@ -117,7 +117,7 @@ function _shift(arg0) {
             const fn2 = () => { ... };
             closure_0.onerror = fn2;
             closure_0.onabort = fn2;
-          }).then(() => transaction);
+          }).then((result) => transaction);
         });
       }
     });
@@ -125,15 +125,13 @@ function _shift(arg0) {
 }
 function createIndexedDbStore(arg0) {
   closure_0 = arg0;
-  function getStore() {
+  function getStore(store) {
     if (null == f69157) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
       }
-      dbName = dbName.storeName || "queue";
       const openResult = globalThis.indexedDB.open(str);
-      f69157 = openResult;
       openResult.onupgradeneeded = () => {
         const result = f69157.result;
         return result.createObjectStore(closure_0);
@@ -151,14 +149,13 @@ function createIndexedDbStore(arg0) {
       });
       f69157 = (arg0) => {
         closure_0 = arg0;
-        return promise.then((transaction) => callback(transaction.transaction(callback, "readwrite").objectStore(callback)));
+        return promise.then((result) => callback(result.transaction(callback, "readwrite").objectStore(callback)));
       };
-      const tmp7 = dbName;
     }
     return f69157;
   }
   let obj = { push: null, unshift: null, shift: null };
-  closure_4 = callback((arg0) => {
+  closure_4 = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
@@ -213,7 +210,7 @@ function createIndexedDbStore(arg0) {
     }
     return applyArgumentsResult;
   };
-  closure_3 = callback((arg0) => {
+  closure_3 = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
@@ -258,7 +255,7 @@ function createIndexedDbStore(arg0) {
       return arg1;
     })();
   });
-  obj[1] = function unshift(props) {
+  obj[1] = function unshift(headerResult) {
     const self = this;
     const apply = closure_3.apply;
     if (typeof apply === "unknown") {
@@ -268,10 +265,10 @@ function createIndexedDbStore(arg0) {
     }
     return applyArgumentsResult;
   };
-  callback = callback(function*() {
+  asyncGeneratorStep = asyncGeneratorStep(function*() {
     closure_1 = tmp3;
     c2 = 1;
-    yield closure_1_5(closure_1_5());
+    yield getStore(getStore());
     if (1 === tmp7) {
       c2 = 0;
       c4 = 3;
@@ -294,7 +291,7 @@ function createIndexedDbStore(arg0) {
     c2 = 0;
     return obj.parseEnvelope(closure_0);
   });
-  obj[2] = function shift(arg0) {
+  obj[2] = function shift(saturation) {
     const self = this;
     const apply = closure_2.apply;
     if (typeof apply === "unknown") {
@@ -309,7 +306,6 @@ function createIndexedDbStore(arg0) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const createStore = function createStore(arg0, arg1) {
-  closure_0 = arg1;
   const openResult = globalThis.indexedDB.open(arg0);
   dependencyMap = openResult;
   openResult.onupgradeneeded = () => {
@@ -329,7 +325,7 @@ export const createStore = function createStore(arg0, arg1) {
   });
   return (arg0) => {
     closure_0 = arg0;
-    return promise.then((transaction) => callback(transaction.transaction(callback, "readwrite").objectStore(callback)));
+    return promise.then((result) => callback(result.transaction(callback, "readwrite").objectStore(callback)));
   };
 };
 export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport() {
@@ -341,12 +337,11 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
   return (arg0) => {
     let obj = {};
     const merged = Object.assign(arg0);
-    obj.createStore = closure_1_6;
+    obj.createStore = createIndexedDbStore;
     const tmp2 = callback(obj);
     callback = tmp2;
-    const WINDOW = callback(closure_1_1[2]).WINDOW;
-    callback = undefined;
-    callback = closure_1_2(function*(arg0) {
+    const WINDOW = callback(dependencyMap[2]).WINDOW;
+    callback = asyncGeneratorStep(function*(arg0) {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -397,7 +392,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
         }
       }
     });
-    const listener = WINDOW.addEventListener("online", function(arg0) {
+    const listener = WINDOW.addEventListener("online", function(event) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

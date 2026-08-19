@@ -4,6 +4,7 @@
 import colorPropType from "colorPropType" /* 9025 */;
 import _mod9032 from "module_9032" /* 9032 */;
 import emptyFunction from "emptyFunction" /* 4205 */;
+import "emptyFunction";
 
 let obj = {};
 const module_9032 = Object.assign(_mod9032);

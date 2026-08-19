@@ -72,12 +72,12 @@ const items = [
   },
   {
     key: "findValue",
-    value: function findValue(arg0) {
+    value: function findValue(fn) {
       const self = this;
       let num = 0;
       if (0 < this.length) {
         const sum = self.startIndex + num;
-        while (!arg0(sum, num, self)) {
+        while (!fn(sum, num, self)) {
           num = num + 1;
         }
         return sum;
@@ -86,11 +86,11 @@ const items = [
   },
   {
     key: "every",
-    value: function every(arg0) {
+    value: function every(fn) {
       const self = this;
       let num = 0;
       if (0 < this.length) {
-        while (arg0(self.startIndex + num, num, self)) {
+        while (fn(self.startIndex + num, num, self)) {
           num = num + 1;
         }
         return false;

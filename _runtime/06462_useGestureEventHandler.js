@@ -15,6 +15,6 @@ export const useGestureEventHandler = function useGestureEventHandler(handlerTag
   ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
   items[5] = tmp;
   return useMemo(() => (arg0) => {
-    closure_1_0(closure_1_1[1]).eventHandler(closure_0, arg0, closure_1, closure_2.changeEventCalculator, closure_3, closure_2.dispatchesAnimatedEvents, closure_2.fillInDefaultValues);
+    handlerTag(memoizedGestureCallbacks[1]).eventHandler(closure_0, arg0, closure_1, closure_2.changeEventCalculator, closure_3, closure_2.dispatchesAnimatedEvents, closure_2.fillInDefaultValues);
   }, items);
 };

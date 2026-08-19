@@ -1,22 +1,29 @@
 // === Module 354: _combineCallbacks ===
 
 // Module 354 (_combineCallbacks)
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 355 */;
+import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 368 */;
+import _isNativeReflectConstructDefault3 from "_isNativeReflectConstruct" /* 369 */;
+import _isNativeReflectConstructDefault4 from "_isNativeReflectConstruct" /* 370 */;
+import _isNativeReflectConstructDefault5 from "_isNativeReflectConstruct" /* 371 */;
+import _isNativeReflectConstructDefault6 from "_isNativeReflectConstruct" /* 372 */;
+import _isNativeReflectConstructDefault7 from "_isNativeReflectConstruct" /* 373 */;
+import _isNativeReflectConstructDefault8 from "_isNativeReflectConstruct" /* 374 */;
 import AnimatedEvent from "AnimatedEvent" /* 384 */;
 
-require = arg1;
-const module = arg2;
+require = fn;
+importDefault = fn2;
 let dependencyMap = arg6;
 function _combineCallbacks(arg0, arg1) {
 
 }
-function maybeVectorAnim(arg0, obj, decayImpl) {
-  if (arg0 instanceof _module(373)) {
+function maybeVectorAnim(g, obj, timingImpl) {
+  if (g instanceof _isNativeReflectConstructDefault7) {
     obj = {};
     const merged = Object.assign(obj);
     obj = {};
     const merged1 = Object.assign(obj);
     for (const key10066 in arg1) {
-      let tmp34 = key10066;
       ({ x, y } = arg1[key10066]);
       let tmp29 = undefined !== x;
       if (tmp29) {
@@ -31,28 +38,28 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
       }
       continue;
     }
-    const items = [decayImpl(arg0.x, obj), decayImpl(arg0.y, obj)];
+    const items = [timingImpl(g.x, obj), timingImpl(g.y, obj)];
     if (typeof parallelImpl !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let items1 = items;
-    _module = 0;
+    importDefault = 0;
     dependencyMap = {};
     closure_3 = false !== { stopTogether: false }.stopTogether;
     obj1 = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
-    obj1[0] = function start(arg0, arg1) {
-      mapped = arg0;
+    obj1[0] = function start(fn) {
+      mapped = fn;
       c1 = arg1;
       if (c1 !== mapped.length) {
-        const item = mapped.forEach((start) => {
-          if (start) {
-            start.start(function cb(finished) {
-              closure_2_2[length] = true;
+        const item = mapped.forEach((item, index) => {
+          if (item) {
+            item.start(function cb(finished) {
+              closure_2_2[index] = true;
               const sum = c1 + 1;
               c1 = sum;
-              if (sum === length.length) {
+              if (sum === index.length) {
                 c1 = 0;
-                if (length) {
+                if (index) {
                   tmp5(finished);
                 }
               } else {
@@ -62,13 +69,13 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
                   tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  closure_2_4.stop();
+                  obj.stop();
                 }
               }
             }, c1);
           } else {
             obj = { finished: true };
-            closure_1_2[arg1] = true;
+            closure_1_2[index] = true;
             let sum = c1 + 1;
             c1 = sum;
             if (sum === length.length) {
@@ -88,22 +95,22 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
             }
           }
         });
-      } else if (arg0) {
-        arg0({ finished: true });
+      } else if (fn) {
+        fn({ finished: true });
       }
     };
     obj1[1] = function stop() {
-      const item = mapped.forEach((stop) => {
-        if (!table[arg1]) {
-          stop.stop();
+      const item = mapped.forEach((item, index) => {
+        if (!table[index]) {
+          item.stop();
         }
-        table[arg1] = true;
+        table[index] = true;
       });
     };
     obj1[2] = function reset() {
-      const item = mapped.forEach((reset) => {
-        reset.reset();
-        closure_2[arg1] = false;
+      const item = mapped.forEach((item, index) => {
+        item.reset();
+        closure_2[index] = false;
         c1 = 0;
       });
     };
@@ -116,7 +123,7 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
     };
     let obj5 = obj1;
     return obj1;
-  } else if (arg0 instanceof tmp(374)) {
+  } else if (g instanceof _isNativeReflectConstructDefault8) {
     obj = {};
     const merged2 = Object.assign(obj);
     const obj2 = {};
@@ -126,7 +133,6 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
     const obj4 = {};
     const merged5 = Object.assign(obj);
     for (const key10031 in arg1) {
-      let tmp32 = key10031;
       ({ r, g, b, a } = arg1[key10031]);
       let tmp17 = undefined !== r;
       if (tmp17) {
@@ -149,29 +155,29 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
       }
       continue;
     }
-    const tmp18 = decayImpl(arg0.r, obj);
-    const tmp19 = decayImpl(arg0.g, obj2);
-    items1 = [tmp18, tmp19, decayImpl(arg0.b, obj3), decayImpl(arg0.a, obj4)];
+    const tmp18 = timingImpl(g.r, obj);
+    const tmp19 = timingImpl(g.g, obj2);
+    items1 = [tmp18, tmp19, timingImpl(g.b, obj3), timingImpl(g.a, obj4)];
     if (typeof parallelImpl !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    _module = 0;
+    importDefault = 0;
     dependencyMap = {};
     closure_3 = false !== { stopTogether: false }.stopTogether;
     obj5 = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
-    obj5[0] = function start(arg0, arg1) {
-      mapped = arg0;
+    obj5[0] = function start(fn) {
+      mapped = fn;
       c1 = arg1;
       if (c1 !== mapped.length) {
-        const item = mapped.forEach((start) => {
-          if (start) {
-            start.start(function cb(finished) {
-              closure_2_2[length] = true;
+        const item = mapped.forEach((item, index) => {
+          if (item) {
+            item.start(function cb(finished) {
+              closure_2_2[index] = true;
               const sum = c1 + 1;
               c1 = sum;
-              if (sum === length.length) {
+              if (sum === index.length) {
                 c1 = 0;
-                if (length) {
+                if (index) {
                   tmp5(finished);
                 }
               } else {
@@ -181,13 +187,13 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
                   tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  closure_2_4.stop();
+                  obj.stop();
                 }
               }
             }, c1);
           } else {
             obj = { finished: true };
-            closure_1_2[arg1] = true;
+            closure_1_2[index] = true;
             let sum = c1 + 1;
             c1 = sum;
             if (sum === length.length) {
@@ -207,22 +213,22 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
             }
           }
         });
-      } else if (arg0) {
-        arg0({ finished: true });
+      } else if (fn) {
+        fn({ finished: true });
       }
     };
     obj5[1] = function stop() {
-      const item = mapped.forEach((stop) => {
-        if (!table[arg1]) {
-          stop.stop();
+      const item = mapped.forEach((item, index) => {
+        if (!table[index]) {
+          item.stop();
         }
-        table[arg1] = true;
+        table[index] = true;
       });
     };
     obj5[2] = function reset() {
-      const item = mapped.forEach((reset) => {
-        reset.reset();
-        closure_2[arg1] = false;
+      const item = mapped.forEach((item, index) => {
+        item.reset();
+        closure_2[index] = false;
         c1 = 0;
       });
     };
@@ -237,10 +243,9 @@ function maybeVectorAnim(arg0, obj, decayImpl) {
   } else {
     return null;
   }
-  tmp = _module;
 }
-function springImpl(arg0, arg1) {
-  closure_0 = arg0;
+function springImpl(g) {
+  closure_0 = g;
   closure_1 = arg1;
   function start(stopTracking, onComplete) {
     if (typeof closure_3 !== "function") {
@@ -268,11 +273,11 @@ function springImpl(arg0, arg1) {
       }
       stopTracking.stopTracking();
       if (onComplete.toValue instanceof lib(start[8])) {
-        let tmp3Result = tmp3(tmp4[9]);
-        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(tmp4[10]), onComplete, fn);
+        let tmp3Result = tmp3(start[9]);
+        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(start[10]), onComplete, fn);
         stopTracking.track(tmp3Result);
       } else {
-        const tmp8 = new tmp3(tmp4[10])(onComplete);
+        const tmp8 = new tmp3(start[10])(onComplete);
         stopTracking.animate(tmp8, fn);
       }
     }
@@ -280,7 +285,7 @@ function springImpl(arg0, arg1) {
       fn = onComplete.onComplete;
     }
   }
-  let tmp = maybeVectorAnim(arg0, arg1, springImpl);
+  let tmp = maybeVectorAnim(g, arg1, springImpl);
   if (!tmp) {
     let obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0) {
@@ -305,8 +310,8 @@ function springImpl(arg0, arg1) {
   }
   return tmp;
 }
-function timingImpl(arg0, arg1) {
-  closure_0 = arg0;
+function timingImpl(g, arg1) {
+  closure_0 = g;
   closure_1 = arg1;
   function start(stopTracking, onComplete) {
     if (typeof closure_3 !== "function") {
@@ -334,11 +339,11 @@ function timingImpl(arg0, arg1) {
       }
       stopTracking.stopTracking();
       if (onComplete.toValue instanceof v0(start[8])) {
-        let tmp3Result = tmp3(tmp4[9]);
-        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(tmp4[11]), onComplete, fn);
+        let tmp3Result = tmp3(start[9]);
+        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(start[11]), onComplete, fn);
         stopTracking.track(tmp3Result);
       } else {
-        const tmp8 = new tmp3(tmp4[11])(onComplete);
+        const tmp8 = new tmp3(start[11])(onComplete);
         stopTracking.animate(tmp8, fn);
       }
     }
@@ -346,7 +351,7 @@ function timingImpl(arg0, arg1) {
       fn = onComplete.onComplete;
     }
   }
-  let tmp = maybeVectorAnim(arg0, arg1, timingImpl);
+  let tmp = maybeVectorAnim(g, arg1, timingImpl);
   if (!tmp) {
     const obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0, isLooping) {
@@ -374,14 +379,14 @@ function timingImpl(arg0, arg1) {
   }
   return tmp;
 }
-function decayImpl(arg0, arg1) {
-  closure_0 = arg0;
+function decayImpl(g) {
+  closure_0 = g;
   closure_1 = arg1;
-  let tmp = maybeVectorAnim(arg0, arg1, decayImpl);
+  let tmp = maybeVectorAnim(g, arg1, decayImpl);
   if (!tmp) {
     let obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
     obj[0] = function start(arg0) {
-      if (typeof closure_1_3 !== "function") {
+      if (typeof _combineCallbacks !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let fn = arg0;
@@ -405,7 +410,7 @@ function decayImpl(arg0, arg1) {
           };
         }
         obj.stopTracking();
-        const tmp8 = new lib(closure_1_2[12])(tmp);
+        const tmp8 = new lib(dependencyMap[12])(tmp);
         obj.animate(tmp8, fn);
       }
       if (!fn) {
@@ -422,11 +427,12 @@ function decayImpl(arg0, arg1) {
       const obj = {};
       const merged = Object.assign(obj);
       obj.iterations = iterations;
-      if (typeof closure_1_3 !== "function") {
+      if (typeof _combineCallbacks !== "function") {
         HermesBuiltin.throwTypeError();
       }
       closure_0.stopTracking();
-      closure_0.animate(new lib(closure_1_2[12])(obj), obj.onComplete);
+      closure_0.animate(new lib(dependencyMap[12])(obj), obj.onComplete);
+      const tmp3 = new lib(dependencyMap[12])(obj);
     };
     obj[4] = function _isUsingNativeDriver() {
       return lib.useNativeDriver || false;
@@ -439,8 +445,8 @@ function sequenceImpl(arg0) {
   closure_0 = arg0;
   c1 = 0;
   return {
-    start(arg0, arg1) {
-      items = arg0;
+    start(fn) {
+      items = fn;
       c1 = arg1;
       function onComplete(finished) {
         if (finished.finished) {
@@ -453,31 +459,28 @@ function sequenceImpl(arg0) {
             }
           } else {
             tmp5[c1].start(onComplete, c1);
-            obj = tmp5[c1];
           }
         } else if (length) {
           tmp(finished);
         }
       }
       if (0 === items.length) {
-        if (arg0) {
-          arg0({ finished: true });
+        if (fn) {
+          fn({ finished: true });
         }
       } else {
         tmp[c1].start(onComplete, arg1);
-        obj = tmp[c1];
       }
     },
     stop() {
       if (c1 < items.length) {
         tmp[c1].stop();
-        obj = tmp[c1];
       }
     },
     reset() {
-      const item = items.forEach((reset) => {
-        if (arg1 <= c1) {
-          reset.reset();
+      const item = items.forEach((item, index) => {
+        if (index <= c1) {
+          item.reset();
         }
       });
       c1 = 0;
@@ -501,19 +504,19 @@ function parallelImpl(arg0, stopTogether) {
   }
   closure_3 = !tmp;
   const obj = {
-    start(arg0, arg1) {
-      mapped = arg0;
+    start(fn) {
+      mapped = fn;
       c1 = arg1;
       if (c1 !== mapped.length) {
-        const item = mapped.forEach((start) => {
-          if (start) {
-            start.start(function cb(finished) {
-              closure_2_2[length] = true;
+        const item = mapped.forEach((item, index) => {
+          if (item) {
+            item.start(function cb(finished) {
+              closure_2_2[index] = true;
               const sum = c1 + 1;
               c1 = sum;
-              if (sum === length.length) {
+              if (sum === index.length) {
                 c1 = 0;
-                if (length) {
+                if (index) {
                   tmp5(finished);
                 }
               } else {
@@ -523,13 +526,13 @@ function parallelImpl(arg0, stopTogether) {
                   tmp2 = closure_2_3;
                 }
                 if (tmp2) {
-                  closure_2_4.stop();
+                  obj.stop();
                 }
               }
             }, c1);
           } else {
             obj = { finished: true };
-            closure_1_2[arg1] = true;
+            closure_1_2[index] = true;
             let sum = c1 + 1;
             c1 = sum;
             if (sum === length.length) {
@@ -549,22 +552,22 @@ function parallelImpl(arg0, stopTogether) {
             }
           }
         });
-      } else if (arg0) {
-        arg0({ finished: true });
+      } else if (fn) {
+        fn({ finished: true });
       }
     },
     stop() {
-      const item = mapped.forEach((stop) => {
-        if (!table[arg1]) {
-          stop.stop();
+      const item = mapped.forEach((item, index) => {
+        if (!table[index]) {
+          item.stop();
         }
-        table[arg1] = true;
+        table[index] = true;
       });
     },
     reset() {
-      const item = mapped.forEach((reset) => {
-        reset.reset();
-        closure_2[arg1] = false;
+      const item = mapped.forEach((item, index) => {
+        item.reset();
+        closure_2[index] = false;
         c1 = 0;
       });
     },
@@ -611,11 +614,11 @@ function delayImpl(delay) {
       }
       stopTracking.stopTracking();
       if (onComplete.toValue instanceof v0(start[8])) {
-        let tmp3Result = tmp3(tmp4[9]);
-        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(tmp4[11]), onComplete, fn);
+        let tmp3Result = tmp3(start[9]);
+        tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(start[11]), onComplete, fn);
         stopTracking.track(tmp3Result);
       } else {
-        const tmp8 = new tmp3(tmp4[11])(onComplete);
+        const tmp8 = new tmp3(start[11])(onComplete);
         stopTracking.animate(tmp8, fn);
       }
     }
@@ -661,36 +664,35 @@ arg5.default = {
   timing: timingImpl,
   spring: springImpl,
   add(arg0, arg1) {
-    return new module(355)(arg0, arg1);
+    return new _isNativeReflectConstructDefault(arg0, arg1);
   },
   subtract(arg0, arg1) {
-    return new module(368)(arg0, arg1);
+    return new _isNativeReflectConstructDefault2(arg0, arg1);
   },
-  divide(arg0) {
-    return new module(369)(arg0, arg1);
+  divide(absResult) {
+    return new _isNativeReflectConstructDefault3(absResult, arg1);
   },
   multiply(arg0, arg1) {
-    return new module(370)(arg0, arg1);
+    return new _isNativeReflectConstructDefault4(arg0, arg1);
   },
   modulo(arg0, arg1) {
-    return new module(371)(arg0, arg1);
+    return new _isNativeReflectConstructDefault5(arg0, arg1);
   },
   diffClamp(interpolateResult, arg1, arg2) {
-    return new module(372)(interpolateResult, arg1, arg2);
+    return new _isNativeReflectConstructDefault6(interpolateResult, arg1, arg2);
   },
   delay: delayImpl,
   sequence: sequenceImpl,
   parallel: parallelImpl,
   stagger(arg0, arr) {
-    let mapped = arg0;
-    mapped = arr.map((arg0, arg1) => {
-      const result = items * arg1;
-      if (typeof closure_1_10 !== "function") {
+    let mapped = arr.map((item, index) => {
+      const result = items * index;
+      if (typeof delayImpl !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const tmp4 = new v0(table[13])(0);
       obj = { toValue: 0, delay: result, duration: 0, useNativeDriver: false };
-      if (typeof closure_1_6 !== "function") {
+      if (typeof timingImpl !== "function") {
         HermesBuiltin.throwTypeError();
       }
       items = tmp4;
@@ -721,11 +723,11 @@ arg5.default = {
           }
           stopTracking.stopTracking();
           if (onComplete.toValue instanceof v0(start[8])) {
-            let tmp3Result = tmp3(tmp4[9]);
-            tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(tmp4[11]), onComplete, fn);
+            let tmp3Result = tmp3(start[9]);
+            tmp3Result = new tmp3Result(stopTracking, onComplete.toValue, tmp3(start[11]), onComplete, fn);
             stopTracking.track(tmp3Result);
           } else {
-            const tmp8 = new tmp3(tmp4[11])(onComplete);
+            const tmp8 = new tmp3(start[11])(onComplete);
             stopTracking.animate(tmp8, fn);
           }
         }
@@ -733,7 +735,7 @@ arg5.default = {
           fn = onComplete.onComplete;
         }
       }
-      let tmp5 = obj(tmp4, obj, closure_1_6);
+      let tmp5 = obj(tmp4, obj, timingImpl);
       if (!tmp5) {
         obj = { start: null, stop: null, reset: null, _startNativeLoop: null, _isUsingNativeDriver: null };
         obj[0] = function start(arg0, isLooping) {
@@ -759,14 +761,14 @@ arg5.default = {
         };
         tmp5 = obj;
       }
-      items = [tmp5, arg0];
-      if (typeof closure_1_8 !== "function") {
+      items = [tmp5, item];
+      if (typeof sequenceImpl !== "function") {
         HermesBuiltin.throwTypeError();
       }
       v0 = 0;
       obj = {
-        start(arg0, arg1) {
-          items = arg0;
+        start(fn) {
+          items = fn;
           c1 = arg1;
           function onComplete(finished) {
             if (finished.finished) {
@@ -779,31 +781,28 @@ arg5.default = {
                 }
               } else {
                 tmp5[c1].start(onComplete, c1);
-                obj = tmp5[c1];
               }
             } else if (length) {
               tmp(finished);
             }
           }
           if (0 === items.length) {
-            if (arg0) {
-              arg0({ finished: true });
+            if (fn) {
+              fn({ finished: true });
             }
           } else {
             tmp[c1].start(onComplete, arg1);
-            obj = tmp[c1];
           }
         },
         stop() {
           if (c1 < items.length) {
             tmp[c1].stop();
-            obj = tmp[c1];
           }
         },
         reset() {
-          const item = items.forEach((reset) => {
-            if (arg1 <= c1) {
-              reset.reset();
+          const item = items.forEach((item, index) => {
+            if (index <= c1) {
+              item.reset();
             }
           });
           c1 = 0;
@@ -825,19 +824,19 @@ arg5.default = {
     closure_2 = {};
     c3 = true;
     let obj = {
-      start(arg0, arg1) {
-        mapped = arg0;
+      start(fn) {
+        mapped = fn;
         c1 = arg1;
         if (c1 !== mapped.length) {
-          const item = mapped.forEach((start) => {
-            if (start) {
-              start.start(function cb(finished) {
-                closure_2_2[length] = true;
+          const item = mapped.forEach((item, index) => {
+            if (item) {
+              item.start(function cb(finished) {
+                closure_2_2[index] = true;
                 const sum = c1 + 1;
                 c1 = sum;
-                if (sum === length.length) {
+                if (sum === index.length) {
                   c1 = 0;
-                  if (length) {
+                  if (index) {
                     tmp5(finished);
                   }
                 } else {
@@ -847,13 +846,13 @@ arg5.default = {
                     tmp2 = closure_2_3;
                   }
                   if (tmp2) {
-                    closure_2_4.stop();
+                    obj.stop();
                   }
                 }
               }, c1);
             } else {
               obj = { finished: true };
-              closure_1_2[arg1] = true;
+              closure_1_2[index] = true;
               let sum = c1 + 1;
               c1 = sum;
               if (sum === length.length) {
@@ -873,22 +872,22 @@ arg5.default = {
               }
             }
           });
-        } else if (arg0) {
-          arg0({ finished: true });
+        } else if (fn) {
+          fn({ finished: true });
         }
       },
       stop() {
-        const item = mapped.forEach((stop) => {
-          if (!table[arg1]) {
-            stop.stop();
+        const item = mapped.forEach((item, index) => {
+          if (!table[index]) {
+            item.stop();
           }
-          table[arg1] = true;
+          table[index] = true;
         });
       },
       reset() {
-        const item = mapped.forEach((reset) => {
-          reset.reset();
-          closure_2[arg1] = false;
+        const item = mapped.forEach((item, index) => {
+          item.reset();
+          closure_2[index] = false;
           c1 = 0;
         });
       },
@@ -919,8 +918,8 @@ arg5.default = {
     c3 = false;
     c4 = 0;
     obj = {
-      start(arg0) {
-        closure_0 = arg0;
+      start(fn) {
+        closure_0 = fn;
         function restart() {
           let obj = arg0;
           if (arg0 === undefined) {
@@ -930,7 +929,7 @@ arg5.default = {
             if (closure_4 !== restart) {
               if (false !== obj.finished) {
                 closure_4 = closure_4 + 1;
-                if (closure_1_2) {
+                if (flag) {
                   navigation.reset();
                 }
                 navigation.start(restart, -1 === tmp2);
@@ -959,14 +958,14 @@ arg5.default = {
                   }
                 }
               }
-              if (arg0) {
-                arg0(obj);
+              if (fn) {
+                fn(obj);
               }
             }
           }
         }
-        if (arg0) {
-          arg0({ finished: true });
+        if (fn) {
+          fn({ finished: true });
         }
       },
       stop() {
@@ -988,8 +987,8 @@ arg5.default = {
     };
     return obj;
   },
-  event(items, useNativeDriver) {
-    const animatedEvent = new AnimatedEvent.AnimatedEvent(items, useNativeDriver);
+  event(closure_2, useNativeDriver) {
+    const animatedEvent = new AnimatedEvent.AnimatedEvent(closure_2, useNativeDriver);
     let __getHandlerResult = animatedEvent;
     if (!animatedEvent.__isNative) {
       __getHandlerResult = animatedEvent.__getHandler();

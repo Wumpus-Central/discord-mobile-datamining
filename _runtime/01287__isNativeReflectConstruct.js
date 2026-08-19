@@ -1,11 +1,11 @@
 // === Module 1287: _isNativeReflectConstruct ===
 
 // Module 1287 (_isNativeReflectConstruct)
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1288 */;
-import MarkdownBuilder from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -39,6 +39,7 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
   }
   return first;
 }
+_possibleConstructorReturn;
 let closure_4 = {
   $b(join) {
     return "**" + join.join("") + "**";
@@ -82,6 +83,7 @@ class MarkdownBuilder {
     return tmp3Result;
   }
 }
+_classCallCheck = MarkdownBuilder;
 _inherits(MarkdownBuilder, _isNativeReflectConstruct2.StringBuilder);
 const items = [
   {

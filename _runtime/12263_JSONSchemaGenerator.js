@@ -1,8 +1,8 @@
 // === Module 12263: JSONSchemaGenerator ===
 
 // Module 12263 (JSONSchemaGenerator)
-import closure_2 from "_objectWithoutProperties" /* 109 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const JSONSchemaGenerator = require;
@@ -143,7 +143,7 @@ const items = [
         }
       }
       JSONSchemaGenerator(12261).extractDefs(self.ctx, _idmap);
-      return callback(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
+      return _objectWithoutProperties(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
     }
   }
 ];

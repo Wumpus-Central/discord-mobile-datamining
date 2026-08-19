@@ -1,7 +1,7 @@
 // === Module 7769: TRACING_DEFAULTS ===
 
 // Module 7769 (TRACING_DEFAULTS)
-import closure_2 from "_toArray" /* 853 */;
+import _toArray from "_toArray" /* 853 */;
 
 let obj = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
 
@@ -12,12 +12,6 @@ export const startIdleSpan = function startIdleSpan(arg0) {
     obj = {};
   }
   let _require;
-  let map;
-  c2 = undefined;
-  let externalFinish;
-  closure_4 = undefined;
-  let items;
-  let idleTimeout;
   let finalTimeout;
   let childSpanTimeout;
   let beforeSpanEnd;
@@ -28,32 +22,32 @@ export const startIdleSpan = function startIdleSpan(arg0) {
     const callback = arg0;
     c2 = true;
     map.clear();
-    const item = items.forEach((arg0) => arg0());
+    const item = items.forEach((item, index) => item());
     callback(map[6])._setSpanForScope(closure_10, closure_11);
     obj = callback(map[6]);
-    let spanToJSONResult = callback(map[4]).spanToJSON(c12);
+    let spanToJSONResult = callback(map[4]).spanToJSON(_undefined);
     if (spanToJSONResult.start_timestamp) {
       if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
-        const attr = obj3.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, externalFinish);
+        const attr = _undefined.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, externalFinish);
       }
       let logger = tmp3(tmp4[8]).logger;
       const _HermesInternal = HermesInternal;
       logger.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
-      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(obj3);
-      const found = spanDescendants.filter((arg0) => arg0 !== closure_12);
-      const item1 = found.forEach((isRecording) => {
-        if (isRecording.isRecording()) {
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(_undefined);
+      const found = spanDescendants.filter((item, index) => item !== closure_12);
+      const item1 = found.forEach((item, index) => {
+        if (item.isRecording()) {
           obj = { code: null, message: "cancelled" };
           obj[0] = callback(map[9]).SPAN_STATUS_ERROR;
-          isRecording.setStatus(obj);
-          isRecording.end(callback);
+          item.setStatus(obj);
+          item.end(callback);
           if (callback(map[10]).DEBUG_BUILD) {
             const logger = callback(map[8]).logger;
             const _JSON = JSON;
-            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
+            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(item, undefined, 2));
           }
         }
-        const spanToJSONResult = callback(map[4]).spanToJSON(isRecording);
+        const spanToJSONResult = callback(map[4]).spanToJSON(item);
         const timestamp = spanToJSONResult.timestamp;
         let num2 = 0;
         if (undefined !== timestamp) {
@@ -64,10 +58,10 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         if (undefined !== start_timestamp) {
           num3 = start_timestamp;
         }
-        let tmp14 = num2 - num3 <= (closure_1_7 + closure_1_6) / 1000;
+        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
         if (callback(map[10]).DEBUG_BUILD) {
           const _JSON2 = JSON;
-          const json = JSON.stringify(isRecording, undefined, 2);
+          const json = JSON.stringify(item, undefined, 2);
           if (tmp13) {
             if (!tmp14) {
               const logger3 = callback(map[8]).logger;
@@ -82,24 +76,26 @@ export const startIdleSpan = function startIdleSpan(arg0) {
           tmp14 = tmp13;
         }
         if (!tmp14) {
-          const result = callback(map[4]).removeChildSpanFromSpan(closure_1_12, isRecording);
+          const result = callback(map[4]).removeChildSpanFromSpan(closure_1_12, item);
           closure_1 = closure_1 + 1;
           const obj3 = callback(map[4]);
         }
+        const obj2 = callback(map[4]);
       });
       if (0 > 0) {
-        const attr1 = obj3.setAttribute("sentry.idle_span_discarded_spans", map);
+        const attr1 = _undefined.setAttribute("sentry.idle_span_discarded_spans", map);
       }
       const tmp3Result = tmp3(tmp4[4]);
       tmp7 = spanToJSONResult.data || {};
     }
+    let obj2 = callback(map[4]);
   }
-  map = new Map();
+  const map = new Map();
   c2 = false;
-  externalFinish = "externalFinish";
+  const externalFinish = "externalFinish";
   closure_4 = !obj.disableAutoFinish;
-  items = [];
-  idleTimeout = obj.idleTimeout;
+  let items = [];
+  let idleTimeout = obj.idleTimeout;
   if (undefined === idleTimeout) {
     idleTimeout = externalFinish.idleTimeout;
   }
@@ -144,13 +140,11 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         }
         const result = callback(map[4]).spanTimeInputToSeconds(first);
         const obj2 = callback(map[4]);
-        const tmp8 = callback;
-        const tmp9 = map;
         const spanDescendants = callback(map[4]).getSpanDescendants(c12);
-        const found = spanDescendants.filter((arg0) => arg0 !== closure_12);
+        const found = spanDescendants.filter((item, index) => item !== closure_12);
         if (found.length) {
-          const mapped = found.map((arg0) => callback(table[4]).spanToJSON(arg0).timestamp);
-          const found1 = mapped.filter((arg0) => arg0);
+          const mapped = found.map((item, index) => callback(table[4]).spanToJSON(item).timestamp);
+          const found1 = mapped.filter((item, index) => item);
           let num2;
           if (found1.length) {
             const _Math = Math;
@@ -159,7 +153,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
             const _Math2 = Math;
             num2 = HermesBuiltin.apply(items, Math);
           }
-          let num4 = tmp8(tmp9[4]).spanToJSON(tmp11).start_timestamp;
+          let num4 = callback(map[4]).spanToJSON(c12).start_timestamp;
           let num6 = Infinity;
           if (num4) {
             num6 = num4 + finalTimeout / 1000;
@@ -184,7 +178,6 @@ export const startIdleSpan = function startIdleSpan(arg0) {
           return Reflect.apply(arg0, arg1, items2);
         }
         const obj3 = callback(map[4]);
-        tmp11 = c12;
       };
       const proxy = new Proxy(startInactiveSpanResult.end, obj);
       startInactiveSpanResult.end = proxy;
@@ -206,7 +199,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
               callback = undefined;
             }
             const result = map.set(spanContext.spanContext().spanId, true);
-            callback = callback(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
+            callback(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
             const _setTimeout = setTimeout;
             callback = setTimeout(() => {
               let tmp = !closure_1_2;
@@ -227,7 +220,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         if (!c2) {
           const spanId = spanContext.spanContext().spanId;
           if (map.has(spanId)) {
-            obj.delete(spanId);
+            map.delete(spanId);
           }
           if (0 === map.size) {
             callback = callback(map[5]).timestampInSeconds() + idleTimeout / 1000;
@@ -240,7 +233,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
             callback = setTimeout(() => {
               let tmp = !closure_1_2;
               if (!closure_1_2) {
-                tmp = 0 === closure_1_1.size;
+                tmp = 0 === map.size;
               }
               if (tmp) {
                 tmp = c4;
@@ -251,7 +244,6 @@ export const startIdleSpan = function startIdleSpan(arg0) {
               }
             }, idleTimeout);
             const obj2 = callback(map[5]);
-            const tmp5 = idleTimeout;
           }
         }
       }));
@@ -268,7 +260,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
           timeout = setTimeout(() => {
             let tmp = !closure_1_2;
             if (!closure_1_2) {
-              tmp = 0 === closure_1_1.size;
+              tmp = 0 === map.size;
             }
             if (tmp) {
               tmp = c4;
@@ -303,7 +295,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         _require = setTimeout(() => {
           let tmp = !closure_1_2;
           if (!closure_1_2) {
-            tmp = 0 === closure_1_1.size;
+            tmp = 0 === map.size;
           }
           if (tmp) {
             tmp = c4;

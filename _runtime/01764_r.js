@@ -1,12 +1,14 @@
 // === Module 1764: r ===
 
 // Module 1764 (r)
+import t from "t" /* 1665 */;
 import call from "call" /* 1697 */;
 import JEST_WORKER_ID from "JEST_WORKER_ID" /* 1765 */;
+import _mod1766 from "module_1766" /* 1766 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
-const fn = function r(obj) {
+fn = function r(obj) {
   let tmp = typeof obj === "object";
   if (typeof obj === "object") {
     tmp = null !== obj;
@@ -37,24 +39,24 @@ let obj = { IS_IOS: require("JEST_WORKER_ID").IS_IOS };
 PlatformColor.__closure = obj;
 PlatformColor.__workletHash = 12890406291275;
 PlatformColor.__initData = { code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}" };
-function isPlatformColorObject(obj) {
+function isPlatformColorObject(semantic) {
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+  let tmp = typeof semantic === "object";
+  if (typeof semantic === "object") {
+    tmp = null !== semantic;
   }
   if (tmp) {
     const _Array = Array;
-    tmp = !Array.isArray(obj);
+    tmp = !Array.isArray(semantic);
   }
   if (tmp) {
     const _Array2 = Array;
-    let isArray = Array.isArray(obj.semantic);
+    let isArray = Array.isArray(semantic.semantic);
     if (!isArray) {
       const _Array3 = Array;
-      isArray = Array.isArray(obj.resource_paths);
+      isArray = Array.isArray(semantic.resource_paths);
     }
     tmp = isArray;
   }
@@ -72,20 +74,20 @@ class DynamicColorIOS {
 DynamicColorIOS.__closure = {};
 DynamicColorIOS.__workletHash = 593421129931;
 DynamicColorIOS.__initData = { code: "function DynamicColorIOS_Pnpm_colorsTs4(tuple){return{dynamic:{light:tuple.light,dark:tuple.dark,highContrastLight:tuple.highContrastLight,highContrastDark:tuple.highContrastDark}};}" };
-function isDynamicColorObjectIOS(arr) {
+function isDynamicColorObjectIOS(dynamic) {
   if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp2 = typeof arr === "object";
-  if (typeof arr === "object") {
-    tmp2 = null !== arr;
+  let tmp2 = typeof dynamic === "object";
+  if (typeof dynamic === "object") {
+    tmp2 = null !== dynamic;
   }
   if (tmp2) {
     const _Array = Array;
-    tmp2 = !Array.isArray(arr);
+    tmp2 = !Array.isArray(dynamic);
   }
   if (tmp2) {
-    const dynamic = arr.dynamic;
+    dynamic = dynamic.dynamic;
     if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -100,38 +102,36 @@ function isDynamicColorObjectIOS(arr) {
     tmp2 = tmp4;
   }
   if (tmp2) {
-    tmp2 = "light" in arr.dynamic;
+    tmp2 = "light" in dynamic.dynamic;
   }
   if (tmp2) {
-    tmp2 = "dark" in arr.dynamic;
+    tmp2 = "dark" in dynamic.dynamic;
   }
   return tmp2;
 }
 isDynamicColorObjectIOS.__closure = { isRecord: fn };
 isDynamicColorObjectIOS.__workletHash = 1181760541767;
 isDynamicColorObjectIOS.__initData = { code: "function isDynamicColorObjectIOS_Pnpm_colorsTs5(value){const{isRecord}=this.__closure;return isRecord(value)&&isRecord(value.dynamic)&&'light'in value.dynamic&&'dark'in value.dynamic;}" };
-obj = { invalidColor: fn2, invalidProcessedColor: fn3, dynamicNotAvailableOnPlatform: fn4 };
-fn2 = function t(arg0) {
+const fn2 = function t(arg0) {
   return "Invalid color value: " + JSON.stringify(arg0);
 };
 fn2.__closure = {};
 fn2.__workletHash = 16453254098770;
 fn2.__initData = { code: "function pnpm_colorsTs6(color){return\"Invalid color value: \"+JSON.stringify(color);}" };
-fn3 = function n(arg0) {
+const fn3 = function n(arg0) {
   return "Invalid processed color value: " + JSON.stringify(arg0);
 };
 fn3.__closure = {};
 fn3.__workletHash = 8662920964153;
 fn3.__initData = { code: "function pnpm_colorsTs7(color){return\"Invalid processed color value: \"+JSON.stringify(color);}" };
-fn4 = function o() {
+const fn4 = function o() {
   return "DynamicColorIOS is not available on this platform.";
 };
 fn4.__closure = {};
 fn4.__workletHash = 13235944247491;
 fn4.__initData = { code: "function pnpm_colorsTs8(){return'DynamicColorIOS is not available on this platform.';}" };
-function processColorNumber(arr) {
-  const result = call.processColorInitially(arr);
-  obj = call;
+function processColorNumber(semantic) {
+  const result = call.processColorInitially(semantic);
   let tmp3 = result;
   if (tmp2) {
     tmp3 = result | 0;
@@ -149,23 +149,18 @@ unprocessColorNumber.__closure = {};
 unprocessColorNumber.__workletHash = 5518391320995;
 unprocessColorNumber.__initData = { code: "function unprocessColorNumber_Pnpm_colorsTs10(value){const a=(value>>>24)/255;const r=value<<8>>>24;const g=value<<16>>>24;const b=value<<24>>>24;return\"rgba(\"+r+\",\"+g+\",\"+b+\",\"+a+\")\";}" };
 let items = ["light", "dark", "highContrastLight", "highContrastDark"];
-function processDynamicColorObjectIOS(arr) {
+function processDynamicColorObjectIOS(semantic) {
   const dynamic = {};
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    if (undefined !== arr.dynamic[nextResult]) {
-      let tmp4 = processColorNumber;
-      let tmp5 = nextResult;
-      let tmp6 = processColorNumber(arr.dynamic[tmp3]);
+    if (undefined !== semantic.dynamic[nextResult]) {
+      let tmp6 = processColorNumber(semantic.dynamic[tmp3]);
       if (null === tmp6) {
-        let tmp10 = iter;
         iter.return();
         return null;
       } else {
-        let tmp8 = nextResult;
-        let tmp9 = tmp6;
         dynamic[tmp3] = tmp7;
       }
     }
@@ -179,11 +174,8 @@ processDynamicColorObjectIOS.__initData = { code: "function processDynamicColorO
 function unprocessDynamicColorObjectIOS(arr) {
   const dynamic = {};
   for (const item10008 of items) {
-    let tmp = item10008;
     if (undefined !== arg0.dynamic[item10008]) {
-      let tmp2 = item10008;
-      let tmp3 = unprocessColorNumber;
-      dynamic[tmp] = unprocessColorNumber(arg0.dynamic[tmp]);
+      dynamic[item10008] = unprocessColorNumber(arg0.dynamic[item10008]);
     }
     continue;
   }
@@ -192,12 +184,12 @@ function unprocessDynamicColorObjectIOS(arr) {
 unprocessDynamicColorObjectIOS.__closure = { DynamicColorIOSProperties: items, unprocessColorNumber };
 unprocessDynamicColorObjectIOS.__workletHash = 3217615757982;
 unprocessDynamicColorObjectIOS.__initData = { code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}" };
-function processColor(arr, target) {
+function processColor(semantic, target) {
   if (typeof processColorNumber !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = call;
-  const result = obj.processColorInitially(arr);
+  const result = obj.processColorInitially(semantic);
   let tmp5 = result;
   if (tmp4) {
     tmp5 = result | 0;
@@ -209,9 +201,9 @@ function processColor(arr, target) {
     if (target != null) {
       target = target.target;
     }
-    let tmp28 = target !== tmp(1766).ValueProcessorTarget.CSS;
+    let tmp28 = target !== _mod1766.ValueProcessorTarget.CSS;
     if (!tmp28) {
-      tmp28 = "transparent" !== arr;
+      tmp28 = "transparent" !== semantic;
     }
     if (tmp28) {
       tmp28 = tmp5;
@@ -224,37 +216,37 @@ function processColor(arr, target) {
     if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let tmp7 = typeof arr === "object";
-    if (typeof arr === "object") {
-      tmp7 = null !== arr;
+    let tmp7 = typeof semantic === "object";
+    if (typeof semantic === "object") {
+      tmp7 = null !== semantic;
     }
     if (tmp7) {
       const _Array = Array;
-      tmp7 = !Array.isArray(arr);
+      tmp7 = !Array.isArray(semantic);
     }
     if (tmp7) {
       const _Array2 = Array;
-      let isArray = Array.isArray(arr.semantic);
+      let isArray = Array.isArray(semantic.semantic);
       if (!isArray) {
         const _Array3 = Array;
-        isArray = Array.isArray(arr.resource_paths);
+        isArray = Array.isArray(semantic.resource_paths);
       }
       tmp7 = isArray;
     }
     if (tmp7) {
-      return arr;
+      return semantic;
     } else {
       let tmp12 = tmp5;
-      if (isDynamicColorObjectIOS(arr)) {
-        if (tmp(1765).IS_IOS) {
-          tmp12 = processDynamicColorObjectIOS(arr);
+      if (isDynamicColorObjectIOS(semantic)) {
+        if (JEST_WORKER_ID.IS_IOS) {
+          tmp12 = processDynamicColorObjectIOS(semantic);
         } else {
-          const reanimatedError = new tmp(1665).ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+          const reanimatedError = new t.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
           throw reanimatedError;
         }
       }
       if (null === tmp12) {
-        const reanimatedError1 = new tmp(1665).ReanimatedError(obj.invalidColor(arr));
+        const reanimatedError1 = new t.ReanimatedError(obj.invalidColor(semantic));
         throw reanimatedError1;
       } else {
         return tmp12;
@@ -300,14 +292,14 @@ function unprocessColor(arr) {
     if (tmp2) {
       return arr;
     } else if (isDynamicColorObjectIOS(arr)) {
-      if (tmp7(1765).IS_IOS) {
+      if (JEST_WORKER_ID.IS_IOS) {
         return unprocessDynamicColorObjectIOS(arr);
       } else {
-        const reanimatedError = new tmp7(1665).ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+        const reanimatedError = new t.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
         throw reanimatedError;
       }
     } else {
-      const reanimatedError1 = new tmp7(1665).ReanimatedError(obj.invalidProcessedColor(arr));
+      const reanimatedError1 = new t.ReanimatedError(obj.invalidProcessedColor(arr));
       throw reanimatedError1;
     }
   }
@@ -318,9 +310,6 @@ unprocessColor.__workletHash = 11221362619601;
 unprocessColor.__initData = { code: "function unprocessColor_Pnpm_colorsTs14(value){const{unprocessColorNumber,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,unprocessDynamicColorObjectIOS}=this.__closure;if(typeof value==='number'){return unprocessColorNumber(value);}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}return unprocessDynamicColorObjectIOS(value);}throw new ReanimatedError(ERROR_MESSAGES.invalidProcessedColor(value));}" };
 function processColorsInProps(obj) {
   for (const key10005 in arg0) {
-    let tmp3 = key10005;
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
     let ColorProperties = call.ColorProperties;
     if (!ColorProperties.includes(key10005)) {
       continue;
@@ -328,9 +317,8 @@ function processColorsInProps(obj) {
       let arr = arg0[key10005];
       let _Array = Array;
       if (Array.isArray(arr)) {
-        let mapped = arr.map((arg0) => callback(arg0));
+        let mapped = arr.map((item, index) => callback(item));
       } else {
-        let tmp = processColor;
         mapped = processColor(arr);
       }
       arg0[key10005] = mapped;
@@ -345,9 +333,6 @@ processColorsInProps.__workletHash = 10982881159897;
 processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_colorsTs15(props){const{ColorProperties,processColor}=this.__closure;for(const key in props){if(!ColorProperties.includes(key)){continue;}const value=props[key];props[key]=Array.isArray(value)?value.map(function(c){return processColor(c);}):processColor(value);}}" };
 function unprocessColorsInProps(styleProps) {
   for (const key10005 in arg0) {
-    let tmp3 = key10005;
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
     let ColorProperties = call.ColorProperties;
     if (!ColorProperties.includes(key10005)) {
       continue;
@@ -355,9 +340,8 @@ function unprocessColorsInProps(styleProps) {
       let arr = arg0[key10005];
       let _Array = Array;
       if (Array.isArray(arr)) {
-        let mapped = arr.map((arg0) => callback(arg0));
+        let mapped = arr.map((item, index) => callback(item));
       } else {
-        let tmp = unprocessColor;
         mapped = unprocessColor(arr);
       }
       arg0[key10005] = mapped;

@@ -14,7 +14,6 @@ class peg$SyntaxError {
   static buildMessage(arg0, arg1) {
     obj = {
       literal(text) {
-            let str = text.text;
             const str2 = text.text.replace(/\\/g, "\\\\");
             const str3 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
             const str4 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0");
@@ -23,10 +22,10 @@ class peg$SyntaxError {
             const str7 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
             return "\"" + text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x0" + str.toString(16).toUpperCase();
             }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x" + str.toString(16).toUpperCase();
             }) + "\"";
           },
       class(parts) {
@@ -38,8 +37,6 @@ class peg$SyntaxError {
               do {
                 let _Array = Array;
                 let str4 = parts.parts[num];
-                let tmp = str2;
-                let tmp2 = num;
                 if (parts.parts[num] instanceof Array) {
                   let str14 = str4[0];
                   let str15 = str14.replace(/\\/g, "\\\\");
@@ -52,12 +49,12 @@ class peg$SyntaxError {
                   let str22 = str21.replace(/\r/g, "\\r");
                   let str23 = str22.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   let str24 = parts.parts[num][1];
                   let text = `${str23.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}-`;
                   let str25 = str24.replace(/\\/g, "\\\\");
                   let str26 = str25.replace(/\]/g, "\\]");
@@ -69,14 +66,14 @@ class peg$SyntaxError {
                   let str32 = str31.replace(/\r/g, "\\r");
                   let str33 = str32.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   let text1 = `${str23.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}-${str33.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}`;
                 } else {
                   let str5 = str4.replace(/\\/g, "\\\\");
@@ -89,11 +86,11 @@ class peg$SyntaxError {
                   let str12 = str11.replace(/\r/g, "\\r");
                   let str13 = str12.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   text1 = str13.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   });
                 }
                 str2 = str2 + text1;
@@ -180,12 +177,12 @@ class peg$SyntaxError {
       str16 = str14.replace(/\r/g, "\\r");
       str17 = str16.replace(/[\x00-\x0F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x0" + str.toString(16).toUpperCase();
       });
       str18 = "\"";
       str4 = `${"\"" + str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x" + str.toString(16).toUpperCase();
       })}"`;
     }
     return text + " but " + str4 + " found.";
@@ -211,11 +208,10 @@ obj = {
       if (tmp2 !== obj) {
         const items = [];
         let tmp7 = peg$parsecommaWsp();
-        let tmp8 = tmp3;
-        if (tmp7 !== tmp3) {
+        let tmp8 = obj;
+        if (tmp7 !== obj) {
           do {
             let arr = items.push(tmp7);
-            let tmp10 = peg$parsecommaWsp;
             tmp7 = peg$parsecommaWsp();
             tmp8 = obj;
           } while (tmp7 !== obj);
@@ -238,8 +234,8 @@ obj = {
         tmp5 = tmp8;
       } else {
         closure_48 = tmp;
-        tmp4 = tmp3;
-        tmp5 = tmp3;
+        tmp4 = obj;
+        tmp5 = obj;
       }
       if (tmp4 === tmp5) {
         tmp4 = peg$parsetransform();
@@ -248,18 +244,32 @@ obj = {
     }
     function peg$parsetransform() {
       let charAtResult1;
+      let charAtResult11;
+      let charAtResult13;
+      let charAtResult15;
+      let charAtResult17;
+      let charAtResult19;
+      let charAtResult23;
+      let charAtResult25;
+      let charAtResult27;
+      let charAtResult29;
       let charAtResult3;
+      let charAtResult31;
+      let charAtResult33;
+      let charAtResult35;
       let charAtResult5;
-      if (str.substr(arr10, 6) === matrix) {
-        arr10 = arr10 + 6;
+      let charAtResult7;
+      let charAtResult9;
+      if (str.substr(closure_48, 6) === matrix) {
+        closure_48 = closure_48 + 6;
         let tmp5 = tmp2;
       } else {
         tmp5 = obj;
         if (0 === c52) {
           tmp5 = tmp3;
-          if (arr10 >= arr10) {
-            if (tmp7 > arr10) {
-              arr10 = tmp7;
+          if (closure_48 >= closure_50) {
+            if (tmp7 > closure_50) {
+              closure_50 = tmp7;
               let arr = [];
             }
             arr = arr.push(tmp6);
@@ -268,16 +278,16 @@ obj = {
         }
       }
       if (tmp5 !== obj) {
-        if (regex4.test(str.charAt(arr10))) {
-          let charAtResult = str.charAt(arr10);
-          arr10 = arr10 + 1;
+        if (regex4.test(str.charAt(closure_48))) {
+          let charAtResult = str.charAt(closure_48);
+          closure_48 = closure_48 + 1;
         } else {
           charAtResult = tmp11;
           if (0 === c52) {
             charAtResult = tmp11;
-            if (arr10 >= arr10) {
-              if (tmp19 > arr10) {
-                arr10 = tmp19;
+            if (closure_48 >= closure_50) {
+              if (tmp19 > closure_50) {
+                closure_50 = tmp19;
                 arr = [];
               }
               arr = arr.push(tmp18);
@@ -292,26 +302,20 @@ obj = {
           do {
             let arr1 = items.push(charAtResult);
             let str3 = str;
-            let tmp27 = arr10;
-            let tmp26 = regex4;
-            if (regex4.test(str.charAt(arr10))) {
-              let tmp35 = arr10;
-              charAtResult1 = str3.charAt(arr10);
-              let tmp36 = arr10;
-              arr10 = arr10 + 1;
+            if (regex4.test(str.charAt(closure_48))) {
+              charAtResult1 = str3.charAt(closure_48);
+              closure_48 = closure_48 + 1;
             } else {
               let tmp28 = obj;
-              let tmp29 = c52;
               charAtResult1 = obj;
               if (0 === c52) {
-                let tmp32 = arr10;
+                let tmp32 = closure_48;
                 charAtResult1 = tmp28;
-                if (arr10 >= arr10) {
-                  if (tmp32 > arr10) {
-                    arr10 = tmp32;
+                if (closure_48 >= closure_50) {
+                  if (tmp32 > closure_50) {
+                    closure_50 = tmp32;
                     arr = [];
                   }
-                  let tmp33 = arr;
                   let arr2 = arr.push(tmp31);
                   charAtResult1 = tmp28;
                 }
@@ -319,21 +323,21 @@ obj = {
             }
             tmp24 = obj;
             charAtResult = charAtResult1;
-            obj = tmp26;
+            obj = regex4;
             str = str3;
           } while (charAtResult1 !== obj);
         }
         if (items !== tmp24) {
-          if (40 === str.charCodeAt(arr10)) {
+          if (40 === str.charCodeAt(closure_48)) {
             let tmp39 = c6;
-            arr10 = arr10 + 1;
+            closure_48 = closure_48 + 1;
           } else {
             tmp39 = tmp24;
             if (0 === c52) {
               tmp39 = tmp24;
-              if (arr10 >= arr10) {
-                if (tmp41 > arr10) {
-                  arr10 = tmp41;
+              if (closure_48 >= closure_50) {
+                if (tmp41 > closure_50) {
+                  closure_50 = tmp41;
                   arr = [];
                 }
                 arr.push(tmp40);
@@ -342,16 +346,16 @@ obj = {
             }
           }
           if (tmp39 !== tmp24) {
-            if (obj.test(str.charAt(arr10))) {
-              let charAtResult2 = str.charAt(arr10);
-              arr10 = arr10 + 1;
+            if (obj.test(str.charAt(closure_48))) {
+              let charAtResult2 = str.charAt(closure_48);
+              closure_48 = closure_48 + 1;
             } else {
               charAtResult2 = tmp24;
               if (0 === c52) {
                 charAtResult2 = tmp24;
-                if (arr10 >= arr10) {
-                  if (tmp49 > arr10) {
-                    arr10 = tmp49;
+                if (closure_48 >= closure_50) {
+                  if (tmp49 > closure_50) {
+                    closure_50 = tmp49;
                     arr = [];
                   }
                   arr.push(tmp48);
@@ -366,26 +370,20 @@ obj = {
               do {
                 let arr5 = items1.push(charAtResult2);
                 let str4 = str;
-                let tmp57 = arr10;
-                let tmp56 = regex4;
-                if (regex4.test(str.charAt(arr10))) {
-                  let tmp65 = arr10;
-                  charAtResult3 = str4.charAt(arr10);
-                  let tmp66 = arr10;
-                  arr10 = arr10 + 1;
+                if (regex4.test(str.charAt(closure_48))) {
+                  charAtResult3 = str4.charAt(closure_48);
+                  closure_48 = closure_48 + 1;
                 } else {
                   let tmp58 = obj;
-                  let tmp59 = c52;
                   charAtResult3 = obj;
                   if (0 === c52) {
-                    let tmp62 = arr10;
+                    let tmp62 = closure_48;
                     charAtResult3 = tmp58;
-                    if (arr10 >= arr10) {
-                      if (tmp62 > arr10) {
-                        arr10 = tmp62;
+                    if (closure_48 >= closure_50) {
+                      if (tmp62 > closure_50) {
+                        closure_50 = tmp62;
                         arr = [];
                       }
-                      let tmp63 = arr;
                       let arr6 = arr.push(tmp61);
                       charAtResult3 = tmp58;
                     }
@@ -393,7 +391,7 @@ obj = {
                 }
                 tmp54 = obj;
                 charAtResult2 = charAtResult3;
-                obj2 = tmp56;
+                obj2 = regex4;
                 str = str4;
               } while (charAtResult3 !== obj);
             }
@@ -401,30 +399,30 @@ obj = {
               const tmp68 = peg$parsenumber();
               if (tmp68 !== tmp54) {
                 if (peg$parsecommaWsp() !== tmp54) {
-                  let tmp67Result = tmp67();
+                  let tmp67Result = peg$parsenumber();
                   if (tmp67Result !== tmp54) {
-                    if (tmp69() !== tmp54) {
-                      tmp67Result = tmp67();
+                    if (peg$parsecommaWsp() !== tmp54) {
+                      tmp67Result = peg$parsenumber();
                       if (tmp67Result !== tmp54) {
-                        if (tmp69() !== tmp54) {
-                          const tmp67Result1 = tmp67();
+                        if (peg$parsecommaWsp() !== tmp54) {
+                          const tmp67Result1 = peg$parsenumber();
                           if (tmp67Result1 !== tmp54) {
-                            if (tmp69() !== tmp54) {
-                              const tmp67Result2 = tmp67();
+                            if (peg$parsecommaWsp() !== tmp54) {
+                              const tmp67Result2 = peg$parsenumber();
                               if (tmp67Result2 !== tmp54) {
-                                if (tmp69() !== tmp54) {
-                                  const tmp67Result3 = tmp67();
+                                if (peg$parsecommaWsp() !== tmp54) {
+                                  const tmp67Result3 = peg$parsenumber();
                                   if (tmp67Result3 !== tmp54) {
-                                    if (obj2.test(str.charAt(arr10))) {
-                                      let charAtResult4 = str.charAt(arr10);
-                                      arr10 = arr10 + 1;
+                                    if (obj2.test(str.charAt(closure_48))) {
+                                      let charAtResult4 = str.charAt(closure_48);
+                                      closure_48 = closure_48 + 1;
                                     } else {
                                       charAtResult4 = tmp54;
                                       if (0 === c52) {
                                         charAtResult4 = tmp54;
-                                        if (arr10 >= arr10) {
-                                          if (tmp79 > arr10) {
-                                            arr10 = tmp79;
+                                        if (closure_48 >= closure_50) {
+                                          if (tmp79 > closure_50) {
+                                            closure_50 = tmp79;
                                             arr = [];
                                           }
                                           arr.push(tmp78);
@@ -438,27 +436,21 @@ obj = {
                                     if (charAtResult4 !== tmp54) {
                                       do {
                                         let arr8 = items2.push(charAtResult4);
-                                        let tmp86 = regex4;
                                         let str5 = str;
-                                        let tmp87 = arr10;
-                                        if (regex4.test(str.charAt(arr10))) {
-                                          let tmp95 = arr10;
-                                          charAtResult5 = str5.charAt(arr10);
-                                          let tmp96 = arr10;
-                                          arr10 = arr10 + 1;
+                                        if (regex4.test(str.charAt(closure_48))) {
+                                          charAtResult5 = str5.charAt(closure_48);
+                                          closure_48 = closure_48 + 1;
                                         } else {
                                           let tmp88 = obj;
-                                          let tmp89 = c52;
                                           charAtResult5 = obj;
                                           if (0 === c52) {
-                                            let tmp92 = arr10;
+                                            let tmp92 = closure_48;
                                             charAtResult5 = tmp88;
-                                            if (arr10 >= arr10) {
-                                              if (tmp92 > arr10) {
-                                                arr10 = tmp92;
+                                            if (closure_48 >= closure_50) {
+                                              if (tmp92 > closure_50) {
+                                                closure_50 = tmp92;
                                                 arr = [];
                                               }
-                                              let tmp93 = arr;
                                               let arr9 = arr.push(tmp91);
                                               charAtResult5 = tmp88;
                                             }
@@ -470,1348 +462,1396 @@ obj = {
                                       } while (charAtResult5 !== obj);
                                     }
                                     if (items2 !== tmp84) {
-                                      if (41 === obj3.charCodeAt(arr10)) {
+                                      if (41 === obj3.charCodeAt(closure_48)) {
                                         let tmp99 = c8;
-                                        arr10 = arr10 + 1;
+                                        closure_48 = closure_48 + 1;
                                       } else {
                                         tmp99 = tmp84;
                                         if (0 === c52) {
                                           tmp99 = tmp84;
-                                          if (arr10 >= arr10) {
-                                            if (arr10 > arr10) {
+                                          if (closure_48 >= closure_50) {
+                                            if (tmp101 > closure_50) {
+                                              closure_50 = tmp101;
                                               arr = [];
                                             }
-                                            arr10 = arr;
-                                            arr10 = arr.push(arr10);
+                                            arr.push(tmp100);
                                             tmp99 = tmp84;
                                           }
                                         }
                                       }
                                       if (tmp99 !== tmp84) {
-                                        arr10 = peg$c8;
                                         if (typeof peg$c8 !== "function") {
-                                          arr10 = HermesBuiltin.throwTypeError();
+                                          HermesBuiltin.throwTypeError();
                                         }
                                         const items3 = [tmp68, tmp67Result, tmp67Result2, tmp67Result, tmp67Result1, tmp67Result3];
                                         let str2 = obj3;
                                         let tmp12 = tmp84;
                                         let tmp13 = items3;
                                       } else {
+                                        closure_48 = tmp;
                                         str2 = obj3;
                                         tmp12 = tmp84;
                                         tmp13 = tmp84;
                                       }
                                     } else {
+                                      closure_48 = tmp;
                                       str2 = obj3;
                                       tmp12 = tmp84;
                                       tmp13 = tmp84;
                                     }
                                   } else {
+                                    closure_48 = tmp;
                                     str2 = str;
                                     tmp12 = tmp54;
                                     tmp13 = tmp54;
                                   }
                                 } else {
+                                  closure_48 = tmp;
                                   str2 = str;
                                   tmp12 = tmp54;
                                   tmp13 = tmp54;
                                 }
                               } else {
+                                closure_48 = tmp;
                                 str2 = str;
                                 tmp12 = tmp54;
                                 tmp13 = tmp54;
                               }
                             } else {
+                              closure_48 = tmp;
                               str2 = str;
                               tmp12 = tmp54;
                               tmp13 = tmp54;
                             }
                           } else {
+                            closure_48 = tmp;
                             str2 = str;
                             tmp12 = tmp54;
                             tmp13 = tmp54;
                           }
                         } else {
+                          closure_48 = tmp;
                           str2 = str;
                           tmp12 = tmp54;
                           tmp13 = tmp54;
                         }
                       } else {
+                        closure_48 = tmp;
                         str2 = str;
                         tmp12 = tmp54;
                         tmp13 = tmp54;
                       }
                     } else {
+                      closure_48 = tmp;
                       str2 = str;
                       tmp12 = tmp54;
                       tmp13 = tmp54;
                     }
                   } else {
+                    closure_48 = tmp;
                     str2 = str;
                     tmp12 = tmp54;
                     tmp13 = tmp54;
                   }
                 } else {
+                  closure_48 = tmp;
                   str2 = str;
                   tmp12 = tmp54;
                   tmp13 = tmp54;
                 }
               } else {
+                closure_48 = tmp;
                 str2 = str;
                 tmp12 = tmp54;
                 tmp13 = tmp54;
               }
             } else {
+              closure_48 = tmp;
               str2 = str;
               tmp12 = tmp54;
               tmp13 = tmp54;
             }
           } else {
+            closure_48 = tmp;
             str2 = str;
             tmp12 = tmp24;
             tmp13 = tmp24;
           }
         } else {
+          closure_48 = tmp;
           str2 = str;
           tmp12 = tmp24;
           tmp13 = tmp24;
         }
-        const tmp14 = regex4;
       } else {
+        closure_48 = tmp;
         str2 = str;
         tmp12 = tmp11;
         tmp13 = tmp11;
       }
-      arr10 = tmp13 === tmp12;
       let str6 = str2;
-      let charAtResult6 = tmp12;
-      if (!arr10) {
+      let charAtResult28 = tmp12;
+      if (tmp13 !== tmp12) {
         let str10 = str6;
-        arr10 = charAtResult6;
-        if (!arr10) {
+        let charAtResult21 = charAtResult28;
+        if (!tmp106) {
           let str14 = str10;
-          if (!arr10) {
+          let tmp317 = charAtResult21;
+          if (!tmp106) {
             let items7 = str14;
-            if (!arr10) {
-              if (!arr10) {
+            let tmp430 = tmp317;
+            if (!tmp106) {
+              if (!tmp106) {
                 return tmp13;
               } else {
-                if (items7.substr(arr10, 5) === skewY) {
-                  arr10 = arr10 + 5;
+                let tmp528 = closure_48;
+                if (items7.substr(closure_48, 5) === skewY) {
+                  closure_48 = closure_48 + 5;
+                  let tmp532 = tmp530;
                 } else {
-                  arr10 = c52;
+                  tmp532 = tmp430;
                   if (0 === c52) {
-                    if (arr10 >= arr10) {
-                      if (arr10 > arr10) {
+                    tmp532 = tmp430;
+                    if (closure_48 >= closure_50) {
+                      if (tmp534 > closure_50) {
+                        closure_50 = tmp534;
                         arr = [];
                       }
-                      arr10 = arr;
-                      arr10 = arr.push(arr10);
+                      arr.push(tmp533);
+                      tmp532 = tmp430;
                     }
                   }
                 }
-                if (arr10 !== arr10) {
-                  arr10 = regex4;
-                  if (regex4.test(items7.charAt(arr10))) {
-                    arr10 = items7.charAt(arr10);
-                    arr10 = arr10 + 1;
+                if (tmp532 !== tmp430) {
+                  if (regex4.test(items7.charAt(closure_48))) {
+                    let charAtResult6 = items7.charAt(closure_48);
+                    closure_48 = closure_48 + 1;
                   } else {
-                    arr10 = c52;
+                    charAtResult6 = tmp430;
                     if (0 === c52) {
-                      if (arr10 >= arr10) {
-                        if (arr10 > arr10) {
+                      charAtResult6 = tmp430;
+                      if (closure_48 >= closure_50) {
+                        if (tmp544 > closure_50) {
+                          closure_50 = tmp544;
                           arr = [];
                         }
-                        arr10 = arr;
-                        arr10 = arr.push(arr10);
+                        arr.push(tmp543);
+                        charAtResult6 = tmp430;
                       }
                     }
                   }
                   const items4 = [];
-                  let obj14 = arr10;
-                  if (arr10 !== arr10) {
+                  let obj14 = regex4;
+                  let tmp549 = tmp430;
+                  if (charAtResult6 !== tmp430) {
                     do {
-                      arr10 = items4.push(arr10);
+                      let arr13 = items4.push(charAtResult6);
                       let str21 = str;
-                      arr10 = regex4;
-                      if (regex4.test(str.charAt(arr10))) {
-                        arr10 = str21.charAt(arr10);
-                        arr10 = arr10 + 1;
+                      if (regex4.test(str.charAt(closure_48))) {
+                        charAtResult7 = str21.charAt(closure_48);
+                        closure_48 = closure_48 + 1;
                       } else {
-                        arr10 = obj;
-                        arr10 = c52;
-                        arr10 = obj;
+                        tmp430 = obj;
+                        charAtResult7 = obj;
                         if (0 === c52) {
-                          if (arr10 >= arr10) {
-                            if (arr10 > arr10) {
+                          let tmp556 = closure_48;
+                          charAtResult7 = tmp430;
+                          if (closure_48 >= closure_50) {
+                            if (tmp556 > closure_50) {
+                              closure_50 = tmp556;
                               arr = [];
                             }
-                            arr10 = arr;
-                            arr10 = arr.push(arr10);
+                            let arr14 = arr.push(tmp555);
+                            charAtResult7 = tmp430;
                           }
                         }
                       }
-                      arr10 = obj;
-                      obj14 = arr10;
+                      tmp549 = obj;
+                      charAtResult6 = charAtResult7;
+                      obj14 = regex4;
                       items7 = str21;
-                    } while (arr10 !== obj);
+                    } while (charAtResult7 !== obj);
                   }
-                  if (items4 !== arr10) {
-                    if (40 === items7.charCodeAt(arr10)) {
-                      arr10 = c6;
-                      arr10 = arr10 + 1;
+                  if (items4 !== tmp549) {
+                    if (40 === items7.charCodeAt(closure_48)) {
+                      let tmp563 = c6;
+                      closure_48 = closure_48 + 1;
                     } else {
-                      arr10 = c52;
+                      tmp563 = tmp549;
                       if (0 === c52) {
-                        if (arr10 >= arr10) {
-                          if (arr10 > arr10) {
+                        tmp563 = tmp549;
+                        if (closure_48 >= closure_50) {
+                          if (tmp565 > closure_50) {
+                            closure_50 = tmp565;
                             arr = [];
                           }
-                          arr10 = arr;
-                          arr10 = arr.push(arr10);
+                          tmp430 = arr;
+                          arr.push(tmp564);
+                          tmp563 = tmp549;
                         }
                       }
                     }
-                    if (arr10 !== arr10) {
-                      if (obj14.test(items7.charAt(arr10))) {
-                        arr10 = items7.charAt(arr10);
-                        arr10 = arr10 + 1;
+                    if (tmp563 !== tmp549) {
+                      if (obj14.test(items7.charAt(closure_48))) {
+                        let charAtResult8 = items7.charAt(closure_48);
+                        closure_48 = closure_48 + 1;
                       } else {
-                        arr10 = c52;
+                        charAtResult8 = tmp549;
                         if (0 === c52) {
-                          if (arr10 >= arr10) {
-                            if (arr10 > arr10) {
+                          charAtResult8 = tmp549;
+                          if (closure_48 >= closure_50) {
+                            if (tmp572 > closure_50) {
+                              closure_50 = tmp572;
                               arr = [];
                             }
-                            arr10 = arr;
-                            arr10 = arr.push(arr10);
+                            arr.push(tmp571);
+                            charAtResult8 = tmp549;
                           }
                         }
                       }
                       const items5 = [];
-                      if (arr10 !== arr10) {
+                      tmp430 = tmp549;
+                      if (charAtResult8 !== tmp549) {
                         do {
-                          arr10 = items5.push(arr10);
+                          let arr17 = items5.push(charAtResult8);
                           let str22 = str;
-                          arr10 = regex4;
-                          if (regex4.test(str.charAt(arr10))) {
-                            arr10 = str22.charAt(arr10);
-                            arr10 = arr10 + 1;
+                          if (regex4.test(str.charAt(closure_48))) {
+                            charAtResult9 = str22.charAt(closure_48);
+                            closure_48 = closure_48 + 1;
                           } else {
-                            arr10 = obj;
-                            arr10 = c52;
-                            arr10 = obj;
+                            let tmp580 = obj;
+                            charAtResult9 = obj;
                             if (0 === c52) {
-                              if (arr10 >= arr10) {
-                                if (arr10 > arr10) {
+                              let tmp584 = closure_48;
+                              charAtResult9 = tmp580;
+                              if (closure_48 >= closure_50) {
+                                if (tmp584 > closure_50) {
+                                  closure_50 = tmp584;
                                   arr = [];
                                 }
-                                arr10 = arr;
-                                arr10 = arr.push(arr10);
+                                let arr18 = arr.push(tmp583);
+                                charAtResult9 = tmp580;
                               }
                             }
                           }
-                          arr10 = obj;
-                          obj14 = arr10;
+                          tmp430 = obj;
+                          charAtResult8 = charAtResult9;
+                          obj14 = regex4;
                           items7 = str22;
-                        } while (arr10 !== obj);
+                        } while (charAtResult9 !== obj);
                       }
-                      if (items5 !== arr10) {
-                        arr10 = peg$parsenumber;
-                        arr10 = peg$parsenumber();
-                        if (arr10 !== arr10) {
-                          if (obj14.test(items7.charAt(arr10))) {
-                            arr10 = items7.charAt(arr10);
-                            arr10 = arr10 + 1;
+                      if (items5 !== tmp430) {
+                        const tmp590 = peg$parsenumber();
+                        if (tmp590 !== tmp430) {
+                          if (obj14.test(items7.charAt(closure_48))) {
+                            let charAtResult10 = items7.charAt(closure_48);
+                            closure_48 = closure_48 + 1;
                           } else {
-                            arr10 = c52;
+                            charAtResult10 = tmp430;
                             if (0 === c52) {
-                              if (arr10 >= arr10) {
-                                if (arr10 > arr10) {
+                              charAtResult10 = tmp430;
+                              if (closure_48 >= closure_50) {
+                                if (tmp595 > closure_50) {
+                                  closure_50 = tmp595;
                                   arr = [];
                                 }
-                                arr10 = arr;
-                                arr10 = arr.push(arr10);
+                                arr.push(tmp594);
+                                charAtResult10 = tmp430;
                               }
                             }
                           }
                           const items6 = [];
                           let obj15 = items7;
-                          items7 = arr10;
-                          if (arr10 !== arr10) {
+                          items7 = tmp430;
+                          if (charAtResult10 !== tmp430) {
                             do {
-                              arr10 = items6.push(arr10);
-                              arr10 = regex4;
+                              let arr20 = items6.push(charAtResult10);
                               let str23 = str;
-                              if (regex4.test(str.charAt(arr10))) {
-                                arr10 = str23.charAt(arr10);
-                                arr10 = arr10 + 1;
+                              if (regex4.test(str.charAt(closure_48))) {
+                                charAtResult11 = str23.charAt(closure_48);
+                                closure_48 = closure_48 + 1;
                               } else {
-                                arr10 = obj;
-                                arr10 = c52;
-                                arr10 = obj;
+                                tmp430 = obj;
+                                charAtResult11 = obj;
                                 if (0 === c52) {
-                                  if (arr10 >= arr10) {
-                                    if (arr10 > arr10) {
+                                  let tmp606 = closure_48;
+                                  charAtResult11 = tmp430;
+                                  if (closure_48 >= closure_50) {
+                                    if (tmp606 > closure_50) {
+                                      closure_50 = tmp606;
                                       arr = [];
                                     }
-                                    arr10 = arr;
-                                    arr10 = arr.push(arr10);
+                                    let arr21 = arr.push(tmp605);
+                                    charAtResult11 = tmp430;
                                   }
                                 }
                               }
                               items7 = obj;
+                              charAtResult10 = charAtResult11;
                               obj15 = str23;
-                            } while (arr10 !== obj);
+                            } while (charAtResult11 !== obj);
                           }
                           if (items6 !== items7) {
-                            if (41 === obj15.charCodeAt(arr10)) {
-                              arr10 = c8;
-                              arr10 = arr10 + 1;
+                            if (41 === obj15.charCodeAt(closure_48)) {
+                              let tmp613 = c8;
+                              closure_48 = closure_48 + 1;
                             } else {
-                              arr10 = c52;
-                              arr10 = items7;
+                              tmp613 = items7;
                               if (0 === c52) {
-                                arr10 = closure_9;
-                                arr10 = items7;
-                                if (arr10 >= arr10) {
-                                  if (arr10 > arr10) {
+                                tmp430 = closure_9;
+                                tmp613 = items7;
+                                if (closure_48 >= closure_50) {
+                                  if (tmp614 > closure_50) {
+                                    closure_50 = tmp614;
                                     arr = [];
                                   }
-                                  arr10 = arr;
-                                  arr10 = arr.push(arr10);
-                                  arr10 = items7;
+                                  arr.push(tmp430);
+                                  tmp613 = items7;
                                 }
                               }
                             }
-                            if (arr10 !== items7) {
-                              arr10 = peg$c23;
+                            if (tmp613 !== items7) {
                               if (typeof peg$c23 !== "function") {
-                                arr10 = HermesBuiltin.throwTypeError();
+                                HermesBuiltin.throwTypeError();
                               }
-                              arr10 = globalThis;
                               const _Math4 = Math;
-                              arr10 = closure_60;
-                              items7 = [1, 0, 0, Math.tan(closure_60 * arr10), 1, 0];
-                              arr10 = items7;
+                              tmp528 = closure_60;
+                              items7 = [1, 0, 0, Math.tan(closure_60 * tmp590), 1, 0];
                             } else {
-                              arr10 = items7;
+                              closure_48 = tmp528;
                             }
                           } else {
-                            arr10 = items7;
+                            closure_48 = tmp528;
                           }
+                        } else {
+                          closure_48 = tmp528;
                         }
+                      } else {
+                        closure_48 = tmp528;
                       }
+                    } else {
+                      closure_48 = tmp528;
                     }
+                  } else {
+                    closure_48 = tmp528;
                   }
+                } else {
+                  closure_48 = tmp528;
                 }
               }
             } else {
-              if (str14.substr(arr10, 5) === skewX) {
-                arr10 = arr10 + 5;
+              let tmp431 = closure_48;
+              if (str14.substr(closure_48, 5) === skewX) {
+                closure_48 = closure_48 + 5;
+                let tmp435 = tmp433;
               } else {
-                arr10 = c52;
+                tmp435 = tmp317;
                 if (0 === c52) {
-                  if (arr10 >= arr10) {
-                    if (arr10 > arr10) {
+                  tmp435 = tmp317;
+                  if (closure_48 >= closure_50) {
+                    if (tmp437 > closure_50) {
+                      closure_50 = tmp437;
                       arr = [];
                     }
-                    arr10 = arr;
-                    arr10 = arr.push(arr10);
+                    arr.push(tmp436);
+                    tmp435 = tmp317;
                   }
                 }
               }
-              if (arr10 !== arr10) {
+              if (tmp435 !== tmp317) {
                 let obj12 = regex4;
-                if (regex4.test(str14.charAt(arr10))) {
-                  arr10 = str14.charAt(arr10);
-                  arr10 = arr10 + 1;
+                if (regex4.test(str14.charAt(closure_48))) {
+                  let charAtResult12 = str14.charAt(closure_48);
+                  closure_48 = closure_48 + 1;
                 } else {
-                  arr10 = c52;
+                  charAtResult12 = tmp317;
                   if (0 === c52) {
-                    if (arr10 >= arr10) {
-                      if (arr10 > arr10) {
+                    charAtResult12 = tmp317;
+                    if (closure_48 >= closure_50) {
+                      if (tmp448 > closure_50) {
+                        closure_50 = tmp448;
                         arr = [];
                       }
-                      arr10 = arr;
-                      arr10 = arr.push(arr10);
+                      arr.push(tmp447);
+                      charAtResult12 = tmp317;
                     }
                   }
                 }
                 const items8 = [];
-                if (arr10 !== arr10) {
+                let tmp453 = tmp317;
+                if (charAtResult12 !== tmp317) {
                   do {
-                    arr10 = items8.push(arr10);
+                    let arr25 = items8.push(charAtResult12);
                     let str18 = str;
-                    arr10 = regex4;
-                    if (regex4.test(str.charAt(arr10))) {
-                      arr10 = str18.charAt(arr10);
-                      arr10 = arr10 + 1;
+                    if (regex4.test(str.charAt(closure_48))) {
+                      charAtResult13 = str18.charAt(closure_48);
+                      closure_48 = closure_48 + 1;
                     } else {
-                      arr10 = obj;
-                      arr10 = c52;
-                      arr10 = obj;
+                      tmp317 = obj;
+                      charAtResult13 = obj;
                       if (0 === c52) {
-                        if (arr10 >= arr10) {
-                          if (arr10 > arr10) {
+                        let tmp460 = closure_48;
+                        charAtResult13 = tmp317;
+                        if (closure_48 >= closure_50) {
+                          if (tmp460 > closure_50) {
+                            closure_50 = tmp460;
                             arr = [];
                           }
-                          arr10 = arr;
-                          arr10 = arr.push(arr10);
+                          let arr26 = arr.push(tmp459);
+                          charAtResult13 = tmp317;
                         }
                       }
                     }
-                    arr10 = obj;
-                    obj12 = arr10;
+                    tmp453 = obj;
+                    charAtResult12 = charAtResult13;
+                    obj12 = regex4;
                     str14 = str18;
-                  } while (arr10 !== obj);
+                  } while (charAtResult13 !== obj);
                 }
-                if (items8 !== arr10) {
-                  if (40 === str14.charCodeAt(arr10)) {
-                    arr10 = c6;
-                    arr10 = arr10 + 1;
+                if (items8 !== tmp453) {
+                  if (40 === str14.charCodeAt(closure_48)) {
+                    let tmp467 = c6;
+                    closure_48 = closure_48 + 1;
                   } else {
-                    arr10 = c52;
+                    tmp467 = tmp453;
                     if (0 === c52) {
-                      if (arr10 >= arr10) {
-                        if (arr10 > arr10) {
+                      tmp467 = tmp453;
+                      if (closure_48 >= closure_50) {
+                        if (tmp469 > closure_50) {
+                          closure_50 = tmp469;
                           arr = [];
                         }
-                        arr10 = arr;
-                        arr10 = arr.push(arr10);
+                        tmp317 = arr;
+                        arr.push(tmp468);
+                        tmp467 = tmp453;
                       }
                     }
                   }
-                  if (arr10 !== arr10) {
-                    if (obj12.test(str14.charAt(arr10))) {
-                      arr10 = str14.charAt(arr10);
-                      arr10 = arr10 + 1;
+                  if (tmp467 !== tmp453) {
+                    if (obj12.test(str14.charAt(closure_48))) {
+                      let charAtResult14 = str14.charAt(closure_48);
+                      closure_48 = closure_48 + 1;
                     } else {
-                      arr10 = c52;
+                      charAtResult14 = tmp453;
                       if (0 === c52) {
-                        if (arr10 >= arr10) {
-                          if (arr10 > arr10) {
+                        charAtResult14 = tmp453;
+                        if (closure_48 >= closure_50) {
+                          if (tmp476 > closure_50) {
+                            closure_50 = tmp476;
                             arr = [];
                           }
-                          arr10 = arr;
-                          arr10 = arr.push(arr10);
+                          arr.push(tmp475);
+                          charAtResult14 = tmp453;
                         }
                       }
                     }
                     const items9 = [];
-                    if (arr10 !== arr10) {
+                    tmp317 = tmp453;
+                    if (charAtResult14 !== tmp453) {
                       do {
-                        arr10 = items9.push(arr10);
+                        let arr29 = items9.push(charAtResult14);
                         let str19 = str;
-                        arr10 = regex4;
-                        if (regex4.test(str.charAt(arr10))) {
-                          arr10 = str19.charAt(arr10);
-                          arr10 = arr10 + 1;
+                        if (regex4.test(str.charAt(closure_48))) {
+                          charAtResult15 = str19.charAt(closure_48);
+                          closure_48 = closure_48 + 1;
                         } else {
-                          arr10 = obj;
-                          arr10 = c52;
-                          arr10 = obj;
+                          let tmp484 = obj;
+                          charAtResult15 = obj;
                           if (0 === c52) {
-                            if (arr10 >= arr10) {
-                              if (arr10 > arr10) {
+                            let tmp488 = closure_48;
+                            charAtResult15 = tmp484;
+                            if (closure_48 >= closure_50) {
+                              if (tmp488 > closure_50) {
+                                closure_50 = tmp488;
                                 arr = [];
                               }
-                              arr10 = arr;
-                              arr10 = arr.push(arr10);
+                              let arr30 = arr.push(tmp487);
+                              charAtResult15 = tmp484;
                             }
                           }
                         }
-                        arr10 = obj;
-                        obj12 = arr10;
+                        tmp317 = obj;
+                        charAtResult14 = charAtResult15;
+                        obj12 = regex4;
                         str14 = str19;
-                      } while (arr10 !== obj);
+                      } while (charAtResult15 !== obj);
                     }
-                    if (items9 !== arr10) {
-                      arr10 = peg$parsenumber;
-                      arr10 = peg$parsenumber();
-                      if (arr10 !== arr10) {
-                        if (obj12.test(str14.charAt(arr10))) {
-                          arr10 = str14.charAt(arr10);
-                          arr10 = arr10 + 1;
+                    if (items9 !== tmp317) {
+                      const tmp494 = peg$parsenumber();
+                      if (tmp494 !== tmp317) {
+                        if (obj12.test(str14.charAt(closure_48))) {
+                          let charAtResult16 = str14.charAt(closure_48);
+                          closure_48 = closure_48 + 1;
                         } else {
-                          arr10 = c52;
+                          charAtResult16 = tmp317;
                           if (0 === c52) {
-                            if (arr10 >= arr10) {
-                              if (arr10 > arr10) {
+                            charAtResult16 = tmp317;
+                            if (closure_48 >= closure_50) {
+                              if (tmp499 > closure_50) {
+                                closure_50 = tmp499;
                                 arr = [];
                               }
-                              arr10 = arr;
-                              arr10 = arr.push(arr10);
+                              arr.push(tmp498);
+                              charAtResult16 = tmp317;
                             }
                           }
                         }
                         const items10 = [];
                         let obj13 = str14;
-                        str14 = arr10;
-                        if (arr10 !== arr10) {
+                        str14 = tmp317;
+                        if (charAtResult16 !== tmp317) {
                           do {
-                            arr10 = items10.push(arr10);
-                            arr10 = regex4;
+                            let arr32 = items10.push(charAtResult16);
                             let str20 = str;
-                            if (regex4.test(str.charAt(arr10))) {
-                              arr10 = str20.charAt(arr10);
-                              arr10 = arr10 + 1;
+                            if (regex4.test(str.charAt(closure_48))) {
+                              charAtResult17 = str20.charAt(closure_48);
+                              closure_48 = closure_48 + 1;
                             } else {
-                              arr10 = obj;
-                              arr10 = c52;
-                              arr10 = obj;
+                              tmp317 = obj;
+                              charAtResult17 = obj;
                               if (0 === c52) {
-                                if (arr10 >= arr10) {
-                                  if (arr10 > arr10) {
+                                let tmp510 = closure_48;
+                                charAtResult17 = tmp317;
+                                if (closure_48 >= closure_50) {
+                                  if (tmp510 > closure_50) {
+                                    closure_50 = tmp510;
                                     arr = [];
                                   }
-                                  arr10 = arr;
-                                  arr10 = arr.push(arr10);
+                                  let arr33 = arr.push(tmp509);
+                                  charAtResult17 = tmp317;
                                 }
                               }
                             }
                             str14 = obj;
+                            charAtResult16 = charAtResult17;
                             obj13 = str20;
-                          } while (arr10 !== obj);
+                          } while (charAtResult17 !== obj);
                         }
                         if (items10 !== str14) {
-                          if (41 === obj13.charCodeAt(arr10)) {
-                            arr10 = c8;
-                            arr10 = arr10 + 1;
+                          if (41 === obj13.charCodeAt(closure_48)) {
+                            let tmp517 = c8;
+                            closure_48 = closure_48 + 1;
                           } else {
-                            arr10 = c52;
-                            arr10 = str14;
+                            tmp517 = str14;
                             if (0 === c52) {
-                              arr10 = str14;
-                              if (arr10 >= arr10) {
-                                if (arr10 > arr10) {
+                              tmp517 = str14;
+                              if (closure_48 >= closure_50) {
+                                if (tmp519 > closure_50) {
+                                  closure_50 = tmp519;
                                   arr = [];
                                 }
-                                arr10 = arr;
-                                arr10 = arr.push(arr10);
-                                arr10 = str14;
+                                tmp317 = arr;
+                                arr.push(tmp518);
+                                tmp517 = str14;
                               }
                             }
                           }
-                          if (arr10 !== str14) {
-                            arr10 = peg$c20;
+                          if (tmp517 !== str14) {
                             if (typeof peg$c20 !== "function") {
-                              arr10 = HermesBuiltin.throwTypeError();
+                              HermesBuiltin.throwTypeError();
                             }
-                            arr10 = globalThis;
                             const _Math3 = Math;
-                            arr10 = closure_60;
-                            const items11 = [1, Math.tan(closure_60 * arr10), 0, 0, 1, 0];
-                            arr10 = obj13;
-                            arr10 = str14;
-                            arr10 = items11;
+                            tmp431 = closure_60;
+                            const items11 = [1, Math.tan(closure_60 * tmp494), 0, 0, 1, 0];
                           } else {
-                            arr10 = obj13;
-                            arr10 = str14;
-                            arr10 = str14;
+                            closure_48 = tmp431;
                           }
                         } else {
-                          arr10 = obj13;
-                          arr10 = str14;
-                          arr10 = str14;
+                          closure_48 = tmp431;
                         }
                       } else {
-                        arr10 = str14;
+                        closure_48 = tmp431;
                       }
                     } else {
-                      arr10 = str14;
+                      closure_48 = tmp431;
                     }
                   } else {
-                    arr10 = str14;
+                    closure_48 = tmp431;
                   }
                 } else {
-                  arr10 = str14;
+                  closure_48 = tmp431;
                 }
               } else {
-                arr10 = str14;
+                closure_48 = tmp431;
               }
-              arr10 = arr10 === tmp12;
             }
           } else {
-            if (str10.substr(arr10, 6) === rotate) {
-              arr10 = arr10 + 6;
+            if (str10.substr(closure_48, 6) === rotate) {
+              closure_48 = closure_48 + 6;
+              let tmp322 = tmp320;
             } else {
-              arr10 = c52;
+              tmp322 = charAtResult21;
               if (0 === c52) {
-                if (arr10 >= arr10) {
-                  if (arr10 > arr10) {
+                tmp322 = charAtResult21;
+                if (closure_48 >= closure_50) {
+                  if (tmp324 > closure_50) {
+                    closure_50 = tmp324;
                     arr = [];
                   }
-                  arr10 = arr;
-                  arr10 = arr.push(arr10);
+                  arr.push(tmp323);
+                  tmp322 = charAtResult21;
                 }
               }
             }
-            if (arr10 !== arr10) {
-              arr10 = regex4;
-              if (regex4.test(str10.charAt(arr10))) {
-                arr10 = str10.charAt(arr10);
-                arr10 = arr10 + 1;
+            if (tmp322 !== charAtResult21) {
+              if (regex4.test(str10.charAt(closure_48))) {
+                let charAtResult18 = str10.charAt(closure_48);
+                closure_48 = closure_48 + 1;
               } else {
-                arr10 = c52;
+                charAtResult18 = charAtResult21;
                 if (0 === c52) {
-                  if (arr10 >= arr10) {
-                    if (arr10 > arr10) {
+                  charAtResult18 = charAtResult21;
+                  if (closure_48 >= closure_50) {
+                    if (tmp336 > closure_50) {
+                      closure_50 = tmp336;
                       arr = [];
                     }
-                    arr10 = arr;
-                    arr10 = arr.push(arr10);
+                    arr.push(tmp335);
+                    charAtResult18 = charAtResult21;
                   }
                 }
               }
               const items12 = [];
-              let obj10 = arr10;
-              if (arr10 !== arr10) {
+              let obj10 = regex4;
+              let tmp341 = charAtResult21;
+              if (charAtResult18 !== charAtResult21) {
                 do {
-                  arr10 = items12.push(arr10);
+                  let arr37 = items12.push(charAtResult18);
                   let str15 = str;
-                  arr10 = regex4;
-                  if (regex4.test(str.charAt(arr10))) {
-                    arr10 = str15.charAt(arr10);
-                    arr10 = arr10 + 1;
+                  if (regex4.test(str.charAt(closure_48))) {
+                    charAtResult19 = str15.charAt(closure_48);
+                    closure_48 = closure_48 + 1;
                   } else {
-                    arr10 = obj;
-                    arr10 = c52;
-                    arr10 = obj;
+                    charAtResult21 = obj;
+                    charAtResult19 = obj;
                     if (0 === c52) {
-                      if (arr10 >= arr10) {
-                        if (arr10 > arr10) {
+                      let tmp348 = closure_48;
+                      charAtResult19 = charAtResult21;
+                      if (closure_48 >= closure_50) {
+                        if (tmp348 > closure_50) {
+                          closure_50 = tmp348;
                           arr = [];
                         }
-                        arr10 = arr;
-                        arr10 = arr.push(arr10);
+                        let arr38 = arr.push(tmp347);
+                        charAtResult19 = charAtResult21;
                       }
                     }
                   }
-                  arr10 = obj;
-                  obj10 = arr10;
+                  tmp341 = obj;
+                  charAtResult18 = charAtResult19;
+                  obj10 = regex4;
                   str10 = str15;
-                } while (arr10 !== obj);
+                } while (charAtResult19 !== obj);
               }
-              if (items12 !== arr10) {
-                if (40 === str10.charCodeAt(arr10)) {
-                  arr10 = c6;
-                  arr10 = arr10 + 1;
+              if (items12 !== tmp341) {
+                if (40 === str10.charCodeAt(closure_48)) {
+                  let tmp355 = c6;
+                  closure_48 = closure_48 + 1;
                 } else {
-                  arr10 = c52;
+                  tmp355 = tmp341;
                   if (0 === c52) {
-                    if (arr10 >= arr10) {
-                      if (arr10 > arr10) {
+                    tmp355 = tmp341;
+                    if (closure_48 >= closure_50) {
+                      if (tmp357 > closure_50) {
+                        closure_50 = tmp357;
                         arr = [];
                       }
-                      arr10 = arr;
-                      arr10 = arr.push(arr10);
+                      charAtResult21 = arr;
+                      arr.push(tmp356);
+                      tmp355 = tmp341;
                     }
                   }
                 }
-                if (arr10 !== arr10) {
-                  if (obj10.test(str10.charAt(arr10))) {
-                    arr10 = str10.charAt(arr10);
-                    arr10 = arr10 + 1;
+                if (tmp355 !== tmp341) {
+                  if (obj10.test(str10.charAt(closure_48))) {
+                    let charAtResult20 = str10.charAt(closure_48);
+                    closure_48 = closure_48 + 1;
                   } else {
-                    arr10 = c52;
+                    charAtResult20 = tmp341;
                     if (0 === c52) {
-                      if (arr10 >= arr10) {
-                        if (arr10 > arr10) {
+                      charAtResult20 = tmp341;
+                      if (closure_48 >= closure_50) {
+                        if (tmp364 > closure_50) {
+                          closure_50 = tmp364;
                           arr = [];
                         }
-                        arr10 = arr;
-                        arr10 = arr.push(arr10);
+                        charAtResult21 = arr;
+                        arr.push(tmp363);
+                        charAtResult20 = tmp341;
                       }
                     }
                   }
                   const items13 = [];
-                  if (arr10 !== arr10) {
+                  let tmp368 = tmp341;
+                  if (charAtResult20 !== tmp341) {
                     do {
-                      arr10 = items13.push(arr10);
+                      let arr41 = items13.push(charAtResult20);
                       let str16 = str;
-                      arr10 = regex4;
-                      if (regex4.test(str.charAt(arr10))) {
-                        arr10 = str16.charAt(arr10);
-                        arr10 = arr10 + 1;
+                      if (regex4.test(str.charAt(closure_48))) {
+                        charAtResult21 = str16.charAt(closure_48);
+                        closure_48 = closure_48 + 1;
                       } else {
-                        arr10 = obj;
-                        arr10 = c52;
-                        arr10 = obj;
+                        let tmp372 = obj;
+                        charAtResult21 = obj;
                         if (0 === c52) {
-                          if (arr10 >= arr10) {
-                            if (arr10 > arr10) {
+                          let tmp375 = closure_48;
+                          charAtResult21 = tmp372;
+                          if (closure_48 >= closure_50) {
+                            if (tmp375 > closure_50) {
+                              closure_50 = tmp375;
                               arr = [];
                             }
-                            arr10 = arr;
-                            arr10 = arr.push(arr10);
+                            let arr42 = arr.push(tmp374);
+                            charAtResult21 = tmp372;
                           }
                         }
                       }
-                      arr10 = obj;
-                      obj10 = arr10;
+                      tmp368 = obj;
+                      charAtResult20 = charAtResult21;
+                      obj10 = regex4;
                       str10 = str16;
-                    } while (arr10 !== obj);
+                    } while (charAtResult21 !== obj);
                   }
-                  if (items13 !== arr10) {
-                    arr10 = peg$parsenumber;
-                    arr10 = peg$parsenumber();
-                    if (arr10 !== arr10) {
-                      arr10 = peg$parsecommaWsp;
-                      if (peg$parsecommaWsp() !== arr10) {
-                        arr10 = arr10();
-                        if (arr10 !== arr10) {
-                          if (arr10() !== arr10) {
-                            arr10 = arr10();
-                            if (arr10 !== arr10) {
-                              arr10 = peg$c27;
+                  if (items13 !== tmp368) {
+                    charAtResult21 = peg$parsenumber();
+                    if (charAtResult21 !== tmp368) {
+                      if (peg$parsecommaWsp() !== tmp368) {
+                        let tmp380Result = peg$parsenumber();
+                        if (tmp380Result !== tmp368) {
+                          if (peg$parsecommaWsp() !== tmp368) {
+                            tmp380Result = peg$parsenumber();
+                            if (tmp380Result !== tmp368) {
                               if (typeof peg$c27 !== "function") {
-                                arr10 = HermesBuiltin.throwTypeError();
+                                HermesBuiltin.throwTypeError();
                               }
-                              const items14 = [arr10, arr10];
+                              const items14 = [tmp380Result, tmp380Result];
                               let items16 = items14;
-                              if (items16 === arr10) {
+                              if (items16 === tmp368) {
                                 items16 = null;
                               }
-                              if (items16 !== arr10) {
-                                if (obj10.test(str10.charAt(arr10))) {
-                                  arr10 = str10.charAt(arr10);
-                                  arr10 = arr10 + 1;
+                              if (items16 !== tmp368) {
+                                if (obj10.test(str10.charAt(closure_48))) {
+                                  let charAtResult22 = str10.charAt(closure_48);
+                                  closure_48 = closure_48 + 1;
                                 } else {
-                                  arr10 = c52;
+                                  charAtResult22 = tmp368;
                                   if (0 === c52) {
-                                    if (arr10 >= arr10) {
-                                      if (arr10 > arr10) {
+                                    charAtResult22 = tmp368;
+                                    if (closure_48 >= closure_50) {
+                                      if (tmp390 > closure_50) {
+                                        closure_50 = tmp390;
                                         arr = [];
                                       }
-                                      arr10 = arr;
-                                      arr10 = arr.push(arr10);
+                                      arr.push(tmp389);
+                                      charAtResult22 = tmp368;
                                     }
                                   }
                                 }
                                 const items15 = [];
                                 let obj11 = str10;
-                                str10 = arr10;
-                                if (arr10 !== arr10) {
+                                str10 = tmp368;
+                                if (charAtResult22 !== tmp368) {
                                   do {
-                                    arr10 = items15.push(arr10);
-                                    arr10 = regex4;
+                                    let arr44 = items15.push(charAtResult22);
                                     let str17 = str;
-                                    if (regex4.test(str.charAt(arr10))) {
-                                      arr10 = str17.charAt(arr10);
-                                      arr10 = arr10 + 1;
+                                    if (regex4.test(str.charAt(closure_48))) {
+                                      charAtResult23 = str17.charAt(closure_48);
+                                      closure_48 = closure_48 + 1;
                                     } else {
-                                      arr10 = obj;
-                                      arr10 = c52;
-                                      arr10 = obj;
+                                      let tmp398 = obj;
+                                      charAtResult23 = obj;
                                       if (0 === c52) {
-                                        if (arr10 >= arr10) {
-                                          if (arr10 > arr10) {
+                                        let tmp402 = closure_48;
+                                        charAtResult23 = tmp398;
+                                        if (closure_48 >= closure_50) {
+                                          if (tmp402 > closure_50) {
+                                            closure_50 = tmp402;
                                             arr = [];
                                           }
-                                          arr10 = arr;
-                                          arr10 = arr.push(arr10);
+                                          let arr45 = arr.push(tmp401);
+                                          charAtResult23 = tmp398;
                                         }
                                       }
                                     }
                                     str10 = obj;
+                                    charAtResult22 = charAtResult23;
                                     obj11 = str17;
-                                  } while (arr10 !== obj);
+                                  } while (charAtResult23 !== obj);
                                 }
                                 if (items15 !== str10) {
-                                  if (41 === obj11.charCodeAt(arr10)) {
-                                    arr10 = c8;
-                                    arr10 = arr10 + 1;
+                                  if (41 === obj11.charCodeAt(closure_48)) {
+                                    let tmp409 = c8;
+                                    closure_48 = closure_48 + 1;
                                   } else {
-                                    arr10 = c52;
-                                    arr10 = str10;
+                                    tmp409 = str10;
                                     if (0 === c52) {
-                                      arr10 = str10;
-                                      if (arr10 >= arr10) {
-                                        if (arr10 > arr10) {
+                                      tmp409 = str10;
+                                      if (closure_48 >= closure_50) {
+                                        if (tmp411 > closure_50) {
+                                          closure_50 = tmp411;
                                           arr = [];
                                         }
-                                        arr10 = arr;
-                                        arr10 = arr.push(arr10);
-                                        arr10 = str10;
+                                        arr.push(tmp410);
+                                        tmp409 = str10;
                                       }
                                     }
                                   }
-                                  if (arr10 !== str10) {
-                                    arr10 = peg$c17;
+                                  if (tmp409 !== str10) {
                                     if (typeof peg$c17 !== "function") {
-                                      arr10 = HermesBuiltin.throwTypeError();
+                                      HermesBuiltin.throwTypeError();
                                     }
-                                    arr10 = globalThis;
                                     const _Math = Math;
-                                    arr10 = closure_60;
-                                    arr10 = Math.cos(closure_60 * arr10);
+                                    const cosResult = Math.cos(closure_60 * charAtResult21);
                                     const _Math2 = Math;
-                                    arr10 = Math.sin(closure_60 * arr10);
-                                    arr10 = null;
+                                    let sinResult = Math.sin(closure_60 * charAtResult21);
                                     if (null !== items16) {
-                                      [tmp, tmp] = items16;
-                                      items16 = [arr10, -arr10, arr10 * -arr10 + -arr10 * -arr10 + arr10, arr10, arr10, ];
-                                      arr10 = arr10 * -arr10;
-                                      items16[5] = arr10 + arr10 * -arr10 + arr10;
+                                      [tmp421, tmp422] = items16;
+                                      items16 = [cosResult, -sinResult, cosResult * -tmp421 + -sinResult * -tmp422 + tmp421, sinResult, cosResult, ];
+                                      sinResult = sinResult * -tmp421;
+                                      items16[5] = sinResult + cosResult * -tmp422 + tmp422;
                                       let items17 = items16;
                                     } else {
-                                      items17 = [arr10, -arr10, 0, arr10, arr10, 0];
+                                      items17 = [cosResult, -sinResult, 0, sinResult, cosResult, 0];
                                     }
-                                    arr10 = items17;
-                                    arr10 = obj11;
-                                    arr10 = str10;
                                   } else {
-                                    arr10 = obj11;
-                                    arr10 = str10;
-                                    arr10 = str10;
+                                    closure_48 = tmp318;
                                   }
                                 } else {
-                                  arr10 = obj11;
-                                  arr10 = str10;
-                                  arr10 = str10;
+                                  closure_48 = tmp318;
                                 }
                               } else {
-                                arr10 = str10;
+                                closure_48 = tmp318;
                               }
                             }
                           }
                         }
                       }
-                      items16 = arr10;
+                      items16 = tmp368;
                     } else {
-                      arr10 = str10;
+                      closure_48 = tmp318;
                     }
                   } else {
-                    arr10 = str10;
+                    closure_48 = tmp318;
                   }
                 } else {
-                  arr10 = str10;
+                  closure_48 = tmp318;
                 }
               } else {
-                arr10 = str10;
+                closure_48 = tmp318;
               }
             } else {
-              arr10 = str10;
+              closure_48 = tmp318;
             }
-            arr10 = arr10 === tmp12;
           }
         } else {
-          if (str6.substr(arr10, 5) === scale) {
-            arr10 = arr10 + 5;
+          let tmp214 = closure_48;
+          if (str6.substr(closure_48, 5) === scale) {
+            closure_48 = closure_48 + 5;
+            let tmp218 = tmp216;
           } else {
-            arr10 = c52;
-            arr10 = charAtResult6;
+            tmp218 = charAtResult28;
             if (0 === c52) {
-              arr10 = charAtResult6;
-              if (arr10 >= arr10) {
-                if (arr10 > arr10) {
+              tmp218 = charAtResult28;
+              if (closure_48 >= closure_50) {
+                if (tmp220 > closure_50) {
+                  closure_50 = tmp220;
                   arr = [];
                 }
-                arr10 = arr;
-                arr10 = arr.push(arr10);
-                arr10 = charAtResult6;
+                arr.push(tmp219);
+                tmp218 = charAtResult28;
               }
             }
           }
-          if (arr10 !== charAtResult6) {
-            arr10 = regex4;
-            if (regex4.test(str6.charAt(arr10))) {
-              arr10 = str6.charAt(arr10);
-              arr10 = arr10 + 1;
+          if (tmp218 !== charAtResult28) {
+            if (regex4.test(str6.charAt(closure_48))) {
+              let charAtResult24 = str6.charAt(closure_48);
+              closure_48 = closure_48 + 1;
             } else {
-              arr10 = c52;
-              arr10 = charAtResult6;
+              charAtResult24 = charAtResult28;
               if (0 === c52) {
-                arr10 = charAtResult6;
-                if (arr10 >= arr10) {
-                  if (arr10 > arr10) {
+                charAtResult24 = charAtResult28;
+                if (closure_48 >= closure_50) {
+                  if (tmp232 > closure_50) {
+                    closure_50 = tmp232;
                     arr = [];
                   }
-                  arr10 = arr;
-                  arr10 = arr.push(arr10);
-                  arr10 = charAtResult6;
+                  arr.push(tmp231);
+                  charAtResult24 = charAtResult28;
                 }
               }
             }
             const items18 = [];
-            let obj8 = arr10;
-            arr10 = charAtResult6;
-            if (arr10 !== charAtResult6) {
+            let obj8 = regex4;
+            let tmp237 = charAtResult28;
+            if (charAtResult24 !== charAtResult28) {
               do {
-                arr10 = items18.push(arr10);
+                let arr49 = items18.push(charAtResult24);
                 let str11 = str;
-                arr10 = regex4;
-                if (regex4.test(str.charAt(arr10))) {
-                  arr10 = str11.charAt(arr10);
-                  arr10 = arr10 + 1;
+                if (regex4.test(str.charAt(closure_48))) {
+                  charAtResult25 = str11.charAt(closure_48);
+                  closure_48 = closure_48 + 1;
                 } else {
-                  charAtResult6 = obj;
-                  arr10 = c52;
-                  arr10 = obj;
+                  charAtResult28 = obj;
+                  charAtResult25 = obj;
                   if (0 === c52) {
-                    arr10 = charAtResult6;
-                    if (arr10 >= arr10) {
-                      if (arr10 > arr10) {
+                    let tmp244 = closure_48;
+                    charAtResult25 = charAtResult28;
+                    if (closure_48 >= closure_50) {
+                      if (tmp244 > closure_50) {
+                        closure_50 = tmp244;
                         arr = [];
                       }
-                      arr10 = arr;
-                      arr10 = arr.push(arr10);
-                      arr10 = charAtResult6;
+                      let arr50 = arr.push(tmp243);
+                      charAtResult25 = charAtResult28;
                     }
                   }
                 }
-                arr10 = obj;
-                obj8 = arr10;
+                tmp237 = obj;
+                charAtResult24 = charAtResult25;
+                obj8 = regex4;
                 str6 = str11;
-              } while (arr10 !== obj);
+              } while (charAtResult25 !== obj);
             }
-            if (items18 !== arr10) {
-              if (40 === str6.charCodeAt(arr10)) {
-                arr10 = c6;
-                arr10 = arr10 + 1;
+            if (items18 !== tmp237) {
+              if (40 === str6.charCodeAt(closure_48)) {
+                let tmp251 = c6;
+                closure_48 = closure_48 + 1;
               } else {
-                arr10 = c52;
+                tmp251 = tmp237;
                 if (0 === c52) {
-                  if (arr10 >= arr10) {
-                    if (arr10 > arr10) {
+                  tmp251 = tmp237;
+                  if (closure_48 >= closure_50) {
+                    if (tmp253 > closure_50) {
+                      closure_50 = tmp253;
                       arr = [];
                     }
-                    charAtResult6 = arr;
-                    arr10 = arr.push(arr10);
+                    charAtResult28 = arr;
+                    arr.push(tmp252);
+                    tmp251 = tmp237;
                   }
                 }
               }
-              if (arr10 !== arr10) {
-                if (obj8.test(str6.charAt(arr10))) {
-                  arr10 = str6.charAt(arr10);
-                  arr10 = arr10 + 1;
+              if (tmp251 !== tmp237) {
+                if (obj8.test(str6.charAt(closure_48))) {
+                  let charAtResult26 = str6.charAt(closure_48);
+                  closure_48 = closure_48 + 1;
                 } else {
-                  arr10 = c52;
+                  charAtResult26 = tmp237;
                   if (0 === c52) {
-                    if (arr10 >= arr10) {
-                      if (arr10 > arr10) {
+                    charAtResult26 = tmp237;
+                    if (closure_48 >= closure_50) {
+                      if (tmp260 > closure_50) {
+                        closure_50 = tmp260;
                         arr = [];
                       }
-                      arr10 = arr;
-                      arr10 = arr.push(arr10);
+                      arr.push(tmp259);
+                      charAtResult26 = tmp237;
                     }
                   }
                 }
                 const items19 = [];
-                charAtResult6 = obj8;
-                if (arr10 !== arr10) {
+                charAtResult28 = obj8;
+                let tmp265 = tmp237;
+                if (charAtResult26 !== tmp237) {
                   do {
-                    arr10 = items19.push(arr10);
+                    let arr53 = items19.push(charAtResult26);
                     let str12 = str;
-                    arr10 = regex4;
-                    if (regex4.test(str.charAt(arr10))) {
-                      arr10 = str12.charAt(arr10);
-                      arr10 = arr10 + 1;
+                    if (regex4.test(str.charAt(closure_48))) {
+                      charAtResult27 = str12.charAt(closure_48);
+                      closure_48 = closure_48 + 1;
                     } else {
-                      arr10 = obj;
-                      arr10 = c52;
-                      arr10 = obj;
+                      let tmp269 = obj;
+                      charAtResult27 = obj;
                       if (0 === c52) {
-                        if (arr10 >= arr10) {
-                          if (arr10 > arr10) {
+                        let tmp273 = closure_48;
+                        charAtResult27 = tmp269;
+                        if (closure_48 >= closure_50) {
+                          if (tmp273 > closure_50) {
+                            closure_50 = tmp273;
                             arr = [];
                           }
-                          arr10 = arr;
-                          arr10 = arr.push(arr10);
+                          let arr54 = arr.push(tmp272);
+                          charAtResult27 = tmp269;
                         }
                       }
                     }
-                    arr10 = obj;
-                    charAtResult6 = arr10;
+                    tmp265 = obj;
+                    charAtResult26 = charAtResult27;
+                    charAtResult28 = regex4;
                     str6 = str12;
-                  } while (arr10 !== obj);
+                  } while (charAtResult27 !== obj);
                 }
-                if (items19 !== arr10) {
-                  arr10 = peg$parsenumber;
-                  arr10 = peg$parsenumber();
-                  if (arr10 !== arr10) {
-                    arr10 = peg$parsecommaWsp;
-                    if (peg$parsecommaWsp() !== arr10) {
-                      arr10 = arr10();
-                      if (arr10 !== arr10) {
-                        arr10 = peg$c26;
+                if (items19 !== tmp265) {
+                  const tmp279 = peg$parsenumber();
+                  if (tmp279 !== tmp265) {
+                    if (peg$parsecommaWsp() !== tmp265) {
+                      const tmp278Result = peg$parsenumber();
+                      if (tmp278Result !== tmp265) {
+                        let tmp283 = tmp278Result;
                         if (typeof peg$c26 !== "function") {
-                          arr10 = HermesBuiltin.throwTypeError();
+                          HermesBuiltin.throwTypeError();
                         }
-                        if (arr10 === arr10) {
-                          arr10 = null;
+                        if (tmp283 === tmp265) {
+                          tmp283 = null;
                         }
-                        if (arr10 !== arr10) {
-                          if (charAtResult6.test(str6.charAt(arr10))) {
-                            charAtResult6 = str6.charAt(arr10);
-                            arr10 = arr10 + 1;
+                        if (tmp283 !== tmp265) {
+                          if (charAtResult28.test(str6.charAt(closure_48))) {
+                            charAtResult28 = str6.charAt(closure_48);
+                            closure_48 = closure_48 + 1;
                           } else {
-                            arr10 = c52;
-                            charAtResult6 = arr10;
+                            charAtResult28 = tmp265;
                             if (0 === c52) {
-                              charAtResult6 = arr10;
-                              if (arr10 >= arr10) {
-                                if (arr10 > arr10) {
+                              charAtResult28 = tmp265;
+                              if (closure_48 >= closure_50) {
+                                if (tmp288 > closure_50) {
+                                  closure_50 = tmp288;
                                   arr = [];
                                 }
-                                arr10 = arr;
-                                arr10 = arr.push(arr10);
-                                charAtResult6 = arr10;
+                                arr.push(tmp287);
+                                charAtResult28 = tmp265;
                               }
                             }
                           }
                           const items20 = [];
                           let obj9 = str6;
-                          str6 = arr10;
-                          if (charAtResult6 !== arr10) {
+                          str6 = tmp265;
+                          if (charAtResult28 !== tmp265) {
                             do {
-                              arr10 = items20.push(charAtResult6);
-                              arr10 = regex4;
+                              let arr56 = items20.push(charAtResult28);
                               let str13 = str;
-                              if (regex4.test(str.charAt(arr10))) {
-                                arr10 = str13.charAt(arr10);
-                                arr10 = arr10 + 1;
+                              if (regex4.test(str.charAt(closure_48))) {
+                                charAtResult29 = str13.charAt(closure_48);
+                                closure_48 = closure_48 + 1;
                               } else {
-                                arr10 = obj;
-                                arr10 = c52;
-                                arr10 = obj;
+                                let tmp296 = obj;
+                                charAtResult29 = obj;
                                 if (0 === c52) {
-                                  if (arr10 >= arr10) {
-                                    if (arr10 > arr10) {
+                                  let tmp300 = closure_48;
+                                  charAtResult29 = tmp296;
+                                  if (closure_48 >= closure_50) {
+                                    if (tmp300 > closure_50) {
+                                      closure_50 = tmp300;
                                       arr = [];
                                     }
-                                    arr10 = arr;
-                                    arr10 = arr.push(arr10);
+                                    let arr57 = arr.push(tmp299);
+                                    charAtResult29 = tmp296;
                                   }
                                 }
                               }
                               str6 = obj;
-                              charAtResult6 = arr10;
+                              charAtResult28 = charAtResult29;
                               obj9 = str13;
-                            } while (arr10 !== obj);
+                            } while (charAtResult29 !== obj);
                           }
                           if (items20 !== str6) {
-                            if (41 === obj9.charCodeAt(arr10)) {
-                              arr10 = c8;
-                              arr10 = arr10 + 1;
+                            if (41 === obj9.charCodeAt(closure_48)) {
+                              let tmp307 = c8;
+                              closure_48 = closure_48 + 1;
                             } else {
-                              arr10 = c52;
-                              arr10 = str6;
+                              tmp307 = str6;
                               if (0 === c52) {
-                                arr10 = str6;
-                                if (arr10 >= arr10) {
-                                  if (arr10 > arr10) {
+                                tmp307 = str6;
+                                if (closure_48 >= closure_50) {
+                                  if (tmp309 > closure_50) {
+                                    closure_50 = tmp309;
                                     arr = [];
                                   }
-                                  arr10 = arr;
-                                  charAtResult6 = arr.push(arr10);
-                                  arr10 = str6;
+                                  charAtResult28 = arr.push(tmp308);
+                                  tmp307 = str6;
                                 }
                               }
                             }
-                            if (arr10 !== str6) {
-                              arr10 = peg$c14;
+                            if (tmp307 !== str6) {
                               if (typeof peg$c14 !== "function") {
-                                arr10 = HermesBuiltin.throwTypeError();
+                                HermesBuiltin.throwTypeError();
                               }
-                              const items21 = [arr10, 0, 0, 0, , ];
-                              arr10 = null;
-                              items21[4] = arr10;
+                              const items21 = [tmp279, 0, 0, 0, , ];
+                              tmp214 = null;
+                              if (null === tmp283) {
+                                tmp283 = tmp279;
+                              }
+                              items21[4] = tmp283;
                               items21[5] = 0;
-                              arr10 = obj9;
-                              arr10 = str6;
-                              arr10 = items21;
                             } else {
-                              arr10 = obj9;
-                              arr10 = str6;
-                              arr10 = str6;
+                              closure_48 = tmp214;
                             }
                           } else {
-                            arr10 = obj9;
-                            arr10 = str6;
-                            arr10 = str6;
+                            closure_48 = tmp214;
                           }
                         } else {
-                          arr10 = str6;
+                          closure_48 = tmp214;
                         }
                       }
                     }
+                    tmp283 = tmp265;
                   } else {
-                    arr10 = str6;
+                    closure_48 = tmp214;
                   }
                 } else {
-                  arr10 = str6;
+                  closure_48 = tmp214;
                 }
               } else {
-                arr10 = str6;
+                closure_48 = tmp214;
               }
             } else {
-              arr10 = str6;
+              closure_48 = tmp214;
             }
           } else {
-            arr10 = str6;
-            arr10 = charAtResult6;
-            arr10 = charAtResult6;
+            closure_48 = tmp214;
           }
-          arr10 = arr10 === tmp12;
         }
       } else {
-        if (str2.substr(arr10, 9) === translate) {
-          arr10 = arr10 + 9;
+        if (str2.substr(closure_48, 9) === translate) {
+          closure_48 = closure_48 + 9;
+          let tmp111 = tmp109;
         } else {
-          arr10 = c52;
-          arr10 = tmp12;
+          tmp111 = tmp12;
           if (0 === c52) {
-            arr10 = tmp12;
-            if (arr10 >= arr10) {
-              if (arr10 > arr10) {
+            tmp111 = tmp12;
+            if (closure_48 >= closure_50) {
+              if (tmp113 > closure_50) {
+                closure_50 = tmp113;
                 arr = [];
               }
-              arr10 = arr;
-              arr10 = arr.push(arr10);
-              arr10 = tmp12;
+              arr.push(tmp112);
+              tmp111 = tmp12;
             }
           }
         }
-        if (arr10 !== tmp12) {
-          arr10 = regex4;
-          if (regex4.test(str2.charAt(arr10))) {
-            arr10 = str2.charAt(arr10);
-            arr10 = arr10 + 1;
+        if (tmp111 !== tmp12) {
+          if (regex4.test(str2.charAt(closure_48))) {
+            let charAtResult30 = str2.charAt(closure_48);
+            closure_48 = closure_48 + 1;
           } else {
-            arr10 = c52;
-            arr10 = tmp12;
+            charAtResult30 = tmp12;
             if (0 === c52) {
-              arr10 = tmp12;
-              if (arr10 >= arr10) {
-                if (arr10 > arr10) {
+              charAtResult30 = tmp12;
+              if (closure_48 >= closure_50) {
+                if (tmp125 > closure_50) {
+                  closure_50 = tmp125;
                   arr = [];
                 }
-                arr10 = arr;
-                arr10 = arr.push(arr10);
-                arr10 = tmp12;
+                arr.push(tmp124);
+                charAtResult30 = tmp12;
               }
             }
           }
           const items22 = [];
-          let obj5 = arr10;
-          arr10 = tmp12;
-          if (arr10 !== tmp12) {
+          let obj5 = regex4;
+          let tmp130 = tmp12;
+          if (charAtResult30 !== tmp12) {
             do {
-              arr10 = items22.push(arr10);
+              let arr60 = items22.push(charAtResult30);
               let str7 = str;
-              arr10 = regex4;
-              if (regex4.test(str.charAt(arr10))) {
-                arr10 = str7.charAt(arr10);
-                arr10 = arr10 + 1;
+              if (regex4.test(str.charAt(closure_48))) {
+                charAtResult31 = str7.charAt(closure_48);
+                closure_48 = closure_48 + 1;
               } else {
-                arr10 = obj;
-                arr10 = c52;
-                arr10 = obj;
+                let tmp134 = obj;
+                charAtResult31 = obj;
                 if (0 === c52) {
-                  if (arr10 >= arr10) {
-                    if (arr10 > arr10) {
+                  let tmp138 = closure_48;
+                  charAtResult31 = tmp134;
+                  if (closure_48 >= closure_50) {
+                    if (tmp138 > closure_50) {
+                      closure_50 = tmp138;
                       arr = [];
                     }
-                    arr10 = arr;
-                    arr10 = arr.push(arr10);
+                    let arr61 = arr.push(tmp137);
+                    charAtResult31 = tmp134;
                   }
                 }
               }
-              arr10 = obj;
-              obj5 = arr10;
+              tmp130 = obj;
+              charAtResult30 = charAtResult31;
+              obj5 = regex4;
               str2 = str7;
-            } while (arr10 !== obj);
+            } while (charAtResult31 !== obj);
           }
-          if (items22 !== arr10) {
-            if (40 === str2.charCodeAt(arr10)) {
-              arr10 = c6;
-              arr10 = arr10 + 1;
+          if (items22 !== tmp130) {
+            if (40 === str2.charCodeAt(closure_48)) {
+              let tmp145 = c6;
+              closure_48 = closure_48 + 1;
             } else {
-              arr10 = c52;
+              tmp145 = tmp130;
               if (0 === c52) {
-                if (arr10 >= arr10) {
-                  if (arr10 > arr10) {
+                tmp145 = tmp130;
+                if (closure_48 >= closure_50) {
+                  if (tmp147 > closure_50) {
+                    closure_50 = tmp147;
                     arr = [];
                   }
-                  arr10 = arr;
-                  arr10 = arr.push(arr10);
+                  arr.push(tmp146);
+                  tmp145 = tmp130;
                 }
               }
             }
-            if (arr10 !== arr10) {
-              if (obj5.test(str2.charAt(arr10))) {
-                arr10 = str2.charAt(arr10);
-                arr10 = arr10 + 1;
+            if (tmp145 !== tmp130) {
+              if (obj5.test(str2.charAt(closure_48))) {
+                let charAtResult32 = str2.charAt(closure_48);
+                closure_48 = closure_48 + 1;
               } else {
-                arr10 = c52;
+                charAtResult32 = tmp130;
                 if (0 === c52) {
-                  if (arr10 >= arr10) {
-                    if (arr10 > arr10) {
+                  charAtResult32 = tmp130;
+                  if (closure_48 >= closure_50) {
+                    if (tmp155 > closure_50) {
+                      closure_50 = tmp155;
                       arr = [];
                     }
-                    arr10 = arr;
-                    arr10 = arr.push(arr10);
+                    arr.push(tmp154);
+                    charAtResult32 = tmp130;
                   }
                 }
               }
               const items23 = [];
               let obj6 = obj5;
-              if (arr10 !== arr10) {
+              let tmp160 = tmp130;
+              if (charAtResult32 !== tmp130) {
                 do {
-                  arr10 = items23.push(arr10);
+                  let arr64 = items23.push(charAtResult32);
                   let str8 = str;
-                  arr10 = regex4;
-                  if (regex4.test(str.charAt(arr10))) {
-                    arr10 = str8.charAt(arr10);
-                    arr10 = arr10 + 1;
+                  if (regex4.test(str.charAt(closure_48))) {
+                    charAtResult33 = str8.charAt(closure_48);
+                    closure_48 = closure_48 + 1;
                   } else {
-                    arr10 = obj;
-                    arr10 = c52;
-                    arr10 = obj;
+                    let tmp164 = obj;
+                    charAtResult33 = obj;
                     if (0 === c52) {
-                      if (arr10 >= arr10) {
-                        if (arr10 > arr10) {
+                      let tmp168 = closure_48;
+                      charAtResult33 = tmp164;
+                      if (closure_48 >= closure_50) {
+                        if (tmp168 > closure_50) {
+                          closure_50 = tmp168;
                           arr = [];
                         }
-                        arr10 = arr;
-                        arr10 = arr.push(arr10);
+                        let arr65 = arr.push(tmp167);
+                        charAtResult33 = tmp164;
                       }
                     }
                   }
-                  arr10 = obj;
-                  obj6 = arr10;
+                  tmp160 = obj;
+                  charAtResult32 = charAtResult33;
+                  obj6 = regex4;
                   str2 = str8;
-                } while (arr10 !== obj);
+                } while (charAtResult33 !== obj);
               }
-              if (items23 !== arr10) {
-                arr10 = peg$parsenumber;
-                arr10 = peg$parsenumber();
-                if (arr10 !== arr10) {
-                  arr10 = peg$parsecommaWsp;
-                  if (peg$parsecommaWsp() !== arr10) {
-                    arr10 = arr10();
-                    if (arr10 !== arr10) {
-                      arr10 = peg$c26;
-                      let num11 = arr10;
+              if (items23 !== tmp160) {
+                const tmp174 = peg$parsenumber();
+                if (tmp174 !== tmp160) {
+                  if (peg$parsecommaWsp() !== tmp160) {
+                    const tmp173Result = peg$parsenumber();
+                    if (tmp173Result !== tmp160) {
+                      let num11 = tmp173Result;
                       if (typeof peg$c26 !== "function") {
-                        arr10 = HermesBuiltin.throwTypeError();
+                        HermesBuiltin.throwTypeError();
                       }
-                      if (num11 === arr10) {
+                      if (num11 === tmp160) {
                         num11 = null;
                       }
-                      if (num11 !== arr10) {
-                        if (obj6.test(str2.charAt(arr10))) {
-                          arr10 = str2.charAt(arr10);
-                          arr10 = arr10 + 1;
+                      if (num11 !== tmp160) {
+                        if (obj6.test(str2.charAt(closure_48))) {
+                          let charAtResult34 = str2.charAt(closure_48);
+                          closure_48 = closure_48 + 1;
                         } else {
-                          arr10 = c52;
+                          charAtResult34 = tmp160;
                           if (0 === c52) {
-                            if (arr10 >= arr10) {
-                              if (arr10 > arr10) {
+                            charAtResult34 = tmp160;
+                            if (closure_48 >= closure_50) {
+                              if (tmp183 > closure_50) {
+                                closure_50 = tmp183;
                                 arr = [];
                               }
-                              arr10 = arr;
-                              arr10 = arr.push(arr10);
+                              arr.push(tmp182);
+                              charAtResult34 = tmp160;
                             }
                           }
                         }
                         const items24 = [];
                         let obj7 = str2;
-                        str2 = arr10;
-                        if (arr10 !== arr10) {
+                        str2 = tmp160;
+                        if (charAtResult34 !== tmp160) {
                           do {
-                            arr10 = items24.push(arr10);
-                            arr10 = regex4;
+                            let arr67 = items24.push(charAtResult34);
                             let str9 = str;
-                            if (regex4.test(str.charAt(arr10))) {
-                              arr10 = str9.charAt(arr10);
-                              arr10 = arr10 + 1;
+                            if (regex4.test(str.charAt(closure_48))) {
+                              charAtResult35 = str9.charAt(closure_48);
+                              closure_48 = closure_48 + 1;
                             } else {
-                              arr10 = obj;
-                              arr10 = c52;
-                              arr10 = obj;
+                              let tmp191 = obj;
+                              charAtResult35 = obj;
                               if (0 === c52) {
-                                if (arr10 >= arr10) {
-                                  if (arr10 > arr10) {
+                                let tmp195 = closure_48;
+                                charAtResult35 = tmp191;
+                                if (closure_48 >= closure_50) {
+                                  if (tmp195 > closure_50) {
+                                    closure_50 = tmp195;
                                     arr = [];
                                   }
-                                  arr10 = arr;
-                                  arr10 = arr.push(arr10);
+                                  let arr68 = arr.push(tmp194);
+                                  charAtResult35 = tmp191;
                                 }
                               }
                             }
                             str2 = obj;
+                            charAtResult34 = charAtResult35;
                             obj7 = str9;
-                          } while (arr10 !== obj);
+                          } while (charAtResult35 !== obj);
                         }
                         if (items24 !== str2) {
-                          if (41 === obj7.charCodeAt(arr10)) {
-                            arr10 = c8;
-                            arr10 = arr10 + 1;
+                          if (41 === obj7.charCodeAt(closure_48)) {
+                            let tmp202 = c8;
+                            closure_48 = closure_48 + 1;
                           } else {
-                            arr10 = c52;
-                            arr10 = str2;
+                            tmp202 = str2;
                             if (0 === c52) {
-                              arr10 = str2;
-                              if (arr10 >= arr10) {
-                                if (arr10 > arr10) {
+                              tmp202 = str2;
+                              if (closure_48 >= closure_50) {
+                                if (tmp204 > closure_50) {
+                                  closure_50 = tmp204;
                                   arr = [];
                                 }
-                                arr10 = arr;
-                                arr10 = arr.push(arr10);
-                                arr10 = str2;
+                                arr.push(tmp203);
+                                tmp202 = str2;
                               }
                             }
                           }
-                          if (arr10 !== str2) {
-                            arr10 = peg$c11;
+                          if (tmp202 !== str2) {
                             if (typeof peg$c11 !== "function") {
-                              arr10 = HermesBuiltin.throwTypeError();
+                              HermesBuiltin.throwTypeError();
                             }
-                            const items25 = [1, 0, arr10, 0, 1];
+                            const items25 = [1, 0, tmp174, 0, 1];
                             if (!num11) {
                               num11 = 0;
                             }
                             items25[5] = num11;
-                            arr10 = obj7;
-                            arr10 = str2;
-                            arr10 = items25;
                           } else {
-                            arr10 = obj7;
-                            arr10 = str2;
-                            arr10 = str2;
+                            closure_48 = tmp107;
                           }
                         } else {
-                          arr10 = obj7;
-                          arr10 = str2;
-                          arr10 = str2;
+                          closure_48 = tmp107;
                         }
                       } else {
-                        arr10 = str2;
+                        closure_48 = tmp107;
                       }
                     }
                   }
-                  num11 = arr10;
+                  num11 = tmp160;
                 } else {
-                  arr10 = str2;
+                  closure_48 = tmp107;
                 }
               } else {
-                arr10 = str2;
+                closure_48 = tmp107;
               }
             } else {
-              arr10 = str2;
+              closure_48 = tmp107;
             }
           } else {
-            arr10 = str2;
+            closure_48 = tmp107;
           }
         } else {
-          arr10 = str2;
-          arr10 = tmp12;
-          arr10 = tmp12;
+          closure_48 = tmp107;
         }
-        arr10 = arr10 === tmp12;
       }
     }
     function peg$parsenumber() {
@@ -1819,16 +1859,16 @@ obj = {
         let charAtResult = str.charAt(closure_48);
         closure_48 = closure_48 + 1;
       } else {
-        charAtResult = obj;
+        charAtResult = regex2;
         if (0 === c52) {
-          charAtResult = tmp2;
+          charAtResult = regex2;
           if (closure_48 >= closure_50) {
             if (tmp6 > closure_50) {
               closure_50 = tmp6;
               let arr = [];
             }
             arr = arr.push(tmp5);
-            charAtResult = tmp2;
+            charAtResult = regex2;
           }
         }
       }
@@ -1838,30 +1878,30 @@ obj = {
       if (charAtResult !== regex2) {
         c52 = c52 + 1;
         let tmp15 = peg$parsedigitSequence();
-        if (tmp15 === tmp11) {
+        if (tmp15 === regex2) {
           tmp15 = null;
         }
-        if (tmp15 !== tmp11) {
+        if (tmp15 !== regex2) {
           if (46 === str.charCodeAt(closure_48)) {
             let tmp19 = c36;
             closure_48 = closure_48 + 1;
           } else {
-            tmp19 = tmp11;
+            tmp19 = regex2;
             if (0 === c52) {
-              tmp19 = tmp11;
+              tmp19 = regex2;
               if (closure_48 >= closure_50) {
                 if (tmp21 > closure_50) {
                   closure_50 = tmp21;
                   arr = [];
                 }
                 arr = arr.push(tmp20);
-                tmp19 = tmp11;
+                tmp19 = regex2;
               }
             }
           }
-          if (tmp19 !== tmp11) {
-            let tmp14Result = tmp14();
-            if (tmp14Result !== tmp11) {
+          if (tmp19 !== regex2) {
+            let tmp14Result = peg$parsedigitSequence();
+            if (tmp14Result !== regex2) {
               if (typeof peg$c36 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
@@ -1874,15 +1914,15 @@ obj = {
             }
           }
           closure_48 = tmp12;
-          joined1 = tmp11;
+          joined1 = regex2;
         } else {
           closure_48 = tmp12;
-          joined1 = tmp11;
+          joined1 = regex2;
         }
-        if (joined1 !== tmp11) {
+        if (joined1 !== regex2) {
           const diff = c52 - 1;
           c52 = diff;
-          if (joined1 === tmp11) {
+          if (joined1 === regex2) {
             if (0 === diff) {
               if (closure_48 >= closure_50) {
                 if (tmp43 > closure_50) {
@@ -1893,39 +1933,39 @@ obj = {
               }
             }
           }
-          if (joined1 !== tmp11) {
+          if (joined1 !== regex2) {
             let tmp47 = peg$parseexponent();
-            if (tmp47 === tmp11) {
+            if (tmp47 === regex2) {
               tmp47 = null;
             }
-            if (tmp47 !== tmp11) {
+            if (tmp47 !== regex2) {
               items1 = [joined1, tmp47];
               let obj4 = items1;
             } else {
               closure_48 = tmp12;
-              obj4 = tmp11;
+              obj4 = regex2;
             }
           } else {
             closure_48 = tmp12;
-            obj4 = tmp11;
+            obj4 = regex2;
           }
           let joined2 = obj4;
-          if (obj4 !== tmp11) {
+          if (obj4 !== regex2) {
             if (typeof peg$c31 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             joined2 = obj4.join("");
           }
-          if (joined2 === tmp11) {
-            tmp14Result = tmp14();
-            if (tmp14Result !== tmp11) {
+          if (joined2 === regex2) {
+            tmp14Result = peg$parsedigitSequence();
+            if (tmp14Result !== regex2) {
               const tmp53 = peg$parseexponent();
-              if (tmp53 !== tmp11) {
+              if (tmp53 !== regex2) {
                 const items2 = [tmp14Result, tmp53];
                 let obj5 = items2;
               }
               let joined3 = obj5;
-              if (obj5 !== tmp11) {
+              if (obj5 !== regex2) {
                 if (typeof peg$c32 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
@@ -1933,51 +1973,50 @@ obj = {
               }
               joined2 = joined3;
             }
-            obj5 = tmp11;
-            const tmp50 = closure_48;
+            obj5 = regex2;
           }
-          if (joined2 !== tmp11) {
+          if (joined2 !== regex2) {
             const items3 = [charAtResult, joined2];
             let obj2 = items3;
           } else {
             closure_48 = tmp;
-            obj2 = tmp11;
+            obj2 = regex2;
           }
         } else {
-          const tmp14Result1 = tmp14();
-          if (tmp14Result1 === tmp11) {
+          const tmp14Result1 = peg$parsedigitSequence();
+          if (tmp14Result1 === regex2) {
             closure_48 = tmp74;
           }
           if (46 === str.charCodeAt(closure_48)) {
             let tmp30 = c36;
             closure_48 = closure_48 + 1;
           } else {
-            tmp30 = tmp11;
+            tmp30 = regex2;
             if (0 === c52) {
-              tmp30 = tmp11;
+              tmp30 = regex2;
               if (closure_48 >= closure_50) {
                 if (tmp32 > closure_50) {
                   closure_50 = tmp32;
                   arr = [];
                 }
                 arr.push(tmp31);
-                tmp30 = tmp11;
+                tmp30 = regex2;
               }
             }
           }
-          if (tmp30 !== tmp11) {
+          if (tmp30 !== regex2) {
             if (typeof peg$c32 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let joined4 = tmp14Result1.join("");
           } else {
             closure_48 = tmp74;
-            joined4 = tmp11;
+            joined4 = regex2;
           }
         }
       } else {
         closure_48 = tmp;
-        obj2 = tmp11;
+        obj2 = regex2;
       }
       let parsed = obj2;
       if (obj2 !== regex2) {
@@ -1988,48 +2027,48 @@ obj = {
         parsed = parseFloat(obj2.join(""));
       }
       if (parsed === regex2) {
-        if (obj.test(str.charAt(closure_48))) {
+        if (regex2.test(str.charAt(closure_48))) {
           let charAtResult1 = str.charAt(closure_48);
           closure_48 = closure_48 + 1;
         } else {
-          charAtResult1 = tmp11;
+          charAtResult1 = regex2;
           if (0 === c52) {
-            charAtResult1 = tmp11;
+            charAtResult1 = regex2;
             if (closure_48 >= closure_50) {
               if (tmp62 > closure_50) {
                 closure_50 = tmp62;
                 arr = [];
               }
               arr.push(tmp61);
-              charAtResult1 = tmp11;
+              charAtResult1 = regex2;
             }
           }
         }
-        if (charAtResult1 === tmp11) {
+        if (charAtResult1 === regex2) {
           charAtResult1 = null;
         }
-        if (charAtResult1 !== tmp11) {
+        if (charAtResult1 !== regex2) {
           const obj7 = peg$parsedigitSequence();
           let joined5 = obj7;
-          if (obj7 !== tmp11) {
+          if (obj7 !== regex2) {
             if (typeof peg$c30 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             joined5 = obj7.join("");
           }
-          if (joined5 !== tmp11) {
+          if (joined5 !== regex2) {
             const items4 = [charAtResult1, joined5];
             let obj6 = items4;
           } else {
             closure_48 = tmp79;
-            obj6 = tmp11;
+            obj6 = regex2;
           }
         } else {
           closure_48 = tmp79;
-          obj6 = tmp11;
+          obj6 = regex2;
         }
         let parsed1 = obj6;
-        if (obj6 !== tmp11) {
+        if (obj6 !== regex2) {
           if (typeof peg$c25 !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -2064,30 +2103,23 @@ obj = {
       obj = str;
       let tmp14 = obj;
       let tmp15 = obj;
-      let tmp16 = tmp2;
+      let tmp16 = peg$parsewsp;
       let tmp17 = obj;
       if (charAtResult !== obj) {
         const items = [];
         obj = str;
         tmp14 = tmp12;
         tmp15 = items;
-        tmp16 = tmp2;
+        tmp16 = peg$parsewsp;
         tmp17 = tmp12;
         if (tmp13) {
           do {
             arr = items.push(charAtResult);
-            let tmp20 = regex4;
-            let str2 = str;
-            let tmp21 = closure_48;
-            let tmp19 = peg$parsewsp;
             if (regex4.test(str.charAt(closure_48))) {
-              let tmp29 = closure_48;
-              charAtResult1 = str2.charAt(closure_48);
-              let tmp30 = closure_48;
+              charAtResult1 = str.charAt(closure_48);
               closure_48 = closure_48 + 1;
             } else {
               let tmp22 = obj;
-              let tmp23 = c52;
               charAtResult1 = obj;
               if (0 === c52) {
                 let tmp26 = closure_48;
@@ -2097,7 +2129,6 @@ obj = {
                     closure_50 = tmp26;
                     arr = [];
                   }
-                  let tmp27 = arr;
                   let arr1 = arr.push(tmp25);
                   charAtResult1 = tmp22;
                 }
@@ -2105,9 +2136,9 @@ obj = {
             }
             tmp14 = obj;
             charAtResult = charAtResult1;
-            obj = str2;
+            obj = str;
             tmp15 = items;
-            tmp16 = tmp19;
+            tmp16 = peg$parsewsp;
             tmp17 = obj;
           } while (charAtResult1 !== obj);
         }
@@ -2142,18 +2173,11 @@ obj = {
           if (tmp16Result !== tmp17) {
             do {
               let arr3 = items1.push(tmp16Result);
-              let tmp49 = regex4;
-              let str3 = str;
-              let tmp50 = closure_48;
-              let tmp48 = peg$parsewsp;
               if (regex4.test(str.charAt(closure_48))) {
-                let tmp58 = closure_48;
-                charAtResult2 = str3.charAt(closure_48);
-                let tmp59 = closure_48;
+                charAtResult2 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
                 let tmp51 = obj;
-                let tmp52 = c52;
                 charAtResult2 = obj;
                 if (0 === c52) {
                   let tmp55 = closure_48;
@@ -2163,7 +2187,6 @@ obj = {
                       closure_50 = tmp55;
                       arr = [];
                     }
-                    let tmp56 = arr;
                     let arr4 = arr.push(tmp54);
                     charAtResult2 = tmp51;
                   }
@@ -2171,8 +2194,8 @@ obj = {
               }
               tmp14 = obj;
               tmp16Result = charAtResult2;
-              tmp44 = str3;
-              tmp45 = tmp48;
+              tmp44 = str;
+              tmp45 = peg$parsewsp;
               tmp46 = obj;
             } while (charAtResult2 !== obj);
           }
@@ -2232,17 +2255,11 @@ obj = {
           if (tmp33Result !== tmp34) {
             do {
               let arr6 = items3.push(tmp33Result);
-              let tmp70 = regex4;
-              let str4 = str;
-              let tmp71 = closure_48;
               if (regex4.test(str.charAt(closure_48))) {
-                let tmp79 = closure_48;
-                charAtResult3 = str4.charAt(closure_48);
-                let tmp80 = closure_48;
+                charAtResult3 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
                 let tmp72 = obj;
-                let tmp73 = c52;
                 charAtResult3 = obj;
                 if (0 === c52) {
                   let tmp76 = closure_48;
@@ -2252,7 +2269,6 @@ obj = {
                       closure_50 = tmp76;
                       arr = [];
                     }
-                    let tmp77 = arr;
                     let arr7 = arr.push(tmp75);
                     charAtResult3 = tmp72;
                   }
@@ -2283,14 +2299,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === c52) {
-          charAtResult = tmp2;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp6 > closure_50) {
               closure_50 = tmp6;
               let arr = [];
             }
             arr = arr.push(tmp5);
-            charAtResult = tmp2;
+            charAtResult = obj;
           }
         }
       }
@@ -2299,34 +2315,34 @@ obj = {
           let charAtResult1 = str.charAt(closure_48);
           closure_48 = closure_48 + 1;
         } else {
-          charAtResult1 = tmp11;
+          charAtResult1 = obj;
           if (0 === c52) {
-            charAtResult1 = tmp11;
+            charAtResult1 = obj;
             if (closure_48 >= closure_50) {
               if (tmp18 > closure_50) {
                 closure_50 = tmp18;
                 arr = [];
               }
               arr = arr.push(tmp17);
-              charAtResult1 = tmp11;
+              charAtResult1 = obj;
             }
           }
         }
-        if (charAtResult1 === tmp11) {
+        if (charAtResult1 === obj) {
           charAtResult1 = null;
         }
-        if (charAtResult1 !== tmp11) {
+        if (charAtResult1 !== obj) {
           const tmp24 = peg$parsedigitSequence();
-          if (tmp24 !== tmp11) {
+          if (tmp24 !== obj) {
             const items = [charAtResult, charAtResult1, tmp24];
             let tmp12 = items;
           }
         }
         closure_48 = tmp;
-        tmp12 = tmp11;
+        tmp12 = obj;
       } else {
         closure_48 = tmp;
-        tmp12 = tmp11;
+        tmp12 = obj;
       }
       let joined = tmp12;
       if (tmp12 !== obj) {
@@ -2348,14 +2364,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === c52) {
-          charAtResult = tmp;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp5 > closure_50) {
               closure_50 = tmp5;
               let arr = [];
             }
             arr = arr.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = obj;
           }
         }
       }
@@ -2366,33 +2382,24 @@ obj = {
         if (tmp11) {
           do {
             arr = items.push(charAtResult);
-            let tmp13 = regex3;
-            let str2 = str;
-            let tmp14 = closure_48;
             if (regex3.test(str.charAt(closure_48))) {
-              let tmp22 = closure_48;
-              charAtResult1 = str2.charAt(closure_48);
-              let tmp23 = closure_48;
+              charAtResult1 = str.charAt(closure_48);
               closure_48 = closure_48 + 1;
             } else {
-              let tmp15 = obj;
-              let tmp16 = c52;
               charAtResult1 = obj;
               if (0 === c52) {
                 let tmp19 = closure_48;
-                charAtResult1 = tmp15;
+                charAtResult1 = obj;
                 if (closure_48 >= closure_50) {
                   if (tmp19 > closure_50) {
                     closure_50 = tmp19;
                     arr = [];
                   }
-                  let tmp20 = arr;
                   let arr1 = arr.push(tmp18);
-                  charAtResult1 = tmp15;
+                  charAtResult1 = obj;
                 }
               }
             }
-            let tmp24 = obj;
             charAtResult = charAtResult1;
             tmp10 = items;
           } while (charAtResult1 !== obj);
@@ -2407,14 +2414,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === c52) {
-          charAtResult = tmp;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp5 > closure_50) {
               closure_50 = tmp5;
               let arr = [];
             }
             arr = arr.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = obj;
           }
         }
       }
@@ -2433,14 +2440,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === c52) {
-          charAtResult = tmp3;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp7 > closure_50) {
               closure_50 = tmp7;
               let arr = [];
             }
             arr = arr.push(tmp6);
-            charAtResult = tmp3;
+            charAtResult = obj;
           }
         }
       }
@@ -2449,36 +2456,27 @@ obj = {
       if (charAtResult !== obj) {
         do {
           arr = items.push(charAtResult);
-          let tmp15 = regex4;
-          let str2 = str;
-          let tmp16 = closure_48;
-          let tmp14 = peg$parsewsp;
           if (regex4.test(str.charAt(closure_48))) {
-            let tmp24 = closure_48;
-            charAtResult1 = str2.charAt(closure_48);
-            let tmp25 = closure_48;
+            charAtResult1 = str.charAt(closure_48);
             closure_48 = closure_48 + 1;
           } else {
-            let tmp17 = obj;
-            let tmp18 = c52;
             charAtResult1 = obj;
             if (0 === c52) {
               let tmp21 = closure_48;
-              charAtResult1 = tmp17;
+              charAtResult1 = obj;
               if (closure_48 >= closure_50) {
                 if (tmp21 > closure_50) {
                   closure_50 = tmp21;
                   arr = [];
                 }
-                let tmp22 = arr;
                 let arr1 = arr.push(tmp20);
-                charAtResult1 = tmp17;
+                charAtResult1 = obj;
               }
             }
           }
           tmp12 = obj;
           charAtResult = charAtResult1;
-          tmp2 = tmp14;
+          tmp2 = peg$parsewsp;
         } while (charAtResult1 !== obj);
       }
       if (items !== tmp12) {
@@ -2493,29 +2491,21 @@ obj = {
           if (tmp2Result !== tmp12) {
             do {
               let arr2 = items1.push(tmp2Result);
-              let tmp32 = regex4;
-              let str3 = str;
-              let tmp33 = closure_48;
               if (regex4.test(str.charAt(closure_48))) {
-                let tmp41 = closure_48;
-                charAtResult2 = str3.charAt(closure_48);
-                let tmp42 = closure_48;
+                charAtResult2 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
-                let tmp34 = obj;
-                let tmp35 = c52;
                 charAtResult2 = obj;
                 if (0 === c52) {
                   let tmp38 = closure_48;
-                  charAtResult2 = tmp34;
+                  charAtResult2 = obj;
                   if (closure_48 >= closure_50) {
                     if (tmp38 > closure_50) {
                       closure_50 = tmp38;
                       arr = [];
                     }
-                    let tmp39 = arr;
                     let arr3 = arr.push(tmp37);
-                    charAtResult2 = tmp34;
+                    charAtResult2 = obj;
                   }
                 }
               }
@@ -2542,7 +2532,6 @@ obj = {
       }
       return tmp26;
     }
-    obj = {};
     obj = { transformList: peg$parsetransformList };
     function peg$c0(arg0) {
 
@@ -2676,7 +2665,6 @@ obj = {
         if (!tmp[diff]) {
           do {
             let diff1 = tmp5 - 1;
-            let tmp8 = items1;
             tmp5 = diff1;
             sum = diff1;
             tmp = items1;
@@ -2687,8 +2675,6 @@ obj = {
         ({ line: obj[0], column: obj[1] } = tmp[sum]);
         if (sum < closure_50) {
           do {
-            let tmp10 = str;
-            let tmp11 = sum;
             if (10 === str.charCodeAt(sum)) {
               obj.line = obj.line + 1;
               obj.column = 1;
@@ -2710,7 +2696,6 @@ obj = {
         if (!tmp3[diff2]) {
           do {
             let diff3 = tmp15 - 1;
-            let tmp18 = items1;
             tmp15 = diff3;
             sum1 = diff3;
             tmp3 = items1;
@@ -2721,8 +2706,6 @@ obj = {
         ({ line: obj2[0], column: obj2[1] } = tmp3[sum1]);
         if (sum1 < closure_502) {
           do {
-            let tmp20 = str;
-            let tmp21 = sum1;
             if (10 === str.charCodeAt(sum1)) {
               obj.line = obj.line + 1;
               obj.column = 1;

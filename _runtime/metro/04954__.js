@@ -2,17 +2,17 @@
 
 // Module 4954
 import getDataView from "getDataView" /* 4910 */;
+import _modDef4915 from "module_4915" /* 4915 */;
 import readTag from "readTag" /* 4930 */;
 import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-let obj = { K3_III: 78420 };
-obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
+let obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 arg5.default = {
   read(byteLength) {
-    obj = module(4915);
+    obj = _modDef4915;
     const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
     const sum = arg1 + arg2;
     obj1 = readTag;
@@ -59,13 +59,13 @@ arg5.default = {
         obj[1] = str6;
         obj.CameraOrientation = obj;
         const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(4915).LITTLE_ENDIAN);
+        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef4915.LITTLE_ENDIAN);
         obj1 = { value: null, description: null };
         obj1[0] = int16;
         obj1[1] = "" + -0.5 * int16;
         obj.RollAngle = obj1;
         const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(4915).LITTLE_ENDIAN);
+        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef4915.LITTLE_ENDIAN);
         const obj2 = { value: null, description: null };
         obj2[0] = int161;
         obj2[1] = "" + -0.5 * int161;

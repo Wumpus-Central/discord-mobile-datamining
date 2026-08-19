@@ -2,7 +2,7 @@
 
 // Module 379 (Animation)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 let Animation = importDefault;
 let c4 = 1;
@@ -57,9 +57,6 @@ let items = [
           API2.stopAnimation(_nativeID);
           const API3 = Animation(357).API;
           const result1 = API3.unsetWaitingForIdentifier(combined);
-          const tmp2 = Animation;
-          const tmp3 = Animation;
-          const tmp4 = dependencyMap;
         } catch (tmp11) {
           const API4 = Animation(357).API;
           const result2 = API4.unsetWaitingForIdentifier(tmp);
@@ -78,23 +75,18 @@ let items = [
   },
   {
     key: "__findAnimatedPropsNodes",
-    value: function __findAnimatedPropsNodes(item10014) {
+    value: function __findAnimatedPropsNodes(closure_0) {
       const self = this;
       const items = [];
-      if (item10014 instanceof Animation(380)) {
-        items.push(item10014);
+      if (Animation instanceof Animation(380)) {
+        items.push(Animation);
         return items;
       } else {
-        const __getChildrenResult = item10014.__getChildren();
+        const __getChildrenResult = Animation.__getChildren();
         for (const item10014 of __getChildrenResult) {
           let push = items.push;
           let items1 = [];
-          let tmp4 = items1;
-          let num = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(self.__findAnimatedPropsNodes(item10014), 0);
-          let tmp6 = push;
-          let tmp7 = items1;
-          let tmp8 = items;
           let applyResult = HermesBuiltin.apply(items1, items);
           continue;
         }
@@ -105,7 +97,6 @@ let items = [
   {
     key: "__startAnimationIfNative",
     value: function __startAnimationIfNative(self) {
-      self = this;
       self = this;
       Animation = self;
       if (this._useNativeDriver) {
@@ -124,10 +115,9 @@ let items = [
             value = value.value;
             if (null != value) {
               const result = _self.__onAnimatedValueUpdateReceived(value, tmp2);
-              const result1 = obj.__findAnimatedPropsNodes(_self);
-              const item = result1.forEach((update) => update.update());
-              const obj2 = self(closure_1_2[4]);
-              const tmp3 = _self;
+              const result1 = self.__findAnimatedPropsNodes(_self);
+              const item = result1.forEach((item, index) => item.update());
+              const obj2 = self(dependencyMap[4]);
             }
           });
           const API3 = tmp9(357).API;

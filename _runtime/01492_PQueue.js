@@ -128,19 +128,15 @@ VBox.prototype = {
       while (sum1 <= self.r2) {
         let g1 = self.g1;
         let tmp3 = num3;
-        let tmp4 = sum1;
         let tmp5 = num3;
         if (g1 <= self.g2) {
           do {
             let b1 = self.b1;
             let sum = tmp3;
-            let tmp7 = g1;
             let tmp8 = tmp3;
             if (b1 <= self.b2) {
               do {
                 let num5 = tmp[(sum1 << 10) + (g1 << 5) + b1];
-                let tmp9 = sum;
-                let tmp10 = b1;
                 if (!num5) {
                   num5 = 0;
                 }
@@ -197,7 +193,6 @@ VBox.prototype = {
       let tmp4 = num2;
       let tmp5 = num3;
       let tmp6 = num4;
-      let tmp7 = sum4;
       let tmp8 = num;
       let tmp9 = num2;
       let tmp10 = num3;
@@ -209,7 +204,6 @@ VBox.prototype = {
           let sum2 = tmp4;
           let sum1 = tmp5;
           let sum = tmp6;
-          let tmp16 = g1;
           let tmp17 = tmp3;
           let tmp18 = tmp4;
           let tmp19 = tmp5;
@@ -217,11 +211,6 @@ VBox.prototype = {
           if (b1 <= self.b2) {
             do {
               let num9 = tmp[(sum4 << 10) + (g1 << 5) + b1];
-              let tmp21 = sum3;
-              let tmp22 = sum2;
-              let tmp23 = sum1;
-              let tmp24 = sum;
-              let tmp25 = b1;
               if (!num9) {
                 num9 = 0;
               }
@@ -298,7 +287,7 @@ CMap.prototype = {
   },
   palette() {
     const vboxes = this.vboxes;
-    return vboxes.map((color) => color.color);
+    return vboxes.map((item, index) => item.color);
   },
   size() {
     const vboxes = this.vboxes;
@@ -331,7 +320,6 @@ CMap.prototype = {
         let sum = powResult + Math.pow(arg0[1] - vboxes.peek(num).color[1], 2);
         let sqrtResult = Math.sqrt(sum + Math.pow(arg0[2] - vboxes.peek(num).color[2], 2));
         let tmp7 = sqrtResult < tmp2;
-        let tmp8 = num;
         let color = tmp;
         let tmp9 = tmp2;
         if (!tmp7) {
@@ -370,20 +358,17 @@ export default function quantize(arr) {
   if (arr.length) {
     if (arg1 >= 2) {
       if (arg1 <= 256) {
-        function iter(BottomSheetDraggableContext, arg1, closure_0, closure_1) {
+        function iter(activeDotStyle, result, closure_0, closure_1) {
           let num = 0;
           let num2 = 1;
           while (true) {
-            let arr = BottomSheetDraggableContext.pop();
-            let tmp = num;
-            let tmp2 = num2;
+            let arr = activeDotStyle.pop();
             if (arr.count()) {
               let tmp6 = sum8;
               let tmp7;
               if (arr.count()) {
                 let sum = arr.r2 - arr.r1 + 1;
                 let sum1 = arr.g2 - arr.g1 + 1;
-                let tmp10 = f103874;
                 let items = [sum, sum1, arr.b2 - arr.b1 + 1];
                 let maxResult = f103874.max(items);
                 if (1 == arr.count()) {
@@ -396,23 +381,17 @@ export default function quantize(arr) {
                   if (maxResult == sum) {
                     sum = arr.r1;
                     let num12 = 0;
-                    let num7 = 0;
                     while (sum <= arr.r2) {
                       let g13 = arr.g1;
-                      let tmp28 = sum;
-                      let tmp29 = num12;
                       let num13 = 0;
                       let num14 = 0;
                       while (g13 <= arr.g2) {
                         let b13 = arr.b1;
                         let sum2 = num13;
-                        let tmp31 = g13;
                         let tmp32 = num13;
                         if (b13 <= arr.b2) {
                           do {
                             let num15 = tmp6[(sum << 10) + (g13 << 5) + b13];
-                            let tmp33 = sum2;
-                            let tmp34 = b13;
                             if (!num15) {
                               num15 = 0;
                             }
@@ -430,28 +409,21 @@ export default function quantize(arr) {
                       items2[sum] = sum3;
                       sum = sum + 1;
                       num12 = sum3;
-                      num7 = sum3;
                     }
                   } else if (maxResult == sum1) {
                     let g12 = arr.g1;
                     let num8 = 0;
-                    num7 = 0;
                     while (g12 <= arr.g2) {
                       let r1 = arr.r1;
-                      let tmp20 = g12;
-                      let tmp21 = num8;
                       let num9 = 0;
                       let num10 = 0;
                       while (r1 <= arr.r2) {
                         let b12 = arr.b1;
                         let sum4 = num9;
-                        let tmp23 = r1;
                         let tmp24 = num9;
                         if (b12 <= arr.b2) {
                           do {
                             let num11 = tmp6[(r1 << 10) + (g12 << 5) + b12];
-                            let tmp25 = sum4;
-                            let tmp26 = b12;
                             if (!num11) {
                               num11 = 0;
                             }
@@ -469,28 +441,21 @@ export default function quantize(arr) {
                       items2[g12] = sum5;
                       g12 = g12 + 1;
                       num8 = sum5;
-                      num7 = sum5;
                     }
                   } else {
                     let b1 = arr.b1;
                     let num6 = 0;
-                    num7 = 0;
                     while (b1 <= arr.b2) {
                       let sum7 = arr.r1;
-                      let tmp12 = b1;
-                      let tmp13 = num6;
                       let num3 = 0;
                       let num4 = 0;
                       while (sum7 <= arr.r2) {
                         let g1 = arr.g1;
                         let sum6 = num3;
-                        let tmp15 = sum7;
                         let tmp16 = num3;
                         if (g1 <= arr.g2) {
                           do {
                             let num5 = tmp6[(sum7 << 10) + (g1 << 5) + b1];
-                            let tmp17 = sum6;
-                            let tmp18 = g1;
                             if (!num5) {
                               num5 = 0;
                             }
@@ -507,11 +472,10 @@ export default function quantize(arr) {
                       items2[b1] = sum8;
                       b1 = b1 + 1;
                       num6 = sum8;
-                      num7 = sum8;
                     }
                   }
-                  let item = items2.forEach((arg0, arg1) => {
-                    items3[arg1] = sum8 - arg0;
+                  let item = items2.forEach((item, index) => {
+                    items3[index] = sum8 - item;
                   });
                   let str = "r";
                   if (maxResult != sum) {
@@ -526,7 +490,6 @@ export default function quantize(arr) {
                   let tmp39 = arr[`${str}1`];
                   let tmp41;
                   if (tmp39 <= arr[`${str}2`]) {
-                    let tmp42 = tmp39;
                     while (items2[tmp39] <= tmp40) {
                       let sum9 = tmp39 + 1;
                       tmp39 = sum9;
@@ -580,19 +543,19 @@ export default function quantize(arr) {
               if (!tmp56) {
                 break;
               } else {
-                arr = BottomSheetDraggableContext.push(tmp56);
+                arr = activeDotStyle.push(tmp56);
                 let sum11 = num2;
                 if (tmp57) {
-                  let arr1 = BottomSheetDraggableContext.push(tmp57);
+                  let arr1 = activeDotStyle.push(tmp57);
                   sum11 = num2 + 1;
                 }
-                if (sum11 < arg1) {
+                if (sum11 < result) {
                   let sum12 = num + 1;
                   let tmp5 = sum11;
                 }
               }
             } else {
-              let arr2 = BottomSheetDraggableContext.push(arr);
+              let arr2 = activeDotStyle.push(arr);
               sum12 = num + 1;
               tmp5 = num2;
             }
@@ -602,33 +565,30 @@ export default function quantize(arr) {
         }
         const _Array = Array;
         const array = new Array(32768);
-        CMap = array;
-        let item = arr.forEach((arg0) => {
-          closure_0 = arg0[0] >> 3;
-          closure_1 = arg0[1] >> 3;
-          const sum = (closure_0 << 10) + (closure_1 << 5) + (arg0[2] >> 3);
+        let item = arr.forEach((item, index) => {
+          closure_0 = item[0] >> 3;
+          closure_1 = item[1] >> 3;
+          const sum = (closure_0 << 10) + (closure_1 << 5) + (item[2] >> 3);
           let num = table[sum];
           if (!num) {
             num = 0;
           }
           table[sum] = num + 1;
         });
-        let f103874 = array;
-        const item1 = array.forEach(() => {
+        const item1 = array.forEach((item, index) => {
 
         });
-        f103874 = undefined;
+        let f103874;
         VBox = undefined;
-        CMap = undefined;
         c3 = 1000000;
         c4 = 0;
         c5 = 1000000;
         c6 = 0;
         c7 = 1000000;
         c8 = 0;
-        const item2 = arr.forEach((arg0) => {
-          closure_0 = arg0[0] >> 3;
-          closure_1 = arg0[1] >> 3;
+        const item2 = arr.forEach((item, index) => {
+          closure_0 = item[0] >> 3;
+          closure_1 = item[1] >> 3;
           closure_2 = tmp;
           if (closure_0 < closure_3) {
             closure_3 = tmp2;
@@ -640,7 +600,7 @@ export default function quantize(arr) {
           } else if (tmp4 > closure_6) {
             closure_6 = tmp4;
           }
-          if (arg0[2] >> 3 < closure_7) {
+          if (item[2] >> 3 < closure_7) {
             closure_7 = tmp;
           } else if (closure_8 < tmp) {
             closure_8 = tmp;
@@ -656,8 +616,6 @@ export default function quantize(arr) {
         obj.histo = array;
         const prototype2 = f103874.prototype;
         f103874 = (count, count2) => f103874.naturalOrder(count.count(), count2.count());
-        VBox = [];
-        CMap = false;
         obj = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
         obj[0] = function push(arg0) {
           c2 = false;
@@ -693,7 +651,7 @@ export default function quantize(arr) {
           }
           return arr;
         };
-        obj.push(obj);
+        arr = obj.push(obj);
         iter(obj, 0.75 * arg1);
         const prototype3 = f103874.prototype;
         f103874 = (count, count2) => {

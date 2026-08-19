@@ -24,26 +24,25 @@ if (typeof Object.is === "function") {
     }
     if (!tmp) {
       tmp = arg0 != arg0 && arg1 != arg1;
-      const tmp3 = arg0 != arg0 && arg1 != arg1;
     }
     return tmp;
   };
 }
 ({ useState: closure_1, useEffect: obj1, useLayoutEffect: c3, useDebugValue: c4 } = noop);
 
-export const useSyncExternalStore = undefined !== noop.useSyncExternalStore ? noop.useSyncExternalStore : (function useSyncExternalStore$1(arg0, getSnapshot) {
+export const useSyncExternalStore = undefined !== noop.useSyncExternalStore ? noop.useSyncExternalStore : (function useSyncExternalStore$1(arg0, fn) {
   closure_0 = arg0;
-  const callback = getSnapshot;
-  const tmp = getSnapshot();
+  const callback = fn;
+  const tmp = fn();
   const callback2 = tmp;
-  const tmp2 = callback({ inst: { value: tmp, getSnapshot } });
+  const tmp2 = callback({ inst: { value: tmp, getSnapshot: fn } });
   const inst = tmp2[0].inst;
   const callback3 = tmp2[1];
-  const items = [arg0, tmp, getSnapshot];
+  const items = [arg0, tmp, fn];
   inst(() => {
     inst.value = closure_2;
     inst.getSnapshot = closure_1;
-    if (closure_1_5(inst)) {
+    if (checkIfSnapshotChanged(inst)) {
       const obj = { inst: null };
       obj[0] = inst;
       callback2(obj);
@@ -51,7 +50,7 @@ export const useSyncExternalStore = undefined !== noop.useSyncExternalStore ? no
   }, items);
   const items1 = [arg0];
   callback2(() => {
-    if (closure_1_5(inst)) {
+    if (checkIfSnapshotChanged(inst)) {
       let obj = { inst: null };
       obj[0] = inst;
       callback2(obj);

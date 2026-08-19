@@ -5,7 +5,9 @@ import assign from "assign" /* 13208 */;
 import ZStream from "ZStream" /* 13210 */;
 import _mod13212 from "module_13212" /* 13212 */;
 import assign2 from "assign" /* 13216 */;
+import InflateState from "InflateState" /* 13218 */;
 import _mod13221 from "module_13221" /* 13221 */;
+import GZheader from "GZheader" /* 13222 */;
 
 require = arg1;
 const dependencyMap = arg6;

@@ -2,10 +2,11 @@
 
 // Module 4919 (parseBox)
 import getDataView from "getDataView" /* 4910 */;
+import _modDef4913 from "module_4913" /* 4913 */;
 import parseItemLocationBox from "parseItemLocationBox" /* 4920 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 function parseBox(getUint32, sum) {
   const uint32 = getUint32.getUint32(sum);
@@ -202,12 +203,12 @@ function parseBox(getUint32, sum) {
           obj10.itemName = obj6.getNullTerminatedStringFromDataView(getUint32, sum12);
           const sum13 = sum12 + (obj10.itemName.length + 1);
           if (obj10.itemType === c4) {
-            let tmp13Result = tmp13(4910);
+            let tmp13Result = getDataView;
             obj10.contentType = tmp13Result.getNullTerminatedStringFromDataView(getUint32, sum13);
             const sum14 = sum13 + (obj10.contentType.length + 1);
             parseItemLocationBoxResult = obj10;
             if (sum + length > sum14) {
-              tmp13Result = tmp13(4910);
+              tmp13Result = getDataView;
               obj10.contentEncoding = tmp13Result.getNullTerminatedStringFromDataView(getUint32, sum14);
               const sum15 = obj10.contentEncoding.length + 1;
               parseItemLocationBoxResult = obj10;
@@ -215,10 +216,10 @@ function parseBox(getUint32, sum) {
           } else {
             parseItemLocationBoxResult = obj10;
             if (obj10.itemType === c5) {
-              obj10.itemUri = tmp13(4910).getNullTerminatedStringFromDataView(getUint32, sum13);
+              obj10.itemUri = getDataView.getNullTerminatedStringFromDataView(getUint32, sum13);
               const sum16 = obj10.itemUri.length + 1;
               parseItemLocationBoxResult = obj10;
-              const tmp13Result1 = tmp13(4910);
+              const tmp13Result1 = getDataView;
             }
           }
         }
@@ -233,8 +234,8 @@ function parseBox(getUint32, sum) {
 function findIlocItem(subBoxes) {
   closure_0 = arg1;
   subBoxes = subBoxes.subBoxes;
-  const items = subBoxes.find((type) => "iloc" === type.type).items;
-  return items.find((itemId) => itemId.itemId === closure_0);
+  const items = subBoxes.find((item, index) => "iloc" === item.type).items;
+  return items.find((item, index) => item.itemId === closure_0);
 }
 let c3 = 1165519206;
 let c4 = 1835625829;
@@ -243,9 +244,9 @@ arg5.ITEM_INFO_TYPE_EXIF = 1165519206;
 arg5.ITEM_INFO_TYPE_MIME = 1835625829;
 arg5.parseBox = parseBox;
 arg5.findOffsets = function findOffsets(byteLength) {
-  if (!module(4913).USE_EXIF) {
-    if (!tmp(4913).USE_XMP) {
-      if (!tmp(4913).USE_ICC) {
+  if (!_modDef4913.USE_EXIF) {
+    if (!_modDef4913.USE_XMP) {
+      if (!_modDef4913.USE_ICC) {
         return {};
       }
     }
@@ -269,13 +270,13 @@ arg5.findOffsets = function findOffsets(byteLength) {
   }
   if (tmp3) {
     let obj = {};
-    if (tmp(4913).USE_EXIF) {
+    if (_modDef4913.USE_EXIF) {
       obj.tiffHeaderOffset = (function findExifOffset(byteLength, subBoxes) {
         try {
           const tmp4 = callback(subBoxes, (function findIinfExifItemId(subBoxes) {
             subBoxes = subBoxes.subBoxes;
-            const itemInfos = subBoxes.find((type) => "iinf" === type.type).itemInfos;
-            return itemInfos.find((itemType) => itemType.itemType === closure_3);
+            const itemInfos = subBoxes.find((item, index) => "iinf" === item.type).itemInfos;
+            return itemInfos.find((item, index) => item.itemType === closure_3);
           })(subBoxes).itemId);
           return (function getTiffHeaderOffset(getUint32, sum) {
             sum = sum + 4;
@@ -285,16 +286,16 @@ arg5.findOffsets = function findOffsets(byteLength) {
         }
       })(byteLength, tmp3);
     }
-    if (tmp(4913).USE_XMP) {
+    if (_modDef4913.USE_XMP) {
       obj.xmpChunks = (function findXmpChunks(subBoxes) {
         try {
           const itemId = (function findIinfXmpItemId(subBoxes) {
             subBoxes = subBoxes.subBoxes;
-            const itemInfos = subBoxes.find((type) => "iinf" === type.type).itemInfos;
-            return itemInfos.find((itemType) => {
-              let tmp = itemType.itemType === closure_4;
+            const itemInfos = subBoxes.find((item, index) => "iinf" === item.type).itemInfos;
+            return itemInfos.find((item, index) => {
+              let tmp = item.itemType === closure_4;
               if (tmp) {
-                tmp = "application/rdf+xml" === itemType.contentType;
+                tmp = "application/rdf+xml" === item.contentType;
               }
               return tmp;
             });
@@ -309,13 +310,13 @@ arg5.findOffsets = function findOffsets(byteLength) {
         }
       })(tmp3);
     }
-    if (tmp(4913).USE_ICC) {
+    if (_modDef4913.USE_ICC) {
       obj.iccChunks = (function findIccChunks(subBoxes) {
         try {
           subBoxes = subBoxes.subBoxes;
-          const subBoxes1 = subBoxes.find((type) => "iprp" === type.type).subBoxes;
-          const properties = subBoxes1.find((type) => "ipco" === type.type).properties;
-          const icc = properties.find((type) => "colr" === type.type).icc;
+          const subBoxes1 = subBoxes.find((item, index) => "iprp" === item.type).subBoxes;
+          const properties = subBoxes1.find((item, index) => "ipco" === item.type).properties;
+          const icc = properties.find((item, index) => "colr" === item.type).icc;
           if (icc) {
             const items = [tmp2];
             return items;

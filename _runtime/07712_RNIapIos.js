@@ -68,8 +68,8 @@ export const getAndroidModuleType = () => {
   }
   let tmp10 = RNIapModule;
   if (!RNIapModule) {
-    let tmp11 = tmp;
-    if (!tmp) {
+    let tmp11 = RNIapModule;
+    if (!RNIapModule) {
       tmp11 = RNIapAmazonModule;
     }
     tmp10 = tmp11;

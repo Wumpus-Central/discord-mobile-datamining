@@ -1,7 +1,9 @@
 // === Module 517: unsafeStringify ===
 
 // Module 517 (unsafeStringify)
-const module = arg2;
+import validateDefault from "validate" /* 518 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 function unsafeStringify(array, arg1) {
   let num = arg1;
@@ -24,7 +26,7 @@ arg5.default = function stringify(array) {
     num = 0;
   }
   const tmp = unsafeStringify(array, num);
-  if (module(518)(tmp)) {
+  if (validateDefault(tmp)) {
     return tmp;
   } else {
     const _TypeError = TypeError;

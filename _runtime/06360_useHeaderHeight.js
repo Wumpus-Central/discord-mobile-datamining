@@ -2,7 +2,7 @@
 
 // Module 6360 (useHeaderHeight)
 import HeaderHeightContext from "HeaderHeightContext" /* 6359 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

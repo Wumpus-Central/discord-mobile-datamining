@@ -2,11 +2,11 @@
 
 // Module 7110 (LayoutCommitObserver)
 import noopDefault from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 7041 */;
+import _slicedToArray from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ useLayoutEffect: c3, useMemo: c4, useRef: c5 } = noop);
 const memoResult = noopDefault.memo((children) => {
   const onCommitLayoutEffect = children.onCommitLayoutEffect;
@@ -31,8 +31,8 @@ const memoResult = noopDefault.memo((children) => {
     },
     getRef() {
       let ref;
-      if (closure_1 != null) {
-        ref = closure_1.getRef();
+      if (store != null) {
+        ref = store.getRef();
       }
       if (ref == null) {
         ref = null;
@@ -41,8 +41,8 @@ const memoResult = noopDefault.memo((children) => {
     },
     getParentRef() {
       let parentRef;
-      if (closure_1 != null) {
-        parentRef = closure_1.getParentRef();
+      if (store != null) {
+        parentRef = store.getParentRef();
       }
       if (parentRef == null) {
         parentRef = null;
@@ -51,8 +51,8 @@ const memoResult = noopDefault.memo((children) => {
     },
     getParentScrollViewRef() {
       let parentScrollViewRef;
-      if (closure_1 != null) {
-        parentScrollViewRef = closure_1.getParentScrollViewRef();
+      if (store != null) {
+        parentScrollViewRef = store.getParentScrollViewRef();
       }
       if (parentScrollViewRef == null) {
         parentScrollViewRef = null;
@@ -61,8 +61,8 @@ const memoResult = noopDefault.memo((children) => {
     },
     getScrollViewRef() {
       let scrollViewRef;
-      if (closure_1 != null) {
-        scrollViewRef = closure_1.getScrollViewRef();
+      if (store != null) {
+        scrollViewRef = store.getScrollViewRef();
       }
       if (scrollViewRef == null) {
         scrollViewRef = null;
@@ -70,14 +70,14 @@ const memoResult = noopDefault.memo((children) => {
       return scrollViewRef;
     },
     markChildLayoutAsPending(arg0) {
-      if (closure_1 != null) {
-        const result = closure_1.markChildLayoutAsPending(arg0);
+      if (store != null) {
+        const result = store.markChildLayoutAsPending(arg0);
       }
       set.add(arg0);
     },
     unmarkChildLayoutAsPending(arg0) {
-      if (closure_1 != null) {
-        const result = closure_1.unmarkChildLayoutAsPending(arg0);
+      if (store != null) {
+        const result = store.unmarkChildLayoutAsPending(arg0);
       }
       if (set.has(arg0)) {
         set.delete(arg0);

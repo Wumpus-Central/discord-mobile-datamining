@@ -9,9 +9,6 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
   if (arg1 === undefined) {
     obj = {};
   }
-  dependencyMap = undefined;
-  closure_2 = undefined;
-  closure_3 = undefined;
   const _require = arg0;
   obj = {};
   let merged = Object.assign(obj);
@@ -44,14 +41,13 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
         let result = { name: null, attributes: null };
         result[0] = forEach ? forEach.routeId : _location.pathname;
         let obj = {};
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
+        obj[callback(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+        obj[callback(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
         let str4 = "url";
         if (forEach) {
           str4 = "route";
         }
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
-        obj1 = undefined;
+        obj[callback(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
         obj1 = {};
         if (forEach) {
           let _Object = Object;
@@ -69,8 +65,8 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
         }
         const merged = Object.assign(tmp9);
         result[1] = obj;
-        result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f103592, result);
-        const tmp2Result = tmp2(tmp3[0]);
+        result = callback(_undefined[0]).startBrowserTracingPageLoadSpan(f103592, result);
+        const tmp2Result = callback(_undefined[0]);
       }
     }
     if (closure_3) {
@@ -86,8 +82,8 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
             if ("__root__" !== routeId) {
               tmp2 = tmp6;
             }
-            let obj = obj1(1024);
-            obj = { name: null, attributes: null };
+            obj1(1024);
+            let obj = { name: null, attributes: null };
             obj[0] = tmp2 ? tmp2.routeId : obj1(1024).WINDOW.location.pathname;
             obj = {};
             obj[obj1(817).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
@@ -114,7 +110,6 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
                 if (forEach) {
                   obj.updateName(forEach.routeId);
                   const attr = obj.setAttribute(obj1(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
-                  obj = undefined;
                   obj = {};
                   if (forEach) {
                     const _Object = Object;
@@ -134,8 +129,6 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
                 }
               }
             });
-            const obj4 = obj1;
-            const tmp5 = obj1;
           }
         }
       });

@@ -8,7 +8,6 @@ export default (obj) => {
     if (!Array.isArray(obj)) {
       obj = {};
       for (const key10010 in arg0) {
-        let tmp3 = key10010;
         if (!arg0.hasOwnProperty(key10010)) {
           continue;
         } else {

@@ -3,16 +3,16 @@
 // Module 346 (_isNativeReflectConstruct)
 import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 347 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 import { default as _default } from "getConstants" /* 411 */;
 
-const Modal = arg1;
+const Modal = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -160,12 +160,6 @@ const importDefaultResultResult = importDefaultResult(Modal, items);
 let c9 = importDefaultResultResult;
 importDefaultResultResult.defaultProps = { visible: true, hardwareAccelerated: false };
 importDefaultResultResult.contextType = require("RootTagContext").RootTagContext;
-let obj = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-
-  }
-};
 let str = "left";
 if (_default.getConstants().isRTL) {
   str = "right";

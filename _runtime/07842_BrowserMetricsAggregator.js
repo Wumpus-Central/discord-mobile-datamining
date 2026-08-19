@@ -1,7 +1,7 @@
 // === Module 7842: BrowserMetricsAggregator ===
 
 // Module 7842 (BrowserMetricsAggregator)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const BrowserMetricsAggregator = require;
@@ -19,9 +19,9 @@ class BrowserMetricsAggregator {
 const items = [
   {
     key: "add",
-    value: function add(arg0, arg1, diff) {
-      let str = arg3;
-      if (arg3 === undefined) {
+    value: function add(arg0, arg1, diff, none) {
+      let str = none;
+      if (none === undefined) {
         str = "none";
       }
       let obj = arg4;
@@ -46,7 +46,7 @@ const items = [
       let num = 0;
       if (value) {
         num = 0;
-        if (arg0 === tmp5(7835).SET_METRIC_TYPE) {
+        if (arg0 === BrowserMetricsAggregator(7835).SET_METRIC_TYPE) {
           num = value.metric.weight;
         }
       }
@@ -60,7 +60,7 @@ const items = [
         }
       } else {
         obj = { metric: null, timestamp: null, metricType: null, name: null, unit: null, tags: null };
-        const tmp16 = new tmp5(7840).METRIC_MAP[arg0](diff);
+        const tmp16 = new BrowserMetricsAggregator(7840).METRIC_MAP[arg0](diff);
         obj[0] = tmp16;
         obj[1] = rounded;
         obj[2] = arg0;
@@ -75,6 +75,7 @@ const items = [
       }
       const obj6 = BrowserMetricsAggregator(7839);
       const result1 = BrowserMetricsAggregator(7743).updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, obj, bucketKey);
+      const tmp5Result = BrowserMetricsAggregator(7743);
     }
   },
   {

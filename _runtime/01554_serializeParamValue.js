@@ -2,29 +2,28 @@
 
 // Module 1554 (serializeParamValue)
 const require = arg1;
-const exports = arg3;
+let importAll = arg3;
 const dependencyMap = arg6;
 function serializeParamValue(arg0) {
 
 }
-function getActiveRoute(index) {
+function getActiveRoute(index, screens, fn) {
   if (typeof index.index === "number") {
     let tmp = index.routes[index.index];
   } else {
     tmp = index.routes[index.routes.length - 1];
   }
   let tmp2;
-  if (arg1 != null) {
-    tmp2 = arg1[tmp.name];
+  if (screens != null) {
+    tmp2 = screens[tmp.name];
   }
-  const tmp3 = arg2(tmp, tmp2);
+  const tmp3 = fn(tmp, tmp2);
   if (tmp3) {
-    let screens;
+    screens = undefined;
     if (tmp2 != null) {
       screens = tmp2.screens;
     }
-    tmp = getActiveRoute(tmp3, screens, arg2);
-    const tmp4 = getActiveRoute;
+    tmp = getActiveRoute(tmp3, screens, fn);
   }
   return tmp;
 }
@@ -57,8 +56,8 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
         let _Object = Object;
         let _Object2 = Object;
         let entries = Object.entries(screens.screens);
-        let fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-          [tmp, tmp2] = arg0;
+        let fromEntriesResult = Object.fromEntries(entries.map((item, index) => {
+          [tmp, tmp2] = item;
           if (typeof tmp2 === "string") {
             let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
             let obj = { parts: null, ownParts: null };
@@ -67,11 +66,9 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
               HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
               obj[0] = items;
               obj[1] = patternParts;
-              let tmp23 = obj;
             } else {
               obj[0] = patternParts;
               obj[1] = patternParts;
-              tmp23 = obj;
             }
             let obj3 = closure_1_0(closure_1_2[2]);
           } else {
@@ -108,8 +105,8 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
               let _Object = Object;
               let _Object2 = Object;
               let entries = Object.entries(tmp2.screens);
-              fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                [tmp, tmp2] = arg0;
+              fromEntriesResult = Object.fromEntries(entries.map((item, index) => {
+                [tmp, tmp2] = item;
                 if (typeof tmp2 === "string") {
                   let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
                   let obj = { parts: null, ownParts: null };
@@ -118,11 +115,9 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                     HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
                     obj[0] = items;
                     obj[1] = patternParts;
-                    let tmp23 = obj;
                   } else {
                     obj[0] = patternParts;
                     obj[1] = patternParts;
-                    tmp23 = obj;
                   }
                   let obj3 = closure_1_0(closure_1_2[2]);
                 } else {
@@ -159,8 +154,8 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                     let _Object = Object;
                     let _Object2 = Object;
                     let entries = Object.entries(tmp2.screens);
-                    fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                      [tmp, tmp2] = arg0;
+                    fromEntriesResult = Object.fromEntries(entries.map((item, index) => {
+                      [tmp, tmp2] = item;
                       if (typeof tmp2 === "string") {
                         let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
                         let obj = { parts: null, ownParts: null };
@@ -169,11 +164,9 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                           HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
                           obj[0] = items;
                           obj[1] = patternParts;
-                          let tmp23 = obj;
                         } else {
                           obj[0] = patternParts;
                           obj[1] = patternParts;
-                          tmp23 = obj;
                         }
                         let obj3 = closure_1_0(closure_1_2[2]);
                       } else {
@@ -210,8 +203,8 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                           let _Object = Object;
                           let _Object2 = Object;
                           let entries = Object.entries(tmp2.screens);
-                          fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                            [tmp, tmp2] = arg0;
+                          fromEntriesResult = Object.fromEntries(entries.map((item, index) => {
+                            [tmp, tmp2] = item;
                             if (typeof tmp2 === "string") {
                               let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
                               let obj = { parts: null, ownParts: null };
@@ -220,11 +213,9 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                                 HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
                                 obj[0] = items;
                                 obj[1] = patternParts;
-                                let tmp23 = obj;
                               } else {
                                 obj[0] = patternParts;
                                 obj[1] = patternParts;
-                                tmp23 = obj;
                               }
                               let obj3 = closure_1_0(closure_1_2[2]);
                             } else {
@@ -311,7 +302,7 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
     }
     const _Map = Map;
     const map = new Map();
-    function getRouteState(closure_3, screens) {
+    function getRouteState(closure_3, screens2) {
       if (closure_3.state) {
         return closure_3.state;
       } else {
@@ -324,8 +315,8 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
         }
         if (params) {
           let tmp3;
-          if (screens != null) {
-            screens = screens.screens;
+          if (screens2 != null) {
+            let screens = screens2.screens;
             if (screens != null) {
               tmp3 = screens[closure_3.params.screen];
             }
@@ -338,31 +329,31 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
         }
         if (params2) {
           screens = undefined;
-          if (screens != null) {
-            screens = screens.screens;
+          if (screens2 != null) {
+            screens = screens2.screens;
           }
           params2 = screens;
         }
         let value;
         if (closure_3.params) {
           let screens1;
-          if (screens != null) {
-            screens1 = screens.screens;
+          if (screens2 != null) {
+            screens1 = screens2.screens;
           }
           if (screens1) {
             if (params) {
               if (!map.has(closure_3)) {
-                const result = obj.set(closure_3, map(num3[0]).getStateFromRouteParams(closure_3.params));
+                const result = map.set(closure_3, map(num3[0]).getStateFromRouteParams(closure_3.params));
                 const obj2 = map(num3[0]);
               }
-              value = obj.get(closure_3);
+              value = map.get(closure_3);
             }
           }
         }
         return value;
       }
     }
-    let _exports = getRouteState;
+    importAll = getRouteState;
     if (typeof map1 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -410,60 +401,44 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
     let tmp25 = index;
     if (index) {
       do {
-        let tmp26 = tmp25;
-        let tmp27 = str4;
         num3 = 0;
         if (typeof tmp25.index === "number") {
           num3 = tmp25.index;
         }
-        let tmp28 = num3;
         serializeParamValue = tmp25.routes[num3];
         let _Map2 = Map;
-        let tmp29 = new.target;
-        let tmp30 = new.target;
         map1 = new Map();
-        let tmp32 = map1;
         closure_6 = [];
         c7 = true;
-        let tmp34 = serializeParamValue;
-        let tmp35 = obj;
         if (serializeParamValue.name in obj) {
-          let tmp36 = c7;
           if (c7) {
             let tmp33Result = tmp33();
-            let tmp38 = serializeParamValue;
-            let tmp39 = obj;
             while (serializeParamValue.name in obj) {
-              let tmp40 = c7;
               if (!c7) {
                 break;
               }
             }
           }
         }
-        let tmp41 = serializeParamValue;
-        let tmp42 = obj;
         routeState2 = getRouteState(serializeParamValue, obj[serializeParamValue.name]);
-        let tmp44 = obj;
-        let tmp45 = serializeParamValue;
         if (undefined !== obj[serializeParamValue.name]) {
           let arr2 = map;
           let joined;
           if (map != null) {
-            let mapped = arr2.map((segment) => {
-              segment = segment.segment;
+            let mapped = arr2.map((item, index) => {
+              const segment = item.segment;
               if ("*" === segment) {
                 return user.name;
               } else if (tmp) {
-                const value = map1.get(segment);
+                const value = map1.get(item);
                 if (undefined !== value) {
                   const _Array = Array;
                   const _String = String;
-                  const mapped = Array.from(String(value)).map((arg0) => {
-                    let encodeURIComponentResult = arg0;
-                    if (obj.test(arg0)) {
+                  const mapped = Array.from(String(value)).map((item, index) => {
+                    let encodeURIComponentResult = item;
+                    if (obj.test(item)) {
                       const _encodeURIComponent = encodeURIComponent;
-                      encodeURIComponentResult = encodeURIComponent(arg0);
+                      encodeURIComponentResult = encodeURIComponent(item);
                     }
                     return encodeURIComponentResult;
                   });
@@ -483,20 +458,18 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
           let sum = str4 + joined;
         } else {
           let _encodeURIComponent = encodeURIComponent;
-          let tmp46 = serializeParamValue;
           sum = str4 + encodeURIComponent(serializeParamValue.name);
         }
-        let tmp49 = _exports;
-        let params = !_exports;
-        if (!_exports) {
+        let params = !importAll;
+        if (!importAll) {
           params = tmp18.params;
         }
         if (params) {
           let _Object3 = Object;
           let _Object4 = Object;
           let entries1 = Object.entries(tmp18.params);
-          _exports = Object.fromEntries(entries1.map((arg0) => {
-            [tmp, arr] = arg0;
+          importAll = Object.fromEntries(entries1.map((item, index) => {
+            [tmp, arr] = item;
             const items = [tmp, ];
             if (typeof closure_3 !== "function") {
               HermesBuiltin.throwTypeError();
@@ -520,27 +493,20 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
         if (routeState2) {
           let text = `${tmp47}/`;
         } else {
-          let tmp50 = _exports;
+          let tmp50 = importAll;
           text = sum;
-          if (_exports) {
-            let tmp52 = tmp50;
+          if (importAll) {
             for (const key10124 in tmp50) {
-              let tmp66 = key10124;
-              let tmp67 = _exports;
-              if ("undefined" !== _exports[key10124]) {
+              if ("undefined" !== importAll[key10124]) {
                 continue;
               } else {
-                let tmp53 = _exports;
                 delete tmp[tmp2];
                 continue;
               }
               continue;
             }
-            let tmp54 = _exports;
-            let tmp55 = num3;
-            let obj4 = _exports(num3[1]);
-            let tmp56 = _exports;
-            let json = obj4.stringify(_exports, { sort: false });
+            let obj4 = importAll(num3[1]);
+            let json = obj4.stringify(importAll, { sort: false });
             text = sum;
             if (json) {
               let _HermesInternal = HermesInternal;

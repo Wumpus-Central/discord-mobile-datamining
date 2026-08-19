@@ -55,7 +55,6 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
         obj[2] = bodySize;
         obj[3] = result;
         category.data = dropUndefinedKeys(_Object.assign(obj, category.data));
-        const obj2 = parseContentLengthHeader;
       }
     }
   }

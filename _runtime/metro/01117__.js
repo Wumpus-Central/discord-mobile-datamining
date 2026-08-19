@@ -7,12 +7,9 @@ arg5.PROFILE_QUEUE = {
   add(arg0, arg1) {
     if (arr.length >= 20) {
       do {
-        let tmp3 = arr;
         if (undefined !== arr.shift()) {
-          let tmp4 = dependencyMap;
           delete tmp[tmp2];
         }
-        let tmp5 = arr;
       } while (arr.length >= 20);
     }
     if (dependencyMap[arg0]) {
@@ -39,7 +36,6 @@ arg5.PROFILE_QUEUE = {
       if (0 < arr.length) {
         while (arr[num] !== arg0) {
           num = num + 1;
-          let tmp7 = arr;
         }
         arr.splice(num, 1);
       }

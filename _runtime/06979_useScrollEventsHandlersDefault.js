@@ -152,14 +152,14 @@ arg5.useScrollEventsHandlersDefault = (scrollableRef, scrollableContentOffsetY, 
           }
           num = num2;
         }
-        tmp7.value = true;
-        const tmpResult = tmp(tmp2[1]);
+        sharedValue1.value = true;
+        const tmpResult = scrollableRef(scrollableContentOffsetY[1]);
         tmpResult.scrollTo(scrollableRef, 0, num, false);
-        tmp7.value = false;
+        sharedValue1.value = false;
         scrollableContentOffsetY.value = num;
         sharedValue.value = num;
       }
-    } else if (animatedAnimationState.value !== tmp(tmp2[2]).ANIMATION_STATE.RUNNING) {
+    } else if (animatedAnimationState.value !== scrollableRef(scrollableContentOffsetY[2]).ANIMATION_STATE.RUNNING) {
       scrollableContentOffsetY.value = y;
       sharedValue.value = y;
       animatedScrollableContentOffsetY.value = y;

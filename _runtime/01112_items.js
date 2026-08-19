@@ -16,12 +16,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -41,8 +41,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -56,13 +56,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -71,8 +71,7 @@ if (!fn) {
     return _Promise;
   };
 }
-let obj = { name: _mod1113.SDK_NAME, packages: null, version: null };
-obj = { name: _mod1113.SDK_PACKAGE_NAME, version: _mod1113.SDK_VERSION };
+let obj = { name: _mod1113.SDK_PACKAGE_NAME, version: _mod1113.SDK_VERSION };
 let items = [obj];
 obj[1] = items;
 obj[2] = _mod1113.SDK_VERSION;
@@ -82,9 +81,8 @@ export const sdkInfoIntegration = () => {
   obj = fn(1002);
   if (obj.notWeb()) {
     if (!tmpResult.isExpoGo()) {
-      fn = false;
       dependencyMap = null;
-      fn = () => closure_1_2(undefined, undefined, undefined, function*() {
+      fn = () => fn(undefined, undefined, undefined, function*() {
         closure_1 = tmp3;
         if (closure_1_0) {
           return closure_1_1;
@@ -117,7 +115,7 @@ export const sdkInfoIntegration = () => {
     obj[2] = function processEvent(arg0) {
       closure_0 = arg0;
       closure_1 = closure_0;
-      return closure_1_2(undefined, undefined, undefined, function*() {
+      return fn(undefined, undefined, undefined, function*() {
         c2 = 0;
         closure_1 = tmp2;
         closure_0 = yield closure_1_1();
@@ -164,5 +162,5 @@ export const sdkInfoIntegration = () => {
     };
     return obj;
   }
-  fn = (arg0) => Promise.resolve(null);
+  fn = (c1) => Promise.resolve(null);
 };

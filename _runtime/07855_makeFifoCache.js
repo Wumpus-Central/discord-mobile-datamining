@@ -9,13 +9,9 @@ arg5.makeFifoCache = function makeFifoCache(arg0) {
     add(arg0, arg1) {
       if (arr.length >= closure_0) {
         do {
-          let tmp3 = arr;
           if (undefined !== arr.shift()) {
-            let tmp4 = dependencyMap;
             delete tmp[tmp2];
           }
-          let tmp5 = arr;
-          let tmp6 = closure_0;
         } while (arr.length >= closure_0);
       }
       if (dependencyMap[arg0]) {
@@ -42,7 +38,6 @@ arg5.makeFifoCache = function makeFifoCache(arg0) {
         if (0 < arr.length) {
           while (arr[num] !== arg0) {
             num = num + 1;
-            let tmp7 = arr;
           }
           arr.splice(num, 1);
         }

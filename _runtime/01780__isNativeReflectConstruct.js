@@ -2,10 +2,10 @@
 
 // Module 1780 (_isNativeReflectConstruct)
 import StretchOutY from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,9 +56,7 @@ class StretchInX {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleX: delayFunction(delay, first(1, closure_2)) };
+        const obj = { scaleX: delayFunction(delay, first(1, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -116,9 +114,7 @@ class StretchInY {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleY: delayFunction(delay, first(1, closure_2)) };
+        const obj = { scaleY: delayFunction(delay, first(1, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -176,9 +172,7 @@ class StretchOutX {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { scaleX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;
@@ -236,9 +230,7 @@ class StretchOutY {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { scaleY: delayFunction(delay, first(0, closure_2)) };
+        const obj = { scaleY: delayFunction(delay, first(0, closure_2)) };
         const items = [obj];
         obj[0] = items;
         obj[0] = obj;

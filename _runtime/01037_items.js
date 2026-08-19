@@ -25,21 +25,13 @@ arg5.onFCP = (arg0) => {
       while (iter !== undefined) {
         let tmp2 = nextResult;
         if ("first-contentful-paint" === nextResult.name) {
-          let tmp10 = observeResult;
           let disconnectResult = observeResult.disconnect();
-          let tmp12 = nextResult;
-          let tmp13 = firstHiddenTime;
           if (tmp2.startTime < firstHiddenTime.firstHiddenTime) {
-            let tmp3 = metric;
             let _Math = Math;
-            let tmp4 = nextResult;
-            let tmp5 = callback;
-            let tmp6 = firstHiddenTime;
             obj = callback(firstHiddenTime[3]);
             metric.value = Math.max(tmp2.startTime - obj.getActivationStart(), 0);
             let entries = metric.entries;
             let arr = entries.push(tmp2);
-            let tmp8 = callback;
             let tmp9 = callback(true);
           }
         }
@@ -49,7 +41,8 @@ arg5.onFCP = (arg0) => {
     closure_3 = observeResult;
     if (observeResult) {
       const tmpResult = tmp(tmp2[5]);
-      callback = tmpResult.bindReporter(callback, metric, closure_1_2, obj.reportAllChanges);
+      callback = tmpResult.bindReporter(callback, metric, items, obj.reportAllChanges);
     }
+    const obj3 = callback(obj[4]);
   });
 };

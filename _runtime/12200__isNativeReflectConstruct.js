@@ -3,12 +3,11 @@
 // Module 12200 (_isNativeReflectConstruct)
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let $ZodEncodeError = exports;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,34 +29,33 @@ function _isNativeReflectConstruct() {
 }
 export function $ZodAsyncError() {
   const self = this;
-  callback(this, $ZodEncodeError);
+  _classCallCheck(this, $ZodEncodeError);
   const items = ["Encountered Promise during synchronous parse. Use .parseAsync() instead."];
-  const obj = callback2($ZodEncodeError);
+  const obj = _getPrototypeOf($ZodEncodeError);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, callback2(self).constructor);
+    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
-  return closure_3(self, constructResult);
+  return _possibleConstructorReturn(self, constructResult);
 }
-$ZodEncodeError = $ZodAsyncError;
 _inherits($ZodAsyncError, _wrapNativeSuper(Error));
-$ZodEncodeError = function $ZodEncodeError(name) {
+export function $ZodEncodeError(name) {
   const self = this;
-  callback(this, $ZodEncodeError);
+  _classCallCheck(this, $ZodEncodeError);
   const items = ["Encountered unidirectional transform during encode: " + name];
-  const obj = callback2($ZodEncodeError);
+  const obj = _getPrototypeOf($ZodEncodeError);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, items, callback2(self).constructor);
+    let constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
   } else {
     constructResult = obj.apply(self, items);
   }
-  const tmp3Result = closure_3(self, constructResult);
+  const tmp3Result = _possibleConstructorReturn(self, constructResult);
   tmp3Result.name = "ZodEncodeError";
   return tmp3Result;
-};
+}
 _inherits($ZodEncodeError, _wrapNativeSuper(Error));
 
 export const $constructor = function $constructor(ZodError, initializer, Parent) {
@@ -67,8 +65,7 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
   function init(_zod) {
     if (!_zod._zod) {
       const _Object = Object;
-      let obj = { value: null, enumerable: false };
-      obj = { def: null, constr: null, traits: null };
+      const obj = { def: null, constr: null, traits: null };
       obj[0] = arg1;
       obj[1] = fn;
       const _Set = Set;
@@ -87,7 +84,6 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
       const keys = Object.keys(prototype);
       for (let num = 0; num < keys.length; num = num + 1) {
         let tmp14 = keys[num];
-        let tmp15 = num;
         if (!(tmp14 in _zod)) {
           let obj3 = prototype[tmp14];
           _zod[tmp14] = obj3.bind(_zod);
@@ -151,11 +147,11 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
   obj = {
     value(_zod) {
       Parent = undefined;
-      if (closure_2 != null) {
-        Parent = tmp.Parent;
+      if (Parent != null) {
+        Parent = Parent.Parent;
       }
       if (Parent) {
-        Parent = _zod instanceof tmp.Parent;
+        Parent = _zod instanceof Parent.Parent;
       }
       let tmp3 = Parent;
       if (!tmp3) {
@@ -188,5 +184,4 @@ export const config = function config(arg0) {
 };
 export const NEVER = Object.freeze({ status: "aborted" });
 export const $brand = Symbol("zod_brand");
-export const $ZodEncodeError = _createClass($ZodEncodeError);
 export const globalConfig = {};

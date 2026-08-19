@@ -2,7 +2,7 @@
 
 // Module 453 (getColorScheme)
 const require = arg1;
-const module = arg2;
+const importDefault = arg2;
 const dependencyMap = arg6;
 arg5.getColorScheme = function getColorScheme() {
   if (null == obj) {

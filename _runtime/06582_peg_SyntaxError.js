@@ -123,7 +123,6 @@ class peg$SyntaxError {
   static buildMessage(arg0, arg1) {
     obj = {
       literal(text) {
-            let str = text.text;
             const str2 = text.text.replace(/\\/g, "\\\\");
             const str3 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
             const str4 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0");
@@ -132,75 +131,73 @@ class peg$SyntaxError {
             const str7 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
             return "\"" + text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x0" + str.toString(16).toUpperCase();
             }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x" + str.toString(16).toUpperCase();
             }) + "\"";
           },
       class(parts) {
             parts = parts.parts;
-            const mapped = parts.map((str) => {
-              if (Array.isArray(str)) {
-                const str18 = str[0];
-                const str20 = str[0].replace(/\\/g, "\\\\");
-                const str22 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str24 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str26 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str28 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str30 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str32 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str35 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+            const mapped = parts.map((item, index) => {
+              if (Array.isArray(item)) {
+                const str20 = item[0].replace(/\\/g, "\\\\");
+                const str22 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+                const str24 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+                const str26 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
+                const str28 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
+                const str30 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
+                const str32 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
+                const str35 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
                 const text = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 })}-`;
-                const str34 = str[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-                const str37 = str[1];
-                const str38 = str[1].replace(/\\/g, "\\\\");
-                const str39 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str40 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str41 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str42 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str43 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str44 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str45 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+                const str34 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+                const str38 = item[1].replace(/\\/g, "\\\\");
+                const str39 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+                const str40 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+                const str41 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
+                const str42 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
+                const str43 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
+                const str44 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
+                const str45 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
                 let text1 = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
-                })}-${str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+                  return "\\x" + str.toString(16).toUpperCase();
+                })}-${item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 })}`;
-                const str46 = str[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+                const str46 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
               } else {
-                const str2 = str.replace(/\\/g, "\\\\");
-                const str4 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
-                const str6 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
-                const str8 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
-                const str10 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
-                const str12 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
-                const str14 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
-                const str16 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
-                text1 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+                const str2 = item.replace(/\\/g, "\\\\");
+                const str4 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]");
+                const str6 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^");
+                const str8 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-");
+                const str10 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0");
+                const str12 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t");
+                const str14 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
+                const str16 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
+                text1 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 });
-                const str17 = str.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
+                const str17 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
               }
               return text1;
@@ -222,8 +219,8 @@ class peg$SyntaxError {
           }
     };
     closure_0 = obj;
-    mapped = global.map(function describeExpectation(arg0) {
-      return obj[arg0.type](arg0);
+    mapped = global.map(function describeExpectation(item, index) {
+      return obj[item.type](item);
     });
     sorted = mapped.sort();
     if (mapped.length > 0) {
@@ -280,12 +277,12 @@ class peg$SyntaxError {
       str16 = str14.replace(/\r/g, "\\r");
       str17 = str16.replace(/[\x00-\x0F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x0" + str.toString(16).toUpperCase();
       });
       str18 = "\"";
       str4 = `${"\"" + str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x" + str.toString(16).toUpperCase();
       })}"`;
     }
     return text + " but " + str4 + " found.";
@@ -306,20 +303,19 @@ obj = {
   SyntaxError: peg$SyntaxError,
   parse: function peg$parse(str) {
     const pegSyntaxError = str;
-    let obj = arg1;
     function peg$parsefunction() {
-      throwTypeErrorResult = throwTypeErrorResult + 1 + 1;
+      diff7 = diff7 + 1 + 1;
       peg$parse_();
-      if (str.substr(throwTypeErrorResult, 7) === c3) {
-        throwTypeErrorResult = throwTypeErrorResult + 7;
+      if (str.substr(closure_50, 7) === c3) {
+        closure_50 = closure_50 + 7;
         let tmp7 = tmp4;
       } else {
         tmp7 = obj;
-        if (0 === throwTypeErrorResult) {
+        if (0 === diff7) {
           tmp7 = tmp5;
-          if (throwTypeErrorResult >= throwTypeErrorResult) {
-            if (tmp9 > throwTypeErrorResult) {
-              throwTypeErrorResult = tmp9;
+          if (closure_50 >= closure_53) {
+            if (tmp9 > closure_53) {
+              closure_53 = tmp9;
               let arr = [];
             }
             arr = arr.push(tmp8);
@@ -329,44 +325,44 @@ obj = {
       }
       const tmp13 = obj;
       if (tmp7 !== obj) {
-        tmp2();
+        peg$parse_();
         const tmp17 = peg$parseNUM();
         if (tmp17 !== tmp13) {
           peg$parsespaceOrComma();
-          let tmp16Result = tmp16();
+          let tmp16Result = peg$parseNUM();
           if (tmp16Result !== tmp13) {
-            tmp18();
-            tmp16Result = tmp16();
+            peg$parsespaceOrComma();
+            tmp16Result = peg$parseNUM();
             if (tmp16Result !== tmp13) {
-              tmp18();
-              const tmp16Result1 = tmp16();
+              peg$parsespaceOrComma();
+              const tmp16Result1 = peg$parseNUM();
               if (tmp16Result1 !== tmp13) {
-                tmp18();
-                const tmp16Result2 = tmp16();
+                peg$parsespaceOrComma();
+                const tmp16Result2 = peg$parseNUM();
                 if (tmp16Result2 !== tmp13) {
-                  tmp18();
-                  const tmp16Result3 = tmp16();
+                  peg$parsespaceOrComma();
+                  const tmp16Result3 = peg$parseNUM();
                   if (tmp16Result3 !== tmp13) {
-                    tmp18();
-                    const tmp16Result4 = tmp16();
+                    peg$parsespaceOrComma();
+                    const tmp16Result4 = peg$parseNUM();
                     if (tmp16Result4 !== tmp13) {
-                      tmp18();
-                      const tmp16Result5 = tmp16();
+                      peg$parsespaceOrComma();
+                      const tmp16Result5 = peg$parseNUM();
                       if (tmp16Result5 !== tmp13) {
-                        tmp18();
-                        const tmp16Result6 = tmp16();
+                        peg$parsespaceOrComma();
+                        const tmp16Result6 = peg$parseNUM();
                         if (tmp16Result6 !== tmp13) {
-                          tmp2();
-                          if (41 === str.charCodeAt(throwTypeErrorResult)) {
+                          peg$parse_();
+                          if (41 === str.charCodeAt(closure_50)) {
                             let tmp38 = c4;
-                            throwTypeErrorResult = throwTypeErrorResult + 1;
+                            closure_50 = closure_50 + 1;
                           } else {
                             tmp38 = tmp13;
-                            if (0 === throwTypeErrorResult) {
+                            if (0 === diff7) {
                               tmp38 = tmp13;
-                              if (throwTypeErrorResult >= throwTypeErrorResult) {
-                                if (tmp40 > throwTypeErrorResult) {
-                                  throwTypeErrorResult = tmp40;
+                              if (closure_50 >= closure_53) {
+                                if (tmp40 > closure_53) {
+                                  closure_53 = tmp40;
                                   arr = [];
                                 }
                                 arr = arr.push(tmp39);
@@ -375,55 +371,67 @@ obj = {
                             }
                           }
                           if (tmp38 !== tmp13) {
-                            tmp2();
+                            peg$parse_();
+                            closure_51 = tmp;
                             if (typeof peg$f1 !== "function") {
-                              throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                              HermesBuiltin.throwTypeError();
                             }
                             obj = { matrix: null };
                             const items = [tmp17, tmp16Result, tmp16Result, tmp16Result1, tmp16Result2, tmp16Result3, tmp16Result4, tmp16Result5, tmp16Result6];
                             obj[0] = items;
                             let tmp14 = obj;
                           } else {
+                            closure_50 = tmp;
                             tmp14 = tmp13;
                           }
                         } else {
+                          closure_50 = tmp;
                           tmp14 = tmp13;
                         }
                       } else {
+                        closure_50 = tmp;
                         tmp14 = tmp13;
                       }
                     } else {
+                      closure_50 = tmp;
                       tmp14 = tmp13;
                     }
                   } else {
+                    closure_50 = tmp;
                     tmp14 = tmp13;
                   }
                 } else {
+                  closure_50 = tmp;
                   tmp14 = tmp13;
                 }
               } else {
+                closure_50 = tmp;
                 tmp14 = tmp13;
               }
             } else {
+              closure_50 = tmp;
               tmp14 = tmp13;
             }
           } else {
+            closure_50 = tmp;
             tmp14 = tmp13;
           }
         } else {
+          closure_50 = tmp;
           tmp14 = tmp13;
         }
       } else {
+        closure_50 = tmp;
         tmp14 = tmp13;
       }
-      const diff = throwTypeErrorResult - 1;
-      throwTypeErrorResult = diff;
+      const diff = diff7 - 1;
+      diff7 = diff;
       let tmp47 = tmp14 === tmp13;
       if (tmp47) {
         if (0 === diff) {
-          if (throwTypeErrorResult >= throwTypeErrorResult) {
-            if (tmp49 > throwTypeErrorResult) {
-              throwTypeErrorResult = tmp49;
+          if (closure_50 >= closure_53) {
+            if (tmp49 > closure_53) {
+              closure_53 = tmp49;
               arr = [];
             }
             arr.push(tmp48);
@@ -431,18 +439,18 @@ obj = {
         }
       }
       if (tmp47) {
-        throwTypeErrorResult = throwTypeErrorResult + 1;
-        tmp2();
-        if (str.substr(throwTypeErrorResult, 10) === c5) {
-          throwTypeErrorResult = throwTypeErrorResult + 10;
+        diff7 = diff7 + 1;
+        peg$parse_();
+        if (str.substr(closure_50, 10) === c5) {
+          closure_50 = closure_50 + 10;
           let tmp58 = tmp56;
         } else {
           tmp58 = tmp13;
-          if (0 === throwTypeErrorResult) {
+          if (0 === diff7) {
             tmp58 = tmp13;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (tmp60 > throwTypeErrorResult) {
-                throwTypeErrorResult = tmp60;
+            if (closure_50 >= closure_53) {
+              if (tmp60 > closure_53) {
+                closure_53 = tmp60;
                 arr = [];
               }
               arr.push(tmp59);
@@ -451,25 +459,25 @@ obj = {
           }
         }
         if (tmp58 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp67 = peg$parseNUM();
           if (tmp67 !== tmp13) {
             peg$parsespaceOrComma();
-            let tmp66Result = tmp66();
+            let tmp66Result = peg$parseNUM();
             if (tmp66Result === tmp13) {
               tmp66Result = null;
             }
-            tmp2();
-            if (41 === str.charCodeAt(throwTypeErrorResult)) {
+            peg$parse_();
+            if (41 === str.charCodeAt(closure_50)) {
               let tmp74 = c4;
-              throwTypeErrorResult = throwTypeErrorResult + 1;
+              closure_50 = closure_50 + 1;
             } else {
               tmp74 = tmp13;
-              if (0 === throwTypeErrorResult) {
+              if (0 === diff7) {
                 tmp74 = tmp13;
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (tmp76 > throwTypeErrorResult) {
-                    throwTypeErrorResult = tmp76;
+                if (closure_50 >= closure_53) {
+                  if (tmp76 > closure_53) {
+                    closure_53 = tmp76;
                     arr = [];
                   }
                   arr.push(tmp75);
@@ -478,10 +486,10 @@ obj = {
               }
             }
             if (tmp74 !== tmp13) {
-              tmp2();
-              throwTypeErrorResult = tmp53;
+              peg$parse_();
+              closure_51 = tmp53;
               if (typeof peg$f2 !== "function") {
-                throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                HermesBuiltin.throwTypeError();
               }
               if (null == tmp66Result) {
                 obj = { translate: null };
@@ -492,20 +500,19 @@ obj = {
                 obj[0] = items1;
               }
             } else {
-              throwTypeErrorResult = tmp53;
+              closure_50 = tmp53;
               let tmp64 = tmp13;
             }
           } else {
-            throwTypeErrorResult = tmp53;
+            closure_50 = tmp53;
             tmp64 = tmp13;
           }
-          tmp66 = peg$parseNUM;
         } else {
-          throwTypeErrorResult = tmp53;
+          closure_50 = tmp53;
           tmp64 = tmp13;
         }
-        const diff1 = throwTypeErrorResult - 1;
-        throwTypeErrorResult = diff1;
+        const diff1 = diff7 - 1;
+        diff7 = diff1;
         tmp47 = tmp86;
         tmp14 = tmp64;
         if (tmp64 === tmp13) {
@@ -514,9 +521,9 @@ obj = {
           if (0 === diff1) {
             tmp47 = tmp86;
             tmp14 = tmp64;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (tmp88 > throwTypeErrorResult) {
-                throwTypeErrorResult = tmp88;
+            if (closure_50 >= closure_53) {
+              if (tmp88 > closure_53) {
+                closure_53 = tmp88;
                 arr = [];
               }
               arr.push(tmp87);
@@ -527,414 +534,413 @@ obj = {
         }
       }
       if (tmp47) {
-        throwTypeErrorResult = throwTypeErrorResult + 1;
-        tmp2();
-        if (str.substr(throwTypeErrorResult, 6) === c6) {
-          throwTypeErrorResult = throwTypeErrorResult + 6;
+        diff7 = diff7 + 1;
+        peg$parse_();
+        if (str.substr(closure_50, 6) === c6) {
+          closure_50 = closure_50 + 6;
           let tmp97 = tmp95;
         } else {
           tmp97 = tmp13;
-          if (0 === throwTypeErrorResult) {
+          if (0 === diff7) {
             tmp97 = tmp13;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (tmp99 > throwTypeErrorResult) {
-                throwTypeErrorResult = tmp99;
+            if (closure_50 >= closure_53) {
+              if (tmp99 > closure_53) {
+                closure_53 = tmp99;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(tmp98);
+              arr.push(tmp98);
               tmp97 = tmp13;
             }
           }
         }
         if (tmp97 !== tmp13) {
-          throwTypeErrorResult = tmp2();
-          throwTypeErrorResult = peg$parseNUM;
-          throwTypeErrorResult = peg$parseNUM();
-          if (throwTypeErrorResult !== tmp13) {
-            throwTypeErrorResult = peg$parsespaceOrComma;
-            throwTypeErrorResult = peg$parsespaceOrComma();
-            throwTypeErrorResult = throwTypeErrorResult();
-            if (throwTypeErrorResult === tmp13) {
-              throwTypeErrorResult = null;
+          peg$parse_();
+          const tmp106 = peg$parseNUM();
+          if (tmp106 !== tmp13) {
+            peg$parsespaceOrComma();
+            let tmp105Result = peg$parseNUM();
+            if (tmp105Result === tmp13) {
+              tmp105Result = null;
             }
-            throwTypeErrorResult = tmp2();
-            if (41 === str.charCodeAt(throwTypeErrorResult)) {
-              throwTypeErrorResult = c4;
-              throwTypeErrorResult = throwTypeErrorResult + 1;
+            peg$parse_();
+            if (41 === str.charCodeAt(closure_50)) {
+              let tmp113 = c4;
+              closure_50 = closure_50 + 1;
             } else {
-              throwTypeErrorResult = tmp13;
-              if (0 === throwTypeErrorResult) {
-                throwTypeErrorResult = tmp13;
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (throwTypeErrorResult > throwTypeErrorResult) {
+              tmp113 = tmp13;
+              if (0 === diff7) {
+                tmp113 = tmp13;
+                if (closure_50 >= closure_53) {
+                  if (tmp115 > closure_53) {
+                    closure_53 = tmp115;
                     arr = [];
                   }
-                  throwTypeErrorResult = arr;
-                  throwTypeErrorResult = arr.push(throwTypeErrorResult);
-                  throwTypeErrorResult = tmp13;
+                  arr.push(tmp114);
+                  tmp113 = tmp13;
                 }
               }
             }
-            if (throwTypeErrorResult !== tmp13) {
-              throwTypeErrorResult = tmp2();
-              throwTypeErrorResult = tmp92;
-              throwTypeErrorResult = peg$f3;
+            if (tmp113 !== tmp13) {
+              peg$parse_();
+              closure_51 = tmp92;
               if (typeof peg$f3 !== "function") {
-                throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                HermesBuiltin.throwTypeError();
               }
-              throwTypeErrorResult = null;
-              if (null == throwTypeErrorResult) {
+              if (null == tmp105Result) {
                 obj1 = { scale: null };
-                obj1[0] = throwTypeErrorResult;
+                obj1[0] = tmp106;
                 let items2 = obj1;
               } else {
                 const obj2 = { scaleX: null };
-                obj2[0] = throwTypeErrorResult;
+                obj2[0] = tmp106;
                 items2 = [obj2, ];
                 const obj3 = { scaleY: null };
-                obj3[0] = throwTypeErrorResult;
+                obj3[0] = tmp105Result;
                 items2[1] = obj3;
               }
-              throwTypeErrorResult = items2;
             } else {
-              throwTypeErrorResult = tmp92;
-              throwTypeErrorResult = tmp13;
+              closure_50 = tmp92;
+              let tmp103 = tmp13;
             }
           } else {
-            throwTypeErrorResult = tmp92;
-            throwTypeErrorResult = tmp13;
+            closure_50 = tmp92;
+            tmp103 = tmp13;
           }
         } else {
-          throwTypeErrorResult = tmp92;
-          throwTypeErrorResult = tmp13;
+          closure_50 = tmp92;
+          tmp103 = tmp13;
         }
-        throwTypeErrorResult = throwTypeErrorResult - 1;
-        throwTypeErrorResult = throwTypeErrorResult === tmp13;
-        tmp47 = throwTypeErrorResult;
-        tmp14 = throwTypeErrorResult;
-        if (throwTypeErrorResult) {
-          tmp47 = throwTypeErrorResult;
-          tmp14 = throwTypeErrorResult;
-          if (0 === throwTypeErrorResult) {
-            tmp47 = throwTypeErrorResult;
-            tmp14 = throwTypeErrorResult;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+        const diff2 = diff7 - 1;
+        diff7 = diff2;
+        tmp47 = tmp125;
+        tmp14 = tmp103;
+        if (tmp103 === tmp13) {
+          tmp47 = tmp125;
+          tmp14 = tmp103;
+          if (0 === diff2) {
+            tmp47 = tmp125;
+            tmp14 = tmp103;
+            if (closure_50 >= closure_53) {
+              if (tmp127 > closure_53) {
+                closure_53 = tmp127;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              tmp47 = throwTypeErrorResult;
-              tmp14 = throwTypeErrorResult;
+              arr.push(tmp126);
+              tmp47 = tmp125;
+              tmp14 = tmp103;
             }
           }
         }
       }
       if (tmp47) {
-        throwTypeErrorResult = throwTypeErrorResult + 1;
-        throwTypeErrorResult = tmp2();
-        if (str.substr(throwTypeErrorResult, 7) === c7) {
-          throwTypeErrorResult = throwTypeErrorResult + 7;
+        diff7 = diff7 + 1;
+        peg$parse_();
+        if (str.substr(closure_50, 7) === c7) {
+          closure_50 = closure_50 + 7;
+          let tmp136 = tmp134;
         } else {
-          throwTypeErrorResult = tmp13;
-          if (0 === throwTypeErrorResult) {
-            throwTypeErrorResult = tmp13;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+          tmp136 = tmp13;
+          if (0 === diff7) {
+            tmp136 = tmp13;
+            if (closure_50 >= closure_53) {
+              if (tmp138 > closure_53) {
+                closure_53 = tmp138;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              throwTypeErrorResult = tmp13;
+              arr.push(tmp137);
+              tmp136 = tmp13;
             }
           }
         }
-        if (throwTypeErrorResult !== tmp13) {
-          throwTypeErrorResult = tmp2();
-          throwTypeErrorResult = peg$parseNUM;
-          throwTypeErrorResult = peg$parseNUM();
-          if (throwTypeErrorResult !== tmp13) {
-            throwTypeErrorResult = throwTypeErrorResult + 1;
-            throwTypeErrorResult = peg$parsespaceOrComma;
-            throwTypeErrorResult = peg$parsespaceOrComma();
-            throwTypeErrorResult = throwTypeErrorResult();
-            if (throwTypeErrorResult !== tmp13) {
-              throwTypeErrorResult = throwTypeErrorResult();
-              throwTypeErrorResult = throwTypeErrorResult();
-              if (throwTypeErrorResult !== tmp13) {
-                throwTypeErrorResult = peg$f5;
+        if (tmp136 !== tmp13) {
+          peg$parse_();
+          const tmp145 = peg$parseNUM();
+          if (tmp145 !== tmp13) {
+            diff7 = diff7 + 1;
+            peg$parsespaceOrComma();
+            let tmp144Result = peg$parseNUM();
+            if (tmp144Result !== tmp13) {
+              peg$parsespaceOrComma();
+              tmp144Result = peg$parseNUM();
+              if (tmp144Result !== tmp13) {
+                closure_51 = tmp147;
                 if (typeof peg$f5 !== "function") {
-                  throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                  HermesBuiltin.throwTypeError();
                 }
-                const items3 = [throwTypeErrorResult, throwTypeErrorResult];
-                throwTypeErrorResult = items3;
+                const items3 = [tmp144Result, tmp144Result];
+                let tmp151 = items3;
               } else {
-                throwTypeErrorResult = tmp13;
+                closure_50 = tmp147;
+                tmp151 = tmp13;
               }
             } else {
-              throwTypeErrorResult = tmp13;
+              closure_50 = tmp147;
+              tmp151 = tmp13;
             }
-            throwTypeErrorResult = throwTypeErrorResult - 1;
-            throwTypeErrorResult = throwTypeErrorResult === tmp13;
-            if (throwTypeErrorResult) {
-              if (0 === throwTypeErrorResult) {
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (throwTypeErrorResult > throwTypeErrorResult) {
+            const diff3 = diff7 - 1;
+            diff7 = diff3;
+            if (tmp151 === tmp13) {
+              if (0 === diff3) {
+                if (closure_50 >= closure_53) {
+                  if (tmp159 > closure_53) {
+                    closure_53 = tmp159;
                     arr = [];
                   }
-                  throwTypeErrorResult = arr;
-                  throwTypeErrorResult = arr.push(throwTypeErrorResult);
+                  arr.push(tmp158);
                 }
               }
             }
-            if (throwTypeErrorResult) {
-              throwTypeErrorResult = null;
+            if (tmp151 === tmp13) {
+              tmp151 = null;
             }
-            throwTypeErrorResult = tmp2();
-            if (41 === str.charCodeAt(throwTypeErrorResult)) {
-              throwTypeErrorResult = c4;
-              throwTypeErrorResult = throwTypeErrorResult + 1;
+            peg$parse_();
+            if (41 === str.charCodeAt(closure_50)) {
+              let tmp165 = c4;
+              closure_50 = closure_50 + 1;
             } else {
-              throwTypeErrorResult = tmp13;
-              if (0 === throwTypeErrorResult) {
-                throwTypeErrorResult = tmp13;
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (throwTypeErrorResult > throwTypeErrorResult) {
+              tmp165 = tmp13;
+              if (0 === diff7) {
+                tmp165 = tmp13;
+                if (closure_50 >= closure_53) {
+                  if (tmp167 > closure_53) {
+                    closure_53 = tmp167;
                     arr = [];
                   }
-                  throwTypeErrorResult = arr;
-                  throwTypeErrorResult = arr.push(throwTypeErrorResult);
-                  throwTypeErrorResult = tmp13;
+                  arr.push(tmp166);
+                  tmp165 = tmp13;
                 }
               }
             }
-            if (throwTypeErrorResult !== tmp13) {
-              throwTypeErrorResult = tmp2();
-              throwTypeErrorResult = peg$f4;
+            if (tmp165 !== tmp13) {
+              peg$parse_();
+              closure_51 = tmp131;
               if (typeof peg$f4 !== "function") {
-                throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                HermesBuiltin.throwTypeError();
               }
-              throwTypeErrorResult = null;
-              if (null !== throwTypeErrorResult) {
+              if (null !== tmp151) {
                 const obj4 = { rotate: null };
-                throwTypeErrorResult = globalThis;
                 const _HermesInternal2 = HermesInternal;
-                obj4[0] = "" + throwTypeErrorResult + "deg";
+                obj4[0] = "" + tmp145 + "deg";
                 let items4 = obj4;
               } else {
                 const obj5 = { rotate: null };
-                throwTypeErrorResult = globalThis;
                 const _HermesInternal = HermesInternal;
-                obj5[0] = "" + throwTypeErrorResult + "deg";
+                obj5[0] = "" + tmp145 + "deg";
                 items4 = [obj5];
               }
-              throwTypeErrorResult = items4;
             } else {
-              throwTypeErrorResult = tmp13;
+              closure_50 = tmp131;
+              let tmp142 = tmp13;
             }
           } else {
-            throwTypeErrorResult = tmp13;
+            closure_50 = tmp131;
+            tmp142 = tmp13;
           }
         } else {
-          throwTypeErrorResult = tmp13;
+          closure_50 = tmp131;
+          tmp142 = tmp13;
         }
-        throwTypeErrorResult = throwTypeErrorResult - 1;
-        throwTypeErrorResult = throwTypeErrorResult === tmp13;
-        tmp47 = throwTypeErrorResult;
-        tmp14 = throwTypeErrorResult;
-        if (throwTypeErrorResult) {
-          tmp47 = throwTypeErrorResult;
-          tmp14 = throwTypeErrorResult;
-          if (0 === throwTypeErrorResult) {
-            tmp47 = throwTypeErrorResult;
-            tmp14 = throwTypeErrorResult;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+        const diff4 = diff7 - 1;
+        diff7 = diff4;
+        tmp47 = tmp179;
+        tmp14 = tmp142;
+        if (tmp142 === tmp13) {
+          tmp47 = tmp179;
+          tmp14 = tmp142;
+          if (0 === diff4) {
+            tmp47 = tmp179;
+            tmp14 = tmp142;
+            if (closure_50 >= closure_53) {
+              if (tmp181 > closure_53) {
+                closure_53 = tmp181;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              tmp47 = throwTypeErrorResult;
-              tmp14 = throwTypeErrorResult;
+              arr.push(tmp180);
+              tmp47 = tmp179;
+              tmp14 = tmp142;
             }
           }
         }
       }
       if (tmp47) {
-        throwTypeErrorResult = throwTypeErrorResult + 1;
-        throwTypeErrorResult = tmp2();
-        if (str.substr(throwTypeErrorResult, 6) === c8) {
-          throwTypeErrorResult = throwTypeErrorResult + 6;
+        diff7 = diff7 + 1;
+        peg$parse_();
+        if (str.substr(closure_50, 6) === c8) {
+          closure_50 = closure_50 + 6;
+          let tmp190 = tmp188;
         } else {
-          throwTypeErrorResult = tmp13;
-          if (0 === throwTypeErrorResult) {
-            throwTypeErrorResult = tmp13;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+          tmp190 = tmp13;
+          if (0 === diff7) {
+            tmp190 = tmp13;
+            if (closure_50 >= closure_53) {
+              if (tmp192 > closure_53) {
+                closure_53 = tmp192;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              throwTypeErrorResult = tmp13;
+              arr.push(tmp191);
+              tmp190 = tmp13;
             }
           }
         }
-        if (throwTypeErrorResult !== tmp13) {
-          throwTypeErrorResult = tmp2();
-          throwTypeErrorResult = peg$parseNUM;
-          throwTypeErrorResult = peg$parseNUM();
-          if (throwTypeErrorResult !== tmp13) {
-            throwTypeErrorResult = tmp2();
-            if (41 === str.charCodeAt(throwTypeErrorResult)) {
-              throwTypeErrorResult = c4;
-              throwTypeErrorResult = throwTypeErrorResult + 1;
+        if (tmp190 !== tmp13) {
+          peg$parse_();
+          const tmp199 = peg$parseNUM();
+          if (tmp199 !== tmp13) {
+            peg$parse_();
+            if (41 === str.charCodeAt(closure_50)) {
+              let tmp203 = c4;
+              closure_50 = closure_50 + 1;
             } else {
-              throwTypeErrorResult = tmp13;
-              if (0 === throwTypeErrorResult) {
-                throwTypeErrorResult = tmp13;
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (throwTypeErrorResult > throwTypeErrorResult) {
+              tmp203 = tmp13;
+              if (0 === diff7) {
+                tmp203 = tmp13;
+                if (closure_50 >= closure_53) {
+                  if (tmp205 > closure_53) {
+                    closure_53 = tmp205;
                     arr = [];
                   }
-                  throwTypeErrorResult = arr;
-                  throwTypeErrorResult = arr.push(throwTypeErrorResult);
-                  throwTypeErrorResult = tmp13;
+                  arr.push(tmp204);
+                  tmp203 = tmp13;
                 }
               }
             }
-            if (throwTypeErrorResult !== tmp13) {
-              throwTypeErrorResult = tmp2();
-              throwTypeErrorResult = peg$f6;
+            if (tmp203 !== tmp13) {
+              peg$parse_();
+              closure_51 = tmp185;
               if (typeof peg$f6 !== "function") {
-                throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                HermesBuiltin.throwTypeError();
               }
               const obj6 = { skewX: null };
-              throwTypeErrorResult = globalThis;
               const _HermesInternal3 = HermesInternal;
-              obj6[0] = "" + throwTypeErrorResult + "deg";
+              obj6[0] = "" + tmp199 + "deg";
               const items5 = [obj6];
-              throwTypeErrorResult = items5;
+              let tmp196 = items5;
             } else {
-              throwTypeErrorResult = tmp13;
+              closure_50 = tmp185;
+              tmp196 = tmp13;
             }
           } else {
-            throwTypeErrorResult = tmp13;
+            closure_50 = tmp185;
+            tmp196 = tmp13;
           }
         } else {
-          throwTypeErrorResult = tmp13;
+          closure_50 = tmp185;
+          tmp196 = tmp13;
         }
-        throwTypeErrorResult = throwTypeErrorResult - 1;
-        throwTypeErrorResult = throwTypeErrorResult === tmp13;
-        tmp47 = throwTypeErrorResult;
-        tmp14 = throwTypeErrorResult;
-        if (throwTypeErrorResult) {
-          tmp47 = throwTypeErrorResult;
-          tmp14 = throwTypeErrorResult;
-          if (0 === throwTypeErrorResult) {
-            tmp47 = throwTypeErrorResult;
-            tmp14 = throwTypeErrorResult;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+        const diff5 = diff7 - 1;
+        diff7 = diff5;
+        tmp47 = tmp214;
+        tmp14 = tmp196;
+        if (tmp196 === tmp13) {
+          tmp47 = tmp214;
+          tmp14 = tmp196;
+          if (0 === diff5) {
+            tmp47 = tmp214;
+            tmp14 = tmp196;
+            if (closure_50 >= closure_53) {
+              if (tmp216 > closure_53) {
+                closure_53 = tmp216;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              tmp47 = throwTypeErrorResult;
-              tmp14 = throwTypeErrorResult;
+              arr.push(tmp215);
+              tmp47 = tmp214;
+              tmp14 = tmp196;
             }
           }
         }
       }
       if (tmp47) {
-        throwTypeErrorResult = throwTypeErrorResult + 1;
-        throwTypeErrorResult = tmp2();
-        if (str.substr(throwTypeErrorResult, 6) === c9) {
-          throwTypeErrorResult = throwTypeErrorResult + 6;
+        diff7 = diff7 + 1;
+        peg$parse_();
+        if (str.substr(closure_50, 6) === c9) {
+          closure_50 = closure_50 + 6;
+          let tmp225 = tmp223;
         } else {
-          throwTypeErrorResult = tmp13;
-          if (0 === throwTypeErrorResult) {
-            throwTypeErrorResult = tmp13;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+          tmp225 = tmp13;
+          if (0 === diff7) {
+            tmp225 = tmp13;
+            if (closure_50 >= closure_53) {
+              if (tmp227 > closure_53) {
+                closure_53 = tmp227;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              throwTypeErrorResult = tmp13;
+              arr.push(tmp226);
+              tmp225 = tmp13;
             }
           }
         }
-        if (throwTypeErrorResult !== tmp13) {
-          throwTypeErrorResult = tmp2();
-          throwTypeErrorResult = peg$parseNUM;
-          throwTypeErrorResult = peg$parseNUM();
-          if (throwTypeErrorResult !== tmp13) {
-            throwTypeErrorResult = tmp2();
-            if (41 === str.charCodeAt(throwTypeErrorResult)) {
-              throwTypeErrorResult = c4;
-              throwTypeErrorResult = throwTypeErrorResult + 1;
+        if (tmp225 !== tmp13) {
+          peg$parse_();
+          const tmp234 = peg$parseNUM();
+          if (tmp234 !== tmp13) {
+            peg$parse_();
+            if (41 === str.charCodeAt(closure_50)) {
+              let tmp238 = c4;
+              closure_50 = closure_50 + 1;
             } else {
-              throwTypeErrorResult = tmp13;
-              if (0 === throwTypeErrorResult) {
-                throwTypeErrorResult = tmp13;
-                if (throwTypeErrorResult >= throwTypeErrorResult) {
-                  if (throwTypeErrorResult > throwTypeErrorResult) {
+              tmp238 = tmp13;
+              if (0 === diff7) {
+                tmp238 = tmp13;
+                if (closure_50 >= closure_53) {
+                  if (tmp240 > closure_53) {
+                    closure_53 = tmp240;
                     arr = [];
                   }
-                  throwTypeErrorResult = arr;
-                  throwTypeErrorResult = arr.push(throwTypeErrorResult);
-                  throwTypeErrorResult = tmp13;
+                  arr.push(tmp239);
+                  tmp238 = tmp13;
                 }
               }
             }
-            if (throwTypeErrorResult !== tmp13) {
-              throwTypeErrorResult = tmp2();
-              throwTypeErrorResult = peg$f7;
+            if (tmp238 !== tmp13) {
+              peg$parse_();
+              closure_51 = tmp220;
               if (typeof peg$f7 !== "function") {
-                throwTypeErrorResult = HermesBuiltin.throwTypeError();
+                HermesBuiltin.throwTypeError();
               }
               const obj7 = { skewY: null };
-              throwTypeErrorResult = globalThis;
               const _HermesInternal4 = HermesInternal;
-              obj7[0] = "" + throwTypeErrorResult + "deg";
+              obj7[0] = "" + tmp234 + "deg";
               const items6 = [obj7];
-              throwTypeErrorResult = items6;
+              let tmp231 = items6;
             } else {
-              throwTypeErrorResult = tmp13;
+              closure_50 = tmp220;
+              tmp231 = tmp13;
             }
           } else {
-            throwTypeErrorResult = tmp13;
+            closure_50 = tmp220;
+            tmp231 = tmp13;
           }
         } else {
-          throwTypeErrorResult = tmp13;
+          closure_50 = tmp220;
+          tmp231 = tmp13;
         }
-        throwTypeErrorResult = throwTypeErrorResult - 1;
-        tmp14 = throwTypeErrorResult;
-        if (throwTypeErrorResult === tmp13) {
-          tmp14 = throwTypeErrorResult;
-          if (0 === throwTypeErrorResult) {
-            tmp14 = throwTypeErrorResult;
-            if (throwTypeErrorResult >= throwTypeErrorResult) {
-              if (throwTypeErrorResult > throwTypeErrorResult) {
+        const diff6 = diff7 - 1;
+        diff7 = diff6;
+        tmp14 = tmp231;
+        if (tmp231 === tmp13) {
+          tmp14 = tmp231;
+          if (0 === diff6) {
+            tmp14 = tmp231;
+            if (closure_50 >= closure_53) {
+              if (tmp250 > closure_53) {
+                closure_53 = tmp250;
                 arr = [];
               }
-              throwTypeErrorResult = arr;
-              throwTypeErrorResult = arr.push(throwTypeErrorResult);
-              tmp14 = throwTypeErrorResult;
+              arr.push(tmp249);
+              tmp14 = tmp231;
             }
           }
         }
       }
-      throwTypeErrorResult = throwTypeErrorResult - 1;
+      diff7 = diff7 - 1;
       if (tmp14 === tmp13) {
-        if (0 === throwTypeErrorResult) {
-          if (throwTypeErrorResult >= throwTypeErrorResult) {
-            if (throwTypeErrorResult > throwTypeErrorResult) {
+        if (0 === diff7) {
+          if (closure_50 >= closure_53) {
+            if (tmp255 > closure_53) {
+              closure_53 = tmp255;
               arr = [];
             }
-            throwTypeErrorResult = arr;
-            throwTypeErrorResult = arr.push(throwTypeErrorResult);
+            arr.push(tmp254);
           }
         }
       }
@@ -950,14 +956,14 @@ obj = {
       } else {
         tmp4 = obj;
         if (0 === diff) {
-          tmp4 = tmp2;
+          tmp4 = obj;
           if (closure_50 >= closure_53) {
             if (tmp6 > closure_53) {
               closure_53 = tmp6;
               let arr = [];
             }
             arr = arr.push(tmp5);
-            tmp4 = tmp2;
+            tmp4 = obj;
           }
         }
       }
@@ -965,33 +971,25 @@ obj = {
       if (tmp4 !== obj) {
         do {
           arr = items.push(tmp4);
-          let tmp11 = str;
-          let tmp12 = closure_50;
           let charAtResult1 = str.charAt(closure_50);
-          let tmp14 = regex;
           if (regex.test(charAtResult1)) {
-            let tmp22 = closure_50;
             closure_50 = closure_50 + 1;
             tmp17 = charAtResult1;
           } else {
-            let tmp15 = obj;
-            let tmp16 = diff;
             tmp17 = obj;
             if (0 === diff) {
               let tmp19 = closure_50;
-              tmp17 = tmp15;
+              tmp17 = obj;
               if (closure_50 >= closure_53) {
                 if (tmp19 > closure_53) {
                   closure_53 = tmp19;
                   arr = [];
                 }
-                let tmp20 = arr;
                 let arr1 = arr.push(tmp18);
-                tmp17 = tmp15;
+                tmp17 = obj;
               }
             }
           }
-          let tmp23 = obj;
           tmp4 = tmp17;
         } while (tmp17 !== obj);
       }
@@ -1017,14 +1015,14 @@ obj = {
       } else {
         tmp4 = obj;
         if (0 === diff) {
-          tmp4 = tmp2;
+          tmp4 = obj;
           if (closure_50 >= closure_53) {
             if (tmp6 > closure_53) {
               closure_53 = tmp6;
               let arr = [];
             }
             arr = arr.push(tmp5);
-            tmp4 = tmp2;
+            tmp4 = obj;
           }
         }
       }
@@ -1032,33 +1030,25 @@ obj = {
       if (tmp4 !== obj) {
         do {
           arr = items.push(tmp4);
-          let tmp11 = str;
-          let tmp12 = closure_50;
           let charAtResult1 = str.charAt(closure_50);
-          let tmp14 = regex2;
           if (regex2.test(charAtResult1)) {
-            let tmp22 = closure_50;
             closure_50 = closure_50 + 1;
             tmp17 = charAtResult1;
           } else {
-            let tmp15 = obj;
-            let tmp16 = diff;
             tmp17 = obj;
             if (0 === diff) {
               let tmp19 = closure_50;
-              tmp17 = tmp15;
+              tmp17 = obj;
               if (closure_50 >= closure_53) {
                 if (tmp19 > closure_53) {
                   closure_53 = tmp19;
                   arr = [];
                 }
-                let tmp20 = arr;
                 let arr1 = arr.push(tmp18);
-                tmp17 = tmp15;
+                tmp17 = obj;
               }
             }
           }
-          let tmp23 = obj;
           tmp4 = tmp17;
         } while (tmp17 !== obj);
       }
@@ -1075,32 +1065,33 @@ obj = {
       return items;
     }
     function peg$parseNUM() {
+      let tmp134;
       let tmp27;
       let tmp65;
       let tmp88;
-      if (regex3.test(str.charAt(charAtResult4))) {
-        charAtResult4 = charAtResult4 + 1;
+      if (regex3.test(str.charAt(closure_50))) {
+        closure_50 = closure_50 + 1;
       } else if (0 === closure_55) {
-        if (charAtResult4 >= charAtResult4) {
-          if (tmp4 > charAtResult4) {
-            charAtResult4 = tmp4;
+        if (closure_50 >= closure_53) {
+          if (tmp4 > closure_53) {
+            closure_53 = tmp4;
             let arr = [];
           }
           arr = arr.push(tmp3);
         }
       }
       let tmp8 = obj;
-      const charAtResult = str.charAt(charAtResult4);
+      const charAtResult = str.charAt(closure_50);
       if (regex4.test(charAtResult)) {
-        charAtResult4 = charAtResult4 + 1;
+        closure_50 = closure_50 + 1;
         let tmp13 = charAtResult;
       } else {
         tmp13 = tmp8;
         if (0 === closure_55) {
           tmp13 = tmp8;
-          if (charAtResult4 >= charAtResult4) {
-            if (tmp15 > charAtResult4) {
-              charAtResult4 = tmp15;
+          if (closure_50 >= closure_53) {
+            if (tmp15 > closure_53) {
+              closure_53 = tmp15;
               arr = [];
             }
             arr = arr.push(tmp14);
@@ -1115,27 +1106,21 @@ obj = {
       if (tmp13 !== tmp8) {
         do {
           let arr1 = items.push(tmp13);
-          let tmp21 = str;
-          let tmp22 = charAtResult4;
-          let charAtResult1 = str.charAt(charAtResult4);
-          let tmp24 = regex4;
+          let charAtResult1 = str.charAt(closure_50);
           if (regex4.test(charAtResult1)) {
-            let tmp32 = charAtResult4;
-            charAtResult4 = charAtResult4 + 1;
+            closure_50 = closure_50 + 1;
             tmp27 = charAtResult1;
           } else {
             let tmp25 = obj;
-            let tmp26 = closure_55;
             tmp27 = obj;
             if (0 === closure_55) {
-              let tmp29 = charAtResult4;
+              let tmp29 = closure_50;
               tmp27 = tmp25;
-              if (charAtResult4 >= charAtResult4) {
-                if (tmp29 > charAtResult4) {
-                  charAtResult4 = tmp29;
+              if (closure_50 >= closure_53) {
+                if (tmp29 > closure_53) {
+                  closure_53 = tmp29;
                   arr = [];
                 }
-                let tmp30 = arr;
                 let arr2 = arr.push(tmp28);
                 tmp27 = tmp25;
               }
@@ -1143,21 +1128,21 @@ obj = {
           }
           tmp8 = obj;
           tmp13 = tmp27;
-          tmp19 = tmp21;
-          obj = tmp24;
-          str2 = tmp21;
+          tmp19 = str;
+          obj = regex4;
+          str2 = str;
         } while (tmp27 !== obj);
       }
-      if (46 === str2.charCodeAt(charAtResult4)) {
+      if (46 === str2.charCodeAt(closure_50)) {
         let tmp34 = c10;
-        charAtResult4 = charAtResult4 + 1;
+        closure_50 = closure_50 + 1;
       } else {
         tmp34 = tmp8;
         if (0 === closure_55) {
           tmp34 = tmp8;
-          if (charAtResult4 >= charAtResult4) {
-            if (tmp36 > charAtResult4) {
-              charAtResult4 = tmp36;
+          if (closure_50 >= closure_53) {
+            if (tmp36 > closure_53) {
+              closure_53 = tmp36;
               arr = [];
             }
             arr.push(tmp35);
@@ -1166,17 +1151,17 @@ obj = {
         }
       }
       if (tmp34 !== tmp8) {
-        const charAtResult2 = str2.charAt(charAtResult4);
+        const charAtResult2 = str2.charAt(closure_50);
         if (obj.test(charAtResult2)) {
-          charAtResult4 = charAtResult4 + 1;
+          closure_50 = closure_50 + 1;
           let tmp46 = charAtResult2;
         } else {
           tmp46 = tmp8;
           if (0 === closure_55) {
             tmp46 = tmp8;
-            if (charAtResult4 >= charAtResult4) {
-              if (tmp48 > charAtResult4) {
-                charAtResult4 = tmp48;
+            if (closure_50 >= closure_53) {
+              if (tmp48 > closure_53) {
+                closure_53 = tmp48;
                 arr = [];
               }
               arr.push(tmp47);
@@ -1199,27 +1184,21 @@ obj = {
           if (tmp52) {
             do {
               let arr5 = items1.push(tmp46);
-              let tmp59 = str;
-              let tmp60 = charAtResult4;
-              let charAtResult3 = str.charAt(charAtResult4);
-              let tmp62 = regex4;
+              let charAtResult3 = str.charAt(closure_50);
               if (regex4.test(charAtResult3)) {
-                let tmp70 = charAtResult4;
-                charAtResult4 = charAtResult4 + 1;
+                closure_50 = closure_50 + 1;
                 tmp65 = charAtResult3;
               } else {
                 let tmp63 = obj;
-                let tmp64 = closure_55;
                 tmp65 = obj;
                 if (0 === closure_55) {
-                  let tmp67 = charAtResult4;
+                  let tmp67 = closure_50;
                   tmp65 = tmp63;
-                  if (charAtResult4 >= charAtResult4) {
-                    if (tmp67 > charAtResult4) {
-                      charAtResult4 = tmp67;
+                  if (closure_50 >= closure_53) {
+                    if (tmp67 > closure_53) {
+                      closure_53 = tmp67;
                       arr = [];
                     }
-                    let tmp68 = arr;
                     let arr6 = arr.push(tmp66);
                     tmp65 = tmp63;
                   }
@@ -1227,10 +1206,10 @@ obj = {
               }
               tmp57 = obj;
               tmp46 = tmp65;
-              tmp53 = tmp59;
+              tmp53 = str;
               tmp54 = items1;
-              tmp55 = tmp62;
-              tmp56 = tmp59;
+              tmp55 = regex4;
+              tmp56 = str;
             } while (tmp65 !== obj);
           }
         }
@@ -1242,7 +1221,7 @@ obj = {
           let str3 = tmp56;
           let tmp42 = tmp57;
         } else {
-          charAtResult4 = tmp9;
+          closure_50 = tmp9;
           tmp40 = tmp53;
           tmp41 = tmp57;
           obj2 = tmp55;
@@ -1250,7 +1229,7 @@ obj = {
           tmp42 = tmp57;
         }
       } else {
-        charAtResult4 = tmp9;
+        closure_50 = tmp9;
         tmp40 = tmp19;
         tmp41 = tmp8;
         obj2 = obj;
@@ -1262,17 +1241,17 @@ obj = {
       let str4 = str3;
       let tmp72 = tmp42;
       if (tmp41 === tmp42) {
-        charAtResult4 = str3.charAt(charAtResult4);
+        const charAtResult4 = str3.charAt(closure_50);
         if (obj2.test(charAtResult4)) {
-          charAtResult4 = charAtResult4 + 1;
+          closure_50 = closure_50 + 1;
           let tmp74 = charAtResult4;
         } else {
           tmp74 = tmp42;
           if (0 === closure_55) {
             tmp74 = tmp42;
-            if (charAtResult4 >= charAtResult4) {
-              if (tmp76 > charAtResult4) {
-                charAtResult4 = tmp76;
+            if (closure_50 >= closure_53) {
+              if (tmp76 > closure_53) {
+                closure_53 = tmp76;
                 arr = [];
               }
               arr.push(tmp75);
@@ -1295,27 +1274,21 @@ obj = {
           if (tmp80) {
             do {
               let arr8 = items3.push(tmp74);
-              let tmp82 = str;
-              let tmp83 = charAtResult4;
-              let charAtResult5 = str.charAt(charAtResult4);
-              let tmp85 = regex4;
+              let charAtResult5 = str.charAt(closure_50);
               if (regex4.test(charAtResult5)) {
-                let tmp93 = charAtResult4;
-                charAtResult4 = charAtResult4 + 1;
+                closure_50 = closure_50 + 1;
                 tmp88 = charAtResult5;
               } else {
                 let tmp86 = obj;
-                let tmp87 = closure_55;
                 tmp88 = obj;
                 if (0 === closure_55) {
-                  let tmp90 = charAtResult4;
+                  let tmp90 = closure_50;
                   tmp88 = tmp86;
-                  if (charAtResult4 >= charAtResult4) {
-                    if (tmp90 > charAtResult4) {
-                      charAtResult4 = tmp90;
+                  if (closure_50 >= closure_53) {
+                    if (tmp90 > closure_53) {
+                      closure_53 = tmp90;
                       arr = [];
                     }
-                    let tmp91 = arr;
                     let arr9 = arr.push(tmp89);
                     tmp88 = tmp86;
                   }
@@ -1323,171 +1296,168 @@ obj = {
               }
               tmp72 = obj;
               tmp74 = tmp88;
-              tmp71 = tmp82;
+              tmp71 = str;
               tmp41 = items3;
-              obj3 = tmp85;
-              str4 = tmp82;
+              obj3 = regex4;
+              str4 = str;
             } while (tmp88 !== obj);
           }
         }
       }
       if (tmp41 !== tmp72) {
-        if (101 === str4.charCodeAt(charAtResult4)) {
+        if (101 === str4.charCodeAt(closure_50)) {
           let tmp98 = e;
-          charAtResult4 = charAtResult4 + 1;
+          closure_50 = closure_50 + 1;
         } else {
           tmp98 = tmp72;
           if (0 === closure_55) {
             tmp98 = tmp72;
-            if (charAtResult4 >= charAtResult4) {
-              if (charAtResult4 > charAtResult4) {
+            if (closure_50 >= closure_53) {
+              if (tmp100 > closure_53) {
+                closure_53 = tmp100;
                 arr = [];
               }
-              charAtResult4 = arr;
-              charAtResult4 = arr.push(tmp99);
+              arr.push(tmp99);
               tmp98 = tmp72;
             }
           }
         }
         if (tmp98 !== tmp72) {
-          charAtResult4 = str4.charAt(charAtResult4);
-          charAtResult4 = regex3;
-          if (regex3.test(charAtResult4)) {
-            charAtResult4 = charAtResult4 + 1;
+          const charAtResult6 = str4.charAt(closure_50);
+          if (regex3.test(charAtResult6)) {
+            closure_50 = closure_50 + 1;
+            let tmp108 = charAtResult6;
           } else {
-            charAtResult4 = closure_55;
-            charAtResult4 = tmp72;
+            tmp108 = tmp72;
             if (0 === closure_55) {
-              charAtResult4 = tmp72;
-              if (charAtResult4 >= charAtResult4) {
-                if (charAtResult4 > charAtResult4) {
+              tmp108 = tmp72;
+              if (closure_50 >= closure_53) {
+                if (tmp110 > closure_53) {
+                  closure_53 = tmp110;
                   arr = [];
                 }
-                charAtResult4 = arr;
-                charAtResult4 = arr.push(charAtResult4);
-                charAtResult4 = tmp72;
+                arr.push(tmp109);
+                tmp108 = tmp72;
               }
             }
           }
-          if (charAtResult4 === tmp72) {
-            charAtResult4 = null;
+          if (tmp108 === tmp72) {
+            tmp108 = null;
           }
-          charAtResult4 = str4.charAt(charAtResult4);
-          if (obj3.test(charAtResult4)) {
-            charAtResult4 = charAtResult4 + 1;
+          const charAtResult7 = str4.charAt(closure_50);
+          if (obj3.test(charAtResult7)) {
+            closure_50 = closure_50 + 1;
+            let tmp117 = charAtResult7;
           } else {
-            charAtResult4 = closure_55;
-            charAtResult4 = tmp72;
+            tmp117 = tmp72;
             if (0 === closure_55) {
-              charAtResult4 = tmp72;
-              if (charAtResult4 >= charAtResult4) {
-                if (charAtResult4 > charAtResult4) {
+              tmp117 = tmp72;
+              if (closure_50 >= closure_53) {
+                if (tmp119 > closure_53) {
+                  closure_53 = tmp119;
                   arr = [];
                 }
-                charAtResult4 = arr;
-                charAtResult4 = arr.push(charAtResult4);
-                charAtResult4 = tmp72;
+                arr.push(tmp118);
+                tmp117 = tmp72;
               }
             }
           }
-          charAtResult4 = charAtResult4 !== tmp72;
-          charAtResult4 = tmp71;
-          charAtResult4 = tmp72;
-          charAtResult4 = tmp72;
-          if (charAtResult4) {
+          let tmp124 = tmp71;
+          let tmp125 = tmp72;
+          let tmp126 = tmp72;
+          if (tmp117 !== tmp72) {
             const items4 = [];
-            charAtResult4 = tmp71;
-            charAtResult4 = items4;
-            charAtResult4 = tmp72;
-            if (charAtResult4) {
+            tmp124 = tmp71;
+            tmp125 = items4;
+            tmp126 = tmp72;
+            if (tmp123) {
               do {
-                charAtResult4 = items4.push(charAtResult4);
-                charAtResult4 = str;
-                charAtResult4 = str.charAt(charAtResult4);
-                charAtResult4 = regex4;
-                if (regex4.test(charAtResult4)) {
-                  charAtResult4 = charAtResult4 + 1;
+                let arr13 = items4.push(tmp117);
+                let charAtResult8 = str.charAt(closure_50);
+                if (regex4.test(charAtResult8)) {
+                  closure_50 = closure_50 + 1;
+                  tmp134 = charAtResult8;
                 } else {
-                  charAtResult4 = obj;
-                  charAtResult4 = closure_55;
-                  charAtResult4 = obj;
+                  let tmp132 = obj;
+                  tmp134 = obj;
                   if (0 === closure_55) {
-                    if (charAtResult4 >= charAtResult4) {
-                      if (charAtResult4 > charAtResult4) {
+                    let tmp136 = closure_50;
+                    tmp134 = tmp132;
+                    if (closure_50 >= closure_53) {
+                      if (tmp136 > closure_53) {
+                        closure_53 = tmp136;
                         arr = [];
                       }
-                      charAtResult4 = arr;
-                      charAtResult4 = arr.push(charAtResult4);
+                      let arr14 = arr.push(tmp135);
+                      tmp134 = tmp132;
                     }
                   }
                 }
-                charAtResult4 = obj;
-                charAtResult4 = items4;
-              } while (charAtResult4 !== obj);
+                tmp126 = obj;
+                tmp117 = tmp134;
+                tmp124 = str;
+                tmp125 = items4;
+              } while (tmp134 !== obj);
             }
           }
-          if (charAtResult4 !== charAtResult4) {
-            const items5 = [tmp98, charAtResult4, charAtResult4];
-            let str5 = charAtResult4;
+          if (tmp125 !== tmp126) {
+            const items5 = [tmp98, tmp108, tmp125];
+            let str5 = tmp124;
           } else {
-            charAtResult4 = tmp95;
-            str5 = charAtResult4;
+            closure_50 = tmp95;
+            str5 = tmp124;
           }
         } else {
-          charAtResult4 = tmp95;
+          closure_50 = tmp95;
           str5 = tmp71;
         }
-        charAtResult4 = peg$f8;
+        closure_51 = tmp;
         if (typeof peg$f8 !== "function") {
-          charAtResult4 = HermesBuiltin.throwTypeError();
+          HermesBuiltin.throwTypeError();
         }
-        charAtResult4 = globalThis;
         const _parseFloat = parseFloat;
-        let parsed = parseFloat(str5.substring(charAtResult4, charAtResult4));
+        let parsed = parseFloat(str5.substring(closure_51, closure_50));
       } else {
+        closure_50 = tmp;
         parsed = tmp72;
       }
       return parsed;
     }
-    obj = {};
+    let obj = {};
     if (undefined === arg1) {
       obj = {};
     }
     function peg$parsestart() {
-      let tmp19;
       let tmp20;
       diff1 = diff1 + 1 + 1;
       const tmp3 = peg$parsefunction();
       if (tmp3 !== obj) {
         const tmp2Result = peg$parsefunction();
-        if (tmp2Result !== tmp4) {
+        if (tmp2Result !== obj) {
           let items = [tmp9, tmp2Result];
           let tmp11 = items;
         } else {
           closure_50 = tmp7;
-          tmp11 = tmp4;
+          tmp11 = obj;
         }
         items1 = [];
-        let tmp12 = tmp4;
-        if (tmp11 !== tmp4) {
+        let tmp12 = obj;
+        if (tmp11 !== obj) {
           do {
             let arr = items1.push(tmp11);
-            let tmp15 = peg$parse_;
             let tmp14 = closure_50;
-            let tmp17 = peg$parsefunction;
             let tmp16 = peg$parse_();
             let tmp18 = peg$parsefunction();
-            tmp19 = obj;
             if (tmp18 !== obj) {
               let items2 = [tmp16, tmp18];
               tmp20 = items2;
             } else {
               closure_50 = tmp14;
-              tmp20 = tmp19;
+              tmp20 = obj;
             }
             tmp11 = tmp20;
-            tmp12 = tmp19;
-          } while (tmp20 !== tmp19);
+            tmp12 = obj;
+          } while (tmp20 !== obj);
         }
         closure_51 = tmp;
         if (typeof peg$f0 !== "function") {
@@ -1500,12 +1470,12 @@ obj = {
           tmp23 = items3;
         }
         items3 = tmp23;
-        const item = items1.forEach((arg0) => {
+        const item = items1.forEach((item, index) => {
           const push = items3.push;
-          if (Array.isArray(arg0[1])) {
+          if (Array.isArray(item[1])) {
             const items = [];
             HermesBuiltin.arraySpread(tmp2, 0);
-            HermesBuiltin.apply(items, tmp);
+            HermesBuiltin.apply(items, items3);
           } else {
             push(tmp2);
           }
@@ -1516,8 +1486,8 @@ obj = {
         tmp9 = peg$parse_();
       } else {
         closure_50 = tmp;
-        tmp5 = tmp4;
-        tmp6 = tmp4;
+        tmp5 = obj;
+        tmp6 = obj;
       }
       const diff = diff1 - 1;
       diff1 = diff;
@@ -1665,15 +1635,15 @@ obj = {
         let tmp = items1[closure_53];
         let arr2 = items1;
         if (!tmp) {
-          if (closure_53 >= arr.length) {
-            let diff = arr.length - 1;
-            let tmp5 = arr;
+          if (closure_53 >= items1.length) {
+            let diff = items1.length - 1;
+            let tmp5 = items1;
           } else {
             const diff1 = closure_53 - 1;
             let tmp3 = diff1;
             diff = diff1;
-            tmp5 = arr;
-            if (!arr[diff1]) {
+            tmp5 = items1;
+            if (!items1[diff1]) {
               const diff2 = tmp3 - 1;
               tmp3 = diff2;
               diff = diff2;
@@ -1684,8 +1654,6 @@ obj = {
           ({ line: obj[0], column: obj[1] } = tmp5[diff]);
           if (diff < closure_53) {
             do {
-              let tmp8 = str;
-              let tmp9 = diff;
               if (10 === str.charCodeAt(diff)) {
                 obj.line = obj.line + 1;
                 obj.column = 1;
@@ -1720,8 +1688,6 @@ obj = {
           ({ line: obj2[0], column: obj2[1] } = tmp15[diff3]);
           if (diff3 < closure_532) {
             do {
-              let tmp18 = str;
-              let tmp19 = diff3;
               if (10 === str.charCodeAt(diff3)) {
                 obj.line = obj.line + 1;
                 obj.column = 1;
@@ -1745,7 +1711,7 @@ obj = {
       }
       const message = pegSyntaxError.buildMessage(tmp14, charAtResult);
       const _Error2 = Error;
-      let tmp26 = typeof call === "unknown" ? _Error2(message) : call(Object.create(pegSyntaxError.prototype), message);
+      const tmp26 = typeof call === "unknown" ? _Error2(message) : call(Object.create(pegSyntaxError.prototype), message);
       const _Object = Object;
       if (Object.setPrototypeOf) {
         const _Object2 = Object;

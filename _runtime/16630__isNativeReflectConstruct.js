@@ -3,9 +3,9 @@
 // Module 16630 (_isNativeReflectConstruct)
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 const TimeoutError = require;
@@ -55,21 +55,21 @@ function pTimeout(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return new Promise((arg0, arg1) => {
+  return new Promise((fn) => {
     const table = arg1;
     if (typeof table === "number") {
       if (tmp >= 0) {
         if (tmp !== Infinity) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
-            if (typeof closure_2 !== "function") {
+            if (typeof callback !== "function") {
               const _Error = Error;
-              if (tmp instanceof Error) {
-                let tmp8 = tmp;
+              if (callback instanceof Error) {
+                let tmp8 = callback;
               } else {
                 tmp8 = closure_2_6;
-                if (typeof tmp === "string") {
-                  let combined = tmp;
+                if (typeof callback === "string") {
+                  let combined = callback;
                 } else {
                   const _HermesInternal = HermesInternal;
                   combined = "Promise timed out after " + callback + " milliseconds";
@@ -77,24 +77,23 @@ function pTimeout(arg0, arg1, arg2) {
                 tmp8 = new tmp8(combined);
               }
               if (typeof lib.cancel === "function") {
-                obj.cancel();
+                lib.cancel();
               }
               callback(tmp8);
-              obj = lib;
             } else {
               try {
-                lib(tmp());
+                lib(callback());
               } catch (tmp4) {
                 callback(tmp4);
               }
             }
           }, tmp);
-          promise(table[6])(promise.then(arg0, arg1), () => {
+          promise(table[6])(promise.then(fn, arg1), () => {
             clearTimeout(closure_2);
           });
           const tmp7 = promise(table[6]);
         } else {
-          arg0(promise);
+          fn(promise);
         }
       }
     }

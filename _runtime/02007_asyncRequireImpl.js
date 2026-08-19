@@ -1,27 +1,27 @@
 // === Module 2007: asyncRequireImpl ===
 
 // Module 2007 (asyncRequireImpl)
-import closure_2 from "asyncGeneratorStep" /* 2008 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 2008 */;
 
-function asyncRequireImpl(closure_0) {
-  const _global = closure_0;
+function asyncRequireImpl(dependencyMap) {
+  const _global = dependencyMap;
   const tmp = _global["" + globalThis.__METRO_GLOBAL_PREFIX__ + "__loadBundleAsync"];
   let tmpResult;
   if (null != tmp) {
     const _String = String;
     if (null != arg1) {
-      const tmp4 = arg1[String(undefined, closure_0)];
+      const tmp4 = arg1[String(undefined, dependencyMap)];
       if (null != tmp4) {
         tmpResult = tmp(tmp4);
       }
     }
   }
   if (null != tmpResult) {
-    let nextPromise = tmpResult.then(function importAll(closure_0) {
-      return closure_1_1.importAll(closure_0);
+    let nextPromise = tmpResult.then(function importAll(dependencyMap) {
+      return require.importAll(closure_0);
     });
   } else {
-    nextPromise = require.importAll(closure_0);
+    nextPromise = require.importAll(dependencyMap);
   }
   return nextPromise;
 }
@@ -37,7 +37,7 @@ function asyncRequire(arg0, arg1, arg2) {
 }
 function _asyncRequire() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c2 = 0;
@@ -88,25 +88,25 @@ function _asyncRequire() {
   }
   return applyArgumentsResult;
 }
-asyncRequire.unstable_importMaybeSync = function unstable_importMaybeSync(closure_0) {
-  const _global = closure_0;
+asyncRequire.unstable_importMaybeSync = function unstable_importMaybeSync(dependencyMap) {
+  const _global = dependencyMap;
   const tmp = _global["" + globalThis.__METRO_GLOBAL_PREFIX__ + "__loadBundleAsync"];
   let tmpResult;
   if (null != tmp) {
     const _String = String;
     if (null != arg1) {
-      const tmp4 = arg1[String(undefined, closure_0)];
+      const tmp4 = arg1[String(undefined, dependencyMap)];
       if (null != tmp4) {
         tmpResult = tmp(tmp4);
       }
     }
   }
   if (null != tmpResult) {
-    let nextPromise = tmpResult.then(function importAll(closure_0) {
-      return closure_1_1.importAll(closure_0);
+    let nextPromise = tmpResult.then(function importAll(dependencyMap) {
+      return require.importAll(closure_0);
     });
   } else {
-    nextPromise = require.importAll(closure_0);
+    nextPromise = require.importAll(dependencyMap);
   }
   return nextPromise;
 };
@@ -123,7 +123,7 @@ asyncRequire.prefetch = (arg0, arg1, arg2) => {
     }
   }
   if (tmpResult != null) {
-    tmpResult.then(() => {
+    tmpResult.then((result) => {
 
     }, () => {
 

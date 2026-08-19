@@ -17,8 +17,6 @@ if (typeof exports === "object") {
         if (month) {
           if (typeof str !== "string") {
             self._monthsNominativeEl[month.month(month)];
-          } else {
-            const obj = /D/;
           }
           self = month.month();
         } else {
@@ -95,7 +93,7 @@ if (typeof exports === "object") {
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function n(defineLocale) {
-      obj = {
+      {
         monthsNominativeEl: "\u0399\u03B1\u03BD\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u039C\u03AC\u03C1\u03C4\u03B9\u03BF\u03C2_\u0391\u03C0\u03C1\u03AF\u03BB\u03B9\u03BF\u03C2_\u039C\u03AC\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BD\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BB\u03B9\u03BF\u03C2_\u0391\u03CD\u03B3\u03BF\u03C5\u03C3\u03C4\u03BF\u03C2_\u03A3\u03B5\u03C0\u03C4\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u039F\u03BA\u03C4\u03CE\u03B2\u03C1\u03B9\u03BF\u03C2_\u039D\u03BF\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u0394\u03B5\u03BA\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2".split("_"),
         monthsGenitiveEl: "\u0399\u03B1\u03BD\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u039C\u03B1\u03C1\u03C4\u03AF\u03BF\u03C5_\u0391\u03C0\u03C1\u03B9\u03BB\u03AF\u03BF\u03C5_\u039C\u03B1\u0390\u03BF\u03C5_\u0399\u03BF\u03C5\u03BD\u03AF\u03BF\u03C5_\u0399\u03BF\u03C5\u03BB\u03AF\u03BF\u03C5_\u0391\u03C5\u03B3\u03BF\u03CD\u03C3\u03C4\u03BF\u03C5_\u03A3\u03B5\u03C0\u03C4\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u039F\u03BA\u03C4\u03C9\u03B2\u03C1\u03AF\u03BF\u03C5_\u039D\u03BF\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u0394\u03B5\u03BA\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5".split("_"),
         months(month, str) {
@@ -103,8 +101,6 @@ if (typeof globalThis.define === "function") {
           if (month) {
             if (typeof str !== "string") {
               self._monthsNominativeEl[month.month(month)];
-            } else {
-              const obj = /D/;
             }
             self = month.month();
           } else {
@@ -191,8 +187,6 @@ obj = {
     if (month) {
       if (typeof str !== "string") {
         self._monthsNominativeEl[month.month(month)];
-      } else {
-        const obj = /D/;
       }
       self = month.month();
     } else {
@@ -253,3 +247,17 @@ obj = {
   week: { dow: 1, doy: 4 }
 };
 moment.defineLocale("el", obj);
+obj1 = {
+  sameDay: "[\u03A3\u03AE\u03BC\u03B5\u03C1\u03B1 {}] LT",
+  nextDay: "[\u0391\u03CD\u03C1\u03B9\u03BF {}] LT",
+  nextWeek: "dddd [{}] LT",
+  lastDay: "[\u03A7\u03B8\u03B5\u03C2 {}] LT",
+  lastWeek() {
+    let str = "[\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7] dddd [{}] LT";
+    if (6 === this.day()) {
+      str = "[\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF] dddd [{}] LT";
+    }
+    return str;
+  },
+  sameElse: "L"
+};

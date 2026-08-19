@@ -4,12 +4,12 @@
 import noopAll from "noop" /* 19 */;
 import useMergeRefsDefault from "useMergeRefs" /* 334 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 421 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["disabled", "ios_backgroundColor", "onChange", "onValueChange", "style", "thumbColor", "trackColor", "value"];
 let closure_4 = ["onTintColor", "tintColor"];
 noopAll;
@@ -25,7 +25,6 @@ export default function Switch(ref) {
   const merged = Object.assign(ref, Object.create(null));
   c0 = undefined;
   importDefault = undefined;
-  dependencyMap = undefined;
   closure_3 = undefined;
   let first;
   let callback;
@@ -88,9 +87,6 @@ export default function Switch(ref) {
   }
   obj[7] = _false;
   obj = {};
-  let tmp2 = callback2;
-  const tmp21 = jsx;
-  const tmp7 = importDefault;
   const tmp9 = useMergeRefsDefault(tmp6, ref.ref);
   const merged2 = Object.assign(tmp2Result);
   const merged3 = Object.assign(obj);
@@ -111,5 +107,5 @@ export default function Switch(ref) {
   obj.onResponderTerminationRequest = returnsFalse;
   obj.onStartShouldSetResponder = returnsTrue;
   obj.ref = tmp9;
-  return tmp21(__INTERNAL_VIEW_CONFIGDefault, obj);
+  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 };

@@ -1,7 +1,7 @@
 // === Module 843: Scope ===
 
 // Module 843 (Scope)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const Scope = require;
@@ -35,7 +35,7 @@ let items = [
     value: function clone() {
       const self = this;
       let obj = Object.create(Scope.prototype);
-      callback(obj, Scope);
+      _classCallCheck(obj, Scope);
       obj._notifyingListeners = false;
       obj._scopeListeners = [];
       obj._eventProcessors = [];
@@ -82,8 +82,8 @@ let items = [
       const merged5 = Object.assign(self._propagationContext);
       obj._propagationContext = {};
       ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-      let tmp3Result = tmp3(844);
-      tmp3Result = tmp3(844);
+      Scope(844);
+      const tmp3Result = Scope(844);
       tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
       return obj;
     }
@@ -532,12 +532,9 @@ let items = [
         const merged = Object.assign(event_id);
         obj.event_id = event_id;
         _client.captureEvent(arg0, obj, self);
-      } else {
-        if (Scope(823).DEBUG_BUILD) {
-          const debug = tmp4(824).debug;
-          debug.warn("No client configured on scope - will not capture event!");
-        }
-        tmp4 = Scope;
+      } else if (Scope(823).DEBUG_BUILD) {
+        const debug = Scope(824).debug;
+        debug.warn("No client configured on scope - will not capture event!");
       }
       return event_id;
     }
@@ -545,13 +542,12 @@ let items = [
   {
     key: "_notifyScopeListeners",
     value: function _notifyScopeListeners() {
-      let self = this;
-      self = this;
+      const self = this;
       if (!this._notifyingListeners) {
         self._notifyingListeners = true;
         const _scopeListeners = self._scopeListeners;
-        const item = _scopeListeners.forEach((arg0) => {
-          arg0(self);
+        const item = _scopeListeners.forEach((item, index) => {
+          item(self);
         });
         self._notifyingListeners = false;
       }

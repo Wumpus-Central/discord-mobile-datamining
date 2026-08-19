@@ -1,14 +1,14 @@
 // === Module 13787: _isNativeReflectConstruct ===
 
 // Module 13787 (_isNativeReflectConstruct)
-import FullScreenOverlay from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "get ActivityIndicator" /* 17 */;
-import closure_5 from "jsxProd" /* 21 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -47,7 +48,6 @@ if (!noop) {
         if (keys !== undefined) {
           value = obj;
           while (keys[tmp] !== undefined) {
-            let tmp21 = tmp12;
             let tmp22 = "default" !== tmp12;
             if (!tmp22) {
               if (!tmp22) {
@@ -118,11 +118,12 @@ class FullScreenOverlay {
     return tmp3Result;
   }
 }
+_classCallCheck = FullScreenOverlay;
 _inherits(FullScreenOverlay, value.Component);
 obj = {
   key: "createContainerStyle",
   value: function createContainerStyle() {
-    const Dimensions = closure_4.Dimensions;
+    const Dimensions = get_ActivityIndicator.Dimensions;
     ({ opacity, justifyContent, alignItems } = this.state);
     const value = Dimensions.get("window");
     const obj = {};
@@ -174,13 +175,12 @@ let items = [
       obj[4] = num4;
       obj[5] = num;
       if (growToWindow) {
-        const Dimensions = closure_4.Dimensions;
+        const Dimensions = get_ActivityIndicator.Dimensions;
         const value = Dimensions.get("window");
         ({ width: obj.width, height: obj.height } = value);
       }
-      const jsx = React.jsx;
+      const jsx = jsxProd.jsx;
       if (uri) {
-        obj = { source: null, style: null, resizeMode: null };
         obj = { uri: null };
         obj[0] = uri;
         obj[0] = obj;
@@ -190,13 +190,13 @@ let items = [
           tmp8 = resizeMode;
         }
         obj[2] = tmp8;
-        let jsxResult = <tmp4.Image uri={null} />;
-        let tmp6 = tmp4;
-        let tmp7 = tmp3;
+        let jsxResult = <get ActivityIndicator.Image uri={null} />;
+        let tmp6 = get_ActivityIndicator;
+        let tmp7 = jsxProd;
       } else {
-        jsxResult = <tmp4.View />;
-        tmp6 = tmp4;
-        tmp7 = tmp3;
+        jsxResult = <get ActivityIndicator.View />;
+        tmp6 = get_ActivityIndicator;
+        tmp7 = jsxProd;
       }
       obj1 = { children: null };
       ({ jsxs, Fragment, jsx: jsx2 } = tmp7);

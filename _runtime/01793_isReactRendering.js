@@ -1,7 +1,7 @@
 // === Module 1793: isReactRendering ===
 
 // Module 1793 (isReactRendering)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { forwardRef } from "noop" /* 19 */;
 import isJest from "isJest" /* 1657 */;
 
@@ -20,7 +20,7 @@ export const isReactRendering = function isReactRendering() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = tmp.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = constants.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -31,7 +31,7 @@ export const isReactRendering = function isReactRendering() {
     owner = current;
   }
   if (!owner) {
-    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = tmp.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = constants.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;
@@ -56,7 +56,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = tmp.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = constants.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -67,7 +67,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     owner = current;
   }
   if (!owner) {
-    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = tmp.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = constants.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;

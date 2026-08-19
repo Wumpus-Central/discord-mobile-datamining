@@ -167,7 +167,6 @@ LocalWeekYearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
   _setPrototypeOf(LocalWeekYearParser, Parser);
 }
-_createSuperInternal = LocalWeekYearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -277,7 +276,6 @@ if (0 < items.length) {
   do {
     let tmp9 = items[num];
     let flag = tmp9.enumerable;
-    let tmp10 = num;
     if (!flag) {
       flag = false;
     }

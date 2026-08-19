@@ -2,7 +2,7 @@
 
 // Module 138 (ReactNativeDocumentElementInstanceHandleImpl)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class ReactNativeDocumentElementInstanceHandleImpl {
   constructor() {
@@ -27,6 +27,6 @@ export const getPublicInstanceFromReactNativeDocumentElementInstanceHandle = fun
 export const setPublicInstanceForReactNativeDocumentElementInstanceHandle = function setPublicInstanceForReactNativeDocumentElementInstanceHandle(reactNativeDocumentElementInstanceHandle, publicInstance) {
   reactNativeDocumentElementInstanceHandle.publicInstance = publicInstance;
 };
-export const isReactNativeDocumentElementInstanceHandle = function isReactNativeDocumentElementInstanceHandle(nativeElementReference3) {
-  return nativeElementReference3 instanceof closure_1;
+export const isReactNativeDocumentElementInstanceHandle = function isReactNativeDocumentElementInstanceHandle(c5) {
+  return c5 instanceof closure_1;
 };

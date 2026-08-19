@@ -1,14 +1,14 @@
 // === Module 1775: _isNativeReflectConstruct ===
 
 // Module 1775 (_isNativeReflectConstruct)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
-let LightSpeedOutLeft = arg1;
+let LightSpeedOutLeft = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -58,10 +58,8 @@ class LightSpeedInRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: null, transform: null };
         let obj2 = delayFunction(first[6]);
-        obj = { duration };
+        const obj = { duration };
         obj[0] = delayFunction(delay, obj2.withTiming(1, obj));
         obj1 = { translateX: null };
         obj2 = {};
@@ -72,10 +70,8 @@ class LightSpeedInRight {
         const obj3 = { skewX: null };
         let obj7 = delayFunction(first[6]);
         let obj8 = delayFunction(first[6]);
-        const obj4 = { duration: 0.7 * duration };
         const withTimingResult = obj8.withTiming("10deg", { duration: 0.7 * duration });
         const obj11 = delayFunction(first[6]);
-        const obj5 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(first[6]).withTiming("-5deg", { duration: 0.15 * duration });
         obj3[0] = delayFunction(delay, obj7.withSequence(withTimingResult, withTimingResult1, delayFunction(first[6]).withTiming("0deg", { duration: 0.15 * duration })));
         items[1] = obj3;
@@ -89,7 +85,7 @@ class LightSpeedInRight {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(closure_1_1[6]).withSequence, initialValues, callback: callbackV };
+      fn.__closure = { delayFunction, delay, withTiming: callback(dependencyMap[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(dependencyMap[6]).withSequence, initialValues, callback: callbackV };
       fn.__workletHash = 14533434616043;
       fn.__initData = closure_1_7;
       return fn;
@@ -138,10 +134,8 @@ class LightSpeedInLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: null, transform: null };
         let obj2 = delayFunction(first[6]);
-        obj = { duration };
+        const obj = { duration };
         obj[0] = delayFunction(delay, obj2.withTiming(1, obj));
         obj1 = { translateX: null };
         obj2 = {};
@@ -152,10 +146,8 @@ class LightSpeedInLeft {
         const obj3 = { skewX: null };
         let obj7 = delayFunction(first[6]);
         let obj8 = delayFunction(first[6]);
-        const obj4 = { duration: 0.7 * duration };
         const withTimingResult = obj8.withTiming("-10deg", { duration: 0.7 * duration });
         const obj11 = delayFunction(first[6]);
-        const obj5 = { duration: 0.15 * duration };
         const withTimingResult1 = delayFunction(first[6]).withTiming("5deg", { duration: 0.15 * duration });
         obj3[0] = delayFunction(delay, obj7.withSequence(withTimingResult, withTimingResult1, delayFunction(first[6]).withTiming("0deg", { duration: 0.15 * duration })));
         items[1] = obj3;
@@ -169,7 +161,7 @@ class LightSpeedInLeft {
         obj[2] = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(closure_1_1[6]).withSequence, initialValues, callback: callbackV };
+      fn.__closure = { delayFunction, delay, withTiming: callback(dependencyMap[6]).withTiming, duration, animation: first, config: tmp2[1], withSequence: callback(dependencyMap[6]).withSequence, initialValues, callback: callbackV };
       fn.__workletHash = 7816705328872;
       fn.__initData = closure_1_8;
       return fn;
@@ -217,9 +209,8 @@ class LightSpeedOutRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
         const items = [obj, { skewX: delayFunction(delay, first("-45deg", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
@@ -277,9 +268,8 @@ class LightSpeedOutLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
         const items = [obj, { skewX: delayFunction(delay, first("45deg", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;

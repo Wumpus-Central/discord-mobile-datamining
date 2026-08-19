@@ -1,7 +1,7 @@
 // === Module 856: SentryNonRecordingSpan ===
 
 // Module 856 (SentryNonRecordingSpan)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const SentryNonRecordingSpan = require;

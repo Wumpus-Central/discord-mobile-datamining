@@ -1,7 +1,7 @@
 // === Module 10323: useLayoutConfig ===
 
 // Module 10323 (useLayoutConfig)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -18,13 +18,13 @@ export const useLayoutConfig = function useLayoutConfig(size) {
     const mode = size.mode;
     if ("parallax" === mode) {
       const Layouts4 = size(size[1]).Layouts;
-      return Layouts4.parallax(obj, tmp.modeConfig);
+      return Layouts4.parallax(obj, size.modeConfig);
     } else if ("horizontal-stack" === mode) {
       const Layouts3 = size(size[1]).Layouts;
-      return Layouts3.horizontalStack(tmp.modeConfig);
+      return Layouts3.horizontalStack(size.modeConfig);
     } else if ("vertical-stack" === mode) {
       const Layouts2 = size(size[1]).Layouts;
-      return Layouts2.verticalStack(tmp.modeConfig);
+      return Layouts2.verticalStack(size.modeConfig);
     } else {
       const Layouts = size(size[1]).Layouts;
       return Layouts.normal(obj);

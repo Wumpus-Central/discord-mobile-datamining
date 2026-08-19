@@ -1,8 +1,11 @@
 // === Module 834: regExp ===
 
 // Module 834 (regExp)
+import consoleSandbox from "consoleSandbox" /* 824 */;
 import generateSpanId from "generateSpanId" /* 829 */;
+import safeDateNow from "safeDateNow" /* 831 */;
 import baggageHeaderToDynamicSamplingContext from "baggageHeaderToDynamicSamplingContext" /* 835 */;
+import parseSampleRate from "parseSampleRate" /* 836 */;
 import dsnFromString from "dsnFromString" /* 837 */;
 
 require = arg1;
@@ -32,12 +35,10 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   let traceId = arg0;
   if (arg0 === undefined) {
     traceId = generateSpanId.generateTraceId();
-    const obj = generateSpanId;
   }
   let spanId = arg1;
   if (arg1 === undefined) {
     spanId = generateSpanId.generateSpanId();
-    const obj2 = generateSpanId;
   }
   let str = "";
   if (undefined !== arg2) {
@@ -52,12 +53,10 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
 arg5.generateTraceparentHeader = function generateTraceparentHeader(traceId, propagationSpanId2, sampled2) {
   if (traceId === undefined) {
     traceId = generateSpanId.generateTraceId();
-    const obj = generateSpanId;
   }
   let spanId = propagationSpanId2;
   if (propagationSpanId2 === undefined) {
     spanId = generateSpanId.generateSpanId();
-    const obj2 = generateSpanId;
   }
   let str = "00";
   if (sampled2) {
@@ -89,7 +88,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
     traceId = tmp.traceId;
   }
   if (traceId) {
-    let tmp4Result = tmp4(836);
+    let tmp4Result = parseSampleRate;
     let sample_rand;
     if (result != null) {
       sample_rand = result.sample_rand;
@@ -108,34 +107,34 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
       obj[4] = str3;
       return obj;
     } else {
-      tmp4Result = tmp4(836);
+      tmp4Result = parseSampleRate;
       let sample_rate;
       if (result != null) {
         sample_rate = result.sample_rate;
       }
       const parseSampleRateResult = tmp4Result.parseSampleRate(sample_rate);
       if (!parseSampleRateResult) {
-        tmp4(831).safeMathRandom();
-        const tmp4Result1 = tmp4(831);
+        safeDateNow.safeMathRandom();
+        const tmp4Result1 = safeDateNow;
       } else {
         let parentSampled;
         if (tmp != null) {
           parentSampled = tmp.parentSampled;
         }
       }
-      const safeMathRandomResult1 = tmp4(831).safeMathRandom();
+      const safeMathRandomResult1 = safeDateNow.safeMathRandom();
       if (tmp.parentSampled) {
         let result1 = safeMathRandomResult1 * parseSampleRateResult;
       } else {
         result1 = parseSampleRateResult + safeMathRandomResult1 * (1 - parseSampleRateResult);
       }
-      const tmp4Result2 = tmp4(831);
+      const tmp4Result2 = safeDateNow;
     }
   } else {
     obj = { traceId: null, sampleRand: null };
-    obj[0] = tmp4(829).generateTraceId();
-    const tmp4Result3 = tmp4(829);
-    obj[1] = tmp4(831).safeMathRandom();
+    obj[0] = generateSpanId.generateTraceId();
+    const tmp4Result3 = generateSpanId;
+    obj[1] = safeDateNow.safeMathRandom();
     return obj;
   }
 };
@@ -144,7 +143,7 @@ arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
   if (org_id) {
     if (result) {
       if (org_id !== result) {
-        const debug2 = tmp(824).debug;
+        const debug2 = consoleSandbox.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.log("Won't continue trace because org IDs don't match (incoming baggage: " + org_id + ", SDK options: " + result + ")");
         let flag = false;
@@ -169,7 +168,7 @@ arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
     flag = !tmp5;
   }
   if (!flag) {
-    const debug = tmp(824).debug;
+    const debug = consoleSandbox.debug;
     const _HermesInternal = HermesInternal;
     debug.log("Starting a new trace because strict trace continuation is enabled but one org ID is missing (incoming baggage: " + org_id + ", Sentry client: " + result + ")");
     flag = false;

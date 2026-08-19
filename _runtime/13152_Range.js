@@ -3,7 +3,7 @@
 // Module 13152 (Range)
 import _createClass from "_createClass" /* 42 */;
 import LRUCache from "LRUCache" /* 13153 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const Range = require;
 const re3 = /\s+/g;
@@ -43,17 +43,17 @@ class Range {
       str3 = self.raw;
       str4 = "||";
       parts = str3.split("||");
-      mapped = parts.map((str) => self.parseRange(str.trim()));
-      self.set = mapped.filter((arg0) => arg0.length);
+      mapped = parts.map((item, index) => self.parseRange(item.trim()));
+      self.set = mapped.filter((item, index) => item.length);
       if (self.set.length) {
         num = 1;
         if (self.set.length > 1) {
           set = self.set;
-          self.set = set.filter((arg0) => {
+          self.set = set.filter((item, index) => {
             if (typeof closure_5 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            return "<0.0.0-0" !== arg0[0].value;
+            return "<0.0.0-0" !== item[0].value;
           });
           num2 = 0;
           if (0 === self.set.length) {
@@ -109,13 +109,11 @@ let items = [
       if (undefined === this.formatted) {
         self.formatted = "";
         for (let num2 = 0; num2 < self.set.length; num2 = num2 + 1) {
-          let tmp = num2;
           if (0 < num2) {
             self.formatted = `${self.formatted}||`;
           }
           let arr = self.set[num2];
           for (let num = 0; num < arr.length; num = num + 1) {
-            let tmp2 = num;
             if (0 < num) {
               self.formatted = `${self.formatted} `;
             }
@@ -143,8 +141,7 @@ let items = [
   {
     key: "parseRange",
     value: function parseRange(str) {
-      let self = this;
-      self = this;
+      const self = this;
       let FLAG_INCLUDE_PRERELEASE = this.options.includePrerelease;
       if (FLAG_INCLUDE_PRERELEASE) {
         FLAG_INCLUDE_PRERELEASE = self(13125).FLAG_INCLUDE_PRERELEASE;
@@ -177,22 +174,22 @@ let items = [
         const str7 = str5.replace(tmp11(13127).safeRe[tmp11(undefined, 13127).t.CARETTRIM], tmp11(13127).caretTrimReplace);
         tmp11(13126)("caret trim", str7);
         let parts = str7.split(" ");
-        let mapped = parts.map((str) => {
+        let mapped = parts.map((item, index) => {
           options = options.options;
-          if (typeof closure_1_8 !== "function") {
+          if (typeof parseComparator !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          self(closure_1_1[6])("comp", str, options);
-          if (typeof closure_1_12 !== "function") {
+          self(dependencyMap[6])("comp", item, options);
+          if (typeof replaceCarets !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const parts = str.trim().split(/\s+/);
-          const mapped = parts.map((str) => {
+          const parts = item.trim().split(/\s+/);
+          const mapped = parts.map((item, index) => {
             if (typeof closure_1_13 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            closure_0 = str;
-            options(closure_1_1[6])("caret", str, closure_0);
+            closure_0 = item;
+            options(closure_1_1[6])("caret", item, closure_0);
             const safeRe = options(closure_1_1[5]).safeRe;
             const t = options(closure_1_1[5]).t;
             if (closure_0.loose) {
@@ -200,17 +197,14 @@ let items = [
             } else {
               tmp3 = safeRe[t.CARET];
             }
-            str = "";
-            if (closure_0.includePrerelease) {
-              str = "-0";
-            }
-            return str.replace(tmp3, (arg0, str, str2, str3) => {
-              str(str[6])("caret", str, arg0, str, str2, str3, arg4);
+            return item.replace(tmp3, (arg0, str, str2, str3) => {
+              item(str[6])("caret", item, arg0, str, str2, str3, arg4);
               if (typeof closure_1_9 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp5 = !str;
               if (str) {
+                str = "x";
                 tmp5 = "x" === str.toLowerCase();
               }
               if (!tmp5) {
@@ -218,7 +212,7 @@ let items = [
               }
               str3 = "";
               if (!tmp5) {
-                if (typeof tmp4 !== "function") {
+                if (typeof closure_1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp6 = !str2;
@@ -232,7 +226,7 @@ let items = [
                   const _HermesInternal9 = HermesInternal;
                   str3 = ">=" + str + ".0.0" + str + " <" + +str + 1 + ".0.0-0";
                 } else {
-                  if (typeof tmp4 !== "function") {
+                  if (typeof closure_1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp7 = !str3;
@@ -252,7 +246,7 @@ let items = [
                     }
                     str3 = combined;
                   } else {
-                    const tmpResult = tmp(tmp2[6]);
+                    const tmpResult = item(tmp2[6]);
                     if (arg4) {
                       tmpResult("replaceCaret pr", arg4);
                       if ("0" === str) {
@@ -285,22 +279,22 @@ let items = [
                   }
                 }
               }
-              str(str[6])("caret return", str3);
+              item(str[6])("caret return", str3);
               return str3;
             });
           });
           const str2 = mapped.join(" ");
-          self(closure_1_1[6])("caret", str2);
-          if (typeof closure_1_10 !== "function") {
+          self(dependencyMap[6])("caret", str2);
+          if (typeof replaceTildes !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          str = str.trim();
+          let str = item.trim();
           const parts1 = str2.trim().split(/\s+/);
-          const mapped1 = parts1.map((str) => {
+          const mapped1 = parts1.map((item, index) => {
             if (typeof closure_1_11 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            closure_0 = str;
+            closure_0 = item;
             const safeRe = options(closure_1_1[5]).safeRe;
             const t = options(closure_1_1[5]).t;
             if (closure_0.loose) {
@@ -308,8 +302,8 @@ let items = [
             } else {
               tmp2 = safeRe[t.TILDE];
             }
-            return str.replace(tmp2, (arg0, str, str2, str3) => {
-              str(closure_1_1[6])("tilde", str, arg0, str, str2, str3, arg4);
+            return item.replace(tmp2, (arg0, str, str2, str3) => {
+              item(closure_1_1[6])("tilde", item, arg0, str, str2, str3, arg4);
               if (typeof closure_1_9 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
@@ -322,7 +316,7 @@ let items = [
               }
               str3 = "";
               if (!tmp5) {
-                if (typeof tmp4 !== "function") {
+                if (typeof closure_1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp6 = !str2;
@@ -336,7 +330,7 @@ let items = [
                   const _HermesInternal4 = HermesInternal;
                   str3 = ">=" + str + ".0.0 <" + +str + 1 + ".0.0-0";
                 } else {
-                  if (typeof tmp4 !== "function") {
+                  if (typeof closure_1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp7 = !str3;
@@ -350,7 +344,7 @@ let items = [
                     const _HermesInternal3 = HermesInternal;
                     str3 = ">=" + str + "." + str2 + ".0 <" + str + "." + +str2 + 1 + ".0-0";
                   } else if (arg4) {
-                    tmp(tmp2[6])("replaceTilde pr", arg4);
+                    item(closure_1_1[6])("replaceTilde pr", arg4);
                     const _HermesInternal2 = HermesInternal;
                     str3 = ">=" + str + "." + str2 + "." + str3 + "-" + arg4 + " <" + str + "." + +str2 + 1 + ".0-0";
                   } else {
@@ -359,23 +353,23 @@ let items = [
                   }
                 }
               }
-              str(closure_1_1[6])("tilde return", str3);
+              item(closure_1_1[6])("tilde return", str3);
               return str3;
             });
           });
           const str4 = mapped1.join(" ");
-          self(closure_1_1[6])("tildes", str4);
-          if (typeof closure_1_14 !== "function") {
+          self(dependencyMap[6])("tildes", str4);
+          if (typeof replaceXRanges !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          self(closure_1_1[6])("replaceXRanges", str4, options);
+          self(dependencyMap[6])("replaceXRanges", str4, options);
           const parts2 = str4.split(/\s+/);
-          const mapped2 = parts2.map((str) => {
+          const mapped2 = parts2.map((item, index) => {
             if (typeof closure_1_15 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             closure_1 = tmp;
-            str = str.trim();
+            let str = item.trim();
             const safeRe = options(closure_1_1[5]).safeRe;
             const t = options(closure_1_1[5]).t;
             if (str.loose) {
@@ -399,7 +393,7 @@ let items = [
               }
               let tmp7 = tmp6;
               if (!tmp6) {
-                if (typeof tmp5 !== "function") {
+                if (typeof closure_1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp8 = !str2;
@@ -413,7 +407,7 @@ let items = [
               }
               let tmp9 = tmp7;
               if (!tmp7) {
-                if (typeof tmp5 !== "function") {
+                if (typeof closure_1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp10 = !str3;
@@ -493,49 +487,44 @@ let items = [
             });
           });
           const str5 = mapped2.join(" ");
-          self(closure_1_1[6])("xrange", str5);
-          if (typeof closure_1_16 !== "function") {
+          self(dependencyMap[6])("xrange", str5);
+          if (typeof replaceStars !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          self(closure_1_1[6])("replaceStars", str5, options);
+          self(dependencyMap[6])("replaceStars", str5, options);
           let str3 = str2.trim();
-          const replaced = str5.trim().replace(tmp(tmp2[5]).safeRe[tmp(undefined, tmp2[5]).t.STAR], "");
-          self(closure_1_1[6])("stars", replaced);
+          const replaced = str5.trim().replace(self(dependencyMap[5]).safeRe[self(undefined, dependencyMap[5]).t.STAR], "");
+          self(dependencyMap[6])("stars", replaced);
           return replaced;
         });
         let parts1 = mapped.join(" ").split(/\s+/);
-        let mapped1 = parts1.map((str) => {
+        let mapped1 = parts1.map((item, index) => {
           const options = self.options;
-          if (typeof closure_1_17 !== "function") {
+          if (typeof replaceGTE0 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          self(closure_1_1[6])("replaceGTE0", str, options);
-          const t = self(closure_1_1[5]).t;
-          return str.trim().replace(self(closure_1_1[5]).safeRe[options.includePrerelease ? t.GTE0PRE : t.GTE0], "");
+          self(dependencyMap[6])("replaceGTE0", item, options);
+          const t = self(dependencyMap[5]).t;
+          return item.trim().replace(self(dependencyMap[5]).safeRe[options.includePrerelease ? t.GTE0PRE : t.GTE0], "");
         });
         let found = mapped1;
         if (loose) {
-          found = mapped1.filter((str) => {
-            self(closure_1_1[6])("loose invalid filter", str, self.options);
-            return str.match(self(closure_1_1[5]).safeRe[self(undefined, closure_1_1[5]).t.COMPARATORLOOSE]);
+          found = mapped1.filter((item, index) => {
+            self(dependencyMap[6])("loose invalid filter", item, self.options);
+            return item.match(self(dependencyMap[5]).safeRe[self(undefined, dependencyMap[5]).t.COMPARATORLOOSE]);
           });
         }
         tmp11(13126)("range list", found);
         const _Map = Map;
         const map = new Map();
-        let mapped2 = found.map((arg0) => new self(closure_1_1[3])(arg0, self.options));
+        let mapped2 = found.map((item, index) => new self(dependencyMap[3])(item, self.options));
         for (const item10132 of mapped2) {
-          let iter = item10132;
-          let tmp25 = isNullSet;
           if (isNullSet(item10132)) {
-            let tmp28 = item10132;
-            let items = [iter];
-            let tmp29 = obj3;
+            let items = [item10132];
             obj3.return();
             return items;
           } else {
-            let tmp26 = item10132;
-            let result = map.set(iter.value, iter);
+            let result = map.set(item10132.value, item10132);
             continue;
           }
         }
@@ -560,17 +549,17 @@ let items = [
       closure_1 = arg1;
       if (arg0 instanceof closure_0) {
         const self = this;
-        return this.set.some((arr) => {
-          let set = arr;
-          if (typeof closure_1_7 !== "function") {
+        return this.set.some((item, index) => {
+          let set = item;
+          if (typeof isSatisfiable !== "function") {
             HermesBuiltin.throwTypeError();
           }
           set = closure_1;
-          let substr = arr.slice();
+          let substr = item.slice();
           closure_1 = substr.pop();
           let flag = true;
           if (substr.length) {
-            let everyResult = substr.every((arg0) => closure_1.intersects(arg0, closure_0));
+            let everyResult = substr.every((item, index) => closure_1.intersects(item, closure_0));
             closure_1 = substr.pop();
             flag = everyResult;
             while (everyResult) {
@@ -582,17 +571,17 @@ let items = [
           }
           if (flag) {
             set = set.set;
-            flag = set.some((arr) => {
-              closure_0 = arr;
-              if (typeof closure_2_7 !== "function") {
+            flag = set.some((item, index) => {
+              closure_0 = item;
+              if (typeof isSatisfiable !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               closure_0 = closure_1;
-              const substr = arr.slice();
+              const substr = item.slice();
               closure_1 = substr.pop();
               let flag = true;
               if (substr.length) {
-                const everyResult = substr.every((arg0) => closure_1.intersects(arg0, closure_0));
+                const everyResult = substr.every((item, index) => closure_1.intersects(item, closure_0));
                 closure_1 = substr.pop();
                 flag = everyResult;
                 while (everyResult) {
@@ -603,9 +592,9 @@ let items = [
                 }
               }
               if (flag) {
-                flag = closure_0.every((arg0) => {
-                  closure_0 = arg0;
-                  return closure_0.every((arg0) => closure_0.intersects(arg0, closure_1_1));
+                flag = closure_0.every((item, index) => {
+                  closure_0 = item;
+                  return closure_0.every((item, index) => item.intersects(item, closure_1_1));
                 });
               }
               return flag;
@@ -690,7 +679,7 @@ function replaceGTE0(arg0, arg1) {
 function hyphenReplace(includePrerelease) {
   closure_0 = includePrerelease;
   return (arg0, arg1, str, str2, str3, arg5, arg6, arg7, arg8, str4, str5) => {
-    if (typeof closure_1_9 !== "function") {
+    if (typeof isX !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp2 = !str;
@@ -701,7 +690,7 @@ function hyphenReplace(includePrerelease) {
       tmp2 = "*" === str;
     }
     if (tmp2) {
-      if (typeof tmp !== "function") {
+      if (typeof isX !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let str17 = arg8;
@@ -716,7 +705,7 @@ function hyphenReplace(includePrerelease) {
         const _HermesInternal10 = HermesInternal;
         return "" + "" + " " + "".trim();
       } else {
-        if (typeof tmp !== "function") {
+        if (typeof isX !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp23 = !str4;
@@ -730,9 +719,8 @@ function hyphenReplace(includePrerelease) {
           const _HermesInternal9 = HermesInternal;
           str17 = "<";
           let combined = "<" + +str17 + 1 + ".0.0-0";
-          const tmp38 = +str17;
         } else {
-          if (typeof tmp !== "function") {
+          if (typeof isX !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp25 = !str5;
@@ -758,7 +746,7 @@ function hyphenReplace(includePrerelease) {
         }
       }
     } else {
-      if (typeof tmp !== "function") {
+      if (typeof isX !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp4 = !str2;
@@ -776,7 +764,7 @@ function hyphenReplace(includePrerelease) {
         const _HermesInternal4 = HermesInternal;
         let combined1 = ">=" + str + ".0.0" + str14;
       } else {
-        if (typeof tmp !== "function") {
+        if (typeof isX !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp6 = !str3;
@@ -821,10 +809,7 @@ function testSet(arg0, prerelease, options) {
       let num2 = 0;
       if (0 < arg0.length) {
         while (true) {
-          let tmp3 = Range;
-          let tmp4 = dependencyMap;
           let tmp5 = Range(13126)(arg0[num2].semver);
-          let tmp6 = num2;
           if (arg0[num2].semver !== Range(13151).ANY) {
             if (arg0[num2].semver.prerelease.length > 0) {
               let semver = arg0[num2].semver;

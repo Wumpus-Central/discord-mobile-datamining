@@ -38,17 +38,17 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
     }
     if (isWorkletFunctionResult) {
-      let obj = tmp3;
+      let obj = memoizedGestureCallbacks;
     } else {
       obj = {};
-      const merged = Object.assign(tmp3);
-      obj.onUpdate = closure_1_6;
+      const merged = Object.assign(memoizedGestureCallbacks);
+      obj.onUpdate = fn;
     }
     return obj;
   }, items);
   const callback3 = tmp;
   fn = function h(handlerTag) {
-    let tmp = closure_1_7.value[handlerTag.handlerTag];
+    let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
       const obj = { lastUpdateEvent: "r" };
       iter.value[handlerTag.handlerTag] = obj;
@@ -65,7 +65,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
   callback(() => {
     closure_5.current = closure_0;
     return () => {
-      const Reanimated = closure_1_0(closure_1_1[1]).Reanimated;
+      const Reanimated = handlerTag(memoizedGestureCallbacks[1]).Reanimated;
       if (Reanimated != null) {
         const runOnUI = Reanimated.runOnUI;
         if (runOnUI != null) {
@@ -86,7 +86,6 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       tmp5 = doDependenciesDiffer;
     }
     event = Reanimated.useEvent(fn, closure_5, tmp5);
-    const tmp6 = closure_5;
   }
   return event;
 };

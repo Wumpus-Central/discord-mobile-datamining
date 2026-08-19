@@ -2,7 +2,7 @@
 
 // Module 12203 (mergeDefs)
 import _createClass from "_createClass" /* 42 */;
-import f53362 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 function mergeDefs(def, arg1) {
   const items = [...arguments];
@@ -65,7 +65,7 @@ if ("captureStackTrace" in Error) {
 
   };
 }
-f53362 = () => {
+_classCallCheck = () => {
   if (typeof navigator !== "undefined") {
     let hasItem;
     if (navigator != null) {
@@ -127,14 +127,14 @@ export function assert(arg0) {
 }
 export const getEnumValues = function getEnumValues(entries) {
   const values = Object.values(entries);
-  closure_0 = values.filter((num) => typeof num === "number");
+  closure_0 = values.filter((item, index) => typeof item === "number");
   entries = Object.entries(entries);
-  const found = entries.filter((arg0) => {
-    [tmp, ] = arg0;
+  const found = entries.filter((item, index) => {
+    [tmp, ] = item;
     return -1 === closure_0.indexOf(+tmp);
   });
-  return found.map((arg0) => {
-    [, tmp] = arg0;
+  return found.map((item, index) => {
+    [, tmp] = item;
     return tmp;
   });
 };
@@ -143,15 +143,15 @@ export const joinValues = function joinValues(keys, arg1) {
   if (arg1 === undefined) {
     str = "|";
   }
-  const mapped = keys.map((str) => {
-    if (typeof str === "bigint") {
-      let text = `${str.toString()}n`;
-    } else if (typeof str === "string") {
+  const mapped = keys.map((item, index) => {
+    if (typeof item === "bigint") {
+      let text = `${item.toString()}n`;
+    } else if (typeof item === "string") {
       const _HermesInternal = HermesInternal;
-      text = "\"" + str + "\"";
+      text = "\"" + item + "\"";
     } else {
       const _HermesInternal2 = HermesInternal;
-      text = "" + str;
+      text = "" + item;
     }
     return text;
   });
@@ -232,7 +232,6 @@ export const defineLazy = function defineLazy(_zod, values, arg2) {
       let tmp = closure_3;
       if (closure_3 !== closure_1) {
         if (undefined === tmp) {
-          closure_3 = tmp2;
           const tmp4 = callback();
           closure_3 = tmp4;
           tmp = tmp4;
@@ -246,9 +245,9 @@ export const defineLazy = function defineLazy(_zod, values, arg2) {
     configurable: true
   });
 };
-export const objectClone = function objectClone(newQuality) {
-  const prototypeOf = Object.getPrototypeOf(newQuality);
-  return Object.create(prototypeOf, Object.getOwnPropertyDescriptors(newQuality));
+export const objectClone = function objectClone(_Object6Result) {
+  const prototypeOf = Object.getPrototypeOf(_Object6Result);
+  return Object.create(prototypeOf, Object.getOwnPropertyDescriptors(_Object6Result));
 };
 export const assignProp = function assignProp(arg0, arg1, value) {
   Object.defineProperty(arg0, arg1, { value, writable: true, enumerable: true, configurable: true });
@@ -260,10 +259,10 @@ export const cloneDef = function cloneDef(_zod) {
 export const getElementAtPath = function getElementAtPath(arg0, arr) {
   let reduced = arg0;
   if (arr) {
-    reduced = arr.reduce((arg0, arg1) => {
+    reduced = arr.reduce((acc, item, index) => {
       let tmp;
-      if (arg0 != null) {
-        tmp = arg0[arg1];
+      if (acc != null) {
+        tmp = acc[item];
       }
       return tmp;
     }, arg0);
@@ -273,14 +272,13 @@ export const getElementAtPath = function getElementAtPath(arg0, arr) {
 export const promiseAllObject = function promiseAllObject(arg0) {
   closure_0 = arg0;
   const keys = Object.keys(arg0);
-  return Promise.all(keys.map((arg0) => table[arg0])).then((arg0) => {
+  return Promise.all(keys.map((item, index) => table[item])).then((result) => {
     let length;
     const obj = {};
     let num = 0;
     if (0 < keys.length) {
       do {
-        let tmp = keys;
-        obj[keys[num]] = arg0[num];
+        obj[keys[num]] = result[num];
         num = num + 1;
         length = keys.length;
       } while (num < length);
@@ -312,9 +310,9 @@ export const esc = function esc(nextResult) {
 };
 export const slugify = function slugify(str) {
   str = str.toLowerCase();
-  const str2 = str.toLowerCase().trim();
-  const str3 = str.toLowerCase().trim().replace(/[^\w\s-]/g, "");
-  return str.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+  const str2 = str.trim();
+  const str3 = str.trim().replace(/[^\w\s-]/g, "");
+  return str.trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
 };
 export const isObject = function isObject(obj) {
   let tmp = typeof obj === "object";
@@ -328,17 +326,17 @@ export const isObject = function isObject(obj) {
   return tmp;
 };
 export { isPlainObject };
-export const shallowClone = function shallowClone(arg0) {
-  if (isPlainObject(arg0)) {
+export const shallowClone = function shallowClone(closure_0) {
+  if (isPlainObject(closure_0)) {
     const obj = {};
-    const merged = Object.assign(arg0);
+    const merged = Object.assign(closure_0);
     let tmp2 = obj;
   } else {
     const _Array = Array;
-    tmp2 = arg0;
-    if (Array.isArray(arg0)) {
+    tmp2 = closure_0;
+    if (Array.isArray(closure_0)) {
       const items = [];
-      HermesBuiltin.arraySpread(arg0, 0);
+      HermesBuiltin.arraySpread(closure_0, 0);
       tmp2 = items;
     }
   }
@@ -351,7 +349,6 @@ export const numKeys = function numKeys(arg0) {
   if (keys !== undefined) {
     num2 = num;
     while (keys[tmp] !== undefined) {
-      let tmp5 = tmp4;
       let _Object = Object;
       let call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(tmp4) : call(arg0, tmp4))) {
@@ -387,40 +384,40 @@ export const clone = function clone(_zod, arg1, parent) {
   }
   return constr;
 };
-export const normalizeParams = function normalizeParams(enc) {
-  closure_0 = enc;
-  if (enc) {
-    if (typeof enc === "string") {
+export const normalizeParams = function normalizeParams(message) {
+  closure_0 = message;
+  if (message) {
+    if (typeof message === "string") {
       let obj = { error: null };
       obj[0] = function error() {
         return closure_0;
       };
       return obj;
     } else {
-      let message;
-      if (enc != null) {
-        message = enc.message;
+      message = undefined;
+      if (message != null) {
+        message = message.message;
       }
       if (undefined !== message) {
         error = undefined;
-        if (enc != null) {
-          error = enc.error;
+        if (message != null) {
+          error = message.error;
         }
         if (undefined !== error) {
           const _Error = Error;
           const error1 = new Error("Cannot specify both `message` and `error` params");
           throw error1;
         } else {
-          enc.error = enc.message;
+          message.error = message.message;
         }
       }
       delete tmp2[tmp];
-      let tmp5 = enc;
-      if (typeof enc.error === "string") {
+      let tmp5 = message;
+      if (typeof message.error === "string") {
         obj = {};
-        const merged = Object.assign(enc);
+        const merged = Object.assign(message);
         obj.error = function error() {
-          return enc.error;
+          return message.error;
         };
         tmp5 = obj;
       }
@@ -451,11 +448,11 @@ export const createTransparentProxy = function createTransparentProxy(arg0) {
       }
       return Reflect.has(closure_1, arg1);
     },
-    deleteProperty(closure_1, first) {
+    deleteProperty(closure_1, arg1) {
       if (closure_1 == null) {
         closure_1 = callback();
       }
-      return Reflect.deleteProperty(closure_1, first);
+      return Reflect.deleteProperty(closure_1, arg1);
     },
     ownKeys(arg0) {
       if (closure_1 == null) {
@@ -478,22 +475,22 @@ export const createTransparentProxy = function createTransparentProxy(arg0) {
   });
   return proxy;
 };
-export const stringifyPrimitive = function stringifyPrimitive(str) {
-  if (typeof str === "bigint") {
-    let text = `${str.toString()}n`;
-  } else if (typeof str === "string") {
+export const stringifyPrimitive = function stringifyPrimitive(item) {
+  if (typeof item === "bigint") {
+    let text = `${item.toString()}n`;
+  } else if (typeof item === "string") {
     const _HermesInternal = HermesInternal;
-    text = "\"" + str + "\"";
+    text = "\"" + item + "\"";
   } else {
     const _HermesInternal2 = HermesInternal;
-    text = "" + str;
+    text = "" + item;
   }
   return text;
 };
 export const optionalKeys = function optionalKeys(arg0) {
   closure_0 = arg0;
   const keys = Object.keys(arg0);
-  return keys.filter((arg0) => "optional" === dependencyMap[arg0]._zod.optin && "optional" === dependencyMap[arg0]._zod.optout);
+  return keys.filter((item, index) => "optional" === dependencyMap[item]._zod.optin && "optional" === dependencyMap[item]._zod.optout);
 };
 export const pick = function pick(_zod) {
   closure_0 = arg1;
@@ -511,9 +508,7 @@ export const pick = function pick(_zod) {
     get: function() {
       const obj = {};
       for (const key10003 in closure_0) {
-        let tmp8 = key10003;
         if (key10003 in def.shape) {
-          let tmp6 = table;
           if (!table[key10003]) {
             continue;
           } else {
@@ -522,15 +517,9 @@ export const pick = function pick(_zod) {
           }
           continue;
         } else {
-          let tmp = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
-          let str = "\"";
-          let str2 = "Unrecognized key: \"";
-          let tmp2 = new.target;
-          let tmp3 = new.target;
           error = new Error("Unrecognized key: \"" + key10003 + "\"");
-          let tmp5 = error;
           throw error;
         }
       }
@@ -572,10 +561,7 @@ export const omit = function omit(importDefaultResult3Result, closure_3, newline
       const obj = {};
       const merged = Object.assign(importDefaultResult3Result._zod.def.shape);
       for (const key10009 in closure_1) {
-        let tmp11 = key10009;
-        let tmp12 = def;
         if (key10009 in def.shape) {
-          let tmp9 = table;
           if (!table[key10009]) {
             continue;
           } else {
@@ -584,15 +570,9 @@ export const omit = function omit(importDefaultResult3Result, closure_3, newline
           }
           continue;
         } else {
-          let tmp4 = globalThis;
           let _Error = Error;
           let _HermesInternal = HermesInternal;
-          let str = "\"";
-          let str2 = "Unrecognized key: \"";
-          let tmp5 = new.target;
-          let tmp6 = new.target;
           error = new Error("Unrecognized key: \"" + key10009 + "\"");
-          let tmp8 = error;
           throw error;
         }
       }
@@ -624,17 +604,12 @@ export const extend = function extend(_zod, obj) {
     if (checks) {
       if (checks.length > 0) {
         for (const key10023 in arg1) {
-          let tmp20 = key10023;
           let _Object = Object;
           if (undefined === Object.getOwnPropertyDescriptor(tmp6, key10023)) {
             continue;
           } else {
             let _Error2 = Error;
-            let tmp9 = new.target;
-            let str2 = "Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.";
-            let tmp10 = new.target;
             error = new Error("Cannot overwrite keys on object schemas containing refinements. Use `.safeExtend()` instead.");
-            let tmp12 = error;
             throw error;
           }
         }
@@ -684,17 +659,17 @@ export const safeExtend = function safeExtend(closure_0, arg1) {
         },
       set: undefined
     });
-    let flag = mergeDefs(closure_0._zod.def, obj);
+    let flag = mergeDefs(_classCallCheck._zod.def, obj);
     let def = flag;
     if (flag == null) {
-      def = closure_0._zod.def;
+      def = _classCallCheck._zod.def;
     }
-    const constr = new closure_0._zod.constr(def);
+    const constr = new _classCallCheck._zod.constr(def);
     if (flag) {
       flag = true;
     }
     if (!flag) {
-      constr._zod.parent = closure_0;
+      constr._zod.parent = _classCallCheck;
     }
     return constr;
   } else {
@@ -753,9 +728,7 @@ export const partial = function partial(arg0, _zod) {
       const merged = Object.assign(shape);
       if (table) {
         for (const key10020 in tmp2) {
-          let tmp25 = key10020;
           if (key10020 in shape) {
-            let tmp14 = table;
             if (!table[key10020]) {
               continue;
             } else {
@@ -763,9 +736,6 @@ export const partial = function partial(arg0, _zod) {
               if (closure_0) {
                 obj = { type: "optional", innerType: null };
                 obj[1] = tmp16;
-                let tmp18 = new.target;
-                let tmp19 = new.target;
-                let tmp20 = obj;
                 let tmp15 = new tmp15(obj);
               } else {
                 tmp15 = tmp16;
@@ -775,28 +745,18 @@ export const partial = function partial(arg0, _zod) {
             }
             continue;
           } else {
-            let tmp9 = globalThis;
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str = "\"";
-            let str2 = "Unrecognized key: \"";
-            let tmp10 = new.target;
-            let tmp11 = new.target;
             error = new Error("Unrecognized key: \"" + key10020 + "\"");
-            let tmp13 = error;
             throw error;
           }
         }
       } else {
         for (const key10011 in shape) {
-          let tmp22 = key10011;
           let tmp24 = shape[key10011];
           if (closure_0) {
             obj = { type: "optional", innerType: null };
             obj[1] = tmp24;
-            let tmp5 = new.target;
-            let tmp6 = new.target;
-            let tmp7 = obj;
             let tmp23 = new tmp23(obj);
           } else {
             tmp23 = tmp24;
@@ -837,48 +797,29 @@ export const required = function required(arg0, _zod) {
       const merged = Object.assign(shape);
       if (table) {
         for (const key10014 in tmp2) {
-          let tmp25 = key10014;
           if (key10014 in obj) {
-            let tmp10 = table;
             if (!table[key10014]) {
               continue;
             } else {
-              let tmp11 = closure_0;
               obj = { type: "nonoptional", innerType: null };
               obj[1] = shape[key10014];
-              let tmp12 = new.target;
-              let tmp13 = new.target;
-              let tmp14 = obj;
               let tmp15 = new closure_0(obj);
-              let tmp16 = tmp15;
               obj[key10014] = tmp15;
               continue;
             }
             continue;
           } else {
-            let tmp5 = globalThis;
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str = "\"";
-            let str2 = "Unrecognized key: \"";
-            let tmp6 = new.target;
-            let tmp7 = new.target;
             error = new Error("Unrecognized key: \"" + key10014 + "\"");
-            let tmp9 = error;
             throw error;
           }
         }
       } else {
         for (const key10011 in shape) {
-          let tmp18 = key10011;
-          let tmp19 = closure_0;
           obj = { type: "nonoptional", innerType: null };
           obj[1] = shape[key10011];
-          let tmp20 = new.target;
-          let tmp21 = new.target;
-          let tmp22 = obj;
           let tmp23 = new closure_0(obj);
-          let tmp24 = tmp23;
           obj[key10011] = tmp23;
           continue;
         }
@@ -907,13 +848,12 @@ export const aborted = function aborted(closure_1_0, closure_0) {
   if (closure_0 === undefined) {
     num = 0;
   }
-  if (true === closure_1_0.aborted) {
+  if (true === _classCallCheck.aborted) {
     return true;
   } else {
-    if (num < closure_1_0.issues.length) {
+    if (num < _classCallCheck.issues.length) {
       while (true) {
-        let tmp2 = closure_1_0.issues[num];
-        let tmp3 = num;
+        let tmp2 = _classCallCheck.issues[num];
         let _continue;
         if (tmp2 != null) {
           _continue = tmp2.continue;
@@ -930,21 +870,21 @@ export const aborted = function aborted(closure_1_0, closure_0) {
   }
 };
 export const prefixIssues = function prefixIssues(closure_0, issues) {
-  return issues.map((path) => {
-    if (path.path == null) {
-      path.path = [];
+  return issues.map((item, index) => {
+    if (item.path == null) {
+      item.path = [];
     }
-    path = path.path;
+    const path = item.path;
     path.unshift(closure_0);
-    return path;
+    return item;
   });
 };
-export const unwrapMessage = function unwrapMessage(str) {
-  let tmp = str;
-  if (typeof str !== "string") {
-    let message;
-    if (str != null) {
-      message = str.message;
+export const unwrapMessage = function unwrapMessage(message) {
+  let tmp = message;
+  if (typeof message !== "string") {
+    message = undefined;
+    if (message != null) {
+      message = message.message;
     }
     tmp = message;
   }
@@ -980,8 +920,8 @@ export const finalizeIssue = function finalizeIssue(path, closure_0, closure_1_8
     }
     if (str == null) {
       let error2Result;
-      if (closure_0 != null) {
-        const error2 = closure_0.error;
+      if (_classCallCheck != null) {
+        const error2 = _classCallCheck.error;
         if (error2 != null) {
           error2Result = error2(path);
         }
@@ -1036,8 +976,8 @@ export const finalizeIssue = function finalizeIssue(path, closure_0, closure_1_8
   delete tmp[tmp2];
   delete tmp[tmp2];
   let reportInput;
-  if (closure_0 != null) {
-    reportInput = closure_0.reportInput;
+  if (_classCallCheck != null) {
+    reportInput = _classCallCheck.reportInput;
   }
   if (!reportInput) {
     delete tmp[tmp2];
@@ -1104,7 +1044,7 @@ export const parsedType = function parsedType(input) {
     return tmp;
   }
 };
-export const issue = function issue(arg0, value, closure_1_1) {
+export const issue = function issue(fatal, value, closure_1_1) {
   const items = [...arguments];
   const first = items[0];
   if (typeof first === "string") {
@@ -1121,15 +1061,15 @@ export const issue = function issue(arg0, value, closure_1_1) {
 };
 export const cleanEnum = function cleanEnum(arg0) {
   const entries = Object.entries(arg0);
-  const found = entries.filter((arg0) => {
-    [tmp, ] = arg0;
+  const found = entries.filter((item, index) => {
+    [tmp, ] = item;
     return Number.isNaN(Number.parseInt(tmp, 10));
   });
-  return found.map((arg0) => arg0[1]);
+  return found.map((item, index) => item[1]);
 };
-export const base64ToUint8Array = function base64ToUint8Array(base64) {
+export const base64ToUint8Array = function base64ToUint8Array(closure_0) {
   let length;
-  const atobResult = atob(base64);
+  const atobResult = atob(closure_0);
   const uint8Array = new Uint8Array(atobResult.length);
   let num = 0;
   if (0 < atobResult.length) {
@@ -1159,7 +1099,8 @@ export const uint8ArrayToBase64 = function uint8ArrayToBase64(arg0) {
 };
 export const base64urlToUint8Array = function base64urlToUint8Array(str) {
   let length;
-  const replaced = str.replace(/-/g, "+").replace(/_/g, "/");
+  str = str.replace(/-/g, "+");
+  const replaced = str.replace(/_/g, "/");
   const atobResult = atob(replaced + "=".repeat((4 - replaced.length % 4) % 4));
   const uint8Array = new Uint8Array(atobResult.length);
   let num = 0;
@@ -1215,7 +1156,7 @@ export const hexToUint8Array = function hexToUint8Array(str) {
   }
 };
 export const uint8ArrayToHex = function uint8ArrayToHex(arg0) {
-  const mapped = Array.from(arg0).map((arg0) => arg0.toString(16).padStart(2, "0"));
+  const mapped = Array.from(arg0).map((item, index) => item.toString(16).padStart(2, "0"));
   return mapped.join("");
 };
 export const captureStackTrace = fn;

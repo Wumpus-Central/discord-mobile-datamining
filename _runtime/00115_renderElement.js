@@ -9,8 +9,7 @@ require = arg1;
 noopAll;
 
 export const renderElement = function renderElement(rootTag) {
-  let obj = ReactFabricDefault;
-  obj = { onCaughtError: getExtendedError.onCaughtError, onUncaughtError: getExtendedError.onUncaughtError, onRecoverableError: getExtendedError.onRecoverableError };
+  const obj = { onCaughtError: getExtendedError.onCaughtError, onUncaughtError: getExtendedError.onUncaughtError, onRecoverableError: getExtendedError.onRecoverableError };
   obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj);
 };
 export const dispatchCommand = ReactFabricDefault.dispatchCommand;

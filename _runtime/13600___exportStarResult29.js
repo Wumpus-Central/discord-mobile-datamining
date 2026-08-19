@@ -1,43 +1,40 @@
 // === Module 13600: __exportStarResult29 ===
 
 // Module 13600 (__exportStarResult29)
-import digitsToString from "digitsToString" /* 13581 */;
+import digitsToString2 from "digitsToString" /* 13581 */;
 import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
 import TEN from "TEN" /* 13584 */;
 import __exportStarResult11 from "__exportStarResult11" /* 13594 */;
 import e from "e" /* 1281 */;
 
-let closure_2 = e.__importDefault(digitsToString);
+const digitsToString = e.__importDefault(digitsToString2);
 
 export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDigits, maximumSignificantDigits, result) {
   let ceilResult1;
   let floorResult;
   let timesResult;
-  let tmp4;
   if (ZERO.isZero()) {
     let repeatResult = getMultiInternalSlots.repeat("0", maximumSignificantDigits);
     let roundedNumber = TEN.ZERO;
     let roundingMagnitude = 0;
     let tmp16 = require;
   } else {
-    const powResult1 = mod.default.pow(10, maximumSignificantDigits - 1);
-    const _default = mod.default;
-    const _default2 = mod.default;
-    const powResult = mod.default.pow(10, maximumSignificantDigits);
+    const powResult1 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
+    const _default = digitsToString.default;
+    const _default2 = digitsToString.default;
+    const powResult = digitsToString.default.pow(10, maximumSignificantDigits);
     const divResult = ZERO.div(powResult1);
     const logResult = ZERO.div(powResult1).log(10);
     const plusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits);
     let ceilResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1).ceil();
     while (true) {
-      tmp4 = mod;
-      let _default3 = mod.default;
+      let _default3 = digitsToString.default;
       let minusResult1 = ceilResult.minus(maximumSignificantDigits);
       let divResult1 = ZERO.div(_default3.pow(10, minusResult1.plus(1)));
       floorResult = divResult1.floor();
-      let tmp5 = ceilResult;
       if (floorResult.lessThan(powResult)) {
         if (floorResult.greaterThanOrEqualTo(powResult1)) {
-          let _default4 = tmp4.default;
+          let _default4 = digitsToString.default;
           let minusResult2 = ceilResult.minus(maximumSignificantDigits);
           timesResult = floorResult.times(_default4.pow(10, minusResult2.plus(1)));
           if (timesResult.lessThanOrEqualTo(ZERO)) {
@@ -48,25 +45,23 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
       ceilResult = ceilResult.minus(1);
       continue;
     }
-    const powResult2 = tmp4.default.pow(10, maximumSignificantDigits);
-    const _default5 = tmp4.default;
-    const _default6 = tmp4.default;
+    const powResult2 = digitsToString.default.pow(10, maximumSignificantDigits);
+    const _default5 = digitsToString.default;
+    const _default6 = digitsToString.default;
     const minusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1);
-    const powResult3 = tmp4.default.pow(10, maximumSignificantDigits - 1);
+    const powResult3 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
     const divResult2 = ZERO.div(powResult2);
     const logResult1 = ZERO.div(powResult2).log(10);
     const plusResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits);
     let floorResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1).floor();
     while (true) {
-      let _default7 = mod.default;
-      let tmp8 = mod;
+      let _default7 = digitsToString.default;
       let minusResult4 = floorResult1.minus(maximumSignificantDigits);
       let divResult3 = ZERO.div(_default7.pow(10, minusResult4.plus(1)));
       ceilResult1 = divResult3.ceil();
-      let tmp9 = floorResult1;
       if (ceilResult1.lessThan(powResult2)) {
         if (ceilResult1.greaterThanOrEqualTo(powResult3)) {
-          let _default8 = tmp8.default;
+          let _default8 = digitsToString.default;
           let minusResult5 = floorResult1.minus(maximumSignificantDigits);
           roundedNumber = ceilResult1.times(_default8.pow(10, minusResult5.plus(1)));
           if (roundedNumber.greaterThanOrEqualTo(ZERO)) {
@@ -89,7 +84,6 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
     repeatResult = str.toString();
     tmp16 = require;
     const minusResult3 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1);
-    const tmp11 = require;
   }
   if (roundingMagnitude >= maximumSignificantDigits - 1) {
     let sum = repeatResult + tmp16(13582).repeat("0", roundingMagnitude - maximumSignificantDigits + 1);

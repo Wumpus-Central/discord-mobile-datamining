@@ -15,6 +15,8 @@ import polyfillObjectProperty2 from "polyfillObjectProperty" /* 234 */;
 import _mod235 from "module_235" /* 235 */;
 import __fetchSegment from "__fetchSegment" /* 241 */;
 import AppRegistry from "AppRegistry" /* 244 */;
+import setUpIntersectionObserver from "setUpIntersectionObserver" /* 262 */;
+import setUpMutationObserver from "setUpMutationObserver" /* 267 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -35,15 +37,14 @@ arg5.default = function setUpDefaltReactNativeEnvironment() {
     _mod235;
     __fetchSegment;
     AppRegistry;
-    const obj = setUpDOM;
     if (obj2.enableIntersectionObserverByDefault()) {
-      let tmpResult = tmp(262);
+      let tmpResult = setUpIntersectionObserver;
       tmpResult.default();
     }
-    tmpResult = tmp(27);
+    tmpResult = javaScriptFlagGetter;
     if (tmpResult.enableMutationObserverByDefault()) {
-      tmp(267).default();
-      const tmpResult1 = tmp(267);
+      setUpMutationObserver.default();
+      const tmpResult1 = setUpMutationObserver;
     }
     obj2 = javaScriptFlagGetter;
   }

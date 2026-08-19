@@ -19,7 +19,6 @@ if (!fn) {
   fn = (obj, arr) => {
     obj = {};
     for (const key10007 in arg0) {
-      let tmp6 = key10007;
       let _Object2 = Object;
       let call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
@@ -128,7 +127,7 @@ const forwardRefResult = forwardRef((overScrollMode) => {
     onShouldStartLoadWithRequestProp: onShouldStartLoadWithRequest,
     onShouldStartLoadWithRequestCallback: onMessage2((arg0, arg1, arg2) => {
       if (arg2) {
-        const RNCWebView = closure_1_9.RNCWebView;
+        const RNCWebView = NativeModules.RNCWebView;
         const result = RNCWebView.onShouldStartLoadWithRequestCallback(arg0, arg2);
       } else if (arg0) {
         const url = closure_1_13.loadUrl(ref.current, arg1);
@@ -235,7 +234,6 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   let tmp38 = typeof onMessage === "function";
   if (typeof onMessage !== "function") {
     tmp38 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
-    const tmp39 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
   }
   obj.messagingEnabled = tmp38;
   obj.messagingModuleName = current;
@@ -270,7 +268,7 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   }
   const merged1 = Object.assign(props);
   obj = { style: items4, children: null };
-  const items5 = [closure_10(component, obj, "webViewKey"), renderLoadingResult];
+  const items5 = [callback(component, obj, "webViewKey"), renderLoadingResult];
   obj[1] = items5;
   return callback4(closure_8, obj);
 });

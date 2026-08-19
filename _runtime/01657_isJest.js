@@ -29,7 +29,6 @@ export const shouldBeUseWeb = function shouldBeUseWeb() {
   let flag = process.env.JEST_WORKER_ID;
   if (!flag) {
     flag = !(global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless);
-    const tmp2 = global.nativeCallSyncHook && !global.__REMOTEDEV__ || global.RN$Bridgeless;
   }
   if (!flag) {
     flag = false;

@@ -1,8 +1,10 @@
 // === Module 7788: applyScopeDataToEvent ===
 
 // Module 7788 (applyScopeDataToEvent)
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 7743 */;
 import addNonEnumerableProperty from "addNonEnumerableProperty" /* 7744 */;
 import merge from "merge" /* 7763 */;
+import getDynamicSamplingContextFromSpan from "getDynamicSamplingContextFromSpan" /* 7774 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -22,7 +24,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     const merged1 = Object.assign(extra.extra);
     extra.extra = obj;
   }
-  let tmp3Result = tmp3(7744);
+  let tmp3Result = addNonEnumerableProperty;
   const dropUndefinedKeysResult1 = tmp3Result.dropUndefinedKeys(tags);
   let length2 = dropUndefinedKeysResult1;
   if (dropUndefinedKeysResult1) {
@@ -35,7 +37,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     const merged3 = Object.assign(extra.tags);
     extra.tags = obj;
   }
-  tmp3Result = tmp3(7744);
+  tmp3Result = addNonEnumerableProperty;
   const dropUndefinedKeysResult2 = tmp3Result.dropUndefinedKeys(user);
   let length3 = dropUndefinedKeysResult2;
   if (dropUndefinedKeysResult2) {
@@ -72,18 +74,18 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
   }
   if (span) {
     const obj3 = { trace: null };
-    obj3[0] = tmp3(7743).spanToTraceContext(span);
+    obj3[0] = spanTimeInputToSeconds.spanToTraceContext(span);
     const merged8 = Object.assign(extra.contexts);
     extra.contexts = obj3;
     const obj4 = { dynamicSamplingContext: null };
-    const tmp3Result2 = tmp3(7743);
-    obj4[0] = tmp3(7774).getDynamicSamplingContextFromSpan(span);
+    const tmp3Result2 = spanTimeInputToSeconds;
+    obj4[0] = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj4;
-    const tmp3Result3 = tmp3(7774);
-    const rootSpan = tmp3(7743).getRootSpan(span);
-    const tmp3Result4 = tmp3(7743);
-    const description = tmp3(7743).spanToJSON(rootSpan).description;
+    const tmp3Result3 = getDynamicSamplingContextFromSpan;
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(span);
+    const tmp3Result4 = spanTimeInputToSeconds;
+    const description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
     let tmp39 = description;
     if (description) {
       tmp39 = !extra.transaction;
@@ -94,7 +96,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     if (tmp39) {
       extra.transaction = description;
     }
-    const tmp3Result5 = tmp3(7743);
+    const tmp3Result5 = spanTimeInputToSeconds;
   }
   if (extra.fingerprint) {
     const _Array = Array;
@@ -125,7 +127,9 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     const merged10 = Object.assign(extra.sdkProcessingMetadata);
     const merged11 = Object.assign(sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj5;
+    tmp42 = extra.fingerprint && !extra.fingerprint.length;
   }
+  const tmp3Result1 = addNonEnumerableProperty;
 };
 arg5.mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
   arg0[arg1] = merge.merge(arg0[arg1], arg2, 1);
@@ -136,11 +140,8 @@ arg5.mergeScopeData = function mergeScopeData(extra) {
   let obj = merge;
   extra.extra = obj.merge(extra.extra, extra, 1);
   extra.tags = merge.merge(extra.tags, tags, 1);
-  const obj2 = merge;
   extra.user = merge.merge(extra.user, user, 1);
-  const obj3 = merge;
   extra.contexts = merge.merge(extra.contexts, contexts, 1);
-  const obj4 = merge;
   extra.sdkProcessingMetadata = merge.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;

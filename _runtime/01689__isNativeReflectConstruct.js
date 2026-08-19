@@ -3,23 +3,25 @@
 // Module 1689 (_isNativeReflectConstruct)
 import _modDef38 from "module_38" /* 38 */;
 import isJest2 from "isJest" /* 1657 */;
+import isWorkletFunction from "isWorkletFunction" /* 1679 */;
 import JSPropsUpdaterPaperDefault from "JSPropsUpdaterPaper" /* 1749 */;
 import isInlineStyleTransform from "isInlineStyleTransform" /* 1750 */;
 import dummyListener from "dummyListener" /* 1758 */;
 import setAndForwardRefDefault from "setAndForwardRef" /* 1760 */;
 import updateLayoutAnimations from "updateLayoutAnimations" /* 1768 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_createClass" /* 42 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_inherits" /* 98 */;
+import maybeBuild from "maybeBuild" /* 1769 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 import startObservingProgress from "startObservingProgress" /* 1690 */;
-import closure_8 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import isJest from "isJest" /* 1657 */;
 
-require = arg1;
+require = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -40,7 +42,7 @@ function _isNativeReflectConstruct() {
   }
 }
 ({ Platform, processColor: c9, StyleSheet: c10 } = get_ActivityIndicator);
-isJest = isJest.isWeb();
+isJest.isWeb();
 let closure_14 = isJest.isJest();
 let closure_15 = isJest.isReact19();
 let closure_16 = isJest.shouldBeUseWeb();
@@ -50,21 +52,20 @@ if (isJest) {
 }
 let closure_17 = 0;
 
-export const createAnimatedComponent = function createAnimatedComponent(fn) {
-  const AnimatedComponent = fn;
+export const createAnimatedComponent = function createAnimatedComponent(name) {
+  const AnimatedComponent = name;
   importDefault = arg1;
   if (!closure_15) {
-    let tmp4 = typeof fn !== "function";
-    if (typeof fn === "function") {
-      tmp4 = fn.prototype && fn.prototype.isReactComponent;
-      let tmp5 = fn.prototype && fn.prototype.isReactComponent;
+    let tmp4 = typeof name !== "function";
+    if (typeof name === "function") {
+      tmp4 = name.prototype && name.prototype.isReactComponent;
     }
     class AnimatedComponent {
       constructor(arg0) {
         self = this;
         tmp = closure_3(this, closure_0);
         items = [];
-        items[0] = fn;
+        items[0] = name;
         tmp2 = closure_6;
         obj = closure_6(closure_0);
         tmp3 = closure_5;
@@ -122,19 +123,19 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           setLocalRef(arg0) {
                   if (arg0) {
                     if (arg0 !== lib._componentRef) {
-                      obj._componentRef = obj._resolveComponentRef(arg0);
-                      obj._viewInfo = undefined;
+                      lib._componentRef = lib._resolveComponentRef(arg0);
+                      lib._viewInfo = undefined;
                     }
-                    const props = obj.props;
+                    const props = lib.props;
                     ({ entering, sharedTransitionTag } = props);
                     if (!closure_1_16) {
                       const result = lib(closure_1_2[16]).enableLayoutAnimations(true, false);
                       const obj2 = lib(closure_1_2[16]);
                     }
                     if (sharedTransitionTag) {
-                      const result1 = obj._configureSharedTransition();
+                      const result1 = lib._configureSharedTransition();
                     }
-                    const context = obj.context;
+                    const context = lib.context;
                     if (context != null) {
                       const current = context.current;
                     }
@@ -150,7 +151,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                       isFabricResult = closure_1_13;
                     }
                     if (!isFabricResult) {
-                      const result2 = obj._configureLayoutAnimation(lib(closure_1_2[17]).LayoutAnimationType.ENTERING, obj.props.entering);
+                      const result2 = lib._configureLayoutAnimation(lib(closure_1_2[17]).LayoutAnimationType.ENTERING, lib.props.entering);
                     }
                   }
                 }
@@ -178,15 +179,14 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         return tmp3Result;
       }
     }
-    _modDef38(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
-    let tmp3 = _modDef38;
+    _modDef38(tmp4, "Looks like you're passing a function component `" + name.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
   }
   class AnimatedComponent {
     constructor(arg0) {
       self = this;
       tmp = closure_3(this, closure_0);
       items = [];
-      items[0] = fn;
+      items[0] = name;
       tmp2 = closure_6;
       obj = closure_6(closure_0);
       tmp3 = closure_5;
@@ -244,19 +244,19 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         setLocalRef(arg0) {
               if (arg0) {
                 if (arg0 !== lib._componentRef) {
-                  obj._componentRef = obj._resolveComponentRef(arg0);
-                  obj._viewInfo = undefined;
+                  lib._componentRef = lib._resolveComponentRef(arg0);
+                  lib._viewInfo = undefined;
                 }
-                const props = obj.props;
+                const props = lib.props;
                 ({ entering, sharedTransitionTag } = props);
                 if (!closure_1_16) {
                   const result = lib(closure_1_2[16]).enableLayoutAnimations(true, false);
                   const obj2 = lib(closure_1_2[16]);
                 }
                 if (sharedTransitionTag) {
-                  const result1 = obj._configureSharedTransition();
+                  const result1 = lib._configureSharedTransition();
                 }
-                const context = obj.context;
+                const context = lib.context;
                 if (context != null) {
                   const current = context.current;
                 }
@@ -272,7 +272,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                   isFabricResult = closure_1_13;
                 }
                 if (!isFabricResult) {
-                  const result2 = obj._configureLayoutAnimation(lib(closure_1_2[17]).LayoutAnimationType.ENTERING, obj.props.entering);
+                  const result2 = lib._configureLayoutAnimation(lib(closure_1_2[17]).LayoutAnimationType.ENTERING, lib.props.entering);
                 }
               }
             }
@@ -307,7 +307,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       value: function componentDidMount() {
         let firstChild1;
         const self = this;
-        if (!closure_1_13) {
+        if (!isJest) {
           const nativeEventsManager = new AnimatedComponent(1761).NativeEventsManager(self, closure_1);
           self._NativeEventsManager = nativeEventsManager;
         }
@@ -326,18 +326,18 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           isFabricResult = -1 !== componentViewTag;
         }
         if (isFabricResult) {
-          const PropsRegistryGarbageCollector = tmp17(1763).PropsRegistryGarbageCollector;
+          const PropsRegistryGarbageCollector = AnimatedComponent(1763).PropsRegistryGarbageCollector;
           PropsRegistryGarbageCollector.registerView(componentViewTag, self);
         }
         if (-1 !== componentViewTag) {
-          const ComponentRegistry = tmp17(1757).ComponentRegistry;
+          const ComponentRegistry = AnimatedComponent(1757).ComponentRegistry;
           ComponentRegistry.register(componentViewTag, self);
         }
-        const result2 = self._configureLayoutAnimation(tmp17(1679).LayoutAnimationType.LAYOUT, self.props.layout);
-        const result3 = self._configureLayoutAnimation(tmp17(1679).LayoutAnimationType.EXITING, self.props.exiting);
-        let tmp25 = tmp17;
-        if (closure_1_13) {
-          tmp25 = tmp17;
+        const result2 = self._configureLayoutAnimation(AnimatedComponent(1679).LayoutAnimationType.LAYOUT, self.props.layout);
+        const result3 = self._configureLayoutAnimation(AnimatedComponent(1679).LayoutAnimationType.EXITING, self.props.exiting);
+        let tmp25 = AnimatedComponent;
+        if (isJest) {
+          tmp25 = AnimatedComponent;
           if (self._componentDOMRef) {
             const _componentDOMRef = self._componentDOMRef;
             const dummyClone = _componentDOMRef.dummyClone;
@@ -374,15 +374,15 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                   current = context.current;
                 }
                 if (current) {
-                  tmp25 = tmp32;
+                  tmp25 = AnimatedComponent;
                   if (_componentDOMRef.style) {
                     _componentDOMRef.style.visibility = "initial";
-                    tmp25 = tmp32;
+                    tmp25 = AnimatedComponent;
                   }
                 } else {
-                  const result4 = tmp32(1708).startWebLayoutAnimation(self.props, _componentDOMRef, tmp32(1679).LayoutAnimationType.ENTERING);
-                  tmp25 = tmp32;
-                  const tmp32Result = tmp32(1708);
+                  const result4 = AnimatedComponent(1708).startWebLayoutAnimation(self.props, _componentDOMRef, AnimatedComponent(1679).LayoutAnimationType.ENTERING);
+                  tmp25 = AnimatedComponent;
+                  const tmp32Result = AnimatedComponent(1708);
                 }
               }
               obj3 = AnimatedComponent(1708);
@@ -407,6 +407,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           const result5 = tmp25Result.unmarkNodeAsRemovable(componentViewTag);
         }
         self._isFirstRender = false;
+        const obj = AnimatedComponent(1657);
       }
     },
     {
@@ -425,7 +426,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           isFabricResult = -1 !== componentViewTag;
         }
         if (isFabricResult) {
-          const PropsRegistryGarbageCollector = tmp4(1763).PropsRegistryGarbageCollector;
+          const PropsRegistryGarbageCollector = AnimatedComponent(1763).PropsRegistryGarbageCollector;
           PropsRegistryGarbageCollector.unregisterView(componentViewTag);
         }
         self._detachStyles();
@@ -440,38 +441,38 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         }
         const exiting = self.props.exiting;
         if (-1 !== componentViewTag) {
-          const ComponentRegistry = tmp4(1757).ComponentRegistry;
+          const ComponentRegistry = AnimatedComponent(1757).ComponentRegistry;
           ComponentRegistry.unregister(componentViewTag);
         }
         if (closure_13) {
           if (self._componentDOMRef) {
             if (exiting) {
-              let tmp4Result = tmp4(1708);
+              let tmp4Result = AnimatedComponent(1708);
               if (tmp4Result.getReducedMotionFromConfig(exiting)) {
                 const callbackV = exiting.callbackV;
                 if (callbackV != null) {
                   callbackV(true);
                 }
               } else {
-                tmp4Result = tmp4(1741);
+                tmp4Result = AnimatedComponent(1741);
                 const result2 = tmp4Result.addHTMLMutationObserver();
                 ({ props, _componentDOMRef } = self);
-                const result3 = tmp4(1708).startWebLayoutAnimation(props, _componentDOMRef, tmp4(1679).LayoutAnimationType.EXITING);
-                const tmp4Result1 = tmp4(1708);
+                const result3 = AnimatedComponent(1708).startWebLayoutAnimation(props, _componentDOMRef, AnimatedComponent(1679).LayoutAnimationType.EXITING);
+                const tmp4Result1 = AnimatedComponent(1708);
               }
             }
             const _viewInfo = self._viewInfo;
             let isFabricResult1 = !closure_16;
             if (!closure_16) {
-              isFabricResult1 = tmp4(1657).isFabric();
-              const tmp4Result2 = tmp4(1657);
+              isFabricResult1 = AnimatedComponent(1657).isFabric();
+              const tmp4Result2 = AnimatedComponent(1657);
             }
             if (isFabricResult1) {
               isFabricResult1 = shadowNodeWrapper;
             }
             if (isFabricResult1) {
-              tmp4(1698).markNodeAsRemovable(shadowNodeWrapper);
-              const tmp4Result3 = tmp4(1698);
+              AnimatedComponent(1698).markNodeAsRemovable(shadowNodeWrapper);
+              const tmp4Result3 = AnimatedComponent(1698);
             }
             self._willUnmount = true;
           }
@@ -481,19 +482,20 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             if (!tmp4Result4.isFabric()) {
               if ("getReduceMotion" in exiting) {
                 if (typeof exiting.getReduceMotion === "function") {
-                  let reduceMotionFromConfig = tmp4(1694).getReduceMotionFromConfig(exiting.getReduceMotion());
-                  const tmp4Result5 = tmp4(1694);
+                  let reduceMotionFromConfig = AnimatedComponent(1694).getReduceMotionFromConfig(exiting.getReduceMotion());
+                  const tmp4Result5 = AnimatedComponent(1694);
                 }
                 if (!reduceMotionFromConfig) {
-                  const result4 = self._configureLayoutAnimation(tmp4(1679).LayoutAnimationType.EXITING, exiting);
+                  const result4 = self._configureLayoutAnimation(AnimatedComponent(1679).LayoutAnimationType.EXITING, exiting);
                 }
               }
-              reduceMotionFromConfig = tmp4(1694).getReduceMotionFromConfig();
-              const tmp4Result6 = tmp4(1694);
+              reduceMotionFromConfig = AnimatedComponent(1694).getReduceMotionFromConfig();
+              const tmp4Result6 = AnimatedComponent(1694);
             }
-            tmp4Result4 = tmp4(1657);
+            tmp4Result4 = AnimatedComponent(1657);
           }
         }
+        const obj = AnimatedComponent(1657);
       }
     },
     {
@@ -501,8 +503,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       value: function _syncStylePropsBackToReact(arg0) {
         closure_0 = arg0;
         this.setState((settledProps) => {
-          let obj = { settledProps: null };
-          obj = {};
+          const obj = {};
           const merged = Object.assign(settledProps.settledProps);
           const merged1 = Object.assign(closure_0);
           obj[0] = obj;
@@ -546,12 +547,12 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       key: "_updateFromNative",
       value: function _updateFromNative(props) {
         let setNativeProps;
-        if (closure_1 != null) {
-          setNativeProps = obj.setNativeProps;
+        if (nativeProps != null) {
+          setNativeProps = nativeProps.setNativeProps;
         }
         const self = this;
         if (setNativeProps) {
-          obj.setNativeProps(self._componentRef, props);
+          nativeProps.setNativeProps(self._componentRef, props);
         } else {
           const _componentRef = self._componentRef;
           if (_componentRef != null) {
@@ -573,12 +574,10 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         if (!disableReactSync) {
           obj = {};
           for (const key10015 in arg0) {
-            let tmp7 = key10015;
             let tmp8 = arg0[key10015];
             if ("color" === key10015) {
               if (tmp8) {
                 if (typeof tmp8 === "string") {
-                  let tmp5 = closure_1_9;
                   let tmp4 = closure_1_9(tmp8);
                   obj[key10015] = tmp4;
                   continue;
@@ -595,7 +594,6 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           }
           const self = this;
           this.setState((reanimatedProps) => {
-            obj = { reanimatedProps: null };
             obj = {};
             const merged = Object.assign(reanimatedProps.reanimatedProps);
             const merged1 = Object.assign(obj);
@@ -621,18 +619,18 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             let obj = AnimatedComponent(1683);
             const findHostInstanceResult = obj.findHostInstance(self);
             if (findHostInstanceResult) {
-              let tmpResult = tmp(1767);
+              let tmpResult = AnimatedComponent(1767);
               const viewInfo = tmpResult.getViewInfo(findHostInstanceResult);
               ({ viewTag, viewName, viewConfig } = viewInfo);
-              tmpResult = tmp(1657);
+              tmpResult = AnimatedComponent(1657);
               shadowNodeWrapperFromRef = null;
               if (tmpResult.isFabric()) {
-                shadowNodeWrapperFromRef = tmp(1682).getShadowNodeWrapperFromRef(self, findHostInstanceResult);
-                const tmpResult1 = tmp(1682);
+                shadowNodeWrapperFromRef = AnimatedComponent(1682).getShadowNodeWrapperFromRef(self, findHostInstanceResult);
+                const tmpResult1 = AnimatedComponent(1682);
               }
               _componentDOMRef = null;
             } else {
-              const reanimatedError = new tmp(1665).ReanimatedError("Cannot find host instance for this component. Maybe it renders nothing?");
+              const reanimatedError = new AnimatedComponent(1665).ReanimatedError("Cannot find host instance for this component. Maybe it renders nothing?");
               throw reanimatedError;
             }
           }
@@ -652,15 +650,14 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
     {
       key: "_attachAnimatedStyles",
       value: function _attachAnimatedStyles() {
-        let self = this;
-        self = this;
+        const self = this;
         if (this.props.style) {
           let obj = isStyleAttached(_styles[27]);
           let items = (function onlyAnimatedStyles(arr) {
-            return arr.filter((viewDescriptors) => {
-              viewDescriptors = undefined;
-              if (viewDescriptors != null) {
-                viewDescriptors = viewDescriptors.viewDescriptors;
+            return arr.filter((item, index) => {
+              let viewDescriptors;
+              if (item != null) {
+                viewDescriptors = item.viewDescriptors;
               }
               return viewDescriptors;
             });
@@ -694,16 +691,16 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           const obj2 = isStyleAttached(_styles[28]);
         }
         const set = new Set(items);
-        isStyleAttached = function isStyleAttached(arg0) {
+        isStyleAttached = function isStyleAttached(_styles) {
 
         };
-        const tmp8 = null != _styles && items.length === _styles.length && items.every((viewDescriptors) => {
-          let hasItem = viewDescriptors === _styles[arg1];
+        const tmp8 = null != _styles && items.length === _styles.length && items.every((item, index) => {
+          let hasItem = item === _styles[index];
           if (hasItem) {
             if (typeof isStyleAttached !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            viewDescriptors = viewDescriptors.viewDescriptors;
+            const viewDescriptors = item.viewDescriptors;
             hasItem = viewDescriptors.has(viewTag);
           }
           return hasItem;
@@ -726,14 +723,14 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           if (_styles) {
             function _loop(iter) {
               closure_0 = iter;
-              if (!items.some((viewDescriptors) => {
-                let tmp = viewDescriptors !== closure_0;
+              if (!items.some((item, index) => {
+                let tmp = item !== closure_0;
                 if (!tmp) {
                   if (typeof closure_0 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  viewDescriptors = viewDescriptors.viewDescriptors;
-                  tmp = !viewDescriptors.has(closure_1_3);
+                  const viewDescriptors = item.viewDescriptors;
+                  tmp = !viewDescriptors.has(viewTag);
                 }
                 return !tmp;
               })) {
@@ -771,16 +768,16 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             }
           }
           if (!tmp8) {
-            const item = set.forEach((viewDescriptors) => {
-              viewDescriptors = viewDescriptors.viewDescriptors;
+            const item = set.forEach((item, index) => {
+              const viewDescriptors = item.viewDescriptors;
               let obj = { tag: viewTag, name: viewName, shadowNodeWrapper };
-              viewDescriptors.add(obj, viewDescriptors.styleUpdaterContainer);
+              viewDescriptors.add(obj, item.styleUpdaterContainer);
               if (closure_1_14) {
                 obj = {};
                 const merged = Object.assign(self.jestAnimatedStyle.value);
-                const merged1 = Object.assign(viewDescriptors.initial.value);
+                const merged1 = Object.assign(item.initial.value);
                 self.jestAnimatedStyle.value = obj;
-                viewDescriptors.jestAnimatedValues.current = self.jestAnimatedStyle;
+                item.jestAnimatedValues.current = self.jestAnimatedStyle;
               }
             });
           }
@@ -836,13 +833,13 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           _componentDOMRef = self._componentDOMRef;
         }
         if (_componentDOMRef) {
-          let tmpResult = tmp(1708);
+          let tmpResult = AnimatedComponent(1708);
           tmpResult.saveSnapshot(self._componentDOMRef);
         }
         if (closure_13) {
           if (arg2) {
             if (self.props.layout) {
-              tmpResult = tmp(1708);
+              tmpResult = AnimatedComponent(1708);
               if (tmpResult.getReducedMotionFromConfig(self.props.layout)) {
                 layout = self.props.layout;
                 const callbackV = layout.callbackV;
@@ -850,12 +847,13 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                   callbackV(true);
                 }
               } else {
-                const result4 = tmp(1708).tryActivateLayoutTransition(self.props, self._componentDOMRef, arg2);
-                const tmpResult1 = tmp(1708);
+                const result4 = AnimatedComponent(1708).tryActivateLayoutTransition(self.props, self._componentDOMRef, arg2);
+                const tmpResult1 = AnimatedComponent(1708);
               }
             }
           }
         }
+        tmp5 = undefined === this.props.sharedTransitionTag && undefined === layout.sharedTransitionTag;
       }
     },
     {
@@ -866,13 +864,13 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             const self = this;
             const obj = updateLayoutAnimations;
             if (obj2.isFabric()) {
-              if (EXITING === tmp5(1679).LayoutAnimationType.ENTERING) {
+              if (EXITING === isWorkletFunction.LayoutAnimationType.ENTERING) {
                 let reanimatedID = self.reanimatedID;
               }
               let maybeBuildResult = tmp3;
               if (tmp3) {
                 let tmp8;
-                if (EXITING !== tmp5(1679).LayoutAnimationType.LAYOUT) {
+                if (EXITING !== isWorkletFunction.LayoutAnimationType.LAYOUT) {
                   const props = self.props;
                   let style;
                   if (props != null) {
@@ -880,8 +878,8 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                   }
                   tmp8 = style;
                 }
-                maybeBuildResult = tmp5(1769).maybeBuild(tmp3, tmp8, AnimatedComponent.displayName);
-                const tmp5Result = tmp5(1769);
+                maybeBuildResult = maybeBuild.maybeBuild(tmp3, tmp8, AnimatedComponent.displayName);
+                const tmp5Result = maybeBuild;
               }
               const result = obj.updateLayoutAnimations(reanimatedID, EXITING, maybeBuildResult);
             }
@@ -933,6 +931,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           }
         }
         reduceMotionFromConfig = AnimatedComponent(1694).getReduceMotionFromConfig();
+        const obj = AnimatedComponent(1694);
       }
     },
     {
@@ -967,7 +966,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         if (closure_1_14) {
           ({ jestAnimatedStyle: tmp.jestAnimatedStyle, jestAnimatedProps: tmp.jestAnimatedProps } = self);
         }
-        let tmp3 = self._isFirstRender && closure_1_13 && result.entering;
+        let tmp3 = self._isFirstRender && isJest && result.entering;
         if (tmp3) {
           let obj = AnimatedComponent(1708);
           tmp3 = !obj.getReducedMotionFromConfig(result.entering);
@@ -994,59 +993,59 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
               } else {
                 const _Array2 = Array;
                 if (Array.isArray(style)) {
-                  style = style.filter((arg0) => {
-                    let tmp = arg0;
-                    if (arg0) {
-                      tmp = "viewDescriptors" in arg0;
+                  style = style.filter((item, index) => {
+                    let tmp = item;
+                    if (item) {
+                      tmp = "viewDescriptors" in item;
                     }
                     return !tmp;
                   });
-                  let mapped = style.map((arr) => {
-                    let tmp = arr;
-                    if (Array.isArray(arr)) {
-                      if (!arr) {
-                        tmp = arr;
+                  let mapped = style.map((item, index) => {
+                    let tmp = item;
+                    if (Array.isArray(item)) {
+                      if (!item) {
+                        tmp = item;
                       } else {
                         const _Array = Array;
-                        if (Array.isArray(arr)) {
-                          const found = arr.filter((arg0) => {
-                            let tmp = arg0;
-                            if (arg0) {
-                              tmp = "viewDescriptors" in arg0;
+                        if (Array.isArray(item)) {
+                          const found = item.filter((item, index) => {
+                            let tmp = item;
+                            if (item) {
+                              tmp = "viewDescriptors" in item;
                             }
                             return !tmp;
                           });
-                          let mapped = found.map((arr) => {
-                            let tmp = arr;
-                            if (Array.isArray(arr)) {
-                              if (!arr) {
-                                tmp = arr;
+                          let mapped = found.map((item, index) => {
+                            let tmp = item;
+                            if (Array.isArray(item)) {
+                              if (!item) {
+                                tmp = item;
                               } else {
                                 const _Array = Array;
-                                if (Array.isArray(arr)) {
-                                  const found = arr.filter((arg0) => {
-                                    let tmp = arg0;
-                                    if (arg0) {
-                                      tmp = "viewDescriptors" in arg0;
+                                if (Array.isArray(item)) {
+                                  const found = item.filter((item, index) => {
+                                    let tmp = item;
+                                    if (item) {
+                                      tmp = "viewDescriptors" in item;
                                     }
                                     return !tmp;
                                   });
-                                  let mapped = found.map((arr) => {
-                                    let tmp = arr;
-                                    if (Array.isArray(arr)) {
-                                      if (!arr) {
-                                        tmp = arr;
+                                  let mapped = found.map((item, index) => {
+                                    let tmp = item;
+                                    if (Array.isArray(item)) {
+                                      if (!item) {
+                                        tmp = item;
                                       } else {
                                         const _Array = Array;
-                                        if (Array.isArray(arr)) {
-                                          const found = arr.filter(() => { ... });
+                                        if (Array.isArray(item)) {
+                                          const found = item.filter(() => { ... });
                                           let mapped = found.map(() => { ... });
                                         } else {
                                           let viewDescriptors;
-                                          if (arr != null) {
-                                            viewDescriptors = arr.viewDescriptors;
+                                          if (item != null) {
+                                            viewDescriptors = item.viewDescriptors;
                                           }
-                                          mapped = arr;
+                                          mapped = item;
                                           if (viewDescriptors) {
                                             mapped = {};
                                           }
@@ -1057,10 +1056,10 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                                   });
                                 } else {
                                   let viewDescriptors;
-                                  if (arr != null) {
-                                    viewDescriptors = arr.viewDescriptors;
+                                  if (item != null) {
+                                    viewDescriptors = item.viewDescriptors;
                                   }
-                                  mapped = arr;
+                                  mapped = item;
                                   if (viewDescriptors) {
                                     mapped = {};
                                   }
@@ -1071,10 +1070,10 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
                           });
                         } else {
                           let viewDescriptors;
-                          if (arr != null) {
-                            viewDescriptors = arr.viewDescriptors;
+                          if (item != null) {
+                            viewDescriptors = item.viewDescriptors;
                           }
-                          mapped = arr;
+                          mapped = item;
                           if (viewDescriptors) {
                             mapped = {};
                           }
@@ -1115,7 +1114,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             const merged5 = Object.assign(self.state.reanimatedProps);
             obj3.ref = self._setComponentRef;
             const merged6 = Object.assign(obj1);
-            return closure_1_11(AnimatedComponent, obj3);
+            return <AnimatedComponent nativeID={null} />;
           } else {
             const obj4 = { nativeID: null };
             obj4[0] = combined;
@@ -1124,7 +1123,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             const merged9 = Object.assign(self.state.reanimatedProps);
             obj4.ref = self._setComponentRef;
             const merged10 = Object.assign(obj1);
-            return closure_1_11(AnimatedComponent, obj4);
+            return <AnimatedComponent nativeID={null} />;
           }
           obj9 = AnimatedComponent(1657);
         } else {
@@ -1150,7 +1149,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
   const tmp9 = callback(AnimatedComponent, items);
   dependencyMap = tmp9;
   tmp9.contextType = AnimatedComponent(1792).SkipEnteringContext;
-  tmp9.displayName = "AnimatedComponent(" + fn.displayName || fn.name || "Component" + ")";
+  tmp9.displayName = "AnimatedComponent(" + name.displayName || name.name || "Component" + ")";
   const componentWithRefResult = AnimatedComponent(1793).componentWithRef((arg0, arg1) => {
     let obj = {};
     const merged = Object.assign(arg0);
@@ -1161,8 +1160,8 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       tmp4 = obj;
     }
     const merged1 = Object.assign(tmp4);
-    return closure_1_11(closure_2, obj);
+    return <closure_2 />;
   });
-  componentWithRefResult.displayName = fn.displayName || fn.name || "Component";
+  componentWithRefResult.displayName = name.displayName || name.name || "Component";
   return componentWithRefResult;
 };

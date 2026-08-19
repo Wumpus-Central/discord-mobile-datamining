@@ -2,6 +2,7 @@
 
 // Module 1071 (registerSpanErrorInstrumentation)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
+import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1072 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,12 +13,12 @@ arg5.uiProfiler = {
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("startUIProfiler");
-      } else if (tmp(1072).DEBUG_BUILD) {
-        const debug2 = tmp(817).debug;
+      } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+        const debug2 = registerSpanErrorInstrumentation.debug;
         debug2.warn("BrowserProfiling integration is not available");
       }
-    } else if (tmp(1072).DEBUG_BUILD) {
-      const debug = tmp(817).debug;
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
       debug.warn("No Sentry client available, profiling is not started");
     }
   },
@@ -26,12 +27,12 @@ arg5.uiProfiler = {
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("stopUIProfiler");
-      } else if (tmp(1072).DEBUG_BUILD) {
-        const debug2 = tmp(817).debug;
+      } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+        const debug2 = registerSpanErrorInstrumentation.debug;
         debug2.warn("ProfilingIntegration is not available");
       }
-    } else if (tmp(1072).DEBUG_BUILD) {
-      const debug = tmp(817).debug;
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
       debug.warn("No Sentry client available, profiling is not started");
     }
   }

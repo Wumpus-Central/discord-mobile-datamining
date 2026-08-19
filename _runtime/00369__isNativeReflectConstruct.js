@@ -3,10 +3,10 @@
 // Module 369 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const AnimatedDivision = importDefault;
@@ -93,8 +93,7 @@ let items = [
       const _b = this._b;
       _b.__makeNative(arg0);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__makeNative", this);
+      let fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -137,8 +136,7 @@ let items = [
       const _b = this._b;
       _b.__addChild(this);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__attach", this);
+      let fn = callback3(callback2(self.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -153,8 +151,7 @@ let items = [
       const _b = this._b;
       _b.__removeChild(this);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__detach", this);
+      let fn = callback3(callback2(self.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

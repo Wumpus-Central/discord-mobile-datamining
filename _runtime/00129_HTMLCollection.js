@@ -2,10 +2,10 @@
 
 // Module 129 (HTMLCollection)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const HTMLCollection = arg1;
+const HTMLCollection = fn;
 let closure_3 = { value: {}, enumerable: true, configurable: false, writable: false };
 class HTMLCollection {
   constructor(arg0) {
@@ -60,7 +60,7 @@ obj = {
   }
 };
 items[3] = obj;
-let tmp2 = _createClassDefault(HTMLCollection, items);
+const tmp2 = _createClassDefault(HTMLCollection, items);
 let closure_4 = tmp2;
 setPlatformObject.setPlatformObject(tmp2);
 

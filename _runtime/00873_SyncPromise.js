@@ -1,7 +1,7 @@
 // === Module 873: SyncPromise ===
 
 // Module 873 (SyncPromise)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const SyncPromise = require;
@@ -22,7 +22,7 @@ let items = [
       const self = this;
       closure_1 = arg0;
       const obj = Object.create(arg1.prototype);
-      callback(obj, arg1);
+      _classCallCheck(obj, arg1);
       obj._state = 0;
       obj._handlers = [];
       obj._runExecutor((arg0, arg1) => {
@@ -63,7 +63,7 @@ let items = [
   {
     key: "catch",
     value: function _catch(arg0) {
-      return this.then((arg0) => arg0, arg0);
+      return this.then((result) => result, arg0);
     }
   },
   {
@@ -71,15 +71,15 @@ let items = [
     value: function _finally(arg0) {
       const self = this;
       const obj = Object.create(arg0.prototype);
-      callback(obj, arg0);
+      _classCallCheck(obj, arg0);
       obj._state = 0;
       obj._handlers = [];
       obj._runExecutor((arg0, arg1) => {
         closure_0 = arg0;
         const _self = arg1;
-        return _self.then((arg0) => {
+        return _self.then((result) => {
           c3 = false;
-          closure_2 = arg0;
+          closure_2 = result;
           if (closure_0) {
             tmp();
           }
@@ -89,7 +89,7 @@ let items = [
           if (closure_0) {
             tmp();
           }
-        }).then(() => {
+        }).then((result) => {
           if (closure_3) {
             callback2(closure_2);
           } else {
@@ -103,21 +103,20 @@ let items = [
   {
     key: "_executeHandlers",
     value: function _executeHandlers() {
-      let self = this;
-      self = this;
+      const self = this;
       if (0 !== this._state) {
         const _handlers = self._handlers;
         const substr = _handlers.slice();
         self._handlers = [];
-        const item = substr.forEach((arg0) => {
-          if (!arg0[0]) {
+        const item = substr.forEach((item, index) => {
+          if (!item[0]) {
             if (1 === self._state) {
-              arg0[1](tmp._value);
+              item[1](self._value);
             }
             if (2 === self._state) {
-              arg0[2](tmp._value);
+              item[2](self._value);
             }
-            arg0[0] = true;
+            item[0] = true;
           }
         });
       }
@@ -125,34 +124,34 @@ let items = [
   },
   {
     key: "_runExecutor",
-    value: function _runExecutor(arg0) {
+    value: function _runExecutor(fn) {
       const self = this;
-      function resolve(promise) {
+      function resolve(_value) {
         if (0 === self._state) {
-          if (obj2.isThenable(promise)) {
-            promise.then(resolve, reject);
+          if (obj2.isThenable(_value)) {
+            _value.then(resolve, reject);
           } else {
-            obj._state = 1;
-            obj._value = promise;
-            obj._executeHandlers();
+            self._state = 1;
+            self._value = _value;
+            self._executeHandlers();
           }
           obj2 = reject(resolve[2]);
         }
       }
-      function reject(promise) {
+      function reject(_value) {
         if (0 === self._state) {
-          if (obj2.isThenable(promise)) {
-            promise.then(resolve, reject);
+          if (obj2.isThenable(_value)) {
+            _value.then(resolve, reject);
           } else {
-            obj._state = 2;
-            obj._value = promise;
-            obj._executeHandlers();
+            self._state = 2;
+            self._value = _value;
+            self._executeHandlers();
           }
           obj2 = reject(resolve[2]);
         }
       }
       try {
-        arg0(resolve, reject);
+        fn(resolve, reject);
       } catch (tmp4) {
         tmp(tmp4);
       }
@@ -165,13 +164,13 @@ let c3 = _moduleResult;
 export const SyncPromise = _moduleResult;
 export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
   closure_0 = arg0;
-  return new closure_3((arg0, arg1) => {
-    arg1(closure_0);
+  return new closure_3((arg0, fn) => {
+    fn(closure_0);
   });
 };
 export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
   closure_0 = arg0;
-  return new closure_3((arg0) => {
-    arg0(closure_0);
+  return new closure_3((fn) => {
+    fn(closure_0);
   });
 };

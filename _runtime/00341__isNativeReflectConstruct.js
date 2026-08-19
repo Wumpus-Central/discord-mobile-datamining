@@ -2,18 +2,17 @@
 
 // Module 341 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_createClass" /* 42 */;
 import importDefaultResult2 from "_inherits" /* 98 */;
 import { createRef } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const KeyboardAvoidingView = importDefault;
-let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -35,7 +34,7 @@ function _isNativeReflectConstruct() {
 }
 let closure_2 = ["behavior", "children", "contentContainerStyle", "enabled", "keyboardVerticalOffset", "style", "onLayout"];
 let c4 = importDefaultResult;
-closure_1 = undefined;
+let closure_1;
 class KeyboardAvoidingView {
   constructor(arg0) {
     self = this;
@@ -302,13 +301,13 @@ closure_1 = importDefaultResult(function(arg0) {
           let sum = self;
           let num6 = self._frame;
           if (num6) {
-            if (tmp18) {
+            if (screenY) {
               const keyboardVerticalOffset = sum.props.keyboardVerticalOffset;
               c2 = keyboardVerticalOffset;
               if (keyboardVerticalOffset == null) {
                 c2 = 0;
               }
-              let diff = tmp18.screenY - c2;
+              let diff = screenY.screenY - c2;
               if ("height" === sum.props.behavior) {
                 const _Math2 = Math;
                 sum = sum.state.bottom + num6.y;
@@ -370,19 +369,20 @@ let items = [
         self._keyboardEvent = null;
         self._setBottom(0);
       }
-      let tmpResult = tmp(343);
+      let tmpResult = KeyboardAvoidingView(343);
       const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide), ];
-      tmpResult = tmp(343);
+      tmpResult = KeyboardAvoidingView(343);
       items[1] = tmpResult.addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;
+      obj = KeyboardAvoidingView(343);
     }
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const _subscriptions = this._subscriptions;
-      const item = _subscriptions.forEach((remove) => {
-        remove.remove();
+      const item = _subscriptions.forEach((item, index) => {
+        item.remove();
       });
     }
   },

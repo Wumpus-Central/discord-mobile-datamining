@@ -9,9 +9,9 @@ if (_mod13681) {
   fn = () => {
     const apply = call.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
     } else {
-      applyArgumentsResult = apply(tmp, arguments);
+      applyArgumentsResult = apply(call, arguments);
     }
     return applyArgumentsResult;
   };

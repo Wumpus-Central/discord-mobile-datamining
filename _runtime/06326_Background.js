@@ -6,13 +6,12 @@ import createStandardNavigationFactories from "createStandardNavigationFactories
 import { Animated } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 
 export const Background = function Background(style) {
   const merged = Object.assign(style, Object.create(null));
-  let obj = createStandardNavigationFactories;
-  obj = {};
+  let obj = {};
   const merged1 = Object.assign(merged);
   obj = { flex: 1, backgroundColor: obj.useTheme().colors.background };
   const items = [obj, style.style];

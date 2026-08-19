@@ -69,34 +69,11 @@ export default function _default(siteKey) {
     }
     return "<!DOCTYPE html>\n      <html>\n      <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n        <script src=\"" + text2 + "\" async defer></script>\n        <script type=\"text/javascript\">\n          var onloadCallback = function() {\n            try {\n              console.log(\"challenge onload starting\");\n              hcaptcha.render(\"submit\", getRenderConfig(\"" + str + "\", " + combined + "));\n              // have loaded by this point; render is sync.\n              console.log(\"challenge render complete\");\n            } catch (e) {\n              console.log(\"challenge failed to render\");\n              window.ReactNativeWebView.postMessage(\"error\");\n            }\n            try {\n              console.log(\"showing challenge\");\n              hcaptcha.execute(getExecuteOpts());\n            } catch (e) {\n              console.log(\"failed to show challenge\");\n              window.ReactNativeWebView.postMessage(\"error\");\n            }\n          };\n          var onDataCallback = function(response) {\n            window.ReactNativeWebView.postMessage(response);\n          };\n          var onCancel = function() {\n            window.ReactNativeWebView.postMessage(\"cancel\");\n          };\n          var onOpen = function() {\n            // NOTE: disabled for simplicity.\n            // window.ReactNativeWebView.postMessage(\"open\");\n            console.log(\"challenge opened\");\n          };\n          var onDataExpiredCallback = function(error) { window.ReactNativeWebView.postMessage(\"expired\"); };\n          var onChalExpiredCallback = function(error) { window.ReactNativeWebView.postMessage(\"cancel\"); };\n          var onDataErrorCallback = function(error) {\n            console.log(\"challenge error callback fired\");\n            window.ReactNativeWebView.postMessage(\"error\");\n          };\n          const getRenderConfig = function(siteKey, theme) {\n            var config = {\n              sitekey: siteKey,\n              size: \"invisible\",\n              callback: onDataCallback,\n              \"close-callback\": onCancel,\n              \"open-callback\": onOpen,\n              \"expired-callback\": onDataExpiredCallback,\n              \"chalexpired-callback\": onChalExpiredCallback,\n              \"error-callback\": onDataErrorCallback\n            };\n            if (theme) {\n              config.theme = theme;\n            }\n            return config;\n          };\n          const getExecuteOpts = function() {\n            var opts;\n            const rqdata = " + closure_4 + ";\n            if (rqdata) {\n              opts = {\"rqdata\": rqdata};\n            }\n            return opts;\n          };\n        </script>\n      </head>\n      <body style=\"background-color: " + backgroundColor + ";\">\n        <div id=\"submit\"></div>\n      </body>\n      </html>";
   }, items);
-  let obj = {
-    originWhitelist: ["*"],
-    onShouldStartLoadWithRequest(url) {
-      url = url.url;
-      let flag = "https://www.hcaptcha.com" !== url.slice(0, 24);
-      if (!flag) {
-        closure_4.openURL(url.url);
-        flag = false;
-      }
-      return flag;
-    },
-    mixedContentMode: "always",
-    onMessage,
-    javaScriptEnabled: true,
-    injectedJavaScript: closure_8,
-    automaticallyAdjustContentInsets: true,
-    style: items2,
-    source: null,
-    renderLoading: null,
-    startInLoadingState: null
-  };
-  items2 = [{ backgroundColor: "transparent", width: "100%" }, style];
-  obj = { html: tmp8, baseUrl: null };
+  const items2 = [{ backgroundColor: "transparent", width: "100%" }, style];
+  let obj = { html: tmp8, baseUrl: null };
   const tmp9 = combined(() => {
-    obj = { style: items, children: closure_1_7(closure_1_6, obj) };
-    items = [closure_1_9.loadingOverlay];
-    obj = { size: "large", color: loadingIndicatorColor };
-    return closure_1_7(text2, obj);
+    const items = [closure_1_9.loadingOverlay];
+    return <text2 size="large" color={loadingIndicatorColor} />;
   }, items1);
   obj[1] = "" + url;
   obj[8] = obj;

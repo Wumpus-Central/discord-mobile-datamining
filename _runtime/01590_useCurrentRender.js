@@ -2,7 +2,7 @@
 
 // Module 1590 (useCurrentRender)
 import CurrentRenderContext from "CurrentRenderContext" /* 1549 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

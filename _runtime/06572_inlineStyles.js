@@ -9,12 +9,10 @@ import _fetchText from "_fetchText" /* 6680 */;
 import RNSVGCircle from "RNSVGCircle" /* 6681 */;
 
 for (const key10013 in require("module_6573")) {
-  let tmp2 = key10013;
   arg5[key10013] = require("module_6573")[key10013];
   continue;
 }
 for (const key10017 in require("Circle")) {
-  let tmp3 = key10017;
   arg5[key10017] = require("Circle")[key10017];
   continue;
 }

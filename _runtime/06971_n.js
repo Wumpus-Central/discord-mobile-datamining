@@ -4,9 +4,9 @@
 import cancelAnimation from "cancelAnimation" /* 1654 */;
 import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6953 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
-const fn = function n(arg0) {
+fn = function n(arg0) {
   ({ point, configs, velocity } = arg0);
   if (velocity === undefined) {
     velocity = 0;
@@ -20,7 +20,6 @@ const fn = function n(arg0) {
   }
   if (!("duration" in configs)) {
     if (!("easing" in configs)) {
-      let tmp3 = require;
       let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
     }
     if (TIMING === GESTURE_SOURCE.ANIMATION_METHOD.TIMING) {
@@ -36,7 +35,6 @@ const fn = function n(arg0) {
     return withTimingResult;
   }
   TIMING = GESTURE_SOURCE.ANIMATION_METHOD.TIMING;
-  tmp3 = require;
 };
 fn.__closure = { ANIMATION_CONFIGS: require("GESTURE_SOURCE").ANIMATION_CONFIGS, ANIMATION_METHOD: require("GESTURE_SOURCE").ANIMATION_METHOD, withTiming: require("cancelAnimation").withTiming, withSpring: require("cancelAnimation").withSpring };
 fn.__workletHash = 17032227615993;

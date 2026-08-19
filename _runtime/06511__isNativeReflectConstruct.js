@@ -4,10 +4,10 @@
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6510 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

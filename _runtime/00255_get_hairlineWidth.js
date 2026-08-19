@@ -6,8 +6,7 @@ import flattenStyleDefault from "flattenStyle" /* 148 */;
 import composeStylesDefault from "composeStyles" /* 256 */;
 
 const require = arg1;
-let obj = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
-obj = {};
+let obj = {};
 Object.defineProperty(obj, "hairlineWidth", {
   get: () => {
     if (null == closure_3) {
@@ -30,13 +29,13 @@ obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0,
   if (true === resultDefault[arg0]) {
     let obj = { process: null };
     obj[0] = process;
-  } else if (typeof tmp(26)[arg0] !== "object") {
+  } else if (typeof resultDefault[arg0] !== "object") {
     const _console = console;
     const _HermesInternal = HermesInternal;
     console.error("" + arg0 + " is not a valid style attribute");
   } else {
     obj = {};
-    const merged = Object.assign(tmp(26)[arg0]);
+    const merged = Object.assign(resultDefault[arg0]);
     obj.process = process;
   }
   resultDefault[arg0] = obj;

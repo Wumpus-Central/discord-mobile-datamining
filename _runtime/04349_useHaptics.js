@@ -2,6 +2,7 @@
 
 // Module 4349 (useHaptics)
 import noop from "noop" /* 19 */;
+import setEnabledDefault from "setEnabled" /* 4346 */;
 
 const useMemo = noop.useMemo;
 
@@ -18,15 +19,15 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
   const items = [prop, prop1];
   return useMemo(() => ({
     trigger(arg0, arg1) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
+      closure_1_1(closure_1_2[1]);
+      const obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg1);
       obj.trigger(arg0, obj);
     },
     triggerPattern(arg0, arg1) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
+      closure_1_1(closure_1_2[1]);
+      const obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg1);
       obj.triggerPattern(arg0, obj);
@@ -38,22 +39,22 @@ export const useHaptics = function useHaptics(enableVibrateFallback) {
       return callback(4346).isSupported();
     },
     playHaptic(arg0, arg1, arg2) {
-      let obj = closure_1_0(closure_1_2[2]);
-      obj = {};
+      enableVibrateFallback(closure_1_2[2]);
+      const obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg2);
       return obj.playHaptic(arg0, arg1, obj);
     },
     impact(arg0, arg1, arg2) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
+      closure_1_1(closure_1_2[1]);
+      const obj = {};
       const merged = Object.assign(closure_0);
       const merged1 = Object.assign(arg2);
       obj.impact(arg0, arg1, obj);
     },
-    setEnabled: closure_1_1(closure_1_2[1]).setEnabled,
-    isEnabled: closure_1_1(closure_1_2[1]).isEnabled,
-    getSystemHapticStatus: closure_1_1(closure_1_2[1]).getSystemHapticStatus,
-    playAHAP: closure_1_1(closure_1_2[1]).playAHAP
+    setEnabled: setEnabledDefault.setEnabled,
+    isEnabled: setEnabledDefault.isEnabled,
+    getSystemHapticStatus: setEnabledDefault.getSystemHapticStatus,
+    playAHAP: setEnabledDefault.playAHAP
   }), items);
 };

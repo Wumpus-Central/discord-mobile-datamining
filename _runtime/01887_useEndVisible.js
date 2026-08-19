@@ -14,8 +14,6 @@ export const useEndVisible = (scroll) => {
   const size = scroll.size;
   const inverted = scroll.inverted;
   const onEndVisible = scroll.onEndVisible;
-  closure_5 = undefined;
-  let derivedValue;
   const items = [onEndVisible];
   let tmp = size(() => {
     let __workletHash = typeof onEndVisible === "function";
@@ -25,7 +23,7 @@ export const useEndVisible = (scroll) => {
     return __workletHash;
   }, items);
   closure_5 = tmp;
-  let obj = scroll(layout[1]);
+  scroll(layout[1]);
   const fn = function v() {
     let isScrollAtEndResult = null;
     if (0 !== layout.value.height) {
@@ -37,11 +35,11 @@ export const useEndVisible = (scroll) => {
     }
     return isScrollAtEndResult;
   };
-  obj = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
+  let obj = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
   fn.__closure = obj;
   fn.__workletHash = 9190864194226;
   fn.__initData = inverted;
-  derivedValue = obj.useDerivedValue(fn);
+  const derivedValue = obj.useDerivedValue(fn);
   const fn2 = function f() {
     return derivedValue.value;
   };

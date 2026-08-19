@@ -2,7 +2,7 @@
 
 // Module 13749 (URLImpl)
 import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const URLImpl = require;
 class URLImpl {
@@ -78,12 +78,11 @@ let items = [
         _list.splice(0);
         const query = basicURLParseResult.query;
         if (null !== query) {
-          self._query._list = tmp(13753).parseUrlencoded(query);
-          const tmpResult = tmp(13753);
+          self._query._list = URLImpl(13753).parseUrlencoded(query);
+          const tmpResult = URLImpl(13753);
         }
       }
       const obj = URLImpl(13750);
-      tmp = URLImpl;
     }
   },
   {
@@ -98,8 +97,8 @@ let items = [
       return this._url.scheme + ":";
     },
     set(arg0) {
-      let obj = URLImpl(13750);
-      obj = { url: this._url, stateOverride: "scheme start" };
+      URLImpl(13750);
+      const obj = { url: this._url, stateOverride: "scheme start" };
       obj.basicURLParse(`${arg0}:`, obj);
     }
   },
@@ -113,6 +112,7 @@ let items = [
         URLImpl(13750).setTheUsername(this._url, arg0);
         const tmpResult = URLImpl(13750);
       }
+      obj = URLImpl(13750);
     }
   },
   {
@@ -125,6 +125,7 @@ let items = [
         URLImpl(13750).setThePassword(this._url, arg0);
         const tmpResult = URLImpl(13750);
       }
+      obj = URLImpl(13750);
     }
   },
   {
@@ -146,8 +147,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        let obj = URLImpl(13750);
-        obj = { url: null, stateOverride: "host" };
+        URLImpl(13750);
+        const obj = { url: null, stateOverride: "host" };
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -165,8 +166,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        let obj = URLImpl(13750);
-        obj = { url: null, stateOverride: "hostname" };
+        URLImpl(13750);
+        const obj = { url: null, stateOverride: "hostname" };
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -216,8 +217,8 @@ let items = [
       const self = this;
       if (!this._url.cannotBeABaseURL) {
         self._url.path = [];
-        let obj = URLImpl(13750);
-        obj = { url: null, stateOverride: "path start" };
+        URLImpl(13750);
+        const obj = { url: null, stateOverride: "path start" };
         obj[0] = self._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -244,15 +245,16 @@ let items = [
         self._query._list = [];
       } else {
         let substr = str;
-        if ("?" === str[0]) {
+        if ("?" === "?"[0]) {
           substr = str.substring(1);
         }
         _url.query = "";
-        let obj = URLImpl(13750);
-        obj = { url: null, stateOverride: "query" };
+        URLImpl(13750);
+        const obj = { url: null, stateOverride: "query" };
         obj[0] = _url;
         obj.basicURLParse(substr, obj);
         self._query._list = URLImpl(13753).parseUrlencoded(substr);
+        const obj3 = URLImpl(13753);
       }
     }
   },
@@ -279,12 +281,12 @@ let items = [
       const self = this;
       if ("" !== str) {
         let substr = str;
-        if ("#" === str[0]) {
+        if ("#" === "#"[0]) {
           substr = str.substring(1);
         }
         self._url.fragment = "";
-        let obj = URLImpl(13750);
-        obj = { url: null, stateOverride: "fragment" };
+        URLImpl(13750);
+        const obj = { url: null, stateOverride: "fragment" };
         obj[0] = self._url;
         obj.basicURLParse(substr, obj);
       } else {

@@ -1,7 +1,7 @@
 // === Module 1582: useOnRouteFocus ===
 
 // Module 1582 (useOnRouteFocus)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -10,8 +10,7 @@ export const useOnRouteFocus = function useOnRouteFocus(router) {
   const getState = router.getState;
   const key = router.key;
   const setState = router.setState;
-  let onRouteFocus;
-  onRouteFocus = key.useContext(router(getState[1]).NavigationBuilderContext).onRouteFocus;
+  const onRouteFocus = key.useContext(router(getState[1]).NavigationBuilderContext).onRouteFocus;
   const items = [getState, onRouteFocus, router, setState, key];
   return key.useCallback((arg0) => {
     const tmp = getState();

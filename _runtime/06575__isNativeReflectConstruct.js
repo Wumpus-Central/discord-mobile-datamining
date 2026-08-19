@@ -6,17 +6,18 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import extractOpacityDefault from "extractOpacity" /* 6577 */;
 import keysDefault from "keys" /* 6578 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6583 */;
+import reducedDefault from "reduced" /* 6584 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6585 */;
 import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6595 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Svg = arg1;
+const Svg = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -86,8 +87,8 @@ class Svg {
     tmp3Result.toDataURL = (arg0, arg1) => {
       if (arg0) {
         const tmp4 = closure_1_8(lib.root);
-        lib(closure_1_2[9]).default.toDataURL(tmp4, arg1, arg0);
-        const _default = lib(closure_1_2[9]).default;
+        lib(dependencyMap[9]).default.toDataURL(tmp4, arg1, arg0);
+        const _default = lib(dependencyMap[9]).default;
       }
     };
     return tmp3Result;
@@ -204,7 +205,7 @@ let items = [
       obj.ref = function ref(arg0) {
         return self.refMethod(arg0);
       };
-      const merged4 = Object.assign(tmp21(6584)({ viewBox, preserveAspectRatio }));
+      const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
       obj.children = jsx(_isNativeReflectConstructDefault, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }

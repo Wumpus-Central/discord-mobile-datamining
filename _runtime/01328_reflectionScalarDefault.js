@@ -1,7 +1,9 @@
 // === Module 1328: reflectionScalarDefault ===
 
 // Module 1328 (reflectionScalarDefault)
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1314 */;
 import RepeatType from "RepeatType" /* 1320 */;
+import reflectionLongConvert from "reflectionLongConvert" /* 1325 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -13,18 +15,18 @@ arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   if (RepeatType.ScalarType.BOOL === T) {
     return false;
   } else {
-    if (tmp3(1320).ScalarType.UINT64 !== T) {
-      if (tmp3(1320).ScalarType.FIXED64 !== T) {
-        if (tmp3(1320).ScalarType.INT64 !== T) {
-          if (tmp3(1320).ScalarType.SFIXED64 !== T) {
-            if (tmp3(1320).ScalarType.SINT64 !== T) {
-              if (tmp3(1320).ScalarType.DOUBLE !== T) {
-                if (tmp3(1320).ScalarType.FLOAT !== T) {
-                  if (tmp3(1320).ScalarType.BYTES === T) {
+    if (RepeatType.ScalarType.UINT64 !== T) {
+      if (RepeatType.ScalarType.FIXED64 !== T) {
+        if (RepeatType.ScalarType.INT64 !== T) {
+          if (RepeatType.ScalarType.SFIXED64 !== T) {
+            if (RepeatType.ScalarType.SINT64 !== T) {
+              if (RepeatType.ScalarType.DOUBLE !== T) {
+                if (RepeatType.ScalarType.FLOAT !== T) {
+                  if (RepeatType.ScalarType.BYTES === T) {
                     const _Uint8Array = Uint8Array;
                     const uint8Array = new Uint8Array(0);
                     return uint8Array;
-                  } else if (tmp3(1320).ScalarType.STRING === T) {
+                  } else if (RepeatType.ScalarType.STRING === T) {
                     return "";
                   } else {
                     return 0;
@@ -35,11 +37,11 @@ arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
             }
           }
         }
-        let tmp3Result = tmp3(1325);
-        return tmp3Result.reflectionLongConvert(tmp3(1314).PbLong.ZERO, STRING);
+        let tmp3Result = reflectionLongConvert;
+        return tmp3Result.reflectionLongConvert(_isNativeReflectConstruct.PbLong.ZERO, STRING);
       }
     }
-    tmp3Result = tmp3(1325);
-    return tmp3Result.reflectionLongConvert(tmp3(1314).PbULong.ZERO, STRING);
+    tmp3Result = reflectionLongConvert;
+    return tmp3Result.reflectionLongConvert(_isNativeReflectConstruct.PbULong.ZERO, STRING);
   }
 };

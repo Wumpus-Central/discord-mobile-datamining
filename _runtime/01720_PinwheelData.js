@@ -3,8 +3,7 @@
 // Module 1720 (PinwheelData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-obj = { PinwheelIn: { name: "PinwheelIn", style: obj, duration: 0.3 }, PinwheelOut: { name: "PinwheelOut", style: obj, duration: 0.3 } };
-obj = { 0: { transform: items, opacity: 0 }, 100: null };
+let obj = { 0: { transform: items, opacity: 0 }, 100: null };
 items = [{ rotate: "5rad", scale: 0 }];
 const items1 = [{ rotate: "0deg", scale: 1 }];
 obj[100] = { transform: items1, opacity: 1 };

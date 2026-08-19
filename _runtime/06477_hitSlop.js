@@ -2,14 +2,14 @@
 
 // Module 6477 (hitSlop)
 import noopDefault from "noop" /* 19 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import tagMessage from "tagMessage" /* 6382 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["testOnly_pressed", "hitSlop", "pressRetentionOffset", "delayHoverIn", "delayHoverOut", "delayLongPress", "unstable_pressDelay", "onHoverIn", "onHoverOut", "onPress", "onPressIn", "onPressOut", "onLongPress", "onLayout", "style", "children", "android_disableSound", "android_ripple", "disabled", "accessible", "simultaneousWith", "requireToFail", "block"];
 ({ use: c5, useCallback: closure_6, useEffect: error, useMemo: closure_8, useRef: c9, useState: c10 } = noop);
 noopDefault;
@@ -45,11 +45,11 @@ export default function _default(pressRetentionOffset) {
   const items = [hitSlop];
   let tmp9 = onPress(() => {
     if (typeof hitSlop === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
+      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(hitSlop);
       const obj2 = hitSlop(pressRetentionOffset[7]);
     } else {
-      numberAsInsetResult = tmp;
-      if (tmp == null) {
+      numberAsInsetResult = hitSlop;
+      if (hitSlop == null) {
         numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(0);
         const obj = hitSlop(pressRetentionOffset[7]);
       }
@@ -58,17 +58,15 @@ export default function _default(pressRetentionOffset) {
   }, items);
   closure_22 = tmp9;
   const items1 = [pressRetentionOffset];
-  const tmp2 = onPressOut;
-  let tmp3 = callback(onPressOut(testOnly_pressed), 2);
-  const tmp8 = onPress;
+  const tmp3 = callback(onPressOut(testOnly_pressed), 2);
   let obj = hitSlop(pressRetentionOffset[7]);
   const addInsetsResult = obj.addInsets(tmp9, onPress(() => {
     if (typeof pressRetentionOffset === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
+      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(pressRetentionOffset);
       const obj2 = hitSlop(pressRetentionOffset[7]);
     } else {
-      numberAsInsetResult = tmp;
-      if (tmp == null) {
+      numberAsInsetResult = pressRetentionOffset;
+      if (pressRetentionOffset == null) {
         numberAsInsetResult = {};
       }
     }
@@ -77,8 +75,8 @@ export default function _default(pressRetentionOffset) {
   const tmp13 = callback2(() => {
     if (ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
       closure_17.current = true;
     }
   }, []);
@@ -86,8 +84,8 @@ export default function _default(pressRetentionOffset) {
   const tmp14 = callback2(() => {
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
   }, []);
   closure_24 = tmp14;
@@ -102,9 +100,8 @@ export default function _default(pressRetentionOffset) {
       }
       closure_15.current = setTimeout(() => {
         closure_1_17.current = false;
-        closure_1_11(closure_0);
+        onLongPress(closure_0);
       }, num);
-      const tmp3 = closure_15;
     }
   }, items2);
   closure_25 = tmp15;
@@ -117,8 +114,8 @@ export default function _default(pressRetentionOffset) {
     callback(true);
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp5.current);
-      tmp5.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
   }, items3);
   closure_26 = tmp16;
@@ -291,17 +288,16 @@ export default function _default(pressRetentionOffset) {
   const longPressGesture = obj4.useLongPressGesture(obj);
   const tmp10 = onPress(() => {
     if (typeof pressRetentionOffset === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
+      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(pressRetentionOffset);
       const obj2 = hitSlop(pressRetentionOffset[7]);
     } else {
-      numberAsInsetResult = tmp;
-      if (tmp == null) {
+      numberAsInsetResult = pressRetentionOffset;
+      if (pressRetentionOffset == null) {
         numberAsInsetResult = {};
       }
     }
     return numberAsInsetResult;
   }, items1);
-  const tmp12 = callback2;
   obj1 = {
     onTouchesCancel(arg0) {
       const result = hitSlop(pressRetentionOffset[7]).gestureTouchToPressableEvent(arg0);
@@ -318,13 +314,11 @@ export default function _default(pressRetentionOffset) {
           const handleEvent = navigation.handleEvent;
           const NATIVE_BEGIN = hitSlop(pressRetentionOffset[10]).StateMachineEvent.NATIVE_BEGIN;
           if (isScreenReaderEnabled) {
-            handleEvent(NATIVE_BEGIN, tmp5(tmp6[7]).viewCenterToPressableEvent(closure_20.current));
-            const tmp5Result = tmp5(tmp6[7]);
+            handleEvent(NATIVE_BEGIN, hitSlop(pressRetentionOffset[7]).viewCenterToPressableEvent(closure_20.current));
+            const tmp5Result = hitSlop(pressRetentionOffset[7]);
           } else {
             handleEvent(NATIVE_BEGIN);
           }
-          tmp5 = hitSlop;
-          tmp6 = pressRetentionOffset;
         }
       }
     },
@@ -335,6 +329,7 @@ export default function _default(pressRetentionOffset) {
       if (onLongPress.isTV) {
         callback9(hitSlop(pressRetentionOffset[7]).viewCenterToPressableEvent(closure_20.current), !canceled.canceled);
         callback6();
+        const obj = hitSlop(pressRetentionOffset[7]);
       } else {
         const StateMachineEvent = hitSlop(pressRetentionOffset[10]).StateMachineEvent;
         navigation.handleEvent(canceled.canceled ? StateMachineEvent.CANCEL : StateMachineEvent.FINALIZE);
@@ -366,17 +361,17 @@ export default function _default(pressRetentionOffset) {
   const items9 = [android_ripple];
   const items10 = [onLayout];
   const obj9 = hitSlop(pressRetentionOffset[11]);
-  const tmp8Result = tmp8(() => {
+  const tmp8Result = onPress(() => {
     let color;
     if (android_ripple != null) {
-      color = tmp.color;
+      color = android_ripple.color;
     }
     if (color == null) {
       color = str;
     }
     return color;
   }, items9);
-  const tmp12Result = tmp12((nativeEvent) => {
+  const tmp12Result = callback2((nativeEvent) => {
     if (onLayout != null) {
       tmp(nativeEvent);
     }

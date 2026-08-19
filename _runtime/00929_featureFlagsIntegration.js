@@ -10,9 +10,9 @@ export const featureFlagsIntegration = setupIntegration.defineIntegration(() => 
   processEvent(contexts) {
     return callback(930)._INTERNAL_copyFlagsFromScopeToEvent(contexts);
   },
-  addFeatureFlag(first, value) {
-    const result = callback(930)._INTERNAL_insertFlagToScope(first, value);
+  addFeatureFlag(flagKey, value) {
+    const result = callback(930)._INTERNAL_insertFlagToScope(flagKey, value);
     const obj = callback(930);
-    const result1 = callback(930)._INTERNAL_addFeatureFlagToActiveSpan(first, value);
+    const result1 = callback(930)._INTERNAL_addFeatureFlagToActiveSpan(flagKey, value);
   }
 }));

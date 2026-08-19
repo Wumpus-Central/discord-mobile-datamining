@@ -7,7 +7,7 @@ import { useMemo } from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopDefault;
 
 export const NativeDetector = function NativeDetector(gesture) {
@@ -28,9 +28,9 @@ export const NativeDetector = function NativeDetector(gesture) {
   const items = [gesture];
   const tmp6 = useMemo(() => {
     if (obj.isComposedGesture(gesture)) {
-      let handlerTags = tmp.handlerTags;
+      let handlerTags = gesture.handlerTags;
     } else {
-      handlerTags = [tmp.handlerTag];
+      handlerTags = [gesture.handlerTag];
     }
     return handlerTags;
   }, items);

@@ -2,7 +2,7 @@
 
 // Module 209 (NativeEventEmitter)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 let NativeEventEmitter = importDefault;
 class NativeEventEmitter {
@@ -79,6 +79,7 @@ let items = [
         _nativeModule.removeListeners(self.listenerCount(arg0));
       }
       NativeEventEmitter(92).removeAllListeners(arg0);
+      const tmpResult = NativeEventEmitter(92);
     }
   },
   {

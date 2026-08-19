@@ -3,12 +3,12 @@
 // Module 4674 (Animated)
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4675 */;
 import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 4676 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importDefaultResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["enabled", "freezeOnBlur", "shouldFreeze"];
 let closure_4 = ["active", "activityState", "children", "isNativeStack", "fullScreenSwipeEnabled", "gestureResponseDistance", "scrollEdgeEffects", "onGestureCancel", "style"];
 let closure_5 = ["active", "activityState", "style", "onComponentRef"];
@@ -84,7 +84,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       ({ active: active2, activityState: activityState2, children, isNativeStack, gestureResponseDistance, scrollEdgeEffects, onGestureCancel } = tmp9);
       sheetInitialDetentIndex = tmp2(tmp3[8]).resolveSheetInitialDetentIndex(num3, sheetAllowedDetents1.length - 1);
       ({ fullScreenSwipeEnabled, style } = tmp9);
-      let tmp8Result = tmp8(tmp9, closure_4);
+      let tmp8Result = callback(tmp9, closure_4);
       if (tmp28) {
         const _console = console;
         console.warn("It appears that you are using old version of react-navigation library. Please update @react-navigation/bottom-tabs, @react-navigation/stack and @react-navigation/drawer to version 5.10.0 or above to take full advantage of new functionality added to react-native-screens");
@@ -115,7 +115,6 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
       obj = { freeze: null, children: null };
       obj[0] = freezeOnBlur;
       obj = {};
-      const tmp25 = closure_10;
       tmp28 = undefined !== active2 && undefined === activityState2;
       const tmp2Result3 = tmp2(tmp3[8]);
       let merged = Object.assign(tmp8Result);
@@ -282,15 +281,15 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
         obj5[2] = current3;
         obj4[0] = obj5;
         obj4[1] = children;
-        tmp33Result = tmp33(tmp31(tmp3[13]).Provider, obj4);
+        tmp33Result = jsx(tmp31(tmp3[13]).Provider, { value: null, children: null });
       }
       obj.children = tmp33Result;
-      obj[1] = <tmp25 />;
+      obj[1] = <closure_10 />;
       return <tmp31Result />;
     }
   }
   ({ active, activityState, onComponentRef } = tmp9);
-  tmp8Result = tmp8(tmp9, closure_5);
+  tmp8Result = callback(tmp9, closure_5);
   if (tmp20) {
     let num4 = 0;
     if (0 !== active) {

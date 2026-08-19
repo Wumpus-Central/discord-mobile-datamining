@@ -4,8 +4,7 @@
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-let obj = { uiViewClassName: "VirtualViewExperimental", directEventTypes: { topModeChange: { registrationName: "onModeChange" } }, validAttributes: null };
-obj = { initialHidden: true, removeClippedSubviews: true, renderState: true };
+const obj = { initialHidden: true, removeClippedSubviews: true, renderState: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onModeChange: true }));
 obj[2] = obj;
 

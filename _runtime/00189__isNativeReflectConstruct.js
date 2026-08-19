@@ -6,9 +6,9 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
 import parseErrorStack from "parseErrorStack" /* 190 */;
 import ExceptionsManager from "ExceptionsManager" /* 193 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 let SyntheticError = global;
@@ -92,7 +92,6 @@ function reportException(stack) {
   obj[6] = arg1;
   obj[7] = obj;
   const defaultResult = parseErrorStack.default(stack);
-  const tmp = require;
   tmp10 = null != stack.cause && typeof stack.cause === "object";
   if (arg2) {
     const _console = console;
@@ -108,16 +107,30 @@ function reportException(stack) {
           result = RN$hasHandledFatalException();
         }
         if (!result) {
-          const RN$notifyOfFatalException = tmp17.RN$notifyOfFatalException;
+          const RN$notifyOfFatalException = SyntheticError.RN$notifyOfFatalException;
           if (RN$notifyOfFatalException != null) {
             const result1 = RN$notifyOfFatalException();
           }
         }
-        tmp17 = SyntheticError;
       }
       _default.reportException(tmp14);
     }
   }
+  tmp14 = (function preprocessException(arg0) {
+    if (callback) {
+      if (!c9) {
+        c9 = true;
+        try {
+          c9 = false;
+          return callback(arg0);
+        } catch (tmp3) {
+          c9 = false;
+          throw tmp3;
+        }
+      }
+    }
+    return arg0;
+  })(obj);
 }
 function reactConsoleErrorHandler() {
   const items = [...arguments];
@@ -138,10 +151,10 @@ function reactConsoleErrorHandler() {
         }
         if (!stack) {
           SyntheticError = replacer.default;
-          const mapped = items.map((str) => {
-            let tmp = str;
-            if (typeof str !== "string") {
-              tmp = callback(str);
+          const mapped = items.map((item, index) => {
+            let tmp = item;
+            if (typeof item !== "string") {
+              tmp = callback(item);
             }
             return tmp;
           });
@@ -156,6 +169,7 @@ function reactConsoleErrorHandler() {
           }
         }
       }
+      obj = SyntheticError;
     }
   }
 }

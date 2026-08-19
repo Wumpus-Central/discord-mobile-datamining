@@ -1,10 +1,10 @@
 // === Module 7795: _isNativeReflectConstruct ===
 
 // Module 7795 (_isNativeReflectConstruct)
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
-import SentryError from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 class SentryError {
   constructor(arg0) {
     str = require;
@@ -53,6 +54,7 @@ class SentryError {
     return tmp3Result;
   }
 }
+_classCallCheck = SentryError;
 _inherits(SentryError, _wrapNativeSuper(Error));
 
 export const SentryError = _createClass(SentryError);

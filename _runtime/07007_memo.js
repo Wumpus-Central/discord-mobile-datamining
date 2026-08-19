@@ -17,23 +17,20 @@ const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPositi
   }
   const style = animatedFooterPosition.style;
   const children = animatedFooterPosition.children;
-  let animatedFooterHeight;
-  let animatedKeyboardState;
   let animatedStyle;
   const tmp = animatedStyle(null);
   let obj = animatedFooterPosition(style[2]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
   const fn = function c() {
-    let value = animatedFooterPosition.get();
-    value = animatedKeyboardState.get();
+    animatedFooterPosition.get();
+    const value = animatedKeyboardState.get();
     let diff = value;
     if (value !== animatedFooterPosition(style[4]).KEYBOARD_STATE.SHOWN) {
       diff = value - num;
     }
-    let obj = { transform: null };
-    obj = { translateY: Math.max(0, diff) };
+    const obj = { translateY: Math.max(0, diff) };
     const items = [obj];
     obj[0] = items;
     return obj;

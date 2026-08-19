@@ -38,8 +38,8 @@ export default function closestIndexTo(arg0, arg1) {
         typeof call === "unknown" ? slice() : call(arg1);
       }
     }
-    const item = items.forEach((arg0, arg1) => {
-      const defaultResult = closure_1_0.default(arg0);
+    const item = items.forEach((item, index) => {
+      const defaultResult = _typeof.default(item);
       if (isNaN(Number(defaultResult))) {
         closure_0 = NaN;
         let absolute = NaN;
@@ -52,7 +52,7 @@ export default function closestIndexTo(arg0, arg1) {
           tmp5 = absolute < Number(absolute);
         }
         if (tmp5) {
-          closure_0 = arg1;
+          closure_0 = index;
         }
       }
     });

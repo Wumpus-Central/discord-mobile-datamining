@@ -21,9 +21,9 @@ export default (arg0, arg1) => {
         do {
           let arr = obj.set[num3];
           _require = null;
-          let item = arr.forEach((semver) => {
-            const obj = new _null(closure_1_1[1])(semver.semver.version);
-            const operator = semver.operator;
+          let item = arr.forEach((item, index) => {
+            const obj = new _null(dependencyMap[1])(item.semver.version);
+            const operator = item.operator;
             if (">" === operator) {
               if (0 === obj.prerelease.length) {
                 obj.patch = obj.patch + 1;
@@ -39,28 +39,22 @@ export default (arg0, arg1) => {
                     if ("<=" !== operator) {
                       const _Error = Error;
                       const _HermesInternal = HermesInternal;
-                      error = new Error("Unexpected operation: " + semver.operator);
+                      error = new Error("Unexpected operation: " + item.operator);
                       throw error;
                     }
                   }
                 }
               }
-              let tmp4 = obj;
               if (obj) {
-                tmp4 = !_null(closure_1_1[2])(obj, obj);
+                !_null(dependencyMap[2])(obj, obj);
               }
             }
           });
-          let tmp12 = _require;
           let tmp13 = !_require;
           let tmp14 = tmp9;
-          let tmp15 = num;
           if (_require) {
             let tmp16 = tmp14;
             if (tmp14) {
-              let tmp17 = _require;
-              let tmp18 = dependencyMap;
-              let tmp19 = _require;
               tmp16 = !_require(13143)(tmp14, _require);
             }
             tmp13 = tmp16;

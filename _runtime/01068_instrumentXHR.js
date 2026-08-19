@@ -3,7 +3,7 @@
 // Module 1068 (instrumentXHR)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import WINDOW from "WINDOW" /* 1039 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 function instrumentXHR() {
   if (WINDOW.WINDOW.XMLHttpRequest) {
@@ -19,7 +19,6 @@ function instrumentXHR() {
       let formatted;
       if (obj1.isString(arg2[0])) {
         formatted = arg2[0].toUpperCase();
-        const str = arg2[0];
       }
       const str2 = (function parseXhrUrlArg(arg0) {
         if (obj.isString(arg0)) {
@@ -42,15 +41,15 @@ function instrumentXHR() {
           if (tmp4) {
             onreadystatechange.__sentry_own_request__ = true;
           }
-          onreadystatechangeHandler = function onreadystatechangeHandler() {
+          onreadystatechangeHandler = function onreadystatechangeHandler(event) {
             if (onreadystatechange[onreadystatechangeHandler]) {
-              if (4 === tmp.readyState) {
+              if (4 === onreadystatechange.readyState) {
                 try {
-                  tmp2.status_code = tmp.status;
+                  tmp2.status_code = onreadystatechange.status;
                   const obj = { endTimestamp: null, startTimestamp: null, xhr: null, virtualError: null };
                   obj[0] = 1000 * onreadystatechange(error[1]).timestampInSeconds();
                   obj[1] = closure_2;
-                  obj[2] = tmp;
+                  obj[2] = onreadystatechange;
                   obj[3] = error;
                   const obj2 = onreadystatechange(error[1]);
                   onreadystatechange(error[1]).triggerHandlers("xhr", obj);
@@ -128,7 +127,6 @@ const __sentry_xhr_v3__ = "__sentry_xhr_v3__";
 export const SENTRY_XHR_DATA_KEY = "__sentry_xhr_v3__";
 export const addXhrInstrumentationHandler = function addXhrInstrumentationHandler(arg0) {
   registerSpanErrorInstrumentation.addHandler("xhr", arg0);
-  const obj = registerSpanErrorInstrumentation;
   registerSpanErrorInstrumentation.maybeInstrument("xhr", instrumentXHR);
 };
 export { instrumentXHR };

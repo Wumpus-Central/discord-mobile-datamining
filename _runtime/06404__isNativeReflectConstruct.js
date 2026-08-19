@@ -5,16 +5,16 @@ import map from "map" /* 6381 */;
 import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
 import _mod6409 from "module_6409" /* 6409 */;
 import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 6412 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_createClass" /* 42 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_inherits" /* 98 */;
-import closure_8 from "noop" /* 19 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -36,7 +36,7 @@ function _isNativeReflectConstruct() {
 }
 ({ DeviceEventEmitter, Platform } = get_ActivityIndicator);
 require("customDirectEventTypes").customDirectEventTypes.topGestureHandlerEvent = { registrationName: "onGestureHandlerEvent" };
-let closure_10 = { [arg1(6383).State.UNDETERMINED]: undefined, [arg1(6383).State.BEGAN]: "onBegan", [arg1(6383).State.FAILED]: "onFailed", [arg1(6383).State.CANCELLED]: "onCancelled", [arg1(6383).State.ACTIVE]: "onActivated", [arg1(6383).State.END]: "onEnded" };
+let closure_10 = { [fn(6383).State.UNDETERMINED]: undefined, [fn(6383).State.BEGAN]: "onBegan", [fn(6383).State.FAILED]: "onFailed", [fn(6383).State.CANCELLED]: "onCancelled", [fn(6383).State.ACTIVE]: "onActivated", [fn(6383).State.END]: "onEnded" };
 
 export default function createHandler(name) {
   name = name.name;
@@ -74,15 +74,15 @@ export default function createHandler(name) {
       tmp3Result.handlerTag = -1;
       tmp3Result.onGestureHandlerEvent = (nativeEvent) => {
         if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
-          if (typeof tmp.props.onGestureEvent === "function") {
-            const props2 = tmp.props;
+          if (typeof closure_0.props.onGestureEvent === "function") {
+            const props2 = closure_0.props;
             const onGestureEvent = props2.onGestureEvent;
             if (onGestureEvent != null) {
               onGestureEvent(nativeEvent);
             }
           }
         } else {
-          const props = tmp.props;
+          const props = closure_0.props;
           if (props.onGestureHandlerEvent != null) {
             const result = onGestureHandlerEvent(nativeEvent);
           }
@@ -90,15 +90,15 @@ export default function createHandler(name) {
       };
       tmp3Result.onGestureHandlerStateChange = (nativeEvent) => {
         if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
-          if (typeof tmp.props.onHandlerStateChange === "function") {
-            const props2 = tmp.props;
+          if (typeof closure_0.props.onHandlerStateChange === "function") {
+            const props2 = closure_0.props;
             if (props2.onHandlerStateChange != null) {
               onHandlerStateChange(nativeEvent);
             }
           }
           let tmp7 = tmp6;
           if (closure_2_10[nativeEvent.nativeEvent.state]) {
-            tmp7 = tmp.props[tmp6];
+            tmp7 = closure_0.props[tmp6];
           }
           let tmp8 = tmp7;
           if (tmp7) {
@@ -108,7 +108,7 @@ export default function createHandler(name) {
             tmp7(nativeEvent);
           }
         } else {
-          const props = tmp.props;
+          const props = closure_0.props;
           if (props.onGestureHandlerStateChange != null) {
             const result = onGestureHandlerStateChange(nativeEvent);
           }
@@ -141,8 +141,8 @@ export default function createHandler(name) {
       };
       tmp3Result.attachGestureHandler = (viewTag) => {
         closure_0.viewTag = viewTag;
-        let obj = Handler(config[13]);
-        obj = { onGestureEvent: closure_0.onGestureHandlerEvent, onGestureStateChange: closure_0.onGestureHandlerStateChange };
+        Handler(config[13]);
+        const obj = { onGestureEvent: closure_0.onGestureHandlerEvent, onGestureStateChange: closure_0.onGestureHandlerStateChange };
         let result = obj.registerOldGestureHandler(closure_0.handlerTag, obj);
         const props = closure_0.props;
         let onGestureEvent;
@@ -157,26 +157,27 @@ export default function createHandler(name) {
           }
           tmp6 = tmp7;
         }
-        const props2 = tmp.props;
+        const props2 = closure_0.props;
         if (!tmp6) {
           if (!onHandlerStateChange) {
             if (onGestureEvent) {
               if ("__isNative" in onGestureEvent) {
-                let REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.NATIVE_ANIMATED_EVENT;
+                let REANIMATED_WORKLET = Handler(config[14]).ActionType.NATIVE_ANIMATED_EVENT;
               }
             }
-            REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.JS_FUNCTION_OLD_API;
+            REANIMATED_WORKLET = Handler(config[14]).ActionType.JS_FUNCTION_OLD_API;
           }
-          allowedProps(tmp3[11]).attachGestureHandler(tmp.handlerTag, viewTag, REANIMATED_WORKLET);
-          let tmp2Result = tmp2(tmp3[12]);
+          allowedProps(config[11]).attachGestureHandler(closure_0.handlerTag, viewTag, REANIMATED_WORKLET);
+          let tmp2Result = Handler(config[12]);
           const result1 = tmp2Result.scheduleFlushOperations();
-          tmp2Result = tmp2(tmp3[15]);
+          tmp2Result = Handler(config[15]);
           tmp2Result.ghQueueMicrotask(() => {
-            const MountRegistry = callback(closure_2_2[16]).MountRegistry;
+            const MountRegistry = callback(config[16]).MountRegistry;
             const result = MountRegistry.gestureHandlerWillMount(callback);
           });
+          const obj3 = allowedProps(config[11]);
         }
-        REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.REANIMATED_WORKLET;
+        REANIMATED_WORKLET = Handler(config[14]).ActionType.REANIMATED_WORKLET;
       };
       tmp3Result.setGestureHandlerConfig = (config) => {
         closure_0.config = config;
@@ -217,15 +218,14 @@ export default function createHandler(name) {
     {
       key: "componentDidMount",
       value: function componentDidMount() {
-        let self = this;
-        self = this;
+        const self = this;
         const props = this.props;
         this.isMountedRef.current = true;
         if (Array.isArray(props.simultaneousHandlers)) {
-          let someResult = simultaneousHandlers.some((current) => {
-            let tmp = current;
-            if (current) {
-              tmp = null === current.current;
+          let someResult = simultaneousHandlers.some((item, index) => {
+            let tmp = item;
+            if (item) {
+              tmp = null === item.current;
             }
             return tmp;
           });
@@ -240,7 +240,6 @@ export default function createHandler(name) {
             _mod6409.ghQueueMicrotask(() => {
               self.update(1);
             });
-            const obj = _mod6409;
           }
           const props2 = self.props;
           const items = [];
@@ -260,10 +259,10 @@ export default function createHandler(name) {
           const waitFor = props.waitFor;
           const _Array = Array;
           if (Array.isArray(waitFor)) {
-            let someResult1 = waitFor.some((current) => {
-              let tmp = current;
-              if (current) {
-                tmp = null === current.current;
+            let someResult1 = waitFor.some((item, index) => {
+              let tmp = item;
+              if (item) {
+                tmp = null === item.current;
               }
               return tmp;
             });
@@ -302,27 +301,27 @@ export default function createHandler(name) {
         const obj2 = allowedProps(config[11]);
         const result1 = Handler(config[12]).scheduleFlushOperations();
         if (self.props.id) {
-          const handlerIDToTag = tmp4(tmp5[13]).handlerIDToTag;
+          const handlerIDToTag = Handler(config[13]).handlerIDToTag;
           delete tmp[tmp2];
         }
-        const MountRegistry = tmp4(tmp5[16]).MountRegistry;
+        const MountRegistry = Handler(config[16]).MountRegistry;
         const result2 = MountRegistry.gestureHandlerWillUnmount(self);
+        const obj3 = Handler(config[12]);
       }
     },
     {
       key: "update",
       value: function update(arg0) {
-        let self = this;
-        self = this;
+        const self = this;
         closure_0 = arg0;
         if (this.isMountedRef.current) {
           const props = self.props;
           const _Array = Array;
           if (Array.isArray(props.simultaneousHandlers)) {
-            let someResult = simultaneousHandlers.some((current) => {
-              let tmp = current;
-              if (current) {
-                tmp = null === current.current;
+            let someResult = simultaneousHandlers.some((item, index) => {
+              let tmp = item;
+              if (item) {
+                tmp = null === item.current;
               }
               return tmp;
             });
@@ -344,23 +343,21 @@ export default function createHandler(name) {
             const props2 = self.props;
             const items = [];
             const obj = Handler(config[12]);
-            const tmp7 = Handler;
-            const tmp8 = config;
             HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(self, 0));
             const filterConfigResult = obj.filterConfig(callback ? callback(props2) : props2, items, config);
             const tmp9 = callback ? callback(props2) : props2;
             if (!tmp7Result.deepEqual(self.config, filterConfigResult)) {
               const result = self.setGestureHandlerConfig(filterConfigResult);
             }
-            tmp7Result = tmp7(tmp8[18]);
+            tmp7Result = Handler(config[18]);
           } else {
             const waitFor = props.waitFor;
             const _Array2 = Array;
             if (Array.isArray(waitFor)) {
-              let someResult1 = waitFor.some((current) => {
-                let tmp = current;
-                if (current) {
-                  tmp = null === current.current;
+              let someResult1 = waitFor.some((item, index) => {
+                let tmp = item;
+                if (item) {
+                  tmp = null === item.current;
                 }
                 return tmp;
               });

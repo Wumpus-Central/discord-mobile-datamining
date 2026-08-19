@@ -27,15 +27,14 @@ export default function baseOrderBy(arg0, arg1, arg2) {
     tmp3 = tmp2;
     tmp4 = tmp;
   }
-  closure_0 = items;
   c2 = -1;
-  let tmp4Result = tmp4(tmp3[0]);
-  tmp4Result = tmp4(tmp3[4]);
+  tmp4(tmp3[0]);
+  const tmp4Result = tmp4(tmp3[4]);
   closure_0 = tmp4Result(items, tmp4Result(tmp4(tmp3[5])));
   return tmp4(tmp3[7])(tmp4(tmp3[6])(arg0, (value) => {
     const callback = value;
     const sum = c2 + 1;
     c2 = sum;
-    return { criteria: callback(764)(callback, (arg0) => arg0(closure_0)), index: sum, value };
+    return { criteria: callback(764)(callback, (fn) => fn(closure_0)), index: sum, value };
   }), (arg0, arg1) => callback(8054)(arg0, arg1, dependencyMap));
 };

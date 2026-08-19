@@ -2,8 +2,12 @@
 
 // Module 13672
 import _mod13673 from "module_13673" /* 13673 */;
+import _mod13674 from "module_13674" /* 13674 */;
 import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13675 */;
 import isForced from "isForced" /* 13712 */;
+import _mod13713 from "module_13713" /* 13713 */;
+import _mod13729 from "module_13729" /* 13729 */;
+import _mod13730 from "module_13730" /* 13730 */;
 
 
 export default (dontCallGetSet, obj) => {
@@ -15,23 +19,20 @@ export default (dontCallGetSet, obj) => {
     let tmp4 = tmp3[target];
     if (stat) {
       if (!tmp4) {
-        tmp4 = tmp(13674)(target, {});
+        tmp4 = _mod13674(target, {});
       }
       prototype = tmp4;
     } else {
       prototype = tmp4;
       if (tmp4) {
-        prototype = tmp(13673)[target].prototype;
+        prototype = _mod13673[target].prototype;
       }
     }
   }
   if (prototype) {
     for (const key10024 in arg1) {
       let tmp21 = arg1[key10024];
-      let tmp20 = key10024;
       if (arg0.dontCallGetSet) {
-        let tmp8 = require;
-        let tmp9 = dependencyMap;
         obj = getOwnPropertyDescriptor;
         let iter = obj.f(prototype, key10024);
         let value = iter;
@@ -42,8 +43,6 @@ export default (dontCallGetSet, obj) => {
       } else {
         tmp7 = prototype[key10024];
       }
-      let tmp10 = require;
-      let tmp11 = dependencyMap;
       let sum = key10024;
       let tmp12 = isForced;
       if (!_global) {
@@ -58,7 +57,7 @@ export default (dontCallGetSet, obj) => {
           if (typeof tmp21 === typeof tmp7) {
             continue;
           } else {
-            let tmp22 = tmp10(13713)(tmp21, tmp7);
+            let tmp22 = _mod13713(tmp21, tmp7);
           }
         }
         continue;
@@ -72,13 +71,9 @@ export default (dontCallGetSet, obj) => {
         sham = sham2;
       }
       if (sham) {
-        let tmp14 = tmp10(13729)(tmp21, "sham", true);
+        let tmp14 = _mod13729(tmp21, "sham", true);
       }
-      let tmp15 = prototype;
-      let tmp16 = key10024;
-      let tmp17 = tmp21;
-      let tmp18 = arg0;
-      let tmp19 = tmp10(13730)(prototype, tmp20, tmp21, arg0);
+      let tmp19 = _mod13730(prototype, key10024, tmp21, arg0);
       continue;
     }
   }

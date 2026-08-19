@@ -3,18 +3,19 @@
 // Module 6670 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 6579 */;
 import extractPropsDefault from "extractProps" /* 6586 */;
 import extractFontDefault from "extractFont" /* 6593 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6671 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 import extractFont from "extractFont" /* 6593 */;
 
-const TSpan = arg1;
+const TSpan = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -58,18 +59,19 @@ class TSpan {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = closure_1_1(closure_1_2[7])(matrix);
+        tmp = appendTransformPropsDefault(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
+      const propsAndStylesResult = lib(dependencyMap[8]).propsAndStyles(matrix);
+      const obj = lib(dependencyMap[8]);
+      const merged = Object.assign(propsAndStylesResult, lib(dependencyMap[9]).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
       }
+      const obj2 = lib(dependencyMap[9]);
     };
     return tmp3Result;
   }
@@ -89,7 +91,6 @@ let items = [
       const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }

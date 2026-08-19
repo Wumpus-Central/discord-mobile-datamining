@@ -4,28 +4,29 @@
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.whenIdleOrHidden = (arg0) => {
-  let _require = arg0;
+arg5.whenIdleOrHidden = (fn) => {
+  let _require = fn;
   const _document = tmp(1039).WINDOW.document;
   let visibilityState;
   if (_document != null) {
     visibilityState = _document.visibilityState;
   }
   if ("hidden" === visibilityState) {
-    arg0();
+    fn();
   } else {
     let tmpResult = tmp(1048);
-    const runOnceResult = tmpResult.runOnce(arg0);
+    const runOnceResult = tmpResult.runOnce(fn);
     _require = runOnceResult;
     tmpResult = tmp(1041);
     tmpResult.addPageListener("visibilitychange", runOnceResult, { once: true, capture: true });
     tmp(1041).addPageListener("pagehide", runOnceResult, { once: true, capture: true });
     tmp3(() => {
       callback();
-      callback(closure_1_1[2]).removePageListener("visibilitychange", callback, { capture: true });
-      const obj = callback(closure_1_1[2]);
-      callback(closure_1_1[2]).removePageListener("pagehide", callback, { capture: true });
+      callback(dependencyMap[2]).removePageListener("visibilitychange", callback, { capture: true });
+      const obj = callback(dependencyMap[2]);
+      callback(dependencyMap[2]).removePageListener("pagehide", callback, { capture: true });
     });
     const tmpResult1 = tmp(1041);
   }
+  tmp3 = _require(1039).WINDOW.requestIdleCallback || _require(1039).WINDOW.setTimeout;
 };

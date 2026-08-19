@@ -40,8 +40,8 @@ export default function closestTo(arg0, arg1) {
         typeof call === "unknown" ? slice() : call(arg1);
       }
     }
-    const item = items.forEach((arg0) => {
-      const defaultResult = closure_1_0.default(arg0);
+    const item = items.forEach((item, index) => {
+      const defaultResult = _typeof.default(item);
       if (isNaN(Number(defaultResult))) {
         const _Date = Date;
         let date = new Date(NaN);

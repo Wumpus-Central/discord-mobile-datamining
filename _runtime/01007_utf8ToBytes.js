@@ -5,7 +5,6 @@ import utf8ToBytes from "utf8ToBytes" /* 1009 */;
 import base64StringFromByteArray from "base64StringFromByteArray" /* 1011 */;
 
 for (const key10013 in require("module_1008")) {
-  let tmp2 = key10013;
   arg5[key10013] = require("module_1008")[key10013];
   continue;
 }

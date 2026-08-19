@@ -2,6 +2,8 @@
 
 // Module 7736 (addHandler)
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 7737 */;
+import consoleSandbox from "consoleSandbox" /* 7738 */;
+import createStackParser from "createStackParser" /* 7741 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -9,28 +11,27 @@ let closure_2 = {};
 let closure_3 = {};
 arg5.addHandler = function addHandler(arg0, arg1) {
   dependencyMap[arg0] = dependencyMap[arg0] || [];
-  let arr = tmp[arg0];
+  let arr = dependencyMap[arg0];
   arr = arr.push(arg1);
 };
-arg5.maybeInstrument = function maybeInstrument(arg0, arg1) {
+arg5.maybeInstrument = function maybeInstrument(arg0, fn) {
   if (!table[arg0]) {
     tmp2[arg0] = true;
     try {
-      arg1();
+      fn();
     } catch (tmp5) {
       if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-        const logger = tmp6(7738).logger;
+        const logger = consoleSandbox.logger;
         const _HermesInternal = HermesInternal;
         logger.error("Error while instrumenting " + tmp, tmp5);
       }
-      tmp6 = require;
     }
   }
 };
 arg5.resetInstrumentationHandlers = function resetInstrumentationHandlers() {
   const keys = Object.keys(closure_2);
-  const item = keys.forEach((arg0) => {
-    closure_2[arg0] = undefined;
+  const item = keys.forEach((item, index) => {
+    closure_2[item] = undefined;
   });
 };
 arg5.triggerHandlers = function triggerHandlers(arg0, arg1) {
@@ -45,9 +46,9 @@ arg5.triggerHandlers = function triggerHandlers(arg0, arg1) {
         tmp15(arg1);
       } catch (tmp18) {
         if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-          const logger = tmp19(7738).logger;
-          logger.error(tmp2 + tmp6 + tmp3 + tmp19(7741).getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = tmp19(7741);
+          const logger = consoleSandbox.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + createStackParser.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = createStackParser;
         }
       }
     }

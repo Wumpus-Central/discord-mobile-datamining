@@ -2,8 +2,8 @@
 
 // Module 13590 (__exportStarResult7)
 const exports = SANCTIONED_UNITS;
-function removeUnitNamespace(arr) {
-  return arr.slice(arr.indexOf("-") + 1);
+function removeUnitNamespace(item, index) {
+  return item.slice(item.indexOf("-") + 1);
 }
 SANCTIONED_UNITS.SANCTIONED_UNITS = undefined;
 SANCTIONED_UNITS.SIMPLE_UNITS = undefined;

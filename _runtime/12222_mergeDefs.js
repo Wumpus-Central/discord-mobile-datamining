@@ -28,13 +28,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -47,7 +45,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -65,7 +62,8 @@ if (self2) {
       closure_2 = { nan: "NaN" };
       return {
         localeError: (code) => {
-          switch (code.code) {
+          code = code.code;
+          switch (code) {
             case "t":
             break;
             case "to":
@@ -569,43 +567,124 @@ if (self2) {
             case "xyYt8A":
             break;
             case "ACTIVITIES_INVITES_WRITE":
-            break;
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
+              }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp33 = closure_2[parsedTypeResult];
+              if (tmp33 == null) {
+                tmp33 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal14 = HermesInternal;
+                let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp33;
+              } else {
+                const _HermesInternal13 = HermesInternal;
+                combined = "Virheellinen tyyppi: odotettiin " + expected + ", oli " + tmp33;
+              }
+              return combined;
             case "INVITES":
             break;
             case "TEAL_NEW_60":
-            break;
+              if (1 === code.values.length) {
+                const _HermesInternal12 = HermesInternal;
+                let combined1 = "Virheellinen sy\u00F6te: t\u00E4ytyy olla " + closure_2.stringifyPrimitive(code.values[0]);
+              } else {
+                const _HermesInternal11 = HermesInternal;
+                combined1 = "Virheellinen valinta: t\u00E4ytyy olla yksi seuraavista: " + closure_2.joinValues(code.values, "|");
+              }
+              return combined1;
             case "useIsReferralReminderDCExperimentEnabled":
             break;
             case "dragOffsetFromRight":
-            break;
+              let str28 = "<";
+              if (code.inclusive) {
+                str28 = "<=";
+              }
+              let tmp20 = dependencyMap[code.origin];
+              if (tmp20 == null) {
+                tmp20 = null;
+              }
+              if (tmp20) {
+                const _HermesInternal10 = HermesInternal;
+                code = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit.trim();
+                const str35 = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit;
+              } else {
+                code = globalThis;
+                code = "Liian suuri: arvon t\u00E4ytyy olla " + str28 + code.maximum.toString();
+              }
+              return code;
             case "$ZodBoolean":
             break;
             case "ZodBoolean":
-            break;
+              let str20 = ">";
+              if (code.inclusive) {
+                str20 = ">=";
+              }
+              let tmp13 = dependencyMap[code.origin];
+              if (tmp13 == null) {
+                tmp13 = null;
+              }
+              if (tmp13) {
+                const _HermesInternal9 = HermesInternal;
+                let trimmed = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit.trim();
+                const str27 = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit;
+              } else {
+                const _HermesInternal8 = HermesInternal;
+                trimmed = "Liian pieni: arvon t\u00E4ytyy olla " + str20 + code.minimum.toString();
+              }
+              return trimmed;
             case "B":
             break;
             case "le":
-            break;
+              if ("starts_with" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                let combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy alkaa \"" + code.prefix + "\"";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy loppua \"" + code.suffix + "\"";
+              } else if ("includes" === code.format) {
+                const _HermesInternal5 = HermesInternal;
+                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
+              } else if ("regex" === code.format) {
+                const _HermesInternal4 = HermesInternal;
+                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
+              } else {
+                let format = table[code.format];
+                if (format == null) {
+                  format = code.format;
+                }
+                const _HermesInternal3 = HermesInternal;
+                combined2 = "Virheellinen " + format;
+              }
+              return combined2;
             case "an":
             break;
             case "n":
-            break;
+              const _HermesInternal2 = HermesInternal;
+              return "Virheellinen luku: t\u00E4ytyy olla luvun " + code.divisor + " monikerta";
             case "ActionBarPrimaryButton":
             break;
             case "ary":
-            break;
+              let str4 = "Tuntematon avain";
+              if (code.keys.length > 1) {
+                str4 = "Tuntemattomat avaimet";
+              }
+              const _HermesInternal = HermesInternal;
+              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
             case "u":
             break;
             case "tt":
-            break;
+              return "Virheellinen avain tietueessa";
             case "on":
             break;
             case "$ZodDate":
-            break;
+              return "Virheellinen unioni";
             case "ZodDate":
             break;
             case "D":
-            break;
+              return "Virheellinen arvo joukossa";
             case "DateParser":
             break;
             case "at":
@@ -739,35 +818,6 @@ if (self2) {
             case "M":
             break;
             case "ap":
-              while (true) {
-                let str2 = "includes";
-                if ("includes" === code.format) {
-                  let tmp6 = globalThis;
-                  let _HermesInternal3 = HermesInternal;
-                  let str6 = "\"";
-                  let str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  let combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  let str3 = "regex";
-                  if ("regex" === code.format) {
-                    let tmp5 = globalThis;
-                    let _HermesInternal2 = HermesInternal;
-                    let str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    let tmp = dependencyMap;
-                    let format = dependencyMap[code.format];
-                    let tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    let tmp3 = globalThis;
-                    let _HermesInternal = HermesInternal;
-                    let str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -1292,7 +1342,7 @@ if (self2) {
             case "DEFAULT_STEP_RESOLUTION":
             break;
             case "RESOLUTION_1080":
-            break;
+              return "Virheellinen arvo joukossa";
             case "_applyCombination":
             break;
             case "ly":
@@ -1426,35 +1476,6 @@ if (self2) {
             case "_children":
             break;
             case "_childrenToCellKey":
-              while (true) {
-                str2 = "includes";
-                if ("includes" === code.format) {
-                  tmp6 = globalThis;
-                  _HermesInternal3 = HermesInternal;
-                  str6 = "\"";
-                  str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  str3 = "regex";
-                  if ("regex" === code.format) {
-                    tmp5 = globalThis;
-                    _HermesInternal2 = HermesInternal;
-                    str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    tmp = dependencyMap;
-                    format = dependencyMap[code.format];
-                    tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    tmp3 = globalThis;
-                    _HermesInternal = HermesInternal;
-                    str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "child":
             break;
@@ -1937,7 +1958,7 @@ if (self2) {
             case "system_channel_flags":
             break;
             case "channel_flags":
-            break;
+              return "Virheellinen arvo joukossa";
             case "_flags":
             break;
             case "flag":
@@ -1965,7 +1986,7 @@ if (self2) {
             case "_$esjava$limit_backward":
             break;
             case "limit_backward":
-              return "Virheellinen arvo joukossa";
+            break;
             case "_b":
             break;
             case "messageDisplayCompact":
@@ -1975,7 +1996,7 @@ if (self2) {
             case "activeStreams":
             break;
             case "JPY":
-            break;
+              return "Virheellinen arvo joukossa";
             case "PYF":
             break;
             case "ZcgDJX":
@@ -1987,7 +2008,7 @@ if (self2) {
             case "for":
             break;
             case "forEachChannel":
-              return "Virheellinen arvo joukossa";
+            break;
             case "ga":
             break;
             case "gaps":

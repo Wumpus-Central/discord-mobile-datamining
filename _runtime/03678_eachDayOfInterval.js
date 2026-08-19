@@ -50,14 +50,8 @@ export default function eachDayOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time) {
           do {
-            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
             let setDateResult = defaultResult1.setDate(defaultResult1.getDate() + NumberResult);
-            let tmp18 = defaultResult1;
-            let num6 = 0;
-            let num7 = 0;
-            let num8 = 0;
-            let num9 = 0;
             let setHoursResult1 = defaultResult1.setHours(0, 0, 0, 0);
             time1 = defaultResult1.getTime();
           } while (time1 <= time);

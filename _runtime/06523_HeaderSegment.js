@@ -1,13 +1,13 @@
 // === Module 6523: HeaderSegment ===
 
 // Module 6523 (HeaderSegment)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["progress", "layout", "modal", "onGoBack", "backHref", "headerTitle", "headerLeft", "headerRight", "headerBackImage", "headerBackTitle", "headerBackButtonDisplayMode", "headerBackTruncatedTitle", "headerBackAccessibilityLabel", "headerBackTestID", "headerBackAllowFontScaling", "headerBackTitleStyle", "headerTitleContainerStyle", "headerLeftContainerStyle", "headerRightContainerStyle", "headerBackgroundContainerStyle", "headerStyle", "headerStatusBarHeight", "styleInterpolator"];
 ({ Platform, StyleSheet: closure_6 } = get_ActivityIndicator);
 
@@ -88,8 +88,7 @@ export const HeaderSegment = function HeaderSegment(progress) {
   height = tmp10;
   let items = [styleInterpolator, progress, direction, tmp10, layout, first1, first];
   const memo = obj2.useMemo(() => {
-    obj = { current: obj, next: null, direction: null, layouts: null };
-    obj = { progress: progress.current };
+    let obj = { progress: progress.current };
     let next = progress.next;
     if (next) {
       obj = { progress: null };

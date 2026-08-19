@@ -25,10 +25,7 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
     items = items2;
     if (0 < arr3.length) {
       do {
-        let tmp = require;
-        let tmp2 = dependencyMap;
         let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require(13644) /* parseUnicodeLanguageId */.parseUnicodeLocaleId(arr3[num3])));
-        let tmp4 = num3;
         if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
           let arr = items2.push(emitUnicodeLocaleIdResult);
         }

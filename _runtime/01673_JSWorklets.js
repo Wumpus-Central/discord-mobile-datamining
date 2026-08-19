@@ -2,7 +2,7 @@
 
 // Module 1673 (JSWorklets)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const JSWorklets = arg1;
 class JSWorklets {

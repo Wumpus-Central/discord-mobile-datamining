@@ -5,40 +5,34 @@ import noop from "noop" /* 19 */;
 
 ({ useCallback: obj1, useEffect: c3 } = noop);
 
-export const useScrollableSetter = (arg0, arg1, arg2, arg3) => {
-  const _require = arg0;
-  dependencyMap = arg1;
-  const callback = arg2;
+export const useScrollableSetter = (scrollableRef, closure_0, scrollableContentOffsetY, arg3, focusHook) => {
+  const _require = scrollableRef;
+  dependencyMap = closure_0;
+  const callback = scrollableContentOffsetY;
   closure_3 = arg3;
-  let tmp = arg4;
-  if (arg4 === undefined) {
+  let tmp = focusHook;
+  if (focusHook === undefined) {
     tmp = closure_3;
   }
-  let animatedScrollableType;
-  let animatedScrollableContentOffsetY;
-  let isContentHeightFixed;
-  let isScrollableRefreshable;
-  let setScrollableRef;
-  let removeScrollableRef;
   const bottomSheetInternal = _require(6960).useBottomSheetInternal();
-  animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
-  isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
-  setScrollableRef = bottomSheetInternal.setScrollableRef;
-  removeScrollableRef = bottomSheetInternal.removeScrollableRef;
-  const items = [arg0, arg1, arg3, animatedScrollableType, animatedScrollableContentOffsetY, arg2, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const setScrollableRef = bottomSheetInternal.setScrollableRef;
+  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
+  const items = [scrollableRef, closure_0, arg3, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
   tmp(callback(() => {
-    animatedScrollableContentOffsetY.value = value.value;
+    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
     animatedScrollableType.value = table;
     isScrollableRefreshable.value = closure_3;
     isContentHeightFixed.value = false;
-    let obj = ref(table[2]);
-    const findNodeHandleResult = obj.findNodeHandle(ref.current);
+    let obj = scrollableRef(table[2]);
+    const findNodeHandleResult = obj.findNodeHandle(scrollableRef.current);
     if (findNodeHandleResult) {
       obj = { id: null, node: null };
       obj[0] = findNodeHandleResult;
-      obj[1] = ref;
+      obj[1] = scrollableRef;
       setScrollableRef(obj);
     } else {
       const _console = console;

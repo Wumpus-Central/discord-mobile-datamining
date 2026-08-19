@@ -20,5 +20,4 @@ export default function Call(arg0, arg1) {
     const tmp6 = new _mod541("Assertion failed: optional `argumentsList`, if provided, must be a List");
     throw tmp6;
   }
-  const tmp2 = require;
 };

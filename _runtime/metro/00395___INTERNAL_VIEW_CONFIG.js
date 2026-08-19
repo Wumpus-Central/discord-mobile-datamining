@@ -5,9 +5,7 @@ import result from "result" /* 26 */;
 import setRuntimeConfigProviderAll from "setRuntimeConfigProvider" /* 65 */;
 import pointsDiffer from "pointsDiffer" /* 78 */;
 
-let obj = { uiViewClassName: "RCTScrollView", bubblingEventTypes: {}, directEventTypes: { topMomentumScrollBegin: { registrationName: "onMomentumScrollBegin" }, topMomentumScrollEnd: { registrationName: "onMomentumScrollEnd" }, topScroll: { registrationName: "onScroll" }, topScrollBeginDrag: { registrationName: "onScrollBeginDrag" }, topScrollEndDrag: { registrationName: "onScrollEndDrag" } }, validAttributes: null };
-obj = { contentOffset: null, decelerationRate: true, disableIntervalMomentum: true, maintainVisibleContentPosition: true, pagingEnabled: true, scrollEnabled: true, showsVerticalScrollIndicator: true, snapToAlignment: true, snapToEnd: true, snapToInterval: true, snapToOffsets: true, snapToStart: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, sendMomentumEvents: true, borderRadius: true, nestedScrollEnabled: true, scrollEventThrottle: true, borderStyle: true, borderRightColor: null, borderColor: null, borderBottomColor: null, persistentScrollbar: true, horizontal: true, endFillColor: null, fadingEdgeLength: true, overScrollMode: true, borderTopLeftRadius: true, scrollPerfTag: true, borderTopColor: null, removeClippedSubviews: true, borderTopRightRadius: true, borderLeftColor: null, pointerEvents: true, isInvertedVirtualizedList: true, scrollsChildToFocus: true };
-obj = { diff: pointsDiffer.default };
+const obj = { diff: pointsDiffer.default };
 obj[0] = obj;
 obj[19] = result.colorAttribute;
 obj[20] = result.colorAttribute;

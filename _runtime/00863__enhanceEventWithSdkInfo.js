@@ -1,6 +1,7 @@
 // === Module 863: _enhanceEventWithSdkInfo ===
 
 // Module 863 (_enhanceEventWithSdkInfo)
+import dsnFromString from "dsnFromString" /* 837 */;
 import forEachEnvelopeItem from "forEachEnvelopeItem" /* 864 */;
 
 require = arg1;
@@ -77,11 +78,11 @@ arg5.createEventEnvelope = function createEventEnvelope(type, arg1, sdk) {
     sdk = sdk.sdk;
   }
   _enhanceEventWithSdkInfo(type, sdk);
-  let tmp3Result = tmp3(864);
+  let tmp3Result = forEachEnvelopeItem;
   const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, arg1);
   delete tmp[tmp2];
   const items = [{ type: str }, type];
-  tmp3Result = tmp3(864);
+  tmp3Result = forEachEnvelopeItem;
   const items1 = [items];
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items1);
 };
@@ -99,7 +100,7 @@ arg5.createSessionEnvelope = function createSessionEnvelope(toJSON) {
   let tmp6 = arg3 && arg1;
   if (tmp6) {
     obj1 = { dsn: null };
-    let tmpResult = tmp(837);
+    let tmpResult = dsnFromString;
     obj1[0] = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
   }
@@ -110,7 +111,7 @@ arg5.createSessionEnvelope = function createSessionEnvelope(toJSON) {
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
-  tmpResult = tmp(864);
+  tmpResult = forEachEnvelopeItem;
   const items2 = [items1];
   return tmpResult.createEnvelope(obj, items2);
 };
@@ -158,9 +159,9 @@ arg5.createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
   }
   let found = arr;
   if (length) {
-    found = arr.filter((arg0) => {
+    found = arr.filter((item, index) => {
       const obj = beforeSendSpan(ignoreSpans[3]);
-      return !obj.shouldIgnoreSpan(beforeSendSpan(ignoreSpans[4]).spanToJSON(arg0), ignoreSpans);
+      return !obj.shouldIgnoreSpan(beforeSendSpan(ignoreSpans[4]).spanToJSON(item), ignoreSpans);
     });
   }
   const diff = arr.length - found.length;

@@ -3,19 +3,18 @@
 // Module 6348 (HeaderBackButton)
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 import registerAssetDefault from "registerAsset" /* 6320 */;
+import HeaderIcon from "HeaderIcon" /* 6349 */;
 import HeaderButton from "HeaderButton" /* 6354 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 ({ Animated: c5, Image, Platform, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 24;
-obj = { container: obj, label: { fontSize: 17, letterSpacing: 0.35 }, labelWrapper: null, icon: null, iconWithLabel: null, iconMaskContainer: null, iconMaskFillerRect: null, iconMask: null, flip: null };
-obj = { paddingHorizontal: 0, minWidth: StyleSheet.hairlineWidth, marginVertical: 3, marginHorizontal: 11 };
-obj = { flexDirection: "row", alignItems: "flex-start", marginEnd: require("HeaderIcon").ICON_MARGIN };
+let obj = { flexDirection: "row", alignItems: "flex-start", marginEnd: require("HeaderIcon").ICON_MARGIN };
 obj[2] = obj;
 obj[3] = { width: 24, marginEnd: 3 };
 obj[4] = {};
@@ -87,9 +86,9 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     obj1 = { source: null, tintColor: null, style: null };
     obj1[0] = registerAssetDefault;
     obj1[1] = tintColor;
-    const items1 = [tmp10.icon, "minimal" !== displayMode && tmp10.iconWithLabel];
+    const items1 = [container.icon, "minimal" !== displayMode && container.iconWithLabel];
     obj1[2] = items1;
-    backImageResult = tmp9(tmp2(6349).HeaderIcon, obj1);
+    backImageResult = callback(HeaderIcon.HeaderIcon, obj1);
   }
   const items2 = [backImageResult, ];
   let tmp11Result = null;
@@ -99,7 +98,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
       diff = null;
       if (screenLayout) {
         const result = (screenLayout.width - titleLayout.width) / 2;
-        diff = result - (c9 + tmp2(6349).ICON_MARGIN);
+        diff = result - (c9 + HeaderIcon.ICON_MARGIN);
       }
     }
     let tmp19 = truncatedLabel;
@@ -123,10 +122,10 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
         }
       }
     }
-    const items3 = [fonts.regular, tmp10.label, labelStyle];
+    const items3 = [fonts.regular, container.label, labelStyle];
     const items4 = [items3, { position: "absolute", top: 0, left: 0, opacity: 0 }];
     const obj2 = { style: null, children: null };
-    obj2[0] = tmp10.labelWrapper;
+    obj2[0] = container.labelWrapper;
     let tmp9Result = null;
     if (label) {
       tmp9Result = null;
@@ -137,7 +136,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
           return _undefined(nativeEvent.nativeEvent.layout.width);
         };
         obj3[3] = label;
-        tmp9Result = tmp9(RN.Text, obj3);
+        tmp9Result = callback(RN.Text, obj3);
       }
     }
     const items5 = [tmp9Result, , ];
@@ -149,7 +148,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
         return _undefined2(nativeEvent.nativeEvent.layout.width);
       };
       obj4[3] = truncatedLabel;
-      tmp9Result = tmp9(RN.Text, obj4);
+      tmp9Result = callback(RN.Text, obj4);
     }
     items5[1] = tmp9Result;
     let tmp9Result1 = null;
@@ -166,14 +165,13 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
       obj5[2] = items6;
       obj5[4] = allowFontScaling;
       obj5[5] = tmp20;
-      tmp9Result1 = tmp9(RN.Text, obj5);
+      tmp9Result1 = callback(RN.Text, obj5);
     }
     items5[2] = tmp9Result1;
     obj2[1] = items5;
-    tmp11Result = tmp11(closure_6, obj2);
-    const tmp22 = closure_6;
+    tmp11Result = callback2(closure_6, obj2);
   }
   items2[1] = tmp11Result;
-  obj[8] = closure_8(React.Fragment, { children: items2 });
-  return closure_7(HeaderButton.HeaderButton, obj);
+  obj[8] = callback2(React.Fragment, { children: items2 });
+  return callback(HeaderButton.HeaderButton, obj);
 };

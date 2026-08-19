@@ -4,19 +4,16 @@
 import _modDef4913 from "module_4913" /* 4913 */;
 import _modDef4927 from "module_4927" /* 4927 */;
 import importDefaultResult1 from "importDefaultResult1" /* 4931 */;
+import importDefaultResult1Default from "importDefaultResult1" /* 4931 */;
 
 require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
   obj = _modDef4927;
   const typeSize = obj.getTypeSize("SHORT");
   sum = typeSize + _modDef4927.getTypeSize("SHORT");
-  const obj2 = _modDef4927;
   const sum1 = sum + _modDef4927.getTypeSize("LONG");
-  const obj3 = _modDef4927;
   const shortAt = _modDef4927.getShortAt(byteLength, sum, byteOrder);
-  const obj4 = _modDef4927;
   const shortAt1 = _modDef4927.getShortAt(byteLength, sum + typeSize, byteOrder);
-  const obj5 = _modDef4927;
   const longAt = _modDef4927.getLongAt(byteLength, sum + sum, byteOrder);
   if (undefined !== _modDef4927.typeSizes[shortAt1]) {
     if ((function tagValueFitsInOffsetSlot(shortAt1, longAt) {
@@ -27,7 +24,7 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
       let str = getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder);
       let tmp21 = sum2;
     } else {
-      const longAt1 = tmp4(4927).getLongAt(byteLength, sum + sum1, byteOrder);
+      const longAt1 = _modDef4927.getLongAt(byteLength, sum + sum1, byteOrder);
       str = "<faulty value>";
       tmp21 = longAt1;
       if ((function tagValueFitsInDataView(byteLength, sum, longAt1, shortAt1, longAt) {
@@ -37,36 +34,34 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
         str = getTagValue(byteLength, sum + longAt1, shortAt1, longAt, byteOrder, 33723 === shortAt);
         tmp21 = longAt1;
       }
-      const tmp4Result = tmp4(4927);
+      const tmp4Result = _modDef4927;
     }
     let tmp34 = str;
-    if (shortAt1 === tmp4(4927).tagTypes.ASCII) {
+    if (shortAt1 === _modDef4927.tagTypes.ASCII) {
       tmp34 = (function decodeAsciiValue(arr) {
         try {
-          return arr.map((arg0) => decodeURIComponent(escape(arg0)));
+          return arr.map((item, index) => decodeURIComponent(escape(item)));
         } catch (err) {
           return tmp;
         }
-      })((function splitNullSeparatedAsciiString(arg0) {
+      })((function splitNullSeparatedAsciiString(tagValue) {
         const items = [];
         let num = 0;
         let num2 = 0;
-        if (0 < arg0.length) {
+        if (0 < tagValue.length) {
           do {
-            let tmp = num2;
-            let tmp2 = num;
-            if ("\0" !== arg0[num2]) {
+            if ("\0" !== tagValue[num2]) {
               if (undefined === items[num]) {
                 items[num] = "";
               }
-              items[num] = items[num] + arg0[num2];
+              items[num] = items[num] + tagValue[num2];
               let sum = num;
             } else {
               sum = num + 1;
             }
             num2 = num2 + 1;
             num = sum;
-          } while (num2 < arg0.length);
+          } while (num2 < tagValue.length);
         }
         return items;
       })(str));
@@ -74,26 +69,25 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
     const _HermesInternal = HermesInternal;
     let combined = "undefined-" + shortAt;
     let descriptionResult = tmp34;
-    if (undefined !== tmp4(4931)[IFD_TYPE_0TH][shortAt]) {
-      if (undefined !== tmp4(4931)[IFD_TYPE_0TH][shortAt].name) {
-        if (undefined !== tmp4(4931)[IFD_TYPE_0TH][shortAt].description) {
+    if (undefined !== importDefaultResult1Default[IFD_TYPE_0TH][shortAt]) {
+      if (undefined !== importDefaultResult1Default[IFD_TYPE_0TH][shortAt].name) {
+        if (undefined !== importDefaultResult1Default[IFD_TYPE_0TH][shortAt].description) {
           try {
-            descriptionResult = tmp4(4931)[IFD_TYPE_0TH][shortAt].description(tmp34);
+            descriptionResult = importDefaultResult1Default[IFD_TYPE_0TH][shortAt].description(tmp34);
             combined = tmp39;
-            const obj8 = tmp4(4931)[IFD_TYPE_0TH][shortAt];
           } catch (err) {
             descriptionResult = getDescriptionFromTagValue(tmp2);
             combined = tmp;
           }
         }
       }
-      if (shortAt1 !== tmp4(4927).tagTypes.RATIONAL) {
-        if (shortAt1 !== tmp4(4927).tagTypes.SRATIONAL) {
-          combined = tmp4(4931)[IFD_TYPE_0TH][shortAt];
+      if (shortAt1 !== _modDef4927.tagTypes.RATIONAL) {
+        if (shortAt1 !== _modDef4927.tagTypes.SRATIONAL) {
+          combined = importDefaultResult1Default[IFD_TYPE_0TH][shortAt];
           descriptionResult = getDescriptionFromTagValue(tmp34);
         }
       }
-      combined = tmp4(4931)[IFD_TYPE_0TH][shortAt];
+      combined = importDefaultResult1Default[IFD_TYPE_0TH][shortAt];
       descriptionResult = `${tmp34[0] / tmp34[1]}`;
     }
     obj = { id: null, name: null, value: null, description: null, __offset: null };
@@ -119,10 +113,7 @@ function getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder, arg5) {
   let sum = sum2;
   const items = [];
   for (let num = 0; num < result; num = num + 1) {
-    let tmp5 = obj;
     let arr = items.push(obj[BYTE](byteLength, sum, byteOrder));
-    let tmp7 = importDefault;
-    let tmp8 = dependencyMap;
     sum = sum + _modDef4927.typeSizes[BYTE];
   }
   if (BYTE === _modDef4927.tagTypes.ASCII) {
@@ -164,25 +155,13 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
     tmp5 = sum;
     if (sum + 12 <= byteLength.byteLength) {
       while (true) {
-        let tmp6 = readTag;
-        let num2 = 0;
-        let tmp7 = byteLength;
-        let tmp8 = IFD_TYPE_0TH;
-        let tmp9 = sum;
-        let tmp10 = tmp22;
-        let tmp11 = byteOrder;
-        let tmp12 = arg5;
         let tmp13 = readTag(byteLength, IFD_TYPE_0TH, sum, tmp22, byteOrder, arg5);
-        let tmp14 = num3;
-        let tmp15 = tmp22;
         if (undefined !== tmp13) {
           obj = { id: null, value: null, description: null };
           ({ id: obj7[0], value: obj7[1], description: obj7[2] } = tmp13);
           obj[tmp13.name] = obj;
           let tmp19 = "MakerNote" === tmp13.name;
           if (!tmp19) {
-            let tmp16 = require;
-            let tmp17 = dependencyMap;
             let tmp18 = IFD_TYPE_0TH === importDefaultResult1.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
             tmp19 = tmp18;
           }
@@ -207,9 +186,9 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
     }
   }
   if (_modDef4913.USE_THUMBNAIL) {
-    let tmp23Result = tmp23(4927);
+    let tmp23Result = _modDef4927;
     if (tmp5 < byteLength.byteLength - tmp23Result.getTypeSize("LONG")) {
-      tmp23Result = tmp23(4927);
+      tmp23Result = _modDef4927;
       const longAt = tmp23Result.getLongAt(byteLength, tmp5, byteOrder);
       let tmp26 = 0 !== longAt;
       if (tmp26) {
@@ -223,7 +202,7 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
   return obj;
 }
 
-export const get0thIfdOffset = function get0thIfdOffset(buffer, sum, byteOrder) {
-  return sum + _modDef4927.getLongAt(buffer, sum + 4, byteOrder);
+export const get0thIfdOffset = function get0thIfdOffset(buffer, c5, byteOrder) {
+  return c5 + _modDef4927.getLongAt(buffer, c5 + 4, byteOrder);
 };
 export { readIfd };

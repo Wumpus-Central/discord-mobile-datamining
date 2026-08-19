@@ -12,12 +12,11 @@ function extractRequestData(headers, arg1) {
   if (arg1 === undefined) {
     obj = {};
   }
-  let include;
   obj = undefined;
   closure_3 = undefined;
   let method;
   let combined;
-  include = obj.include;
+  let include = obj.include;
   if (undefined === include) {
     include = closure_3;
   }
@@ -38,32 +37,31 @@ function extractRequestData(headers, arg1) {
     let _HermesInternal = HermesInternal;
     combined = "" + str2 + "://" + tmp2 + tmp3;
   }
-  let item = include.forEach((key10009) => {
-    if ("headers" === key10009) {
+  let item = include.forEach((item, index) => {
+    if ("headers" === item) {
       obj.headers = cookie;
       if (!include.includes("cookies")) {
         headers = tmp28.headers;
         delete tmp2[tmp];
       }
-      if (!obj6.includes("ip")) {
+      if (!include.includes("ip")) {
         const ipHeaderNames = headers(include[1]).ipHeaderNames;
-        const item = ipHeaderNames.forEach((arg0) => {
+        item = ipHeaderNames.forEach((item, index) => {
           delete tmp2[tmp];
         });
       }
-      obj6 = include;
       tmp28 = obj;
-    } else if ("method" === key10009) {
+    } else if ("method" === item) {
       obj.method = method;
-    } else if ("url" === key10009) {
+    } else if ("url" === item) {
       obj.url = combined;
-    } else if ("cookies" === key10009) {
+    } else if ("cookies" === item) {
       let cookies = headers.cookies;
       if (!cookies) {
         cookie = cookie.cookie;
         if (cookie) {
           cookie = headers(include[2]).parseCookie(tmp21.cookie);
-          const obj5 = headers(include[2]);
+          const obj4 = headers(include[2]);
         }
         cookies = cookie;
       }
@@ -71,8 +69,7 @@ function extractRequestData(headers, arg1) {
         cookies = {};
       }
       obj.cookies = cookies;
-      const tmp19 = obj;
-    } else if ("query_string" === key10009) {
+    } else if ("query_string" === item) {
       obj.query_string = (function extractQueryParams(closure_0) {
         if (closure_0.originalUrl || closure_0.url || "") {
           combined = obj;
@@ -98,12 +95,12 @@ function extractRequestData(headers, arg1) {
           }
         }
       })(headers);
-    } else if ("data" === key10009) {
+    } else if ("data" === item) {
       if ("GET" !== method) {
         if ("HEAD" !== tmp5) {
           const body = headers.body;
           if (undefined !== body) {
-            if (obj7.isString(body)) {
+            if (obj6.isString(body)) {
               if (body) {
                 obj.data = body;
               }
@@ -111,23 +108,23 @@ function extractRequestData(headers, arg1) {
               obj = headers(include[3]);
               if (obj.isPlainObject(body)) {
                 const _JSON = JSON;
-                let json = JSON.stringify(headers(include[4]).normalize(body));
-                const obj3 = headers(include[4]);
+                const normalizer = headers(include[4]);
+                let json = JSON.stringify(normalizer.normalize(body));
               } else {
                 let _HermesInternal = HermesInternal;
                 json = headers(include[5]).truncate("" + body, 1024);
                 const obj2 = headers(include[5]);
               }
             }
-            obj7 = headers(include[3]);
+            obj6 = headers(include[3]);
           }
         }
       }
     } else {
       const hasOwnProperty = {}.hasOwnProperty;
       const call = hasOwnProperty.call;
-      if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(headers, key10009)) {
-        obj[key10009] = tmp3[key10009];
+      if (typeof call === "unknown" ? hasOwnProperty(item) : call(headers, item)) {
+        obj[item] = tmp3[item];
       }
     }
   });
@@ -136,9 +133,9 @@ function extractRequestData(headers, arg1) {
 function winterCGHeadersToDict(arr) {
   const obj = {};
   try {
-    const item = arr.forEach((str) => {
-      if (typeof str === "string") {
-        obj[arg1] = str;
+    const item = arr.forEach((item, index) => {
+      if (typeof item === "string") {
+        obj[index] = item;
       }
     });
     return obj;
@@ -155,8 +152,8 @@ function headersToDict(arg0) {
   try {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item = entries.forEach((item, index) => {
+      [tmp, tmp2] = item;
       if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
       }
@@ -218,7 +215,6 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       obj1 = closure_3;
     }
     obj = {};
-    obj = {};
     const merged2 = Object.assign(normalizedRequest.headers);
     user = obj;
     if (obj1.includes("headers")) {
@@ -228,7 +224,7 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
       }
       if (!arr2.includes("ip")) {
         const ipHeaderNames = user(obj2[1]).ipHeaderNames;
-        const item = ipHeaderNames.forEach((arg0) => {
+        const item = ipHeaderNames.forEach((item, index) => {
           delete tmp2[tmp];
         });
       }
@@ -275,13 +271,13 @@ arg5.addNormalizedRequestDataToEvent = function addNormalizedRequestDataToEvent(
         if (!Array.isArray(user)) {
           user = items;
         }
-        const item1 = user.forEach((arg0) => {
+        const item1 = user.forEach((item, index) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = arg0 in tmp;
+            tmp2 = item in user;
           }
           if (tmp2) {
-            obj1[arg0] = tmp[arg0];
+            obj1[item] = user[item];
           }
         });
         let obj4 = obj2;
@@ -347,20 +343,19 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
     if (request.user) {
       let obj3 = user(obj1[3]);
       if (obj3.isPlainObject(request.user)) {
-        user = obj.user;
         user = request.user;
         obj1 = {};
         const _Array2 = Array;
         if (!Array.isArray(user)) {
           user = items;
         }
-        const item = user.forEach((arg0) => {
+        const item = user.forEach((item, index) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = arg0 in tmp;
+            tmp2 = item in user;
           }
           if (tmp2) {
-            obj1[arg0] = tmp[arg0];
+            obj1[item] = user[item];
           }
         });
         obj3 = obj1;
@@ -386,7 +381,6 @@ arg5.addRequestDataToEvent = function addRequestDataToEvent(request, request, in
     }
     if (!ip) {
       ip = request.socket && request.socket.remoteAddress;
-      const tmp29 = request.socket && request.socket.remoteAddress;
     }
     if (ip) {
       const obj4 = {};
@@ -405,7 +399,6 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
   method = method.method;
   if (method) {
     method = method.method.toUpperCase();
-    const str = method.method;
   }
   if (!obj.customRoute) {
     if (!method.route) {
@@ -421,7 +414,6 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
         }
         str5 = getNumberOfUrlSegments.stripUrlQueryAndFragment(str6);
         str4 = "url";
-        const obj2 = getNumberOfUrlSegments;
       }
       tmp = method.originalUrl || method.url;
     }
@@ -444,8 +436,6 @@ arg5.extractPathForTransaction = function extractPathForTransaction(method) {
   if (!customRoute) {
     const _HermesInternal = HermesInternal;
     customRoute = "" + method.baseUrl || "" + method.route && method.route.path;
-    const tmp4 = method.baseUrl || "";
-    const tmp5 = method.route && method.route.path;
   }
   str4 = "route";
   str5 = customRoute;

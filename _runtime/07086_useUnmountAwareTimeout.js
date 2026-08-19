@@ -1,7 +1,7 @@
 // === Module 7086: useUnmountAwareTimeout ===
 
 // Module 7086 (useUnmountAwareTimeout)
-import closure_1 from "_slicedToArray" /* 7041 */;
+import _slicedToArray from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
 ({ useCallback: obj1, useEffect: c3, useState: c4 } = noop);
@@ -10,7 +10,7 @@ export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
   const first = callback(callback4(() => new Set()), 1)[0];
   const items = [first];
   callback3(() => () => {
-    const item = closure_0.forEach((arg0) => closure_0.clearTimeout(arg0));
+    const item = closure_0.forEach((item, index) => closure_0.clearTimeout(item));
     closure_0.clear();
   }, items);
   const items1 = [first];
@@ -28,7 +28,7 @@ export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFr
   const first = callback(callback4(() => new Set()), 1)[0];
   const items = [first];
   callback3(() => () => {
-    const item = closure_0.forEach((closure_0) => cancelAnimationFrame(closure_0));
+    const item = closure_0.forEach((item, index) => cancelAnimationFrame(item));
     closure_0.clear();
   }, items);
   const items1 = [first];

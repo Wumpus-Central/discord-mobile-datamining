@@ -3,9 +3,9 @@
 // Module 6384 (t)
 import tagMessage from "tagMessage" /* 6382 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
-let fn = function t(arg0, arg1) {
+fn = function t(arg0) {
   const _globalThis = globalThis;
   if (globalThis._setGestureStateSync) {
     _globalThis._setGestureStateSync(arg0, arg1);
@@ -26,46 +26,44 @@ let closure_3 = { code: "function pnpm_gestureStateManagerTs3(){const{wrappedSet
 let closure_4 = { code: "function pnpm_gestureStateManagerTs4(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.ACTIVE);}" };
 let closure_5 = { code: "function pnpm_gestureStateManagerTs5(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.FAILED);}" };
 let closure_6 = { code: "function pnpm_gestureStateManagerTs6(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.END);}" };
-obj = { create: null };
 function create(handlerTag) {
   const _require = handlerTag;
-  let obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
   fn = function p() {
-    const BEGAN = handlerTag(closure_1_1[1]).State.BEGAN;
-    if (typeof closure_1_2 !== "function") {
+    const BEGAN = handlerTag(dependencyMap[1]).State.BEGAN;
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
     if (globalThis._setGestureStateSync) {
-      _globalThis._setGestureStateSync(tmp, BEGAN);
+      _globalThis._setGestureStateSync(handlerTag, BEGAN);
     } else if (_globalThis._setGestureStateAsync) {
       const _globalThis2 = globalThis;
-      const result = globalThis._setGestureStateAsync(tmp, BEGAN);
+      const result = globalThis._setGestureStateAsync(handlerTag, BEGAN);
     } else {
       const _Error = Error;
-      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(dependencyMap[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };
-  obj = { wrappedSetGestureState: fn, handlerTag, State: _require(6383).State };
+  let obj = { wrappedSetGestureState: fn, handlerTag, State: _require(6383).State };
   fn.__closure = obj;
   fn.__workletHash = 15218261064802;
   fn.__initData = closure_3;
   obj[1] = fn;
   const fn2 = function c() {
-    const ACTIVE = handlerTag(closure_1_1[1]).State.ACTIVE;
-    if (typeof closure_1_2 !== "function") {
+    const ACTIVE = handlerTag(dependencyMap[1]).State.ACTIVE;
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
     if (globalThis._setGestureStateSync) {
-      _globalThis._setGestureStateSync(tmp, ACTIVE);
+      _globalThis._setGestureStateSync(handlerTag, ACTIVE);
     } else if (_globalThis._setGestureStateAsync) {
       const _globalThis2 = globalThis;
-      const result = globalThis._setGestureStateAsync(tmp, ACTIVE);
+      const result = globalThis._setGestureStateAsync(handlerTag, ACTIVE);
     } else {
       const _Error = Error;
-      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(dependencyMap[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };
@@ -108,19 +106,19 @@ function create(handlerTag) {
   S.__initData = closure_5;
   obj[3] = S;
   const fn3 = function s() {
-    const END = handlerTag(closure_1_1[1]).State.END;
-    if (typeof closure_1_2 !== "function") {
+    const END = handlerTag(dependencyMap[1]).State.END;
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _globalThis = globalThis;
     if (globalThis._setGestureStateSync) {
-      _globalThis._setGestureStateSync(tmp, END);
+      _globalThis._setGestureStateSync(handlerTag, END);
     } else if (_globalThis._setGestureStateAsync) {
       const _globalThis2 = globalThis;
-      const result = globalThis._setGestureStateAsync(tmp, END);
+      const result = globalThis._setGestureStateAsync(handlerTag, END);
     } else {
       const _Error = Error;
-      error = new Error(handlerTag(closure_1_1[0]).tagMessage("Failed to set gesture state"));
+      error = new Error(handlerTag(dependencyMap[0]).tagMessage("Failed to set gesture state"));
       throw error;
     }
   };

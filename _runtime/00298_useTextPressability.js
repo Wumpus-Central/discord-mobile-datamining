@@ -7,12 +7,12 @@ import noopDefault from "noop" /* 111 */;
 import flattenStyleDefault from "flattenStyle" /* 148 */;
 import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
 import NativeText2 from "NativeText" /* 299 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function useTextPressability(textPressabilityProps) {
   const onLongPress = textPressabilityProps.onLongPress;
   const onPress = textPressabilityProps.onPress;
@@ -25,10 +25,7 @@ function useTextPressability(textPressabilityProps) {
   let onResponderTerminationRequest = textPressabilityProps.onResponderTerminationRequest;
   let onStartShouldSetResponder = textPressabilityProps.onStartShouldSetResponder;
   const pressRetentionOffset = textPressabilityProps.pressRetentionOffset;
-  let first;
-  closure_12 = undefined;
-  closure_13 = undefined;
-  first = onResponderGrant(onResponderTerminate(false), 2)[0];
+  const first = onResponderGrant(onResponderTerminate(false), 2)[0];
   let items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
   const tmp = onResponderGrant(onResponderTerminate(false), 2);
   const tmp4 = onPress(onPressOut[8])(onResponderRelease(() => ({ disabled: false, pressRectOffset: pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut }), items));
@@ -62,13 +59,13 @@ function useTextPressability(textPressabilityProps) {
           tmp2(arg0);
         }
       };
-      obj[4] = tmp.onClick;
+      obj[4] = closure_12.onClick;
       if (null == onResponderTerminationRequest) {
-        onResponderTerminationRequest = tmp.onResponderTerminationRequest;
+        onResponderTerminationRequest = closure_12.onResponderTerminationRequest;
       }
       obj[5] = onResponderTerminationRequest;
       if (null == onStartShouldSetResponder) {
-        onStartShouldSetResponder = tmp.onStartShouldSetResponder;
+        onStartShouldSetResponder = closure_12.onStartShouldSetResponder;
       }
       obj[6] = onStartShouldSetResponder;
       tmp2 = obj;

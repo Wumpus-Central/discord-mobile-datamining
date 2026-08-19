@@ -1,11 +1,13 @@
 // === Module 4926: ? ===
 
 // Module 4926
-const module = arg2;
+import _modDef4927 from "module_4927" /* 4927 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   read(dataView, sum) {
-    let obj = _module(4927);
+    let obj = _modDef4927;
     const shortAt = obj.getShortAt(dataView, sum);
     let tmp4;
     if (8 <= shortAt) {
@@ -57,13 +59,11 @@ arg5.default = {
         const items = [];
         for (let num6 = 0; num6 < value; num6 = num6 + 1) {
           sum = sum + 8 + 3 * num6;
-          let tmp17 = _module;
-          let tmp18 = dependencyMap;
-          let obj11 = _module(4927);
+          let obj11 = _modDef4927;
           let items1 = [obj11.getByteAt(dataView, sum), , ];
-          let obj12 = _module(4927);
+          let obj12 = _modDef4927;
           items1[1] = obj12.getByteAt(dataView, sum + 1);
-          let obj13 = _module(4927);
+          let obj13 = _modDef4927;
           items1[2] = obj13.getByteAt(dataView, sum + 2);
           let arr = items.push(items1);
         }
@@ -71,8 +71,8 @@ arg5.default = {
         obj4[0] = items;
         let str6 = "";
         if (items.length > 1) {
-          _module = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
-          const mapped = items.map((arg0) => table[arg0[0]]);
+          importDefault = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
+          const mapped = items.map((item, index) => table[item[0]]);
           let str7 = "";
           const joined = mapped.join("");
           if (0 !== items.length) {

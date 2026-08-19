@@ -3,8 +3,7 @@
 // Module 1721 (RotateInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1712 */;
 
-obj = { RotateInDownLeft: { name: "RotateInDownLeft", style: obj, duration: 0.3 }, RotateInDownRight: { name: "RotateInDownRight", style: obj, duration: 0.3 }, RotateInUpLeft: { name: "RotateInUpLeft", style: obj1, duration: 0.3 }, RotateInUpRight: { name: "RotateInUpRight", style: obj2, duration: 0.3 } };
-obj = { 0: { transform: items, opacity: 0 }, 100: null };
+let obj = { 0: { transform: items, opacity: 0 }, 100: null };
 items = [{ translateX: "-50%", translateY: "-250%", rotate: "-90deg" }];
 const items1 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 obj[100] = { transform: items1, opacity: 1 };
@@ -12,11 +11,11 @@ obj = { 0: { transform: items2, opacity: 0 }, 100: null };
 items2 = [{ translateX: "40%", translateY: "-250%", rotate: "90deg" }];
 const items3 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 obj[100] = { transform: items3, opacity: 1 };
-obj1 = { 0: { transform: items4, opacity: 0 }, 100: null };
+const obj1 = { 0: { transform: items4, opacity: 0 }, 100: null };
 items4 = [{ translateX: "-40%", translateY: "250%", rotate: "90deg" }];
 const items5 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 obj1[100] = { transform: items5, opacity: 1 };
-obj2 = { 0: { transform: items6, opacity: 0 }, 100: null };
+const obj2 = { 0: { transform: items6, opacity: 0 }, 100: null };
 items6 = [{ translateX: "40%", translateY: "250%", rotate: "-90deg" }];
 const items7 = [{ translateX: "0%", translateY: "0%", rotate: "0deg" }];
 obj2[100] = { transform: items7, opacity: 1 };

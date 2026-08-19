@@ -6,8 +6,7 @@ if (typeof Object.create === "function") {
     if (super_) {
       arg0.super_ = super_;
       const _Object = Object;
-      let obj = { constructor: null };
-      obj = { value: null, enumerable: false, writable: true, configurable: true };
+      const obj = { value: null, enumerable: false, writable: true, configurable: true };
       obj[0] = arg0;
       obj[0] = obj;
       arg0.prototype = Object.create(super_.prototype, obj);

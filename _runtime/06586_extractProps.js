@@ -1,12 +1,17 @@
 // === Module 6586: extractProps ===
 
 // Module 6586 (extractProps)
+import extractOpacityDefault from "extractOpacity" /* 6577 */;
+import keysDefault from "keys" /* 6578 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 6579 */;
 import pickNotNil from "pickNotNil" /* 6587 */;
+import extractFillDefault from "extractFill" /* 6588 */;
+import extractStrokeDefault from "extractStroke" /* 6591 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-function extractProps(markerMid) {
+function extractProps(markerMid, self) {
   ({ id, opacity, onLayout, clipPath, clipRule, display, mask, filter, marker, markerStart } = markerMid);
   if (undefined === markerStart) {
     markerStart = marker;
@@ -22,21 +27,21 @@ function extractProps(markerMid) {
   ({ testID, accessibilityLabel, accessible } = markerMid);
   const obj = {};
   const items = [];
-  module(6578)(obj, markerMid, arg1);
-  module(6588)(obj, markerMid, items);
-  module(6591)(obj, markerMid, items);
+  keysDefault(obj, markerMid, self);
+  extractFillDefault(obj, markerMid, items);
+  extractStrokeDefault(obj, markerMid, items);
   if (markerMid.color) {
     obj.color = markerMid.color;
   }
   if (items.length) {
     obj.propList = items;
   }
-  const tmp6 = module(6579)(markerMid);
+  const tmp6 = appendTransformPropsDefault(markerMid);
   if (null !== tmp6) {
     obj.matrix = tmp6;
   }
   if (null != opacity) {
-    obj.opacity = tmp(6577)(opacity);
+    obj.opacity = extractOpacityDefault(opacity);
   }
   if (null != display) {
     let str4;
@@ -155,7 +160,7 @@ arg5.propsAndStyles = function propsAndStyles(props) {
   }
   return tmp;
 };
-arg5.extract = function extract(arg0, style) {
+arg5.extract = function extract(self, style) {
   style = style.style;
   let tmp2 = style;
   if (style) {
@@ -173,7 +178,7 @@ arg5.extract = function extract(arg0, style) {
     const merged1 = Object.assign(style);
     tmp2 = obj;
   }
-  return extractProps(tmp2, arg0);
+  return extractProps(tmp2, self);
 };
 arg5.withoutXY = function withoutXY(self, props) {
   const style = props.style;

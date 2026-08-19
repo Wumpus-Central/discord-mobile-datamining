@@ -104,7 +104,6 @@ const tmp11 = (() => {
     if (arg0 === undefined) {
       num = 1;
     }
-    c0 = undefined;
     const result = num * Math.PI;
     c0 = result;
     const fn = function n(arg0) {
@@ -169,11 +168,10 @@ const tmp14 = (() => {
     const table = y1;
     closure_2 = x2;
     closure_3 = y2;
-    let obj = { factory: null };
     const fn = function _() {
       return x1(table[1]).Bezier(x1, table, closure_2, closure_3);
     };
-    obj = { Bezier: callback(table[1]).Bezier, x1, y1, x2, y2 };
+    const obj = { Bezier: callback(table[1]).Bezier, x1, y1, x2, y2 };
     fn.__closure = obj;
     fn.__workletHash = 4393056133737;
     fn.__initData = closure_17;
@@ -227,9 +225,9 @@ const tmp17 = (() => {
   return out;
 })();
 obj[13] = (() => {
-  function steps(arg0) {
-    let num = arg0;
-    if (arg0 === undefined) {
+  function steps(closure_2) {
+    let num = closure_2;
+    if (closure_2 === undefined) {
       num = 10;
     }
     let flag = arg1;
@@ -240,9 +238,9 @@ obj[13] = (() => {
       const result = Math.min(Math.max(arg0, 0), 1) * num;
       const _Math = Math;
       if (flag) {
-        let result1 = _Math.ceil(result) / tmp;
+        let result1 = _Math.ceil(result) / num;
       } else {
-        result1 = _Math.floor(result) / tmp;
+        result1 = _Math.floor(result) / num;
       }
       return result1;
     };

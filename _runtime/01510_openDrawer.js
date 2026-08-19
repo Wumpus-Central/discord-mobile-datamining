@@ -21,25 +21,20 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
   if (str === undefined) {
     str = "closed";
   }
-  dependencyMap = undefined;
-  let isDrawerInHistory;
-  let addDrawerToHistory;
-  let removeDrawerFromHistory;
-  let closeDrawer;
   let merged = Object.assign(defaultStatus, Object.create(null));
   obj = str(1512);
   const SwitchRouterResult = obj.SwitchRouter(merged);
   dependencyMap = SwitchRouterResult;
-  isDrawerInHistory = function isDrawerInHistory(arg0) {
+  function isDrawerInHistory(arg0) {
 
-  };
-  addDrawerToHistory = function addDrawerToHistory(arg0) {
+  }
+  function addDrawerToHistory(arg0) {
 
-  };
-  removeDrawerFromHistory = function removeDrawerFromHistory(arg0) {
+  }
+  function removeDrawerFromHistory(arg0) {
 
-  };
-  closeDrawer = function closeDrawer(history) {
+  }
+  function closeDrawer(history) {
     str = "open";
     if ("open" === str) {
       if (typeof addDrawerToHistory !== "function") {
@@ -51,7 +46,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
       const history2 = history.history;
       let someResult;
       if (history2 != null) {
-        someResult = history2.some((type) => "drawer" === type.type);
+        someResult = history2.some((item, index) => "drawer" === item.type);
       }
       let tmp16 = history;
       if (!Boolean(someResult)) {
@@ -79,24 +74,23 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
       history = history.history;
       let someResult1;
       if (history != null) {
-        someResult1 = history.some((type) => "drawer" === type.type);
+        someResult1 = history.some((item, index) => "drawer" === item.type);
       }
       tmp7 = history;
       if (Boolean(someResult1)) {
         obj = {};
         const merged1 = Object.assign(history);
         history = history.history;
-        obj.history = history.filter((type) => "drawer" !== type.type);
+        obj.history = history.filter((item, index) => "drawer" !== item.type);
         tmp7 = obj;
       }
     }
     return tmp7;
-  };
+  }
   obj = {};
   let merged1 = Object.assign(SwitchRouterResult);
   obj.type = "drawer";
   obj.getInitialState = function getInitialState(routeNames) {
-    obj = {};
     obj = { routeNames: routeNames.routeNames, routeParamList: routeNames.routeParamList, routeGetIdList: routeNames.routeGetIdList };
     const merged = Object.assign(_undefined.getInitialState(obj));
     obj.default = str;
@@ -109,7 +103,6 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
     if (false === stale.stale) {
       return stale;
     } else {
-      obj = {};
       obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
       obj[0] = tmp;
       obj[1] = tmp2;
@@ -125,39 +118,39 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
       let history = stale.history;
       let someResult;
       if (history != null) {
-        someResult = history.some((type) => "drawer" === type.type);
+        someResult = history.some((item, index) => "drawer" === item.type);
       }
       let tmp6 = obj;
       if (Boolean(someResult)) {
         if (typeof removeDrawerFromHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp28 !== "function") {
+        if (typeof isDrawerInHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const history2 = obj.history;
         let someResult1;
         if (history2 != null) {
-          someResult1 = history2.some((type) => "drawer" === type.type);
+          someResult1 = history2.some((item, index) => "drawer" === item.type);
         }
         let tmp9 = obj;
         if (Boolean(someResult1)) {
           obj = {};
           const merged1 = Object.assign(obj);
           history = obj.history;
-          obj.history = history.filter((type) => "drawer" !== type.type);
+          obj.history = history.filter((item, index) => "drawer" !== item.type);
           tmp9 = obj;
         }
         if (typeof addDrawerToHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp28 !== "function") {
+        if (typeof isDrawerInHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const history3 = tmp9.history;
         let someResult2;
         if (history3 != null) {
-          someResult2 = history3.some((type) => "drawer" === type.type);
+          someResult2 = history3.some((item, index) => "drawer" === item.type);
         }
         let tmp15 = tmp9;
         if (!Boolean(someResult2)) {
@@ -197,14 +190,14 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         const history7 = history.history;
         let someResult;
         if (history7 != null) {
-          someResult = history7.some((type) => "drawer" === type.type);
+          someResult = history7.some((item, index) => "drawer" === item.type);
         }
         let tmp57 = history;
         if (Boolean(someResult)) {
           obj = {};
           const merged = Object.assign(history);
           history = history.history;
-          obj.history = history.filter((type) => "drawer" !== type.type);
+          obj.history = history.filter((item, index) => "drawer" !== item.type);
           tmp57 = obj;
         }
         let tmp46 = tmp57;
@@ -218,7 +211,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         const history6 = history.history;
         let someResult1;
         if (history6 != null) {
-          someResult1 = history6.some((type) => "drawer" === type.type);
+          someResult1 = history6.some((item, index) => "drawer" === item.type);
         }
         tmp46 = history;
         if (!Boolean(someResult1)) {
@@ -246,26 +239,26 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
       const history3 = history.history;
       let someResult2;
       if (history3 != null) {
-        someResult2 = history3.some((type) => "drawer" === type.type);
+        someResult2 = history3.some((item, index) => "drawer" === item.type);
       }
       if (Boolean(someResult2)) {
         if (typeof removeDrawerFromHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp19 !== "function") {
+        if (typeof isDrawerInHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const history5 = history.history;
         let someResult3;
         if (history5 != null) {
-          someResult3 = history5.some((type) => "drawer" === type.type);
+          someResult3 = history5.some((item, index) => "drawer" === item.type);
         }
         let tmp34 = history;
         if (Boolean(someResult3)) {
           const obj2 = {};
           const merged2 = Object.assign(history);
           const history1 = history.history;
-          obj2.history = history1.filter((type) => "drawer" !== type.type);
+          obj2.history = history1.filter((item, index) => "drawer" !== item.type);
           tmp34 = obj2;
         }
         let tmp25 = tmp34;
@@ -273,13 +266,13 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         if (typeof addDrawerToHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp19 !== "function") {
+        if (typeof isDrawerInHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const history4 = history.history;
         let someResult4;
         if (history4 != null) {
-          someResult4 = history4.some((type) => "drawer" === type.type);
+          someResult4 = history4.some((item, index) => "drawer" === item.type);
         }
         tmp25 = history;
         if (!Boolean(someResult4)) {
@@ -310,7 +303,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
               history = history.history;
               let someResult5;
               if (history != null) {
-                someResult5 = history.some((type) => "drawer" === type.type);
+                someResult5 = history.some((item, index) => "drawer" === item.type);
               }
               if (Boolean(someResult5)) {
                 if (typeof removeDrawerFromHistory !== "function") {
@@ -322,14 +315,14 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
                 let history2 = history.history;
                 let someResult6;
                 if (history2 != null) {
-                  someResult6 = history2.some((type) => "drawer" === type.type);
+                  someResult6 = history2.some((item, index) => "drawer" === item.type);
                 }
                 let tmp10 = history;
                 if (Boolean(someResult6)) {
                   obj = {};
                   const merged4 = Object.assign(history);
                   history2 = history.history;
-                  obj.history = history2.filter((type) => "drawer" !== type.type);
+                  obj.history = history2.filter((item, index) => "drawer" !== item.type);
                   tmp10 = obj;
                 }
                 let stateForAction = tmp10;

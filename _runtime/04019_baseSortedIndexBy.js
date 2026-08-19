@@ -4,7 +4,7 @@
 import isSymbol from "isSymbol" /* 638 */;
 
 
-export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
+export default function baseSortedIndexBy(arg0, closure_0, fn) {
   let num = 0;
   if (null != arg0) {
     num = arg0.length;
@@ -12,20 +12,16 @@ export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
   if (0 === num) {
     return 0;
   } else {
-    const tmp27 = arg2(arg1);
+    const tmp27 = fn(closure_0);
     let tmp22 = num;
     let num2 = 0;
     let tmp23 = num;
     if (0 < num) {
       while (true) {
-        let tmp = floor;
         let tmp2 = floor((num2 + tmp22) / 2);
-        let tmp3 = arg2(arg0[tmp2]);
+        let tmp3 = fn(arg0[tmp2]);
         let tmp4 = tmp3 == tmp3;
-        let tmp5 = require;
-        let tmp6 = dependencyMap;
         let tmp7 = isSymbol(tmp3);
-        let tmp8 = tmp22;
         let sum = num2;
         if (tmp28) {
           let tmp20 = arg3;

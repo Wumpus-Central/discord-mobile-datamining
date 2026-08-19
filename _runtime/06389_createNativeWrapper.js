@@ -2,11 +2,11 @@
 
 // Module 6389 (createNativeWrapper)
 import noopDefault from "noop" /* 19 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import { useEffect } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 noopDefault;
 

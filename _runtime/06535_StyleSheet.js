@@ -1,13 +1,13 @@
 // === Module 6535: StyleSheet ===
 
 // Module 6535 (StyleSheet)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import getShadowStyle from "getShadowStyle" /* 6540 */;
 
-const require = arg1;
+const require = fn;
 ({ Animated: c5, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -29,8 +29,7 @@ function defaultOverlay(style) {
   }
   return tmp;
 }
-let obj = { container: { flex: 1 }, overlay: { flex: 1, backgroundColor: "#000" }, shadow: { position: "absolute" }, shadowHorizontal: null, shadowStart: null, shadowEnd: null, shadowVertical: null, shadowTop: null, shadowBottom: null };
-obj = { top: 0, bottom: 0, width: 3 };
+let obj = { top: 0, bottom: 0, width: 3 };
 let merged = Object.assign(getShadowStyle.getShadowStyle({ offset: { width: -1, height: 1 }, radius: 5, opacity: 0.3 }));
 obj[3] = obj;
 obj[4] = { start: 0 };
@@ -72,23 +71,6 @@ export const Card = function Card(shadowEnabled) {
   ({ onOpen: defaultOverlay, onClose: closure_14, onTransition: closure_15, onGestureBegin: closure_16, onGestureCanceled: closure_17, onGestureEnd: closure_18, transitionSpec: closure_19, preloaded } = shadowEnabled);
   const styleInterpolator = shadowEnabled.styleInterpolator;
   const contentStyle = shadowEnabled.contentStyle;
-  closure_22 = undefined;
-  closure_23 = undefined;
-  closure_24 = undefined;
-  closure_25 = undefined;
-  closure_26 = undefined;
-  closure_27 = undefined;
-  let first;
-  let first1;
-  let first2;
-  let first3;
-  closure_32 = undefined;
-  closure_33 = undefined;
-  closure_34 = undefined;
-  closure_35 = undefined;
-  closure_36 = undefined;
-  closure_37 = undefined;
-  let memo;
   ({ pageOverflowEnabled, children, overlayEnabled, gestureResponseDistance, containerStyle } = shadowEnabled);
   closure_22 = opening.useRef(false);
   closure_23 = opening.useRef(undefined);
@@ -96,15 +78,15 @@ export const Card = function Card(shadowEnabled) {
   closure_25 = opening.useRef(undefined);
   closure_26 = opening.useRef(undefined);
   closure_27 = opening.useRef(undefined);
-  first = interpolationIndex(opening.useState(() => {
+  const first = interpolationIndex(opening.useState(() => {
     const value = new closing.Value(0);
     return value;
   }), 1)[0];
-  first1 = interpolationIndex(opening.useState(() => {
-    const value = new closing.Value(flag2(closure_1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
+  const first1 = interpolationIndex(opening.useState(() => {
+    const value = new closing.Value(flag2(dependencyMap[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
     return value;
   }), 1)[0];
-  first2 = interpolationIndex(opening.useState(() => {
+  const first2 = interpolationIndex(opening.useState(() => {
     const obj = { width: null, height: null };
     let value = new closing.Value(layout.width);
     obj[0] = value;
@@ -112,13 +94,13 @@ export const Card = function Card(shadowEnabled) {
     obj[1] = value;
     return obj;
   }), 1)[0];
-  first3 = interpolationIndex(opening.useState(() => {
+  const first3 = interpolationIndex(opening.useState(() => {
     const value = new closing.Value(0);
     return value;
   }), 1)[0];
   closure_32 = num(1522)(() => {
     if (null == ref3.current) {
-      const InteractionManager = flag2(closure_1_2[7]).InteractionManager;
+      const InteractionManager = flag2(dependencyMap[7]).InteractionManager;
       let interactionHandle;
       if (InteractionManager != null) {
         interactionHandle = InteractionManager.createInteractionHandle();
@@ -128,11 +110,11 @@ export const Card = function Card(shadowEnabled) {
   });
   closure_33 = num(1522)(() => {
     if (null != ref3.current) {
-      const InteractionManager = flag2(closure_1_2[7]).InteractionManager;
+      const InteractionManager = flag2(dependencyMap[7]).InteractionManager;
       if (InteractionManager != null) {
-        const result = InteractionManager.clearInteractionHandle(tmp.current);
+        const result = InteractionManager.clearInteractionHandle(ref3.current);
       }
-      tmp.current = undefined;
+      ref3.current = undefined;
     }
   });
   let tmp7 = num(1522)((closing) => {
@@ -143,7 +125,7 @@ export const Card = function Card(shadowEnabled) {
       HermesBuiltin.throwTypeError();
     }
     if (closing) {
-      let obj = flag2(closure_1_2[4]);
+      let obj = flag2(dependencyMap[4]);
       num = obj.getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
     } else {
       num = 0;
@@ -163,7 +145,7 @@ export const Card = function Card(shadowEnabled) {
     clearTimeout(ref5.current);
     if (undefined !== ref4.current) {
       const _cancelAnimationFrame = cancelAnimationFrame;
-      cancelAnimationFrame(tmp14.current);
+      cancelAnimationFrame(ref4.current);
     }
     if (closure_15 != null) {
       obj = { closing: null, gesture: null };
@@ -209,7 +191,7 @@ export const Card = function Card(shadowEnabled) {
         callback();
       }
       let _requestAnimationFrame = requestAnimationFrame;
-      tmp14.current = requestAnimationFrame(() => {
+      ref4.current = requestAnimationFrame(() => {
         callback();
       });
     }
@@ -223,7 +205,7 @@ export const Card = function Card(shadowEnabled) {
     width.setValue(layout.width);
     const height = first2.height;
     height.setValue(layout.height);
-    first1.setValue(flag2(closure_1_2[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
+    first1.setValue(flag2(dependencyMap[5]).getInvertedMultiplier(gestureDirection, "rtl" === direction));
   }, items);
   closure_35 = opening.useRef(null);
   const effect = opening.useEffect(() => () => {
@@ -249,8 +231,8 @@ export const Card = function Card(shadowEnabled) {
         if (typeof gestureDirection !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (tmp5.current.closing) {
-          let obj = flag2(closure_1_2[4]);
+        if (ref7.current.closing) {
+          let obj = flag2(dependencyMap[4]);
           let num2 = obj.getDistanceForDirection(tmp9, tmp10, "rtl" === tmp11);
         } else {
           num2 = 0;
@@ -261,8 +243,8 @@ export const Card = function Card(shadowEnabled) {
         HermesBuiltin.throwTypeError();
       }
       if (closing) {
-        let num3 = flag2(closure_1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19);
-        const obj2 = flag2(closure_1_2[4]);
+        let num3 = flag2(dependencyMap[4]).getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
+        const obj2 = flag2(dependencyMap[4]);
       } else {
         num3 = 0;
       }
@@ -276,18 +258,17 @@ export const Card = function Card(shadowEnabled) {
             tmp24 = !opening;
           }
           if (tmp24) {
-            gesture.setValue(flag2(closure_1_2[4]).getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19));
+            gesture.setValue(flag2(dependencyMap[4]).getDistanceForDirection(layout, gestureDirection, "rtl" === direction));
             obj = { closing: null };
-            obj[0] = tmp16;
+            obj[0] = closing;
             callback8(obj);
-            const obj3 = flag2(closure_1_2[4]);
+            const obj3 = flag2(dependencyMap[4]);
           }
         }
       }
       obj = { closing: null };
       obj[0] = closing;
       callback8(obj);
-      const tmp20 = preloaded;
     } else {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref8.current);
@@ -315,9 +296,8 @@ export const Card = function Card(shadowEnabled) {
   }, items1);
   const items2 = [interpolationIndex, current, next, first, first3, first1, layout, , , , ];
   ({ top: arr3[7], right: arr3[8], bottom: arr3[9], left: arr3[10] } = insets);
-  memo = opening.useMemo(() => {
-    obj = { index: interpolationIndex, current: obj, next: null, closing: null, swiping: null, inverted: null, layouts: null, insets: null };
-    obj = { progress: current };
+  const memo = opening.useMemo(() => {
+    let obj = { progress: current };
     let tmp2 = next;
     if (next) {
       obj = { progress: null };
@@ -337,8 +317,7 @@ export const Card = function Card(shadowEnabled) {
   ({ cardStyle, shadowStyle } = memo1);
   const items4 = [gesture, gestureDirection, flag2];
   ({ containerStyle: containerStyle2, overlayStyle } = memo1);
-  let obj = next;
-  obj = contentStyle;
+  let obj = contentStyle;
   const memo2 = opening.useMemo(() => {
     if (flag2) {
       if ("vertical" !== gestureDirection) {
@@ -392,7 +371,7 @@ export const Card = function Card(shadowEnabled) {
     onHandlerStateChange: num(1522)((nativeEvent) => {
       nativeEvent = nativeEvent.nativeEvent;
       const state = nativeEvent.state;
-      if (flag2(closure_1_2[8]).GestureState.ACTIVE === state) {
+      if (flag2(dependencyMap[8]).GestureState.ACTIVE === state) {
         const _clearTimeout = clearTimeout;
         clearTimeout(ref5.current);
         const _clearTimeout2 = clearTimeout;
@@ -403,19 +382,18 @@ export const Card = function Card(shadowEnabled) {
           callback3();
         }
       } else {
-        if (tmp(tmp2[8]).GestureState.CANCELLED !== state) {
-          if (tmp(tmp2[8]).GestureState.FAILED !== state) {
-            if (tmp(tmp2[8]).GestureState.END === state) {
+        if (flag2(dependencyMap[8]).GestureState.CANCELLED !== state) {
+          if (flag2(dependencyMap[8]).GestureState.FAILED !== state) {
+            if (flag2(dependencyMap[8]).GestureState.END === state) {
               first3.setValue(0);
               if ("vertical" !== gestureDirection) {
-                if ("vertical-inverted" !== tmp38) {
+                if ("vertical-inverted" !== gestureDirection) {
                   let height = layout.width;
                   ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
                 }
                 const sum = translationY + velocityY * num;
-                if (sum * tmpResult.getInvertedMultiplier(tmp38, "rtl" === direction) > height / 2) {
+                if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
                   let tmp8 = 0 !== velocityY || 0 !== translationY;
-                  const tmp9 = 0 !== velocityY || 0 !== translationY;
                 } else {
                   tmp8 = closing;
                 }
@@ -435,7 +413,7 @@ export const Card = function Card(shadowEnabled) {
                 if (callback5 != null) {
                   callback5();
                 }
-                tmpResult = tmp(tmp2[5]);
+                tmpResult = flag2(dependencyMap[5]);
               }
               height = layout.height;
               ({ translationY, velocityY } = nativeEvent);
@@ -464,7 +442,7 @@ export const Card = function Card(shadowEnabled) {
   let tmp8 = num(1522)((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const state = nativeEvent.state;
-    if (flag2(closure_1_2[8]).GestureState.ACTIVE === state) {
+    if (flag2(dependencyMap[8]).GestureState.ACTIVE === state) {
       const _clearTimeout = clearTimeout;
       clearTimeout(ref5.current);
       const _clearTimeout2 = clearTimeout;
@@ -475,19 +453,18 @@ export const Card = function Card(shadowEnabled) {
         callback3();
       }
     } else {
-      if (tmp(tmp2[8]).GestureState.CANCELLED !== state) {
-        if (tmp(tmp2[8]).GestureState.FAILED !== state) {
-          if (tmp(tmp2[8]).GestureState.END === state) {
+      if (flag2(dependencyMap[8]).GestureState.CANCELLED !== state) {
+        if (flag2(dependencyMap[8]).GestureState.FAILED !== state) {
+          if (flag2(dependencyMap[8]).GestureState.END === state) {
             first3.setValue(0);
             if ("vertical" !== gestureDirection) {
-              if ("vertical-inverted" !== tmp38) {
+              if ("vertical-inverted" !== gestureDirection) {
                 let height = layout.width;
                 ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
               }
               const sum = translationY + velocityY * num;
-              if (sum * tmpResult.getInvertedMultiplier(tmp38, "rtl" === direction) > height / 2) {
+              if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
                 let tmp8 = 0 !== velocityY || 0 !== translationY;
-                const tmp9 = 0 !== velocityY || 0 !== translationY;
               } else {
                 tmp8 = closing;
               }
@@ -507,7 +484,7 @@ export const Card = function Card(shadowEnabled) {
               if (callback5 != null) {
                 callback5();
               }
-              tmpResult = tmp(tmp2[5]);
+              tmpResult = flag2(dependencyMap[5]);
             }
             height = layout.height;
             ({ translationY, velocityY } = nativeEvent);
@@ -539,7 +516,6 @@ export const Card = function Card(shadowEnabled) {
   if (cardStyle) {
     const flattenResult = obj.flatten(cardStyle);
     flag3 = "opacity" in flattenResult && null != flattenResult.opacity;
-    const tmp26 = "opacity" in flattenResult && null != flattenResult.opacity;
   }
   const obj5 = { pointerEvents: "box-none", needsOffscreenAlphaCompositing: flag3, style: items7, children: null };
   items7 = [shadowStart.container, cardStyle];

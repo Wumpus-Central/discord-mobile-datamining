@@ -8,8 +8,6 @@ arg5.lowerCamelCase = function lowerCamelCase(name) {
   if (0 < name.length) {
     do {
       let str = name.charAt(num);
-      let tmp = num;
-      let tmp2 = flag;
       let flag2 = true;
       if ("_" != str) {
         let obj = /\d/;

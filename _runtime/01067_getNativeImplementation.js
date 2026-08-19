@@ -13,11 +13,11 @@ function getNativeImplementation(fetch) {
     const tmp9 = WINDOW.WINDOW[fetch];
     let obj = tmp9;
     if (obj2.isNativeFunction(tmp9)) {
-      const bindResult = obj.bind(tmp7(1039).WINDOW);
-      tmp5[fetch] = bindResult;
+      const bindResult = obj.bind(WINDOW.WINDOW);
+      table[fetch] = bindResult;
       return bindResult;
     } else {
-      const _document = tmp7(1039).WINDOW.document;
+      const _document = WINDOW.WINDOW.document;
       if (_document) {
         if (typeof _document.createElement === "function") {
           try {
@@ -45,8 +45,8 @@ function getNativeImplementation(fetch) {
         }
       }
       if (obj) {
-        const bindResult1 = obj.bind(tmp7(1039).WINDOW);
-        tmp5[fetch] = bindResult1;
+        const bindResult1 = obj.bind(WINDOW.WINDOW);
+        table[fetch] = bindResult1;
         let tmp24 = bindResult1;
       } else {
         tmp24 = obj;

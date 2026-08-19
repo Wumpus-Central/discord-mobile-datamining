@@ -2,19 +2,19 @@
 
 // Module 1427 (isBuffer)
 
-export default function isBuffer(obj) {
-  let tmp = obj;
-  if (obj) {
-    tmp = typeof obj === "object";
+export default function isBuffer(copy) {
+  let tmp = copy;
+  if (copy) {
+    tmp = typeof copy === "object";
   }
   if (tmp) {
-    tmp = typeof obj.copy === "function";
+    tmp = typeof copy.copy === "function";
   }
   if (tmp) {
-    tmp = typeof obj.fill === "function";
+    tmp = typeof copy.fill === "function";
   }
   if (tmp) {
-    tmp = typeof obj.readUInt8 === "function";
+    tmp = typeof copy.readUInt8 === "function";
   }
   return tmp;
 };

@@ -1,9 +1,8 @@
 // === Module 4142: resolveWeight ===
 
 // Module 4142 (resolveWeight)
-import _loadFont from "_slicedToArray" /* 32 */;
-import _setFallbackFonts from "asyncGeneratorStep" /* 5 */;
-import { Image as _clearFallbackFonts } from "get ActivityIndicator" /* 17 */;
+import "_slicedToArray";
+import "asyncGeneratorStep";
 import { NitroModules } from "module_4112" /* 4112 */;
 
 function resolveWeight(arg0) {
@@ -22,9 +21,11 @@ function loadFontByURI(arg0) {
     return fontFromResource;
   }
   fontFromResource = closure_3.loadFontFromURL(arg0);
+  obj = /^https?:\/\//;
 }
+require("get ActivityIndicator").Image;
 let closure_3 = NitroModules.createHybridObject("RiveFontConfig");
-_loadFont = function _loadFont() {
+function _loadFont() {
   const self = this;
   const tmp = _setFallbackFonts((arg0) => {
     closure_0 = arg0;
@@ -59,10 +60,10 @@ _loadFont = function _loadFont() {
             if (closure_0 instanceof ArrayBuffer) {
               c1 = 3;
               obj1 = { value: null, done: true };
-              obj1[0] = closure_1_3.loadFontFromBytes(tmp26);
+              obj1[0] = closure_1_3.loadFontFromBytes(closure_0);
               return obj1;
-            } else if (typeof tmp26 === "number") {
-              const assetSource = closure_1_2.resolveAssetSource(tmp26);
+            } else if (typeof closure_0 === "number") {
+              const assetSource = closure_1_2.resolveAssetSource(closure_0);
               let uri;
               if (assetSource != null) {
                 uri = assetSource.uri;
@@ -75,41 +76,41 @@ _loadFont = function _loadFont() {
               } else {
                 const _Error = Error;
                 const _HermesInternal = HermesInternal;
-                error = new Error("Invalid font asset: could not resolve require() ID " + tmp26 + ". Ensure 'ttf' is in metro.config.js assetExts.");
+                error = new Error("Invalid font asset: could not resolve require() ID " + closure_0 + ". Ensure 'ttf' is in metro.config.js assetExts.");
                 throw error;
               }
             } else {
-              if (typeof tmp26 === "object") {
-                if ("name" in tmp26) {
+              if (typeof closure_0 === "object") {
+                if ("name" in closure_0) {
                   c1 = 3;
                   const obj3 = { value: null, done: true };
-                  obj3[0] = closure_1_3.loadFontByName(tmp26.name);
+                  obj3[0] = closure_1_3.loadFontByName(closure_0.name);
                   return obj3;
                 }
               }
-              if (typeof tmp26 === "object") {
-                if ("uri" in tmp26) {
+              if (typeof closure_0 === "object") {
+                if ("uri" in closure_0) {
                   c1 = 3;
                   const obj4 = { value: null, done: true };
-                  obj4[0] = closure_1_5(tmp26.uri);
+                  obj4[0] = closure_1_5(closure_0.uri);
                   return obj4;
                 }
               }
-              if (typeof tmp26 === "string") {
+              if (typeof closure_0 === "string") {
                 obj = /^https?:\/\//;
-                if (!obj.test(tmp26)) {
+                if (!obj.test(closure_0)) {
                   obj1 = /^file:\/\//;
-                  if (!obj1.test(tmp26)) {
-                    const fontFromResource = closure_1_3.loadFontFromResource(tmp26);
+                  if (!obj1.test(closure_0)) {
+                    const fontFromResource = closure_1_3.loadFontFromResource(closure_0);
                   }
                   c1 = 3;
                 }
-                const fontFromURL = closure_1_3.loadFontFromURL(tmp26);
+                const fontFromURL = closure_1_3.loadFontFromURL(closure_0);
               } else {
                 const _Error2 = Error;
                 const _String = String;
                 const _HermesInternal2 = HermesInternal;
-                const error1 = new Error("Invalid font source: " + String(tmp26));
+                const error1 = new Error("Invalid font source: " + String(closure_0));
                 throw error1;
               }
             }
@@ -129,8 +130,8 @@ _loadFont = function _loadFont() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-_setFallbackFonts = function _setFallbackFonts(arg0) {
+}
+function _setFallbackFonts(arg0) {
   const self = this;
   const tmp = _setFallbackFonts((arg0) => {
     closure_0 = arg0;
@@ -153,67 +154,49 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
         }
       } else {
         while (true) {
-          let num = 2;
           c3 = 2;
           if (0 === v0) {
             if (arg0 === 1) {
-              let num7 = 3;
               c3 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              let num6 = 3;
               c3 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              let tmp23 = callback;
               let _Object = Object;
               let entries = Object.entries(callback);
-              let tmp25 = entries;
               closure_1 = entries[Symbol.iterator]();
-              let tmp7 = entries;
-              let tmp8 = closure_1;
               while (closure_1 !== undefined) {
                 c6 = 1;
-                let tmp10 = callback;
                 let tmp11 = callback(tmp9, 2);
                 let tmp13 = tmp11[1];
                 if (tmp13) {
-                  let tmp14 = c3;
-                  let tmp15 = v0;
                   let setFontsForWeightResult = c3.setFontsForWeight(v0(tmp12), tmp13);
                 }
                 c6 = 0;
                 continue;
               }
-              let tmp17 = c3;
               v0 = 2;
-              let num5 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = c3.applyFallbackFonts();
               return obj1;
             }
           } else if (1 === tmp3) {
-            let tmp4 = closure_5;
-            let tmp5 = closure_5;
             c6 = 0;
-            let tmp6 = closure_1;
             closure_1.return();
             throw closure_5;
           } else if (arg0 === 1) {
-            let num4 = 3;
             c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let num3 = 3;
             c3 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            let num2 = 3;
             c3 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -229,8 +212,8 @@ _setFallbackFonts = function _setFallbackFonts(arg0) {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-_clearFallbackFonts = function _clearFallbackFonts() {
+}
+function _clearFallbackFonts() {
   const self = this;
   const tmp = _setFallbackFonts(function*() {
     if (c0 === 2) {
@@ -277,7 +260,7 @@ _clearFallbackFonts = function _clearFallbackFonts() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 
 export const RiveFonts = {
   loadFont(arg0) {

@@ -1,8 +1,8 @@
 // === Module 9938: useDismissedRouteError ===
 
 // Module 9938 (useDismissedRouteError)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
 
 export const useDismissedRouteError = function useDismissedRouteError(state) {
@@ -11,7 +11,7 @@ export const useDismissedRouteError = function useDismissedRouteError(state) {
   let tmp3 = null;
   if (first) {
     const routes = state.routes;
-    const found = routes.find((key) => key.key === first);
+    const found = routes.find((item, index) => item.key === first);
     name = undefined;
     if (found != null) {
       name = found.name;

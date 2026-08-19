@@ -1,7 +1,7 @@
 // === Module 10313: useInitProps ===
 
 // Module 10313 (useInitProps)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -56,8 +56,8 @@ export const useInitProps = function useInitProps(defaultIndex) {
   const items = [data, undefined === loop || loop, undefined === autoFillData || autoFillData];
   const bound = Math.max(num2, 0);
   const memo = React.useMemo(() => {
-    let obj = data(table[1]);
-    obj = { loop: table, autoFillData: closure_2, data, dataLength: data.length };
+    data(table[1]);
+    const obj = { loop: table, autoFillData: closure_2, data, dataLength: data.length };
     return obj.computedFillDataWithAutoFillData(obj);
   }, items);
   let tmp10 = "vertical-stack" !== defaultIndex.mode;

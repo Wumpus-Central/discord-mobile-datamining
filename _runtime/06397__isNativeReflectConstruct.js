@@ -1,13 +1,13 @@
 // === Module 6397: _isNativeReflectConstruct ===
 
 // Module 6397 (_isNativeReflectConstruct)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
-let ExclusiveGesture = arg1;
+let ExclusiveGesture = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -117,7 +117,7 @@ let items = [
     key: "toGestureArray",
     value: function toGestureArray() {
       const gestures = this.gestures;
-      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+      return gestures.flatMap((item, index) => item.toGestureArray());
     }
   }
 ];
@@ -148,8 +148,7 @@ obj = {
   key: "prepare",
   value: function prepare() {
     let length;
-    let self = this;
-    self = this;
+    const self = this;
     let num = 0;
     if (0 < this.gestures.length) {
       do {

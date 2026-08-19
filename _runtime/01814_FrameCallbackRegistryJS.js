@@ -4,7 +4,7 @@
 import _createClassDefault from "_createClass" /* 42 */;
 import isReanimated3 from "isReanimated3" /* 1698 */;
 import t from "t" /* 1815 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const FrameCallbackRegistryJS = global;
 require = arg1;
@@ -27,20 +27,19 @@ const items = [
       closure_0 = arg0;
       if (arg0) {
         const self = this;
-        const nextCallbackId = this.nextCallbackId;
         this.nextCallbackId = this.nextCallbackId + 1;
-        let obj = nextCallbackId(1698);
+        nextCallbackId(1698);
         const fn = function c() {
           const result = obj._frameCallbackRegistry.registerFrameCallback(obj, nextCallbackId);
         };
-        obj = { callback: null, callbackId: null };
+        const obj = { callback: null, callbackId: null };
         obj[0] = arg0;
-        obj[1] = nextCallbackId;
+        obj[1] = this.nextCallbackId;
         fn.__closure = obj;
         fn.__workletHash = 11361563554462;
         fn.__initData = closure_4;
         obj.runOnUI(fn)();
-        return nextCallbackId;
+        return this.nextCallbackId;
       } else {
         return -1;
       }

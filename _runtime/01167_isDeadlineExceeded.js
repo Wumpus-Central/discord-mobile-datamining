@@ -16,12 +16,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -41,8 +41,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -56,13 +56,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -81,7 +81,7 @@ arg5.timeToDisplayIntegration = () => {
   return {
     name: TimeToDisplay,
     afterAllSetup(getIntegrationByName) {
-      const reactNavigationIntegration = callback(closure_1_1[0]).getReactNavigationIntegration(getIntegrationByName);
+      const reactNavigationIntegration = callback(dependencyMap[0]).getReactNavigationIntegration(getIntegrationByName);
       let prop;
       if (null !== reactNavigationIntegration) {
         if (undefined !== reactNavigationIntegration) {
@@ -92,15 +92,12 @@ arg5.timeToDisplayIntegration = () => {
     },
     processEvent(arg0) {
       closure_0 = arg0;
-      return closure_1_2(undefined, undefined, undefined, function*() {
+      return fn(undefined, undefined, undefined, function*() {
         let timestamp2 = 0;
-        let tmp = closure_1_0;
         if ("transaction" !== closure_1_0.type) {
           return closure_1_0;
         }
-        tmp = closure_1_0;
         let contexts = closure_1_0.contexts;
-        tmp = null;
         if (null !== contexts) {
           if (undefined !== contexts) {
             let trace = contexts.trace;
@@ -143,8 +140,8 @@ arg5.timeToDisplayIntegration = () => {
           ({ event: timestamp2, rootSpanId: timestamp3, transactionStartTimestampSeconds: timestamp, enableTimeToInitialDisplayForPreloadedRoutes: c3 } = arg0);
           c4 = undefined;
           return timestamp(undefined, undefined, undefined, function*() {
-            if (closure_3 === 2) {
-              closure_3 = 3;
+            if (c3 === 2) {
+              c3 = 3;
               HermesBuiltin.throwTypeError();
             } else if (tmp4 === 3) {
               if (arg0 === 1) {
@@ -158,34 +155,34 @@ arg5.timeToDisplayIntegration = () => {
               }
             } else {
               try {
-                closure_3 = 2;
+                c3 = 2;
                 if (0 === c2) {
                   if (arg0 === 1) {
-                    closure_3 = 3;
+                    c3 = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
-                    closure_3 = 3;
+                    c3 = 3;
                     obj = { value: null, done: true };
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    closure_1 = tmp5;
+                    let status = tmp5;
                     closure_0 = tmp2;
                     closure_0 = undefined;
-                    closure_1 = undefined;
+                    status = undefined;
                     let NATIVE = closure_1_0(found[2]).NATIVE;
                     const _HermesInternal5 = HermesInternal;
                     c2 = 1;
-                    closure_3 = 1;
+                    c3 = 1;
                     obj1 = { value: null, done: false };
                     obj1[0] = NATIVE.popTimeToDisplayFor("ttid-" + found);
                     return obj1;
                   }
                 } else if (arg0 === 1) {
-                  closure_3 = 3;
+                  c3 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  closure_3 = 3;
+                  c3 = 3;
                   let obj2 = { value: null, done: true };
                   obj2[0] = arg1;
                   return obj2;
@@ -210,7 +207,7 @@ arg5.timeToDisplayIntegration = () => {
                         debug = closure_1_0(found[1]).debug;
                         let _HermesInternal = HermesInternal;
                         debug.log("[" + c3 + "] Ttid span already exists and is ok.", found);
-                        closure_3 = 3;
+                        c3 = 3;
                       }
                     }
                   }
@@ -225,9 +222,9 @@ arg5.timeToDisplayIntegration = () => {
                     obj[3] = c3;
                     (function addAutomaticTimeToInitialDisplay() { ... })(obj);
                   }
-                  let status;
-                  if (null != closure_1) {
-                    status = closure_1.status;
+                  status = undefined;
+                  if (null != status) {
+                    status = status.status;
                   }
                   if (!status) {
                     obj1 = closure_1_0(found[4]);
@@ -236,31 +233,28 @@ arg5.timeToDisplayIntegration = () => {
                     obj3[2] = c2;
                     obj3[3] = closure_0;
                     obj3[4] = closure_1_0(found[5]).SPAN_ORIGIN_MANUAL_UI_TIME_TO_DISPLAY;
-                    obj3[5] = closure_1;
+                    obj3[5] = status;
                     let obj4 = {};
                     obj4[closure_1_0(found[6]).SPAN_THREAD_NAME] = closure_1_0(found[6]).SPAN_THREAD_NAME_JAVASCRIPT;
                     obj3[6] = obj4;
-                    closure_1 = obj1.createSpanJSON(obj3);
+                    status = obj1.createSpanJSON(obj3);
                     let debug2 = closure_1_0(found[1]).debug;
                     let _HermesInternal3 = HermesInternal;
-                    debug2.log("[" + c3 + "] Added ttid span to transaction.", closure_1);
+                    debug2.log("[" + c3 + "] Added ttid span to transaction.", status);
                     const spans1 = closure_0.spans;
-                    spans1.push(closure_1);
-                    let tmp73 = closure_1;
+                    spans1.push(status);
                   } else {
                     str2 = "ok";
                   }
-                  closure_1.status = str2;
-                  closure_1.timestamp = closure_0;
+                  status.status = str2;
+                  status.timestamp = closure_0;
                   debug = closure_1_0(found[1]).debug;
                   str2 = debug.log;
                   let _HermesInternal4 = HermesInternal;
-                  str2("[" + c3 + "] Updated existing ttid span.", closure_1);
-                  tmp73 = closure_1;
-                  const tmp95 = closure_0;
+                  str2("[" + c3 + "] Updated existing ttid span.", status);
                 }
               } catch (tmp87) {
-                closure_3 = tmp;
+                c3 = tmp;
                 throw tmp87;
               }
             }
@@ -389,7 +383,6 @@ arg5.timeToDisplayIntegration = () => {
                       str = debug.log;
                       const _HermesInternal2 = HermesInternal;
                       str("[" + closure_3 + "] Updated existing ttfd span.", status);
-                      const tmp8 = closure_0;
                     }
                   }
                   c3 = 3;
@@ -402,8 +395,6 @@ arg5.timeToDisplayIntegration = () => {
             }
           });
         })(obj7);
-        tmp = closure_5;
-        tmp = null;
         if (null != closure_5) {
           start_timestamp = closure_5.start_timestamp;
         }

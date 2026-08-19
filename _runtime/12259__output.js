@@ -1,15 +1,16 @@
 // === Module 12259: $output ===
 
 // Module 12259 ($output)
-import $ZodRegistry from "_classCallCheck" /* 41 */;
+import "_classCallCheck";
 import _createClass from "_createClass" /* 42 */;
 
-$ZodRegistry = function $ZodRegistry(arg0, $ZodRegistry) {
-  $ZodRegistry(this, $ZodRegistry);
+export function $ZodRegistry() {
+  _classCallCheck(this, _classCallCheck);
   const weakMap = new WeakMap();
   this._map = weakMap;
   this._idmap = new Map();
-};
+}
+const _classCallCheck = $ZodRegistry;
 const items = [
   {
     key: "add",
@@ -112,5 +113,4 @@ export const registry = function registry() {
 };
 export const $output = Symbol("ZodOutput");
 export const $input = Symbol("ZodInput");
-export const $ZodRegistry = _moduleResult;
 export const globalRegistry = globalThis.__zod_globalRegistry;

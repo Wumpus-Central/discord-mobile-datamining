@@ -16,29 +16,8 @@ class NESTED_NOOP {
     return NOOP;
   }
 }
-c0 = 0;
-let obj = {
-  value: 0,
-  addListener: NOOP,
-  removeListener: NOOP,
-  modify: NOOP,
-  get() {
-    return c0;
-  },
-  set: NOOP
-};
 c0 = null;
-obj = {
-  value: null,
-  addListener: NOOP,
-  removeListener: NOOP,
-  modify: NOOP,
-  get() {
-    return c0;
-  },
-  set: NOOP
-};
-obj = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+const obj = { enabled: true, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
 const obj1 = { progress: null, height: null };
 let value = new Animated.Value(0);
 obj1[0] = value;

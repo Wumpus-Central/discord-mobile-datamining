@@ -3,8 +3,7 @@
 // Module 236 (MessageQueue)
 import MessageQueue from "MessageQueue" /* 39 */;
 
-let closure_0 = global;
-closure_0 = undefined;
+let closure_0;
 if (true === global.RN$Bridgeless) {
   let fn = (arg0, fn) => {
     closure_0 = fn;

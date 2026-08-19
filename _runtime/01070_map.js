@@ -11,22 +11,21 @@ const map = new Map();
 const map1 = new Map();
 let closure_5 = { click: "click", pointerdown: "click", pointerup: "click", mousedown: "click", mouseup: "click", touchstart: "click", touchend: "click", mouseover: "hover", mouseout: "hover", mouseenter: "hover", mouseleave: "hover", pointerover: "hover", pointerout: "hover", pointerenter: "hover", pointerleave: "hover", dragstart: "drag", dragend: "drag", drag: "drag", dragenter: "drag", dragleave: "drag", dragover: "drag", drop: "drag", keydown: "press", keyup: "press", keypress: "press", input: "press" };
 function _onInp(metric) {
-  const iter = metric.metric;
-  if (null != iter.value) {
+  if (null != metric.metric.value) {
     const msToSecResult = iter(1059).msToSec(iter.value);
     if (msToSecResult <= 60) {
       const entries = iter.entries;
-      const found = entries.find((duration) => {
-        let tmp = duration.duration === iter.value;
+      const found = entries.find((item, index) => {
+        let tmp = item.duration === iter.value;
         if (tmp) {
-          tmp = closure_1_5[duration.name];
+          tmp = closure_1_5[item.name];
         }
         return tmp;
       });
       if (found) {
         const interactionId = found.interactionId;
-        let tmp12Result = tmp12(1059);
-        tmp12Result = tmp12(817);
+        tmp12(1059);
+        const tmp12Result = tmp12(817);
         const msToSecResult1 = tmp12Result.msToSec(tmp12Result.browserPerformanceTimeOrigin() + found.startTime);
         const activeSpan = tmp12(817).getActiveSpan();
         if (activeSpan) {
@@ -89,27 +88,27 @@ arg5._trackINP = function _trackINP() {
   return triggerHandlers.addInpInstrumentationHandler(_onInp);
 };
 arg5.registerInpInteractionListener = function registerInpInteractionListener() {
-  function captureElementFromEvent(target) {
-    target = target.target;
+  function captureElementFromEvent(closure_1) {
+    const target = closure_1.target;
     if (target) {
       const _Math = Math;
       const obj = captureElementFromEvent(817);
-      const result = closure_4.set(Math.round(target.timeStamp), captureElementFromEvent(817).htmlTreeAsString(target));
-      if (closure_4.size > 50) {
-        const value = obj2.keys().next().value;
+      const result = map.set(Math.round(closure_1.timeStamp), captureElementFromEvent(817).htmlTreeAsString(target));
+      if (map.size > 50) {
+        const value = map.keys().next().value;
         if (undefined !== value) {
-          obj2.delete(value);
+          map.delete(value);
         }
-        const iter = obj2.keys();
+        const iter = map.keys();
       }
       const htmlTreeAsStringResult = captureElementFromEvent(817).htmlTreeAsString(target);
     }
   }
   const keys = Object.keys(closure_5);
   if (obj.isBrowser()) {
-    let item = keys.forEach((arg0) => {
-      const WINDOW = captureElementFromEvent(closure_1_1[3]).WINDOW;
-      const listener = WINDOW.addEventListener(arg0, captureElementFromEvent, { capture: true, passive: true });
+    let item = keys.forEach((item, index) => {
+      const WINDOW = captureElementFromEvent(dependencyMap[3]).WINDOW;
+      const listener = WINDOW.addEventListener(item, captureElementFromEvent, { capture: true, passive: true });
     });
   }
   function handleEntries(arg0) {
@@ -118,21 +117,21 @@ arg5.registerInpInteractionListener = function registerInpInteractionListener() 
     const activeSpan = rootSpan(817).getActiveSpan();
     rootSpan = activeSpan;
     if (activeSpan) {
-      rootSpan = rootSpan(817).getRootSpan(activeSpan);
-      let tmpResult = rootSpan(817);
+      rootSpan = tmp(817).getRootSpan(activeSpan);
+      let tmpResult = tmp(817);
     }
-    const item = entries.forEach((interactionId) => {
+    const item = entries.forEach((item, index) => {
       let obj = rootSpan(closure_1_1[2]);
-      if (obj.isPerformanceEventTiming(interactionId)) {
-        interactionId = interactionId.interactionId;
+      if (obj.isPerformanceEventTiming(item)) {
+        const interactionId = item.interactionId;
         if (null != interactionId) {
           if (!closure_1_3.has(interactionId)) {
-            if (interactionId.target) {
-              let str = rootSpan(closure_1_1[1]).htmlTreeAsString(interactionId.target);
+            if (item.target) {
+              let str = rootSpan(closure_1_1[1]).htmlTreeAsString(item.target);
               const tmpResult = rootSpan(closure_1_1[1]);
             } else {
               const _Math = Math;
-              const rounded = Math.round(interactionId.startTime);
+              const rounded = Math.round(item.startTime);
               const value = closure_1_4.get(rounded);
               let num = -5;
               str = value;
@@ -163,11 +162,14 @@ arg5.registerInpInteractionListener = function registerInpInteractionListener() 
         }
       }
     });
+    let obj = rootSpan(817);
+    tmp = rootSpan;
   }
   let tmpResult = tmp(1034);
   let result = tmpResult.addPerformanceInstrumentationHandler("event", handleEntries);
   tmpResult = tmp(1034);
   const result1 = tmpResult.addPerformanceInstrumentationHandler("first-input", handleEntries);
+  obj = captureElementFromEvent(817);
 };
 arg5.startTrackingINP = function startTrackingINP() {
   if (obj.getBrowserPerformanceAPI()) {

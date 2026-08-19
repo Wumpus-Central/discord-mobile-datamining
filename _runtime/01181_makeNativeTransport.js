@@ -2,7 +2,7 @@
 
 // Module 1181 (makeNativeTransport)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const NativeTransport = arg1;
 function makeNativeTransport() {
@@ -35,9 +35,9 @@ const items = [
       closure_0 = arg0;
       const _buffer = this._buffer;
       return _buffer.add(() => {
-        const NATIVE = callback(closure_1_1[3]).NATIVE;
+        const NATIVE = callback(dependencyMap[3]).NATIVE;
         return NATIVE.sendEnvelope(callback);
-      }).then(() => ({}));
+      }).then((result) => ({}));
     }
   },
   {

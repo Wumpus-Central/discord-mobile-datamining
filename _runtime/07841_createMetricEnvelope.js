@@ -25,13 +25,11 @@ function createMetricEnvelope(arg0, arg1, sdk) {
   }
   if (tmp) {
     obj.dsn = dsnFromString.dsnToString(arg1);
-    const obj4 = dsnFromString;
   }
   const date = new Date();
   const result = items2.serializeMetricBuckets(arg0);
   obj = { type: "statsd", length: result.length };
   const items = [obj, result];
-  const obj5 = items2;
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
 }

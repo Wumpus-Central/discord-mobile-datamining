@@ -6,7 +6,6 @@ import _mod534 from "module_534" /* 534 */;
 let items = [];
 let num = 0;
 do {
-  let tmp = num;
   let str = "";
   if (num < 16) {
     str = "0";
@@ -21,7 +20,6 @@ function arrayToObject(arg0, plainObjects) {
       let obj = Object.create(null);
     }
     for (let num = 0; num < arg0.length; num = num + 1) {
-      let tmp3 = num;
       if (undefined !== arg0[num]) {
         obj[num] = arg0[num];
       }
@@ -39,14 +37,13 @@ function merge(arr, obj, plainObjects) {
     if (typeof obj !== "object") {
       if (typeof obj !== "function") {
         if (isArray(arr)) {
-          arr.push(obj);
+          arr = arr.push(obj);
         } else {
           if (arr) {
             if (typeof arr === "object") {
               let tmp11 = plainObjects;
               if (plainObjects) {
                 tmp11 = plainObjects.plainObjects || plainObjects.allowPrototypes;
-                const tmp10 = plainObjects.plainObjects || plainObjects.allowPrototypes;
               }
               if (tmp11) {
                 if (tmp11) {
@@ -56,7 +53,6 @@ function merge(arr, obj, plainObjects) {
                 let call = closure_2.call;
                 const _Object2 = Object;
                 !(typeof call === "unknown" ? closure_2(obj) : call(prototype, obj));
-                const tmp12 = closure_2;
               }
             }
           }
@@ -81,7 +77,6 @@ function merge(arr, obj, plainObjects) {
             tmp2 = obj;
             if (0 < arr.length) {
               do {
-                let tmp5 = num;
                 if (undefined !== arr[num]) {
                   obj[num] = arr[num];
                 }
@@ -93,23 +88,23 @@ function merge(arr, obj, plainObjects) {
           obj = {};
         }
         if (isArray(arr)) {
-          if (tmp16(obj)) {
-            const item = obj.forEach((obj) => {
-              const call = closure_2.call;
+          if (isArray(obj)) {
+            const item = obj.forEach((item, index) => {
+              const call = plainObjects.call;
               arr = closure_0;
-              if (typeof call === "unknown" ? closure_2(arg1) : call(arr, arg1)) {
-                if (arr[arg1]) {
+              if (typeof call === "unknown" ? plainObjects(index) : call(arr, index)) {
+                if (arr[index]) {
                   if (typeof tmp2 === "object") {
-                    if (obj) {
-                      if (typeof obj === "object") {
-                        arr[arg1] = closure_1_7(tmp2, obj, closure_2);
+                    if (item) {
+                      if (typeof item === "object") {
+                        arr[index] = merge(tmp2, item, plainObjects);
                       }
                     }
                   }
                 }
-                arr = arr.push(obj);
+                arr = arr.push(item);
               } else {
-                arr[arg1] = obj;
+                arr[index] = item;
               }
             });
             let reduced = arr;
@@ -118,14 +113,14 @@ function merge(arr, obj, plainObjects) {
         }
         const _Object = Object;
         const keys = Object.keys(obj);
-        reduced = keys.reduce((arg0, arg1) => {
-          const call = closure_2.call;
-          if (typeof call === "unknown" ? closure_2(arg1) : call(arg0, arg1)) {
-            arg0[arg1] = closure_1_7(arg0[arg1], tmp, closure_2);
+        reduced = keys.reduce((acc, item, index) => {
+          const call = plainObjects.call;
+          if (typeof call === "unknown" ? plainObjects(item) : call(acc, item)) {
+            acc[item] = merge(acc[item], tmp, plainObjects);
           } else {
-            arg0[arg1] = tmp;
+            acc[item] = tmp;
           }
-          return arg0;
+          return acc;
         }, tmp2);
         tmp = isArray(arr) && !isArray(obj);
       }
@@ -142,9 +137,9 @@ export default {
   assign: function assignSingleSource(arg0, arg1) {
     closure_0 = arg1;
     const keys = Object.keys(arg1);
-    return keys.reduce((arg0, arg1) => {
-      arg0[arg1] = table[arg1];
-      return arg0;
+    return keys.reduce((acc, item, index) => {
+      acc[item] = table[item];
+      return acc;
     }, arg0);
   },
   combine(arg0, arg1) {
@@ -160,12 +155,10 @@ export default {
       let tmp2 = tmp.obj[tmp.prop];
       let _Object = Object;
       let keys = Object.keys(tmp2);
-      let tmp3 = num;
       for (let num2 = 0; num2 < keys.length; num2 = num2 + 1) {
         let tmp4 = keys[num2];
         let tmp5 = tmp2[tmp4];
         let tmp6 = typeof tmp5 === "object";
-        let tmp7 = num2;
         if (typeof tmp5 === "object") {
           tmp6 = null !== tmp5;
         }
@@ -185,11 +178,9 @@ export default {
       do {
         let arr1 = items.pop();
         let arr4 = arr1.obj[arr1.prop];
-        let tmp11 = isArray;
         if (isArray(arr4)) {
           let items2 = [];
           for (let num3 = 0; num3 < arr4.length; num3 = num3 + 1) {
-            let tmp12 = num3;
             if (undefined !== arr4[num3]) {
               let arr2 = items2.push(arr4[num3]);
             }
@@ -236,8 +227,6 @@ export default {
         let str3 = "";
         if (0 < StringResult.length) {
           do {
-            let tmp5 = num2;
-            let tmp6 = str2;
             let substr = StringResult;
             if (StringResult.length >= c6) {
               substr = StringResult.slice(num2, num2 + tmp4);
@@ -247,7 +236,6 @@ export default {
             if (0 < substr.length) {
               while (true) {
                 let charCodeAtResult = substr.charCodeAt(num);
-                let tmp8 = num;
                 if (45 !== charCodeAtResult) {
                   if (46 !== charCodeAtResult) {
                     if (95 !== charCodeAtResult) {
@@ -255,15 +243,11 @@ export default {
                         if (charCodeAtResult < 48) {
                           if (charCodeAtResult < 65) {
                             if (charCodeAtResult < 97) {
-                              let tmp9 = require;
-                              let tmp10 = dependencyMap;
                               if (arg4 !== _mod534.RFC1738) {
                                 if (charCodeAtResult < 128) {
-                                  let tmp14 = items;
                                   items[items.length] = items[charCodeAtResult];
                                   let sum = num;
                                 } else if (charCodeAtResult < 2048) {
-                                  let tmp13 = items;
                                   items[items.length] = items[192 | charCodeAtResult >> 6] + items[128 | 63 & charCodeAtResult];
                                   sum = num;
                                 } else {
@@ -272,11 +256,9 @@ export default {
                                       sum = num + 1;
                                       let tmp18 = 1023 & charCodeAtResult;
                                       let sum1 = 65536 + (tmp18 << 10 | 1023 & substr.charCodeAt(sum));
-                                      let tmp20 = items;
                                       items[items.length] = items[240 | sum1 >> 18] + items[128 | sum1 >> 12 & 63] + items[128 | sum1 >> 6 & 63] + items[128 | 63 & sum1];
                                     }
                                   }
-                                  let tmp11 = items;
                                   items[items.length] = items[224 | charCodeAtResult >> 12] + items[128 | charCodeAtResult >> 6 & 63] + items[128 | 63 & charCodeAtResult];
                                   sum = num;
                                 }
@@ -297,7 +279,6 @@ export default {
               }
             }
             str2 = str2 + items.join("");
-            let tmp15 = c6;
             num2 = num2 + c6;
             str3 = str2;
           } while (num2 < StringResult.length);
@@ -326,21 +307,21 @@ export default {
     const call = toString.call;
     return "[object RegExp]" === (typeof call === "unknown" ? toString() : call(arg0));
   },
-  maybeMap(parts1, arg1) {
+  maybeMap(parts1, fn) {
     let length;
     if (isArray(parts1)) {
       items = [];
       let num = 0;
       if (0 < parts1.length) {
         do {
-          let arr = items.push(arg1(parts1[num]));
+          let arr = items.push(fn(parts1[num]));
           num = num + 1;
           length = parts1.length;
         } while (num < length);
       }
       return items;
     } else {
-      return arg1(parts1);
+      return fn(parts1);
     }
   },
   merge

@@ -2,7 +2,7 @@
 
 // Module 7063 (RVEngagedIndicesTrackerImpl)
 import _createClassDefault from "_createClass" /* 7051 */;
-import closure_2 from "_classCallCheck" /* 7050 */;
+import _classCallCheck from "_classCallCheck" /* 7050 */;
 
 const RVEngagedIndicesTrackerImpl = arg1;
 class RVEngagedIndicesTrackerImpl {
@@ -88,9 +88,6 @@ let items = [
       let num5 = 0;
       if (0 < this.velocityHistory.length) {
         do {
-          let tmp = num;
-          let tmp2 = num2;
-          let tmp3 = num3;
           if (self.velocityHistory[num] > 0) {
             let sum = num3 + 1;
             let sum1 = num2;

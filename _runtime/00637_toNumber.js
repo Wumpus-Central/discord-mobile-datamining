@@ -1,7 +1,9 @@
 // === Module 637: toNumber ===
 
 // Module 637 (toNumber)
+import isObject from "isObject" /* 606 */;
 import isSymbol from "isSymbol" /* 638 */;
+import baseTrim from "baseTrim" /* 639 */;
 
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
@@ -14,13 +16,13 @@ export default function toNumber(num) {
     return NaN;
   } else {
     let tmp = num;
-    if (tmp10(606)(num)) {
+    if (isObject(num)) {
       let valueOfResult = num;
       if (typeof num.valueOf === "function") {
         valueOfResult = num.valueOf();
       }
       let text = valueOfResult;
-      if (tmp10(606)(valueOfResult)) {
+      if (isObject(valueOfResult)) {
         text = `${tmp2}`;
       }
       tmp = text;
@@ -32,7 +34,7 @@ export default function toNumber(num) {
       }
       return tmp9;
     } else {
-      const arr = tmp10(639)(tmp);
+      const arr = baseTrim(tmp);
       const isMatch = regex2.test(arr);
       if (!isMatch) {
         if (!regex3.test(arr)) {
@@ -49,7 +51,6 @@ export default function toNumber(num) {
         num3 = 2;
       }
       num = parseInt(substr, num3);
-      const tmp7 = parseInt;
     }
   }
 };

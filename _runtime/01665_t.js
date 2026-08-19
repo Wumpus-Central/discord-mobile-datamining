@@ -1,7 +1,7 @@
 // === Module 1665: t ===
 
 // Module 1665 (t)
-import closure_1 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 const fn = function t(arg0) {
   let str = "[Reanimated]";
@@ -43,13 +43,13 @@ export const reportFatalErrorOnJS = function reportFatalErrorOnJS(stack) {
   if (str) {
     const match = str.match(/worklet_(\d+):(\d+):(\d+)/g);
     if (match != null) {
-      const item = match.forEach((str) => {
-        const parts = str.split(/:|_/);
+      const item = match.forEach((item, index) => {
+        const parts = item.split(/:|_/);
         let replaced = globalThis;
         let concat = closure_1_1;
         const tmp = closure_1_1(parts.map(Number), 4);
         str = tmp[3];
-        const value = closure_1_3.get(tmp[1]);
+        const value = map.get(tmp[1]);
         if (value) {
           const combined = concat(value, 3);
           let first = combined[0];
@@ -68,10 +68,9 @@ export const reportFatalErrorOnJS = function reportFatalErrorOnJS(stack) {
             tmp4 = replaced;
             concat = replaced.HermesInternal.concat;
             str = ":";
-            replaced = replaced.replace(str, concat(combined1[0], ":", tmp[2] + combined1[1] + combined[1], ":", sum));
+            replaced = replaced.replace(item, concat(combined1[0], ":", tmp[2] + combined1[1] + combined[1], ":", sum));
           } else {
             first = /@([^@]+):(\d+):(\d+)/.exec(first1);
-            const obj2 = /@([^@]+):(\d+):(\d+)/;
           }
           const combined2 = concat(first, 4);
           first = [combined2[1], replaced.Number(combined2[2]), replaced.Number(combined2[3])];

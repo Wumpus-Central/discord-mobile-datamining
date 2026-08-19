@@ -1,11 +1,11 @@
 // === Module 4158: _initialize ===
 
 // Module 4158 (_initialize)
-import _initialize from "asyncGeneratorStep" /* 5 */;
+import "asyncGeneratorStep";
 import { NitroModules } from "module_4112" /* 4112 */;
 
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
-_initialize = function _initialize() {
+function _initialize() {
   const self = this;
   const tmp = _initialize(function*() {
     if (c3 === 2) {
@@ -76,7 +76,7 @@ _initialize = function _initialize() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}
 
 export const RiveRuntime = {
   initialize() {

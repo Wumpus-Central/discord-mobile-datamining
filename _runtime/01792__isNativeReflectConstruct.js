@@ -3,15 +3,15 @@
 // Module 1792 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import isJest from "isJest" /* 1657 */;
 
-const LayoutAnimationConfig = arg1;
+const LayoutAnimationConfig = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -72,11 +72,10 @@ _inheritsDefault(LayoutAnimationConfig, Component);
 isJest = {
   key: "getMaybeWrappedChildren",
   value: function getMaybeWrappedChildren() {
-    let self = this;
-    self = this;
+    const self = this;
     if (closure_1_5.count(this.props.children) > 1) {
       if (self.props.skipExiting) {
-        let children = closure_1_5.map(self.props.children, (children) => <self itemKey={self.props.itemKey} skipExiting>{arg0}</self>);
+        let children = closure_1_5.map(self.props.children, (children) => <self itemKey={self.props.itemKey} skipExiting>{children}</self>);
       }
       return children;
     }
@@ -92,11 +91,10 @@ let items = [
       if (1 === closure_5.count(this.props.children)) {
         const findNodeHandleResult = LayoutAnimationConfig(1762).findNodeHandle(self);
         if (findNodeHandleResult) {
-          const result = tmp(1698).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
-          const tmpResult = tmp(1698);
+          const result = LayoutAnimationConfig(1698).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
+          const tmpResult = LayoutAnimationConfig(1698);
         }
         const obj = LayoutAnimationConfig(1762);
-        tmp = LayoutAnimationConfig;
       }
     }
   },

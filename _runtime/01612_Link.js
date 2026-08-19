@@ -1,10 +1,10 @@
 // === Module 1612: Link ===
 
 // Module 1612 (Link)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+const require = fn;
 ({ Platform, Text: c3 } = get_ActivityIndicator);
 
 export const Link = function Link(arg0) {
@@ -23,8 +23,8 @@ export const Link = function Link(arg0) {
       preventDefault.preventDefault();
       preventDefault.stopPropagation();
     } else {
-      if ("onPress" in tmp) {
-        const onPress = tmp.onPress;
+      if ("onPress" in merged) {
+        const onPress = merged.onPress;
         if (onPress != null) {
           onPress(preventDefault);
         }

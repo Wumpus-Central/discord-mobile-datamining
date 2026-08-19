@@ -1,7 +1,7 @@
 // === Module 1032: makeFetchTransport ===
 
 // Module 1032 (makeFetchTransport)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -61,7 +61,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
                   tmp31 = closure_3 < 15;
                 }
                 obj1[4] = tmp31;
-                const merged = Object.assign(tmp55.fetchOptions);
+                const merged = Object.assign(lib.fetchOptions);
                 c4 = 2;
                 c5 = 3;
                 c6 = 1;

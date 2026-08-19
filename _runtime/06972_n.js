@@ -3,9 +3,9 @@
 // Module 6972 (n)
 import cancelAnimation from "cancelAnimation" /* 1654 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
-const fn = function n(arg0, arg1) {
+fn = function n(arg0) {
   if ("easeIn" === arg0) {
     let obj = { easing: null, duration: null };
     const Easing3 = cancelAnimation.Easing;

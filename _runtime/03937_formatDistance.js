@@ -22,7 +22,6 @@ export default function formatDistance(arg0, arg1, addSuffix) {
     let one = tmp.one;
   } else {
     one = tmp.other.replace("{{count}}", localeToNumber.numberToLocale(arg1));
-    const str = tmp.other;
   }
 };
 export default exports.default;

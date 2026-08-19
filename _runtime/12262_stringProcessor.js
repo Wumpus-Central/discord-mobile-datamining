@@ -3,7 +3,7 @@
 // Module 12262 (stringProcessor)
 import mergeDefs from "mergeDefs" /* 12203 */;
 import initializeContext from "initializeContext" /* 12261 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 let closure_4 = { guid: "uuid", url: "uri", datetime: "date-time", json_string: "json-string", regex: "" };
 
@@ -17,15 +17,11 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     const entries = _idmap.entries();
     const tmp10 = entries[Symbol.iterator]();
     while (tmp10 !== undefined) {
-      let tmp14 = callback;
-      let tmp15 = callback(tmp12, 2);
+      let tmp15 = _slicedToArray(tmp12, 2);
       let first = tmp15[0];
-      let tmp17 = require;
-      let tmp18 = dependencyMap;
       let processResult = initializeContext.process(tmp15[1], initializeContextResult);
       continue;
     }
-    obj = {};
     obj = { registry: null, uri: null, defs: null };
     obj[0] = _idmap;
     uri = undefined;
@@ -39,11 +35,8 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     const _idmap2 = _idmap._idmap;
     const entries1 = _idmap2.entries();
     for (const item10061 of entries1) {
-      let tmp25 = callback;
-      let tmp26 = callback(item10061, 2);
+      let tmp26 = _slicedToArray(item10061, 2);
       let tmp27 = tmp26[1];
-      let tmp28 = require;
-      let tmp29 = dependencyMap;
       let extractDefsResult = initializeContext.extractDefs(initializeContextResult, tmp27);
       obj[tmp26[0]] = initializeContext.finalize(initializeContextResult, tmp27);
       continue;
@@ -62,16 +55,16 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     obj3[0] = obj;
     return obj3;
   } else {
-    tmp2(12261).process(_idmap, initializeContextResult);
-    tmp2(12261).extractDefs(initializeContextResult, _idmap);
-    return tmp2(12261).finalize(initializeContextResult, _idmap);
+    initializeContext.process(_idmap, initializeContextResult);
+    initializeContext.extractDefs(initializeContextResult, _idmap);
+    return initializeContext.finalize(initializeContextResult, _idmap);
   }
   tmp = "_idmap" in _idmap;
 };
-export const stringProcessor = (_zod, arg1, format) => {
-  closure_0 = arg1;
+export const stringProcessor = (closure_0, arg1, format, arg3) => {
+  const _require = arg1;
   format.type = "string";
-  ({ minimum, maximum, format, patterns, contentEncoding } = _zod._zod.bag);
+  ({ minimum, maximum, format, patterns, contentEncoding } = _require._zod.bag);
   if (typeof minimum === "number") {
     format.minLength = minimum;
   }
@@ -102,15 +95,15 @@ export const stringProcessor = (_zod, arg1, format) => {
         format.pattern = items[0].source;
       } else if (items.length > 1) {
         const items1 = [];
-        HermesBuiltin.arraySpread(items.map((source) => {
+        HermesBuiltin.arraySpread(items.map((item, index) => {
           if ("draft-07" !== target.target) {
-            if ("draft-04" !== tmp.target) {
-              if ("openapi-3.0" !== tmp.target) {
+            if ("draft-04" !== target.target) {
+              if ("openapi-3.0" !== target.target) {
                 let obj = {};
               }
               obj = {};
               const merged = Object.assign(obj);
-              obj.pattern = source.source;
+              obj.pattern = item.source;
               return obj;
             }
           }
@@ -121,8 +114,8 @@ export const stringProcessor = (_zod, arg1, format) => {
     }
   }
 };
-export const numberProcessor = (_zod, target) => {
-  ({ minimum, maximum, format, multipleOf, exclusiveMaximum, exclusiveMinimum } = _zod._zod.bag);
+export const numberProcessor = (closure_0, target, arg2, arg3) => {
+  ({ minimum, maximum, format, multipleOf, exclusiveMaximum, exclusiveMinimum } = _require._zod.bag);
   if (typeof format === "string") {
     if (format.includes("int")) {
       arg2.type = "integer";
@@ -179,24 +172,24 @@ export const numberProcessor = (_zod, target) => {
   }
   arg2.type = "number";
 };
-export const booleanProcessor = (arg0, arg1, arg2, arg3) => {
+export const booleanProcessor = (closure_0, arg1, arg2, arg3) => {
   arg2.type = "boolean";
 };
-export const bigintProcessor = (arg0, unrepresentable) => {
+export const bigintProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("BigInt cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const symbolProcessor = (arg0, unrepresentable) => {
+export const symbolProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Symbols cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const nullProcessor = (arg0, target) => {
+export const nullProcessor = (closure_0, target, arg2, arg3) => {
   if ("openapi-3.0" === target.target) {
     arg2.type = "string";
     arg2.nullable = true;
@@ -205,79 +198,66 @@ export const nullProcessor = (arg0, target) => {
     arg2.type = "null";
   }
 };
-export const undefinedProcessor = (arg0, unrepresentable) => {
+export const undefinedProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Undefined cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const voidProcessor = (arg0, unrepresentable) => {
+export const voidProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Void cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const neverProcessor = (arg0, arg1, arg2, arg3) => {
+export const neverProcessor = (closure_0, arg1, arg2, arg3) => {
   arg2.not = {};
 };
-export (arg0, arg1, arg2, arg3) => {
+export (closure_0, arg1, arg2, arg3) => {
 
 }
-export const dateProcessor = (arg0, unrepresentable) => {
+export const dateProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Date cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const enumProcessor = (_zod) => {
-  const enumValues = mergeDefs.getEnumValues(_zod._zod.def.entries);
-  if (enumValues.every((num) => typeof num === "number")) {
+export const enumProcessor = (closure_0, arg1, arg2, arg3) => {
+  const enumValues = mergeDefs.getEnumValues(_require._zod.def.entries);
+  if (enumValues.every((item, index) => typeof item === "number")) {
     arg2.type = "number";
   }
-  if (enumValues.every((str) => typeof str === "string")) {
+  if (enumValues.every((item, index) => typeof item === "string")) {
     arg2.type = "string";
   }
   arg2.enum = enumValues;
 };
-export const literalProcessor = (arg0, unrepresentable) => {
+export const literalProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   const items = [];
-  const iter = arg0._zod.def.values[Symbol.iterator]();
+  const iter = _require._zod.def.values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (undefined === nextResult) {
       if ("throw" === unrepresentable.unrepresentable) {
         let _Error2 = Error;
-        let tmp10 = new.target;
-        let str2 = "Literal `undefined` cannot be represented in JSON Schema";
-        let tmp11 = new.target;
         error = new Error("Literal `undefined` cannot be represented in JSON Schema");
-        let tmp13 = error;
         throw error;
       }
-    } else {
-      let tmp3 = nextResult;
-      if (typeof tmp2 === "bigint") {
-        if ("throw" === unrepresentable.unrepresentable) {
-          let _Error = Error;
-          let tmp6 = new.target;
-          let str = "BigInt literals cannot be represented in JSON Schema";
-          let tmp7 = new.target;
-          let error1 = new Error("BigInt literals cannot be represented in JSON Schema");
-          let tmp9 = error1;
-          throw error1;
-        } else {
-          let _Number = Number;
-          let tmp4 = nextResult;
-          let arr = items.push(Number(tmp2));
-        }
+    } else if (typeof tmp2 === "bigint") {
+      if ("throw" === unrepresentable.unrepresentable) {
+        let _Error = Error;
+        let error1 = new Error("BigInt literals cannot be represented in JSON Schema");
+        throw error1;
       } else {
-        let tmp16 = nextResult;
-        arr = items.push(tmp2);
+        let _Number = Number;
+        let arr = items.push(Number(tmp2));
       }
+    } else {
+      arr = items.push(tmp2);
     }
     continue;
   }
@@ -297,31 +277,31 @@ export const literalProcessor = (arg0, unrepresentable) => {
       const items1 = [first];
       arg2.enum = items1;
     } else {
-      if (items.every((num) => typeof num === "number")) {
+      if (items.every((item, index) => typeof item === "number")) {
         arg2.type = "number";
       }
-      if (items.every((str) => typeof str === "string")) {
+      if (items.every((item, index) => typeof item === "string")) {
         arg2.type = "string";
       }
-      if (items.every((flag) => typeof flag === "boolean")) {
+      if (items.every((item, index) => typeof item === "boolean")) {
         arg2.type = "boolean";
       }
-      if (items.every((arg0) => null === arg0)) {
+      if (items.every((item, index) => null === item)) {
         arg2.type = "null";
       }
       arg2.enum = items;
     }
   }
 };
-export const nanProcessor = (arg0, unrepresentable) => {
+export const nanProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("NaN cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const templateLiteralProcessor = (_zod) => {
-  const pattern = _zod._zod.pattern;
+export const templateLiteralProcessor = (closure_0, arg1, arg2, arg3) => {
+  const pattern = _require._zod.pattern;
   if (pattern) {
     arg2.type = "string";
     arg2.pattern = pattern.source;
@@ -331,9 +311,9 @@ export const templateLiteralProcessor = (_zod) => {
     throw error;
   }
 };
-export const fileProcessor = (_zod) => {
+export const fileProcessor = (closure_0, arg1, arg2, arg3) => {
   const obj = { type: "string", format: "binary", contentEncoding: "binary" };
-  ({ minimum, maximum, mime } = _zod._zod.bag);
+  ({ minimum, maximum, mime } = _require._zod.bag);
   if (undefined !== minimum) {
     obj.minLength = minimum;
   }
@@ -348,53 +328,53 @@ export const fileProcessor = (_zod) => {
     } else {
       const _Object2 = Object;
       const merged1 = Object.assign(arg2, obj);
-      arg2.anyOf = mime.map((contentMediaType) => ({ contentMediaType }));
+      arg2.anyOf = mime.map((item, index) => ({ contentMediaType: item }));
     }
   } else {
     const _Object = Object;
     const merged2 = Object.assign(arg2, obj);
   }
 };
-export const successProcessor = (arg0, arg1, arg2, arg3) => {
+export const successProcessor = (closure_0, arg1, arg2, arg3) => {
   arg2.type = "boolean";
 };
-export const customProcessor = (arg0, unrepresentable) => {
+export const customProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Custom types cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const functionProcessor = (arg0, unrepresentable) => {
+export const functionProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Function types cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const transformProcessor = (arg0, unrepresentable) => {
+export const transformProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Transforms cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const mapProcessor = (arg0, unrepresentable) => {
+export const mapProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Map cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const setProcessor = (arg0, unrepresentable) => {
+export const setProcessor = (closure_0, unrepresentable, arg2, arg3) => {
   if ("throw" === unrepresentable.unrepresentable) {
     const _Error = Error;
     error = new Error("Set cannot be represented in JSON Schema");
     throw error;
   }
 };
-export const arrayProcessor = (_zod, arg1, arg2, path) => {
-  ({ minimum, maximum } = _zod._zod.bag);
+export const arrayProcessor = (closure_0, arg1, arg2, path) => {
+  ({ minimum, maximum } = _require._zod.bag);
   if (typeof minimum === "number") {
     arg2.minItems = minimum;
   }
@@ -407,25 +387,18 @@ export const arrayProcessor = (_zod, arg1, arg2, path) => {
   const items = [];
   items[HermesBuiltin.arraySpread(path.path, 0)] = "items";
   obj.path = items;
-  arg2.items = initializeContext.process(_zod._zod.def.element, arg1, obj);
+  arg2.items = initializeContext.process(_require._zod.def.element, arg1, obj);
 };
-export const objectProcessor = (_zod, io, properties, path) => {
+export const objectProcessor = (closure_0, io, properties, path) => {
   const _require = io;
-  const def = _zod._zod.def;
+  const def = _require._zod.def;
   properties.type = "object";
   properties.properties = {};
   const shape = def.shape;
   for (const key10015 in shape) {
-    let tmp10 = key10015;
-    let tmp11 = _require;
-    let tmp12 = dependencyMap;
     let obj = {};
-    let tmp13 = obj;
-    let tmp14 = arg3;
     let merged = Object.assign(arg3);
     let items = [, ];
-    let tmp16 = items;
-    let num2 = 0;
     let arraySpreadResult = HermesBuiltin.arraySpread(arg3.path, 0);
     items[arraySpreadResult] = "properties";
     items[arraySpreadResult + 1] = key10015;
@@ -434,8 +407,8 @@ export const objectProcessor = (_zod, io, properties, path) => {
     continue;
   }
   const items1 = [...new Set(Object.keys(shape))];
-  const set1 = new Set(items1.filter((arg0) => {
-    const _zod = def.shape[arg0]._zod;
+  const set1 = new Set(items1.filter((item, index) => {
+    const _zod = def.shape[item]._zod;
     if ("input" === io.io) {
       let tmp = undefined === _zod.optin;
     } else {
@@ -466,14 +439,15 @@ export const objectProcessor = (_zod, io, properties, path) => {
   } else if ("output" === io.io) {
     properties.additionalProperties = false;
   }
+  const set = new Set(Object.keys(shape));
 };
-export const unionProcessor = (_zod) => {
-  closure_0 = arg1;
+export const unionProcessor = (closure_0, arg1, arg2, arg3) => {
+  const _require = arg1;
   closure_1 = arg3;
-  const def = _zod._zod.def;
+  const def = _require._zod.def;
   closure_2 = tmp;
   const options = def.options;
-  const mapped = options.map((arg0, arg1) => {
+  const mapped = options.map((item, index) => {
     const obj = {};
     const merged = Object.assign(path);
     const items = [...closure_1.path];
@@ -482,9 +456,9 @@ export const unionProcessor = (_zod) => {
       str = "oneOf";
     }
     items[tmp3] = str;
-    items[tmp3 + 1] = arg1;
+    items[tmp3 + 1] = index;
     obj.path = items;
-    return callback(table[2]).process(arg0, callback, obj);
+    return callback(table[2]).process(item, callback, obj);
   });
   if (false === def.inclusive) {
     arg2.oneOf = mapped;
@@ -492,8 +466,8 @@ export const unionProcessor = (_zod) => {
     arg2.anyOf = mapped;
   }
 };
-export const intersectionProcessor = (_zod, arg1, arg2, path) => {
-  const def = _zod._zod.def;
+export const intersectionProcessor = (closure_0, arg1, arg2, path) => {
+  const def = _require._zod.def;
   let obj = {};
   const merged = Object.assign(path);
   const items = [...path.path, "allOf", 0];
@@ -528,10 +502,10 @@ export const intersectionProcessor = (_zod, arg1, arg2, path) => {
   HermesBuiltin.arraySpread(allOf1, tmp7);
   arg2.allOf = items2;
 };
-export const tupleProcessor = (_zod, target, items, path) => {
+export const tupleProcessor = (closure_0, target, items, path) => {
   const _require = target;
   closure_1 = path;
-  let def = _zod._zod.def;
+  let def = _require._zod.def;
   items.type = "array";
   let str = "items";
   if ("draft-2020-12" === target.target) {
@@ -543,12 +517,12 @@ export const tupleProcessor = (_zod, target, items, path) => {
     str2 = "additionalItems";
   }
   items = def.items;
-  const mapped = items.map((arg0, arg1) => {
+  const mapped = items.map((item, index) => {
     const obj = {};
     const merged = Object.assign(path);
-    const items = [...closure_1.path, str, arg1];
+    const items = [...closure_1.path, str, index];
     obj.path = items;
-    return target(str[2]).process(arg0, target, obj);
+    return target(str[2]).process(item, target, obj);
   });
   if (!def.rest) {
     if ("draft-2020-12" === target.target) {
@@ -574,7 +548,7 @@ export const tupleProcessor = (_zod, target, items, path) => {
         items.additionalItems = null;
       }
     }
-    ({ minimum, maximum } = _zod._zod.bag);
+    ({ minimum, maximum } = _require._zod.bag);
     if (typeof minimum === "number") {
       items.minItems = minimum;
     }
@@ -599,8 +573,8 @@ export const tupleProcessor = (_zod, target, items, path) => {
     _require(str[2]).process(def.rest, target, obj);
   }
 };
-export const recordProcessor = (_zod, target, patternProperties, path) => {
-  const def = _zod._zod.def;
+export const recordProcessor = (closure_0, target, patternProperties, path) => {
+  const def = _require._zod.def;
   patternProperties.type = "object";
   const keyType = def.keyType;
   const bag = keyType._zod.bag;
@@ -629,10 +603,10 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
       if (values) {
         const items1 = [];
         arraySpreadResult = HermesBuiltin.arraySpread(values, 0);
-        const found = items1.filter((str) => {
-          let tmp = typeof str === "string";
-          if (typeof str !== "string") {
-            tmp = typeof str === "number";
+        const found = items1.filter((item, index) => {
+          let tmp = typeof item === "string";
+          if (typeof item !== "string") {
+            tmp = typeof item === "number";
           }
           return tmp;
         });
@@ -661,8 +635,8 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
   obj.path = items3;
   patternProperties.additionalProperties = initializeContext.process(def.valueType, target, obj);
 };
-export const nullableProcessor = (_zod, target) => {
-  const def = _zod._zod.def;
+export const nullableProcessor = (closure_0, target, arg2, arg3) => {
+  const def = _require._zod.def;
   if ("openapi-3.0" === target.target) {
     tmp2.ref = def.innerType;
     arg2.nullable = true;
@@ -671,35 +645,35 @@ export const nullableProcessor = (_zod, target) => {
     arg2.anyOf = items;
   }
 };
-export const nonoptionalProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const nonoptionalProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
 };
-export const defaultProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const defaultProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
   arg2.default = JSON.parse(JSON.stringify(def.defaultValue));
 };
-export const prefaultProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const prefaultProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
   if ("input" === seen.io) {
     const _JSON = JSON;
     const _JSON2 = JSON;
     arg2._prefault = JSON.parse(JSON.stringify(def.defaultValue));
   }
 };
-export const catchProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const catchProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
   try {
     arg2.default = def.catchValue(undefined);
   } catch (err) {
@@ -708,38 +682,38 @@ export const catchProcessor = (_zod, seen) => {
     throw error;
   }
 };
-export const pipeProcessor = (_zod, io) => {
-  const def = _zod._zod.def;
+export const pipeProcessor = (closure_0, io, arg2, arg3) => {
+  const def = _require._zod.def;
   if ("input" !== io.io) {
     const out = def.out;
     initializeContext.process(out, io, arg3);
     const seen = io.seen;
-    seen.get(_zod).ref = out;
+    seen.get(_require).ref = out;
   }
 };
-export const readonlyProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const readonlyProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
   arg2.readOnly = true;
 };
-export const promiseProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const promiseProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
 };
-export const optionalProcessor = (_zod, seen) => {
-  const def = _zod._zod.def;
+export const optionalProcessor = (closure_0, seen, arg2, arg3) => {
+  const def = _require._zod.def;
   initializeContext.process(def.innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = def.innerType;
+  seen.get(_require).ref = def.innerType;
 };
-export const lazyProcessor = (_zod, seen) => {
-  const innerType = _zod._zod.innerType;
+export const lazyProcessor = (closure_0, seen, arg2, arg3) => {
+  const innerType = _require._zod.innerType;
   initializeContext.process(innerType, seen, arg3);
   seen = seen.seen;
-  seen.get(_zod).ref = innerType;
+  seen.get(_require).ref = innerType;
 };
 export const allProcessors = { string: exports.stringProcessor, number: exports.numberProcessor, boolean: exports.booleanProcessor, bigint: exports.bigintProcessor, symbol: exports.symbolProcessor, null: exports.nullProcessor, undefined: exports.undefinedProcessor, void: exports.voidProcessor, never: exports.neverProcessor, any: exports.anyProcessor, unknown: exports.unknownProcessor, date: exports.dateProcessor, enum: exports.enumProcessor, literal: exports.literalProcessor, nan: exports.nanProcessor, template_literal: exports.templateLiteralProcessor, file: exports.fileProcessor, success: exports.successProcessor, custom: exports.customProcessor, function: exports.functionProcessor, transform: exports.transformProcessor, map: exports.mapProcessor, set: exports.setProcessor, array: exports.arrayProcessor, object: exports.objectProcessor, union: exports.unionProcessor, intersection: exports.intersectionProcessor, tuple: exports.tupleProcessor, record: exports.recordProcessor, nullable: exports.nullableProcessor, nonoptional: exports.nonoptionalProcessor, default: exports.defaultProcessor, prefault: exports.prefaultProcessor, catch: exports.catchProcessor, pipe: exports.pipeProcessor, readonly: exports.readonlyProcessor, promise: exports.promiseProcessor, optional: exports.optionalProcessor, lazy: exports.lazyProcessor };

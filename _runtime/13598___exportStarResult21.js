@@ -3,6 +3,9 @@
 // Module 13598 (__exportStarResult21)
 import getMultiInternalSlots from "getMultiInternalSlots" /* 13582 */;
 import TEN from "TEN" /* 13584 */;
+import __exportStarResult22 from "__exportStarResult22" /* 13599 */;
+import __exportStarResult29 from "__exportStarResult29" /* 13600 */;
+import __exportStarResult28 from "__exportStarResult28" /* 13601 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,24 +15,23 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
       let ZERO = TEN.ZERO;
       let str2 = "negative";
       let tmp5Result = dependencyMap;
-      let tmp5 = require;
     }
     roundingType = roundingType.roundingType;
-    const result = tmp5(13599).GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
+    const result = __exportStarResult22.GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
     if ("significantDigits" === roundingType) {
-      let ToRawPrecisionResult = tmp5(13600).ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
+      let ToRawPrecisionResult = __exportStarResult29.ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
     } else if ("fractionDigits" === roundingType) {
-      ToRawPrecisionResult = tmp5(13601).ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
+      ToRawPrecisionResult = __exportStarResult28.ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
     } else {
-      const ToRawPrecisionResult1 = tmp5(13600).ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
-      let ToRawFixedResult = tmp5(13601).ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
+      const ToRawPrecisionResult1 = __exportStarResult29.ToRawPrecision(ZERO, roundingType.minimumSignificantDigits, roundingType.maximumSignificantDigits, result);
+      let ToRawFixedResult = __exportStarResult28.ToRawFixed(ZERO, roundingType.minimumFractionDigits, roundingType.maximumFractionDigits, roundingType.roundingIncrement, result);
       if ("morePrecision" === roundingType.roundingType) {
         if (ToRawPrecisionResult1.roundingMagnitude <= ToRawFixedResult.roundingMagnitude) {
           ToRawFixedResult = ToRawPrecisionResult1;
         }
         ToRawPrecisionResult = ToRawFixedResult;
       } else {
-        tmp5(13582).invariant("lessPrecision" === roundingType.roundingType, "Invalid roundingType");
+        getMultiInternalSlots.invariant("lessPrecision" === roundingType.roundingType, "Invalid roundingType");
         ToRawPrecisionResult = ToRawPrecisionResult1;
         if (ToRawPrecisionResult1.roundingMagnitude <= ToRawFixedResult.roundingMagnitude) {
           ToRawPrecisionResult = ToRawFixedResult;
@@ -52,7 +54,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
     const minimumIntegerDigits = roundingType.minimumIntegerDigits;
     let sum = substr;
     if (integerDigitsCount < minimumIntegerDigits) {
-      sum = tmp5(13582).repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
+      sum = getMultiInternalSlots.repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
     }
     if ("negative" !== str2) {
       const obj = { roundedNumber: null, formattedString: null };
@@ -60,7 +62,7 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
       obj[1] = sum;
       return obj;
     } else if (roundedNumber.isZero()) {
-      tmp5Result = tmp5(13584);
+      tmp5Result = TEN;
       let NEGATIVE_ZERO = tmp5Result.NEGATIVE_ZERO;
     } else {
       NEGATIVE_ZERO = roundedNumber.negated();
@@ -73,12 +75,10 @@ arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesR
   }
   ZERO = timesResult;
   str2 = str;
-  tmp5Result = tmp2;
-  tmp5 = tmp;
+  tmp5Result = dependencyMap;
   if ("negative" === str) {
     ZERO = timesResult.negated();
     str2 = str;
-    tmp5Result = tmp2;
-    tmp5 = tmp;
+    tmp5Result = dependencyMap;
   }
 };

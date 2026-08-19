@@ -24,14 +24,12 @@ if (!fn) {
       if (0 < arg1.length) {
         while (true) {
           let tmp4 = !tmp3;
-          let tmp5 = num4;
           let tmp6 = tmp3;
           if (!tmp3) {
             tmp4 = num4 in arg1;
           }
           let tmp7 = tmp3;
           if (!tmp4) {
-            let tmp8 = tmp3;
             if (!tmp3) {
               break;
             } else {
@@ -72,15 +70,14 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
     if (!closure_1) {
       items = [];
     }
-    const mapped = closure_1_12(["about:blank"], items, true).map(closure_1_13);
-    str = undefined;
+    const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_1_13);
     const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
     str = "";
     if (null !== match) {
       str = match[0];
     }
-    if (mapped.some((arg0) => {
-      const regExp = new RegExp(arg0);
+    if (mapped.some((item, index) => {
+      const regExp = new RegExp(item);
       return regExp.test(str);
     })) {
       let flag = true;
@@ -88,21 +85,21 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
         flag = callback(nativeEvent);
       }
     } else {
-      const canOpenURLResult = closure_1_6.canOpenURL(url);
-      closure_1_6.canOpenURL(url).then((arg0) => {
-        if (arg0) {
+      const canOpenURLResult = onHttpErrorProp.canOpenURL(url);
+      onHttpErrorProp.canOpenURL(url).then((result) => {
+        if (result) {
           return closure_1_6.openURL(str);
         } else {
           const _console = console;
           const concat = "Can't open url: ".concat;
           console.warn("Can't open url: ".concat("Can't open url: "));
         }
-      }).catch((arg0) => {
-        console.warn("Error opening URL: ", arg0);
+      }).catch((error) => {
+        console.warn("Error opening URL: ", error);
       });
       flag = false;
-      const nextPromise = closure_1_6.canOpenURL(url).then((arg0) => {
-        if (arg0) {
+      const nextPromise = onHttpErrorProp.canOpenURL(url).then((result) => {
+        if (result) {
           return closure_1_6.openURL(str);
         } else {
           const _console = console;
@@ -112,6 +109,7 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
       });
     }
     str(flag, url, nativeEvent.lockIdentifier);
+    const tmpResult = onShouldStartLoadWithRequestCallback(["about:blank"], items, true);
   };
 }
 
@@ -119,8 +117,7 @@ export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
 export const defaultRenderLoading = () => callback(closure_7, { style: get_ActivityIndicatorDefault.loadingOrErrorView, children: callback(closure_8, {}) });
 export const defaultRenderError = (arg0, arg1, arg2) => {
-  let obj = { style: get_ActivityIndicatorDefault.loadingOrErrorView, children: null };
-  obj = { style: get_ActivityIndicatorDefault.errorTextTitle, children: "Error loading page" };
+  let obj = { style: get_ActivityIndicatorDefault.errorTextTitle, children: "Error loading page" };
   const items = [callback(closure_9, obj), , , ];
   obj = { style: get_ActivityIndicatorDefault.errorText, children: "Domain: ".concat(arg0) };
   items[1] = callback(closure_9, obj);
@@ -148,9 +145,9 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
   if (onNavigationStateChange.startInLoadingState) {
     str = "LOADING";
   }
-  let tmpResult = tmp(str);
+  tmp(str);
   closure_13 = tmp3;
-  tmpResult = tmp(null);
+  let tmpResult = tmp(null);
   closure_14 = tmpResult[1];
   closure_15 = onLoadEnd(null);
   let items = [onNavigationStateChange];
@@ -240,15 +237,14 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
       if (!closure_1) {
         items = [];
       }
-      const mapped = closure_1_12(["about:blank"], items, true).map(closure_1_13);
-      str = undefined;
+      const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_1_13);
       const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
       str = "";
       if (null !== match) {
         str = match[0];
       }
-      if (mapped.some((arg0) => {
-        const regExp = new RegExp(arg0);
+      if (mapped.some((item, index) => {
+        const regExp = new RegExp(item);
         return regExp.test(str);
       })) {
         let flag = true;
@@ -256,21 +252,21 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
           flag = callback(nativeEvent);
         }
       } else {
-        const canOpenURLResult = closure_1_6.canOpenURL(url);
-        closure_1_6.canOpenURL(url).then((arg0) => {
-          if (arg0) {
+        const canOpenURLResult = onHttpErrorProp.canOpenURL(url);
+        onHttpErrorProp.canOpenURL(url).then((result) => {
+          if (result) {
             return closure_1_6.openURL(str);
           } else {
             const _console = console;
             const concat = "Can't open url: ".concat;
             console.warn("Can't open url: ".concat("Can't open url: "));
           }
-        }).catch((arg0) => {
-          console.warn("Error opening URL: ", arg0);
+        }).catch((error) => {
+          console.warn("Error opening URL: ", error);
         });
         flag = false;
-        const nextPromise = closure_1_6.canOpenURL(url).then((arg0) => {
-          if (arg0) {
+        const nextPromise = onHttpErrorProp.canOpenURL(url).then((result) => {
+          if (result) {
             return closure_1_6.openURL(str);
           } else {
             const _console = console;
@@ -280,6 +276,7 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
         });
       }
       str(flag, url, nativeEvent.lockIdentifier);
+      const tmpResult = onShouldStartLoadWithRequestCallback(["about:blank"], items, true);
     };
   }, items9);
   obj[1] = tmp6;

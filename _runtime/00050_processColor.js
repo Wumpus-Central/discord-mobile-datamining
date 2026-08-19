@@ -2,6 +2,7 @@
 
 // Module 50 (processColor)
 import normalizeColor from "normalizeColor" /* 51 */;
+import PlatformColor from "PlatformColor" /* 52 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,7 +13,7 @@ arg5.default = function processColor(arg0) {
     const defaultResult = normalizeColor.default(arg0);
     if (null != defaultResult) {
       if (typeof defaultResult === "object") {
-        const processColorObjectResult = tmp(52).processColorObject(defaultResult);
+        const processColorObjectResult = PlatformColor.processColorObject(defaultResult);
         if (null != processColorObjectResult) {
           return processColorObjectResult;
         }
@@ -23,7 +24,5 @@ arg5.default = function processColor(arg0) {
       }
       return tmp4;
     }
-    const obj = normalizeColor;
-    tmp = require;
   }
 };

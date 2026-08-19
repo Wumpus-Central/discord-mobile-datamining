@@ -214,14 +214,12 @@ export default function normalizeColor(num) {
     const regExp2 = new hex6.RegExp("hsl" + tmp14("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%"));
     match[2] = regExp2;
     const _RegExpResult = _RegExp("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+");
-    const regExp3 = new hex6.RegExp("hsla(" + _RegExpResult + "|" + tmp22("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + str14);
+    const regExp3 = new hex6.RegExp("hsla(" + _RegExpResult + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + str14);
     match[3] = regExp3;
     _RegExp = hex6.RegExp;
     tmp14 = callModern("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%");
-    let str9 = "[-+]?\\d*\\.?\\d+";
-    let str11 = "[-+]?\\d*\\.?\\d+%";
-    str11 = tmp22(`[-+]?\\d*\\.?\\d+`, `[-+]?\\d*\\.?\\d+%`, `[-+]?\\d*\\.?\\d+%`, "[-+]?\\d*\\.?\\d+");
-    str9 = "hwb(" + tmp14 + "|" + str11 + str14;
+    const str11 = callWithSlashSeparator(`[-+]?\\d*\\.?\\d+`, `[-+]?\\d*\\.?\\d+%`, `[-+]?\\d*\\.?\\d+%`, "[-+]?\\d*\\.?\\d+");
+    const str9 = "hwb(" + tmp14 + "|" + str11 + str14;
     regExp1 = new.target;
     _RegExp = new _RegExp(str9);
     match[4] = _RegExp;

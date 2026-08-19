@@ -1,11 +1,11 @@
 // === Module 1108: _diagnoseSdkConnectivity ===
 
 // Module 1108 (_diagnoseSdkConnectivity)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _diagnoseSdkConnectivity() {
   const self = this;
-  const tmp = callback(function*() {
+  const tmp = asyncGeneratorStep(function*() {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

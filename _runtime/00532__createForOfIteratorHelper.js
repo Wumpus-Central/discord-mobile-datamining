@@ -4,16 +4,16 @@
 const exports = arg5;
 function _createForOfIteratorHelper(iterable) {
   closure_0 = iterable;
-  iterable = typeof Symbol !== "undefined";
+  let prop = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
-    iterable = iterable[Symbol.iterator];
+    prop = iterable[Symbol.iterator];
   }
-  if (!iterable) {
-    iterable = iterable[Symbol.iterator];
+  if (!prop) {
+    prop = iterable[Symbol.iterator];
   }
-  let arr = iterable;
-  if (iterable) {
+  let arr = prop;
+  if (prop) {
     c4 = true;
     c5 = false;
     let obj = { s: null, n: null, e: null, f: null };
@@ -82,8 +82,8 @@ function _createForOfIteratorHelper(iterable) {
               return;
             }
           }
-          let name = tmp3;
-          if (tmp4) {
+          let name = tmp4;
+          if (tmp5) {
             name = iterable.constructor.name;
           }
           if ("Map" !== name) {
@@ -112,7 +112,7 @@ function _createForOfIteratorHelper(iterable) {
           }
           const _Array3 = Array;
           arr = Array.from(iterable);
-          tmp4 = "Object" === tmp3 && iterable.constructor;
+          tmp5 = "Object" === tmp4 && iterable.constructor;
         }
       }
       if (!arr) {
@@ -168,15 +168,12 @@ arg5.params = (str) => {
       let iter2 = iter;
       if (!iter.done) {
         do {
-          let tmp2 = iter2;
           str = iter2.value;
           let parts = str.split(/ *= */);
           let arr = parts.shift();
           let tmp4 = arr;
           arr = parts.shift();
           if (arr) {
-            let tmp6 = tmp4;
-            let tmp7 = arr;
             obj[tmp4] = arr;
           }
           iter3 = obj2.n();
@@ -204,7 +201,6 @@ arg5.parseLinks = (str) => {
       let iter2 = iter;
       if (!iter.done) {
         do {
-          let tmp2 = iter2;
           str = iter2.value;
           let parts = str.split(/ *; */);
           let first = parts[0];
@@ -254,8 +250,6 @@ arg5.hasOwn = Object.hasOwn || ((arg0, key10009) => {
 });
 arg5.mixin = (arg0, obj) => {
   for (const key10004 in arg1) {
-    let tmp = key10004;
-    let tmp2 = exports;
     if (!exports.hasOwn(arg1, key10004)) {
       continue;
     } else {

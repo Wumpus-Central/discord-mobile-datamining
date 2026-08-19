@@ -5,11 +5,11 @@ import noopDefault from "noop" /* 19 */;
 import get_controlledBottomTabsDefault from "get controlledBottomTabs" /* 4683 */;
 import context from "context" /* 4686 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4689 */;
-import closure_6 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 let closure_5 = ["style"];
@@ -75,13 +75,13 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
         items2 = [];
       }
       HermesBuiltin.arraySpread(items2, tmp);
-      const found = items1.find((buttonId) => {
-        let tmp = buttonId;
-        if (buttonId) {
-          tmp = "buttonId" in buttonId;
+      const found = items1.find((item, index) => {
+        let tmp = item;
+        if (item) {
+          tmp = "buttonId" in item;
         }
         if (tmp) {
-          tmp = buttonId.buttonId === nativeEvent.nativeEvent.buttonId;
+          tmp = item.buttonId === nativeEvent.nativeEvent.buttonId;
         }
         return tmp;
       });
@@ -106,25 +106,15 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
         while (iter !== undefined) {
           let tmp2 = nextResult;
           if ("items" in nextResult) {
-            let tmp7 = findInMenu;
-            let tmp8 = nextResult;
             let tmp9 = findInMenu(tmp2, menuId);
-            let tmp10 = tmp9;
             if (tmp9) {
-              let tmp11 = iter;
               iter.return();
               return tmp9;
             }
-          } else {
-            let tmp3 = nextResult;
-            if ("menuId" in tmp2) {
-              let tmp4 = nextResult;
-              if (tmp2.menuId === menuId) {
-                let tmp5 = nextResult;
-                let tmp6 = iter;
-                iter.return();
-                return tmp2;
-              }
+          } else if ("menuId" in tmp2) {
+            if (tmp2.menuId === menuId) {
+              iter.return();
+              return tmp2;
             }
           }
           continue;
@@ -145,17 +135,12 @@ const forwardRefResult = noopDefault.forwardRef((disableLeftInsetApplication, re
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (nextResult) {
-          let tmp5 = nextResult;
           if ("menu" === tmp4.type) {
-            let tmp6 = nextResult;
             if (tmp4.menu) {
-              let tmp7 = nextResult;
               let findInMenuResult = findInMenu(tmp4.menu, nativeEvent.nativeEvent.menuId);
               let obj = findInMenuResult;
               if (findInMenuResult) {
-                let tmp9 = findInMenuResult;
                 let onPressResult = obj.onPress();
-                let tmp11 = iter;
                 iter.return();
               }
             }
@@ -187,8 +172,7 @@ const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignI
 export const ScreenStackHeaderSubview = __INTERNAL_VIEW_CONFIGDefault;
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
-  let obj = { type: "back", style: closure_9.headerSubview, synchronousShadowStateUpdatesEnabled: get_controlledBottomTabsDefault.experiment.synchronousHeaderSubviewUpdatesEnabled, children: null };
-  obj = { resizeMode: "center", fadeDuration: 0 };
+  const obj = { resizeMode: "center", fadeDuration: 0 };
   const merged = Object.assign(arg0);
   obj[3] = <closure_7 resizeMode="center" fadeDuration={0} />;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, { resizeMode: "center", fadeDuration: 0 });

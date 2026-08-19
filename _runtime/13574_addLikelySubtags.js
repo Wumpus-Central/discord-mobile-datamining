@@ -1,12 +1,12 @@
 // === Module 13574: addLikelySubtags ===
 
 // Module 13574 (addLikelySubtags)
-import getInternalSlots from "getInternalSlots" /* 13575 */;
+import getInternalSlots2 from "getInternalSlots" /* 13575 */;
 import isStructurallyValidLanguageTag from "isStructurallyValidLanguageTag" /* 13640 */;
 import e from "e" /* 1281 */;
 
-function addLikelySubtags(locale) {
-  const parseUnicodeLocaleIdResult = isStructurallyValidLanguageTag.parseUnicodeLocaleId(locale);
+function addLikelySubtags(arr3) {
+  const parseUnicodeLocaleIdResult = isStructurallyValidLanguageTag.parseUnicodeLocaleId(arr3);
   ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
   if (script) {
     if (region) {
@@ -15,17 +15,16 @@ function addLikelySubtags(locale) {
       obj[1] = script;
       obj[2] = region;
       obj[3] = [];
-      const tmp4 = tmp(13640).likelySubtags[tmp(undefined, 13640).emitUnicodeLanguageId(undefined, obj)];
+      const tmp4 = isStructurallyValidLanguageTag.likelySubtags[isStructurallyValidLanguageTag.emitUnicodeLanguageId(undefined, obj)];
       if (tmp4) {
-        const result = tmp(13640).parseUnicodeLanguageId(tmp4);
+        const result = isStructurallyValidLanguageTag.parseUnicodeLanguageId(tmp4);
         if (undefined === variants) {
           variants = [];
         }
         if (result) {
           obj = { lang: null, script: null, region: null, variants: null };
           ({ lang: obj17[0], script: obj17[1], region: obj17[2] } = result);
-          let tmpResult = tmp(1281);
-          tmpResult = tmp(1281);
+          const tmpResult = e;
           obj[3] = tmpResult.__spreadArray(tmpResult.__spreadArray([], variants, true), result.variants, true);
         } else {
           obj = { lang: null, script: "Array", region: "text", variants: null };
@@ -33,7 +32,7 @@ function addLikelySubtags(locale) {
           obj[3] = variants;
         }
         parseUnicodeLocaleIdResult.lang = obj;
-        return tmp(13640).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+        return isStructurallyValidLanguageTag.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
       }
     }
   }
@@ -42,9 +41,9 @@ function addLikelySubtags(locale) {
     obj1[0] = lang;
     obj1[1] = script;
     obj1[2] = [];
-    const tmp5 = tmp(13640).likelySubtags[tmp(undefined, 13640).emitUnicodeLanguageId(undefined, obj1)];
+    const tmp5 = isStructurallyValidLanguageTag.likelySubtags[isStructurallyValidLanguageTag.emitUnicodeLanguageId(undefined, obj1)];
     if (tmp5) {
-      const result1 = tmp(13640).parseUnicodeLanguageId(tmp5);
+      const result1 = isStructurallyValidLanguageTag.parseUnicodeLanguageId(tmp5);
       let items = variants;
       if (undefined === variants) {
         items = [];
@@ -56,10 +55,10 @@ function addLikelySubtags(locale) {
           region = result1.region;
         }
         obj2[2] = region;
-        const tmpResult1 = tmp(1281);
-        obj2[3] = tmpResult1.__spreadArray(tmp(1281).__spreadArray([], items, true), result1.variants, true);
+        const tmpResult1 = e;
+        obj2[3] = tmpResult1.__spreadArray(e.__spreadArray([], items, true), result1.variants, true);
         let obj3 = obj2;
-        const tmpResult2 = tmp(1281);
+        const tmpResult2 = e;
       } else {
         obj3 = { lang: null, script: "r", region: "ct", variants: null };
         obj3[0] = "und";
@@ -67,7 +66,7 @@ function addLikelySubtags(locale) {
         obj3[3] = items;
       }
       parseUnicodeLocaleIdResult.lang = obj3;
-      return tmp(13640).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+      return isStructurallyValidLanguageTag.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
     }
   }
   if (region) {
@@ -75,9 +74,9 @@ function addLikelySubtags(locale) {
     obj4[0] = lang;
     obj4[1] = region;
     obj4[2] = [];
-    const tmp6 = tmp(13640).likelySubtags[tmp(undefined, 13640).emitUnicodeLanguageId(undefined, obj4)];
+    const tmp6 = isStructurallyValidLanguageTag.likelySubtags[isStructurallyValidLanguageTag.emitUnicodeLanguageId(undefined, obj4)];
     if (tmp6) {
-      const result2 = tmp(13640).parseUnicodeLanguageId(tmp6);
+      const result2 = isStructurallyValidLanguageTag.parseUnicodeLanguageId(tmp6);
       let items1 = variants;
       if (undefined === variants) {
         items1 = [];
@@ -90,10 +89,10 @@ function addLikelySubtags(locale) {
         }
         obj5[1] = script;
         obj5[2] = result2.region;
-        const tmpResult3 = tmp(1281);
-        obj5[3] = tmpResult3.__spreadArray(tmp(1281).__spreadArray([], items1, true), result2.variants, true);
+        const tmpResult3 = e;
+        obj5[3] = tmpResult3.__spreadArray(e.__spreadArray([], items1, true), result2.variants, true);
         let obj6 = obj5;
-        const tmpResult4 = tmp(1281);
+        const tmpResult4 = e;
       } else {
         obj6 = { lang: null, script: null, region: "Array", variants: true };
         obj6[0] = "und";
@@ -101,18 +100,18 @@ function addLikelySubtags(locale) {
         obj6[3] = items1;
       }
       parseUnicodeLocaleIdResult.lang = obj6;
-      return tmp(13640).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+      return isStructurallyValidLanguageTag.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
     }
   }
-  let tmp7 = tmp(13640).likelySubtags[lang];
+  let tmp7 = isStructurallyValidLanguageTag.likelySubtags[lang];
   if (!tmp7) {
     const obj7 = { lang: "und", script: null, variants: null };
     obj7[1] = script;
     obj7[2] = [];
-    tmp7 = tmp(13640).likelySubtags[tmp(undefined, 13640).emitUnicodeLanguageId(undefined, obj7)];
+    tmp7 = isStructurallyValidLanguageTag.likelySubtags[isStructurallyValidLanguageTag.emitUnicodeLanguageId(undefined, obj7)];
   }
   if (tmp7) {
-    const result3 = tmp(13640).parseUnicodeLanguageId(tmp7);
+    const result3 = isStructurallyValidLanguageTag.parseUnicodeLanguageId(tmp7);
     let items2 = variants;
     if (undefined === variants) {
       items2 = [];
@@ -130,10 +129,10 @@ function addLikelySubtags(locale) {
         region2 = result3.region;
       }
       obj8[2] = region2;
-      const tmpResult5 = tmp(1281);
-      obj8[3] = tmpResult5.__spreadArray(tmp(1281).__spreadArray([], items2, true), result3.variants, true);
+      const tmpResult5 = e;
+      obj8[3] = tmpResult5.__spreadArray(e.__spreadArray([], items2, true), result3.variants, true);
       let tmp14 = obj8;
-      const tmpResult6 = tmp(1281);
+      const tmpResult6 = e;
     } else {
       obj8[0] = "und";
       obj8[1] = script;
@@ -142,14 +141,14 @@ function addLikelySubtags(locale) {
       tmp14 = obj8;
     }
     parseUnicodeLocaleIdResult.lang = tmp14;
-    return tmp(13640).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+    return isStructurallyValidLanguageTag.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
   } else {
     const _Error = Error;
     error = new Error("No match for addLikelySubtags");
     throw error;
   }
 }
-let closure_2 = e.__importDefault(getInternalSlots);
+const getInternalSlots = e.__importDefault(getInternalSlots2);
 const re3 = /^[a-z0-9]{3,8}$/i;
 let closure_4 = ["ca", "co", "hc", "kf", "kn", "nu", "fw"];
 const re5 = /^[a-z0-9]{3,8}(-[a-z0-9]{3,8})*$/i;
@@ -182,38 +181,40 @@ let tmp2 = (() => {
         }
         tmp11 = arg0;
         if (undefined === arg0) {
-          constructor = globalThis;
+          tmp162 = globalThis;
           _TypeError3 = TypeError;
-          constructor = new.target;
+          tmp163 = new.target;
           str43 = "First argument to Intl.Locale constructor can't be empty or missing";
-          constructor = new.target;
-          constructor = new TypeError("First argument to Intl.Locale constructor can't be empty or missing");
-          throw constructor;
+          tmp164 = new.target;
+          typeError = new TypeError("First argument to Intl.Locale constructor can't be empty or missing");
+          tmp166 = typeError;
+          throw typeError;
         } else {
           if (typeof arg0 !== "string") {
             if (typeof arg0 !== "object") {
-              constructor = globalThis;
+              tmp157 = globalThis;
               _TypeError2 = TypeError;
-              constructor = new.target;
+              tmp158 = new.target;
               str42 = "tag must be a string or object";
-              constructor = new.target;
-              constructor = new TypeError("tag must be a string or object");
-              throw constructor;
+              tmp159 = new.target;
+              typeError1 = new TypeError("tag must be a string or object");
+              tmp161 = typeError1;
+              throw typeError1;
             }
           }
           if (typeof arg0 === "object") {
-            constructor = closure_1_2;
-            constructor = closure_1_2.default(arg0);
-            if (constructor) {
+            tmp167 = closure_1_2;
+            defaultResult = closure_1_2.default(arg0);
+            if (defaultResult) {
               tmp12 = Locale;
               tmp13 = closure_1_1;
               str6 = "initializedLocale";
-              if (Locale(closure_1_1[2]).HasOwnProperty(constructor, "initializedLocale")) {
-                locale = constructor.locale;
+              if (Locale(closure_1_1[2]).HasOwnProperty(defaultResult, "initializedLocale")) {
+                locale = defaultResult.locale;
               }
               tmp14 = arg1;
               tmp15 = closure_1_2;
-              defaultResult = closure_1_2.default(self, items);
+              defaultResult1 = closure_1_2.default(self, items);
               tmp17 = Locale;
               tmp18 = closure_1_1;
               result = Locale(closure_1_1[2]).CoerceOptionsToObject(arg1);
@@ -361,149 +362,164 @@ let tmp2 = (() => {
                   _RangeError7 = RangeError;
                   tmp99 = new.target;
                   str27 = "Invalid firstDayOfWeek";
-                  constructor = new.target;
-                  constructor = new RangeError("Invalid firstDayOfWeek");
-                  throw constructor;
+                  tmp100 = new.target;
+                  rangeError2 = new RangeError("Invalid firstDayOfWeek");
+                  tmp102 = rangeError2;
+                  throw rangeError2;
                 }
               }
               obj1.fw = tmp95;
-              constructor = Locale;
-              constructor = closure_1_1;
+              tmp103 = Locale;
+              tmp104 = closure_1_1;
               str28 = "hourCycle";
-              constructor = result;
+              tmp105 = result;
               str29 = "string";
               obj1.hc = Locale(closure_1_1[2]).GetOption(result, "hourCycle", "string", ["h11", "h12", "h23", "h24"], undefined);
-              constructor = Locale;
-              constructor = closure_1_1;
+              tmp106 = Locale;
+              tmp107 = closure_1_1;
               str30 = "caseFirst";
-              constructor = result;
+              tmp108 = result;
               obj1.kf = Locale(closure_1_1[2]).GetOption(result, "caseFirst", "string", ["upper", "lower", "false"], undefined);
-              constructor = Locale;
-              constructor = closure_1_1;
+              tmp109 = Locale;
+              tmp110 = closure_1_1;
               str31 = "boolean";
               str32 = "numeric";
-              constructor = result;
-              constructor = Locale(closure_1_1[2]).GetOption(result, "numeric", "boolean", undefined, undefined);
-              constructor = undefined;
-              if (undefined !== constructor) {
+              tmp111 = result;
+              GetOptionResult6 = Locale(closure_1_1[2]).GetOption(result, "numeric", "boolean", undefined, undefined);
+              StringResult = undefined;
+              if (undefined !== GetOptionResult6) {
                 _String = String;
-                constructor = String(constructor);
+                StringResult = String(GetOptionResult6);
               }
-              obj1.kn = constructor;
-              constructor = Locale;
-              constructor = closure_1_1;
+              obj1.kn = StringResult;
+              tmp114 = Locale;
+              tmp115 = closure_1_1;
               str33 = "numberingSystem";
-              constructor = result;
+              tmp116 = result;
               str34 = "string";
-              constructor = Locale(closure_1_1[2]).GetOption(result, "numberingSystem", "string", undefined, undefined);
-              if (undefined !== constructor) {
-                constructor = closure_1_5;
-                if (!closure_1_5.test(constructor)) {
+              GetOptionResult7 = Locale(closure_1_1[2]).GetOption(result, "numberingSystem", "string", undefined, undefined);
+              if (undefined !== GetOptionResult7) {
+                tmp118 = closure_1_5;
+                if (!closure_1_5.test(GetOptionResult7)) {
                   _RangeError8 = RangeError;
-                  constructor = new.target;
+                  tmp119 = new.target;
                   str35 = "Invalid numberingSystem";
-                  constructor = new.target;
-                  constructor = new RangeError("Invalid numberingSystem");
-                  throw constructor;
+                  tmp120 = new.target;
+                  rangeError3 = new RangeError("Invalid numberingSystem");
+                  tmp122 = rangeError3;
+                  throw rangeError3;
                 }
               }
-              obj1.nu = constructor;
+              obj1.nu = GetOptionResult7;
               items1 = [];
-              constructor = Locale;
-              constructor = closure_1_1;
-              constructor = Locale(closure_1_1[3]).parseUnicodeLocaleId(Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(obj.__assign(obj2.__assign({}, Locale(closure_1_1[3]).parseUnicodeLocaleId(locale)), obj)))[0]);
-              extensions = constructor.extensions;
+              tmp123 = Locale;
+              tmp124 = closure_1_1;
+              parseUnicodeLocaleIdResult = Locale(closure_1_1[3]).parseUnicodeLocaleId(Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(obj.__assign(obj2.__assign({}, Locale(closure_1_1[3]).parseUnicodeLocaleId(locale)), obj)))[0]);
+              extensions = parseUnicodeLocaleIdResult.extensions;
               num2 = 0;
               num3 = 1;
               str36 = "u";
               num4 = 0;
               arr5 = items1;
-              constructor = undefined;
+              tmp127 = undefined;
               if (0 < extensions.length) {
                 do {
-                  constructor = extensions[num4];
-                  constructor = num4;
+                  tmp128 = extensions[num4];
+                  tmp129 = num4;
                   keywords = items1;
-                  constructor = items1;
-                  if ("u" === constructor.type) {
+                  tmp130 = tmp126;
+                  tmp131 = items1;
+                  if ("u" === tmp128.type) {
                     _Array = Array;
-                    if (Array.isArray(constructor.keywords)) {
-                      keywords = constructor.keywords;
+                    if (Array.isArray(tmp128.keywords)) {
+                      keywords = tmp128.keywords;
                     }
-                    constructor = keywords;
+                    tmp131 = keywords;
+                    tmp130 = tmp128;
                   }
                   num4 = num4 + 1;
-                  items1 = constructor;
-                  arr5 = constructor;
+                  items1 = tmp131;
+                  tmp126 = tmp130;
+                  arr5 = tmp131;
+                  tmp127 = tmp130;
                 } while (num4 < extensions.length);
               }
               _Object2 = Object;
-              constructor = Object.create(null);
+              obj2 = Object.create(null);
               str37 = "Value for ";
               str38 = " must be a string";
               str39 = "";
               str40 = " must be in options";
               for (let num5 = 0; num5 < prop.length; num5 = num5 + 1) {
-                constructor = prop[num5];
-                constructor = num5;
+                tmp133 = prop[num5];
+                tmp134 = num5;
                 num6 = 0;
-                constructor = undefined;
+                tmp138 = undefined;
                 if (0 < arr5.length) {
                   do {
-                    constructor = arr5[num6];
-                    constructor = num6;
-                    if (constructor[0] === constructor) {
-                      constructor = constructor[1];
+                    tmp139 = arr5[num6];
+                    tmp140 = num6;
+                    tmp141 = tmp135;
+                    tmp142 = tmp136;
+                    if (tmp139[0] === tmp133) {
+                      tmp142 = tmp139[1];
+                      tmp141 = tmp139;
                     }
                     num6 = num6 + 1;
+                    tmp135 = tmp141;
+                    tmp136 = tmp142;
+                    tmp137 = tmp141;
+                    tmp138 = tmp142;
                   } while (num6 < arr5.length);
                 }
-                constructor = Locale;
-                constructor = closure_1_1;
+                tmp143 = Locale;
+                tmp144 = closure_1_1;
                 concat = "".concat;
-                constructor = constructor in obj1;
-                constructor = Locale(closure_1_1[2]).invariant(constructor, "".concat(constructor, " must be in options"));
-                constructor = obj1[constructor];
-                if (undefined !== constructor) {
-                  constructor = Locale;
-                  constructor = closure_1_1;
+                tmp145 = tmp133 in obj1;
+                invariantResult5 = Locale(closure_1_1[2]).invariant(tmp145, "".concat(tmp133, " must be in options"));
+                tmp147 = obj1[tmp133];
+                if (undefined !== tmp147) {
+                  tmp148 = Locale;
+                  tmp149 = closure_1_1;
                   concat2 = "Value for ".concat;
-                  constructor = Locale(closure_1_1[2]).invariant(typeof constructor === "string", "Value for ".concat(constructor, " must be a string"));
-                  if (constructor) {
-                    constructor[1] = constructor;
+                  invariantResult6 = Locale(closure_1_1[2]).invariant(typeof tmp147 === "string", "Value for ".concat(tmp133, " must be a string"));
+                  if (tmp137) {
+                    tmp137[1] = tmp147;
+                    tmp138 = tmp147;
                   } else {
                     items2 = [, ];
-                    items2[0] = constructor;
-                    items2[1] = constructor;
-                    constructor = arr5.push(items2);
+                    items2[0] = tmp133;
+                    items2[1] = tmp147;
+                    arr2 = arr5.push(items2);
+                    tmp138 = tmp147;
                   }
                 }
-                constructor[constructor] = constructor;
+                obj2[tmp133] = tmp138;
               }
-              if (constructor) {
-                constructor.keywords = arr5;
+              if (tmp127) {
+                tmp127.keywords = arr5;
               } else if (arr5.length) {
-                extensions1 = constructor.extensions;
-                obj2 = { type: "u", keywords: null, attributes: null };
-                obj2[1] = arr5;
-                obj2[2] = [];
-                constructor = extensions1.push(obj2);
+                extensions1 = parseUnicodeLocaleIdResult.extensions;
+                obj3 = { type: "u", keywords: null, attributes: null };
+                obj3[1] = arr5;
+                obj3[2] = [];
+                arr3 = extensions1.push(obj3);
               }
               _Intl2 = Intl;
-              constructor = Locale;
-              constructor = closure_1_1;
-              constructor.locale = Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(constructor))[0];
-              ({ locale: tmp16.locale, ca: tmp16.calendar, co: tmp16.collation, fw: tmp16.firstDayOfWeek, hc: tmp16.hourCycle } = constructor);
+              tmp153 = Locale;
+              tmp154 = closure_1_1;
+              obj2.locale = Intl.getCanonicalLocales(Locale(closure_1_1[3]).emitUnicodeLocaleId(parseUnicodeLocaleIdResult))[0];
+              ({ locale: tmp16.locale, ca: tmp16.calendar, co: tmp16.collation, fw: tmp16.firstDayOfWeek, hc: tmp16.hourCycle } = obj2);
               if (prop.indexOf("kf") > -1) {
-                defaultResult.caseFirst = constructor.kf;
+                defaultResult1.caseFirst = obj2.kf;
               }
               if (prop.indexOf("kn") > -1) {
-                constructor = Locale;
-                constructor = closure_1_1;
+                tmp155 = Locale;
+                tmp156 = closure_1_1;
                 str41 = "true";
-                defaultResult.numeric = Locale(closure_1_1[2]).SameValue(constructor.kn, "true");
+                defaultResult1.numeric = Locale(closure_1_1[2]).SameValue(obj2.kn, "true");
               }
-              defaultResult.numberingSystem = constructor.nu;
+              defaultResult1.numberingSystem = obj2.nu;
               return;
             }
           }
@@ -515,9 +531,9 @@ let tmp2 = (() => {
         tmp4 = new.target;
         str = "Intl.Locale must be called with 'new'";
         tmp5 = new.target;
-        typeError = new TypeError("Intl.Locale must be called with 'new'");
-        tmp7 = typeError;
-        throw typeError;
+        typeError2 = new TypeError("Intl.Locale must be called with 'new'");
+        tmp7 = typeError2;
+        throw typeError2;
       }
       return;
     }
@@ -542,22 +558,22 @@ let tmp2 = (() => {
       try {
         tmp3 = Locale;
         num = 0;
-        tmp4 = (function removeLikelySubtags(locale) {
-          const tmp2 = callback2(locale);
+        tmp4 = (function removeLikelySubtags(arr3) {
+          const tmp2 = callback2(arr3);
           if (tmp2) {
-            let obj = callback(1281);
+            callback(1281);
             obj1 = callback(1281);
-            obj = { variants: null };
+            let obj = { variants: null };
             obj[0] = [];
             const result = callback(13640).emitUnicodeLanguageId(obj.__assign(obj1.__assign({}, callback(13640).parseUnicodeLanguageId(tmp2)), obj));
-            const parseUnicodeLocaleIdResult = callback(13640).parseUnicodeLocaleId(locale);
+            const parseUnicodeLocaleIdResult = callback(13640).parseUnicodeLocaleId(arr3);
             ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
             obj = { lang: null, variants: null };
             obj[0] = lang;
             obj[1] = [];
-            if (tmp(callback(13640).emitUnicodeLanguageId(obj)) === result) {
-              let tmp3Result = tmp3(1281);
-              tmp3Result = tmp3(1281);
+            if (callback2(callback(13640).emitUnicodeLanguageId(obj)) === result) {
+              callback(1281);
+              const tmp3Result = callback(1281);
               if (undefined === variants) {
                 variants = [];
               }
@@ -569,7 +585,7 @@ let tmp2 = (() => {
               obj2[0] = lang;
               obj2[3] = variants;
               obj1[0] = obj2;
-              let emitUnicodeLocaleIdResult = tmp3(13640).emitUnicodeLocaleId(tmp3Result.__assign(tmp3Result.__assign({}, parseUnicodeLocaleIdResult), obj1));
+              let emitUnicodeLocaleIdResult = callback(13640).emitUnicodeLocaleId(tmp3Result.__assign(tmp3Result.__assign({}, parseUnicodeLocaleIdResult), obj1));
               const __assignResult = tmp3Result.__assign({}, parseUnicodeLocaleIdResult);
             } else {
               if (region) {
@@ -577,10 +593,10 @@ let tmp2 = (() => {
                 obj3[0] = lang;
                 obj3[1] = region;
                 obj3[2] = [];
-                if (tmp(tmp3(13640).emitUnicodeLanguageId(obj3)) === result) {
-                  const tmp3Result1 = tmp3(1281);
+                if (callback2(callback(13640).emitUnicodeLanguageId(obj3)) === result) {
+                  const tmp3Result1 = callback(1281);
                   let items = variants;
-                  const tmp3Result2 = tmp3(1281);
+                  const tmp3Result2 = callback(1281);
                   if (undefined === variants) {
                     items = [];
                   }
@@ -594,21 +610,21 @@ let tmp2 = (() => {
                   obj5[2] = region;
                   obj5[3] = items;
                   obj4[0] = obj5;
-                  emitUnicodeLocaleIdResult = tmp3(13640).emitUnicodeLocaleId(tmp3Result1.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj4));
-                  const __assignResult1 = tmp3(1281).__assign({}, parseUnicodeLocaleIdResult);
+                  emitUnicodeLocaleIdResult = callback(13640).emitUnicodeLocaleId(tmp3Result1.__assign(callback(1281).__assign({}, parseUnicodeLocaleIdResult), obj4));
+                  const __assignResult1 = callback(1281).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
-              emitUnicodeLocaleIdResult = locale;
+              emitUnicodeLocaleIdResult = arr3;
               if (script) {
                 const obj6 = { lang: null, script: null, variants: null };
                 obj6[0] = lang;
                 obj6[1] = script;
                 obj6[2] = [];
-                emitUnicodeLocaleIdResult = locale;
-                if (tmp(tmp3(13640).emitUnicodeLanguageId(obj6)) === result) {
-                  const tmp3Result3 = tmp3(1281);
+                emitUnicodeLocaleIdResult = arr3;
+                if (callback2(callback(13640).emitUnicodeLanguageId(obj6)) === result) {
+                  const tmp3Result3 = callback(1281);
                   let items1 = variants;
-                  const tmp3Result4 = tmp3(1281);
+                  const tmp3Result4 = callback(1281);
                   if (undefined === variants) {
                     items1 = [];
                   }
@@ -622,14 +638,14 @@ let tmp2 = (() => {
                   obj8[1] = script;
                   obj8[3] = items1;
                   obj7[0] = obj8;
-                  emitUnicodeLocaleIdResult = tmp3(13640).emitUnicodeLocaleId(tmp3Result3.__assign(tmp3(1281).__assign({}, parseUnicodeLocaleIdResult), obj7));
-                  const __assignResult2 = tmp3(1281).__assign({}, parseUnicodeLocaleIdResult);
+                  emitUnicodeLocaleIdResult = callback(13640).emitUnicodeLocaleId(tmp3Result3.__assign(callback(1281).__assign({}, parseUnicodeLocaleIdResult), obj7));
+                  const __assignResult2 = callback(1281).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
             }
             return emitUnicodeLocaleIdResult;
           } else {
-            return locale;
+            return arr3;
           }
         })(tmp2);
         obj = Object.create(Locale.prototype);
@@ -666,10 +682,10 @@ let tmp2 = (() => {
       defaultResult = closure_2.default(this);
       collation = defaultResult.collation;
       supportedValuesOfResult = Locale(closure_1[5]).supportedValuesOf("collation", defaultResult.locale);
-      found = supportedValuesOfResult.filter((arg0) => {
-        let tmp = "standard" !== arg0;
+      found = supportedValuesOfResult.filter((item, index) => {
+        let tmp = "standard" !== item;
         if (tmp) {
-          tmp = "search" !== arg0;
+          tmp = "search" !== item;
         }
         return tmp;
       });

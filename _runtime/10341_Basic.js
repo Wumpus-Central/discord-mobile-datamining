@@ -32,7 +32,7 @@ export const Basic = (data) => {
         items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
         items[2] = tmp2;
         obj[0] = items;
-        obj[1] = data.map((arg0, index) => {
+        obj[1] = data.map((item, index) => {
           closure_0 = index;
           const obj = {
             index,
@@ -40,7 +40,7 @@ export const Basic = (data) => {
             count: data.length,
             dotStyle,
             animValue: closure_2,
-            horizontal: !closure_3,
+            horizontal: !callback,
             activeDotStyle: closure_0,
             onPress() {
               let tmpResult;
@@ -54,10 +54,10 @@ export const Basic = (data) => {
           };
           let tmp2Result;
           if (closure_6 != null) {
-            tmp2Result = tmp2(arg0, index);
+            tmp2Result = tmp2(item, index);
           }
           obj[9] = tmp2Result;
-          return closure_3(closure_1_0(dotStyle[3]).PaginationItem, obj, index);
+          return callback(require(dotStyle[3]).PaginationItem, obj, index);
         });
         return closure_3(View, obj);
       }

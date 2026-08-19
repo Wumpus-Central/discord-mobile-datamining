@@ -7,7 +7,7 @@ import _extends from "_extends" /* 4208 */;
 import { Alert } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 class NativeRouter {
   constructor(arg0) {
     obj = {};
@@ -17,8 +17,8 @@ class NativeRouter {
 }
 noopDefault;
 NativeRouter.defaultProps = {
-  getUserConfirmation(arg0, arg1) {
-    closure_0 = arg1;
+  getUserConfirmation(captureScreenshotError, fn2) {
+    closure_0 = fn2;
     const items = [
       {
         text: "Cancel",
@@ -33,7 +33,7 @@ NativeRouter.defaultProps = {
         }
       }
     ];
-    Alert.alert("Confirm", arg0, items);
+    Alert.alert("Confirm", captureScreenshotError, items);
   }
 };
 NativeRouter.propTypes = { initialEntries: emptyFunctionDefault.array, initialIndex: emptyFunctionDefault.number, getUserConfirmation: emptyFunctionDefault.func, keyLength: emptyFunctionDefault.number, children: emptyFunctionDefault.node };

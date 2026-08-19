@@ -427,10 +427,10 @@ arg5.DayWithinYear = function DayWithinYear(arg0) {
     const date1 = new Date(0);
     date1.setUTCFullYear(uTCFullYear, 0, 1);
     date1.setUTCHours(0, 0, 0, 0);
-    let result = date1.getTime() / tmp;
+    let result = date1.getTime() / c3;
   } else {
     const _Date = Date;
-    result = Date.UTC(uTCFullYear, 0) / tmp;
+    result = Date.UTC(uTCFullYear, 0) / c3;
   }
   return rounded - result;
 };
@@ -463,10 +463,10 @@ arg5.DateFromTime = function DateFromTime(arg0) {
     const date1 = new Date(0);
     date1.setUTCFullYear(uTCFullYear, 0, 1);
     date1.setUTCHours(0, 0, 0, 0);
-    let result = date1.getTime() / tmp;
+    let result = date1.getTime() / c3;
   } else {
     const _Date = Date;
-    result = Date.UTC(uTCFullYear, 0) / tmp;
+    result = Date.UTC(uTCFullYear, 0) / c3;
   }
   const diff = rounded - result;
   const tmp12 = MonthFromTime(arg0);

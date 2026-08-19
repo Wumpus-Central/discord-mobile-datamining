@@ -44,7 +44,7 @@ export default {
   addOrientationListener(handleOrientationChange) {
     closure_0 = handleOrientationChange;
     if (handleOrientationChange.hasOwnProperty(__listener_id)) {
-      let str = handleOrientationChange[tmp];
+      let str = handleOrientationChange[__listener_id];
     } else {
       const _Object = Object;
       str = "F";
@@ -54,7 +54,7 @@ export default {
         const sum = c3 + 1;
         c3 = sum;
         obj[0] = `L${tmp4}`;
-        Object.defineProperty(handleOrientationChange, tmp, obj);
+        Object.defineProperty(handleOrientationChange, __listener_id, obj);
       }
     }
     closure_2[str] = DeviceEventEmitter.addListener("orientationDidChange", (orientation) => {
@@ -64,7 +64,7 @@ export default {
   addOrientationDegreesChangeListener(arg0) {
     closure_0 = arg0;
     if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[tmp];
+      let str = arg0[__listener_id];
     } else {
       const _Object = Object;
       str = "F";
@@ -74,7 +74,7 @@ export default {
         const sum = c3 + 1;
         c3 = sum;
         obj[0] = `L${tmp4}`;
-        Object.defineProperty(arg0, tmp, obj);
+        Object.defineProperty(arg0, __listener_id, obj);
       }
     }
     closure_2[str] = DeviceEventEmitter.addListener("orientationDegreesDidChange", (orientationDegrees) => {
@@ -83,7 +83,7 @@ export default {
   },
   removeOrientationListener(arg0) {
     if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[tmp];
+      let str = arg0[__listener_id];
     } else {
       const _Object = Object;
       str = "F";
@@ -93,19 +93,18 @@ export default {
         const sum = c3 + 1;
         c3 = sum;
         obj[0] = `L${tmp4}`;
-        Object.defineProperty(arg0, tmp, obj);
+        Object.defineProperty(arg0, __listener_id, obj);
       }
     }
     if (dependencyMap[str]) {
-      tmp6[str].remove();
-      tmp6[str] = null;
-      const obj2 = tmp6[str];
+      dependencyMap[str].remove();
+      dependencyMap[str] = null;
     }
   },
   addSpecificOrientationListener(arg0) {
     closure_0 = arg0;
     if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[tmp];
+      let str = arg0[__listener_id];
     } else {
       const _Object = Object;
       str = "F";
@@ -115,7 +114,7 @@ export default {
         const sum = c3 + 1;
         c3 = sum;
         obj[0] = `L${tmp4}`;
-        Object.defineProperty(arg0, tmp, obj);
+        Object.defineProperty(arg0, __listener_id, obj);
       }
     }
     closure_2[str] = DeviceEventEmitter.addListener("specificOrientationDidChange", (specificOrientation) => {
@@ -124,7 +123,7 @@ export default {
   },
   removeSpecificOrientationListener(arg0) {
     if (arg0.hasOwnProperty(__listener_id)) {
-      let str = arg0[tmp];
+      let str = arg0[__listener_id];
     } else {
       const _Object = Object;
       str = "F";
@@ -134,13 +133,12 @@ export default {
         const sum = c3 + 1;
         c3 = sum;
         obj[0] = `L${tmp4}`;
-        Object.defineProperty(arg0, tmp, obj);
+        Object.defineProperty(arg0, __listener_id, obj);
       }
     }
     if (dependencyMap[str]) {
-      tmp6[str].remove();
-      tmp6[str] = null;
-      const obj2 = tmp6[str];
+      dependencyMap[str].remove();
+      dependencyMap[str] = null;
     }
   },
   getInitialOrientation() {

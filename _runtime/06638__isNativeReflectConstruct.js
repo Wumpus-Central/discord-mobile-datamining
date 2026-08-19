@@ -4,9 +4,9 @@
 import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -58,8 +58,7 @@ const items = [
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-      obj = {
+      const obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }

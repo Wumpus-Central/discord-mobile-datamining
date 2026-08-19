@@ -3,10 +3,10 @@
 // Module 92 (_isNativeReflectConstruct)
 import EventEmitterDefault from "EventEmitter" /* 89 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 const RCTDeviceEventEmitterImpl = arg1;
@@ -61,12 +61,12 @@ let items = [
         const items = [closure_0];
         HermesBuiltin.arraySpread(substr, 1);
         !(function _superPropGet(closure_0, emit, arg2, arg3) {
-          closure_0 = arg2;
-          let prototype = closure_0;
+          const ctor = arg2;
+          let prototype = ctor;
           if (1) {
-            prototype = closure_0.prototype;
+            prototype = ctor.prototype;
           }
-          const tmpResult = closure_5(closure_4(prototype), "emit", arg2);
+          const tmpResult = callback2(callback(prototype), "emit", arg2);
           closure_1 = tmpResult;
           let fn = tmpResult;
           if (2) {
@@ -78,12 +78,12 @@ let items = [
           return fn;
         })(closure_0, "emit", this, 3)(items);
         const tmp9 = (function _superPropGet(closure_0, emit, arg2, arg3) {
-          closure_0 = arg2;
-          let prototype = closure_0;
+          const ctor = arg2;
+          let prototype = ctor;
           if (1) {
-            prototype = closure_0.prototype;
+            prototype = ctor.prototype;
           }
-          const tmpResult = closure_5(closure_4(prototype), "emit", arg2);
+          const tmpResult = callback2(callback(prototype), "emit", arg2);
           closure_1 = tmpResult;
           let fn = tmpResult;
           if (2) {
@@ -95,10 +95,12 @@ let items = [
           return fn;
         })(closure_0, "emit", this, 3);
         RCTDeviceEventEmitterImpl(46).endEvent();
+        const tmp5Result = RCTDeviceEventEmitterImpl(46);
       } catch (tmp15) {
         tmp3(tmp[6]).endEvent();
         throw tmp15;
       }
+      const obj = RCTDeviceEventEmitterImpl(46);
     }
   }
 ];

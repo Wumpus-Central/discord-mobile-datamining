@@ -1,13 +1,13 @@
 // === Module 6327: StyleSheet ===
 
 // Module 6327 (StyleSheet)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["backgroundColor"];
 ({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
 const styles = StyleSheet.create({ container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" } });
@@ -23,10 +23,7 @@ export const Badge = function Badge(visible) {
     num = 18;
   }
   const merged = Object.assign(visible, Object.create(null));
-  let first;
-  let first1;
-  closure_3 = undefined;
-  first = callback2(React.useState(() => {
+  const first = callback2(React.useState(() => {
     let num = 0;
     if (flag) {
       num = 1;
@@ -35,7 +32,7 @@ export const Badge = function Badge(visible) {
     return value;
   }), 1)[0];
   const tmp2 = callback2(React.useState(flag), 2);
-  first1 = tmp2[0];
+  const first1 = tmp2[0];
   closure_3 = tmp4;
   obj1 = flag(first1[5]);
   const theme = obj1.useTheme();
@@ -74,14 +71,12 @@ export const Badge = function Badge(visible) {
     notification = colors.notification;
   }
   const tmp10 = callback(tmp9, closure_3);
-  const tmp5 = first1;
   let str = "white";
   if (obj3.isLight()) {
     str = "black";
   }
   const result = num / 2;
-  let obj = { numberOfLines: 1, style: null };
-  obj = { transform: null, color: null, lineHeight: null, height: null, minWidth: null, opacity: null, backgroundColor: null, fontSize: null, borderRadius: null, borderCurve: "continuous" };
+  let obj = { transform: null, color: null, lineHeight: null, height: null, minWidth: null, opacity: null, backgroundColor: null, fontSize: null, borderRadius: null, borderCurve: "continuous" };
   obj1 = { scale: null };
   const rounded = Math.floor(3 * num / 4);
   obj1[0] = first.interpolate({ inputRange: [0, 1], outputRange: [0.5, 1] });

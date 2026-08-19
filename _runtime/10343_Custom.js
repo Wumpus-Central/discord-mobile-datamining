@@ -5,7 +5,7 @@ import noopDefault from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopDefault;
 
 export const Custom = (activeDotStyle) => {
@@ -81,7 +81,7 @@ export const Custom = (activeDotStyle) => {
             items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
             items[2] = tmp2;
             obj[0] = items;
-            obj[1] = data.map((arg0, index) => {
+            obj[1] = data.map((item, index) => {
               closure_0 = index;
               const obj = {
                 index,
@@ -89,7 +89,7 @@ export const Custom = (activeDotStyle) => {
                 count: data.length,
                 dotStyle,
                 animValue: closure_2,
-                horizontal: !closure_3,
+                horizontal: !callback,
                 activeDotStyle: closure_0,
                 customReanimatedStyle: closure_8,
                 onPress() {
@@ -104,10 +104,10 @@ export const Custom = (activeDotStyle) => {
               };
               let tmp2Result;
               if (closure_6 != null) {
-                tmp2Result = tmp2(arg0, index);
+                tmp2Result = tmp2(item, index);
               }
               obj[10] = tmp2Result;
-              return closure_3(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
+              return callback(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
             });
             return closure_3(View, obj);
           }

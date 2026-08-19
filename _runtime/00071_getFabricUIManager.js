@@ -2,7 +2,7 @@
 
 // Module 71 (getFabricUIManager)
 const global = arg0;
-const module = arg2;
+const importDefault = arg2;
 const dependencyMap = arg6;
 let closure_4 = ["createNode", "cloneNode", "cloneNodeWithNewChildren", "cloneNodeWithNewProps", "cloneNodeWithNewChildrenAndProps", "createChildSet", "appendChild", "appendChildToSet", "completeRoot", "measure", "measureInWindow", "measureLayout", "configureNextLayoutAnimation", "sendAccessibilityEvent", "findShadowNodeByTag_DEPRECATED", "setNativeProps", "dispatchCommand", "compareDocumentPosition", "getBoundingClientRect", "setIsJSResponder", "unstable_DefaultEventPriority", "unstable_DiscreteEventPriority", "unstable_ContinuousEventPriority", "unstable_IdleEventPriority", "unstable_getCurrentEventPriority"];
 arg5.getFabricUIManager = function getFabricUIManager() {
@@ -23,7 +23,7 @@ arg5.getFabricUIManager = function getFabricUIManager() {
         };
         obj(closure_1_2[0])(obj, iter, obj);
       }
-      const iter = closure_4[Symbol.iterator]();
+      const iter = dependencyMap[Symbol.iterator]();
       while (iter !== undefined) {
         let _loopResult = _loop(iter.next());
         continue;

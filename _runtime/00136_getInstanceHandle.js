@@ -3,6 +3,7 @@
 // Module 136 (getInstanceHandle)
 import renderElement from "renderElement" /* 114 */;
 import createReactNativeDocumentInstanceHandle from "createReactNativeDocumentInstanceHandle" /* 137 */;
+import ReactNativeDocumentElementInstanceHandleImpl from "ReactNativeDocumentElementInstanceHandleImpl" /* 138 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -72,13 +73,13 @@ arg5.getNativeNodeReference = function getNativeNodeReference(target) {
     obj = createReactNativeDocumentInstanceHandle;
   }
 };
-arg5.getNativeElementReference = function getNativeElementReference(nativeElementReference3) {
-  if (obj.isReactNativeDocumentElementInstanceHandle(nativeElementReference3[closure_4])) {
-    let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = tmp2(138).getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
-    const tmp2Result = tmp2(138);
+arg5.getNativeElementReference = function getNativeElementReference(c5) {
+  if (obj.isReactNativeDocumentElementInstanceHandle(table[closure_4])) {
+    let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = ReactNativeDocumentElementInstanceHandleImpl.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
+    const tmp2Result = ReactNativeDocumentElementInstanceHandleImpl;
   } else {
     if (null == callback) {
-      callback = tmp2(114).getNodeFromInternalInstanceHandle;
+      callback = renderElement.getNodeFromInternalInstanceHandle;
     }
     nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = callback(tmp);
   }

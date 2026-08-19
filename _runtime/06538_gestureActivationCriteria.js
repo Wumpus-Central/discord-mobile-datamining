@@ -14,8 +14,7 @@ arg5.gestureActivationCriteria = (direction) => {
     gestureResponseDistance = num;
   }
   if ("vertical" === gestureDirection) {
-    let obj = { maxDeltaX: 15, minOffsetY: 5, hitSlop: null, enableTrackpadTwoFingerGesture: true };
-    obj = { bottom: null };
+    let obj = { bottom: null };
     obj[0] = -layout.height + gestureResponseDistance;
     obj[2] = obj;
     return obj;

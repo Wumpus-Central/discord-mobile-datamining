@@ -2,7 +2,7 @@
 
 // Module 13153 (LRUCache)
 import _createClass from "_createClass" /* 42 */;
-import LRUCache from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class LRUCache {
   constructor() {
@@ -13,6 +13,7 @@ class LRUCache {
     return;
   }
 }
+_classCallCheck = LRUCache;
 const items = [
   {
     key: "get",

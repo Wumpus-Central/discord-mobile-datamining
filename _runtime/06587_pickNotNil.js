@@ -1,12 +1,13 @@
 // === Module 6587: pickNotNil ===
 
 // Module 6587 (pickNotNil)
-const module = arg2;
+import warnOnceDefault from "warnOnce" /* 4679 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.pickNotNil = function pickNotNil(obj) {
   obj = {};
   for (const key10006 in arg0) {
-    let tmp3 = key10006;
     let _Object = Object;
     let call = hasOwnProperty.call;
     if (typeof call === "unknown") {
@@ -37,5 +38,5 @@ arg5.getRandomNumber = () => {
   return Math.floor(random * Math.floor(random1 * Date.now()));
 };
 arg5.warnUnimplementedFilter = () => {
-  module(4679)(true, "Some of the used filters are not yet supported on native platforms. Please check the USAGE.md for more info. Not implemented filters:\n", JSON.stringify(["FeComponentTransfer", "FeConvolveMatrix", "FeDiffuseLighting", "FeDisplacementMap", "FeFuncA", "FeFuncB", "FeFuncG", "FeFuncR", "FeImage", "FeMorphology", "FePointLight", "FeSpecularLighting", "FeSpotLight", "FeTile", "FeTurbulence"], null, 2));
+  warnOnceDefault(true, "Some of the used filters are not yet supported on native platforms. Please check the USAGE.md for more info. Not implemented filters:\n", JSON.stringify(["FeComponentTransfer", "FeConvolveMatrix", "FeDiffuseLighting", "FeDisplacementMap", "FeFuncA", "FeFuncB", "FeFuncG", "FeFuncR", "FeImage", "FeMorphology", "FePointLight", "FeSpecularLighting", "FeSpotLight", "FeTile", "FeTurbulence"], null, 2));
 };

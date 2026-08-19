@@ -2,7 +2,7 @@
 
 // Module 1504 (PrivateValueStore)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class PrivateValueStore {
   constructor() {

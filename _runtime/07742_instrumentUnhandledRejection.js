@@ -20,14 +20,13 @@ function instrumentUnhandledRejection() {
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
-      const tmp2 = onunhandledrejection;
     }
+    const obj = callback(table[0]);
   };
   getGlobalSingleton.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
 let c2 = null;
 arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
   addHandler.addHandler("unhandledrejection", arg0);
-  const obj = addHandler;
   addHandler.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

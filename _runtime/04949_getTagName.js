@@ -3,7 +3,8 @@
 // Module 4949 (getTagName)
 import getDataView from "getDataView" /* 4910 */;
 import _modDef4927 from "module_4927" /* 4927 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import parseBezierKnotDefault from "parseBezierKnot" /* 4950 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function getTagName(dataView, sum1) {
@@ -34,30 +35,27 @@ export default {
     if (0 < arg0.length) {
       const sum = num + closure_7;
       const stringFromDataView = getDataView.getStringFromDataView(dataView, num, closure_7);
-      const obj3 = getDataView;
       const shortAt = _modDef4927.getShortAt(dataView, sum);
       const sum1 = sum + c5;
       const tmp15 = getTagName(dataView, sum1);
       let name = tmp15.tagName;
       const sum2 = sum1 + tmp15.tagNameSize;
-      const obj4 = _modDef4927;
       const longAt = _modDef4927.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
-        let tmp5Result = tmp5(4910);
+        let tmp5Result = getDataView;
         const dataView1 = tmp5Result.getDataView(dataView.buffer, sum3, longAt);
         obj = { id: null, value: null };
         obj[0] = shortAt;
-        tmp5Result = tmp5(4910);
+        tmp5Result = getDataView;
         obj[1] = tmp5Result.getStringFromDataView(dataView1, 0, longAt);
-        if (tmp10(4950)[shortAt]) {
+        if (parseBezierKnotDefault[shortAt]) {
           try {
-            obj.description = tmp10(4950)[shortAt].description(dataView1);
+            obj.description = parseBezierKnotDefault[shortAt].description(dataView1);
             if (!name) {
-              name = tmp10(4950)[shortAt].name;
+              name = parseBezierKnotDefault[shortAt].name;
             }
             obj[name] = obj;
-            const obj6 = tmp10(4950)[shortAt];
           } catch (err) {
             tmp.description = tmp2;
           }
@@ -67,7 +65,6 @@ export default {
         }
       }
       num = sum3 + (longAt + longAt % 2);
-      const obj5 = _modDef4927;
     }
     return obj;
   }

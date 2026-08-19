@@ -3,7 +3,7 @@
 // Module 1731 (rubberBandDecay)
 import isValidRubberBandConfig from "isValidRubberBandConfig" /* 1730 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
 function rubberBandDecay(current, lastTimestamp, deceleration) {
   current = current.current;

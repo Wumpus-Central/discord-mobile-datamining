@@ -29,10 +29,10 @@ arg5.createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, ds
   }
   if (tmp2) {
     obj.dsn = dsnFromString.dsnToString(dsn);
-    const obj3 = dsnFromString;
   }
   obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
-  items = [obj, { items }];
+  items = [obj, ];
+  items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

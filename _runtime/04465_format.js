@@ -3,7 +3,7 @@
 // Module 4465 (format)
 let self = this;
 const global = arg0;
-const dependencyMap = arg4;
+const module = arg4;
 const exports = arg5;
 const fn = function() {
   function format(arg0) {
@@ -18,13 +18,11 @@ const fn = function() {
     }
     return sum;
   }
-  function forOwn(obj) {
+  function forOwn(obj, fn) {
     for (const key10005 in arg0) {
-      let tmp3 = key10005;
-      let tmp4 = hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
-        let callResult = tmp4(key10005);
+        let callResult = hasOwnProperty(key10005);
       } else {
         callResult = call(arg0, key10005);
       }
@@ -48,15 +46,14 @@ const fn = function() {
       const call = toString.call;
       sum = typeof call === "unknown" ? toString() : call(arg0).slice(8, -1);
       const arr = typeof call === "unknown" ? toString() : call(arg0);
-      const tmp = toString;
     }
     return sum;
   }
   function qualify(arg0) {
     return String(arg0).replace(/([ -])(?!$)/g, "$1?");
   }
-  function reduce(arg0, arg1) {
-    if (typeof arg0.length === "number") {
+  function reduce(height, fn) {
+    if (typeof height.length === "number") {
       if (length > -1) {
         if (length <= closure_1) {
           let num = 0;
@@ -64,10 +61,7 @@ const fn = function() {
           let tmp4 = null;
           if (0 < length) {
             do {
-              let tmp12 = tmp11;
-              let tmp13 = num;
-              let tmp14 = arg0;
-              tmp11 = arg1(tmp11, arg0[num], num, arg0);
+              tmp11 = fn(tmp11, height[num], num, height);
               num = num + 1;
               tmp4 = tmp11;
             } while (num < length);
@@ -82,16 +76,12 @@ const fn = function() {
     if (keys !== undefined) {
       tmp4 = tmp3;
       while (keys[tmp] !== undefined) {
-        let tmp16 = hasOwnProperty;
         let call = hasOwnProperty.call;
         let tmp15 = tmp7;
-        if (!(typeof call === "unknown" ? tmp16(tmp7) : call(arg0, tmp7))) {
+        if (!(typeof call === "unknown" ? hasOwnProperty(tmp7) : call(height, tmp7))) {
           continue;
         } else {
-          let tmp8 = tmp6;
-          let tmp9 = tmp7;
-          let tmp10 = arg0;
-          tmp3 = arg1(tmp6, arg0[tmp7], tmp15, arg0);
+          tmp3 = fn(tmp6, height[tmp7], tmp15, height);
           continue;
         }
         continue;
@@ -118,7 +108,6 @@ const fn = function() {
   let tmp7 = !tmp5;
   if (tmp5) {
     tmp7 = tmp5.global !== tmp5 && tmp5.window !== tmp5 && tmp5.self !== tmp5;
-    let tmp8 = tmp5.global !== tmp5 && tmp5.window !== tmp5 && tmp5.self !== tmp5;
   }
   if (!tmp7) {
     closure_0 = tmp5;
@@ -136,7 +125,6 @@ const fn = function() {
       tmp7 = typeof global === "object";
     }
     if (tmp7) {
-      let str = "String";
       tmp7 = "String" != getClassOf(global);
     }
     let tmp9 = global;
@@ -193,27 +181,27 @@ const fn = function() {
     const tmp19 = obj.document || {};
     if (tmp7) {
       if (tmp20) {
-        __Class__ = tmp20["[[Class]]"];
+        let prop = tmp20["[[Class]]"];
       }
-      let tmp23 = null;
       let tmp24 = null;
-      if (tmp21(__Class__)) {
-        tmp23 = tmp20;
-        tmp24 = __Class__;
+      let tmp25 = null;
+      if (tmp21(prop)) {
+        tmp24 = tmp20;
+        tmp25 = prop;
       }
-      let isMatch4 = tmp9 == tmp12;
-      let versionResult = isMatch4;
-      if (isMatch4) {
-        versionResult = tmp23;
-      }
-      if (versionResult) {
-        versionResult = typeof tmp23.version === "function";
+      let isMatch8 = tmp9 == tmp12;
+      let versionResult = isMatch8;
+      if (isMatch8) {
+        versionResult = tmp24;
       }
       if (versionResult) {
-        versionResult = tmp23.version();
+        versionResult = typeof tmp24.version === "function";
+      }
+      if (versionResult) {
+        versionResult = tmp24.version();
       }
       function getProduct(items2) {
-        return closure_1_9(items2, (arg0, pattern) => {
+        return reduce(items2, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -227,12 +215,12 @@ const fn = function() {
             let match = RegExp(`\\b${pattern} *\\d+[.\\w_]*`, "i").exec(closure_0);
             if (!match) {
               const _RegExp2 = RegExp;
-              match = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i").exec(tmp5);
+              match = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i").exec(closure_0);
               const RegExpResult1 = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i");
             }
             if (!match) {
               const _RegExp3 = RegExp;
-              match = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i").exec(tmp5);
+              match = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i").exec(closure_0);
               const RegExpResult2 = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i");
             }
             tmp3 = match;
@@ -254,13 +242,11 @@ const fn = function() {
             let tmp10 = parts[1];
             if (tmp10) {
               tmp10 = !/[\d.]+/.test(parts[0]);
-              const obj5 = /[\d.]+/;
             }
             if (tmp10) {
               parts[0] = `${tmp9[0]} ${tmp9[1]}`;
             }
             const _RegExp5 = RegExp;
-            const str12 = parts[0];
             const str9 = String(label);
             const _RegExp6 = RegExp;
             const str14 = parts[0].replace(RegExp(pattern, "i"), pattern.label || pattern);
@@ -291,8 +277,8 @@ const fn = function() {
       items[6] = "Tasman";
       items[7] = "KHTML";
       items[8] = "Gecko";
-      const tmp28 = (function getLayout(items) {
-        return closure_1_9(items, (arg0, pattern) => {
+      const tmp29 = (function getLayout(items) {
+        return reduce(items, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -304,7 +290,6 @@ const fn = function() {
             let match = RegExp(`\\b${pattern}\\b`, "i").exec(closure_0);
             if (match) {
               match = pattern.label || pattern;
-              const tmp6 = pattern.label || pattern;
             }
             tmp = match;
             const RegExpResult = RegExp(`\\b${pattern}\\b`, "i");
@@ -314,7 +299,7 @@ const fn = function() {
       })(items);
       const items1 = ["Adobe AIR", "Arora", "Avant Browser", "Breach", "Camino", "Electron", "Epiphany", "Fennec", "Flock", "Galeon", "GreenBrowser", "iCab", "Iceweasel", "K-Meleon", "Konqueror", "Lunascape", "Maxthon", { label: "Microsoft Edge", pattern: "Edge" }, "Midori", "Nook Browser", "PaleMoon", "PhantomJS", "Raven", "Rekonq", "RockMelt", { label: "Samsung Internet", pattern: "SamsungBrowser" }, "SeaMonkey", { label: "Silk", pattern: "(?:Cloud9|Silk-Accelerated)" }, "Sleipnir", "SlimBrowser", { label: "SRWare Iron", pattern: "Iron" }, "Sunrise", "Swiftfox", "Waterfox", "WebPositive", "Opera Mini", { label: "Opera Mini", pattern: "OPiOS" }, "Opera", { label: "Opera", pattern: "OPR" }, "Chrome", { label: "Chrome Mobile", pattern: "(?:CriOS|CrMo)" }, { label: "Firefox", pattern: "(?:Firefox|Minefield)" }, { label: "Firefox for iOS", pattern: "FxiOS" }, { label: "IE", pattern: "IEMobile" }, { label: "IE", pattern: "MSIE" }, "Safari"];
       let text1 = (function getName(items1) {
-        return closure_1_9(items1, (arg0, pattern) => {
+        return reduce(items1, (arg0, pattern) => {
           let tmp = arg0;
           if (!arg0) {
             pattern = pattern.pattern;
@@ -326,7 +311,6 @@ const fn = function() {
             let match = RegExp(`\\b${pattern}\\b`, "i").exec(closure_0);
             if (match) {
               match = pattern.label || pattern;
-              const tmp6 = pattern.label || pattern;
             }
             tmp = match;
             const RegExpResult = RegExp(`\\b${pattern}\\b`, "i");
@@ -354,8 +338,8 @@ const fn = function() {
       obj[13] = { Lumia: 1 };
       obj[14] = { "Galaxy S": 1, "Galaxy S2": 1, "Galaxy S3": 1, "Galaxy S4": 1 };
       obj[15] = { PlayStation: 1, "PlayStation Vita": 1 };
-      const tmp31 = (function getManufacturer(global) {
-        return closure_1_9(global, (arg0, arg1, arg2) => {
+      const tmp32 = (function getManufacturer(global) {
+        return reduce(global, (arg0, arg1, arg2) => {
           let tmp = arg0;
           if (!arg0) {
             let match = arg1[closure_2];
@@ -400,8 +384,8 @@ const fn = function() {
       items3[26] = "Mac";
       items3[27] = "Windows 98;";
       items3[28] = "Windows ";
-      const tmp32 = (function getOS(items3) {
-        return closure_1_9(items3, (arg0, pattern) => {
+      const tmp33 = (function getOS(items3) {
+        return reduce(items3, (arg0, pattern) => {
           pattern = pattern.pattern;
           if (!pattern) {
             const _String = String;
@@ -424,11 +408,9 @@ const fn = function() {
             }
             if (isMatch) {
               isMatch = /^Win/i.test(text);
-              const obj2 = /^Win/i;
             }
             if (isMatch) {
               isMatch = !/^Windows Phone /i.test(text);
-              const obj3 = /^Windows Phone /i;
             }
             const obj = { "10.0": "10", "6.4": "10 Technical Preview", "6.3": "8.1", "6.2": "8", "6.1": "Server 2008 R2 / 7", "6.0": "Server 2008 / Vista", "5.2": "Server 2003 / XP 64-bit", "5.1": "XP", "5.01": "2000 SP1", "5.0": "2000", "4.0": "NT", "4.90": "ME" };
             let tmp9 = obj;
@@ -479,42 +461,41 @@ const fn = function() {
           return tmp6;
         });
       })(items3);
-      let tmp33 = tmp28;
-      if (tmp28) {
-        const items4 = [tmp28];
-        tmp33 = items4;
+      let tmp34 = tmp29;
+      if (tmp29) {
+        const items4 = [tmp29];
+        tmp34 = items4;
       }
-      let tmp34 = tmp31;
-      if (tmp31) {
-        tmp34 = !product;
+      let tmp35 = tmp32;
+      if (tmp32) {
+        tmp35 = !product;
       }
-      if (tmp34) {
-        const items5 = [tmp31];
+      if (tmp35) {
+        const items5 = [tmp32];
         const product1 = getProduct(items5);
         closure_2 = product1;
         product = product1;
       }
       let match = /\bGoogle TV\b/.exec(product);
-      let tmp37 = product;
+      let tmp38 = product;
       if (match) {
         const first = match[0];
         closure_2 = first;
-        tmp37 = first;
+        tmp38 = first;
       }
-      let tmp39 = tmp37;
+      let tmp40 = tmp38;
       if (obj8.test(tmp9)) {
         let str75 = "";
-        if (tmp37) {
-          str75 = `${tmp37} `;
+        if (tmp38) {
+          str75 = `${tmp38} `;
         }
         let text = `${str75}Simulator`;
         closure_2 = text;
-        tmp39 = text;
+        tmp40 = text;
       }
       let isMatch1 = "Opera Mini" == text1;
       if (isMatch1) {
         isMatch1 = /\bOPiOS\b/.test(tmp9);
-        const obj9 = /\bOPiOS\b/;
       }
       const items6 = [];
       if (isMatch1) {
@@ -522,19 +503,16 @@ const fn = function() {
       }
       if ("IE" == text1) {
         if (obj10.test(tmp9)) {
-          str = "";
           ({ manufacturer, product } = parse(tmp9.replace(/like iPhone OS/, "")));
           closure_2 = product;
-          str55 = tmp32;
+          str55 = tmp33;
           let str81 = product;
-          const tmp73 = parse(tmp9.replace(/like iPhone OS/, ""));
+          const tmp74 = parse(tmp9.replace(/like iPhone OS/, ""));
         }
         if (!joined) {
-          const items7 = ["(?:Cloud9|CriOS|CrMo|Edge|FxiOS|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$))", "Version", qualify(text1)];
-          str = "(?:Firefox|Minefield|NetFront)";
-          items7[3] = "(?:Firefox|Minefield|NetFront)";
+          const items7 = ["(?:Cloud9|CriOS|CrMo|Edge|FxiOS|IEMobile|Iron|Opera ?Mini|OPiOS|OPR|Raven|SamsungBrowser|Silk(?!/[\\d.]+$))", "Version", qualify(text1), "(?:Firefox|Minefield|NetFront)"];
           joined = (function getVersion(items7) {
-            return closure_1_9(items7, (arg0, arg1) => {
+            return reduce(items7, (arg0, arg1) => {
               let tmp = arg0;
               if (!arg0) {
                 const _RegExp = RegExp;
@@ -549,7 +527,7 @@ const fn = function() {
             });
           })(items7);
         }
-        if ("iCab" != tmp33) {
+        if ("iCab" != tmp34) {
           let isMatch2 = /\bOpera\b/.test(text1);
           if (isMatch2) {
             if (obj32.test(tmp9)) {
@@ -558,80 +536,69 @@ const fn = function() {
             isMatch2 = str10;
             obj32 = /\bOPR\b/;
           }
-          str = isMatch2;
-          const obj31 = /\bOpera\b/;
+          let str102 = isMatch2;
         } else {
           const _parseFloat = parseFloat;
-          str = "WebKit";
+          str102 = "WebKit";
         }
-        if (!str) {
-          str = /\b(?:Midori|Nook|Safari)\b/i.test(tmp9);
-          if (str) {
-            str = !/^(?:Trident|EdgeHTML)$/.test(tmp33);
-            const obj34 = /^(?:Trident|EdgeHTML)$/;
+        if (!str102) {
+          let str103 = /\b(?:Midori|Nook|Safari)\b/i.test(tmp9);
+          if (str103) {
+            str103 = !/^(?:Trident|EdgeHTML)$/.test(tmp34);
           }
-          if (str) {
-            str = "WebKit";
+          if (str103) {
+            str103 = "WebKit";
           }
-          const obj33 = /\b(?:Midori|Nook|Safari)\b/i;
+          str102 = str103;
         }
-        if (!str) {
-          let isMatch3 = !tmp33;
-          if (!tmp33) {
+        if (!str102) {
+          let isMatch3 = !tmp34;
+          if (!tmp34) {
             isMatch3 = /\bMSIE\b/i.test(tmp9);
-            const obj35 = /\bMSIE\b/i;
           }
           if (isMatch3) {
-            str = "Mac OS";
-            str = "Trident";
+            let str105 = "Trident";
             if ("Mac OS" == str55) {
-              str = "Tasman";
+              str105 = "Tasman";
             }
-            isMatch3 = str;
+            isMatch3 = str105;
           }
-          str = isMatch3;
+          str102 = isMatch3;
         }
-        if (!str) {
-          str = "WebKit";
-          str = "WebKit" == tmp33;
-          if (str) {
-            str = /\bPlayStation\b(?! Vita\b)/i.test(text1);
-            const obj36 = /\bPlayStation\b(?! Vita\b)/i;
+        if (!str102) {
+          let str107 = "WebKit" == tmp34;
+          if (str107) {
+            str107 = /\bPlayStation\b(?! Vita\b)/i.test(text1);
           }
-          if (str) {
-            str = "NetFront";
+          if (str107) {
+            str107 = "NetFront";
           }
+          str102 = str107;
         }
-        let tmp83 = tmp33;
-        if (str) {
-          const items8 = [str];
-          tmp83 = items8;
+        let tmp84 = tmp34;
+        if (str102) {
+          const items8 = [str102];
+          tmp84 = items8;
         }
         if ("IE" == text1) {
-          const tmp86 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0[1];
-          str = tmp86;
-          if (tmp86) {
-            let text2 = text1;
-            str = " Mobile";
-            text1 = `${tmp29} Mobile`;
-            text2 = tmp86;
-            if (!obj41.test(tmp86)) {
-              str = ".x";
-              text2 = `${tmp86}.x`;
+          const tmp87 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0[1];
+          str102 = tmp87;
+          if (tmp87) {
+            text1 = `${tmp30} Mobile`;
+            let text2 = tmp87;
+            if (!obj41.test(tmp87)) {
+              text2 = `${tmp87}.x`;
             }
-            str = "Windows Phone ";
-            str = `Windows Phone ${tmp}`;
-            str = "desktop mode";
-            text2 = items6.unshift("desktop mode");
-            let tmp90 = tmp86;
+            let str108 = `Windows Phone ${tmp102}`;
+            arr = items6.unshift("desktop mode");
+            let tmp91 = tmp87;
             obj41 = /\+$/;
           }
-          text2 = str;
-          text2 = tmp83;
-          text2 = tmp9;
-          text2 = tmp90;
-          if (isMatch4) {
-            str = "global";
+          let tmp104 = str108;
+          let tmp105 = tmp84;
+          let tmp106 = tmp9;
+          let tmp107 = tmp91;
+          if (isMatch8) {
             if ((function isHostType(global, global) {
               let str = "number";
               if (null != global) {
@@ -640,378 +607,346 @@ const fn = function() {
               let isMatch = /^(?:boolean|number|string|undefined)$/.test(str);
               if (!isMatch) {
                 isMatch = "object" === str && !global.global;
-                const tmp2 = "object" === str && !global.global;
               }
               return !isMatch;
             })(obj, "global")) {
-              text2 = str;
-              text2 = tmp9;
+              let tmp128 = str108;
+              let tmp129 = tmp9;
               if (tmp16) {
                 const System = tmp16.lang.System;
-                str = "os.arch";
-                text2 = str;
-                text2 = System.getProperty("os.arch");
-                if (!str) {
-                  str = "os.name";
-                  str = " ";
-                  str = "os.version";
-                  text2 = `${System.getProperty("os.name")} `;
-                  text2 = `${System.getProperty("os.name")} ${System.getProperty("os.version")}`;
+                let text4 = str108;
+                const property = System.getProperty("os.arch");
+                if (!str108) {
+                  const text3 = `${System.getProperty("os.name")} `;
+                  text4 = `${System.getProperty("os.name")} ${System.getProperty("os.version")}`;
                 }
-                tmp90 = System;
+                tmp128 = text4;
+                tmp129 = property;
+                tmp91 = System;
               }
               if (tmp17) {
                 try {
-                  str = "ringo/engine";
                   let version = obj.require("ringo/engine").version;
-                  str = ".";
                   joined = version.join(".");
                   text1 = "RingoJS";
-                  text2 = text1;
-                  str = text2;
-                  let items10 = tmp83;
-                  text2 = tmp90;
+                  let tmp142 = tmp128;
+                  let str119 = tmp142;
+                  let items10 = tmp84;
+                  let tmp110 = tmp129;
+                  let tmp111 = tmp91;
                   if (!`RingoJS`) {
                     text1 = "Rhino";
-                    str = text2;
-                    items10 = tmp83;
-                    text2 = tmp90;
+                    str119 = tmp142;
+                    items10 = tmp84;
+                    tmp110 = tmp129;
+                    tmp111 = tmp91;
                   }
                 } catch (err) {
                   const system = tmp5.system;
-                  text2 = system;
+                  let tmp143 = system;
                   if (system) {
-                    text2 = system.global.system == tmp5.system;
+                    tmp143 = system.global.system == tmp5.system;
                   }
-                  text2 = tmp6;
-                  tmp90 = system;
-                  if (text2) {
+                  tmp142 = tmp6;
+                  tmp91 = system;
+                  if (tmp143) {
                     text1 = "Narwhal";
-                    text2 = tmp6;
+                    let tmp144 = tmp6;
                     if (!tmp6) {
-                      text2 = system[0].os;
-                      if (!text2) {
-                        text2 = null;
+                      let os = system[0].os;
+                      if (!os) {
+                        os = null;
                       }
+                      tmp144 = os;
                     }
-                    tmp90 = system;
+                    tmp142 = tmp144;
+                    tmp91 = system;
                   }
                 }
               } else {
                 const _process = obj.process;
-                text2 = typeof _process === "object";
+                let tmp133 = typeof _process === "object";
                 if (typeof _process === "object") {
-                  text2 = !obj.process.browser;
+                  tmp133 = !obj.process.browser;
                 }
-                let _process2 = tmp90;
-                if (text2) {
+                let _process2 = tmp91;
+                if (tmp133) {
                   _process2 = obj.process;
                 }
-                str = text2;
-                items10 = tmp83;
-                text2 = _process2;
-                if (text2) {
+                str119 = tmp128;
+                items10 = tmp84;
+                tmp110 = tmp129;
+                tmp111 = _process2;
+                if (tmp133) {
                   if (typeof _process2.versions === "object") {
                     if (typeof _process2.versions.electron === "string") {
-                      str = "Node ";
-                      text2 = items6.push(`Node ${_process2.versions.node}`);
+                      items6.push(`Node ${_process2.versions.node}`);
                       text1 = "Electron";
                       joined = _process2.versions.electron;
                     } else if (typeof _process2.versions.nw === "string") {
-                      text2 = joined;
-                      str = "Chromium ";
-                      str = "Node ";
-                      text2 = items6.push(`Chromium ${tmp27}`, `Node ${_process2.versions.node}`);
+                      items6.push(`Chromium ${tmp28}`, `Node ${_process2.versions.node}`);
                       text1 = "NW.js";
                       joined = _process2.versions.nw;
                     }
                   }
-                  text2 = text1;
+                  let tmp136 = tmp128;
+                  let tmp137 = tmp129;
                   if (!text1) {
                     text1 = "Node.js";
                     ({ arch, platform } = _process2);
-                    text2 = /[\d.]+/.exec(_process2.version);
-                    text2 = null;
-                    if (text2) {
-                      text2 = text2[0];
+                    const match1 = /[\d.]+/.exec(_process2.version);
+                    let first1 = null;
+                    if (match1) {
+                      first1 = tmp139[0];
                     }
-                    joined = text2;
-                    text2 = platform;
-                    text2 = arch;
-                    const obj43 = /[\d.]+/;
+                    joined = first1;
+                    tmp136 = platform;
+                    tmp137 = arch;
                   }
-                  str = text2;
-                  items10 = tmp83;
-                  text2 = _process2;
+                  str119 = tmp136;
+                  tmp110 = tmp137;
+                  items10 = tmp84;
+                  tmp111 = _process2;
                 }
               }
             } else {
               const runtime = obj.runtime;
-              text2 = getClassOf;
               if (getClassOf(runtime) == str2) {
                 text1 = "Adobe AIR";
-                str = runtime.flash.system.Capabilities.os;
-                items10 = tmp83;
-                text2 = tmp9;
-                text2 = runtime;
+                str119 = runtime.flash.system.Capabilities.os;
+                items10 = tmp84;
+                tmp110 = tmp9;
+                tmp111 = runtime;
               } else {
                 const phantom = obj.phantom;
-                if (text2(phantom) == str5) {
+                if (getClassOf(phantom) == str5) {
                   text1 = "PhantomJS";
-                  text2 = phantom.version || null;
-                  if (text2) {
-                    str = ".";
-                    text2 = `${tmp.major}.${tmp.minor}.${tmp.patch}`;
+                  let text5 = tmp126;
+                  if (phantom.version || null) {
+                    text5 = `${tmp126.major}.${tmp126.minor}.${tmp126.patch}`;
                   }
-                  joined = text2;
-                  items10 = tmp83;
-                  text2 = tmp9;
+                  joined = text5;
+                  str119 = str108;
+                  items10 = tmp84;
+                  tmp110 = tmp9;
+                  tmp111 = tmp126;
                 } else {
-                  text2 = phantom;
+                  let tmp295 = phantom;
                   if (typeof tmp19.documentMode === "number") {
-                    text2 = /\bTrident\/(\d+)/i.exec(tmp9);
-                    if (text2) {
-                      text2 = joined;
+                    const match2 = /\bTrident\/(\d+)/i.exec(tmp9);
+                    tmp295 = match2;
+                    if (match2) {
                       const items9 = [joined, tmp19.documentMode];
-                      text2 = items9;
-                      text2 = +text2[1] + 4;
-                      if (text2 != items9[1]) {
-                        text2 = items9;
-                        str = "IE ";
-                        str = " mode";
-                        text2 = items6.push(`IE ${tmp[1]} mode`);
-                        if (tmp83) {
-                          str = "";
-                          tmp83[1] = "";
+                      let sum = +match2[1] + 4;
+                      if (sum != items9[1]) {
+                        items6.push(`IE ${tmp116[1]} mode`);
+                        if (tmp84) {
+                          tmp84[1] = "";
                         }
-                        text2 = items9;
-                        text2[1] = text2;
+                        tmp116[1] = sum;
                       }
-                      text2 = text1;
                       if ("IE" == text1) {
-                        text2 = globalThis;
                         let _String = String;
-                        text2 = items9;
-                        text2 = String(text2[1].toFixed(1));
-                        const obj42 = text2[1];
+                        let StringResult = String(tmp116[1].toFixed(1));
                       } else {
-                        text2 = items9;
-                        text2 = text2[0];
+                        StringResult = tmp116[0];
                       }
-                      joined = text2;
-                      items10 = tmp83;
-                      text2 = tmp9;
+                      joined = StringResult;
+                      str119 = str108;
+                      items10 = tmp84;
+                      tmp110 = tmp9;
+                      tmp111 = sum;
                     }
-                    const obj89 = /\bTrident\/(\d+)/i;
                   }
                   const documentMode = tmp19.documentMode;
-                  text2 = typeof documentMode === "number";
+                  let isMatch4 = typeof documentMode === "number";
                   if (typeof documentMode === "number") {
-                    text2 = text1;
-                    text2 = /^(?:Chrome|Firefox)\b/.test(text1);
-                    const obj90 = /^(?:Chrome|Firefox)\b/;
+                    isMatch4 = /^(?:Chrome|Firefox)\b/.test(text1);
                   }
-                  items10 = tmp83;
-                  text2 = tmp9;
-                  if (text2) {
-                    text2 = text1;
-                    str = "masking as ";
-                    text2 = joined;
-                    str = " ";
-                    text2 = items6.push(`masking as ${tmp29} ${tmp27}`);
+                  str119 = str108;
+                  items10 = tmp84;
+                  tmp110 = tmp9;
+                  tmp111 = tmp295;
+                  if (isMatch4) {
+                    items6.push(`masking as ${tmp30} ${tmp28}`);
                     text1 = "IE";
                     joined = "11.0";
                     items10 = ["Trident"];
-                    str = "Windows";
-                    text2 = tmp9;
+                    str119 = "Windows";
+                    tmp110 = tmp9;
+                    tmp111 = tmp295;
                   }
                 }
               }
             }
-            text2 = str;
-            if (str) {
-              text2 = format;
-              text2 = format(str);
+            let tmp147 = str119;
+            if (str119) {
+              tmp147 = format(str119);
             }
-            text2 = items10;
+            tmp104 = tmp147;
+            tmp105 = items10;
+            tmp106 = tmp110;
+            tmp107 = tmp111;
           }
-          text2 = joined;
+          let tmp149 = joined;
           if (joined) {
-            text2 = joined;
-            text2 = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(joined);
-            if (!text2) {
-              str = ";";
-              let appMinorVersion = isMatch4;
-              text2 = `${tmp9};`;
-              if (isMatch4) {
+            let match3 = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(joined);
+            if (!match3) {
+              let appMinorVersion = isMatch8;
+              const text6 = `${tmp9};`;
+              if (isMatch8) {
                 appMinorVersion = tmp11.appMinorVersion;
               }
-              text2 = /(?:alpha|beta)(?: ?\d)?/i.exec(text2 + appMinorVersion);
-              const obj45 = /(?:alpha|beta)(?: ?\d)?/i;
+              match3 = /(?:alpha|beta)(?: ?\d)?/i.exec(text6 + appMinorVersion);
             }
-            if (!text2) {
-              text2 = /\bMinefield\b/i.test(tmp9) && "a";
-              const obj46 = /\bMinefield\b/i;
+            if (!match3) {
+              match3 = /\bMinefield\b/i.test(tmp9) && "a";
+              const tmp153 = /\bMinefield\b/i.test(tmp9) && "a";
             }
-            const obj44 = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i;
+            tmp149 = match3;
+            tmp107 = match3;
           }
-          text2 = null;
-          if (text2) {
-            str = "alpha";
-            if (obj47.test(text2)) {
-              str = "beta";
+          let tmp154 = null;
+          if (tmp149) {
+            let str134 = "alpha";
+            if (obj47.test(tmp107)) {
+              str134 = "beta";
             }
-            text2 = joined;
-            text2 = globalThis;
             let _RegExp = RegExp;
-            str = "\\+?$";
-            str = "";
-            str = "beta";
-            text2 = joined.replace(RegExp(`${tmp}\\+?$`), "");
-            if ("beta" === str) {
+            let replaced = joined.replace(RegExp(`${tmp107}\\+?$`), "");
+            if ("beta" === str134) {
               str6 = str7;
             }
-            text2 = text2 + str6;
-            text2 = /\d+\+?/.exec(text2) || "";
-            joined = text2 + text2;
-            text2 = str;
+            const sum1 = replaced + str6;
+            joined = sum1 + (/\d+\+?/.exec(tmp107) || "");
+            tmp154 = str134;
             obj47 = /b/i;
-            const obj48 = /\d+\+?/;
+            const tmp159 = /\d+\+?/.exec(tmp107) || "";
           }
-          text2 = text1;
-          str = "Fennec";
           if ("Fennec" != text1) {
-            text2 = text1;
-            str = "Firefox";
             if ("Firefox" == text1) {
-              text2 = /\bAppleWebKit\/([\d.]+\+?)/i.exec(tmp9) || 0;
-              str = text2[1];
-              let arr16 = items12;
-              text2 = str;
-              if (str) {
-                text2 = globalThis;
+              const str164 = /\bAppleWebKit\/([\d.]+\+?)/i.exec(tmp9) || 0[1];
+              let arr15 = items12;
+              let tmp210 = tmp154;
+              let tmp211 = str164;
+              if (str164) {
                 const _parseFloat2 = parseFloat;
-                str = ".0$1";
-                const items11 = [parseFloat(str.replace(/\.(\d)$/, ".0$1")), str];
-                text2 = text1;
+                const items11 = [parseFloat(str164.replace(/\.(\d)$/, ".0$1")), str164];
                 if ("Safari" == text1) {
-                  str = "+";
-                  if ("+" == arr18.slice(-1)) {
+                  let arr17 = items11[1];
+                  if ("+" == arr17.slice(-1)) {
                     text1 = "WebKit Nightly";
-                    joined = items11[1].slice(0, -1);
-                    str = "alpha";
-                    const arr19 = items11[1];
+                    let arr18 = items11[1];
+                    joined = arr18.slice(0, -1);
+                    let str167 = "alpha";
                   }
-                  text2 = /\bChrome\/([\d.]+)/i.exec(tmp9) || 0;
-                  items11[1] = text2[1];
-                  text2 = 537.36 == items11[0] && 537.36 == items11[2];
-                  if (text2) {
+                  items11[1] = /\bChrome\/([\d.]+)/i.exec(tmp9) || 0[1];
+                  let tmp220 = 537.36 == items11[0] && 537.36 == items11[2];
+                  if (tmp220) {
                     const _parseFloat3 = parseFloat;
-                    text2 = parseFloat(items11[1]) >= 28;
+                    tmp220 = parseFloat(items11[1]) >= 28;
                   }
-                  if (text2) {
-                    str = "WebKit";
-                    text2 = "WebKit" == items12;
+                  if (tmp220) {
+                    tmp220 = "WebKit" == items12;
                   }
-                  if (text2) {
+                  if (tmp220) {
                     items12 = ["Blink"];
                   }
-                  if (isMatch4) {
+                  if (isMatch8) {
                     if (!isMatch) {
-                      text2 = num20;
+                      let tmp224 = num20;
                       if (items12) {
-                        str = ".x";
+                        let str176 = ".x";
                         if (typeof num20 !== "number") {
-                          str = "+";
+                          let str177 = "+";
                           if (obj92.test(num20)) {
-                            str = "";
+                            str177 = "";
                           }
+                          str176 = str177;
                           obj92 = /[.+]/;
                         }
-                        text2 = num20 + str;
-                        str = " ";
-                        items12[1] = `${tmp} ${tmp}`;
+                        const sum2 = num20 + str176;
+                        items12[1] = `${tmp225} ${tmp226}`;
+                        tmp224 = sum2;
                       }
-                      text2 = text1;
-                      text2 = "Safari" == text1;
-                      if (text2) {
-                        text2 = joined;
-                        text2 = !joined;
+                      let tmp228 = "Safari" == text1;
+                      if (tmp228) {
+                        let tmp230 = !joined;
                         if (joined) {
                           const _parseInt = parseInt;
-                          text2 = joined;
-                          text2 = parseInt(joined) > 45;
+                          tmp230 = parseInt(joined) > 45;
                         }
+                        tmp228 = tmp230;
                       }
-                      arr16 = items12;
-                      text2 = str;
-                      if (text2) {
-                        joined = text2;
-                        arr16 = items12;
-                        text2 = str;
+                      arr15 = items12;
+                      tmp210 = str167;
+                      tmp211 = tmp224;
+                      if (tmp228) {
+                        joined = tmp224;
+                        arr15 = items12;
+                        tmp210 = str167;
+                        tmp211 = tmp224;
                       }
                     }
                     if (items12) {
-                      str = "like Chrome";
                       items12[1] = "like Chrome";
                     }
-                    text2 = items11[1];
-                    if (!text2) {
-                      text2 = items11[0];
+                    let tmp222 = items11[1];
+                    if (!tmp222) {
+                      const first2 = items11[0];
                       let num37 = 1;
-                      if (text2 >= 530) {
+                      if (first2 >= 530) {
                         let num39 = 2;
-                        if (text2 >= 532) {
+                        if (first2 >= 532) {
                           let num41 = 3;
-                          if (text2 >= 532.05) {
+                          if (first2 >= 532.05) {
                             let num43 = 4;
-                            if (text2 >= 533) {
+                            if (first2 >= 533) {
                               let num45 = 5;
-                              if (text2 >= 534.03) {
+                              if (first2 >= 534.03) {
                                 let num47 = 6;
-                                if (text2 >= 534.07) {
+                                if (first2 >= 534.07) {
                                   let num49 = 7;
-                                  if (text2 >= 534.1) {
+                                  if (first2 >= 534.1) {
                                     let num51 = 8;
-                                    if (text2 >= 534.13) {
+                                    if (first2 >= 534.13) {
                                       let num53 = 9;
-                                      if (text2 >= 534.16) {
+                                      if (first2 >= 534.16) {
                                         let num55 = 10;
-                                        if (text2 >= 534.24) {
+                                        if (first2 >= 534.24) {
                                           let num57 = 11;
-                                          if (text2 >= 534.3) {
+                                          if (first2 >= 534.3) {
                                             let num59 = 12;
-                                            if (text2 >= 535.01) {
-                                              str = "13+";
-                                              if (text2 >= 535.02) {
+                                            if (first2 >= 535.01) {
+                                              let str172 = "13+";
+                                              if (first2 >= 535.02) {
                                                 let num62 = 15;
-                                                if (text2 >= 535.07) {
+                                                if (first2 >= 535.07) {
                                                   let num64 = 16;
-                                                  if (text2 >= 535.11) {
+                                                  if (first2 >= 535.11) {
                                                     let num66 = 17;
-                                                    if (text2 >= 535.19) {
+                                                    if (first2 >= 535.19) {
                                                       let num68 = 18;
-                                                      if (text2 >= 536.05) {
+                                                      if (first2 >= 536.05) {
                                                         let num70 = 19;
-                                                        if (text2 >= 536.1) {
+                                                        if (first2 >= 536.1) {
                                                           let num72 = 20;
-                                                          if (text2 >= 537.01) {
-                                                            str = "21+";
-                                                            if (text2 >= 537.11) {
+                                                          if (first2 >= 537.01) {
+                                                            let str173 = "21+";
+                                                            if (first2 >= 537.11) {
                                                               let num75 = 23;
-                                                              if (text2 >= 537.13) {
+                                                              if (first2 >= 537.13) {
                                                                 let num77 = 24;
-                                                                if (text2 >= 537.18) {
+                                                                if (first2 >= 537.18) {
                                                                   let num79 = 25;
-                                                                  if (text2 >= 537.24) {
+                                                                  if (first2 >= 537.24) {
                                                                     let num80 = 26;
-                                                                    if (text2 >= 537.36) {
-                                                                      str = "Blink";
-                                                                      str = "28";
+                                                                    if (first2 >= 537.36) {
+                                                                      let str175 = "28";
                                                                       if ("Blink" != items12) {
-                                                                        str = "27";
+                                                                        str175 = "27";
                                                                       }
-                                                                      num80 = str;
+                                                                      num80 = str175;
                                                                     }
                                                                     num79 = num80;
                                                                   }
@@ -1019,9 +954,9 @@ const fn = function() {
                                                                 }
                                                                 num75 = num77;
                                                               }
-                                                              str = num75;
+                                                              str173 = num75;
                                                             }
-                                                            num72 = str;
+                                                            num72 = str173;
                                                           }
                                                           num70 = num72;
                                                         }
@@ -1033,9 +968,9 @@ const fn = function() {
                                                   }
                                                   num62 = num64;
                                                 }
-                                                str = num62;
+                                                str172 = num62;
                                               }
-                                              num59 = str;
+                                              num59 = str172;
                                             }
                                             num57 = num59;
                                           }
@@ -1059,33 +994,32 @@ const fn = function() {
                         }
                         num37 = num39;
                       }
-                      text2 = num37;
+                      tmp222 = num37;
                     }
-                    num20 = text2;
+                    num20 = tmp222;
                   }
                   if (items12) {
-                    str = "like Safari";
                     items12[1] = "like Safari";
                   }
-                  text2 = items11[0];
+                  const first3 = items11[0];
                   num20 = 1;
-                  if (text2 >= 400) {
+                  if (first3 >= 400) {
                     let num22 = 2;
-                    if (text2 >= 500) {
+                    if (first3 >= 500) {
                       let num24 = 3;
-                      if (text2 >= 526) {
+                      if (first3 >= 526) {
                         let num26 = 4;
-                        if (text2 >= 533) {
-                          str = "4+";
-                          if (text2 >= 534) {
+                        if (first3 >= 533) {
+                          let str170 = "4+";
+                          if (first3 >= 534) {
                             let num29 = 5;
-                            if (text2 >= 535) {
+                            if (first3 >= 535) {
                               let num31 = 6;
-                              if (text2 >= 537) {
+                              if (first3 >= 537) {
                                 let num33 = 7;
-                                if (text2 >= 538) {
+                                if (first3 >= 538) {
                                   let num35 = "8";
-                                  if (text2 < 601) {
+                                  if (first3 < 601) {
                                     num35 = 8;
                                   }
                                   num33 = num35;
@@ -1094,9 +1028,9 @@ const fn = function() {
                               }
                               num29 = num31;
                             }
-                            str = num29;
+                            str170 = num29;
                           }
-                          num26 = str;
+                          num26 = str170;
                         }
                         num24 = num26;
                       }
@@ -1104,183 +1038,155 @@ const fn = function() {
                     }
                     num20 = num22;
                   }
-                  arr18 = items11[1];
-                  const obj68 = /\bChrome\/([\d.]+)/i;
+                  const tmp219 = /\bChrome\/([\d.]+)/i.exec(tmp9) || 0;
                 }
-                text2 = joined;
-                text2 = joined != items11[1];
-                if (text2) {
-                  text2 = joined;
-                  text2 = /\bSafari\/([\d.]+\+?)/i.exec(tmp9) || 0;
-                  text2 = text2[1];
-                  items11[2] = text2;
-                  text2 = joined != text2;
-                  const obj67 = /\bSafari\/([\d.]+\+?)/i;
+                let tmp215 = joined != items11[1];
+                if (tmp215) {
+                  const tmp218 = /\bSafari\/([\d.]+\+?)/i.exec(tmp9) || 0[1];
+                  items11[2] = tmp218;
+                  tmp215 = joined != tmp218;
+                  const tmp217 = /\bSafari\/([\d.]+\+?)/i.exec(tmp9) || 0;
                 }
-                str = text2;
-                if (!text2) {
+                str167 = tmp154;
+                if (!tmp215) {
                   joined = null;
-                  str = text2;
+                  str167 = tmp154;
                 }
               }
-              text2 = text1;
               if ("Opera" == text1) {
-                text2 = /\bzbov|zvav$/.exec(str);
-                if (text2) {
-                  text2 = text1;
-                  str = " ";
-                  text2 = `${tmp29} `;
-                  str = "desktop mode";
-                  text2 = items6.unshift("desktop mode");
-                  str = "zvav";
-                  if ("zvav" == text2) {
-                    str = "Mini";
-                    text2 = `${tmp29} Mini`;
-                    text2 = null;
+                const match4 = /\bzbov|zvav$/.exec(str146);
+                tmp211 = match4;
+                if (match4) {
+                  let text7 = `${tmp30} `;
+                  items6.unshift("desktop mode");
+                  if ("zvav" == match4) {
+                    text7 = `${tmp30} Mini`;
                   } else {
-                    str = "Mobile";
-                    text2 = `${tmp29} MiniMobile`;
+                    text7 = `${tmp30} MiniMobile`;
                   }
-                  text2 = globalThis;
                   let _RegExp3 = RegExp;
-                  str = " *";
-                  str = "$";
-                  str = "";
-                  text2 = str.replace(RegExp(` *${tmp}$`), "");
+                  const replaced1 = str146.replace(RegExp(` *${tmp233}$`), "");
                 }
-                const obj69 = /\bzbov|zvav$/;
               }
-              text2 = text1;
-              text2 = "Safari" == text1;
-              if (text2) {
-                text2 = arr16;
-                if (arr16) {
-                  text2 = arr16[1];
+              let match5 = "Safari" == text1;
+              if (match5) {
+                let tmp236 = arr15;
+                if (arr15) {
+                  tmp236 = arr15[1];
                 }
-                text2 = /\bChrome\b/.exec(text2);
-                const obj70 = /\bChrome\b/;
+                match5 = /\bChrome\b/.exec(tmp236);
               }
-              if (text2) {
-                str = "desktop mode";
-                text2 = items6.unshift("desktop mode");
+              let str179 = str146;
+              let tmp237 = tmp189;
+              let tmp238 = tmp211;
+              if (match5) {
+                items6.unshift("desktop mode");
                 text1 = "Chrome Mobile";
                 joined = null;
-                str = null;
-                str = text2;
-                if (obj71.test(str)) {
-                  str = "iOS 4.3+";
-                  str = "Apple";
+                let str181 = null;
+                let str182 = tmp189;
+                if (obj71.test(str146)) {
+                  str181 = "iOS 4.3+";
+                  str182 = "Apple";
                 }
-                text2 = str;
+                str179 = str181;
+                tmp237 = str182;
+                tmp238 = tmp211;
                 obj71 = /\bOS X\b/;
               }
-              text2 = joined;
+              let tmp250 = joined;
               if (joined) {
-                text2 = joined;
-                text2 = /[\d.]+$/.exec(str);
-                text2 = 0 == joined.indexOf(text2);
-                const obj72 = /[\d.]+$/;
+                const match6 = /[\d.]+$/.exec(str179);
+                tmp250 = 0 == joined.indexOf(match6);
+                tmp238 = match6;
               }
-              if (text2) {
-                str = "/";
-                str = "-";
-                text2 = tmp9.indexOf(`/${tmp}-`) > -1;
+              if (tmp250) {
+                tmp250 = tmp9.indexOf(`/${tmp238}-`) > -1;
               }
-              if (text2) {
-                text2 = trim;
-                str = "";
-                str = trim(str.replace(text2, ""));
+              let str193 = str179;
+              if (tmp250) {
+                str193 = trim(str179.replace(tmp238, ""));
               }
-              text2 = arr16;
-              if (arr16) {
-                text2 = text1;
-                text2 = !/\b(?:Avant|Nook)\b/.test(text1);
-                const obj73 = /\b(?:Avant|Nook)\b/;
+              let tmp254 = arr15;
+              if (arr15) {
+                tmp254 = !/\b(?:Avant|Nook)\b/.test(text1);
               }
-              if (text2) {
-                text2 = text1;
-                text2 = /Browser|Lunascape|Maxthon/.test(text1);
-                if (!text2) {
-                  text2 = text1;
-                  text2 = "Safari" != text1;
-                  if (text2) {
-                    text2 = /^iOS/.test(str);
-                    const obj75 = /^iOS/;
+              if (tmp254) {
+                let isMatch5 = /Browser|Lunascape|Maxthon/.test(text1);
+                if (!isMatch5) {
+                  let isMatch6 = "Safari" != text1;
+                  if (isMatch6) {
+                    isMatch6 = /^iOS/.test(str193);
                   }
-                  if (text2) {
-                    text2 = /\bSafari\b/.test(arr16[1]);
-                    const obj76 = /\bSafari\b/;
+                  if (isMatch6) {
+                    isMatch6 = /\bSafari\b/.test(arr15[1]);
                   }
+                  isMatch5 = isMatch6;
                 }
-                if (!text2) {
-                  text2 = text1;
-                  text2 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr16[1];
-                  const obj77 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/;
+                if (!isMatch5) {
+                  isMatch5 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr15[1];
+                  const tmp261 = /^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(text1) && arr15[1];
                 }
-                const obj74 = /Browser|Lunascape|Maxthon/;
+                tmp254 = isMatch5;
               }
-              if (text2) {
-                text2 = arr16[arr16.length - 1];
+              if (tmp254) {
+                tmp238 = arr15[arr15.length - 1];
               }
-              if (text2) {
-                text2 = items6.push(text2);
+              if (tmp254) {
+                items6.push(tmp238);
               }
-              let arr20 = items6;
+              let arr19 = items6;
               if (items6.length) {
-                str = "; ";
-                str = "(";
-                const items13 = [];
-                str = ")";
-                items13[0] = `(${arr8.join("; ")})`;
-                arr20 = items13;
+                const items13 = [`(${arr8.join("; ")})`];
+                arr19 = items13;
               }
-              if (text2) {
-                text2 = arr13;
+              let tmp263 = tmp237;
+              if (tmp237) {
+                tmp263 = arr12;
               }
-              if (text2) {
-                text2 = arr13.indexOf(text2) < 0;
+              if (tmp263) {
+                tmp263 = arr12.indexOf(tmp237) < 0;
               }
-              if (text2) {
-                str = "on ";
-                text2 = arr20.push(`on ${tmp}`);
+              if (tmp263) {
+                arr8 = arr19.push(`on ${tmp237}`);
               }
-              if (arr13) {
-                str = "on ";
-                if (obj78.test(arr20[arr20.length - 1])) {
-                  str = "";
+              if (arr12) {
+                let str199 = "on ";
+                if (obj78.test(arr19[arr19.length - 1])) {
+                  str199 = "";
                 }
-                text2 = arr20.push(str + arr13);
+                arr19.push(str199 + arr12);
                 obj78 = /^on /;
               }
-              text2 = str;
-              if (str) {
-                text2 = / ([\d.+]+)$/.exec(str);
-                if (text2) {
-                  str = "/";
-                  text2 = "/" == str.charAt(str.length - text2[0].length - 1);
+              let text8 = str193;
+              if (str193) {
+                const match7 = / ([\d.+]+)$/.exec(str193);
+                let tmp268 = match7;
+                if (match7) {
+                  tmp268 = "/" == str193.charAt(str193.length - match7[0].length - 1);
                 }
-                text2 = str;
-                if (text2) {
-                  text2 = str;
-                  if (!text2) {
-                    str = "";
-                    text2 = str.replace(text2[0], "");
+                closure_1 = tmp268;
+                let replaced2 = str193;
+                if (match7) {
+                  replaced2 = str193;
+                  if (!tmp268) {
+                    replaced2 = str193.replace(match7[0], "");
                   }
                 }
                 obj = { architecture: 32, family: null, version: null, toString: null };
-                obj[1] = text2;
-                text2 = null;
-                if (text2) {
-                  text2 = text2[1];
+                obj[1] = replaced2;
+                let tmp270 = null;
+                if (match7) {
+                  tmp270 = match7[1];
                 }
-                obj[2] = text2;
+                obj[2] = tmp270;
                 obj[3] = function toString() {
                   const version = this.version;
                   let str = "";
                   let str2 = "";
                   if (version) {
                     str2 = str;
-                    if (!text2) {
+                    if (!closure_1) {
                       str2 = ` ${version}`;
                     }
                   }
@@ -1290,44 +1196,36 @@ const fn = function() {
                   }
                   return sum + str;
                 };
-                text2 = obj;
-                const obj79 = / ([\d.+]+)$/;
+                text8 = obj;
               }
-              text2 = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(text2);
-              if (text2) {
-                if (!obj82.test(text2)) {
-                  if (text2) {
-                    text2.architecture = 64;
-                    str = text2.family;
-                    text2 = globalThis;
+              const match8 = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(tmp106);
+              if (match8) {
+                if (!obj82.test(tmp106)) {
+                  if (text8) {
+                    text8.architecture = 64;
                     let _RegExp4 = RegExp;
-                    str = " *";
-                    str = "";
-                    text2.family = str.replace(RegExp(` *${tmp}`), "");
+                    text8.family = text8.family.replace(RegExp(` *${tmp271}`), "");
                   }
-                  text2 = text1;
+                  let tmp273 = text1;
                   if (text1) {
-                    text2 = /\bWOW64\b/i.test(tmp9);
-                    if (!text2) {
-                      if (isMatch4) {
+                    let isMatch7 = /\bWOW64\b/i.test(tmp9);
+                    if (!isMatch7) {
+                      if (isMatch8) {
                         let platform2 = tmp11.cpuClass;
                         if (!platform2) {
                           platform2 = tmp11.platform;
                         }
-                        isMatch4 = /\w(?:86|32)$/.test(platform2);
-                        const obj84 = /\w(?:86|32)$/;
+                        isMatch8 = /\w(?:86|32)$/.test(platform2);
                       }
-                      if (isMatch4) {
-                        isMatch4 = !/\bWin64; x64\b/i.test(tmp9);
-                        const obj85 = /\bWin64; x64\b/i;
+                      if (isMatch8) {
+                        isMatch8 = !/\bWin64; x64\b/i.test(tmp9);
                       }
-                      text2 = isMatch4;
+                      isMatch7 = isMatch8;
                     }
-                    const obj83 = /\bWOW64\b/i;
+                    tmp273 = isMatch7;
                   }
-                  if (text2) {
-                    str = "32-bit";
-                    text2 = arr20.unshift("32-bit");
+                  if (tmp273) {
+                    arr19.unshift("32-bit");
                   }
                 }
                 if (!tmp9) {
@@ -1335,330 +1233,276 @@ const fn = function() {
                   tmp9 = null;
                 }
                 obj1 = { description: tmp9 };
-                text2 = arr16;
-                if (arr16) {
-                  text2 = arr16[0];
+                let first4 = arr15;
+                if (arr15) {
+                  first4 = arr15[0];
                 }
-                obj1.layout = text2;
-                obj1.manufacturer = text2;
-                text2 = text1;
+                obj1.layout = first4;
+                obj1.manufacturer = tmp237;
+                let tmp281 = text1;
                 obj1.name = text1;
-                obj1.prerelease = text2;
-                obj1.product = arr13;
+                obj1.prerelease = tmp210;
+                obj1.product = arr12;
                 obj1.ua = tmp9;
                 if (text1) {
-                  text2 = joined;
+                  tmp281 = joined;
                 }
-                obj1.version = text2;
-                if (!text2) {
+                obj1.version = tmp281;
+                let tmp282 = text8;
+                if (!text8) {
                   obj2 = { architecture: null, family: null, version: null, toString: null };
                   obj2[3] = function toString() {
                     return "null";
                   };
-                  text2 = obj2;
+                  tmp282 = obj2;
                 }
-                obj1.os = text2;
-                text2 = parse;
+                obj1.os = tmp282;
                 obj1.parse = parse;
                 obj1.toString = function toStringPlatform() {
                   return this.description || "";
                 };
                 if (obj1.version) {
-                  text2 = arr20.unshift(joined);
+                  arr19.unshift(joined);
                 }
                 if (obj1.name) {
-                  text2 = text1;
-                  text2 = arr20.unshift(text1);
+                  arr12 = arr19.unshift(text1);
                 }
-                if (text2) {
-                  text2 = text1;
+                let tmp287 = text8;
+                if (text8) {
+                  tmp287 = text1;
                 }
-                if (text2) {
-                  text2 = globalThis;
+                if (tmp287) {
                   let _String2 = String;
-                  str = String(text2);
-                  str = " ";
-                  text2 = text2 != str.split(" ")[0];
-                  if (!text2) {
-                    text2 = text1;
-                    text2 = text2 != text1.split(" ")[0] && !arr13;
+                  let tmp289 = text8 != String(text8).split(" ")[0];
+                  if (!tmp289) {
+                    tmp289 = text8 != text1.split(" ")[0] && !arr12;
+                    const tmp291 = text8 != text1.split(" ")[0] && !arr12;
                   }
+                  tmp287 = tmp289;
+                  const str206 = String(text8);
                 }
-                if (!text2) {
-                  if (arr20.length) {
-                    str = " ";
-                    obj1.description = arr20.join(" ");
+                if (!tmp287) {
+                  if (arr19.length) {
+                    obj1.description = arr19.join(" ");
                   }
                   return obj1;
                 } else {
-                  if (arr13) {
-                    str = "(";
-                    text2 = `(${tmp}`;
-                    str = ")";
-                    text2 = `(${tmp})`;
+                  if (arr12) {
+                    text8 = `(${tmp266}`;
+                    let text9 = `(${tmp266})`;
                   } else {
-                    str = "on ";
-                    text2 = `on ${`(${tmp}`}`;
+                    text9 = `on ${`(${tmp266}`}`;
                   }
-                  text2 = arr20.push(text2);
+                  arr19.push(text9);
                 }
                 obj82 = /\bi686\b/i;
               }
-              if (text2) {
-                text2 = /^OS X/.test(text2.family);
-                const obj86 = /^OS X/;
+              let isMatch9 = text8;
+              if (text8) {
+                isMatch9 = /^OS X/.test(text8.family);
               }
-              if (text2) {
-                text2 = text1;
-                text2 = "Chrome" == text1;
+              if (isMatch9) {
+                isMatch9 = "Chrome" == text1;
               }
-              if (text2) {
-                text2 = globalThis;
+              if (isMatch9) {
                 const _parseFloat4 = parseFloat;
-                text2 = joined;
-                text2 = parseFloat(joined) >= 39;
+                isMatch9 = parseFloat(joined) >= 39;
               }
-              if (text2) {
-                text2.architecture = 64;
+              if (isMatch9) {
+                text8.architecture = 64;
               }
-              const obj49 = /\b(?:Android|Firefox OS)\b/;
-              const obj66 = /\bAppleWebKit\/([\d.]+\+?)/i;
-              const obj81 = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i;
+              const tmp209 = /\bAppleWebKit\/([\d.]+\+?)/i.exec(tmp9) || 0;
             }
-            text2 = text1;
-            str = "Maxthon";
             if ("Maxthon" == text1) {
-              text2 = joined;
               if (joined) {
-                text2 = joined;
-                str = ".x";
                 joined = joined.replace(/\.[\d.]+/, ".x");
-                str = text2;
-                text2 = manufacturer;
-                arr13 = str81;
-                items12 = text2;
+                str146 = tmp104;
+                tmp189 = manufacturer;
+                arr12 = str81;
+                items12 = tmp105;
               }
             }
             if (obj50.test(str81)) {
-              str = "Xbox 360";
+              let tmp205 = tmp104;
               if ("Xbox 360" == str81) {
-                text2 = null;
+                tmp205 = null;
               }
-              text2 = "Xbox 360" == str81;
-              if (text2) {
-                text2 = /\bIEMobile\b/.test(tmp9);
-                const obj65 = /\bIEMobile\b/;
+              let isMatch10 = "Xbox 360" == str81;
+              if (isMatch10) {
+                isMatch10 = /\bIEMobile\b/.test(tmp9);
               }
-              str = text2;
-              text2 = manufacturer;
-              arr13 = str81;
-              items12 = text2;
-              if (text2) {
-                str = "mobile mode";
-                text2 = items6.unshift("mobile mode");
-                str = text2;
-                text2 = manufacturer;
-                arr13 = str81;
-                items12 = text2;
+              str146 = tmp205;
+              tmp189 = manufacturer;
+              arr12 = str81;
+              items12 = tmp105;
+              if (isMatch10) {
+                items6.unshift("mobile mode");
+                str146 = tmp205;
+                tmp189 = manufacturer;
+                arr12 = str81;
+                items12 = tmp105;
               }
             } else {
-              text2 = text1;
               if (obj51.test(text1)) {
-                str = "Windows CE";
-                if ("Windows CE" != text2) {
-                  const obj91 = /Mobi/i;
-                }
-                text2 = text1;
-                str = " Mobile";
-                text1 = `${tmp29} Mobile`;
-                str = text2;
-                text2 = manufacturer;
-                arr13 = str81;
-                items12 = text2;
-              } else {
-                text2 = text1;
-                if (`${tmp29} Mobile`) {
-                  if (!str81) {
-                    text2 = text1;
-                    const obj52 = /Browser|Mobi/;
-                  }
-                }
+                text1 = `${tmp30} Mobile`;
+                str146 = tmp104;
+                tmp189 = manufacturer;
+                arr12 = str81;
+                items12 = tmp105;
               }
-              text2 = text1;
               if ("IE" == text1) {
-                if (isMatch4) {
+                if (isMatch8) {
                   try {
                     if (null === obj.external) {
-                      str = "platform preview";
-                      text2 = items6.unshift("platform preview");
+                      arr15 = items6.unshift("platform preview");
                     }
-                    str = text2;
-                    text2 = manufacturer;
-                    arr13 = str81;
-                    items12 = text2;
+                    str146 = tmp104;
+                    tmp189 = manufacturer;
+                    arr12 = str81;
+                    items12 = tmp105;
                   } catch (err) {
-                    str = "embedded";
-                    text2 = arr.unshift("embedded");
-                    str = tmp4;
-                    text2 = tmp3;
-                    arr13 = tmp2;
-                    items12 = text2;
+                    arr.unshift("embedded");
+                    str146 = tmp4;
+                    tmp189 = tmp3;
+                    arr12 = tmp2;
+                    items12 = tmp;
                   }
                 }
               }
               if (obj53.test(str81)) {
-                text2 = globalThis;
                 let _RegExp2 = RegExp;
-                str = " *";
-                str = "/([.\\d]+)";
-                str = "i";
-                text2 = RegExp(`${str81.replace(/ +/g, " *")}/([.\\d]+)`, "i").exec(tmp9) || 0;
-                text2 = text2[1] || joined;
-                if (text2) {
-                  const items14 = [text2, /BB10/.test(tmp9)];
-                  str = "Device Software";
-                  str = manufacturer;
-                  text2 = str81;
+                let RegExpResult = RegExp(`${str81.replace(/ +/g, " *")}/([.\\d]+)`, "i");
+                const tmp169 = RegExp(`${str81.replace(/ +/g, " *")}/([.\\d]+)`, "i").exec(tmp9) || 0[1] || joined;
+                tmp107 = tmp169;
+                if (tmp169) {
+                  const items14 = [tmp169, /BB10/.test(tmp9)];
+                  let str155 = "Device Software";
+                  let str156 = manufacturer;
+                  let tmp201 = str81;
                   if (items14[1]) {
                     closure_2 = null;
-                    str = "BlackBerry";
-                    text2 = null;
-                    str = "BlackBerry";
+                    str156 = "BlackBerry";
+                    tmp201 = null;
+                    str155 = "BlackBerry";
                   }
-                  str = " ";
-                  str = `${str} ${arr15[0]}`;
+                  str146 = `${str155} ${arr15[0]}`;
                   joined = null;
-                  text2 = str;
-                  arr13 = text2;
-                  items12 = text2;
-                  const obj64 = /BB10/;
+                  tmp189 = str156;
+                  arr12 = tmp201;
+                  items12 = tmp105;
                 }
-                let RegExpResult = RegExp(`${str81.replace(/ +/g, " *")}/([.\\d]+)`, "i");
-              } else {
-                const obj54 = /\bBB10\b/;
+                const tmp168 = RegExp(`${str81.replace(/ +/g, " *")}/([.\\d]+)`, "i").exec(tmp9) || 0;
               }
               const self = this;
-              text2 = forOwn;
               let name = this != forOwn && "Wii" != str81;
               if (name) {
-                text2 = isMatch4;
-                if (isMatch4) {
-                  text2 = tmp23;
+                let tmp171 = isMatch8;
+                if (isMatch8) {
+                  tmp171 = tmp24;
                 }
-                if (!text2) {
-                  text2 = text1;
-                  text2 = /Opera/.test(text1);
-                  if (text2) {
-                    text2 = /\b(?:MSIE|Firefox)\b/i.test(tmp9);
-                    const obj57 = /\b(?:MSIE|Firefox)\b/i;
+                if (!tmp171) {
+                  let isMatch11 = /Opera/.test(text1);
+                  if (isMatch11) {
+                    isMatch11 = /\b(?:MSIE|Firefox)\b/i.test(tmp9);
                   }
-                  const obj56 = /Opera/;
+                  tmp171 = isMatch11;
                 }
-                if (!text2) {
-                  text2 = text1;
-                  text2 = "Firefox" == text1;
-                  if (text2) {
-                    text2 = /\bOS X (?:\d+\.){2,}/.test(text2);
-                    const obj58 = /\bOS X (?:\d+\.){2,}/;
+                if (!tmp171) {
+                  let isMatch12 = "Firefox" == text1;
+                  if (isMatch12) {
+                    isMatch12 = /\bOS X (?:\d+\.){2,}/.test(tmp104);
                   }
+                  tmp171 = isMatch12;
                 }
-                if (!text2) {
-                  text2 = text1;
-                  text2 = "IE" == text1;
-                  if (text2) {
-                    if (text2) {
-                      text2 = !/^Win/.test(text2);
-                      const obj59 = /^Win/;
+                if (!tmp171) {
+                  let tmp177 = "IE" == text1;
+                  if (tmp177) {
+                    let tmp178 = tmp104;
+                    if (tmp104) {
+                      tmp178 = !/^Win/.test(tmp104);
                     }
-                    if (text2) {
-                      text2 = joined;
-                      text2 = joined > 5.5;
+                    if (tmp178) {
+                      tmp178 = joined > 5.5;
                     }
-                    if (!text2) {
-                      text2 = /\bWindows XP\b/.test(text2);
-                      if (text2) {
-                        text2 = joined;
-                        text2 = joined > 8;
+                    if (!tmp178) {
+                      let isMatch13 = /\bWindows XP\b/.test(tmp104);
+                      if (isMatch13) {
+                        isMatch13 = joined > 8;
                       }
-                      const obj60 = /\bWindows XP\b/;
+                      tmp178 = isMatch13;
                     }
-                    if (!text2) {
-                      text2 = joined;
-                      text2 = 8 == joined;
-                      if (text2) {
-                        text2 = !/\bTrident\b/.test(tmp9);
-                        const obj61 = /\bTrident\b/;
+                    if (!tmp178) {
+                      let tmp183 = 8 == joined;
+                      if (tmp183) {
+                        tmp183 = !/\bTrident\b/.test(tmp9);
                       }
+                      tmp178 = tmp183;
                     }
+                    tmp177 = tmp178;
                   }
+                  tmp171 = tmp177;
                 }
-                name = text2;
+                name = tmp171;
               }
               if (!name) {
                 if (name) {
-                  name = text2.name;
+                  name = tmp107.name;
                 }
-                str = text2;
-                text2 = manufacturer;
-                arr13 = str81;
-                items12 = text2;
+                str146 = tmp104;
+                tmp189 = manufacturer;
+                arr12 = str81;
+                items12 = tmp105;
                 if (name) {
-                  str = "ing as ";
-                  const version2 = text2.version;
-                  str = "";
-                  text2 = `ing as ${tmp.name}`;
+                  const version2 = tmp107.version;
+                  let str148 = "";
+                  const text10 = `ing as ${tmp107.name}`;
                   if (version2) {
-                    str = " ";
-                    str = ` ${version2}`;
+                    str148 = ` ${version2}`;
                   }
-                  text2 = text2 + str;
-                  text2 = text1;
+                  const sum3 = text10 + str148;
                   if (obj5.test(text1)) {
-                    text2 = /\bIE\b/.test(text2);
-                    if (text2) {
-                      str = "Mac OS";
-                      text2 = "Mac OS" == text2;
+                    let isMatch14 = /\bIE\b/.test(sum3);
+                    if (isMatch14) {
+                      isMatch14 = "Mac OS" == tmp104;
                     }
-                    if (text2) {
-                      text2 = null;
+                    let tmp199 = tmp104;
+                    if (isMatch14) {
+                      tmp199 = null;
                     }
-                    str = "identify";
-                    text2 = `identify${tmp}`;
-                    const obj63 = /\bIE\b/;
+                    let text11 = `identify${tmp191}`;
+                    let tmp196 = tmp199;
                   } else {
-                    str = "Opera";
-                    if (tmp24) {
-                      text2 = format;
-                      str = "$1 $2";
-                      str = format(tmp24.replace(/([a-z])([A-Z])/g, "$1 $2"));
+                    let str150 = "Opera";
+                    if (tmp25) {
+                      str150 = format(tmp25.replace(/([a-z])([A-Z])/g, "$1 $2"));
                     }
-                    str = "mask";
-                    text2 = `mask${tmp}`;
-                    text1 = str;
-                    if (obj62.test(`mask${tmp}`)) {
-                      text2 = null;
+                    const text12 = `mask${tmp191}`;
+                    text1 = str150;
+                    let tmp195 = tmp104;
+                    if (obj62.test(`mask${tmp191}`)) {
+                      tmp195 = null;
                     }
-                    if (!isMatch4) {
+                    tmp196 = tmp195;
+                    text11 = text12;
+                    if (!isMatch8) {
                       joined = null;
+                      tmp196 = tmp195;
+                      text11 = text12;
                     }
                     obj62 = /\bIE\b/;
                   }
                   items12 = ["Presto"];
-                  text2 = items6.push(text2);
-                  str = text2;
-                  text2 = manufacturer;
-                  arr13 = str81;
+                  arr17 = items6.push(text11);
+                  str146 = tmp196;
+                  tmp189 = manufacturer;
+                  arr12 = str81;
                 }
               } else {
                 let test = obj5.test;
-                text2 = parse;
                 const call = parse.call;
-                str = "";
-                str = ";";
-                text2 = `${tmp9.replace(obj5, "")};`;
-                text2 = typeof call === "unknown" ? text2(`${tmp9.replace(obj5, "")};`) : call(text2, `${tmp9.replace(obj5, "")};`);
-                test = test(text2);
-                text2 = !test;
+                const text13 = `${tmp9.replace(obj5, "")};`;
+                const tmp186 = typeof call === "unknown" ? parse(`${tmp9.replace(obj5, "")};`) : call(forOwn, `${tmp9.replace(obj5, "")};`);
+                test = test(tmp186);
               }
               obj51 = /^(?:Chrome|IE|Opera)$/;
               obj53 = /\bBlackBerry\b/;
@@ -1666,229 +1510,196 @@ const fn = function() {
             obj50 = /\bXbox\b/i;
           }
           text1 = "Firefox Mobile";
-          str = text2;
-          text2 = manufacturer;
-          arr13 = str81;
-          items12 = text2;
-          const obj37 = /; *(?:XBLWP|ZuneWP)(\d+)/i;
-          const tmp85 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0;
+          str146 = tmp104;
+          tmp189 = manufacturer;
+          arr12 = str81;
+          items12 = tmp105;
+          const tmp86 = /; *(?:XBLWP|ZuneWP)(\d+)/i.exec(tmp9) || 0;
         }
         if (obj38.test(tmp9)) {
           text1 = "IE Mobile";
-          str = "desktop mode";
-          arr = items6.unshift("desktop mode");
-          str = "Windows Phone 8.x";
-          str = "Windows Phone 8.x";
-          tmp90 = str;
+          arr18 = items6.unshift("desktop mode");
+          str108 = "Windows Phone 8.x";
+          tmp91 = str102;
           if (!joined) {
             joined = /\brv:([\d.]+)/.exec(tmp9) || 0[1];
-            str = "Windows Phone 8.x";
-            tmp90 = str;
-            const obj40 = /\brv:([\d.]+)/;
-            const tmp99 = /\brv:([\d.]+)/.exec(tmp9) || 0;
+            str108 = "Windows Phone 8.x";
+            tmp91 = str102;
+            const tmp100 = /\brv:([\d.]+)/.exec(tmp9) || 0;
           }
         } else {
-          let match1 = "IE" != text1 && "Trident" == tmp83;
-          let tmp89 = str;
-          if (match1) {
-            match1 = /\brv:([\d.]+)/.exec(tmp9);
-            tmp89 = match1;
-            const obj39 = /\brv:([\d.]+)/;
+          let match9 = "IE" != text1 && "Trident" == tmp84;
+          let tmp90 = str102;
+          if (match9) {
+            match9 = /\brv:([\d.]+)/.exec(tmp9);
+            tmp90 = match9;
           }
-          str = str55;
-          tmp90 = tmp89;
-          if (match1) {
+          str108 = str55;
+          tmp91 = tmp90;
+          if (match9) {
             if (text1) {
-              str = "identifying as ";
-              str = "";
-              const text3 = `identifying as ${tmp29}`;
+              let str110 = "";
+              const text14 = `identifying as ${tmp30}`;
               if (joined) {
-                str = " ";
-                str = ` ${tmp27}`;
+                str110 = ` ${tmp28}`;
               }
-              items6.push(text3 + str);
+              arr19 = items6.push(text14 + str110);
             }
             text1 = "IE";
-            joined = tmp89[1];
-            str = str55;
-            tmp90 = tmp89;
+            joined = tmp90[1];
+            str108 = str55;
+            tmp91 = tmp90;
           }
         }
         obj10 = /\blike iPhone OS\b/;
         obj38 = /\bWPDesktop\b/i;
       }
-      if (obj11.test(tmp39)) {
+      if (obj11.test(tmp40)) {
         if (!text1) {
           text1 = "Safari";
         }
-        const match2 = / OS ([\d_]+)/i.exec(tmp9);
+        const match10 = / OS ([\d_]+)/i.exec(tmp9);
         let str95 = "";
-        if (match2) {
-          str95 = ` ${match2[1].replace(/_/g, ".")}`;
-          const str96 = match2[1];
+        if (match10) {
+          str95 = ` ${match10[1].replace(/_/g, ".")}`;
         }
         str55 = `iOS${str95}`;
-        manufacturer = tmp31;
-        str81 = tmp39;
-        const obj30 = / OS ([\d_]+)/i;
+        manufacturer = tmp32;
+        str81 = tmp40;
       } else if ("Konqueror" != text1) {
-        if (tmp31) {
-          if ("Google" != tmp31) {
-            if (!obj13.test(text1)) {
-              const obj15 = /\bVita\b/;
-            } else {
-              const obj14 = /\bMobile Safari\b/i;
-            }
-            obj13 = /Chrome/;
-          }
+        if (tmp32) {
           text1 = "Android Browser";
           let str94 = "Android";
-          if (obj29.test(tmp32)) {
-            str94 = tmp32;
+          if (obj29.test(tmp33)) {
+            str94 = tmp33;
           }
           str55 = str94;
-          manufacturer = tmp31;
-          str81 = tmp39;
+          manufacturer = tmp32;
+          str81 = tmp40;
           obj29 = /\bAndroid\b/;
         }
-        if (obj16.test(tmp32)) {
-          if (obj17.test(text1)) {
-            const obj18 = /\bVersion\//i;
-          }
-          obj17 = /^Chrome/;
-        }
         if ("Silk" == text1) {
-          let str91 = tmp32;
+          let str91 = tmp33;
           if (!obj27.test(tmp9)) {
             items6.unshift("desktop mode");
             str91 = "Android";
           }
           str55 = str91;
-          manufacturer = tmp31;
-          str81 = tmp39;
+          manufacturer = tmp32;
+          str81 = tmp40;
           if (obj28.test(tmp9)) {
             items6.unshift("accelerated");
             str55 = str91;
-            manufacturer = tmp31;
-            str81 = tmp39;
+            manufacturer = tmp32;
+            str81 = tmp40;
           }
           obj27 = /\bMobi/i;
           obj28 = /Accelerated *= *true/i;
         } else {
-          text2 = text1;
-          let tmp50 = match;
+          let tmp51 = match;
           if ("PaleMoon" == text1) {
-            const match3 = /\bFirefox\/([\d.]+)\b/.exec(tmp9);
-            tmp50 = match3;
-            if (match3) {
-              items6.push(`identifying as Firefox ${tmp49[1]}`);
-              str55 = tmp32;
-              manufacturer = tmp31;
-              str81 = tmp39;
+            const match11 = /\bFirefox\/([\d.]+)\b/.exec(tmp9);
+            tmp51 = match11;
+            if (match11) {
+              items6.push(`identifying as Firefox ${tmp50[1]}`);
+              str55 = tmp33;
+              manufacturer = tmp32;
+              str81 = tmp40;
             }
-            const obj19 = /\bFirefox\/([\d.]+)\b/;
           }
           if ("Firefox" == text1) {
-            const match4 = /\b(Mobile|Tablet|TV)\b/i.exec(tmp9);
-            tmp50 = match4;
-            if (match4) {
-              let str89 = tmp32;
-              if (!tmp32) {
+            const match12 = /\b(Mobile|Tablet|TV)\b/i.exec(tmp9);
+            tmp51 = match12;
+            if (match12) {
+              let str89 = tmp33;
+              if (!tmp33) {
                 str89 = "Firefox OS";
               }
               str55 = str89;
-              manufacturer = tmp31;
-              str81 = tmp39;
-              if (!tmp39) {
-                closure_2 = tmp67;
+              manufacturer = tmp32;
+              str81 = tmp40;
+              if (!tmp40) {
+                closure_2 = tmp68;
                 str55 = str89;
-                manufacturer = tmp31;
-                str81 = tmp67;
+                manufacturer = tmp32;
+                str81 = tmp68;
               }
             }
-            const obj20 = /\b(Mobile|Tablet|TV)\b/i;
           }
           if (text1) {
-            const isMatch5 = /\bMinefield\b/i.test(tmp9);
-            let match5 = !isMatch5;
-            if (!isMatch5) {
-              match5 = /\b(?:Firefox|Safari)\b/.exec(text1);
-              const obj22 = /\b(?:Firefox|Safari)\b/;
+            const isMatch15 = /\bMinefield\b/i.test(tmp9);
+            let match13 = !isMatch15;
+            if (!isMatch15) {
+              match13 = /\b(?:Firefox|Safari)\b/.exec(text1);
             }
-            tmp50 = match5;
-            if (!match5) {
+            tmp51 = match13;
+            if (!match13) {
               if ("Electron" == text1) {
-                match5 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0[1];
-                const obj23 = /\bChrome\/([\d.]+)\b/;
-                const tmp59 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0;
+                match13 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0[1];
+                const tmp60 = /\bChrome\/([\d.]+)\b/.exec(tmp9) || 0;
               }
-              str55 = tmp32;
-              manufacturer = tmp31;
-              str81 = tmp39;
+              str55 = tmp33;
+              manufacturer = tmp32;
+              str81 = tmp40;
               if ("Electron" == text1) {
-                items6.push(`Chromium ${tmp55}`);
-                str55 = tmp32;
-                manufacturer = tmp31;
-                str81 = tmp39;
+                items6.push(`Chromium ${tmp56}`);
+                str55 = tmp33;
+                manufacturer = tmp32;
+                str81 = tmp40;
               }
             }
-            const obj21 = /\bMinefield\b/i;
           }
-          let isMatch6 = text1;
+          let isMatch16 = text1;
           if (text1) {
-            isMatch6 = !tmp39;
+            isMatch16 = !tmp40;
           }
-          if (isMatch6) {
-            isMatch6 = /[\/,]|^[^(]+?\)/.test(tmp9.slice(tmp9.indexOf(`${tmp50}/`) + 8));
-            const obj24 = /[\/,]|^[^(]+?\)/;
+          if (isMatch16) {
+            isMatch16 = /[\/,]|^[^(]+?\)/.test(tmp9.slice(tmp9.indexOf(`${tmp51}/`) + 8));
           }
-          if (isMatch6) {
+          if (isMatch16) {
             text1 = null;
           }
-          let tmp62 = tmp39;
-          if (!tmp39) {
-            tmp62 = tmp31;
+          let tmp63 = tmp40;
+          if (!tmp40) {
+            tmp63 = tmp32;
           }
-          if (!tmp62) {
-            tmp62 = tmp32;
+          if (!tmp63) {
+            tmp63 = tmp33;
           }
-          let tmp63 = tmp62;
-          if (tmp62) {
-            let isMatch7 = tmp39;
-            if (!tmp39) {
-              isMatch7 = tmp31;
-            }
-            if (!isMatch7) {
-              isMatch7 = /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/.test(tmp32);
-              const obj25 = /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/;
-            }
-            tmp63 = isMatch7;
-          }
-          str55 = tmp32;
-          manufacturer = tmp31;
-          str81 = tmp39;
+          let tmp64 = tmp63;
           if (tmp63) {
-            if (obj26.test(tmp32)) {
-              tmp62 = tmp32;
+            let isMatch17 = tmp40;
+            if (!tmp40) {
+              isMatch17 = tmp32;
             }
-            text1 = `${tmp66(tmp62)} Browser`;
-            str55 = tmp32;
-            manufacturer = tmp31;
-            str81 = tmp39;
+            if (!isMatch17) {
+              isMatch17 = /\b(?:Android|Symbian OS|Tablet OS|webOS)\b/.test(tmp33);
+            }
+            tmp64 = isMatch17;
+          }
+          str55 = tmp33;
+          manufacturer = tmp32;
+          str81 = tmp40;
+          if (tmp64) {
+            if (obj26.test(tmp33)) {
+              tmp63 = tmp33;
+            }
+            text1 = `${tmp67(tmp63)} Browser`;
+            str55 = tmp33;
+            manufacturer = tmp32;
+            str81 = tmp40;
             obj26 = /\bAndroid\b/;
           }
         }
         obj16 = /\bAndroid\b/;
       } else {
-        manufacturer = tmp31;
-        str81 = tmp39;
-        const obj12 = /buntu/i;
+        manufacturer = tmp32;
+        str81 = tmp40;
       }
       obj11 = /^iP/;
-      const obj7 = /\bGoogle TV\b/;
       obj8 = /\bSimulator\b/i;
     }
-    __Class__ = getClassOf(tmp20);
+    prop = getClassOf(tmp20);
   }
   const parsed = parse();
   if (typeof globalThis.define === "function") {
@@ -1904,7 +1715,6 @@ const fn = function() {
       let keys = Object.keys();
       if (keys !== undefined) {
         while (keys[53] !== undefined) {
-          let tmp14 = tmp12;
           let call = hasOwnProperty.call;
           if (!(typeof call === "unknown" ? hasOwnProperty(tmp12) : call(parsed, tmp12))) {
             continue;

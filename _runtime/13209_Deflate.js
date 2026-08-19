@@ -2,6 +2,8 @@
 
 // Module 13209 (Deflate)
 import assign from "assign" /* 13208 */;
+import ZStream from "ZStream" /* 13210 */;
+import flush_block_only from "flush_block_only" /* 13211 */;
 import _mod13212 from "module_13212" /* 13212 */;
 import assign2 from "assign" /* 13216 */;
 

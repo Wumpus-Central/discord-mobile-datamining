@@ -7,7 +7,7 @@ import RootTagContext from "RootTagContext" /* 253 */;
 import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = get_hairlineWidthDefault.create({ root: { flex: 1 } });
 
@@ -21,7 +21,6 @@ export default function _default(rootTag) {
     tmp2 = <WrapperComponent initialProps={null}>{null}</WrapperComponent>;
   }
   obj = { value: RootTagContext.createRootTag(rootTag.rootTag), children: null };
-  const obj3 = RootTagContext;
   if (!rootViewStyle) {
     rootViewStyle = root.root;
   }

@@ -1,7 +1,7 @@
 // === Module 331: getImageSourcesFromImageProps ===
 
 // Module 331 (getImageSourcesFromImageProps)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 
 export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {
@@ -19,9 +19,9 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
     const items = [];
     const parts = srcSet.split(", ");
     c4 = true;
-    const item = parts.forEach((str) => {
-      const tmp = obj(str.split(" "), 2);
-      str = "1x";
+    const item = parts.forEach((item, index) => {
+      const tmp = obj(item.split(" "), 2);
+      let str = "1x";
       if (undefined !== tmp[1]) {
         str = tmp2;
       }

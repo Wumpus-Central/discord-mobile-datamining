@@ -1,15 +1,14 @@
 // === Module 4680: DelayedFreeze ===
 
 // Module 4680 (DelayedFreeze)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 
 export default function DelayedFreeze(children) {
   let freeze = children.freeze;
-  dependencyMap = undefined;
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
   const items = [freeze];

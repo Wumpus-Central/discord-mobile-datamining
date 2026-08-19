@@ -7,7 +7,6 @@ import _mod13694 from "module_13694" /* 13694 */;
 let tmp = _mod13673.process && _mod13673.process.versions;
 if (!tmp) {
   tmp = _mod13673.Deno && _mod13673.Deno.version;
-  const tmp2 = _mod13673.Deno && _mod13673.Deno.version;
 }
 let str = tmp;
 if (tmp) {
@@ -36,12 +35,10 @@ if (_module) {
   }
   _module = tmp8;
   tmp4 = match;
-  const str3 = _mod13694;
 }
 if (_module) {
   _module = _mod13694.match(/Chrome\/(\d+)/);
   tmp4 = _module;
-  const str4 = _mod13694;
 }
 if (_module) {
   tmp3 = +tmp4[1];

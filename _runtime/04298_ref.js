@@ -1,7 +1,7 @@
 // === Module 4298: ref ===
 
 // Module 4298 (ref)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import shallowEqual from "shallowEqual" /* 4299 */;
 
 if (shallowEqual) {
@@ -14,10 +14,6 @@ if (shallowEqual) {
 let closure_2 = {};
 
 export default (arg0, arg1) => {
-  let tmp = arg1;
-  if (undefined === arg1) {
-    tmp = closure_1;
-  }
   ref = ref.useRef(closure_2);
   let current = ref.current;
   closure_1 = current;

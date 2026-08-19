@@ -18,7 +18,6 @@ export default function base64Decode(arg0, arg1) {
   let num7 = 0;
   if (0 < (arg0.length - num & 4294967292)) {
     do {
-      let tmp2 = dependencyMap;
       let tmp3 = dependencyMap[arg0.charCodeAt(arg0, num4)] << 18;
       let tmp4 = dependencyMap[arg0.charCodeAt(arg0, num4 + 1)] << 12;
       let tmp5 = dependencyMap[arg0.charCodeAt(arg0, num4 + 2)] << 6;

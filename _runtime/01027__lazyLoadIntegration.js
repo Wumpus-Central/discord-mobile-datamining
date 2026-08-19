@@ -1,11 +1,11 @@
 // === Module 1027: _lazyLoadIntegration ===
 
 // Module 1027 (_lazyLoadIntegration)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _lazyLoadIntegration() {
   const self = this;
-  let tmp = callback((arg0, arg1) => {
+  const tmp = asyncGeneratorStep((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c3 = 0;
@@ -48,7 +48,7 @@ function _lazyLoadIntegration() {
               }
               callback(1028).WINDOW.Sentry = Sentry;
               if (table[callback]) {
-                if (typeof Sentry[tmp50] === "function") {
+                if (typeof Sentry[callback] === "function") {
                   if (!("_isShim" in tmp27)) {
                     c5 = 3;
                     obj1 = { value: null, done: true };
@@ -56,7 +56,7 @@ function _lazyLoadIntegration() {
                     return obj1;
                   }
                 }
-                const _document = tmp54(1028).WINDOW.document;
+                const _document = callback(1028).WINDOW.document;
                 element = <script />;
                 element.src = (function getScriptURL(arg0) {
                   const client = callback(Sentry[2]).getClient();
@@ -71,8 +71,6 @@ function _lazyLoadIntegration() {
                     str = "https://browser.sentry-cdn.com";
                   }
                   const obj = callback(Sentry[2]);
-                  const tmp = callback;
-                  const tmp2 = Sentry;
                   return new URL("/" + callback(Sentry[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
                 })(tmp53);
                 element.crossOrigin = "anonymous";
@@ -82,13 +80,13 @@ function _lazyLoadIntegration() {
                 }
                 const promise = new Promise((arg0, arg1) => {
                   closure_0 = arg0;
-                  const listener = element.addEventListener("load", () => callback());
+                  const listener = element.addEventListener("load", (event) => callback());
                   const listener1 = element.addEventListener("error", arg1);
                 });
-                const currentScript = tmp54(1028).WINDOW.document.currentScript;
-                let head = tmp54(1028).WINDOW.document.body;
+                const currentScript = callback(1028).WINDOW.document.currentScript;
+                let head = callback(1028).WINDOW.document.body;
                 if (!head) {
-                  head = tmp54(1028).WINDOW.document.head;
+                  head = callback(1028).WINDOW.document.head;
                 }
                 if (!head) {
                   let parentElement;
@@ -108,7 +106,7 @@ function _lazyLoadIntegration() {
                 } else {
                   const _Error4 = Error;
                   const _HermesInternal4 = HermesInternal;
-                  error = new Error("Could not find parent element to insert lazy-loaded " + tmp50 + " script");
+                  error = new Error("Could not find parent element to insert lazy-loaded " + callback + " script");
                   throw error;
                 }
                 const tmp28 = (function getScriptURL(arg0) {
@@ -124,14 +122,12 @@ function _lazyLoadIntegration() {
                     str = "https://browser.sentry-cdn.com";
                   }
                   const obj = callback(Sentry[2]);
-                  const tmp = callback;
-                  const tmp2 = Sentry;
                   return new URL("/" + callback(Sentry[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
                 })(tmp53);
               } else {
                 const _Error3 = Error;
                 const _HermesInternal3 = HermesInternal;
-                const error1 = new Error("Cannot lazy load integration: " + tmp50);
+                const error1 = new Error("Cannot lazy load integration: " + callback);
                 throw error1;
               }
             }

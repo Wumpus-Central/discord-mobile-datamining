@@ -1,7 +1,7 @@
 // === Module 1579: useFocusEvents ===
 
 // Module 1579 (useFocusEvents)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -9,10 +9,9 @@ export const useFocusEvents = function useFocusEvents(arg0) {
   ({ state, emitter } = arg0);
   let context;
   let React;
-  let key;
   context = React.useContext(emitter(context[1]).NavigationContext);
   React = React.useRef(undefined);
-  key = state.routes[state.index].key;
+  const key = state.routes[state.index].key;
   const items = [key, emitter, context];
   const effect = React.useEffect(() => {
     let addListenerResult;

@@ -2,7 +2,7 @@
 
 // Module 203 (Blob)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const Blob = arg1;
 class Blob {

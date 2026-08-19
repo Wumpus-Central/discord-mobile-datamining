@@ -1,14 +1,14 @@
 // === Module 1085: _parseCookieHeaders ===
 
 // Module 1085 (_parseCookieHeaders)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 
 function _parseCookieHeaders(arg0, headers) {
   const tmp2 = (function _extractFetchHeaders(headers) {
     const obj = {};
-    const item = headers.forEach((arg0, arg1) => {
-      obj[arg1] = arg0;
+    const item = headers.forEach((item, index) => {
+      obj[index] = item;
     });
     return obj;
   })(headers.headers);
@@ -27,37 +27,37 @@ function _parseCookieHeaders(arg0, headers) {
 }
 function _parseCookieString(str) {
   const parts = str.split("; ");
-  return parts.reduce((arg0, str) => {
-    [tmp2, tmp3] = callback(str.split("="), 2);
+  return parts.reduce((acc, item, index) => {
+    [tmp2, tmp3] = callback(item.split("="), 2);
     let tmp4 = tmp2;
     if (tmp2) {
       tmp4 = tmp3;
     }
     if (tmp4) {
-      arg0[tmp2] = tmp3;
+      acc[tmp2] = tmp3;
     }
-    return arg0;
+    return acc;
   }, {});
 }
 function _shouldCaptureResponse(failedRequestStatusCodes) {
   failedRequestStatusCodes = failedRequestStatusCodes.failedRequestStatusCodes;
   let _require = arg1;
-  let someResult = failedRequestStatusCodes.some((num) => {
-    if (typeof num === "number") {
-      let tmp = num === url;
+  let someResult = failedRequestStatusCodes.some((item, index) => {
+    if (typeof item === "number") {
+      let tmp = item === url;
     } else {
-      tmp = url >= num[0] && tmp3 <= num[1];
+      tmp = url >= item[0] && tmp3 <= item[1];
     }
     return tmp;
   });
   if (someResult) {
     const failedRequestTargets = failedRequestStatusCodes.failedRequestTargets;
     _require = arg2;
-    someResult = failedRequestTargets.some((str) => {
-      if (typeof str === "string") {
-        let hasItem = url.includes(str);
+    someResult = failedRequestTargets.some((item, index) => {
+      if (typeof item === "string") {
+        let hasItem = url.includes(item);
       } else {
-        hasItem = str.test(url);
+        hasItem = item.test(url);
       }
       return hasItem;
     });
@@ -89,7 +89,6 @@ function _createEvent(error) {
     }
   }
   const combined = "HTTP Client Error with status code: " + error.status;
-  obj = { message: combined, exception: null, request: null, contexts: null };
   obj = { type: "Error", value: combined, stacktrace: null };
   let tmp7;
   if (stackParserResult) {
@@ -112,7 +111,6 @@ function _createEvent(error) {
   }
   obj2[3] = parsed;
   obj[3] = { response: obj2 };
-  const tmp = require;
   const tmpResult = registerSpanErrorInstrumentation;
   const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
   return obj;
@@ -133,7 +131,6 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
   obj = { failedRequestStatusCodes: items, failedRequestTargets: items1 };
   items = [[500, 599]];
   items1 = [/.*/];
@@ -143,9 +140,9 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
     setup(arg0) {
       closure_0 = arg0;
       closure_1 = closure_0;
-      obj = obj(closure_1_1[1]);
+      obj = obj(dependencyMap[1]);
       if (obj.supportsNativeFetch()) {
-        let tmp2Result = tmp2(tmp3[1]);
+        let tmp2Result = tmp2(dependencyMap[1]);
         const result = tmp2Result.addFetchInstrumentationHandler((args) => {
           obj = callback(817);
           if (obj.getClient() === url) {
@@ -155,31 +152,30 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               if (!error) {
                 error = args.virtualError;
               }
-              url = response.url;
-              const failedRequestStatusCodes = tmp3.failedRequestStatusCodes;
+              const failedRequestStatusCodes = dependencyMap.failedRequestStatusCodes;
               url = response.status;
-              let someResult = failedRequestStatusCodes.some((num) => {
-                if (typeof num === "number") {
-                  let tmp = num === url;
+              let someResult = failedRequestStatusCodes.some((item, index) => {
+                if (typeof item === "number") {
+                  let tmp = item === url;
                 } else {
-                  tmp = url >= num[0] && tmp3 <= num[1];
+                  tmp = url >= item[0] && tmp3 <= item[1];
                 }
                 return tmp;
               });
               if (someResult) {
-                const failedRequestTargets = tmp3.failedRequestTargets;
-                someResult = failedRequestTargets.some((str) => {
-                  if (typeof str === "string") {
-                    let hasItem = url.includes(str);
+                const failedRequestTargets = dependencyMap.failedRequestTargets;
+                someResult = failedRequestTargets.some((item, index) => {
+                  if (typeof item === "string") {
+                    let hasItem = url.includes(item);
                   } else {
-                    hasItem = str.test(url);
+                    hasItem = item.test(url);
                   }
                   return hasItem;
                 });
               }
               if (someResult) {
-                let tmpResult = tmp(817);
-                tmpResult = tmp(817);
+                callback(817);
+                const tmpResult = callback(817);
                 someResult = !tmpResult.isSentryRequestUrl(url, tmpResult.getClient());
               }
               if (someResult) {
@@ -195,16 +191,16 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                   const _Request = Request;
                   request = tmp27;
                 }
-                const client = tmp(817).getClient();
+                const client = callback(817).getClient();
                 let BooleanResult = client;
                 if (BooleanResult) {
                   const _Boolean = Boolean;
                   BooleanResult = Boolean(client.getOptions().sendDefaultPii);
                 }
                 if (BooleanResult) {
-                  let tmp25Result = tmp25(closure_1_3("Cookie", request), 2);
+                  let tmp25Result = closure_1_2(closure_1_3("Cookie", request), 2);
                   [tmp17, tmp15] = tmp25Result;
-                  tmp25Result = tmp25(closure_1_3("Set-Cookie", response), 2);
+                  tmp25Result = closure_1_2(closure_1_3("Set-Cookie", response), 2);
                   [tmp16, tmp14] = tmp25Result;
                 }
                 obj = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, requestCookies: null, responseCookies: null, error: null, type: "fetch" };
@@ -215,10 +211,10 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                 obj[5] = undefined;
                 obj[6] = undefined;
                 obj[7] = error;
-                const tmpResult1 = tmp(817);
+                const tmpResult1 = callback(817);
                 const tmp22 = closure_1_6(obj);
-                tmp(817).captureEvent(tmp22);
-                const tmpResult2 = tmp(817);
+                callback(817).captureEvent(tmp22);
+                const tmpResult2 = callback(817);
               }
             }
             const tmp26 = closure_1_2(args.args, 2);
@@ -227,20 +223,20 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
       }
       closure_0 = arg0;
       closure_1 = closure_0;
-      if ("XMLHttpRequest" in obj(closure_1_1[1]).GLOBAL_OBJ) {
-        tmp2Result = tmp2(tmp3[2]);
+      if ("XMLHttpRequest" in obj(dependencyMap[1]).GLOBAL_OBJ) {
+        tmp2Result = tmp2(dependencyMap[2]);
         const result1 = tmp2Result.addXhrInstrumentationHandler((arg0) => {
           if (obj.getClient() === callback) {
             ({ error, xhr, virtualError } = arg0);
-            const tmp16 = xhr[tmp4(undefined, 1033).SENTRY_XHR_DATA_KEY];
+            const tmp16 = xhr[callback(undefined, 1033).SENTRY_XHR_DATA_KEY];
             if (tmp16) {
               ({ method, request_headers } = tmp16);
               try {
                 if (!error) {
                   error = virtualError;
                 }
-                (function _xhrResponseHandler(arg0, xhr, method, request_headers, error) {
-                  if (callback3(arg0, xhr.status, xhr.responseURL)) {
+                (function _xhrResponseHandler(dependencyMap, xhr, method, request_headers, error) {
+                  if (callback3(dependencyMap, xhr.status, xhr.responseURL)) {
                     if (!callback5()) {
                       obj = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, responseCookies: null, error: null, type: "xhr" };
                       obj[0] = xhr.responseURL;
@@ -287,6 +283,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               }
             }
           }
+          obj = callback(817);
         });
       }
     }

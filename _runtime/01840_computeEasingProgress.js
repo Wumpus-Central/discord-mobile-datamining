@@ -3,7 +3,7 @@
 // Module 1840 (computeEasingProgress)
 import RNScreensTurboModule2 from "RNScreensTurboModule" /* 1841 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
 let c2 = 400;
 function computeEasingProgress(arg0, arg1, arg2) {
@@ -119,15 +119,15 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num = 1;
       if (Math.abs(x) >= 1) {
-        num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
+        num = point4.x * ((globalThis._getAnimationTimestamp() - closure_4) / 1000) / x;
       }
       const y = point.y;
-      if (typeof screenDimensions !== "function") {
+      if (typeof tmp !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let num3 = 1;
       if (Math.abs(y) >= 1) {
-        num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
+        num3 = point4.y * ((globalThis._getAnimationTimestamp() - closure_4) / 1000) / y;
       }
       const result = closure_7 * point.x;
       if (typeof closure_4 !== "function") {
@@ -140,22 +140,22 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       value.translationY = point.y - result1 * (1 - Math.pow(1 - num3, 5));
       if (closure_7 > 0) {
-        if (tmp4.translationX <= 0) {
+        if (value.translationX <= 0) {
           closure_10.x = true;
-          tmp4.translationX = 0;
+          value.translationX = 0;
         }
-      } else if (tmp4.translationX >= 0) {
+      } else if (value.translationX >= 0) {
         closure_10.x = true;
-        tmp4.translationX = 0;
+        value.translationX = 0;
       }
       if (signResult1 > 0) {
-        if (tmp4.translationY <= 0) {
+        if (value.translationY <= 0) {
           closure_10.y = true;
-          tmp4.translationY = 0;
+          value.translationY = 0;
         }
-      } else if (tmp4.translationY >= 0) {
+      } else if (value.translationY >= 0) {
         closure_10.y = true;
-        tmp4.translationY = 0;
+        value.translationY = 0;
       }
       value(screenDimensions[1]).applyStyle(screenDimensions, value);
       if ("x" === closure_2) {
@@ -170,10 +170,10 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         }
       }
       if (y2) {
-        tmp4.translationX = tmp6 * screenDimensions.width;
-        tmp4.translationY = tmp9 * screenDimensions.height;
-        const result2 = tmp15(tmp16[1]).applyStyleForBelowTopScreen(tmp17, tmp4);
-        const tmp15Result = tmp15(tmp16[1]);
+        value.translationX = closure_7 * screenDimensions.width;
+        value.translationY = signResult1 * screenDimensions.height;
+        const result2 = value(tmp16[1]).applyStyleForBelowTopScreen(tmp17, value);
+        const tmp15Result = value(tmp16[1]);
       }
       if (typeof point !== "function") {
         HermesBuiltin.throwTypeError();
@@ -190,18 +190,20 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         screenDimensions = tmp17.screenDimensions;
         const _Math = Math;
         const _Math2 = Math;
-        const absolute = Math.abs(tmp4.translationX / screenDimensions.width);
+        const absolute = Math.abs(value.translationX / screenDimensions.width);
         const _Math3 = Math;
-        const bound = Math.max(absolute, Math.abs(tmp4.translationY / screenDimensions.height));
+        const bound = Math.max(absolute, Math.abs(value.translationY / screenDimensions.height));
         let result3 = bound;
         if (isTransitionCanceled) {
           result3 = bound / 2;
         }
-        const RNScreensTurboModule = tmp15(tmp16[0]).RNScreensTurboModule;
+        const RNScreensTurboModule = value(tmp16[0]).RNScreensTurboModule;
         RNScreensTurboModule.updateTransition(tmp17.stackTag, result3);
         const _requestAnimationFrame = requestAnimationFrame;
         const animationFrame = requestAnimationFrame(computeFrame);
       }
+      const obj = value(screenDimensions[1]);
+      tmp = screenDimensions;
     }
     return computeFrame;
   } else {
@@ -213,15 +215,15 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       }
       let num = 1;
       if (Math.abs(x) >= 1) {
-        num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
+        num = point4.x * ((globalThis._getAnimationTimestamp() - closure_4) / 1000) / x;
       }
       const y = point.y;
-      if (typeof screenDimensions !== "function") {
+      if (typeof tmp !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let num3 = 1;
       if (Math.abs(y) >= 1) {
-        num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
+        num3 = point4.y * ((globalThis._getAnimationTimestamp() - closure_4) / 1000) / y;
       }
       const result = closure_7 * point.x;
       if (typeof closure_4 !== "function") {
@@ -235,34 +237,34 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       value.translationY = point.y + result1 * (1 - Math.pow(1 - num3, 5));
       if (closure_7 > 0) {
         let tmp12 = screenDimensions;
-        if (tmp4.translationX >= screenDimensions.width) {
+        if (value.translationX >= screenDimensions.width) {
           closure_10.x = true;
-          tmp4.translationX = tmp14.width;
+          value.translationX = tmp14.width;
           tmp12 = tmp14;
         }
       } else {
         tmp12 = screenDimensions;
-        if (tmp4.translationX <= -screenDimensions.width) {
+        if (value.translationX <= -screenDimensions.width) {
           closure_10.x = true;
-          tmp4.translationX = -tmp11.width;
+          value.translationX = -tmp11.width;
           tmp12 = tmp11;
         }
       }
       if (signResult1 > 0) {
-        if (tmp4.translationY >= tmp12.height) {
+        if (value.translationY >= tmp12.height) {
           closure_10.y = true;
-          tmp4.translationY = tmp12.height;
+          value.translationY = tmp12.height;
         }
-      } else if (tmp4.translationY <= -tmp12.height) {
+      } else if (value.translationY <= -tmp12.height) {
         closure_10.y = true;
-        tmp4.translationY = -tmp12.height;
+        value.translationY = -tmp12.height;
       }
       value(screenDimensions[1]).applyStyle(screenDimensions, value);
       let y2 = closure_10.x;
       if (!y2) {
         y2 = closure_10.y;
       }
-      if (typeof point !== "function") {
+      if (typeof tmp22 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (y2) {
@@ -277,18 +279,22 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         screenDimensions = tmp20.screenDimensions;
         const _Math = Math;
         const _Math2 = Math;
-        const absolute = Math.abs(tmp4.translationX / screenDimensions.width);
+        const absolute = Math.abs(value.translationX / screenDimensions.width);
         const _Math3 = Math;
-        const bound = Math.max(absolute, Math.abs(tmp4.translationY / screenDimensions.height));
+        const bound = Math.max(absolute, Math.abs(value.translationY / screenDimensions.height));
         let result2 = bound;
         if (isTransitionCanceled) {
           result2 = bound / 2;
         }
-        const RNScreensTurboModule = value(screenDimensions[0]).RNScreensTurboModule;
+        const RNScreensTurboModule = value(tmp19[0]).RNScreensTurboModule;
         RNScreensTurboModule.updateTransition(tmp20.stackTag, result2);
         const _requestAnimationFrame = requestAnimationFrame;
         const animationFrame = requestAnimationFrame(_computeFrame);
       }
+      const obj = value(screenDimensions[1]);
+      tmp = screenDimensions;
+      tmp19 = screenDimensions;
+      tmp22 = point;
     }
     return _computeFrame;
   }

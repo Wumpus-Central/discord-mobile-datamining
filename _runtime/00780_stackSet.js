@@ -1,6 +1,8 @@
 // === Module 780: stackSet ===
 
 // Module 780 (stackSet)
+import MapCache from "MapCache" /* 732 */;
+import getNative from "getNative" /* 747 */;
 import ListCache from "ListCache" /* 748 */;
 
 
@@ -10,9 +12,9 @@ export default function stackSet(arg0, arg1) {
   let obj = __data__;
   if (__data__ instanceof ListCache) {
     __data__ = __data__.__data__;
-    if (tmp(747)) {
+    if (getNative) {
       if (__data__.length >= 199) {
-        const tmp6 = new tmp(732)(__data__);
+        const tmp6 = new MapCache(__data__);
         self.__data__ = tmp6;
         obj = tmp6;
       }

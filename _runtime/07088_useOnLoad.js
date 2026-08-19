@@ -1,17 +1,17 @@
 // === Module 7088: useOnLoad ===
 
 // Module 7088 (useOnLoad)
-import closure_2 from "_slicedToArray" /* 7041 */;
+import _slicedToArray from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useEffect: c3, useMemo: c4, useRef: c5, useState: closure_6 } = noop);
 function useOnLoad(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = callback3(false);
   callback2(() => {
-    let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
     if (isFirstLayoutComplete) {
       isFirstLayoutComplete = !ref.current;
     }
@@ -22,13 +22,12 @@ function useOnLoad(arg0, arg1) {
   });
 }
 
-export const useOnListLoad = (getDataLength) => {
-  let _require = getDataLength;
-  let f79136 = arg1;
+export const useOnListLoad = (recyclerViewManager, onLoad) => {
+  let _require = recyclerViewManager;
+  let f79136 = onLoad;
   let callback = callback3(Date.now());
   [tmp3, closure_3] = callback(callback4(false), 2);
-  const dataLength = getDataLength.getDataLength();
-  const tmp = callback3;
+  const dataLength = recyclerViewManager.getDataLength();
   const tmp2 = callback(callback4(false), 2);
   const requestAnimationFrame = _require(f79136[2]).useUnmountAwareAnimationFrame().requestAnimationFrame;
   const items = [dataLength];
@@ -38,7 +37,7 @@ export const useOnListLoad = (getDataLength) => {
   if (typeof useOnLoad !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  _require = getDataLength;
+  _require = recyclerViewManager;
   f79136 = () => {
     closure_0 = Date.now() - ref.current;
     requestAnimationFrame(() => {
@@ -51,9 +50,9 @@ export const useOnListLoad = (getDataLength) => {
       closure_1_3(true);
     });
   };
-  callback = tmp(false);
+  callback = callback3(false);
   callback2(() => {
-    let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
     if (isFirstLayoutComplete) {
       isFirstLayoutComplete = !ref.current;
     }

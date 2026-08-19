@@ -2,10 +2,10 @@
 
 // Module 9705 (_isNativeReflectConstruct)
 import _asyncLoop from "_asyncLoop" /* 9699 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 const HashMD = require;
@@ -72,7 +72,6 @@ let items = [
         do {
           let _Math = Math;
           let bound = Math.min(blockLen - self.pos, length - num);
-          let tmp3 = num;
           if (bound !== blockLen) {
             let result = buffer.set(toBytesResult.subarray(num, num + bound), self.pos);
             self.pos = self.pos + bound;
@@ -84,8 +83,6 @@ let items = [
               tmp8 = sum;
             }
           } else {
-            let tmp4 = HashMD;
-            let tmp5 = dependencyMap;
             let tmp7 = num;
             tmp8 = num;
             if (blockLen <= length - num) {
@@ -210,6 +207,6 @@ let items = [
   }
 ];
 
-export const Chi = (arg0, arg1, arg2) => arg0 & arg1 ^ ~arg0 & arg2;
-export const Maj = (arg0, arg1, arg2) => arg0 & arg1 ^ arg0 & arg2 ^ arg1 & arg2;
+export const Chi = (E, F, G) => E & F ^ ~E & G;
+export const Maj = (A, B, C) => A & B ^ A & C ^ B & C;
 export const HashMD = _createClass(HashMD, items);

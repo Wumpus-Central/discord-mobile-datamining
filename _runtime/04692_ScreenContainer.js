@@ -4,11 +4,11 @@
 import noopDefault from "noop" /* 19 */;
 import isNativePlatformSupported from "isNativePlatformSupported" /* 4673 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4693 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["enabled", "hasTwoStates"];
 ({ Platform, View: c5 } = get_ActivityIndicator);
 noopDefault;

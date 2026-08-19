@@ -1,14 +1,14 @@
 // === Module 1687: ReanimatedFlatList ===
 
 // Module 1687 (ReanimatedFlatList)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
 import { useRef } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createAnimatedComponent from "createAnimatedComponent" /* 1688 */;
 import isReactRendering from "isReactRendering" /* 1793 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["itemLayoutAnimation", "skipEnteringExitingAnimations", "CellRendererComponentStyle"];
 let closure_7 = createAnimatedComponent.createAnimatedComponent(require("get ActivityIndicator").FlatList);
 
@@ -34,18 +34,18 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
     const items = [onLayout.style, ];
     let current1;
     if (table != null) {
-      current1 = obj2.current;
+      current1 = table.current;
     }
     if (typeof current1 === "function") {
       let currentResult;
-      if (obj2 != null) {
+      if (table != null) {
         obj = { index: null, item: null };
         ({ index: obj3[0], item: obj3[1] } = onLayout);
-        currentResult = obj2.current(obj);
+        currentResult = table.current(obj);
       }
       current = currentResult;
-    } else if (obj2 != null) {
-      current = obj2.current;
+    } else if (table != null) {
+      current = table.current;
     }
     items[1] = current;
     obj[2] = items;
@@ -54,7 +54,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
   }, []);
   const merged = Object.assign(tmp);
   obj.CellRendererComponent = memo;
-  const tmp7 = <closure_7 ref={arg1} />;
+  const tmp7 = <closure_7 ref={ref} />;
   let tmp5Result = tmp7;
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
     obj = { skipEntering: true, skipExiting: true, children: null };

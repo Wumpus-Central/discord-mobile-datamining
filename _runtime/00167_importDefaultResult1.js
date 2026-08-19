@@ -3,7 +3,7 @@
 // Module 167 (importDefaultResult1)
 import _createClassDefault from "_createClass" /* 42 */;
 import ReactNativeStartupTiming from "_classCallCheck" /* 41 */;
-import closure_1 from "_classPrivateFieldBase" /* 90 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 

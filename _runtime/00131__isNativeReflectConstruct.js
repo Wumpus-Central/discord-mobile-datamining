@@ -2,16 +2,16 @@
 
 // Module 131 (_isNativeReflectConstruct)
 import dispatchDefault from "dispatch" /* 132 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import importAllResult from "javaScriptFlagGetter" /* 27 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const ReadOnlyNode = arg1;
+const ReadOnlyNode = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,7 +31,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function getChildNodes(parentNode, arg1) {
+function getChildNodes(parentNode, fn) {
   const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(parentNode);
   if (null == nativeNodeReference) {
     return [];
@@ -39,9 +39,6 @@ function getChildNodes(parentNode, arg1) {
     const childNodes = importDefault(139).getChildNodes(nativeNodeReference);
     const items = [];
     for (const item10013 of childNodes) {
-      let tmp5 = ReadOnlyNode;
-      let tmp6 = dependencyMap;
-      let tmp7 = dependencyMap;
       let obj2 = ReadOnlyNode(136);
       let publicInstanceFromInstanceHandle = obj2.getPublicInstanceFromInstanceHandle(item10013);
       let tmp9 = publicInstanceFromInstanceHandle;
@@ -49,13 +46,11 @@ function getChildNodes(parentNode, arg1) {
       if (!tmp10) {
         let tmp11 = null != arg1;
         if (tmp11) {
-          let tmp12 = publicInstanceFromInstanceHandle;
           tmp11 = !arg1(tmp9);
         }
         tmp10 = tmp11;
       }
       if (!tmp10) {
-        let tmp13 = publicInstanceFromInstanceHandle;
         let arr = items.push(tmp9);
       }
       continue;
@@ -63,7 +58,6 @@ function getChildNodes(parentNode, arg1) {
     return items;
   }
   const obj = ReadOnlyNode(136);
-  const tmp = dependencyMap;
 }
 if (importAllResult.enableNativeEventTargetEventDispatching()) {
   let _Object = dispatchDefault;
@@ -86,7 +80,7 @@ class ReadOnlyNode {
     }
     tmp3Result = tmp3(self, constructResult);
     obj2 = require("getInstanceHandle");
-    setOwnerDocumentResult = obj2.setOwnerDocument(tmp3Result, arg1);
+    setOwnerDocumentResult = obj2.setOwnerDocument(tmp3Result, fn);
     obj3 = require("getInstanceHandle");
     setInstanceHandleResult = obj3.setInstanceHandle(tmp3Result, global);
     return tmp3Result;
@@ -220,17 +214,16 @@ let items = [
         const parentNode = importDefault(139).getParentNode(nativeNodeReference);
         let tmp6 = null;
         if (null != parentNode) {
-          let publicInstanceFromInstanceHandle = tmp(136).getPublicInstanceFromInstanceHandle(parentNode);
+          let publicInstanceFromInstanceHandle = ReadOnlyNode(136).getPublicInstanceFromInstanceHandle(parentNode);
           if (publicInstanceFromInstanceHandle == null) {
             publicInstanceFromInstanceHandle = null;
           }
           tmp6 = publicInstanceFromInstanceHandle;
-          const tmpResult = tmp(136);
+          const tmpResult = ReadOnlyNode(136);
         }
         return tmp6;
       }
       const obj = ReadOnlyNode(136);
-      tmp = ReadOnlyNode;
     }
   },
   {
@@ -345,7 +338,7 @@ setPlatformObject.setPlatformObject(importDefaultResultResult);
 class ReadOnlyNode {
   constructor(arg0, arg1) {
     obj = require("getInstanceHandle");
-    setOwnerDocumentResult = obj.setOwnerDocument(this, arg1);
+    setOwnerDocumentResult = obj.setOwnerDocument(this, fn);
     obj2 = require("getInstanceHandle");
     setInstanceHandleResult = obj2.setInstanceHandle(this, global);
     return;

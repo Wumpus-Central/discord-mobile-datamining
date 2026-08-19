@@ -11,8 +11,7 @@ arg5.count = function count(name, arg1, unit) {
   if (arg1 === undefined) {
     num = 1;
   }
-  let obj = _INTERNAL_captureSerializedMetric;
-  obj = { type: "counter", name, value: num, unit: null, attributes: null };
+  const obj = { type: "counter", name, value: num, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
     unit = unit.unit;
@@ -30,8 +29,7 @@ arg5.count = function count(name, arg1, unit) {
   const result = obj._INTERNAL_captureMetric(obj, { scope });
 };
 arg5.distribution = function distribution(name, value, unit) {
-  let obj = _INTERNAL_captureSerializedMetric;
-  obj = { type: "distribution", name, value, unit: null, attributes: null };
+  const obj = { type: "distribution", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
     unit = unit.unit;
@@ -49,8 +47,7 @@ arg5.distribution = function distribution(name, value, unit) {
   const result = obj._INTERNAL_captureMetric(obj, { scope });
 };
 arg5.gauge = function gauge(name, value, unit) {
-  let obj = _INTERNAL_captureSerializedMetric;
-  obj = { type: "gauge", name, value, unit: null, attributes: null };
+  const obj = { type: "gauge", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
     unit = unit.unit;

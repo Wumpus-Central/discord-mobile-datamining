@@ -2,59 +2,39 @@
 
 // Module 396 (ScrollViewStickyHeader)
 import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop2 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ cloneElement: c5, useCallback: closure_6, useEffect: error, useMemo: closure_8, useRef: c9, useState: c10 } = noop);
 let closure_12 = get_hairlineWidthDefault.create({ fill: { flex: 1 }, header: { zIndex: 10 } });
 
 export default function ScrollViewStickyHeader(ref) {
   let merged = Object.assign(ref, Object.create(null));
-  let inverted;
-  let scrollViewHeight;
-  let hiddenOnScroll;
-  let scrollAnimatedValue;
-  let first;
-  let callback;
-  let first1;
-  let callback2;
-  let first2;
   let callback3;
-  let first3;
-  closure_12 = undefined;
-  let first4;
-  closure_14 = undefined;
-  let first5;
-  closure_16 = undefined;
-  closure_17 = undefined;
-  closure_18 = undefined;
-  closure_19 = undefined;
-  closure_20 = undefined;
-  closure_21 = undefined;
-  inverted = merged.inverted;
-  scrollViewHeight = merged.scrollViewHeight;
-  hiddenOnScroll = merged.hiddenOnScroll;
-  scrollAnimatedValue = merged.scrollAnimatedValue;
+  let inverted = merged.inverted;
+  const scrollViewHeight = merged.scrollViewHeight;
+  const hiddenOnScroll = merged.hiddenOnScroll;
+  const scrollAnimatedValue = merged.scrollAnimatedValue;
   let tmp2 = hiddenOnScroll(callback3(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
+  const first = tmp2[0];
+  const callback = tmp2[1];
   const tmp4 = hiddenOnScroll(callback3(0), 2);
-  first1 = tmp4[0];
-  callback2 = tmp4[1];
+  const first1 = tmp4[0];
+  const callback2 = tmp4[1];
   const tmp6 = hiddenOnScroll(callback3(0), 2);
-  first2 = tmp6[0];
+  const first2 = tmp6[0];
   callback3 = tmp6[1];
   const tmp8 = hiddenOnScroll(callback3(null), 2);
-  first3 = tmp8[0];
+  const first3 = tmp8[0];
   closure_12 = tmp8[1];
   const tmp10 = hiddenOnScroll(callback3(merged.nextHeaderLayoutY), 2);
-  first4 = tmp10[0];
+  const first4 = tmp10[0];
   closure_14 = tmp10[1];
   const tmp12 = hiddenOnScroll(callback3(false), 2);
-  first5 = tmp12[0];
+  const first5 = tmp12[0];
   closure_16 = tmp12[1];
   let items = [scrollAnimatedValue, first2, first1, hiddenOnScroll];
   const tmp14 = callback((closure_0) => {
@@ -69,8 +49,8 @@ export default function ScrollViewStickyHeader(ref) {
   const tmp18 = callback2(() => {
     let diffClampResult = null;
     if (true === hiddenOnScroll) {
-      let obj = inverted(scrollViewHeight[5]);
-      obj = { extrapolateLeft: "clamp", inputRange: null, outputRange: null };
+      inverted(scrollViewHeight[5]);
+      let obj = { extrapolateLeft: "clamp", inputRange: null, outputRange: null };
       const items = [first1, first1 + 1];
       obj[1] = items;
       obj[2] = [0, 1];
@@ -115,7 +95,7 @@ export default function ScrollViewStickyHeader(ref) {
     }
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp2.current);
+      clearTimeout(ref2.current);
     }
     ref2.current = setTimeout(() => closure_1_12(closure_0), 15);
   }, []);
@@ -127,7 +107,7 @@ export default function ScrollViewStickyHeader(ref) {
     if (first) {
       if (true === inverted) {
         if (null != scrollViewHeight) {
-          const diff = first1 + first2 - tmp8;
+          const diff = first1 + first2 - scrollViewHeight;
           if (diff > 0) {
             items.push(diff);
             items1.push(0);
@@ -137,7 +117,7 @@ export default function ScrollViewStickyHeader(ref) {
             if (!first4) {
               num5 = 0;
             }
-            const diff1 = num5 - tmp28 - tmp8;
+            const diff1 = num5 - tmp28 - scrollViewHeight;
             if (diff1 > diff) {
               items.push(diff1, diff1 + 1);
               items1.push(diff1 - diff, diff1 - diff);
@@ -154,9 +134,9 @@ export default function ScrollViewStickyHeader(ref) {
         const diff2 = num - first2;
         if (diff2 >= first1) {
           items.push(diff2, diff2 + 1);
-          items1.push(diff2 - tmp24, diff2 - tmp24);
+          items1.push(diff2 - first1, diff2 - first1);
         } else {
-          items.push(tmp24 + 1);
+          items.push(first1 + 1);
           items1.push(1);
         }
       }
@@ -190,9 +170,7 @@ export default function ScrollViewStickyHeader(ref) {
   if (first5) {
     tmp24 = null;
     if (null != first3) {
-      let obj = { style: null };
-      obj = { transform: null };
-      obj = { translateY: null };
+      let obj = { translateY: null };
       obj[0] = first3;
       const items3 = [obj];
       obj[0] = items3;

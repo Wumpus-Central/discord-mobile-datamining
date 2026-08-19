@@ -5,12 +5,12 @@ import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 141 */;
 import setDefault from "set" /* 144 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const ReactNativeElement = arg1;
+const ReactNativeElement = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -53,7 +53,7 @@ class ReactNativeElement {
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.__nativeTag = global;
     tmp3Result.__internalInstanceHandle = importDefault;
-    tmp3Result.__viewConfig = arg1;
+    tmp3Result.__viewConfig = fn;
     return tmp3Result;
   }
 }
@@ -126,6 +126,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
+      obj = setDefault;
     }
   },
   {
@@ -142,6 +143,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
+      obj = setDefault;
     }
   },
   {
@@ -152,6 +154,7 @@ let items = [
         importDefault(139).measure(nativeElementReference, arg0);
         const obj2 = importDefault(139);
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
@@ -162,6 +165,7 @@ let items = [
         importDefault(139).measureAsyncOnUI(nativeElementReference, _measureCallback);
         const obj2 = importDefault(139);
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
@@ -172,16 +176,17 @@ let items = [
         importDefault(139).measureInWindow(nativeElementReference, arg0);
         const obj2 = importDefault(139);
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "measureLayout",
-    value: function measureLayout(nativeElementReference3) {
-      if (nativeElementReference3 instanceof ReactNativeElement) {
+    value: function measureLayout(c5) {
+      if (c5 instanceof ReactNativeElement) {
         const self = this;
         const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
         const obj = ReactNativeElement(136);
-        const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(nativeElementReference3);
+        const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(c5);
         if (tmp6) {
           let tmp7 = arg2;
           const obj3 = importDefault(139);
@@ -209,6 +214,8 @@ let items = [
         importDefault(139).setNativeProps(nativeElementReference, obj);
         const obj3 = importDefault(139);
       }
+      const obj2 = ReactNativeElement(136);
+      tmp4 = null != nativeElementReference && null != obj;
     }
   },
 
@@ -220,7 +227,7 @@ obj = {
     if (null == currentProps) {
       return null;
     } else {
-      const eventTypePropName = tmp(149).getEventTypePropName(arg0, arg1);
+      const eventTypePropName = ReactNativeElement(149).getEventTypePropName(arg0, arg1);
       if (null == eventTypePropName) {
         return null;
       } else {
@@ -230,10 +237,9 @@ obj = {
         }
         return tmp8;
       }
-      const tmpResult = tmp(149);
+      const tmpResult = ReactNativeElement(149);
     }
     const obj = ReactNativeElement(136);
-    tmp = ReactNativeElement;
   }
 };
 items[12] = obj;
@@ -245,7 +251,7 @@ class ReactNativeElement {
     setInstanceHandleResult = obj2.setInstanceHandle(this, importDefault);
     this.__nativeTag = global;
     this.__internalInstanceHandle = importDefault;
-    this.__viewConfig = arg1;
+    this.__viewConfig = fn;
     return;
   }
 }

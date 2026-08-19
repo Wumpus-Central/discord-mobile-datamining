@@ -1,12 +1,14 @@
 // === Module 1680: importDefaultResult1 ===
 
 // Module 1680 (importDefaultResult1)
+import t from "t" /* 1665 */;
 import WorkletsModule from "WorkletsModule" /* 1670 */;
+import ReanimatedTurboModule2 from "ReanimatedTurboModule" /* 1676 */;
 import _mod1681 from "module_1681" /* 1681 */;
 import getShadowNodeWrapperFromRef from "getShadowNodeWrapperFromRef" /* 1682 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 
 let DummyReanimatedModuleProxy = global;

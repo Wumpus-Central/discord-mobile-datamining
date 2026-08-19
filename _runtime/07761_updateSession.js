@@ -29,7 +29,6 @@ function updateSession(ipAddress) {
   let timestamp = obj.timestamp;
   if (!timestamp) {
     timestamp = dateTimestampInSeconds.timestampInSeconds();
-    const obj2 = dateTimestampInSeconds;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -99,7 +98,6 @@ function updateSession(ipAddress) {
       let sid = obj.sid;
     } else {
       sid = addContextToFrame.uuid4();
-      const obj3 = addContextToFrame;
     }
     ipAddress.sid = sid;
   }
@@ -131,7 +129,7 @@ export const makeSession = function makeSession(arg0) {
     errors: 0,
     ignoreDuration: false,
     toJSON() {
-      obj = obj(closure_1_1[5]);
+      obj = obj(dependencyMap[5]);
       obj = { sid: "" + obj.sid, init: obj.init, started: new Date(1000 * obj.started).toISOString(), timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
       const date = new Date(1000 * obj.started);
       obj[3] = new Date(1000 * obj.timestamp).toISOString();

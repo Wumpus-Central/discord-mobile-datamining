@@ -1,7 +1,7 @@
 // === Module 12251: default_1 ===
 
 // Module 12251 (default_1)
-import mergeDefs from "mergeDefs" /* 12252 */;
+import mergeDefs2 from "mergeDefs" /* 12252 */;
 
 let fn = this;
 if (this) {
@@ -19,9 +19,9 @@ if (!fn) {
     return tmp;
   };
 }
-let closure_0 = fn(mergeDefs);
+const mergeDefs = fn(mergeDefs2);
 
 export default function default_1() {
-  return closure_0.default();
+  return mergeDefs.default();
 };
 export default exports.default;

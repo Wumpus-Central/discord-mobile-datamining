@@ -12,16 +12,16 @@ export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
   }, []);
   const items = [mode];
   useEffect(() => {
-    const jsValue = mode(closure_1_1[2]).ReducedMotionManager.jsValue;
-    if (mode(closure_1_1[3]).ReduceMotion.System === jsValue) {
-      const ReducedMotionManager3 = tmp(tmp2[2]).ReducedMotionManager;
-      ReducedMotionManager3.setEnabled(tmp(tmp2[2]).isReducedMotionEnabledInSystem());
-      const tmpResult = tmp(tmp2[2]);
-    } else if (tmp(tmp2[3]).ReduceMotion.Always === tmp3) {
-      const ReducedMotionManager2 = tmp(tmp2[2]).ReducedMotionManager;
+    const jsValue = mode(dependencyMap[2]).ReducedMotionManager.jsValue;
+    if (mode(dependencyMap[3]).ReduceMotion.System === jsValue) {
+      const ReducedMotionManager3 = mode(dependencyMap[2]).ReducedMotionManager;
+      ReducedMotionManager3.setEnabled(mode(dependencyMap[2]).isReducedMotionEnabledInSystem());
+      const tmpResult = mode(dependencyMap[2]);
+    } else if (mode(dependencyMap[3]).ReduceMotion.Always === tmp3) {
+      const ReducedMotionManager2 = mode(dependencyMap[2]).ReducedMotionManager;
       ReducedMotionManager2.setEnabled(true);
-    } else if (tmp(tmp2[3]).ReduceMotion.Never === tmp3) {
-      let ReducedMotionManager = tmp(tmp2[2]).ReducedMotionManager;
+    } else if (mode(dependencyMap[3]).ReduceMotion.Never === tmp3) {
+      let ReducedMotionManager = mode(dependencyMap[2]).ReducedMotionManager;
       ReducedMotionManager.setEnabled(false);
     }
     return () => {

@@ -1,10 +1,10 @@
 // === Module 4148: useRiveProperty ===
 
 // Module 4148 (useRiveProperty)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
 export const useRiveProperty = function useRiveProperty(instance, FillColor, f29193) {
@@ -50,8 +50,8 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   const items3 = [disposableMemo];
   disposableMemo(() => {
     if (disposableMemo) {
-      callback2(iter.value);
-      closure_0 = iter.addListener((arg0) => {
+      callback2(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
         callback2(arg0);
       });
       return () => {

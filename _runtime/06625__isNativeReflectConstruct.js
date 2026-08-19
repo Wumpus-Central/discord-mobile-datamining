@@ -6,13 +6,13 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import extractFeFloodDefault from "extractFeFlood" /* 6609 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6610 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6626 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const FeFlood = arg1;
+const FeFlood = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -58,12 +58,6 @@ let obj = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
     const merged = Object.assign(self(6609).extractFilter(this.props));
     const merged1 = Object.assign(extractFeFloodDefault(this.props));
     return <tmp ref={function ref(arg0) {

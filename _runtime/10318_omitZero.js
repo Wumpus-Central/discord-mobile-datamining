@@ -27,7 +27,6 @@ function computeOffsetIfDataChanged(arg0) {
     let parsed = Number.parseInt(String(num3));
     let tmp4 = omitZero;
     let result2 = result;
-    const tmp8 = omitZero;
   } else {
     result2 = (absolute - size) / size;
     tmp4 = omitZero;

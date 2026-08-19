@@ -7,12 +7,11 @@ import extractLengthListDefault from "extractLengthList" /* 6592 */;
 import { Children } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function extractFont(propsAndStylesResult) {
   ({ fontFamily, fontFeatureSettings, font } = propsAndStylesResult);
   ({ fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, textAnchor, textDecoration, letterSpacing, wordSpacing, kerning, fontVariantLigatures, fontVariationSettings } = propsAndStylesResult);
-  let obj = pickNotNil;
-  obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
+  let obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
   let replaced = null;
   if (fontFamily) {
     const str = fontFamily.split(closure_9)[0];
@@ -37,10 +36,10 @@ function extractFont(propsAndStylesResult) {
   } else {
     const _Object = Object;
     const call = hasOwnProperty.call;
-    if (!(typeof call === "unknown" ? hasOwnProperty(font) : call(closure_10, font))) {
+    if (!(typeof call === "unknown" ? hasOwnProperty(font) : call(dependencyMap, font))) {
       fontFeatureSettings = regex.exec(font);
       if (!fontFeatureSettings) {
-        tmp23[font] = null;
+        dependencyMap[font] = null;
       }
     }
     const match = /bold/.exec(fontFeatureSettings[1]);
@@ -68,9 +67,7 @@ function extractFont(propsAndStylesResult) {
       const str9 = str6.split(closure_9)[0].replace(closure_7, "");
     }
     obj1[3] = replaced1;
-    closure_10[font] = obj1;
-    const obj3 = /bold/;
-    const obj4 = /italic/;
+    dependencyMap[font] = obj1;
   }
 }
 function getChild(str) {
@@ -96,12 +93,11 @@ export default function extractText(children) {
   if (typeof children !== "string") {
     if (typeof children !== "number") {
       if (Children.count(children) > 1) {
-        let mapped = arr.map(children, getChild);
+        let mapped = Children.map(children, getChild);
       } else {
         const _Array = Array;
         mapped = children;
       }
-      arr = Children;
     }
     let StringResult = null;
     if (null === mapped) {

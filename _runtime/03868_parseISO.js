@@ -29,7 +29,7 @@ let closure_8 = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 export default function parseISO(claimedAt) {
   let num = 1;
-  let defaultResult = requiredArgs.default(1, arguments);
+  requiredArgs.default(1, arguments);
   let additionalDigits;
   if (null != arg1) {
     additionalDigits = arg1.additionalDigits;
@@ -45,44 +45,38 @@ export default function parseISO(claimedAt) {
   if (2 !== defaultResult1) {
     if (num !== defaultResult1) {
       if (0 !== defaultResult1) {
-        defaultResult = globalThis;
         const _RangeError = RangeError;
-        defaultResult = new.target;
-        defaultResult = new.target;
-        defaultResult = new RangeError("additionalDigits must be 0, 1 or 2");
-        throw defaultResult;
+        const rangeError = new RangeError("additionalDigits must be 0, 1 or 2");
+        throw rangeError;
       }
     }
   }
   if (typeof claimedAt !== "string") {
-    defaultResult = globalThis;
     const _Object = Object;
     const call = toString.call;
     if ("[object String]" !== (typeof call === "unknown" ? toString() : call(claimedAt))) {
       const _Date9 = Date;
-      defaultResult = new.target;
-      defaultResult = new.target;
-      defaultResult = new Date(NaN);
-      return defaultResult;
+      const date = new Date(NaN);
+      return date;
     }
   }
   let obj = {};
   const parts = claimedAt.split(dateTimeDelimiter.dateTimeDelimiter);
   if (parts.length <= 2) {
-    defaultResult = parts[0];
+    const first = parts[0];
     if (obj9.test(parts[0])) {
-      let str2 = defaultResult;
+      let str2 = first;
     } else {
-      obj.date = defaultResult;
+      obj.date = first;
       str2 = parts[1];
-      const timeZoneDelimiter = tmp4.timeZoneDelimiter;
+      const timeZoneDelimiter = dateTimeDelimiter.timeZoneDelimiter;
       if (timeZoneDelimiter.test(obj.date)) {
-        obj.date = claimedAt.split(tmp4.timeZoneDelimiter)[0];
+        obj.date = claimedAt.split(dateTimeDelimiter.timeZoneDelimiter)[0];
         str2 = claimedAt.substr(obj.date.length, claimedAt.length);
       }
     }
     if (str2) {
-      const timezone = tmp4.timezone;
+      const timezone = dateTimeDelimiter.timezone;
       const match = timezone.exec(str2);
       if (match) {
         obj.time = str2.replace(match[1], "");
@@ -129,7 +123,6 @@ export default function parseISO(claimedAt) {
             }
             if (24 === num29) {
               let tmp63 = 0 === num30 && 0 === num31;
-              const tmp64 = 0 === num30 && 0 === num31;
             } else {
               tmp63 = num31 >= 0;
               if (tmp63) {
@@ -158,27 +151,25 @@ export default function parseISO(claimedAt) {
           num26 = num28;
           if (isNaN(num28)) {
             const _Date7 = Date;
-            const date = new Date(NaN);
-            return date;
+            const date1 = new Date(NaN);
+            return date1;
           }
-          const str8 = obj.time;
         }
         if (obj.timezone) {
           let num38 = 0;
           if ("Z" !== obj.timezone) {
-            defaultResult = closure_7;
-            defaultResult = str18.match(closure_7);
+            const match2 = str18.match(closure_7);
             num38 = 0;
-            if (defaultResult) {
-              if ("+" === defaultResult[1]) {
+            if (match2) {
+              if ("+" === match2[1]) {
                 num = -1;
               }
               const _parseInt3 = parseInt;
-              let num39 = defaultResult[3];
-              const parsed = parseInt(defaultResult[2]);
+              let num39 = match2[3];
+              const parsed = parseInt(match2[2]);
               if (num39) {
                 const _parseInt4 = parseInt;
-                num39 = parseInt(defaultResult[3]);
+                num39 = parseInt(match2[3]);
               }
               if (!num39) {
                 num39 = 0;
@@ -205,50 +196,48 @@ export default function parseISO(claimedAt) {
           }
         } else {
           const _Date4 = Date;
-          const date1 = new Date(time + num26);
+          const date2 = new Date(time + num26);
           const _Date5 = Date;
-          const date2 = new Date(0);
-          const uTCFullYear = date1.getUTCFullYear();
-          const uTCMonth = date1.getUTCMonth();
-          date2.setFullYear(uTCFullYear, uTCMonth, date1.getUTCDate());
-          const uTCHours = date1.getUTCHours();
-          const uTCMinutes = date1.getUTCMinutes();
-          const uTCSeconds = date1.getUTCSeconds();
-          date2.setHours(uTCHours, uTCMinutes, uTCSeconds, date1.getUTCMilliseconds());
-          return date2;
+          const date3 = new Date(0);
+          const uTCFullYear = date2.getUTCFullYear();
+          const uTCMonth = date2.getUTCMonth();
+          date3.setFullYear(uTCFullYear, uTCMonth, date2.getUTCDate());
+          const uTCHours = date2.getUTCHours();
+          const uTCMinutes = date2.getUTCMinutes();
+          const uTCSeconds = date2.getUTCSeconds();
+          date3.setHours(uTCHours, uTCMinutes, uTCSeconds, date2.getUTCMilliseconds());
+          return date3;
         }
       }
     }
     const _Date8 = Date;
-    defaultResult = new.target;
-    defaultResult = new.target;
-    defaultResult = new Date(NaN);
-    return defaultResult;
+    const date4 = new Date(NaN);
+    return date4;
   } else {
-    let date3 = globalThis;
+    let date5 = globalThis;
     const _RegExp = RegExp;
     let num4 = 4;
     const regExp = new RegExp("^(?:(\\d{4}|[+-]\\d{" + (4 + defaultResult1) + "})|(\\d{2}|[+-]\\d{" + (2 + defaultResult1) + "})$)");
-    const match2 = str4.match(regExp);
-    if (match2) {
+    const match3 = str4.match(regExp);
+    if (match3) {
       let parsed1 = null;
-      if (match2[1]) {
+      if (match3[1]) {
         const _parseInt = parseInt;
-        parsed1 = parseInt(match2[1]);
+        parsed1 = parseInt(match3[1]);
       }
       let parsed2 = null;
-      if (match2[2]) {
+      if (match3[2]) {
         const _parseInt2 = parseInt;
-        parsed2 = parseInt(match2[2]);
+        parsed2 = parseInt(match3[2]);
       }
       if (null !== parsed2) {
         parsed1 = 100 * parsed2;
       }
       obj = { year: null, restDateString: null };
       obj[0] = parsed1;
-      let arr2 = match2[1];
+      let arr2 = match3[1];
       if (!arr2) {
-        arr2 = match2[2];
+        arr2 = match3[2];
       }
       obj[1] = str4.slice(arr2.length);
     } else {
@@ -257,37 +246,36 @@ export default function parseISO(claimedAt) {
     ({ restDateString, year } = obj);
     if (null === year) {
       const _Date3 = Date;
-      let match3 = new.target;
-      date3 = new Date(NaN);
-      let date4 = date3;
+      let match4 = new.target;
+      date5 = new Date(NaN);
+      let date6 = date5;
     } else {
-      defaultResult = closure_5;
-      match3 = restDateString.match(closure_5);
-      if (!match3) {
+      match4 = restDateString.match(closure_5);
+      if (!match4) {
         const _Date = Date;
-        date4 = new Date(NaN);
+        date6 = new Date(NaN);
       }
     }
     let parsed3 = num;
-    if (match3[1]) {
-      parsed3 = date3.parseInt(tmp17);
+    if (match4[1]) {
+      parsed3 = date5.parseInt(tmp17);
     }
     let parsed4 = num;
-    if (match3[2]) {
-      parsed4 = date3.parseInt(tmp19);
+    if (match4[2]) {
+      parsed4 = date5.parseInt(tmp19);
     }
     const diff = parsed4 - num;
     let parsed5 = num;
-    if (match3[3]) {
-      parsed5 = date3.parseInt(tmp22);
+    if (match4[3]) {
+      parsed5 = date5.parseInt(tmp22);
     }
     let parsed6 = num;
-    if (match3[4]) {
-      parsed6 = date3.parseInt(tmp24);
+    if (match4[4]) {
+      parsed6 = date5.parseInt(tmp24);
     }
     let parsed7 = num;
-    if (match3[5]) {
-      parsed7 = date3.parseInt(tmp26);
+    if (match4[5]) {
+      parsed7 = date5.parseInt(tmp26);
     }
     const diff1 = parsed7 - num;
     if (!tmp16) {
@@ -301,21 +289,21 @@ export default function parseISO(claimedAt) {
       if (tmp48) {
         tmp48 = diff1 <= 6;
       }
-      let _Date2 = date3.Date;
+      let _Date2 = date5.Date;
       if (tmp48) {
         _Date2 = new _Date2(0);
         _Date2.setUTCFullYear(year, 0, num4);
         num4 = parsed6 - num;
         const diff2 = 7 * num4 + diff1 + num - (_Date2.getUTCDay() || 7);
         _Date2.setUTCDate(_Date2.getUTCDate() + diff2);
-        match3 = _Date2;
+        match4 = _Date2;
         const tmp54 = _Date2.getUTCDay() || 7;
       } else {
-        match3 = new _Date2(NaN);
+        match4 = new _Date2(NaN);
       }
-      date4 = match3;
+      date6 = match4;
     } else {
-      const date5 = new date3.Date(0);
+      const date7 = new date5.Date(0);
       let tmp31 = diff >= 0;
       if (0 <= diff) {
         tmp31 = diff <= 11;
@@ -364,15 +352,15 @@ export default function parseISO(claimedAt) {
           tmp38 = parsed3 <= num15;
         }
         if (tmp38) {
-          const _Math = date3.Math;
-          date5.setUTCFullYear(year, diff, _Math.max(parsed3, parsed5));
-          match3 = date5;
-          date4 = match3;
+          const _Math = date5.Math;
+          date7.setUTCFullYear(year, diff, _Math.max(parsed3, parsed5));
+          match4 = date7;
+          date6 = match4;
         }
       }
-      match3 = new date3.Date(NaN);
+      match4 = new date5.Date(NaN);
     }
-    tmp16 = !match3[4];
+    tmp16 = !match4[4];
   }
 };
 export default exports.default;

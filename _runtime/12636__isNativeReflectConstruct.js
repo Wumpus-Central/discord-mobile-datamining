@@ -2,17 +2,16 @@
 
 // Module 12636 (_isNativeReflectConstruct)
 import noopDefault from "noop" /* 19 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_createClass" /* 42 */;
 import importDefaultResult2 from "_inherits" /* 98 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const DeepLinking = arg1;
-let closure_1 = dependencyMap;
+const DeepLinking = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,7 +32,7 @@ function _isNativeReflectConstruct() {
   }
 }
 const re8 = /.*?:\/\//g;
-closure_1 = undefined;
+let closure_1;
 class DeepLinking {
   constructor() {
     self = this;

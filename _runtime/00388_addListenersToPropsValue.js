@@ -3,10 +3,10 @@
 // Module 388 (addListenersToPropsValue)
 import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 356 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function addListenersToPropsValue(addListener, arr) {
   if (addListener instanceof _isNativeReflectConstructDefault) {
     const obj = { propValue: null, listenerId: null };
@@ -14,13 +14,12 @@ function addListenersToPropsValue(addListener, arr) {
     obj[1] = addListener.addListener(() => {
 
     });
-    arr.push(obj);
+    arr = arr.push(obj);
   } else {
     const _Array = Array;
     if (Array.isArray(addListener)) {
       const tmp4 = addListener[Symbol.iterator]();
       while (tmp4 !== undefined) {
-        let tmp8 = addListenersToPropsValue;
         let tmp9 = addListenersToPropsValue(tmp6, arr);
         continue;
       }
@@ -29,8 +28,6 @@ function addListenersToPropsValue(addListener, arr) {
       if (addListener instanceof Object) {
         (function addAnimatedValuesListenersToProps(addListener, arr) {
           for (const key10005 in arg0) {
-            let tmp = key10005;
-            let tmp2 = callback;
             let tmp3 = callback(arg0[key10005], arg1);
             continue;
           }
@@ -47,12 +44,11 @@ export default function createAnimatedPropsHook(arg0) {
   let obj = _require(389);
   importAll = javaScriptFlagGetterAll.shouldUseSetNativePropsInFabric();
   return function useAnimatedProps(fn, items) {
-    let obj = fn;
     let callback2 = closure_1_4(closure_1_9((arg0) => arg0 + 1, 0), 2)[1];
     closure_2 = closure_1_10(null);
     closure_3 = closure_1_10(null);
-    closure_4 = closure_1_6(callback(closure_1_3[4]).RootTagContext);
-    obj = callback2(() => new callback(closure_2_3[5])(obj, () => {
+    closure_4 = closure_1_6(callback(dependencyMap[4]).RootTagContext);
+    let obj = callback2(() => new callback(dependencyMap[5])(obj, () => {
       const current = ref.current;
       let currentResult;
       if (current != null) {
@@ -61,13 +57,13 @@ export default function createAnimatedPropsHook(arg0) {
       return currentResult;
     }, obj, closure_4), fn);
     closure_1_7(() => {
-      if (!callback(closure_2_3[6]).shouldSignalBatch) {
-        const API = tmp(tmp2[6]).API;
+      if (!callback(dependencyMap[6]).shouldSignalBatch) {
+        const API = callback(dependencyMap[6]).API;
         API.flushQueue();
       }
       closure_0 = null;
       if (obj.__isNative) {
-        const nativeEventEmitter = tmp(tmp2[6]).nativeEventEmitter;
+        const nativeEventEmitter = callback(dependencyMap[6]).nativeEventEmitter;
         closure_0 = nativeEventEmitter.addListener("onUserDrivenAnimationEnded", (arg0) => {
           closure_5.update();
         });
@@ -78,7 +74,6 @@ export default function createAnimatedPropsHook(arg0) {
         }
       };
     });
-    callback2 = undefined;
     callback2 = closure_1_10(false);
     items = [obj];
     closure_1_8(() => {
@@ -96,16 +91,16 @@ export default function createAnimatedPropsHook(arg0) {
     }, items);
     const items1 = [obj];
     obj = {};
-    const tmp3 = closure_1_5((arg0) => {
-      closure_0 = arg0;
-      obj.setNativeView(arg0);
+    const tmp3 = closure_1_5((getScrollableNode) => {
+      closure_0 = getScrollableNode;
+      obj.setNativeView(getScrollableNode);
       items.current = () => {
-        let isPublicInstanceResult = callback(closure_3_3[9]).isPublicInstance(callback);
+        let isPublicInstanceResult = getScrollableNode(dependencyMap[9]).isPublicInstance(getScrollableNode);
         if (!isPublicInstanceResult) {
-          let tmpResult = tmp(tmp2[9]);
+          let tmpResult = getScrollableNode(dependencyMap[9]);
           let nativeScrollRef;
-          if (obj != null) {
-            const getNativeScrollRef = obj.getNativeScrollRef;
+          if (getScrollableNode != null) {
+            const getNativeScrollRef = getScrollableNode.getNativeScrollRef;
             if (getNativeScrollRef != null) {
               nativeScrollRef = getNativeScrollRef();
             }
@@ -113,10 +108,10 @@ export default function createAnimatedPropsHook(arg0) {
           isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
         }
         if (!isPublicInstanceResult) {
-          tmpResult = tmp(tmp2[9]);
+          tmpResult = getScrollableNode(dependencyMap[9]);
           let nativeScrollRef2;
-          if (obj != null) {
-            const getScrollResponder = obj.getScrollResponder;
+          if (getScrollableNode != null) {
+            const getScrollResponder = getScrollableNode.getScrollResponder;
             if (getScrollResponder != null) {
               const scrollResponder = getScrollResponder();
               if (scrollResponder != null) {
@@ -129,27 +124,27 @@ export default function createAnimatedPropsHook(arg0) {
           }
           isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef2);
         }
-        if (closure_1_5.__isNative) {
+        if (obj.__isNative) {
           if (isPublicInstanceResult) {
             isPublicInstanceResult = !obj6.cxxNativeAnimatedEnabled();
           }
           if (isPublicInstanceResult) {
-            callback2();
+            callback();
           }
-          obj6 = items(tmp2[3]);
+          obj6 = items(dependencyMap[3]);
         } else {
-          if (typeof obj === "object") {
+          if (typeof getScrollableNode === "object") {
             let setNativeProps;
-            if (obj != null) {
-              setNativeProps = obj.setNativeProps;
+            if (getScrollableNode != null) {
+              setNativeProps = getScrollableNode.setNativeProps;
             }
             if (typeof setNativeProps === "function") {
               if (isPublicInstanceResult) {
                 if (items) {
-                  obj.setNativeProps(obj5.__getAnimatedValue());
+                  getScrollableNode.setNativeProps(obj.__getAnimatedValue());
                   if (null != result.current) {
                     const _clearTimeout = clearTimeout;
-                    clearTimeout(tmp13.current);
+                    clearTimeout(result.current);
                   }
                   const _setTimeout = setTimeout;
                   result.current = setTimeout(() => {
@@ -157,50 +152,47 @@ export default function createAnimatedPropsHook(arg0) {
                     callback();
                   }, 48);
                 } else {
-                  return callback2();
+                  return callback();
                 }
               } else {
-                return obj.setNativeProps(obj5.__getAnimatedValue());
+                return getScrollableNode.setNativeProps(obj.__getAnimatedValue());
               }
             }
           }
-          return callback2();
+          return callback();
         }
+        const obj2 = getScrollableNode(dependencyMap[9]);
       };
-      const tmp2 = (function getEventTarget(obj) {
-        let scrollableNode = obj;
-        if (typeof obj === "object") {
-          let getScrollableNode;
-          if (obj != null) {
-            getScrollableNode = obj.getScrollableNode;
+      let tmp2 = (function getEventTarget(getScrollableNode) {
+        let scrollableNode = getScrollableNode;
+        if (typeof getScrollableNode === "object") {
+          getScrollableNode = undefined;
+          if (getScrollableNode != null) {
+            getScrollableNode = getScrollableNode.getScrollableNode;
           }
-          scrollableNode = obj;
+          scrollableNode = getScrollableNode;
           if (typeof getScrollableNode === "function") {
-            scrollableNode = obj.getScrollableNode();
+            scrollableNode = getScrollableNode.getScrollableNode();
           }
         }
         return scrollableNode;
-      })(arg0);
+      })(getScrollableNode);
       closure_1 = tmp2;
       items = [];
       const result = obj.__getNativeAnimatedEventTuples();
       closure_3 = result;
       while (tmp4 !== undefined) {
-        let tmp6 = closure_2_4;
         let tmp7 = closure_2_4(tmp5, 2);
         obj = tmp7[1];
         let __attachResult = obj.__attach(tmp2, tmp7[0]);
-        let tmp9 = closure_2_11;
-        let tmp10 = closure_2_11(obj, items);
+        let tmp10 = addListenersToPropsValue(obj, items);
         continue;
       }
       return () => {
         items.current = null;
         while (tmp2 !== undefined) {
-          let tmp4 = closure_3_4;
           let tmp5 = closure_3_4(tmp3, 2);
           obj = tmp5[1];
-          let tmp6 = closure_1;
           let __detachResult = obj.__detach(closure_1, tmp5[0]);
           continue;
         }
@@ -209,22 +201,23 @@ export default function createAnimatedPropsHook(arg0) {
           let removeListenerResult = propValue.removeListener(item10022.listenerId);
           continue;
         }
+        tmp2 = dependencyMap[Symbol.iterator]();
       };
     }, items1);
     const merged = Object.assign(obj.__getValueWithStaticProps(fn));
     obj.collapsable = false;
     const items2 = [
       obj,
-      callback2(closure_1_3[7])(closure_1_5((arg0) => {
-        closure_0 = arg0;
-        obj.setNativeView(arg0);
+      callback2(dependencyMap[7])(closure_1_5((getScrollableNode) => {
+        closure_0 = getScrollableNode;
+        obj.setNativeView(getScrollableNode);
         items.current = () => {
-          let isPublicInstanceResult = callback(closure_3_3[9]).isPublicInstance(callback);
+          let isPublicInstanceResult = getScrollableNode(dependencyMap[9]).isPublicInstance(getScrollableNode);
           if (!isPublicInstanceResult) {
-            let tmpResult = tmp(tmp2[9]);
+            let tmpResult = getScrollableNode(dependencyMap[9]);
             let nativeScrollRef;
-            if (obj != null) {
-              const getNativeScrollRef = obj.getNativeScrollRef;
+            if (getScrollableNode != null) {
+              const getNativeScrollRef = getScrollableNode.getNativeScrollRef;
               if (getNativeScrollRef != null) {
                 nativeScrollRef = getNativeScrollRef();
               }
@@ -232,10 +225,10 @@ export default function createAnimatedPropsHook(arg0) {
             isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
           }
           if (!isPublicInstanceResult) {
-            tmpResult = tmp(tmp2[9]);
+            tmpResult = getScrollableNode(dependencyMap[9]);
             let nativeScrollRef2;
-            if (obj != null) {
-              const getScrollResponder = obj.getScrollResponder;
+            if (getScrollableNode != null) {
+              const getScrollResponder = getScrollableNode.getScrollResponder;
               if (getScrollResponder != null) {
                 const scrollResponder = getScrollResponder();
                 if (scrollResponder != null) {
@@ -248,27 +241,27 @@ export default function createAnimatedPropsHook(arg0) {
             }
             isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef2);
           }
-          if (closure_1_5.__isNative) {
+          if (obj.__isNative) {
             if (isPublicInstanceResult) {
               isPublicInstanceResult = !obj6.cxxNativeAnimatedEnabled();
             }
             if (isPublicInstanceResult) {
-              callback2();
+              callback();
             }
-            obj6 = items(tmp2[3]);
+            obj6 = items(dependencyMap[3]);
           } else {
-            if (typeof obj === "object") {
+            if (typeof getScrollableNode === "object") {
               let setNativeProps;
-              if (obj != null) {
-                setNativeProps = obj.setNativeProps;
+              if (getScrollableNode != null) {
+                setNativeProps = getScrollableNode.setNativeProps;
               }
               if (typeof setNativeProps === "function") {
                 if (isPublicInstanceResult) {
                   if (items) {
-                    obj.setNativeProps(obj5.__getAnimatedValue());
+                    getScrollableNode.setNativeProps(obj.__getAnimatedValue());
                     if (null != result.current) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(tmp13.current);
+                      clearTimeout(result.current);
                     }
                     const _setTimeout = setTimeout;
                     result.current = setTimeout(() => {
@@ -276,50 +269,47 @@ export default function createAnimatedPropsHook(arg0) {
                       callback();
                     }, 48);
                   } else {
-                    return callback2();
+                    return callback();
                   }
                 } else {
-                  return obj.setNativeProps(obj5.__getAnimatedValue());
+                  return getScrollableNode.setNativeProps(obj.__getAnimatedValue());
                 }
               }
             }
-            return callback2();
+            return callback();
           }
+          const obj2 = getScrollableNode(dependencyMap[9]);
         };
-        const tmp2 = (function getEventTarget(obj) {
-          let scrollableNode = obj;
-          if (typeof obj === "object") {
-            let getScrollableNode;
-            if (obj != null) {
-              getScrollableNode = obj.getScrollableNode;
+        let tmp2 = (function getEventTarget(getScrollableNode) {
+          let scrollableNode = getScrollableNode;
+          if (typeof getScrollableNode === "object") {
+            getScrollableNode = undefined;
+            if (getScrollableNode != null) {
+              getScrollableNode = getScrollableNode.getScrollableNode;
             }
-            scrollableNode = obj;
+            scrollableNode = getScrollableNode;
             if (typeof getScrollableNode === "function") {
-              scrollableNode = obj.getScrollableNode();
+              scrollableNode = getScrollableNode.getScrollableNode();
             }
           }
           return scrollableNode;
-        })(arg0);
+        })(getScrollableNode);
         closure_1 = tmp2;
         items = [];
         const result = obj.__getNativeAnimatedEventTuples();
         closure_3 = result;
         while (tmp4 !== undefined) {
-          let tmp6 = closure_2_4;
           let tmp7 = closure_2_4(tmp5, 2);
           obj = tmp7[1];
           let __attachResult = obj.__attach(tmp2, tmp7[0]);
-          let tmp9 = closure_2_11;
-          let tmp10 = closure_2_11(obj, items);
+          let tmp10 = addListenersToPropsValue(obj, items);
           continue;
         }
         return () => {
           items.current = null;
           while (tmp2 !== undefined) {
-            let tmp4 = closure_3_4;
             let tmp5 = closure_3_4(tmp3, 2);
             obj = tmp5[1];
-            let tmp6 = closure_1;
             let __detachResult = obj.__detach(closure_1, tmp5[0]);
             continue;
           }
@@ -328,6 +318,7 @@ export default function createAnimatedPropsHook(arg0) {
             let removeListenerResult = propValue.removeListener(item10022.listenerId);
             continue;
           }
+          tmp2 = dependencyMap[Symbol.iterator]();
         };
       }, items1))
     ];

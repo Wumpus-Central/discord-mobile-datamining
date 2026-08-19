@@ -2,7 +2,7 @@
 
 // Module 6544 (useGestureHandlerRef)
 import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6376 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

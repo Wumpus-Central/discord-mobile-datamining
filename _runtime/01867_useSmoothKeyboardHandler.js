@@ -14,7 +14,7 @@ let closure_6 = { code: "function pnpm_useSmoothKeyboardHandlerTs3(e){const{IS_A
 let closure_7 = { code: "function pnpm_useSmoothKeyboardHandlerTs4(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,handler}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){var _handler$onMove,_handler;(_handler$onMove=(_handler=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler,e);}}" };
 let closure_8 = { code: "function pnpm_useSmoothKeyboardHandlerTs5(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,handler}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){var _handler$onEnd,_handler;(_handler$onEnd=(_handler=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler,e);}}" };
 
-export const useSmoothKeyboardHandler = (handler, items1) => {
+export const useSmoothKeyboardHandler = (handler, items11) => {
   const _require = handler;
   obj = _require(sharedValue[1]);
   sharedValue = obj.useSharedValue(-1);
@@ -64,10 +64,10 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
   I.__closure = { handler, height: sharedValue1, persistedHeight: sharedValue2 };
   I.__workletHash = 1186520959152;
   I.__initData = closure_5;
-  let tmp9 = items1;
-  if (items1) {
+  let tmp9 = items11;
+  if (items11) {
     const items = [];
-    HermesBuiltin.arraySpread(items1, 0);
+    HermesBuiltin.arraySpread(items11, 0);
     tmp9 = items;
   }
   const animatedReaction = _require(sharedValue[1]).useAnimatedReaction(fn, I, tmp9);
@@ -100,7 +100,7 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
     if (onStart2 != null) {
       onStart2Result = {};
       const merged = Object.assign(height);
-      if (tmp) {
+      if (sharedValue1) {
         let duration = height.duration;
       } else {
         duration = sharedValue2.duration;
@@ -148,5 +148,5 @@ export const useSmoothKeyboardHandler = (handler, items1) => {
   O.__workletHash = 9348108811600;
   O.__initData = closure_8;
   obj[2] = O;
-  _require(sharedValue[2]).useKeyboardHandler(obj, items1);
+  _require(sharedValue[2]).useKeyboardHandler(obj, items11);
 };

@@ -2,12 +2,12 @@
 
 // Module 1738 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const ComplexAnimationBuilder = arg1;
+const ComplexAnimationBuilder = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -144,8 +144,8 @@ let items = [
         }
       }
       const items = [{ variableName: "damping", value: dampingV }, { variableName: "dampingRatio", value: dampingRatioV }, { variableName: "mass", value: massV }, { variableName: "stiffness", value: stiffnessV }, { variableName: "overshootClamping", value: overshootClampingV }, { variableName: "restDisplacementThreshold", value: restDisplacementThresholdV }, { variableName: "restSpeedThreshold", value: restSpeedThresholdV }, { variableName: "duration", value: durationV }, { variableName: "rotate", value: rotateV }];
-      const item = items.forEach((value) => {
-        value = value.value;
+      const item = items.forEach((item, index) => {
+        const value = item.value;
         if (value) {
           obj[tmp] = value;
         }

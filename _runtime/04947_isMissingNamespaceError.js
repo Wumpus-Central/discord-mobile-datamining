@@ -23,7 +23,6 @@ arg5.addMissingNamespaces = function addMissingNamespaces(str) {
     let match1 = obj.exec(str);
     if (null !== match1) {
       do {
-        let tmp5 = match1;
         if (-1 === items.indexOf(match1[1])) {
           let arr = items.push(match1[1]);
         }
@@ -45,15 +44,13 @@ arg5.addMissingNamespaces = function addMissingNamespaces(str) {
         match2 = obj2.exec(str);
       } while (null !== match2);
     }
-    const found = items1.filter((arg0) => -1 === items.indexOf(arg0));
+    const found = items1.filter((item, index) => -1 === items.indexOf(item));
     let replaced = str;
     if (0 !== found.length) {
       const items2 = [];
       for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
         let tmp12 = found[num3];
-        let tmp13 = items;
         let text = items[tmp12];
-        let tmp15 = num3;
         if (!text) {
           text = `http://fallback.namespace/${tmp12}`;
         }

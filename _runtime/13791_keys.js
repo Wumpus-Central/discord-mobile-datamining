@@ -3,7 +3,7 @@
 // Module 13791 (keys)
 import hasLoggerPlugin2 from "hasLoggerPlugin" /* 13793 */;
 import hasStateResponsePlugin2 from "hasStateResponsePlugin" /* 13796 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import module_13792 from "module_13792" /* 13792 */;
 import module_13794 from "module_13794" /* 13794 */;
@@ -95,10 +95,10 @@ class ReactotronImpl {
         num = 0;
       }
       self.lastMessageDate = date;
-      const defaultResult = closure_1_6.default({ type, payload, important, date: date.toISOString(), deltaTime: num }, self.options.proxyHack);
+      const defaultResult = serialize.default({ type, payload, important, date: date.toISOString(), deltaTime: num }, self.options.proxyHack);
       if (self.isReady) {
         try {
-          const socket = tmp4.socket;
+          const socket = self.socket;
           socket.send(defaultResult);
         } catch (err) {
           tmp2.isReady = false;
@@ -106,9 +106,10 @@ class ReactotronImpl {
           _console.log("An error occurred communicating with reactotron. Please reload your app");
         }
       } else {
-        const sendQueue = tmp4.sendQueue;
+        const sendQueue = self.sendQueue;
         sendQueue.push(defaultResult);
       }
+      const obj = { type, payload, important, date: date.toISOString(), deltaTime: num };
     };
     return;
   }
@@ -117,8 +118,7 @@ const items1 = [
   {
     key: "configure",
     value: function configure(arg0) {
-      let self = this;
-      self = this;
+      const self = this;
       const merged = Object.assign({
         createSocket: null,
         host: "localhost",
@@ -141,7 +141,7 @@ const items1 = [
       this.options = merged;
       if (Array.isArray(this.options.plugins)) {
         const plugins = self.options.plugins;
-        const item = plugins.forEach((arg0) => self.use(arg0));
+        const item = plugins.forEach((item, index) => self.use(item));
       }
       return self;
     }
@@ -160,11 +160,10 @@ const items1 = [
   {
     key: "connect",
     value: function connect() {
-      let self = this;
-      self = this;
+      const self = this;
       this.connected = true;
       let options = this.options;
-      ({ host, environment: dependencyMap, port, name: closure_2, client } = options);
+      ({ host, environment: dependencyMap, port, name: _classCallCheck, client } = options);
       ({ createSocket, secure } = options);
       if (undefined === client) {
         client = {};
@@ -181,23 +180,22 @@ const items1 = [
           tmp();
         }
         const plugins = self.plugins;
-        const item = plugins.forEach((onConnect) => onConnect.onConnect && onConnect.onConnect());
+        const item = plugins.forEach((item, index) => item.onConnect && item.onConnect());
         let tmp4 = getClientId;
         if (!getClientId) {
-          tmp4 = closure_1_10;
+          tmp4 = emptyPromise;
         }
-        tmp4(closure_2).then((clientId) => {
+        tmp4(closure_2).then((result) => {
           let length;
           closure_8.isReady = true;
           const obj = { environment: closure_1 };
           const merged = Object.assign(closure_3);
           obj.name = closure_2;
-          obj.clientId = clientId;
+          obj.clientId = result;
           obj.reactotronCoreClientVersion = "REACTOTRON_CORE_CLIENT_VERSION";
           closure_8.send("client.intro", obj);
           if (closure_8.sendQueue.length > 0) {
             do {
-              let tmp3 = closure_8;
               let sendQueue = closure_8.sendQueue;
               closure_8.sendQueue = sendQueue.slice(1);
               let socket = closure_8.socket;
@@ -213,54 +211,54 @@ const items1 = [
           tmp2();
         }
         const plugins = self.plugins;
-        const item = plugins.forEach((onDisconnect) => onDisconnect.onDisconnect && onDisconnect.onDisconnect());
+        const item = plugins.forEach((item, index) => item.onDisconnect && item.onDisconnect());
       }
       function onMessage(str) {
         if (typeof str === "string") {
           const _JSON2 = JSON;
-          let parsed = JSON.parse(str);
+          let action = JSON.parse(str);
         } else {
           const _Buffer = Buffer;
-          parsed = str;
+          action = str;
           if (Buffer.isBuffer(str)) {
             const _JSON = JSON;
-            parsed = JSON.parse(str.toString());
+            action = JSON.parse(str.toString());
           }
         }
         if (closure_5) {
-          tmp3(parsed);
+          tmp2(action);
         }
         const plugins = self.plugins;
-        const item = plugins.forEach((onCommand) => {
-          onCommand = onCommand.onCommand;
+        const item = plugins.forEach((item, index) => {
+          let onCommand = item.onCommand;
           if (onCommand) {
-            onCommand = onCommand.onCommand(parsed);
+            onCommand = item.onCommand(action);
           }
           return onCommand;
         });
-        if ("custom" === parsed.type) {
-          const customCommands = tmp5.customCommands;
-          const found = customCommands.filter((command) => {
-            if (typeof parsed.payload === "string") {
-              let tmp2 = command.command === tmp.payload;
+        if ("custom" === action.type) {
+          const customCommands = self.customCommands;
+          const found = customCommands.filter((item, index) => {
+            if (typeof action.payload === "string") {
+              let tmp2 = item.command === action.payload;
             } else {
-              tmp2 = command.command === tmp.payload.command;
+              tmp2 = item.command === action.payload.command;
             }
             return tmp2;
           });
-          const item1 = found.forEach((handler) => {
+          const item1 = found.forEach((item, index) => {
             let args;
-            if (typeof parsed.payload === "object") {
-              args = parsed.payload.args;
+            if (typeof action.payload === "object") {
+              args = action.payload.args;
             }
-            return handler.handler(args);
+            return item.handler(args);
           });
         } else {
-          if (tmp7) {
-            const options = tmp5.options;
-            options.setClientId(parsed.payload);
+          if (tmp6) {
+            const options = self.options;
+            options.setClientId(action.payload);
           }
-          tmp7 = "setClientId" === parsed.type && tmp5.options.setClientId;
+          tmp6 = "setClientId" === action.type && self.options.setClientId;
         }
       }
       if ("on" in socket) {
@@ -282,13 +280,13 @@ const items1 = [
   },
   {
     key: "display",
-    value: function display(name) {
-      ({ value, preview, image, important } = name);
+    value: function display(activity) {
+      ({ value, preview, image, important } = activity);
       let tmp = undefined !== important;
       if (tmp) {
         tmp = important;
       }
-      const obj = { name: name.name, value, preview, image };
+      const obj = { name: activity.name, value, preview, image };
       this.send("display", obj, tmp);
     }
   },
@@ -300,15 +298,14 @@ const items1 = [
   },
   {
     key: "use",
-    value: function use(fn) {
-      let self = this;
-      self = this;
-      if (typeof fn !== "function") {
+    value: function use(bind) {
+      const self = this;
+      if (typeof bind !== "function") {
         const _Error3 = Error;
         error = new Error("plugins must be a function");
         throw error;
       } else {
-        const tmp19 = fn.bind(self)(self);
+        const tmp19 = bind.bind(self)(self);
         closure_1 = tmp19;
         if (typeof tmp19 !== "object") {
           let _Error2 = Error;
@@ -326,24 +323,24 @@ const items1 = [
               }
               const _Object = Object;
               const keys = Object.keys(tmp19.features);
-              const item = keys.forEach((arg0) => {
+              const item = keys.forEach((item, index) => {
                 if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof features.features[arg0] !== "function") {
+                if (typeof features.features[item] !== "function") {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
-                  error = new Error("feature " + arg0 + " is not a function");
+                  error = new Error("feature " + item + " is not a function");
                   throw error;
                 } else {
-                  closure_0 = arg0;
-                  if (closure_1_9.some((arg0) => arg0 === closure_0)) {
+                  closure_0 = item;
+                  if (closure_1_9.some((item, index) => item === closure_0)) {
                     const _Error = Error;
                     const _HermesInternal = HermesInternal;
-                    const error1 = new Error("feature " + arg0 + " is a reserved name");
+                    const error1 = new Error("feature " + item + " is a reserved name");
                     throw error1;
                   } else {
-                    self[arg0] = tmp;
+                    self[item] = tmp;
                   }
                 }
               });
@@ -362,40 +359,38 @@ const items1 = [
   },
   {
     key: "onCustomCommand",
-    value: function onCustomCommand(str) {
-      let self = this;
-      self = this;
-      if (typeof str === "string") {
+    value: function onCustomCommand(command) {
+      const self = this;
+      if (typeof command === "string") {
         handler = arg1;
-        let command = str;
       } else {
-        command = str.command;
-        ({ handler, title, description, args } = str);
+        command = command.command;
+        ({ handler, title, description, args } = command);
       }
       if (tmp) {
         if (handler) {
           let customCommands = self.customCommands;
-          const found = customCommands.filter((command) => command.command === command);
+          const found = customCommands.filter((item, index) => item.command === command);
           if (found.length > 0) {
-            const item = found.forEach((id) => {
-              closure_0 = id;
+            const item = found.forEach((item, index) => {
+              closure_0 = item;
               const customCommands = self.customCommands;
-              self.customCommands = customCommands.filter((id) => id.id !== id.id);
-              self.send("customCommand.unregister", { id: id.id, command: id.command });
+              self.customCommands = customCommands.filter((item, index) => item.id !== item.id);
+              self.send("customCommand.unregister", { id: item.id, command: item.command });
             });
           }
           if (args) {
             closure_2 = [];
-            const item1 = args.forEach((name) => {
-              if (name.name) {
+            const item1 = args.forEach((item, index) => {
+              if (item.name) {
                 let arr = closure_2;
-                if (closure_2.indexOf(name.name) > -1) {
+                if (closure_2.indexOf(item.name) > -1) {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
-                  error = new Error("A arg with the name \"" + name.name + "\" already exists in the command \"" + command + "\"");
+                  error = new Error("A arg with the name \"" + item.name + "\" already exists in the command \"" + command + "\"");
                   throw error;
                 } else {
-                  arr = arr.push(name.name);
+                  arr = arr.push(item.name);
                 }
               } else {
                 const _Error = Error;
@@ -420,7 +415,7 @@ const items1 = [
           self.send("customCommand.register", obj);
           return () => {
             const customCommands = self.customCommands;
-            self.customCommands = customCommands.filter((id) => id.id !== id.id);
+            self.customCommands = customCommands.filter((item, index) => item.id !== id.id);
             obj = { id: obj.id, command: obj.command };
             self.send("customCommand.unregister", obj);
           };

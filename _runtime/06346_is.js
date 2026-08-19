@@ -17,7 +17,6 @@ if (typeof Object.is === "function") {
     }
     if (!tmp) {
       tmp = arg0 != arg0 && arg1 != arg1;
-      const tmp3 = arg0 != arg0 && arg1 != arg1;
     }
     return tmp;
   };
@@ -64,8 +63,8 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
           callback = tmp;
           tmp3 = callback2(tmp);
           if (undefined !== closure_3) {
-            if (closure_1_4.hasValue) {
-              const value = closure_1_4.value;
+            if (current.hasValue) {
+              const value = current.value;
               if (tmp4(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;
@@ -93,13 +92,14 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
             callback = tmp;
             tmp10 = tmp6;
           }
+          tmp6 = closure_1;
         } else {
           callback2 = true;
           callback = tmp;
           tmp3 = callback2(tmp);
           if (undefined !== callback3) {
-            if (closure_1_4.hasValue) {
-              const value = closure_1_4.value;
+            if (current.hasValue) {
+              const value = current.value;
               if (callback3(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;

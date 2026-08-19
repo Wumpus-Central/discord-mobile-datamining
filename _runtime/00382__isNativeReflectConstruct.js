@@ -3,10 +3,10 @@
 // Module 382 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 366 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { isValidElement } from "noop" /* 19 */;
 
@@ -47,7 +47,6 @@ function flatAnimatedNodes(_value, items, arg2) {
       const _Array = Array;
       if (Array.isArray(_value)) {
         for (let num7 = 0; num7 < length2; num7 = num7 + 1) {
-          let tmp11 = flatAnimatedNodes;
           let tmp12 = flatAnimatedNodes(_value[num7], items, tmp10);
         }
         length2 = _value.length;
@@ -75,7 +74,6 @@ function flatAnimatedNodes(_value, items, arg2) {
           const _Object2 = Object;
           const keys = Object.keys(_value);
           for (let num4 = 0; num4 < length; num4 = num4 + 1) {
-            let tmp8 = flatAnimatedNodes;
             let tmp9 = flatAnimatedNodes(_value[keys[num4]], items, tmp7);
           }
           length = keys.length;
@@ -85,8 +83,8 @@ function flatAnimatedNodes(_value, items, arg2) {
     return items;
   }
 }
-function mapAnimatedNodes(_value, arg1, arg2) {
-  AnimatedObject = arg1;
+function mapAnimatedNodes(_value, fn, arg2) {
+  AnimatedObject = fn;
   let num = arg2;
   if (arg2 === undefined) {
     num = 0;
@@ -94,11 +92,11 @@ function mapAnimatedNodes(_value, arg1, arg2) {
   if (num >= 5) {
     return _value;
   } else if (_value instanceof AnimatedObject(num[7])) {
-    return arg1(_value);
+    return fn(_value);
   } else {
     const _Array = Array;
     if (Array.isArray(_value)) {
-      return _value.map((arg0) => closure_1_9(arg0, closure_0, num + 1));
+      return _value.map((item, index) => mapAnimatedNodes(item, closure_0, num + 1));
     } else {
       let prototypeOf;
       if (null !== _value) {
@@ -125,8 +123,7 @@ function mapAnimatedNodes(_value, arg1, arg2) {
         const keys = Object.keys(_value);
         for (let num4 = 0; num4 < length; num4 = num4 + 1) {
           let tmp8 = keys[num4];
-          let tmp9 = mapAnimatedNodes;
-          obj[tmp8] = mapAnimatedNodes(_value[tmp8], arg1, tmp7);
+          obj[tmp8] = mapAnimatedNodes(_value[tmp8], fn, tmp7);
         }
         return obj;
       } else {
@@ -153,7 +150,7 @@ class AnimatedObject {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result._nodes = global;
-    tmp3Result._value = arg1;
+    tmp3Result._value = fn;
     return tmp3Result;
   }
 }
@@ -258,10 +255,9 @@ obj = {
       } else {
         constructResult = obj.apply(obj, items);
       }
-      const tmp9Result = closure_3(obj, constructResult);
+      const tmp9Result = callback(obj, constructResult);
       tmp9Result._nodes = arr;
       tmp9Result._value = _value;
-      const tmp9 = closure_3;
     }
   }
 };

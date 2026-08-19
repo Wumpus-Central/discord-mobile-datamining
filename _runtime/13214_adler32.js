@@ -15,7 +15,6 @@ export default function adler32(arg0, arg1, arg2, arg3) {
       let tmp8 = result1;
       let tmp9 = result;
       let tmp10 = tmp2;
-      let tmp11 = tmp;
       let num = 2000;
       if (tmp <= 2000) {
         num = tmp;

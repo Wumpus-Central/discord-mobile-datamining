@@ -15,11 +15,11 @@ arg5.setEndTimeValue = function setEndTimeValue(closure_2, _endTime) {
   closure_2._endTime = _endTime;
 };
 arg5.convertSpanToTransaction = function convertSpanToTransaction(closure_2) {
-  const _convertSpanToTransaction = closure_2._convertSpanToTransaction;
+  const _convertSpanToTransaction = obj._convertSpanToTransaction;
   if (null !== _convertSpanToTransaction) {
     if (undefined !== _convertSpanToTransaction) {
       const call = _convertSpanToTransaction.call;
-      typeof call === "unknown" ? _convertSpanToTransaction() : call(closure_2);
+      typeof call === "unknown" ? _convertSpanToTransaction() : call(obj);
     }
   }
 };

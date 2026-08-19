@@ -1,7 +1,7 @@
 // === Module 1102: startProfileForSpan ===
 
 // Module 1102 (startProfileForSpan)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -50,15 +50,15 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
               if (closure_1_1) {
                 if (closure_1_3) {
                   if (v0(closure_1_1[3]).DEBUG_BUILD) {
-                    let debug = tmp5(tmp6[2]).debug;
-                    debug.log("[Profiling] profile for:", tmp5(tmp6[2]).spanToJSON(tmp14).description, "already exists, returning early");
-                    const tmp5Result = tmp5(tmp6[2]);
+                    let debug = tmp5(closure_1_1[2]).debug;
+                    debug.log("[Profiling] profile for:", tmp5(closure_1_1[2]).spanToJSON(tmp14).description, "already exists, returning early");
+                    const tmp5Result = tmp5(closure_1_1[2]);
                   }
                 } else {
                   const stopResult = obj.stop();
                   v0 = 3;
                   obj1 = { value: null, done: true };
-                  obj1[0] = obj.stop().then((arg0) => {
+                  obj1[0] = obj.stop().then((result) => {
                     if (c4) {
                       const WINDOW = v3(closure_1_1[4]).WINDOW;
                       WINDOW.clearTimeout(c4);
@@ -70,9 +70,9 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
                       debug.log("[Profiling] stopped profiling of span: " + v3(closure_1_1[2]).spanToJSON(v3).description);
                       const obj = v3(closure_1_1[2]);
                     }
-                    if (arg0) {
-                      closure_3 = arg0;
-                      const result = v3(closure_1_1[1]).addProfileToGlobalCache(closure_2, arg0);
+                    if (result) {
+                      closure_3 = result;
+                      result = v3(closure_1_1[1]).addProfileToGlobalCache(closure_2, result);
                       const obj3 = v3(closure_1_1[1]);
                     } else if (v3(closure_1_1[3]).DEBUG_BUILD) {
                       const debug2 = v3(closure_1_1[2]).debug;
@@ -80,10 +80,10 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
                       debug2.log("[Profiling] profiler returned null profile for: " + v3(closure_1_1[2]).spanToJSON(v3).description, "this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started");
                       const obj2 = v3(closure_1_1[2]);
                     }
-                  }).catch((arg0) => {
+                  }).catch((error) => {
                     if (v3(table[3]).DEBUG_BUILD) {
                       const debug = v3(table[2]).debug;
-                      debug.log("[Profiling] error while stopping profiler:", arg0);
+                      debug.log("[Profiling] error while stopping profiler:", error);
                     }
                   });
                   return obj1;
@@ -124,7 +124,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
       const tmpResult1 = tmp(817);
     }
     const uuid4Result = tmp(817).uuid4();
-    closure_2 = uuid4Result;
+    asyncGeneratorStep = uuid4Result;
     c3 = null;
     const tmpResult2 = tmp(817);
     const currentScope = tmp(817).getCurrentScope();
@@ -135,9 +135,9 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     let WINDOW = tmp(1028).WINDOW;
     const timeout = WINDOW.setTimeout(() => {
       if (callback(startJSSelfProfileResult[3]).DEBUG_BUILD) {
-        const debug = tmp(tmp2[2]).debug;
-        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", tmp(tmp2[2]).spanToJSON(callback).description);
-        const tmpResult = tmp(tmp2[2]);
+        const debug = callback(startJSSelfProfileResult[2]).debug;
+        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", callback(startJSSelfProfileResult[2]).spanToJSON(callback).description);
+        const tmpResult = callback(startJSSelfProfileResult[2]);
       }
       onProfileHandler();
     }, tmp(1101).MAX_PROFILE_DURATION_MS);
@@ -145,7 +145,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     closure_5 = end.bind(rootSpan);
     rootSpan.end = function profilingWrappedSpanEnd() {
       if (closure_0) {
-        onProfileHandler().then(() => {
+        onProfileHandler().then((result) => {
           callback();
         }, () => {
           callback();

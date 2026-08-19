@@ -28,13 +28,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -47,7 +45,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -669,7 +666,6 @@ if (self2) {
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 = "\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10D3\u10D8\u10D3\u10D8: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 " + str32 + " " + tmp26.verb + " " + str31 + code.maximum.toString() + " " + tmp26.unit;
-                const str37 = code.maximum;
               } else {
                 let str33 = str32;
                 if (str32 == null) {
@@ -677,7 +673,6 @@ if (self2) {
                 }
                 const _HermesInternal12 = HermesInternal;
                 combined2 = "\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10D3\u10D8\u10D3\u10D8: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 " + str33 + " \u10D8\u10E7\u10DD\u10E1 " + str31 + code.maximum.toString();
-                const str34 = code.maximum;
               }
               return combined2;
             case "TP":
@@ -695,11 +690,9 @@ if (self2) {
               if (tmp16) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 = "\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10DE\u10D0\u10E2\u10D0\u10E0\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 " + origin + " " + tmp16.verb + " " + str21 + code.minimum.toString() + " " + tmp16.unit;
-                const str25 = code.minimum;
               } else {
                 const _HermesInternal10 = HermesInternal;
                 combined3 = "\u10D6\u10D4\u10D3\u10DB\u10D4\u10E2\u10D0\u10D3 \u10DE\u10D0\u10E2\u10D0\u10E0\u10D0: \u10DB\u10DD\u10E1\u10D0\u10DA\u10DD\u10D3\u10DC\u10D4\u10DA\u10D8 " + origin + " \u10D8\u10E7\u10DD\u10E1 " + str21 + code.minimum.toString();
-                const str22 = code.minimum;
               }
               return combined3;
             case "INTERACTIONS":

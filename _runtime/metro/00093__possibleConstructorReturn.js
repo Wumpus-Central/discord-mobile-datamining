@@ -1,11 +1,13 @@
 // === Module 93: _possibleConstructorReturn ===
 
 // Module 93 (_possibleConstructorReturn)
+import _typeof from "_typeof" /* 45 */;
 import _assertThisInitialized from "_assertThisInitialized" /* 94 */;
 
 
 export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
+    _typeof;
     return fn;
   }
   if (undefined !== fn) {

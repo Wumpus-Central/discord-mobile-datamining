@@ -30,37 +30,35 @@ let obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: update
 applyStyleForTopScreen.__closure = obj;
 applyStyleForTopScreen.__workletHash = 541570832073;
 applyStyleForTopScreen.__initData = { code: "function applyStyleForTopScreen_Pnpm_styleUpdaterTs3(screenTransitionConfig,event){const{createViewDescriptor,updateProps}=this.__closure;const{screenDimensions:screenDimensions,topScreenId:topScreenId,screenTransition:screenTransition}=screenTransitionConfig;const{topScreenStyle:computeTopScreenStyle}=screenTransition;const topScreenStyle=computeTopScreenStyle(event,screenDimensions);const topScreenDescriptor={value:[createViewDescriptor(topScreenId)]};updateProps(topScreenDescriptor,topScreenStyle,undefined);}" };
-function applyStyleForBelowTopScreen(screenTransition, arg1) {
+function applyStyleForBelowTopScreen(closure_1, closure_0) {
   const obj = { value: null };
-  const items = [createViewDescriptorPaper(screenTransition.belowTopScreenId)];
+  const items = [createViewDescriptorPaper(dependencyMap.belowTopScreenId)];
   obj[0] = items;
-  const belowTopScreenStyleResult = screenTransition.screenTransition.belowTopScreenStyle(arg1, screenTransition.screenDimensions);
+  const belowTopScreenStyleResult = dependencyMap.screenTransition.belowTopScreenStyle(closure_0, dependencyMap.screenDimensions);
   updateProps.updateProps(obj, belowTopScreenStyleResult, undefined);
 }
 obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: updateProps.updateProps };
 applyStyleForBelowTopScreen.__closure = obj;
 applyStyleForBelowTopScreen.__workletHash = 1349027100765;
 applyStyleForBelowTopScreen.__initData = { code: "function applyStyleForBelowTopScreen_Pnpm_styleUpdaterTs4(screenTransitionConfig,event){const{createViewDescriptor,updateProps}=this.__closure;const{screenDimensions:screenDimensions,belowTopScreenId:belowTopScreenId,screenTransition:screenTransition}=screenTransitionConfig;const{belowTopScreenStyle:computeBelowTopScreenStyle}=screenTransition;const belowTopScreenStyle=computeBelowTopScreenStyle(event,screenDimensions);const belowTopScreenDescriptor={value:[createViewDescriptor(belowTopScreenId)]};updateProps(belowTopScreenDescriptor,belowTopScreenStyle,undefined);}" };
-function applyStyle(closure_1, value) {
+function applyStyle(closure_1, closure_0) {
   if (typeof applyStyleForTopScreen !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = { value: null };
-  const items = [createViewDescriptorPaper(closure_1.topScreenId)];
+  const items = [createViewDescriptorPaper(dependencyMap.topScreenId)];
   obj[0] = items;
-  const tmp2 = createViewDescriptorPaper;
-  const tmp3 = require;
-  const topScreenStyleResult = closure_1.screenTransition.topScreenStyle(value, closure_1.screenDimensions);
+  const topScreenStyleResult = dependencyMap.screenTransition.topScreenStyle(closure_0, dependencyMap.screenDimensions);
   updateProps.updateProps(obj, topScreenStyleResult, undefined);
   if (typeof applyStyleForBelowTopScreen !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = { value: null };
-  const obj2 = updateProps;
-  const items1 = [tmp2(closure_1.belowTopScreenId)];
+  const items1 = [createViewDescriptorPaper(dependencyMap.belowTopScreenId)];
   obj[0] = items1;
-  const belowTopScreenStyleResult = closure_1.screenTransition.belowTopScreenStyle(value, closure_1.screenDimensions);
+  const belowTopScreenStyleResult = dependencyMap.screenTransition.belowTopScreenStyle(closure_0, dependencyMap.screenDimensions);
   updateProps.updateProps(obj, belowTopScreenStyleResult, undefined);
+  const tmp3Result = updateProps;
 }
 applyStyle.__closure = { applyStyleForTopScreen, applyStyleForBelowTopScreen };
 applyStyle.__workletHash = 7852442865245;

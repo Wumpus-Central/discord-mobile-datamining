@@ -1,7 +1,9 @@
 // === Module 426: oneArgumentPooler ===
 
 // Module 426 (oneArgumentPooler)
-const module = arg2;
+import _modDef38 from "module_38" /* 38 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 function oneArgumentPooler(arg0) {
   const self = this;
@@ -21,7 +23,7 @@ function oneArgumentPooler(arg0) {
   }
 }
 function standardReleaser(destructor) {
-  module(38)(destructor instanceof this, "Trying to release an instance into a pool of a different type.");
+  _modDef38(destructor instanceof this, "Trying to release an instance into a pool of a different type.");
   destructor.destructor();
   if (this.instancePool.length < this.poolSize) {
     const instancePool = this.instancePool;

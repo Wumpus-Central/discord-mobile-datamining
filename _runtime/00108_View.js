@@ -5,7 +5,7 @@ import noopAll from "noop" /* 19 */;
 import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
 import noopDefault from "noop" /* 111 */;
 import CommandsDefault from "Commands" /* 112 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import { use } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -139,7 +139,7 @@ const forwardRefResult = noopAll.forwardRef(function View_withRef(arg0, ref) {
     if (tmp45) {
       const obj2 = { value: false, children: null };
       obj2[1] = tmp30Result;
-      return tmp30(tmp43(111), obj2);
+      return jsx(noopDefault, { value: false, children: null });
     } else {
       return tmp30Result;
     }

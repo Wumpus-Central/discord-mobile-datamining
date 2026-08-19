@@ -12,7 +12,7 @@ function appendTransformProps(arg0) {
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
   append.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
-function universal2axis(num) {
+function universal2axis(num, originX, originY, arg3) {
   let num2 = num;
   if (typeof num !== "number") {
     if (typeof num === "string") {
@@ -39,10 +39,10 @@ function universal2axis(num) {
       }
     }
   }
-  if (!isNaN(+arg1)) {
+  if (!isNaN(+originX)) {
     num2 = tmp3;
   }
-  if (!isNaN(+arg2)) {
+  if (!isNaN(+originY)) {
     num = tmp4;
   }
   if (!num2) {
@@ -64,21 +64,21 @@ function universal2axis(num) {
 function transformsArrayToProps(arr) {
   const obj = {};
   if (arr != null) {
-    const item = arr.forEach((arg0) => {
-      const keys = Object.keys(arg0);
+    const item = arr.forEach((item, index) => {
+      const keys = Object.keys(item);
       if (1 !== keys.length) {
         const _console = console;
         console.error("You must specify exactly one property per transform object.");
       }
       const first = keys[0];
-      obj[first] = arg0[first];
+      obj[first] = item[first];
     });
   }
   return obj;
 }
-function props2transform(arr) {
-  if (arr) {
-    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = arr);
+function props2transform(transform) {
+  if (transform) {
+    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = transform);
     if (null == rotation) {
       if (null == translate) {
         if (null == translateX) {
@@ -136,13 +136,12 @@ function props2transform(arr) {
       }
       translateY = first1;
     }
-    let tmp6Result = tmp6(translate, translateX, translateY);
-    tmp6Result = tmp6(origin, originX, originY);
+    universal2axis(translate, translateX, translateY);
+    const tmp6Result = universal2axis(origin, originX, originY);
     const tmp6Result1 = universal2axis(scale, scaleX, scaleY, 1);
     let num4 = 0;
     if (null != rotation) {
       num4 = +rotation || 0;
-      const tmp16 = +rotation || 0;
     }
     const obj = { rotation: null, originX: null, originY: null, scaleX: null, scaleY: null, skewX: null, skewY: null, x: null, y: null };
     obj[0] = num4;
@@ -169,7 +168,7 @@ function transformToMatrix(arg0, arr) {
     const _Array = Array;
     if (Array.isArray(arr)) {
       if (typeof arr[0] === "number") {
-        let tmp3Result = tmp3(6580);
+        let tmp3Result = append;
         tmp3Result.append(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
       } else {
         const tmp24 = props2transform(transformsArrayToProps(arr));
@@ -179,9 +178,9 @@ function transformToMatrix(arg0, arr) {
       }
     } else if (typeof arr === "string") {
       try {
-        tmp3Result = tmp3(6581);
+        tmp3Result = peg$SyntaxError;
         const parsed = tmp3Result.parse(arr);
-        const tmp3Result1 = tmp3(6580);
+        const tmp3Result1 = append;
         tmp3Result1.append(parsed[0], parsed[3], parsed[1], parsed[4], parsed[2], parsed[5]);
       } catch (tmp14) {
         const _console = tmp.console;
@@ -194,18 +193,17 @@ function transformToMatrix(arg0, arr) {
       }
     }
   }
-  const obj = append;
   return append.toArray();
 }
-arg5.default = function extractTransform(arr) {
-  if (Array.isArray(arr)) {
-    if (typeof arr[0] === "number") {
-      return arr;
+arg5.default = function extractTransform(transform) {
+  if (Array.isArray(transform)) {
+    if (typeof transform[0] === "number") {
+      return transform;
     }
   }
-  if (typeof arr === "string") {
+  if (typeof transform === "string") {
     try {
-      const parsed = peg$SyntaxError.parse(arr);
+      const parsed = peg$SyntaxError.parse(transform);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
@@ -215,11 +213,11 @@ arg5.default = function extractTransform(arr) {
       return append.identity;
     }
   } else {
-    let transform;
-    if (arr != null) {
-      transform = arr.transform;
+    transform = undefined;
+    if (transform != null) {
+      transform = transform.transform;
     }
-    return transformToMatrix(props2transform(arr), transform);
+    return transformToMatrix(props2transform(transform), transform);
   }
 };
 arg5.transformsArrayToProps = transformsArrayToProps;
@@ -228,7 +226,6 @@ arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
     transform = peg$SyntaxError2.parse(transform.transform);
-    const obj = peg$SyntaxError2;
   } else {
     transform = transform.transform;
   }

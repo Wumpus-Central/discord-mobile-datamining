@@ -2,14 +2,14 @@
 
 // Module 6431 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult2 from "noop" /* 19 */;
 import { Reanimated } from "module_6420" /* 6420 */;
 
-const Wrap = arg1;
+const Wrap = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;

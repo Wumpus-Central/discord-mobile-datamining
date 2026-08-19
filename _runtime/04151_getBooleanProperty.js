@@ -3,7 +3,7 @@
 // Module 4151 (getBooleanProperty)
 import c from "c" /* 4135 */;
 import useRiveProperty from "useRiveProperty" /* 4148 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 require = arg1;
 function getBooleanProperty(booleanProperty) {
@@ -13,7 +13,6 @@ function getBooleanProperty(booleanProperty) {
 export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
   let obj = c;
   const cResult = obj.c(4);
-  const obj2 = useRiveProperty;
   [tmp3, tmp4, tmp5] = callback(useRiveProperty.useRiveProperty(instance, reducedMotion, getBooleanProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {

@@ -2,10 +2,10 @@
 
 // Module 1777 (_isNativeReflectConstruct)
 import RollOutRight from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_2 from "_possibleConstructorReturn" /* 93 */;
-import closure_3 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -56,9 +56,7 @@ class RollInLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("0deg", closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -116,9 +114,7 @@ class RollInRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(translateX) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(0, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("0deg", closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -176,9 +172,7 @@ class RollOutLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("-180deg", closure_2)) }];
         obj[0] = items;
         obj[0] = obj;
@@ -236,9 +230,7 @@ class RollOutRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(windowWidth) {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { transform: null };
-        obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
+        const obj = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("180deg", closure_2)) }];
         obj[0] = items;
         obj[0] = obj;

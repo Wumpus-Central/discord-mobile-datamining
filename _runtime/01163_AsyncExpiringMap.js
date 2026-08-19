@@ -3,7 +3,7 @@
 // Module 1163 (AsyncExpiringMap)
 import _createClassDefault from "_createClass" /* 42 */;
 import AsyncExpiringMap from "_slicedToArray" /* 32 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class AsyncExpiringMap {
   constructor() {
@@ -32,8 +32,7 @@ const items = [
   {
     key: "set",
     value: function set(arg0, value) {
-      let self = this;
-      self = this;
+      const self = this;
       if (!this._cleanupInterval) {
         self.startCleanup();
       }
@@ -44,8 +43,8 @@ const items = [
             obj[2] = value;
             const _map2 = self._map;
             const result = _map2.set(arg0, obj);
-            value.then((value) => {
-              obj.value = value;
+            value.then((result) => {
+              obj.value = result;
               obj.expiresAt = Date.now() + self._ttl;
               obj.promise = null;
             }, () => {
@@ -148,17 +147,14 @@ const items = [
       const timestamp = Date.now();
       const entries = _map.entries();
       while (tmp3 !== undefined) {
-        let tmp5 = AsyncExpiringMap;
         let tmp6 = AsyncExpiringMap(tmp4, 2);
         [tmp7, tmp8] = tmp6;
         let expiresAt = tmp8.expiresAt;
         if (expiresAt) {
-          let tmp10 = tmp8;
           expiresAt = tmp9.expiresAt <= timestamp;
         }
         if (expiresAt) {
           let _map2 = self._map;
-          let tmp11 = tmp7;
           let deleteResult = _map2.delete(tmp7);
         }
         continue;
@@ -166,6 +162,7 @@ const items = [
       if (!self._map.size) {
         self.stopCleanup();
       }
+      tmp3 = entries[Symbol.iterator]();
     }
   },
   {

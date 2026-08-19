@@ -7,7 +7,7 @@ arg5.initUnique = function initUnique(metric, InteractionManager) {
   try {
     if (!weakMap.get(metric)) {
       const tmp5 = new InteractionManager();
-      const result = obj.set(metric, tmp5);
+      const result = weakMap.set(metric, tmp5);
     }
     return weakMap.get(metric);
   } catch (err) {

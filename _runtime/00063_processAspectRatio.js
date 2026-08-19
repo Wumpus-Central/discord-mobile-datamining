@@ -6,9 +6,9 @@ arg5.default = function processAspectRatio(num) {
     return num;
   } else if (typeof num === "string") {
     const parts = num.split("/");
-    const mapped = parts.map((str) => str.trim());
+    const mapped = parts.map((item, index) => item.trim());
     if (!mapped.includes("auto")) {
-      if (!mapped.some((arg0) => Number.isNaN(Number(arg0)))) {
+      if (!mapped.some((item, index) => Number.isNaN(Number(item)))) {
         if (2 === mapped.length) {
           const _Number2 = Number;
           const _Number3 = Number;

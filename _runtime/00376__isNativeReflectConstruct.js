@@ -6,10 +6,10 @@ import _inheritsDefault from "_inherits" /* 98 */;
 import _readOnlyErrorDefault from "_readOnlyError" /* 377 */;
 import fromOrigamiTensionAndFrictionAll from "fromOrigamiTensionAndFriction" /* 378 */;
 import AnimationDefault from "Animation" /* 379 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
-import closure_7 from "_get" /* 96 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult1 from "_createClass" /* 42 */;
 
 const SpringAnimation = global;
@@ -201,8 +201,6 @@ let items = [
     key: "start",
     value: function start(_startPosition, _onUpdate, arg2, getInternalState, self) {
       self = this;
-      closure_1 = this;
-      self = this;
       const tmp2 = callback3(callback2(self.prototype), "start", this);
       closure_1 = tmp2;
       let fn = tmp2;
@@ -306,10 +304,6 @@ let items = [
             self._onUpdate(self._toValue);
           }
           self.__notifyAnimationEnd({ finished: true });
-        } else if (self._startPosition < self._toValue) {
-          let tmp19 = diff1 > self._toValue;
-        } else {
-          tmp19 = diff1 < self._toValue;
         }
       }
     }
@@ -317,8 +311,7 @@ let items = [
   {
     key: "stop",
     value: function stop() {
-      let self = this;
-      self = this;
+      const self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);

@@ -2,11 +2,11 @@
 
 // Module 7094 (StickyHeaders)
 import noopDefault from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 7041 */;
+import _slicedToArray from "_slicedToArray" /* 7041 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ useRef: c3, useState: c4, useMemo: c5, useImperativeHandle: closure_6, useCallback: error, useEffect: closure_8 } = noop);
 noopDefault;
 
@@ -25,19 +25,16 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     num = 2;
   }
   c10 = undefined;
-  let currentStickyIndex;
-  let pushStartsAt;
-  let arr2;
   closure_14 = undefined;
   closure_15 = undefined;
   let current;
   let translateY;
   let opacity;
   [tmp2, c10] = renderItem(scrollY({ currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER }), 2);
-  currentStickyIndex = tmp2.currentStickyIndex;
-  pushStartsAt = tmp2.pushStartsAt;
+  const currentStickyIndex = tmp2.currentStickyIndex;
+  const pushStartsAt = tmp2.pushStartsAt;
   let items = [stickyHeaderIndices];
-  arr2 = data(() => {
+  const arr2 = data(() => {
     const items = [...stickyHeaderIndices];
     return items.sort((arg0, arg1) => arg0 - arg1);
   }, items);
@@ -60,11 +57,9 @@ export const StickyHeaders = (stickyHeaderIndices) => {
         do {
           let _Math = Math;
           let rounded = Math.floor((num6 + diff) / 2);
-          let tmp7 = recyclerViewManager;
           let tmp8 = num5;
-          let tmp9 = diff;
           sum = num6;
-          if (recyclerViewManager.getLayout(tmp[rounded]).y <= tmp3) {
+          if (recyclerViewManager.getLayout(arr2[rounded]).y <= tmp3) {
             sum = rounded + 1;
             tmp8 = rounded;
             diff1 = diff;
@@ -77,11 +72,11 @@ export const StickyHeaders = (stickyHeaderIndices) => {
           num7 = tmp8;
         } while (sum <= diff1);
       }
-      let num8 = tmp[num7];
+      let num8 = arr2[num7];
       if (num8 == null) {
         num8 = -1;
       }
-      let num9 = tmp[num7 + 1];
+      let num9 = arr2[num7 + 1];
       if (num9 == null) {
         num9 = -1;
       }
@@ -117,16 +112,14 @@ export const StickyHeaders = (stickyHeaderIndices) => {
       if (!tmp17) {
         obj = { currentStickyIndex: null, pushStartsAt: null };
         obj[0] = num8;
-        obj[1] = diff2 - tmp2;
+        obj[1] = diff2 - stickyHeaderOffset;
         _undefined(obj);
       }
-      if (num8 !== tmp16) {
+      if (num8 !== currentStickyIndex) {
         if (onChangeStickyIndex != null) {
           onChangeStickyIndex(num8);
         }
       }
-      tmp16 = currentStickyIndex;
-      tmp2 = stickyHeaderOffset;
     }
   }, items1);
   closure_15 = tmp5;
@@ -140,7 +133,6 @@ export const StickyHeaders = (stickyHeaderIndices) => {
       callback();
     }
   }), items3);
-  let obj = { currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER };
   const tmp = renderItem(scrollY({ currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER }), 2);
   current = recyclerViewManager(new Map()).current;
   const items4 = [recyclerViewManager, currentStickyIndex, scrollY, pushStartsAt, stickyHeaderOffset];
@@ -159,7 +151,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     let interpolateResult;
     if (stickyHeaderOffset > 0) {
       obj = { inputRange: null, outputRange: null, extrapolate: "clamp" };
-      const items2 = [tmp2, tmp2 + num];
+      const items2 = [pushStartsAt, pushStartsAt + num];
       obj[0] = items2;
       obj[1] = [1, 0];
       interpolateResult = scrollY.interpolate(obj);
@@ -171,23 +163,21 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   opacity = tmp3Result.opacity;
   const items5 = [translateY, opacity, currentStickyIndex, data, renderItem, current, extraData, stickyHeaderOffset, num, inverted];
   tmp3Result = tmp3(() => {
-    obj = { style: obj, children: null };
-    obj = { position: "absolute", top: stickyHeaderOffset, left: 0, right: 0, zIndex: num, transform: items, opacity };
-    obj = { translateY };
-    items = [obj];
+    const obj = { translateY };
+    const items = [obj];
     let tmpResult = null;
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
-      if (tmp4 < data.length) {
+      if (currentStickyIndex < data.length) {
         obj1 = { index: null, item: null, renderItem: null, layout: null, refHolder: null, extraData: null, trailingItem: "accessibilityRole", target: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017416968884238224, hidden: -1524152479688253200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, inverted: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000032459785691222965 };
-        obj1[0] = tmp4;
-        obj1[1] = tmp6[tmp4];
+        obj1[0] = currentStickyIndex;
+        obj1[1] = tmp6[currentStickyIndex];
         obj1[2] = renderItem;
         obj1[3] = { x: 0, y: 0, width: 0, height: 0 };
         obj1[4] = current;
         obj1[5] = extraData;
         obj1[9] = inverted;
-        tmpResult = tmp(stickyHeaderIndices(stickyHeaderOffset[4]).ViewHolder, obj1);
+        tmpResult = num(stickyHeaderIndices(stickyHeaderOffset[4]).ViewHolder, obj1);
       }
     }
     obj[1] = tmpResult;

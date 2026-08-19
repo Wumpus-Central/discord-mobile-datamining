@@ -1,8 +1,7 @@
 // === Module 4939: ? ===
 
 // Module 4939
-let obj = { 4: null };
-obj = {
+const obj = {
   name: "ShotInfo",
   description(arg0) {
     return arg0;

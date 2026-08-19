@@ -1,17 +1,16 @@
 // === Module 7721: useIAP ===
 
 // Module 7721 (useIAP)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c3, useEffect: c4 } = noop);
 
 export const useIAP = () => {
   let obj = _require(currentPurchaseError[2]);
   const iAPContext = obj.useIAPContext();
   const currentPurchase = iAPContext.currentPurchase;
-  _require = currentPurchase;
   currentPurchaseError = iAPContext.currentPurchaseError;
   ({ setConnected: closure_2, setProducts } = iAPContext);
   const setSubscriptions = iAPContext.setSubscriptions;
@@ -19,9 +18,8 @@ export const useIAP = () => {
   const setPurchaseHistory = iAPContext.setPurchaseHistory;
   const setCurrentPurchase = iAPContext.setCurrentPurchase;
   const setCurrentPurchaseError = iAPContext.setCurrentPurchaseError;
-  _require = undefined;
   ({ connected, products, promotedProductsIOS, subscriptions, purchaseHistory, availablePurchases, initConnectionError } = iAPContext);
-  _require = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
@@ -70,7 +68,7 @@ export const useIAP = () => {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const callback2 = closure_1_3;
+              const callback2 = setProducts;
               obj1 = callback(currentPurchaseError[3]);
               const obj2 = { skus: null };
               obj2[0] = skus;
@@ -103,8 +101,7 @@ export const useIAP = () => {
     return iter;
   });
   const items = [setProducts];
-  _require = undefined;
-  _require = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c4 = 0;
     c5 = 0;
@@ -209,7 +206,6 @@ export const useIAP = () => {
     return applyArgumentsResult;
   }, items1);
   const items3 = [setPurchaseHistory];
-  _require = undefined;
   const tmp7 = setProducts(callback(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -237,7 +233,7 @@ export const useIAP = () => {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = closure_1_5;
+            const callback = setAvailablePurchases;
             obj1 = closure_1_0(table[3]);
             table = 1;
             c2 = 1;
@@ -335,14 +331,14 @@ export const useIAP = () => {
               productId = lib.productId;
             }
             if (lib.productId === productId) {
-              closure_1_7(undefined);
+              setCurrentPurchase(undefined);
             }
             let productId1;
             if (closure_1_1 != null) {
               productId1 = closure_1_1.productId;
             }
             if (lib.productId === productId1) {
-              closure_1_8(undefined);
+              setCurrentPurchaseError(undefined);
             }
             throw closure_3;
           } else if (3 === tmp9) {
@@ -358,14 +354,14 @@ export const useIAP = () => {
               productId2 = lib.productId;
             }
             if (lib.productId === productId2) {
-              closure_1_7(undefined);
+              setCurrentPurchase(undefined);
             }
             let productId3;
             if (closure_1_1 != null) {
               productId3 = closure_1_1.productId;
             }
             if (lib.productId === productId3) {
-              closure_1_8(undefined);
+              setCurrentPurchaseError(undefined);
             }
             c6 = 3;
             const obj4 = { value: null, done: true };
@@ -378,14 +374,14 @@ export const useIAP = () => {
               productId4 = lib.productId;
             }
             if (lib.productId === productId4) {
-              closure_1_7(undefined);
+              setCurrentPurchase(undefined);
             }
             let productId5;
             if (closure_1_1 != null) {
               productId5 = closure_1_1.productId;
             }
             if (lib.productId === productId5) {
-              closure_1_8(undefined);
+              setCurrentPurchaseError(undefined);
             }
             c6 = 3;
             obj = { value: null, done: true };
@@ -447,7 +443,7 @@ export const useIAP = () => {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = closure_1_6;
+            const callback = setPurchaseHistory;
             obj1 = closure_1_0(table[3]);
             table = 1;
             c2 = 1;

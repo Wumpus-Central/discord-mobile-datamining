@@ -1,7 +1,9 @@
 // === Module 496: Vibration ===
 
 // Module 496 (Vibration)
-const module = arg2;
+import VibrationDefault from "Vibration" /* 497 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   vibrate(arg0) {
@@ -14,8 +16,7 @@ arg5.default = {
       flag = false;
     }
     if (typeof num === "number") {
-      module(497).vibrate(num);
-      const obj2 = module(497);
+      VibrationDefault.vibrate(num);
     } else {
       const _Array = Array;
       if (Array.isArray(num)) {
@@ -23,8 +24,7 @@ arg5.default = {
         if (flag) {
           num2 = 0;
         }
-        module(497).vibrateByPattern(num, num2);
-        const obj = module(497);
+        VibrationDefault.vibrateByPattern(num, num2);
       } else {
         const _Error = Error;
         error = new Error("Vibration pattern should be a number or array");
@@ -33,6 +33,6 @@ arg5.default = {
     }
   },
   cancel() {
-    module(497).cancel();
+    VibrationDefault.cancel();
   }
 };

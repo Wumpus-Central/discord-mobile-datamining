@@ -13,7 +13,6 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
     if (!variants) {
       variants = [];
     }
-    const obj = e;
     const _Boolean = Boolean;
     const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
@@ -30,7 +29,6 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     if (!variants) {
       variants = [];
     }
-    const obj = e;
     const _Boolean = Boolean;
     const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
@@ -41,25 +39,20 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     let iter = extensions[num];
     let arr = items1.push(iter.type);
     let type = iter.type;
-    let tmp5 = num;
     if ("u" === type) {
       let push2 = items1.push;
-      let tmp10 = require;
-      let tmp11 = dependencyMap;
       let obj6 = e;
       let obj7 = e;
       let keywords = iter.keywords;
       let __spreadArrayResult1 = obj7.__spreadArray([], iter.attributes, false);
-      let applyResult = push2.apply(items1, obj6.__spreadArray(__spreadArrayResult1, keywords.reduce((arr) => arr.concat(arg1), []), false));
+      let applyResult = push2.apply(items1, obj6.__spreadArray(__spreadArrayResult1, keywords.reduce((acc, item, index) => acc.concat(item), []), false));
     } else if ("t" === type) {
       let push = items1.push;
-      let tmp7 = require;
-      let tmp8 = dependencyMap;
       let obj3 = e;
       let lang2 = iter.lang;
       let str3 = "";
       if (lang2) {
-        let tmp7Result = tmp7(1281);
+        let tmp7Result = e;
         let items2 = [, , ];
         ({ lang: arr4[0], script: arr4[1], region: arr4[2], variants: variants2 } = lang2);
         if (!variants2) {
@@ -72,7 +65,7 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
       }
       let items3 = [str3];
       let fields = iter.fields;
-      let applyResult1 = push.apply(items1, obj3.__spreadArray(items3, fields.reduce((arr) => arr.concat(arg1), []), false));
+      let applyResult1 = push.apply(items1, obj3.__spreadArray(items3, fields.reduce((acc, item, index) => acc.concat(item), []), false));
     } else {
       arr = items1.push(iter.value);
     }

@@ -3,10 +3,10 @@
 // Module 1069 (serializeFormData)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 817 */;
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1035 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-function serializeFormData(fetchRequestArgBody) {
-  return new URLSearchParams(fetchRequestArgBody).toString();
+function serializeFormData(size) {
+  return new URLSearchParams(size).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
@@ -82,12 +82,12 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     const str = xhr.getAllResponseHeaders();
     if (str) {
       const parts = str.split("\r\n");
-      let reduced = parts.reduce((arg0, str) => {
-        [str, tmp2] = callback(str.split(": "), 2);
+      let reduced = parts.reduce((acc, item, index) => {
+        [str, tmp2] = callback(item.split(": "), 2);
         if (tmp2) {
-          arg0[str.toLowerCase()] = tmp2;
+          acc[str.toLowerCase()] = tmp2;
         }
-        return arg0;
+        return acc;
       }, {});
     } else {
       reduced = {};

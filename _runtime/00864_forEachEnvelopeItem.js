@@ -4,12 +4,11 @@
 import _mod821 from "module_821" /* 821 */;
 import getGlobalSingleton from "getGlobalSingleton" /* 825 */;
 import dsnFromString from "dsnFromString" /* 837 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-function forEachEnvelopeItem(arg0, arg1) {
+function forEachEnvelopeItem(arg0, fn) {
   for (const item10007 of tmp) {
     if (arg1(item10007, item10007[0].type)) {
-      let tmp2 = obj;
       obj.return();
       let flag = true;
       return true;
@@ -21,7 +20,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", raw_security: "security", log: "log_item", metric: "metric", trace_metric: "metric" };
 
 export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = callback(arg0, 2);
+  const tmp = _slicedToArray(arg0, 2);
   const items = [tmp[0], ];
   const items1 = [];
   items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
@@ -37,14 +36,14 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
     } else {
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      encodePolyfillResult = textEncoder.encode(data);
+      const encoder = new TextEncoder();
+      encodePolyfillResult = encoder.encode(data);
     }
   } else {
     data = data.data;
     obj = { type: "attachment", length: null, filename: null, content_type: null, attachment_type: null };
     obj[1] = data.length;
-    ({ filename: obj4[2], contentType: obj4[3], attachmentType: obj4[4] } = data);
+    ({ filename: obj3[2], contentType: obj3[3], attachmentType: obj3[4] } = data);
     const items = [obj, data];
     return items;
   }
@@ -76,7 +75,6 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     obj = { dsn: null };
     obj[0] = dsnFromString.dsnToString(arg3);
     tmp4 = obj;
-    const obj5 = dsnFromString;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;
@@ -120,13 +118,13 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       const subarrayResult = lib.subarray(0, length);
       lib = lib.subarray(length + 1);
-      const sentryCarrier = lib(closure_1_1[1]).getSentryCarrier(lib(closure_1_1[2]).GLOBAL_OBJ);
+      const sentryCarrier = lib(dependencyMap[1]).getSentryCarrier(lib(dependencyMap[2]).GLOBAL_OBJ);
       if (sentryCarrier.decodePolyfill) {
         let decodePolyfillResult = sentryCarrier.decodePolyfill(subarrayResult);
       } else {
         const _TextDecoder = TextDecoder;
-        const textDecoder = new TextDecoder();
-        decodePolyfillResult = textDecoder.decode(subarrayResult);
+        const decoder = new TextDecoder();
+        decodePolyfillResult = decoder.decode(subarrayResult);
       }
       return JSON.parse(decodePolyfillResult);
     }
@@ -141,16 +139,13 @@ export const parseEnvelope = function parseEnvelope(arr) {
       }
       let items1 = [json1, ];
       if (length) {
-        let tmp11 = _require;
         let subarrayResult = _require.subarray(0, length);
-        let tmp12 = _require;
         _require = _require.subarray(length + 1);
       } else {
         subarrayResult = readJson();
       }
       items1[1] = subarrayResult;
       arr = items.push(items1);
-      let tmp14 = _require;
     }
     const items2 = [json, items];
     return items2;
@@ -160,10 +155,10 @@ export const parseEnvelope = function parseEnvelope(arr) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
     } else {
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      encodePolyfillResult = textEncoder.encode(arr);
+      const encoder = new TextEncoder();
+      encodePolyfillResult = encoder.encode(arr);
     }
-    const obj2 = _require(825);
+    const obj = _require(825);
   }
 };
 export const serializeEnvelope = function serializeEnvelope(arg0) {
@@ -173,44 +168,43 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       if (typeof json === "string") {
         let sum = arr + json;
       } else {
-        const sentryCarrier = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
+        const sentryCarrier = callback(dependencyMap[1]).getSentryCarrier(callback(dependencyMap[2]).GLOBAL_OBJ);
         if (sentryCarrier.encodePolyfill) {
           let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
         } else {
           const _TextEncoder2 = TextEncoder;
-          const textEncoder = new TextEncoder();
-          encodePolyfillResult = textEncoder.encode(arr);
+          const encoder2 = new TextEncoder();
+          encodePolyfillResult = encoder2.encode(arr);
         }
         sum = [encodePolyfillResult, json];
-        const obj5 = callback(closure_1_1[1]);
+        const obj3 = callback(dependencyMap[1]);
       }
       callback = sum;
     } else if (typeof json !== "string") {
       arr = arr.push(json);
     } else {
-      const sentryCarrier1 = callback(closure_1_1[1]).getSentryCarrier(callback(closure_1_1[2]).GLOBAL_OBJ);
+      const sentryCarrier1 = callback(dependencyMap[1]).getSentryCarrier(callback(dependencyMap[2]).GLOBAL_OBJ);
       if (sentryCarrier1.encodePolyfill) {
         let encodePolyfillResult1 = sentryCarrier1.encodePolyfill(json);
       } else {
         const _TextEncoder = TextEncoder;
-        const textEncoder1 = new TextEncoder();
-        encodePolyfillResult1 = textEncoder1.encode(json);
+        const encoder = new TextEncoder();
+        encodePolyfillResult1 = encoder.encode(json);
       }
-      const obj3 = callback(closure_1_1[1]);
+      const obj = callback(dependencyMap[1]);
     }
   }
-  const tmp4 = callback(arg0, 2);
+  const tmp4 = _slicedToArray(arg0, 2);
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
     if (typeof _require !== "string") {
       tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
+        const uint8Array = new Uint8Array(arr.reduce((acc, item, index) => acc + item.length, 0));
         let num = 0;
         const iter = arr[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp = num;
           let result = uint8Array.set(nextResult, num);
           num = num + nextResult.length;
           continue;
@@ -220,7 +214,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     return tmp22;
   } else {
-    const tmp8 = callback(tmp6, 2);
+    const tmp8 = _slicedToArray(tmp6, 2);
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");
@@ -233,11 +227,12 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          json = _JSON3.stringify(_require(865).normalize(tmp3));
-          const obj = _require(865);
+          const normalizer = _require(865);
+          json = _JSON3.stringify(normalizer.normalize(tmp3));
         }
       }
     }
     append(tmp8[1]);
   }
+  tmp5 = tmp4[1][Symbol.iterator]();
 };

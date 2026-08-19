@@ -2,7 +2,7 @@
 
 // Module 456 (AppStateImpl)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const AppStateImpl = importDefault;
 class AppStateImpl {
@@ -87,6 +87,7 @@ const items = [
           if (tmp5) {
             callback2();
           }
+          tmp5 = "focus" === closure_0 && arg0;
         });
       }
     }

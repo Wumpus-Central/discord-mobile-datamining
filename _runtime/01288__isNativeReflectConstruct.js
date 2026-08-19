@@ -1,11 +1,11 @@
 // === Module 1288: _isNativeReflectConstruct ===
 
 // Module 1288 (_isNativeReflectConstruct)
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1278 */;
-import StringBuilder from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -27,14 +27,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToPlainString(k2UNz_, maxSettingsForPreset) {
+function formatToPlainString(k2UNz_, Image) {
   let first = k2UNz_;
   if (typeof k2UNz_ !== "string") {
     const self = this;
-    first = this.bindFormatValues(closure_4, k2UNz_, maxSettingsForPreset)[0];
+    first = this.bindFormatValues(closure_4, k2UNz_, Image)[0];
   }
   return first;
 }
+_possibleConstructorReturn;
 class StringBuilder {
   constructor() {
     self = this;
@@ -57,6 +58,7 @@ class StringBuilder {
     return tmp3Result;
   }
 }
+_classCallCheck = StringBuilder;
 _inherits(StringBuilder, _isNativeReflectConstruct2.FormatBuilder);
 let items = [
   {

@@ -9,13 +9,8 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
   if (arg0 === undefined) {
     obj = {};
   }
-  let num;
   closure_1 = undefined;
   const depth = obj.depth;
-  num = 3;
-  if (undefined !== depth) {
-    num = depth;
-  }
   const captureErrorCause = obj.captureErrorCause;
   closure_1 = undefined === captureErrorCause || captureErrorCause;
   obj = {
@@ -34,7 +29,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       if (obj.originalException) {
         tmp3 = contexts;
         if (obj2.isError(obj.originalException)) {
-          const tmp7 = (function _extractErrorData(originalException, arg1, arg2) {
+          const tmp7 = (function _extractErrorData(originalException, closure_1, maxValueLength) {
             try {
               const items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
               const obj = {};
@@ -45,36 +40,25 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
               const nextResult = iter.next();
               while (iter !== undefined) {
                 let tmp9 = nextResult;
-                let tmp10 = items;
                 if (-1 !== items.indexOf(nextResult)) {
                   continue;
                 } else {
-                  let tmp11 = nextResult;
                   let tmp12 = originalException[tmp9];
                   let tmp13 = tmp12;
-                  let tmp14 = obj;
-                  let tmp15 = callback;
-                  let tmp16 = callback;
-                  let tmp17 = dependencyMap;
-                  let tmp18 = dependencyMap;
                   let obj2 = callback(7745);
                   if (!obj2.isError(tmp12)) {
-                    let tmp19 = tmp12;
                     if (typeof tmp13 !== "string") {
                       let truncateResult = tmp12;
                     }
                     obj[tmp9] = truncateResult;
                   }
-                  let tmp20 = tmp15;
-                  let tmp21 = tmp17;
-                  let tmp16Result = tmp16(7747);
-                  let tmp22 = tmp12;
+                  let tmp16Result = callback(7747);
                   let _HermesInternal = HermesInternal;
-                  truncateResult = tmp16Result.truncate("" + tmp13, arg2);
+                  truncateResult = tmp16Result.truncate("" + tmp13, maxValueLength);
                 }
               }
-              let tmp24 = arg1;
-              if (arg1) {
+              let tmp24 = closure_1;
+              if (closure_1) {
                 tmp24 = undefined !== originalException.cause;
               }
               if (!tmp24) {
@@ -83,16 +67,9 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
                   const _Object2 = Object;
                   const keys1 = Object.keys(toJSONResult);
                   for (const item10067 of keys1) {
-                    let tmp32 = toJSONResult;
                     let tmp33 = tmp49[item10067];
                     let str3 = tmp33;
-                    let tmp34 = obj;
-                    let tmp35 = callback;
-                    let tmp36 = callback;
-                    let tmp37 = dependencyMap;
-                    let tmp38 = dependencyMap;
                     let obj5 = callback(7745);
-                    let tmp39 = tmp33;
                     if (obj5.isError(tmp33)) {
                       str = str3.toString();
                     } else {
@@ -125,13 +102,13 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
           if (tmp7) {
             obj = {};
             const merged = Object.assign(contexts.contexts);
-            let tmp4Result = tmp4(tmp5[2]);
-            const normalizeResult = tmp4Result.normalize(tmp7, num);
-            tmp4Result = tmp4(tmp5[1]);
+            const normalizer = tmp4(table[2]);
+            const normalizeResult = normalizer.normalize(tmp7, num);
+            let tmp4Result = tmp4(table[1]);
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              const result = tmp4(tmp5[3]).addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              tmp4Result = tmp4(table[3]);
+              const result = tmp4Result.addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
               obj[tmp6] = normalizeResult;
-              const tmp4Result1 = tmp4(tmp5[3]);
             }
             obj = {};
             const merged1 = Object.assign(contexts);

@@ -1,6 +1,7 @@
 // === Module 7851: isBrowser ===
 
 // Module 7851 (isBrowser)
+import getGlobalSingleton from "getGlobalSingleton" /* 7739 */;
 import dynamicRequire from "dynamicRequire" /* 7852 */;
 
 require = arg1;
@@ -11,7 +12,7 @@ arg5.isBrowser = function isBrowser() {
     const isNodeEnvResult = dynamicRequire.isNodeEnv();
     let tmp3 = !isNodeEnvResult;
     if (isNodeEnvResult) {
-      const _process = tmp4(7739).GLOBAL_OBJ.process;
+      const _process = getGlobalSingleton.GLOBAL_OBJ.process;
       let tmp2 = _process;
       if (tmp2) {
         tmp2 = "renderer" === _process.type;
@@ -19,8 +20,6 @@ arg5.isBrowser = function isBrowser() {
       tmp3 = tmp2;
     }
     tmp = tmp3;
-    const obj = dynamicRequire;
-    tmp4 = require;
   }
   return tmp;
 };

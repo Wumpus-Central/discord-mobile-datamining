@@ -3,11 +3,11 @@
 // Module 172 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
 import PerformanceResourceTiming from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult2 from "_classPrivateFieldKey" /* 91 */;
 
 function _isNativeReflectConstruct() {
@@ -135,8 +135,7 @@ let items = [
   {
     key: "toJSON",
     value: function toJSON() {
-      let self = this;
-      self = this;
+      const self = this;
       const tmp = callback2(callback(self.prototype), "toJSON", this);
       closure_1 = tmp;
       let fn = tmp;

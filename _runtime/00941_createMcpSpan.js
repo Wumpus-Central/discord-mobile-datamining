@@ -18,8 +18,7 @@ function createMcpSpan(arg0) {
   let name = method;
   ({ transport, extra, callback } = arg0);
   if ("request" === type) {
-    let obj = extractTargetInfo;
-    obj = params;
+    let obj = params;
     if (!params) {
       obj = {};
     }
@@ -34,35 +33,33 @@ function createMcpSpan(arg0) {
   obj = {};
   const merged = Object.assign(extractClientInfo.buildTransportAttributes(transport, extra));
   obj[_mod940.MCP_METHOD_NAME_ATTRIBUTE] = method;
-  const obj4 = extractClientInfo;
   let recordInputs;
   if (options != null) {
     recordInputs = options.recordInputs;
   }
   const merged1 = Object.assign(getNotificationAttributes.buildTypeSpecificAttributes(type, message, params, recordInputs));
   if ("request" === type) {
-    let MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_SERVER_OP_VALUE;
-    let MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_FUNCTION_ORIGIN_VALUE;
+    let MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = _mod940.MCP_SERVER_OP_VALUE;
+    let MCP_NOTIFICATION_ORIGIN_VALUE = _mod940.MCP_FUNCTION_ORIGIN_VALUE;
   } else if ("notification-incoming" === type) {
-    MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_NOTIFICATION_CLIENT_TO_SERVER_OP_VALUE;
-    MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_NOTIFICATION_ORIGIN_VALUE;
+    MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = _mod940.MCP_NOTIFICATION_CLIENT_TO_SERVER_OP_VALUE;
+    MCP_NOTIFICATION_ORIGIN_VALUE = _mod940.MCP_NOTIFICATION_ORIGIN_VALUE;
   } else if ("notification-outgoing" === type) {
-    MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
-    MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_NOTIFICATION_ORIGIN_VALUE;
+    MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = _mod940.MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
+    MCP_NOTIFICATION_ORIGIN_VALUE = _mod940.MCP_NOTIFICATION_ORIGIN_VALUE;
   }
   obj1 = {};
   obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP] = MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE;
   obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = MCP_NOTIFICATION_ORIGIN_VALUE;
   obj1[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = _mod940.MCP_ROUTE_SOURCE_VALUE;
   const merged2 = Object.assign(obj1);
-  let tmp6Result = tmp6(848);
+  let tmp6Result = getClient;
   const client = tmp6Result.getClient();
   let sendDefaultPii;
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
-  const obj5 = getNotificationAttributes;
-  tmp6Result = tmp6(944);
+  tmp6Result = set;
   const attributes = tmp6Result.filterMcpPiiFromSpanData(obj, Boolean(sendDefaultPii));
   const BooleanResult = Boolean(sendDefaultPii);
   return createChildOrRootSpan.startSpan({ name, forceTransaction: true, attributes }, callback);
@@ -70,8 +67,7 @@ function createMcpSpan(arg0) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, self, closure_2, closure_0) {
   ({ method, params } = closure_1);
-  let obj = extractTargetInfo;
-  obj = params;
+  let obj = params;
   if (!params) {
     obj = {};
   }
@@ -82,13 +78,13 @@ arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, sel
     combined = "" + method + " " + target;
   }
   obj = {};
-  let tmpResult = tmp(938);
+  let tmpResult = extractClientInfo;
   const merged = Object.assign(tmpResult.buildTransportAttributes(self, closure_2));
   obj[_mod940.MCP_METHOD_NAME_ATTRIBUTE] = method;
-  tmpResult = tmp(943);
+  tmpResult = getNotificationAttributes;
   let recordInputs;
-  if (closure_0 != null) {
-    recordInputs = closure_0.recordInputs;
+  if (_require != null) {
+    recordInputs = _require.recordInputs;
   }
   const merged1 = Object.assign(tmpResult.buildTypeSpecificAttributes("request", closure_1, params, recordInputs));
   obj1 = {};

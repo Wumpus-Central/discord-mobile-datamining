@@ -1,13 +1,13 @@
 // === Module 6342: StyleSheet ===
 
 // Module 6342 (StyleSheet)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["height", "maxHeight", "minHeight", "backfaceVisibility", "backgroundColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "borderBottomColor", "borderBottomEndRadius", "borderBottomLeftRadius", "borderBottomRightRadius", "borderBottomStartRadius", "borderBottomWidth", "borderColor", "borderCurve", "borderEndColor", "borderEndEndRadius", "borderEndStartRadius", "borderEndWidth", "borderLeftColor", "borderLeftWidth", "borderRadius", "borderRightColor", "borderRightWidth", "borderStartColor", "borderStartEndRadius", "borderStartStartRadius", "borderStartWidth", "borderStyle", "borderTopColor", "borderTopEndRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderTopStartRadius", "borderTopWidth", "borderWidth", "boxShadow", "elevation", "filter", "mixBlendMode", "opacity", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "transform", "transformOrigin"];
 ({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
@@ -62,8 +62,6 @@ export const Header = function Header(layout) {
     }
     headerStatusBarHeight = num;
   }
-  const tmp = require;
-  const tmp2 = headerSearchBarOptions;
   const tmp6 = callback2(React.useState(false), 2);
   const tmp9 = undefined !== modal && modal;
   const defaultHeaderHeight = require(headerSearchBarOptions[10]).getDefaultHeaderHeight(layout, tmp9, headerStatusBarHeight);
@@ -81,12 +79,10 @@ export const Header = function Header(layout) {
   obj = { backfaceVisibility, backgroundColor, borderBlockColor, borderBlockEndColor, borderBlockStartColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderCurve, borderEndColor, borderEndEndRadius, borderEndStartRadius, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartEndRadius, borderStartStartRadius, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, boxShadow, elevation, filter, mixBlendMode, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, transform, transformOrigin };
   const entries = Object.entries(obj);
   for (const item10141 of entries) {
-    let tmp15 = callback2;
     let tmp16 = callback2(item10141, 2);
     let first = tmp16[0];
     if (undefined === tmp16[1]) {
       let _Reflect = Reflect;
-      let tmp18 = first;
       let deletePropertyResult = Reflect.deleteProperty(obj, first);
     }
     continue;
@@ -159,7 +155,7 @@ export const Header = function Header(layout) {
   items = [{ height, minHeight, maxHeight, opacity, transform }];
   const obj6 = { pointerEvents: "box-none", style: items1, children: null };
   items1 = [StyleSheet.absoluteFill, headerBackgroundContainerStyle];
-  ({ View, View: View2 } = closure_7);
+  ({ View, View: View2 } = RN);
   if (headerBackground) {
     const obj7 = { style: null };
     obj7[0] = obj1;
@@ -177,11 +173,11 @@ export const Header = function Header(layout) {
     const obj8 = { pointerEvents: null, style: null };
     obj8[0] = str5;
     obj8[1] = obj1;
-    headerBackgroundResult = tmp30(require(headerSearchBarOptions[12]).HeaderBackground, obj8);
+    headerBackgroundResult = callback(require(headerSearchBarOptions[12]).HeaderBackground, obj8);
     tmp32 = headerSearchBarOptions;
   }
   obj6[2] = headerBackgroundResult;
-  const items2 = [closure_10(View2, obj6), closure_10(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }), ];
+  const items2 = [callback(View2, obj6), callback(View, { pointerEvents: "none", style: { height: headerStatusBarHeight } }), ];
   const obj9 = { pointerEvents: "box-none", style: items3, children: null };
   items3 = [closure_13.content, null];
   const items4 = [closure_13.start, , , ];
@@ -190,15 +186,15 @@ export const Header = function Header(layout) {
     expand = "center" === str;
   }
   if (expand) {
-    expand = tmp36.expand;
+    expand = closure_13.expand;
   }
   items4[1] = expand;
   items4[2] = { marginStart: rect.left };
   items4[3] = headerLeftContainerStyle;
-  const items5 = [closure_10(closure_7.View, { pointerEvents: "box-none", style: items4, children: headerLeftResult }), , ];
+  const items5 = [callback(RN.View, { pointerEvents: "box-none", style: items4, children: headerLeftResult }), , ];
   let tmp28Result = null;
   if (!tmp7) {
-    const items6 = [tmp36.title, , , ];
+    const items6 = [closure_13.title, , , ];
     if ("center" === str) {
       let num6 = 16;
       if (headerLeftResult) {
@@ -253,10 +249,10 @@ export const Header = function Header(layout) {
       };
       obj13[4] = headerTitleStyle;
       obj12[2] = headerTitle(obj13);
-      const items7 = [tmp30(tmp29.View, obj12), ];
+      const items7 = [callback(RN.View, obj12), ];
       const obj14 = { pointerEvents: "box-none", style: null, children: null };
       const items8 = [, , , ];
-      ({ end: arr9[0], expand: arr9[1] } = tmp36);
+      ({ end: arr9[0], expand: arr9[1] } = closure_13);
       const obj15 = { marginEnd: null };
       obj15[0] = rect.right;
       items8[2] = obj15;
@@ -281,18 +277,17 @@ export const Header = function Header(layout) {
         const obj17 = { source: null, tintColor: null };
         obj17[0] = importDefault(headerSearchBarOptions[16]);
         obj17[1] = text;
-        obj16[4] = tmp30(require(headerSearchBarOptions[15]).HeaderIcon, obj17);
-        tmp30Result = tmp30(require(headerSearchBarOptions[14]).HeaderButton, obj16);
+        obj16[4] = callback(require(headerSearchBarOptions[15]).HeaderIcon, obj17);
+        tmp30Result = callback(require(headerSearchBarOptions[14]).HeaderButton, obj16);
       }
       const obj18 = { children: null };
       items9[1] = tmp30Result;
       obj14[2] = items9;
-      items7[1] = tmp28(tmp29.View, obj14);
+      items7[1] = callback2(RN.View, obj14);
       obj18[0] = items7;
-      tmp28Result = tmp28(tmp38, obj18);
+      tmp28Result = callback2(closure_12, obj18);
     }
     obj11 = { marginHorizontal: 16 };
-    tmp38 = closure_12;
   }
   items5[1] = tmp28Result;
   tmp30Result = null;
@@ -316,11 +311,11 @@ export const Header = function Header(layout) {
     }
     const items10 = [obj20];
     obj19.style = items10;
-    tmp30Result = tmp30(require(headerSearchBarOptions[17]).HeaderSearchBar, obj19);
+    tmp30Result = callback(require(headerSearchBarOptions[17]).HeaderSearchBar, obj19);
   }
   items5[2] = tmp30Result;
   obj9[2] = items5;
-  items2[2] = closure_11(View, obj9);
+  items2[2] = callback2(View, obj9);
   obj5[2] = items2;
-  return closure_11(View, obj5);
+  return callback2(View, obj5);
 };

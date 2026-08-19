@@ -23,7 +23,6 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   const onPress = hapticType.onPress;
   const onLongPress = hapticType.onLongPress;
   const merged = Object.assign(hapticType, Object.create(null));
-  closure_6 = undefined;
   const items = [impactMedium, hapticOptions];
   const tmp4 = onPressIn(() => {
     str(hapticOptions[4]).trigger(impactMedium, hapticOptions);

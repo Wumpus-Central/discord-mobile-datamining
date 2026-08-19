@@ -1,7 +1,7 @@
 // === Module 1052: LCPEntryManager ===
 
 // Module 1052 (LCPEntryManager)
-import LCPEntryManager from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -11,6 +11,7 @@ class LCPEntryManager {
     return;
   }
 }
+_classCallCheck = LCPEntryManager;
 const items = [
   {
     key: "_processEntry",

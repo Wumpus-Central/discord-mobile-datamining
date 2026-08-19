@@ -1,14 +1,14 @@
 // === Module 1870: KeyboardToolbar ===
 
 // Module 1870 (KeyboardToolbar)
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "noop" /* 19 */;
-import closure_9 from "noop" /* 19 */;
+import noop2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["children", "content", "theme", "doneText", "button", "icon", "showArrows", "onNextCallback", "onPrevCallback", "onDoneCallback", "blur", "opacity", "offset", "enabled", "insets"];
 ({ useEffect: closure_6, useMemo: error, useState: closure_8 } = noop);
 ({ StyleSheet, View: c10 } = get_ActivityIndicator);
@@ -166,13 +166,13 @@ class KeyboardToolbar {
           type = type.type;
           if (type === theme(num[11]).Background) {
             closure_13 = type;
-          } else if (type === tmp(tmp2[11]).Content) {
+          } else if (type === theme(num[11]).Content) {
             closure_11 = type;
-          } else if (type === tmp(tmp2[11]).Prev) {
+          } else if (type === theme(num[11]).Prev) {
             closure_9 = type;
-          } else if (type === tmp(tmp2[11]).Next) {
+          } else if (type === theme(num[11]).Next) {
             closure_10 = type;
-          } else if (type === tmp(tmp2[11]).Done) {
+          } else if (type === theme(num[11]).Done) {
             closure_12 = type;
           }
         }
@@ -269,8 +269,7 @@ class KeyboardToolbar {
     return c12(require("context").ToolbarContext.Provider, obj7);
   }
 }
-let obj = { sticky: null, toolbar: null, arrows: null, floating: null };
-obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT };
+let obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT };
 obj[0] = obj;
 obj = { position: "absolute", bottom: 0, alignItems: "center", width: "100%", flexDirection: "row", height: require("TEST_ID_KEYBOARD_TOOLBAR").KEYBOARD_TOOLBAR_HEIGHT };
 obj[1] = obj;

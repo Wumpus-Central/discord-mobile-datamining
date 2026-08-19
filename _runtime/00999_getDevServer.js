@@ -1,12 +1,14 @@
 // === Module 999: getDevServer ===
 
 // Module 999 (getDevServer)
-const module = arg2;
+import getConstantsDefault from "getConstants" /* 82 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function getDevServer() {
   let str = first;
   if (undefined === first) {
-    let obj = module(82);
+    let obj = getConstantsDefault;
     let str2 = obj.getConstants().scriptURL;
     const match = str2.match(/^https?:\/\/.*?\//);
     first = null;

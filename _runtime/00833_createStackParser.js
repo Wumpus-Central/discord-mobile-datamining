@@ -3,9 +3,8 @@
 // Module 833 (createStackParser)
 function createStackParser() {
   let items = [...arguments];
-  closure_0 = undefined;
   const sorted = items.sort((arg0, arg1) => arg0[0] - arg1[0]);
-  closure_0 = sorted.map((arg0) => arg0[1]);
+  closure_0 = sorted.map((item, index) => item[1]);
   return (str) => {
     let num = arg1;
     if (arg1 === undefined) {
@@ -20,32 +19,24 @@ function createStackParser() {
     if (num < parts.length) {
       while (true) {
         let arr3 = parts[num];
-        let tmp = num;
         str = arr3;
         if (arr3.length > 1024) {
           str = arr3.slice(0, 1024);
         }
-        let tmp2 = regex;
-        let tmp3 = str;
         let str2 = str;
         if (regex.test(str)) {
-          str2 = str.replace(tmp2, "$1");
+          str2 = str.replace(regex, "$1");
         }
-        let tmp4 = str2;
         if (str2.match(/\S*Error: /)) {
           num = num + 1;
           if (num >= parts.length) {
             break;
           }
         } else {
-          let tmp5 = regex;
-          let tmp6 = regex;
           for (const item10033 of closure_0) {
             let item10033Result = item10033(str2);
             if (item10033Result) {
-              let tmp9 = item10033Result;
               let arr = items.push(tmp8);
-              let tmp11 = obj;
               obj.return();
               break;
             }
@@ -58,15 +49,14 @@ function createStackParser() {
         break;
       }
     }
-    return closure_1_3(items.slice(num2));
+    return stripSentryFramesAndReverse(items.slice(num2));
   };
 }
 function stripSentryFramesAndReverse(arg0) {
   if (arg0.length) {
     const _Array = Array;
     let arr = Array.from(arg0);
-    let obj = /sentryWrapped/;
-    obj = arr[arr.length - 1];
+    let obj = arr[arr.length - 1];
     if (!obj) {
       obj = {};
     }
@@ -90,16 +80,15 @@ function stripSentryFramesAndReverse(arg0) {
       tmp7 = obj1.function || "";
     }
     const substr = arr.slice(0, 50);
-    return substr.map((filename) => {
+    return substr.map((item, index) => {
       const obj = {};
-      const merged = Object.assign(filename);
-      filename = filename.filename;
+      const merged = Object.assign(item);
+      let filename = item.filename;
       if (!filename) {
         filename = arr[arr.length - 1] || {}.filename;
-        const tmp3 = arr[arr.length - 1] || {};
       }
       obj.filename = filename;
-      obj.function = filename.function || "?";
+      obj.function = item.function || "?";
       return obj;
     });
   } else {
@@ -118,11 +107,11 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     let items = [];
     try {
       const values = exception.values;
-      const item = values.forEach((stacktrace) => {
-        if (stacktrace.stacktrace.frames) {
+      const item = values.forEach((item, index) => {
+        if (item.stacktrace.frames) {
           const push = items.push;
           items = [];
-          HermesBuiltin.arraySpread(stacktrace.stacktrace.frames, 0);
+          HermesBuiltin.arraySpread(item.stacktrace.frames, 0);
           HermesBuiltin.apply(items, items);
         }
       });
@@ -131,14 +120,13 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     }
   }
 };
-arg5.getFunctionName = function getFunctionName(fn) {
+arg5.getFunctionName = function getFunctionName(name) {
   try {
-    let name = fn;
-    if (fn) {
-      name = typeof fn === "function";
+    if (name) {
+      name = typeof name === "function";
     }
     if (name) {
-      name = fn.name;
+      name = name.name;
     }
     if (!name) {
       name = c4;
@@ -158,14 +146,14 @@ arg5.getVueInternalName = function getVueInternalName(__v_isVNode) {
   }
   return str;
 };
-arg5.normalizeStackTracePath = function normalizeStackTracePath(nextResult) {
+arg5.normalizeStackTracePath = function normalizeStackTracePath(match1) {
   let startsWithResult;
-  if (nextResult != null) {
-    startsWithResult = nextResult.startsWith("file://");
+  if (match1 != null) {
+    startsWithResult = match1.startsWith("file://");
   }
-  let str2 = nextResult;
+  let str2 = match1;
   if (startsWithResult) {
-    str2 = nextResult.slice(7);
+    str2 = match1.slice(7);
   }
   let match;
   if (str2 != null) {

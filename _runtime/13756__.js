@@ -61,7 +61,7 @@ function createIntegerConversion(exponent, unsigned) {
           }
         }
         const _HermesInternal2 = HermesInternal;
-        const combined = "is outside the accepted range of " + tmp21 + " to " + closure_1 + ", inclusive";
+        const combined = "is outside the accepted range of " + closure_0 + " to " + closure_1 + ", inclusive";
         let str11 = "Value";
         if (obj) {
           str11 = "Value";
@@ -128,13 +128,13 @@ function createIntegerConversion(exponent, unsigned) {
             }
             let sum = result;
             if (num10 !== num9) {
-              sum = result + tmp9;
+              sum = result + closure_3;
             }
             let diff = sum;
             if (closure_2) {
               diff = sum;
               if (sum >= closure_4) {
-                diff = sum - tmp9;
+                diff = sum - closure_3;
               }
             }
             let tmp8 = diff;
@@ -312,7 +312,6 @@ unsigned_long_long.USVString = (arg0, arg1) => {
   if (0 < DOMStringResult.length) {
     while (true) {
       let charCodeAtResult = DOMStringResult.charCodeAt(num);
-      let tmp2 = num;
       if (charCodeAtResult >= 55296) {
         if (charCodeAtResult <= 57343) {
           if (56320 <= charCodeAtResult) {
@@ -386,7 +385,7 @@ unsigned_long_long.object = (arg0, context) => {
     return arg0;
   }
 };
-let get = Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
+Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
 unsigned_long_long.ArrayBuffer = (arg0, context) => {
   if (isArrayBuffer(arg0)) {
     return arg0;
@@ -403,7 +402,7 @@ unsigned_long_long.ArrayBuffer = (arg0, context) => {
     throw typeError;
   }
 };
-get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
+const get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
 unsigned_long_long.DataView = (arg0, arg1) => {
   try {
     const call = get.call;
@@ -420,12 +419,8 @@ unsigned_long_long.DataView = (arg0, arg1) => {
   }
 };
 let items = [Int8Array, Int16Array, Int32Array, Uint8Array, Uint16Array, Uint32Array, Uint8ClampedArray, Float32Array, Float64Array];
-const item = items.forEach((name) => {
-  name = name.name;
-  let str = "a";
-  if (obj.test(name)) {
-    str = "an";
-  }
+const item = items.forEach((item, index) => {
+  const name = item.name;
   name[name] = (arg0, context) => {
     if (ArrayBuffer.isView(arg0)) {
       if (arg0.constructor.name === name) {

@@ -2,15 +2,16 @@
 
 // Module 4392 (iterateValue)
 import getIterator from "getIterator" /* 4393 */;
+import iterateIterator from "iterateIterator" /* 4394 */;
 
 
 export default function iterateValue(arg0) {
   const tmp3 = getIterator(arg0);
   if (tmp3) {
     if (arguments.length > 1) {
-      let tmp9 = tmp(4394)(tmp3, arguments[1]);
+      let tmp9 = iterateIterator(tmp3, arguments[1]);
     } else {
-      tmp9 = tmp(4394)(tmp3);
+      tmp9 = iterateIterator(tmp3);
     }
     return tmp9;
   } else {

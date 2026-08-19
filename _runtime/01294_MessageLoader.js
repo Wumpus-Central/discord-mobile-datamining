@@ -1,8 +1,8 @@
 // === Module 1294: MessageLoader ===
 
 // Module 1294 (MessageLoader)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const MessageLoader = require;
@@ -19,12 +19,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -44,8 +44,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -59,13 +59,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -93,7 +93,7 @@ class MessageLoader {
       _loop = function _loop(arg0) {
         closure_0 = arg0;
         hot = hot.hot;
-        hot.accept(hot, () => closure_2_5(closure_0, undefined, undefined, function() {
+        hot.accept(hot, () => fn(closure_0, undefined, undefined, function() {
           self = this;
           c2 = 0;
           c3 = 0;
@@ -319,17 +319,17 @@ let items = [
                   closure_4 = tmp2;
                   if (null == self.messages[self]) {
                     let current;
-                    if (null !== tmp38._localeLoadingPromises[self]) {
+                    if (null !== self._localeLoadingPromises[self]) {
                       if (undefined !== tmp42) {
                         current = tmp42.current;
                       }
                     }
                     if (null == current) {
-                      if (null != tmp38.localeImportMap[self]) {
-                        const localeImportMap = tmp38.localeImportMap;
+                      if (null != self.localeImportMap[self]) {
+                        const localeImportMap = self.localeImportMap;
                         const tmp25 = localeImportMap[self]();
                         let initialized;
-                        if (null !== tmp38._localeLoadingPromises[self]) {
+                        if (null !== self._localeLoadingPromises[self]) {
                           if (undefined !== tmp27) {
                             initialized = tmp27.initialized;
                           }
@@ -344,8 +344,8 @@ let items = [
                         obj1 = { initialized: null, current: null };
                         obj1[0] = tmp29;
                         obj1[1] = tmp25;
-                        tmp38._localeLoadingPromises[self] = obj1;
-                        const messages = tmp38.messages;
+                        self._localeLoadingPromises[self] = obj1;
+                        const messages = self.messages;
                         closure_1 = self;
                         c5 = 1;
                         c6 = 1;
@@ -353,7 +353,7 @@ let items = [
                         obj2[0] = tmp25;
                         return obj2;
                       } else {
-                        const supportedLocales = tmp38.supportedLocales;
+                        const supportedLocales = self.supportedLocales;
                         if (supportedLocales.includes(self)) {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
@@ -363,7 +363,7 @@ let items = [
                       }
                     } else {
                       let current1;
-                      if (null !== tmp38._localeLoadingPromises[self]) {
+                      if (null !== self._localeLoadingPromises[self]) {
                         if (undefined !== tmp14) {
                           current1 = tmp14.current;
                         }
@@ -674,7 +674,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
             c1 = 1;
             c0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(closure_1_7.map((_loadLocale) => _loadLocale._loadLocale(c0)));
+            obj1[0] = Promise.all(closure_1_7.map((item, index) => item._loadLocale(c0)));
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -727,7 +727,7 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
             c1 = 1;
             c0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(closure_1_7.map((waitForDefaultLocale) => waitForDefaultLocale.waitForDefaultLocale()));
+            obj1[0] = Promise.all(closure_1_7.map((item, index) => item.waitForDefaultLocale()));
             return obj1;
           }
         } else if (arg0 === 1) {

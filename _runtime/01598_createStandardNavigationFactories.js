@@ -1,11 +1,11 @@
 // === Module 1598: createStandardNavigationFactories ===
 
 // Module 1598 (createStandardNavigationFactories)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
 
 export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
@@ -35,11 +35,11 @@ export const createStandardNavigationFactories = function createStandardNavigati
       let flag = tmp2.useMemoArray;
       if (!("preloadedRoutes" in navigationBuilder.state)) {
         let routes = navigationBuilder.state.routes;
-        const flagResult = flag(routes.map((key) => {
-          const tmp = callback(key.name, key.params);
-          const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }, ];
+        const flagResult = flag(routes.map((item, index) => {
+          const tmp = callback(item.name, item.params);
+          const items = [{ key: item.key, name: item.name, params: item.params, href: tmp }, ];
           const items1 = [, , , ];
-          ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
+          ({ key: arr2[0], name: arr2[1], params: arr2[2] } = item);
           items1[3] = tmp;
           items[1] = items1;
           return items;
@@ -55,8 +55,9 @@ export const createStandardNavigationFactories = function createStandardNavigati
       }
       routes = navigationBuilder.state.routes;
       routes = routes.concat(navigationBuilder.state.preloadedRoutes);
+      const obj2 = callback(1599);
     });
-    const obj2 = _require(1503);
+    let obj2 = _require(1503);
     obj[1] = _require(1503).createScreenFactory();
     return obj;
   }

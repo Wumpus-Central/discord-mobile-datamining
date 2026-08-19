@@ -3,7 +3,7 @@
 // Module 125 (importDefaultResult1)
 import _createClassDefault from "_createClass" /* 42 */;
 import DOMRectReadOnly from "_classCallCheck" /* 41 */;
-import closure_1 from "_classPrivateFieldBase" /* 90 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
@@ -19,7 +19,7 @@ class DOMRectReadOnly {
     definePropertyResult2 = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
     definePropertyResult3 = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
     __setInternalXResult = this.__setInternalX(global);
-    __setInternalYResult = this.__setInternalY(arg1);
+    __setInternalYResult = this.__setInternalY(fn);
     __setInternalWidthResult = this.__setInternalWidth(importDefault);
     __setInternalHeightResult = this.__setInternalHeight(importAll);
     return;
@@ -138,6 +138,7 @@ const items = [
         num = Number(arg0);
       }
       callback(this, closure_2)[closure_2] = num;
+      const tmp2 = callback(this, closure_2);
     }
   },
   {
@@ -149,6 +150,7 @@ const items = [
         num = Number(DOMRectReadOnly);
       }
       callback(this, closure_3)[closure_3] = num;
+      const tmp2 = callback(this, closure_3);
     }
   },
   {
@@ -160,6 +162,7 @@ const items = [
         num = Number(width);
       }
       callback(this, closure_4)[closure_4] = num;
+      const tmp2 = callback(this, closure_4);
     }
   },
   {
@@ -171,6 +174,7 @@ const items = [
         num = Number(height);
       }
       callback(this, closure_5)[closure_5] = num;
+      const tmp2 = callback(this, closure_5);
     }
   }
 ];
@@ -179,8 +183,8 @@ obj = {
   value: function fromRect(arg0) {
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let obj = Object.create(tmp.prototype);
-      DOMRectReadOnly(obj, tmp);
+      let obj = Object.create(DOMRectReadOnly.prototype);
+      DOMRectReadOnly(obj, DOMRectReadOnly);
       const _Object5 = Object;
       Object.defineProperty(obj, closure_2, { writable: true, value: "a" });
       const _Object6 = Object;
@@ -194,8 +198,8 @@ obj = {
       obj.__setInternalWidth(width);
       obj.__setInternalHeight(height);
     } else {
-      obj = Object.create(tmp.prototype);
-      DOMRectReadOnly(obj, tmp);
+      obj = Object.create(DOMRectReadOnly.prototype);
+      DOMRectReadOnly(obj, DOMRectReadOnly);
       const _Object = Object;
       Object.defineProperty(obj, closure_2, { writable: true, value: "a" });
       const _Object2 = Object;

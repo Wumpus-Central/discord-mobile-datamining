@@ -20,7 +20,6 @@ import TabsHostDefault from "TabsHost" /* 4706 */;
 import RNSModule from "RNSModule" /* 4671 */;
 
 for (const key10015 in require("module_4672")) {
-  let tmp3 = key10015;
   arg5[key10015] = require("module_4672")[key10015];
   continue;
 }

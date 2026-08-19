@@ -19,38 +19,38 @@ arg5.default = {
       closure_0 = arg0;
       const immediate = setImmediate(() => {
         if (typeof callback === "object") {
-          if (null !== obj) {
-            if (typeof obj.gen === "function") {
-              obj.gen().then(callback, closure_2_2);
-              const genResult = obj.gen();
-            } else if (typeof obj.run === "function") {
+          if (null !== callback) {
+            if (typeof callback.gen === "function") {
+              callback.gen().then(callback, reject);
+              const genResult = callback.gen();
+            } else if (typeof callback.run === "function") {
               try {
-                obj.run();
+                callback.run();
                 callback();
               } catch (tmp12) {
-                closure_2_2(callback(closure_2_1[0]).default(tmp12));
-                const obj3 = callback(closure_2_1[0]);
+                reject(callback(dependencyMap[0]).default(tmp12));
+                const obj3 = callback(dependencyMap[0]);
               }
             } else {
               const _TypeError2 = TypeError;
               const _HermesInternal = HermesInternal;
-              const typeError = new TypeError("Task \"" + obj.name + "\" missing gen or run.");
-              closure_2_2(typeError);
+              const typeError = new TypeError("Task \"" + callback.name + "\" missing gen or run.");
+              reject(typeError);
             }
           }
         }
         if (typeof callback === "function") {
           try {
-            obj();
+            callback();
             callback();
           } catch (tmp4) {
-            closure_2_2(callback(closure_2_1[0]).default(tmp4));
-            const obj2 = callback(closure_2_1[0]);
+            reject(callback(dependencyMap[0]).default(tmp4));
+            const obj2 = callback(dependencyMap[0]);
           }
         } else {
           const _TypeError = TypeError;
-          const typeError1 = new TypeError("Invalid task of type: " + typeof obj);
-          closure_2_2(typeError1);
+          const typeError1 = new TypeError("Invalid task of type: " + typeof callback);
+          reject(typeError1);
         }
       });
     });

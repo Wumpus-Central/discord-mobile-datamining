@@ -1,13 +1,13 @@
 // === Module 837: dsnFromString ===
 
 // Module 837 (dsnFromString)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 function dsnFromString(arg0) {
   const _require = arg0;
   const match = regex.exec(arg0);
   if (match) {
-    const tmp5 = callback(match.slice(1), 6);
+    const tmp5 = _slicedToArray(match.slice(1), 6);
     let str = tmp5[1];
     let str3 = "";
     if (undefined !== tmp5[2]) {
@@ -124,18 +124,18 @@ export const extractOrgIdFromDsnHost = function extractOrgIdFromDsnHost(str) {
   }
   return tmp2;
 };
-export const makeDsn = function makeDsn(str) {
-  if (typeof str === "string") {
-    let obj = dsnFromString(str);
+export const makeDsn = function makeDsn(protocol) {
+  if (typeof protocol === "string") {
+    let obj = dsnFromString(protocol);
   } else {
     obj = { protocol: null, publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    obj[0] = str.protocol;
-    obj[1] = str.publicKey || "";
-    obj[2] = str.pass || "";
-    obj[3] = str.host;
-    obj[4] = str.port || "";
-    obj[5] = str.path || "";
-    obj[6] = str.projectId;
+    obj[0] = protocol.protocol;
+    obj[1] = protocol.publicKey || "";
+    obj[2] = protocol.pass || "";
+    obj[3] = protocol.host;
+    obj[4] = protocol.port || "";
+    obj[5] = protocol.path || "";
+    obj[6] = protocol.projectId;
   }
   if (obj) {
     error = obj;
@@ -143,12 +143,12 @@ export const makeDsn = function makeDsn(str) {
     if (obj(823).DEBUG_BUILD) {
       ({ port, projectId, protocol } = obj);
       const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((arg0) => {
+      const found = items.find((item, index) => {
         let flag = !tmp;
-        if (!obj[arg0]) {
-          const debug = obj(closure_1_1[1]).debug;
+        if (!obj[item]) {
+          const debug = obj(dependencyMap[1]).debug;
           const _HermesInternal = HermesInternal;
-          debug.error("Invalid Sentry Dsn: " + arg0 + " missing");
+          debug.error("Invalid Sentry Dsn: " + item + " missing");
           flag = true;
         }
         return flag;
@@ -179,12 +179,10 @@ export const makeDsn = function makeDsn(str) {
             error("Invalid Sentry Dsn: Invalid port " + port);
             num3 = 1;
           }
-          let num2 = num3;
         } else {
           const debug2 = error(824).debug;
           const _HermesInternal2 = HermesInternal;
           debug2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
-          num2 = 1;
         }
       }
     }

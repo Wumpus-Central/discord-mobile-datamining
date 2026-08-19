@@ -2,14 +2,14 @@
 
 // Module 1176 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { Alert } from "get ActivityIndicator" /* 17 */;
 
-let ReactNativeClient = arg1;
+let ReactNativeClient = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -112,13 +112,13 @@ class ReactNativeClient {
     if (global.enableLogs) {
       str5 = "flush";
       onResult1 = tmp14Result.on("flush", () => {
-        const result = lib(closure_1_1[10])._INTERNAL_flushLogsBuffer(lib);
+        const result = lib(dependencyMap[10])._INTERNAL_flushLogsBuffer(lib);
       });
       str6 = "afterCaptureLog";
       onResult2 = tmp14Result.on("afterCaptureLog", () => {
         if (lib._logFlushIdleTimeout) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(tmp._logFlushIdleTimeout);
+          clearTimeout(lib._logFlushIdleTimeout);
         }
         lib._logFlushIdleTimeout = setTimeout(() => {
           const result = closure_1_0(closure_1_1[10])._INTERNAL_flushLogsBuffer(closure_0);
@@ -162,18 +162,18 @@ let items = [
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      return fn([]).then((arg0) => {
-        const _self = arg0;
+      return fn([]).then((result) => {
+        const _self = result;
         const NATIVE = _self(fn[12]).NATIVE;
-        return NATIVE.closeNativeSdk().then(() => closure_0);
+        return NATIVE.closeNativeSdk().then((result) => closure_0);
       });
     }
   },
   {
     key: "captureUserFeedback",
     value: function captureUserFeedback(arg0) {
-      let obj = ReactNativeClient(1178);
-      obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "Array" };
+      ReactNativeClient(1178);
+      const obj = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "Array" };
       this.sendEnvelope(obj.createUserFeedbackEnvelope(arg0, obj));
     }
   },
@@ -194,12 +194,12 @@ let items = [
             self.emit("beforeEnvelope", arg0);
             const _transport = self._transport;
             _transport.send(arg0).then(null, (arg0) => {
-              if (arg0 instanceof _true(closure_1_1[10]).SentryError) {
+              if (arg0 instanceof _true(dependencyMap[10]).SentryError) {
                 _true = false;
-                const debug2 = tmp(tmp2[10]).debug;
+                const debug2 = tmp(dependencyMap[10]).debug;
                 debug2.error("SentryError while sending event, keeping outcomes buffer:", arg0);
               } else {
-                const debug = tmp(tmp2[10]).debug;
+                const debug = tmp(dependencyMap[10]).debug;
                 debug.error("Error while sending event:", arg0);
               }
             });
@@ -213,13 +213,13 @@ let items = [
       }
       let debug = tmp2(817).debug;
       debug.error("Transport disabled");
+      const obj = ReactNativeClient(1179);
     }
   },
   {
     key: "init",
     value: function init() {
-      let self = this;
-      self = this;
+      const self = this;
       let fn = callback3(callback2(self.prototype), "init", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -245,8 +245,7 @@ let items = [
     value: function emit(arg0) {
       const substr = [...arguments].slice();
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "emit", this);
+      let fn = callback3(callback2(self.prototype), "emit", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -257,8 +256,7 @@ let items = [
   {
     key: "_initNativeSdk",
     value: function _initNativeSdk() {
-      let self = this;
-      self = this;
+      const self = this;
       const NATIVE = self(1001).NATIVE;
       let obj = { defaultSidecarUrl: null, devServerUrl: null, mobileReplayOptions: null, androidProfilingOptions: null };
       const merged = Object.assign({}, this._options);
@@ -292,14 +290,14 @@ let items = [
       obj[3] = prop;
       const nativeSdk = NATIVE.initNativeSdk(Object.assign(merged, obj));
       const obj3 = self(814);
-      const nextPromise = nativeSdk.then((arg0) => arg0, () => {
+      const nextPromise = nativeSdk.then((result) => result, () => {
         const result = self._showCannotConnectDialog();
         return false;
       });
-      nativeSdk.then((arg0) => arg0, () => {
+      nativeSdk.then((result) => result, () => {
         const result = self._showCannotConnectDialog();
         return false;
-      }).then((arg0) => {
+      }).then((result) => {
         let obj = self;
         const _options = self._options;
         const onReady = _options.onReady;
@@ -310,7 +308,7 @@ let items = [
         if (!tmp) {
           const call = onReady.call;
           obj = { didCallNativeInit: null };
-          obj[0] = arg0;
+          obj[0] = result;
           if (typeof call === "unknown") {
             onReady(obj);
           } else {
@@ -321,6 +319,29 @@ let items = [
       }).then(undefined, (arg0) => {
         const debug = self(table[10]).debug;
         debug.error("The OnReady callback threw an error: ", arg0);
+      });
+      const nextPromise1 = nativeSdk.then((result) => result, () => {
+        const result = self._showCannotConnectDialog();
+        return false;
+      }).then((result) => {
+        let obj = self;
+        const _options = self._options;
+        const onReady = _options.onReady;
+        let tmp = null === onReady;
+        if (!tmp) {
+          tmp = undefined === onReady;
+        }
+        if (!tmp) {
+          const call = onReady.call;
+          obj = { didCallNativeInit: null };
+          obj[0] = result;
+          if (typeof call === "unknown") {
+            onReady(obj);
+          } else {
+            call(_options, obj);
+          }
+        }
+        obj.emit("afterInit");
       });
     }
   },

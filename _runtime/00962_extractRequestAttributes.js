@@ -5,16 +5,16 @@ import _mod839 from "module_839" /* 839 */;
 import _mod958 from "module_958" /* 958 */;
 import buildMethodPath from "buildMethodPath" /* 960 */;
 import getOperationName from "getOperationName" /* 963 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function extractRequestAttributes(first, closure_1_1) {
+function extractRequestAttributes(model, closure_1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[_mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(closure_1_1);
+  obj[_mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(dependencyMap);
   obj[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
-  if (first.length > 0) {
-    if (typeof first[0] === "object") {
-      if (null !== first[0]) {
-        first = first[0];
+  if (model.length > 0) {
+    if (typeof model[0] === "object") {
+      if (null !== model[0]) {
+        const first = model[0];
         const _Array = Array;
         const tmp5 = Array.isArray(first.tools) ? first.tools : [];
         const items = [];
@@ -33,11 +33,11 @@ function extractRequestAttributes(first, closure_1_1) {
             json = JSON.stringify(items);
           }
           if (json) {
-            obj[tmp(958).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = json;
+            obj[_mod958.GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = json;
           }
           const _Object = Object;
-          const merged1 = Object.assign(obj, tmp(963).extractRequestParameters(first));
-          const tmpResult = tmp(963);
+          const merged1 = Object.assign(obj, getOperationName.extractRequestParameters(first));
+          const tmpResult = getOperationName;
         }
         items2 = [];
       }
@@ -57,10 +57,8 @@ function addRequestAttributes(setAttribute, input) {
       const truncatedJsonString = buildMethodPath.getTruncatedJsonString(input);
       const attr = setAttribute.setAttribute(_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
-        const attr1 = setAttribute.setAttribute(tmp2(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
+        const attr1 = setAttribute.setAttribute(_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      const obj = buildMethodPath;
-      tmp2 = require;
     }
   }
 }
@@ -74,7 +72,6 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
   const BooleanResult = Boolean(sendDefaultPii);
-  obj = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
   const merged = Object.assign(arg1);
   _require = "";
   obj = {
@@ -83,9 +80,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
       let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
       if (typeof obj === "function") {
         if (tmpResult.shouldInstrument(methodPath)) {
-          str = obj;
           closure_1 = methodPath;
-          str = self;
           closure_3 = closure_1;
           str = closure_1_2(() => {
             closure_0 = [...arguments];
@@ -156,7 +151,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(dependencyMap[2]).getSpanOperation(closure_1_1);
                       obj2[2] = dependencyMap;
                       obj5.startSpanManual(obj2, (() => {
-                        closure_0 = closure_2_2(/* F120496 */ function() { ... });
+                        closure_0 = str(/* F120496 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(dependencyMap[2]);
@@ -169,7 +164,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(closure_1_1);
                     obj3[2] = dependencyMap;
                     obj1.startSpan(obj3, (() => {
-                      closure_0 = closure_2_2(/* F120498 */ function() { ... });
+                      closure_0 = str(/* F120498 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -213,9 +208,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
               let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
               if (typeof obj === "function") {
                 if (tmpResult.shouldInstrument(methodPath)) {
-                  str = obj;
                   closure_1 = methodPath;
-                  str = self;
                   closure_3 = closure_1;
                   str = closure_1_2(() => {
                     closure_0 = [...arguments];
@@ -337,9 +330,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                       if (typeof obj === "function") {
                         if (tmpResult.shouldInstrument(methodPath)) {
-                          str = obj;
                           closure_1 = methodPath;
-                          str = self;
                           closure_3 = closure_1;
                           str = closure_1_2(() => {
                             closure_0 = [...arguments];
@@ -380,9 +371,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                               let methodPath = closure_1_0(closure_1_1[2]).buildMethodPath(str, String(arg1));
                               if (typeof obj === "function") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
-                                  str = obj;
                                   closure_1 = methodPath;
-                                  str = self;
                                   closure_3 = closure_1;
                                   str = closure_1_2(() => { ... });
                                   function instrumentedMethod() { ... }
@@ -404,28 +393,28 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                     obj = { get: null };
                                     obj[0] = function get() { ... };
                                     instrumentedMethod = new Proxy(obj, obj);
-                                    let tmp10 = closure_1;
                                   }
                                 }
                               }
+                              let obj2 = closure_1_0(closure_1_1[2]);
                             };
                             instrumentedMethod = new Proxy(obj, obj);
-                            let tmp10 = closure_1;
                           }
                         }
                       }
+                      let obj2 = closure_1_0(closure_1_1[2]);
                     };
                     instrumentedMethod = new Proxy(obj, obj);
-                    let tmp10 = closure_1;
                   }
                 }
               }
+              let obj2 = closure_1_0(closure_1_1[2]);
             };
             instrumentedMethod = new Proxy(obj, obj);
-            let tmp10 = closure_1;
           }
         }
       }
+      let obj2 = closure_1_0(closure_1_1[2]);
     }
   };
   const proxy = new Proxy(arg0, obj);

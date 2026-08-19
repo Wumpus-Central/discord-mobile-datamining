@@ -1,7 +1,7 @@
 // === Module 1529: useOptionsGetters ===
 
 // Module 1529 (useOptionsGetters)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -9,19 +9,12 @@ export const useOptionsGetters = function useOptionsGetters(key) {
   key = key.key;
   const options = key.options;
   const navigation = key.navigation;
-  closure_3 = undefined;
-  closure_4 = undefined;
-  let onOptionsChange;
-  let addOptionsGetter;
-  let callback;
-  let callback1;
-  let callback2;
   closure_3 = navigation.useRef(options);
   closure_4 = navigation.useRef({});
-  onOptionsChange = navigation.useContext(key(options[1]).NavigationBuilderContext).onOptionsChange;
-  addOptionsGetter = navigation.useContext(key(options[2]).NavigationStateContext).addOptionsGetter;
+  const onOptionsChange = navigation.useContext(key(options[1]).NavigationBuilderContext).onOptionsChange;
+  const addOptionsGetter = navigation.useContext(key(options[2]).NavigationStateContext).addOptionsGetter;
   const items = [navigation, onOptionsChange];
-  callback = navigation.useCallback(() => {
+  const callback = navigation.useCallback(() => {
     let flag;
     if (navigation != null) {
       flag = navigation.isFocused();
@@ -38,7 +31,6 @@ export const useOptionsGetters = function useOptionsGetters(key) {
         current = {};
       }
       onOptionsChange(current);
-      const tmp = onOptionsChange;
     }
   }, items);
   const items1 = [options];
@@ -54,9 +46,8 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     }
     return addListenerResult;
   }, items2);
-  callback1 = navigation.useCallback(() => {
+  const callback1 = navigation.useCallback(() => {
     for (const key10004 in closure_4.current) {
-      let tmp3 = key10004;
       if (!(key10004 in closure_4.current)) {
         continue;
       } else {
@@ -77,7 +68,7 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     return null;
   }, []);
   const items3 = [navigation, callback1];
-  callback2 = navigation.useCallback(() => {
+  const callback2 = navigation.useCallback(() => {
     let isFocusedResult;
     if (navigation != null) {
       isFocusedResult = navigation.isFocused();
@@ -109,7 +100,7 @@ export const useOptionsGetters = function useOptionsGetters(key) {
       callback();
       return () => {
         delete tmp2[tmp];
-        closure_1_7();
+        callback();
       };
     }, items5),
     getCurrentOptions: callback2

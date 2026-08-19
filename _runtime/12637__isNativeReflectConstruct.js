@@ -2,16 +2,16 @@
 
 // Module 12637 (_isNativeReflectConstruct)
 import emptyFunctionDefault from "emptyFunction" /* 4205 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_possibleConstructorReturn" /* 93 */;
-import closure_6 from "_getPrototypeOf" /* 95 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importDefaultResult2 from "noop" /* 19 */;
 
-let Link = arg1;
+let Link = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -82,9 +82,9 @@ let obj = {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.onPress = function onPress(arg0) {
-          return closure_1_2.handlePress(arg0, closure_0);
+          return self.handlePress(arg0, closure_0);
         };
-        return closure_1_7(closure_1, obj);
+        return <closure_1 />;
       }
     });
   }

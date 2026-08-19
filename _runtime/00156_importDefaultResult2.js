@@ -5,13 +5,13 @@ import nullthrowsDefault from "nullthrows" /* 70 */;
 import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 157 */;
 import structuredCloneInternalDefault from "structuredCloneInternal" /* 168 */;
-import closure_4 from "_classCallCheck" /* 41 */;
-import closure_5 from "_classPrivateFieldBase" /* 90 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_classPrivateFieldKey" /* 91 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const Performance = arg1;
+const Performance = fn;
 let closure_6 = ["mark", "measure"];
 const importDefaultResult2Result = nullthrowsDefault(NativePerformanceCxxDefault);
 const error = importDefaultResult2Result;
@@ -73,10 +73,10 @@ let items = [
         return closure_3;
       } else {
         if (importDefaultResult2Result.timeOrigin) {
-          tmp = obj == tmp;
+          tmp = importDefaultResult2Result == tmp;
           let timeOriginResult;
           if (!tmp) {
-            timeOriginResult = obj.timeOrigin();
+            timeOriginResult = importDefaultResult2Result.timeOrigin();
           }
           let diff = timeOriginResult;
         } else {
@@ -151,40 +151,29 @@ let items = [
     key: "measure",
     value: function measure(str) {
       if (undefined === str) {
-        let typeError = globalThis;
         const _TypeError4 = TypeError;
-        typeError = new.target;
-        typeError = new.target;
-        typeError = new TypeError("Failed to execute 'measure' on 'Performance': 1 argument required, but only 0 present.");
+        const typeError = new TypeError("Failed to execute 'measure' on 'Performance': 1 argument required, but only 0 present.");
         throw typeError;
       } else {
-        typeError = str;
+        let StringResult = str;
         if (typeof str !== "string") {
-          typeError = globalThis;
           const _String3 = String;
-          typeError = String(str);
+          StringResult = String(str);
         }
-        typeError = arg1;
         if (null != arg1) {
           if ("object" === typeof arg1) {
             if (undefined !== arg2) {
-              typeError = globalThis;
               const _TypeError3 = TypeError;
-              typeError = new.target;
-              typeError = new.target;
-              typeError = new TypeError("Failed to execute 'measure' on 'Performance': If a non-empty PerformanceMeasureOptions object was passed, |end_mark| must not be passed.");
-              throw typeError;
+              const typeError1 = new TypeError("Failed to execute 'measure' on 'Performance': If a non-empty PerformanceMeasureOptions object was passed, |end_mark| must not be passed.");
+              throw typeError1;
             } else {
               ({ start, end, duration, detail } = arg1);
               if (undefined !== start) {
                 if (undefined !== end) {
                   if (undefined !== duration) {
-                    typeError = globalThis;
                     const _TypeError2 = TypeError;
-                    typeError = new.target;
-                    typeError = new.target;
-                    typeError = new TypeError("Failed to execute 'measure' on 'Performance': If a non-empty PerformanceMeasureOptions object was passed, it must not have all of its 'start', 'duration', and 'end' properties defined");
-                    throw typeError;
+                    const typeError2 = new TypeError("Failed to execute 'measure' on 'Performance': If a non-empty PerformanceMeasureOptions object was passed, it must not have all of its 'start', 'duration', and 'end' properties defined");
+                    throw typeError2;
                   }
                 }
               }
@@ -194,7 +183,7 @@ let items = [
                   tmp64 = start;
                 } else if ("string" === tmp63) {
                   if (typeof getMarkTimeForMeasure !== "function") {
-                    typeError = HermesBuiltin.throwTypeError();
+                    HermesBuiltin.throwTypeError();
                   }
                   tmp64 = callback5(start);
                   if (null == tmp64) {
@@ -205,20 +194,16 @@ let items = [
                   }
                 } else {
                   const _String = String;
-                  const StringResult = String(start);
+                  const StringResult1 = String(start);
                   if (typeof getMarkTimeForMeasure !== "function") {
-                    typeError = HermesBuiltin.throwTypeError();
+                    HermesBuiltin.throwTypeError();
                   }
-                  tmp64 = callback5(StringResult);
+                  tmp64 = callback5(StringResult1);
                   if (null == tmp64) {
-                    typeError = importDefault;
-                    typeError = dependencyMap;
                     const _HermesInternal8 = HermesInternal;
-                    typeError = _isNativeReflectConstructDefault;
-                    typeError = new.target;
-                    typeError = new.target;
-                    typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult + "' does not exist.", "SyntaxError");
-                    throw typeError;
+                    let tmp151 = _isNativeReflectConstructDefault;
+                    tmp151 = new tmp151("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
+                    throw tmp151;
                   }
                 }
               }
@@ -227,7 +212,7 @@ let items = [
                   let tmp80 = end;
                 } else if ("string" === tmp79) {
                   if (typeof getMarkTimeForMeasure !== "function") {
-                    typeError = HermesBuiltin.throwTypeError();
+                    HermesBuiltin.throwTypeError();
                   }
                   tmp80 = callback5(end);
                   if (null == tmp80) {
@@ -238,20 +223,16 @@ let items = [
                   }
                 } else {
                   const _String2 = String;
-                  const StringResult1 = String(end);
+                  const StringResult2 = String(end);
                   if (typeof getMarkTimeForMeasure !== "function") {
-                    typeError = HermesBuiltin.throwTypeError();
+                    HermesBuiltin.throwTypeError();
                   }
-                  tmp80 = callback5(StringResult1);
+                  tmp80 = callback5(StringResult2);
                   if (null == tmp80) {
-                    typeError = importDefault;
-                    typeError = dependencyMap;
                     const _HermesInternal9 = HermesInternal;
-                    typeError = _isNativeReflectConstructDefault;
-                    typeError = new.target;
-                    typeError = new.target;
-                    typeError = new typeError("Failed to execute 'measure' on 'Performance': The mark '" + StringResult1 + "' does not exist.", "SyntaxError");
-                    throw typeError;
+                    let tmp160 = _isNativeReflectConstructDefault;
+                    tmp160 = new tmp160("Failed to execute 'measure' on 'Performance': The mark '" + StringResult2 + "' does not exist.", "SyntaxError");
+                    throw tmp160;
                   }
                 }
               }
@@ -266,9 +247,8 @@ let items = [
                   tmp96 = NumberResult;
                   if (!Number.isFinite(NumberResult)) {
                     const _TypeError = TypeError;
-                    typeError = new.target;
-                    typeError = new TypeError("Failed to execute 'measure' on 'Performance': Failed to read the 'duration' property from 'PerformanceMeasureOptions': The provided double value is non-finite.");
-                    throw typeError;
+                    const typeError3 = new TypeError("Failed to execute 'measure' on 'Performance': Failed to read the 'duration' property from 'PerformanceMeasureOptions': The provided double value is non-finite.");
+                    throw typeError3;
                   }
                 }
               }
@@ -286,25 +266,21 @@ let items = [
                 let currentTimeStamp = tmp96;
                 let num3 = tmp64;
                 if (undefined !== detail) {
-                  typeError = importDefault;
-                  typeError = dependencyMap;
                   currentTimeStamp = tmp96;
                   num3 = tmp64;
                   const tmp10 = structuredCloneInternalDefault(detail);
                 }
               } else {
                 if (undefined === tmp64) {
-                  typeError = Performance;
-                  typeError = dependencyMap;
-                  typeError = Performance(164).getCurrentTimeStamp() - tmp64;
+                  let diff = Performance(164).getCurrentTimeStamp() - tmp64;
                   const obj4 = Performance(164);
                 }
-                typeError = tmp80 - tmp64;
+                diff = tmp80 - tmp64;
               }
             }
           } else if ("string" === tmp19) {
             if (typeof getMarkTimeForMeasure !== "function") {
-              typeError = HermesBuiltin.throwTypeError();
+              HermesBuiltin.throwTypeError();
             }
             const tmp42 = callback5(arg1);
             if (null == tmp42) {
@@ -314,68 +290,63 @@ let items = [
               throw tmp57;
             } else {
               if (undefined !== arg2) {
-                if (typeof tmp40 !== "function") {
-                  typeError = HermesBuiltin.throwTypeError();
+                if (typeof getMarkTimeForMeasure !== "function") {
+                  HermesBuiltin.throwTypeError();
                 }
-                const tmp41Result = tmp41(arg2);
+                const tmp41Result = callback5(arg2);
                 if (null == tmp41Result) {
                   const _HermesInternal4 = HermesInternal;
                   let tmp49 = _isNativeReflectConstructDefault;
                   tmp49 = new tmp49("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp49;
                 } else {
-                  let diff = tmp41Result - tmp42;
+                  let diff1 = tmp41Result - tmp42;
                 }
               } else {
-                diff = Performance(164).getCurrentTimeStamp() - tmp42;
+                diff1 = Performance(164).getCurrentTimeStamp() - tmp42;
                 const obj3 = Performance(164);
               }
-              currentTimeStamp = diff;
+              currentTimeStamp = diff1;
               num3 = tmp42;
             }
-            tmp40 = getMarkTimeForMeasure;
-            tmp41 = callback5;
           } else {
-            typeError = globalThis;
             const _String4 = String;
-            typeError = getMarkTimeForMeasure;
-            typeError = String(arg1);
+            const StringResult3 = String(arg1);
             if (typeof getMarkTimeForMeasure !== "function") {
-              typeError = HermesBuiltin.throwTypeError();
+              HermesBuiltin.throwTypeError();
             }
-            const tmp21 = callback5(typeError);
+            const tmp21 = callback5(StringResult3);
             if (null == tmp21) {
               const _HermesInternal3 = HermesInternal;
               let tmp35 = _isNativeReflectConstructDefault;
-              tmp35 = new tmp35("Failed to execute 'measure' on 'Performance': The mark '" + typeError + "' does not exist.", "SyntaxError");
+              tmp35 = new tmp35("Failed to execute 'measure' on 'Performance': The mark '" + StringResult3 + "' does not exist.", "SyntaxError");
               throw tmp35;
             } else {
               if (undefined !== arg2) {
-                if (typeof typeError !== "function") {
-                  typeError = HermesBuiltin.throwTypeError();
+                if (typeof getMarkTimeForMeasure !== "function") {
+                  HermesBuiltin.throwTypeError();
                 }
-                const tmp20Result = tmp20(arg2);
+                const tmp20Result = callback5(arg2);
                 if (null == tmp20Result) {
                   const _HermesInternal2 = HermesInternal;
                   let tmp28 = _isNativeReflectConstructDefault;
                   tmp28 = new tmp28("Failed to execute 'measure' on 'Performance': The mark '" + arg2 + "' does not exist.", "SyntaxError");
                   throw tmp28;
                 } else {
-                  let diff1 = tmp20Result - tmp21;
+                  let diff2 = tmp20Result - tmp21;
                 }
               } else {
-                diff1 = Performance(164).getCurrentTimeStamp() - tmp21;
+                diff2 = Performance(164).getCurrentTimeStamp() - tmp21;
                 const obj2 = Performance(164);
               }
-              currentTimeStamp = diff1;
+              currentTimeStamp = diff2;
               num3 = tmp21;
             }
-            tmp20 = callback5;
           }
         } else {
           if (undefined !== arg2) {
             if (typeof getMarkTimeForMeasure !== "function") {
-              typeError = HermesBuiltin.throwTypeError();
+              HermesBuiltin.throwTypeError();
             }
             const tmp9 = callback5(arg2);
             if (null == tmp9) {
@@ -392,22 +363,13 @@ let items = [
           }
           num3 = 0;
         }
-        typeError = closure_14;
-        closure_14.name = typeError;
+        closure_14.name = StringResult;
         closure_14.startTime = num3;
         closure_14.duration = currentTimeStamp;
         closure_14.detail = tmp10;
-        typeError = Performance;
-        typeError = dependencyMap;
-        typeError = new.target;
-        typeError = new.target;
-        typeError = closure_14;
-        typeError = new Performance(169).PerformanceMeasure(closure_14);
-        typeError = callback4;
-        typeError = num3;
-        typeError = currentTimeStamp;
-        typeError = callback4(typeError, num3, currentTimeStamp, typeError);
-        return typeError;
+        const performanceMeasure = new Performance(169).PerformanceMeasure(closure_14);
+        callback4(StringResult, num3, currentTimeStamp, performanceMeasure);
+        return performanceMeasure;
       }
     }
   },
@@ -437,6 +399,7 @@ let items = [
       }
       const entriesByType = importDefaultResult2Result.getEntriesByType(Performance(170).performanceEntryTypeToRaw(type));
       items = entriesByType.map(Performance(170).rawToPerformanceEntry);
+      const obj = Performance(170);
     }
   },
   {

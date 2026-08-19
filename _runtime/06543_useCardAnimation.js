@@ -2,7 +2,7 @@
 
 // Module 6543 (useCardAnimation)
 import CardAnimationContext from "CardAnimationContext" /* 6537 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

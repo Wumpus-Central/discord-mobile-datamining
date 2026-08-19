@@ -1,27 +1,28 @@
 // === Module 1727: n ===
 
 // Module 1727 (n)
-const require = arg1;
+const require = fn;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_clampTs2(){const{_animationToClamp,config,recognizePrefixSuffix,logger,getReduceMotionForAnimation}=this.__closure;const animationToClamp=typeof _animationToClamp==='function'?_animationToClamp():_animationToClamp;const strippedMin=config.min===undefined?undefined:recognizePrefixSuffix(config.min).strippedValue;const strippedMax=config.max===undefined?undefined:recognizePrefixSuffix(config.max).strippedValue;function clampOnFrame(animation,now){const finished=animationToClamp.onFrame(animationToClamp,now);if(animationToClamp.current===undefined){logger.warn(\"Error inside 'withClamp' animation, the inner animation has invalid current value\");return true;}else{const{prefix:prefix,strippedValue:strippedValue,suffix:suffix}=recognizePrefixSuffix(animationToClamp.current);let newValue;if(strippedMax!==undefined&&strippedMax<strippedValue){newValue=strippedMax;}else if(strippedMin!==undefined&&strippedMin>strippedValue){newValue=strippedMin;}else{newValue=strippedValue;}animation.current=typeof animationToClamp.current==='number'?newValue:\"\"+(prefix===undefined?'':prefix)+newValue+(suffix===undefined?'':suffix);}return finished;}function onStart(animation,value,now,previousAnimation){animation.current=value;animation.previousAnimation=animationToClamp;const animationBeforeClamped=previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.previousAnimation;if(config.max!==undefined&&config.min!==undefined&&config.max<config.min){logger.warn('Wrong config was provided to withClamp. Min value is bigger than max');}animationToClamp.onStart(animationToClamp,(animationBeforeClamped===null||animationBeforeClamped===void 0?void 0:animationBeforeClamped.current)||value,now,animationBeforeClamped);}const callback=function(finished){if(animationToClamp.callback){animationToClamp.callback(finished);}};return{isHigherOrder:true,onFrame:clampOnFrame,onStart:onStart,current:animationToClamp.current,callback:callback,previousAnimation:null,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}" };
-let fn = function n(config, _animationToClamp) {
+fn = function n(config, _animationToClamp) {
   const _require = config;
   dependencyMap = _animationToClamp;
-  let obj = _require(1694);
+  _require(1694);
   const fn = function u() {
     let tmpResult = strippedValue;
     if (typeof strippedValue === "function") {
       tmpResult = tmp();
     }
     config = tmpResult;
+    let range = config;
     strippedValue = undefined;
     if (undefined !== config.min) {
       let obj = config(1694);
-      strippedValue = obj.recognizePrefixSuffix(tmp3.min).strippedValue;
+      strippedValue = obj.recognizePrefixSuffix(range.min).strippedValue;
     }
     let strippedValue1;
-    if (undefined !== config.max) {
-      strippedValue1 = config(1694).recognizePrefixSuffix(tmp3.max).strippedValue;
+    if (undefined !== range.max) {
+      strippedValue1 = config(1694).recognizePrefixSuffix(range.max).strippedValue;
       const obj2 = config(1694);
     }
     obj = {
@@ -32,21 +33,21 @@ let fn = function n(config, _animationToClamp) {
           logger.warn("Error inside 'withClamp' animation, the inner animation has invalid current value");
           return true;
         } else {
-          const result = ref(strippedValue[0]).recognizePrefixSuffix(tmp.current);
+          const result = ref(strippedValue[0]).recognizePrefixSuffix(ref.current);
           ({ prefix, strippedValue, suffix } = result);
           let tmp5 = strippedValue1;
           if (undefined === strippedValue1) {
             let tmp4 = strippedValue;
             if (undefined !== strippedValue) {
               tmp4 = strippedValue;
-              if (tmp3 > strippedValue) {
-                tmp4 = tmp3;
+              if (strippedValue > strippedValue) {
+                tmp4 = strippedValue;
               }
             }
             tmp5 = tmp4;
           }
           let combined = tmp5;
-          if (typeof tmp.current !== "number") {
+          if (typeof ref.current !== "number") {
             let str = "";
             if (undefined !== prefix) {
               str = prefix;
@@ -69,7 +70,8 @@ let fn = function n(config, _animationToClamp) {
         if (previousAnimation != null) {
           previousAnimation = previousAnimation.previousAnimation;
         }
-        if (tmp3) {
+        const range = ref;
+        if (tmp2) {
           const logger = ref(strippedValue[1]).logger;
           logger.warn("Wrong config was provided to withClamp. Min value is bigger than max");
         }
@@ -78,6 +80,7 @@ let fn = function n(config, _animationToClamp) {
           current = previousAnimation.current;
         }
         ref.onStart(ref, current, arg2, previousAnimation);
+        tmp2 = undefined !== ref.max && undefined !== range.min && range.max < range.min;
       },
       current: tmpResult.current,
       callback(arg0) {
@@ -86,11 +89,11 @@ let fn = function n(config, _animationToClamp) {
         }
       },
       previousAnimation: null,
-      reduceMotion: config(1694).getReduceMotionForAnimation(config.reduceMotion)
+      reduceMotion: config(1694).getReduceMotionForAnimation(range.reduceMotion)
     };
     return obj;
   };
-  obj = { _animationToClamp, config, recognizePrefixSuffix: _require(1694).recognizePrefixSuffix, logger: _require(1658).logger, getReduceMotionForAnimation: _require(1694).getReduceMotionForAnimation };
+  let obj = { _animationToClamp, config, recognizePrefixSuffix: _require(1694).recognizePrefixSuffix, logger: _require(1658).logger, getReduceMotionForAnimation: _require(1694).getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 9293031098818;
   fn.__initData = closure_2;

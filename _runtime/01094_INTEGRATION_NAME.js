@@ -25,8 +25,8 @@ export const isSpotlightInteraction = function isSpotlightInteraction(type) {
   }
   if (spans) {
     const spans2 = type.spans;
-    spans = spans2.some((description) => {
-      description = description.description;
+    spans = spans2.some((item, index) => {
+      const description = item.description;
       let hasItem;
       if (description != null) {
         hasItem = description.includes("#sentry-spotlight");
@@ -45,8 +45,8 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
   obj = {
     name: SpotlightBrowser,
     setup() {
-      if (callback(closure_1_1[0]).DEBUG_BUILD) {
-        const debug = callback(closure_1_1[1]).debug;
+      if (callback(dependencyMap[0]).DEBUG_BUILD) {
+        const debug = callback(dependencyMap[1]).debug;
         debug.log("Using Sidecar URL", callback);
       }
     },
@@ -68,8 +68,8 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
       }
       if (spans) {
         const spans2 = type.spans;
-        spans = spans2.some((description) => {
-          description = description.description;
+        spans = spans2.some((item, index) => {
+          const description = item.description;
           let hasItem;
           if (description != null) {
             hasItem = description.includes("#sentry-spotlight");
@@ -84,7 +84,7 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
       return tmp3;
     },
     afterAllSetup(on) {
-      const nativeImplementation = callback(closure_1_1[2]).getNativeImplementation("fetch");
+      const nativeImplementation = callback(dependencyMap[2]).getNativeImplementation("fetch");
       c2 = 0;
       on.on("beforeEnvelope", (arg0) => {
         if (c2 > 3) {
@@ -95,10 +95,10 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
           obj[1] = callback(817).serializeEnvelope(arg0);
           obj[2] = { "Content-Type": "application/x-sentry-envelope" };
           const obj2 = callback(817);
-          dependencyMap(callback, obj).then((status) => {
-            let tmp = status.status >= 200;
+          dependencyMap(callback, obj).then((result) => {
+            let tmp = result.status >= 200;
             if (tmp) {
-              tmp = status.status < 400;
+              tmp = result.status < 400;
             }
             if (tmp) {
               c2 = 0;

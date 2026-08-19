@@ -1,8 +1,8 @@
 // === Module 1575: useRegisterNavigator ===
 
 // Module 1575 (useRegisterNavigator)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
 const require = arg1;
 
@@ -15,12 +15,11 @@ export const useRegisterNavigator = function useRegisterNavigator() {
     throw error;
   } else {
     const items = [context, first];
-    const effect = obj.useEffect(() => {
+    const effect = React.useEffect(() => {
       const unregister = context.unregister;
       context.register(unregister);
       return () => unregister(unregister);
     }, items);
     return first;
   }
-  obj = React;
 };

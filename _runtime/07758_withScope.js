@@ -1,7 +1,7 @@
 // === Module 7758: withScope ===
 
 // Module 7758 (withScope)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 let AsyncContextStack = require;
@@ -11,9 +11,9 @@ function withScope(arg0) {
   const sentryCarrier = AsyncContextStack(7756).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = tmp(7764);
+    let tmpResult = AsyncContextStack(7764);
     const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = tmp(7764);
+    tmpResult = AsyncContextStack(7764);
     stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
   }
   sentryCarrier.stack = stack;
@@ -54,17 +54,16 @@ function withIsolationScope(arg0) {
   return stack.withScope(() => {
     const mainCarrier = callback(closure_1_1[4]).getMainCarrier();
     const obj = callback(closure_1_1[4]);
-    const tmp = callback;
     const sentryCarrier = callback(closure_1_1[4]).getSentryCarrier(mainCarrier);
     let stack = sentryCarrier.stack;
     if (!stack) {
-      let tmp2Result = tmp2(tmp3[5]);
+      let tmp2Result = callback(closure_1_1[5]);
       const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-      tmp2Result = tmp2(tmp3[5]);
+      tmp2Result = callback(closure_1_1[5]);
       stack = new closure_1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
     }
     sentryCarrier.stack = stack;
-    return tmp(stack.getIsolationScope());
+    return callback(stack.getIsolationScope());
   });
 }
 class AsyncContextStack {
@@ -97,15 +96,14 @@ class AsyncContextStack {
 let items = [
   {
     key: "withScope",
-    value: function withScope(arg0) {
-      let self = this;
-      self = this;
+    value: function withScope(fn) {
+      const self = this;
       try {
-        const promise = arg0(tmp);
+        const promise = fn(tmp);
         if (obj2.isThenable(promise)) {
-          let nextPromise = promise.then((arg0) => {
+          let nextPromise = promise.then((result) => {
             self._popScope();
-            return arg0;
+            return result;
           }, (arg0) => {
             self._popScope();
             throw arg0;
@@ -192,17 +190,16 @@ export function getStackAsyncContextStrategy() {
       return stack.withScope(() => {
         const mainCarrier = callback(closure_1_1[4]).getMainCarrier();
         const obj = callback(closure_1_1[4]);
-        const tmp = callback;
         const sentryCarrier = callback(closure_1_1[4]).getSentryCarrier(mainCarrier);
         let stack = sentryCarrier.stack;
         if (!stack) {
-          let tmp2Result = tmp2(tmp3[5]);
+          let tmp2Result = callback(closure_1_1[5]);
           const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-          tmp2Result = tmp2(tmp3[5]);
+          tmp2Result = callback(closure_1_1[5]);
           stack = new closure_1_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
         }
         sentryCarrier.stack = stack;
-        return tmp(stack.getIsolationScope());
+        return callback(stack.getIsolationScope());
       });
     },
     getCurrentScope() {
@@ -211,9 +208,9 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = callback(7756).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = tmp(7764);
+        let tmpResult = callback(7764);
         const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = tmp(7764);
+        tmpResult = callback(7764);
         stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
       }
       sentryCarrier.stack = stack;
@@ -225,9 +222,9 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = callback(7756).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = tmp(7764);
+        let tmpResult = callback(7764);
         const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = tmp(7764);
+        tmpResult = callback(7764);
         stack = new closure_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
       }
       sentryCarrier.stack = stack;

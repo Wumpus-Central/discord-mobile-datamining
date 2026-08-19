@@ -1,11 +1,11 @@
 // === Module 1138: _isNativeReflectConstruct ===
 
 // Module 1138 (_isNativeReflectConstruct)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import c4 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "noop" /* 19 */;
 
@@ -76,8 +76,7 @@ let items = [
   {
     key: "shouldComponentUpdate",
     value: function shouldComponentUpdate(updateProps) {
-      let self = this;
-      self = this;
+      const self = this;
       updateProps = updateProps.updateProps;
       let flag = updateProps.includeUpdates;
       if (flag === undefined) {
@@ -90,13 +89,13 @@ let items = [
           if (updateProps !== self.props.updateProps) {
             const _Object = Object;
             const keys = Object.keys(updateProps);
-            found = keys.filter((arg0) => updateProps[arg0] !== self.props.updateProps[arg0]);
+            found = keys.filter((item, index) => updateProps[item] !== self.props.updateProps[item]);
             if (found.length > 0) {
               Profiler = Profiler(updateProps[9]).timestampInSeconds();
               let obj = Profiler(updateProps[9]);
               self._updateSpan = Profiler(updateProps[9]).withActiveSpan(self._mountSpan, () => {
                 let obj = callback(updateProps[7]);
-                obj = { name: "<" + self.props.name + ">", onlyIfParent: true, op: callback(updateProps[8]).REACT_UPDATE_OP, startTime: callback, attributes: obj };
+                { name: "<" + self.props.name + ">", onlyIfParent: true, op: callback(updateProps[8]).REACT_UPDATE_OP, startTime: callback, attributes: obj };
                 obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": self.props.name, "ui.react.changed_props": found };
                 return obj.startInactiveSpan(obj);
               });
@@ -131,8 +130,8 @@ let items = [
           const timestamp = tmpResult.spanToJSON(self._mountSpan).timestamp;
           tmpResult = tmp(817);
           tmpResult.withActiveSpan(self._mountSpan, () => {
-            let obj = callback(closure_1_1[7]);
-            obj = { onlyIfParent: true, name: "<" + closure_1 + ">", op: callback(closure_1_1[8]).REACT_RENDER_OP, startTime: timestamp, attributes: obj };
+            let obj = callback(dependencyMap[7]);
+            { onlyIfParent: true, name: "<" + closure_1 + ">", op: callback(dependencyMap[8]).REACT_RENDER_OP, startTime: timestamp, attributes: obj };
             obj = { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": closure_1 };
             const startInactiveSpanResult = obj.startInactiveSpan(obj);
             if (startInactiveSpanResult) {
@@ -141,6 +140,8 @@ let items = [
           });
         }
       }
+      let obj = Profiler(817);
+      tmp3 = undefined === includeRender || includeRender;
     }
   },
   {
@@ -158,18 +159,14 @@ export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
 export const useProfiler = function useProfiler(arg0) {
   closure_0 = arg0;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = { disabled: false, hasRenderSpan: true };
-  }
-  let callback;
-  callback = callback(noop.useState(() => {
+  _slicedToArray = undefined;
+  _slicedToArray = _slicedToArray(noop.useState(() => {
     let disabled;
     if (obj != null) {
       disabled = obj.disabled;
     }
     if (!disabled) {
-      obj = callback(obj[7]);
+      callback(obj[7]);
       obj = { name: null, onlyIfParent: true, op: null, attributes: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "<" + callback + ">";
@@ -188,7 +185,7 @@ export const useProfiler = function useProfiler(arg0) {
     return () => {
       if (closure_2) {
         if (hasRenderSpan.hasRenderSpan) {
-          obj = closure_1_0(closure_1_1[9]);
+          closure_1_0(closure_1_1[9]);
           const obj2 = closure_1_0(closure_1_1[9]);
           const timestampInSecondsResult = closure_1_0(closure_1_1[9]).timestampInSeconds();
           obj = { name: null, onlyIfParent: true, op: null, startTime: null, attributes: null };

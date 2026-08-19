@@ -1,11 +1,11 @@
 // === Module 6991: useBottomSheetContentContainerStyle ===
 
 // Module 6991 (useBottomSheetContentContainerStyle)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+const require = fn;
 ({ useMemo: c3, useState: c4 } = noop);
 ({ Platform: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 let closure_7 = { code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}" };
@@ -25,11 +25,11 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp5 = callback(() => {
     if (closure_1) {
       const _Array = Array;
-      let applyResult = tmp;
-      if (Array.isArray(tmp)) {
+      let applyResult = closure_1;
+      if (Array.isArray(closure_1)) {
         const compose = closure_1_6.compose;
         const items = [];
-        HermesBuiltin.arraySpread(tmp, 0);
+        HermesBuiltin.arraySpread(closure_1, 0);
         applyResult = HermesBuiltin.apply(items, closure_1_6);
       }
       let obj = applyResult;
@@ -43,10 +43,10 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp6 = callback(() => {
     if (closure_0) {
       let num = 0;
-      if (tmp) {
+      if (closure_5) {
         num = 0;
-        if (typeof tmp === "object") {
-          ({ paddingBottom, padding, paddingVertical } = tmp);
+        if (typeof closure_5 === "object") {
+          ({ paddingBottom, padding, paddingVertical } = closure_5);
           if (undefined === paddingBottom) {
             if (undefined === paddingVertical) {
               num = 0;
@@ -62,13 +62,13 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
           }
         }
       }
-      const items = [tmp, ];
+      const items = [closure_5, ];
       const obj = { paddingBottom: null, overflow: "visible" };
       obj[0] = num + first;
       items[1] = obj;
       return items;
     } else {
-      return tmp;
+      return closure_5;
     }
   }, items1);
   class H {

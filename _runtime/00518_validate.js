@@ -1,13 +1,14 @@
 // === Module 518: validate ===
 
 // Module 518 (validate)
-const module = arg2;
+import _modDef519 from "module_519" /* 519 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function validate(str) {
   let isMatch = typeof str === "string";
   if (typeof str === "string") {
-    isMatch = module(519).test(str);
-    const obj = module(519);
+    isMatch = _modDef519.test(str);
   }
   return isMatch;
 };

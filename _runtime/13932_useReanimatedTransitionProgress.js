@@ -2,7 +2,7 @@
 
 // Module 13932 (useReanimatedTransitionProgress)
 import noopDefault from "noop" /* 13930 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 
 export default function useReanimatedTransitionProgress() {

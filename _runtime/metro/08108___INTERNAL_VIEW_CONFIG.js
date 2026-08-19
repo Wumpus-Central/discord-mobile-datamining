@@ -9,20 +9,13 @@ import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const codegenNativeComponent = module_8106(codegenNativeComponent2);
-let obj = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
-obj = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: null, maximumTrackTintColor: null, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
-obj = { process: resolveAssetSource };
+const obj = { process: resolveAssetSource };
 obj[6] = obj;
 obj[7] = { process: processColor.default };
-const obj1 = { process: processColor.default };
 obj[9] = { process: resolveAssetSource };
-const obj2 = { process: resolveAssetSource };
 obj[10] = { process: processColor.default };
-const obj3 = { process: processColor.default };
 obj[14] = { process: resolveAssetSource };
-const obj4 = { process: resolveAssetSource };
 obj[15] = { process: processColor.default };
-const obj5 = { process: processColor.default };
 obj[16] = { process: resolveAssetSource };
 obj[3] = Object.assign(obj, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 

@@ -4,8 +4,8 @@
 import _inheritsDefault from "_inherits" /* 98 */;
 import EventDefault from "Event" /* 133 */;
 import CloseEvent from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
 function _isNativeReflectConstruct() {

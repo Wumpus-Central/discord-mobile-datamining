@@ -16,65 +16,64 @@ function traverseAndConfigureRelations(gestures, map, set) {
   let obj = _require(6444);
   if (obj.isComposedGesture(gestures)) {
     gestures = gestures.gestures;
-    let item = gestures.forEach((type) => {
-      if (obj.isComposedGesture(type)) {
-        let tmp13 = gestures.type !== tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+    let item = gestures.forEach((item, index) => {
+      if (obj.isComposedGesture(item)) {
+        let tmp13 = gestures.type !== gestures(map[1]).ComposedGestureName.Simultaneous;
         if (tmp13) {
-          tmp13 = type.type === tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+          tmp13 = item.type === gestures(map[1]).ComposedGestureName.Simultaneous;
         }
         if (tmp13) {
-          const handlerTags = type.handlerTags;
-          const item = handlerTags.forEach((arg0) => set.add(arg0));
+          const handlerTags = item.handlerTags;
+          item = handlerTags.forEach((item, index) => set.add(item));
         }
-        let tmp15 = tmp12.type === tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+        let tmp15 = gestures.type === gestures(map[1]).ComposedGestureName.Simultaneous;
         if (tmp15) {
-          tmp15 = type.type !== tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+          tmp15 = item.type !== gestures(map[1]).ComposedGestureName.Simultaneous;
         }
         if (tmp15) {
-          const handlerTags1 = type.handlerTags;
-          const item1 = handlerTags1.forEach((arg0) => set.delete(arg0));
+          const handlerTags1 = item.handlerTags;
+          const item1 = handlerTags1.forEach((item, index) => set.delete(item));
         }
-        set(type, map, set, items);
-        let tmp24 = type.type === tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+        set(item, map, set, items);
+        let tmp24 = item.type === gestures(map[1]).ComposedGestureName.Simultaneous;
         if (tmp24) {
-          tmp24 = tmp12.type !== tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+          tmp24 = gestures.type !== gestures(map[1]).ComposedGestureName.Simultaneous;
         }
         if (tmp24) {
-          const handlerTags2 = tmp12.handlerTags;
-          const item2 = handlerTags2.forEach((arg0) => set.delete(arg0));
+          const handlerTags2 = gestures.handlerTags;
+          const item2 = handlerTags2.forEach((item, index) => set.delete(item));
         }
-        let tmp26 = type.type !== tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+        let tmp26 = item.type !== gestures(map[1]).ComposedGestureName.Simultaneous;
         if (tmp26) {
-          tmp26 = tmp12.type === tmp(tmp2[1]).ComposedGestureName.Simultaneous;
+          tmp26 = gestures.type === gestures(map[1]).ComposedGestureName.Simultaneous;
         }
         if (tmp26) {
-          const handlerTags3 = tmp12.handlerTags;
-          const item3 = handlerTags3.forEach((arg0) => set.add(arg0));
+          const handlerTags3 = gestures.handlerTags;
+          const item3 = handlerTags3.forEach((item, index) => set.add(item));
         }
-        if (gestures.type === tmp(tmp2[1]).ComposedGestureName.Exclusive) {
-          const handlerTags4 = type.handlerTags;
-          const item4 = handlerTags4.forEach((arg0) => arr.push(arg0));
+        if (gestures.type === gestures(map[1]).ComposedGestureName.Exclusive) {
+          const handlerTags4 = item.handlerTags;
+          const item4 = handlerTags4.forEach((item, index) => arr.push(item));
         }
-        let tmp29 = type.type === tmp(tmp2[1]).ComposedGestureName.Exclusive;
+        let tmp29 = item.type === gestures(map[1]).ComposedGestureName.Exclusive;
         if (tmp29) {
-          tmp29 = tmp12.type !== tmp(tmp2[1]).ComposedGestureName.Exclusive;
+          tmp29 = gestures.type !== gestures(map[1]).ComposedGestureName.Exclusive;
         }
         if (tmp29) {
-          tmp17.length = items.length;
+          items.length = items.length;
         }
-        tmp17 = items;
       } else {
         let arr = items;
-        set(type, map, set, items);
+        set(item, map, set, items);
         if (deleteResult) {
-          obj2.add(type.handlerTag);
+          set.add(item.handlerTag);
         }
-        if (gestures.type === tmp(tmp2[1]).ComposedGestureName.Exclusive) {
-          arr = arr.push(type.handlerTag);
+        if (gestures.type === gestures(map[1]).ComposedGestureName.Exclusive) {
+          arr = arr.push(item.handlerTag);
         }
-        deleteResult = set.delete(type.handlerTag);
-        obj2 = set;
+        deleteResult = set.delete(item.handlerTag);
       }
+      obj = gestures(map[0]);
     });
   } else {
     gestures.gestureRelations = tmp(6444).prepareRelations(gestures.config, gestures.handlerTag);
@@ -103,7 +102,7 @@ arg5.configureRelations = function configureRelations(externalSimultaneousHandle
     const set = new Set(externalSimultaneousHandlers.externalSimultaneousHandlers);
     if (externalSimultaneousHandlers.type === set(6436).ComposedGestureName.Simultaneous) {
       const handlerTags = externalSimultaneousHandlers.handlerTags;
-      const item = handlerTags.forEach((arg0) => set.add(arg0));
+      const item = handlerTags.forEach((item, index) => set.add(item));
     }
     traverseAndConfigureRelations(externalSimultaneousHandlers, map, set);
   } else {

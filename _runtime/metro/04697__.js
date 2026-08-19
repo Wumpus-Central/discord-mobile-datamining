@@ -8,7 +8,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 _objectWithoutPropertiesDefault;
 let c3 = importAllResult;
 ({ Platform: c4, StyleSheet } = get_ActivityIndicator);
@@ -20,8 +20,6 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   unstable_sheetFooter = unstable_sheetFooter.unstable_sheetFooter;
   ({ children, activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = unstable_sheetFooter);
   const merged = Object.assign(unstable_sheetFooter, Object.create(null));
-  importDefault = undefined;
-  dependencyMap = undefined;
   let flag4;
   closure_4 = undefined;
   let obj = flag4;
@@ -74,7 +72,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (!flag5) {
     const _Object = Object;
     const values = Object.values(merged.scrollEdgeEffects);
-    flag5 = values.some((arg0) => "hidden" !== arg0);
+    flag5 = values.some((item, index) => "hidden" !== item);
   }
   let blurEffect;
   if (headerConfig != null) {
@@ -107,12 +105,9 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
   if (tmp18Result) {
     obj1 = { children: null };
     obj1[0] = unstable_sheetFooter();
-    tmp18Result = tmp18(tmp2(4701).FooterComponent, obj1);
+    tmp18Result = callback(screenId(4701).FooterComponent, obj1);
   }
   items1[2] = tmp18Result;
-  const tmp11 = warnOnceDefault;
-  const tmp16 = closure_7;
-  const tmp17 = closure_6;
   const obj2 = {
     ref(current) {
       closure_1.current = current;
@@ -141,7 +136,7 @@ export default importAllResult.forwardRef(function ScreenStackItem(unstable_shee
     onHeaderHeightChange: null
   };
   let flag6;
-  const tmp16Result = closure_7(closure_6, { children: items1 });
+  const tmp16Result = callback(closure_6, { children: items1 });
   if (headerConfig != null) {
     flag6 = headerConfig.largeTitle;
   }

@@ -1,12 +1,12 @@
 // === Module 9935: processBarButtonItems ===
 
 // Module 9935 (processBarButtonItems)
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["badge", "label", "labelStyle", "icon"];
 let closure_4 = ["label", "icon", "inline", "layout", "items", "multiselectable"];
 let closure_5 = ["label", "icon", "description"];
@@ -116,7 +116,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     backgroundColor = str2;
   }
-  let tmpResult = tmp(9936);
+  let tmpResult = colors(9936);
   const items3 = [tmp4.fontFamily, tmp5.fontFamily, tmp6.fontFamily];
   const tmp8 = obj2.flatten(headerLargeStyle) || {};
   let fontSize;
@@ -124,7 +124,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if ("fontSize" in tmp4) {
     fontSize = tmp4.fontSize;
   }
-  tmpResult = tmp(6319);
+  tmpResult = colors(6319);
   headerTitle = tmpResult.getHeaderTitle({ title, headerTitle }, route.name);
   if ("color" in tmp6) {
     headerTintColor = tmp6.color;
@@ -184,10 +184,10 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     obj2[1] = headerTitle;
     headerTitleResult = headerTitle(obj2);
   }
-  const isSearchBarAvailableForCurrentPlatform = tmp(4670).isSearchBarAvailableForCurrentPlatform;
+  const isSearchBarAvailableForCurrentPlatform = colors(4670).isSearchBarAvailableForCurrentPlatform;
   let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
   if (typeof isSearchBarAvailableForCurrentPlatform === "boolean") {
-    isSearchBarAvailableForCurrentPlatform2 = tmp(4670).isSearchBarAvailableForCurrentPlatform;
+    isSearchBarAvailableForCurrentPlatform2 = colors(4670).isSearchBarAvailableForCurrentPlatform;
   }
   if (isSearchBarAvailableForCurrentPlatform2) {
     isSearchBarAvailableForCurrentPlatform2 = null != headerSearchBarOptions;
@@ -195,7 +195,6 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   let tmp24 = headerBackVisible;
   if (!headerBackVisible) {
     tmp24 = null != headerTitleResult && null == headerLeftResult;
-    const tmp25 = null != headerTitleResult && null == headerLeftResult;
   }
   let tmp26 = null != headerBackground || headerTransparent;
   if (!tmp26) {
@@ -239,7 +238,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     if ("center" === headerTitleAlign) {
       items5[1] = null;
       obj6[1] = items5;
-      let tmp33Result = tmp33(tmp(4670).ScreenStackHeaderLeftView, obj6);
+      let tmp33Result = callback(colors(4670).ScreenStackHeaderLeftView, obj6);
     } else {
       if (typeof headerTitle === "function") {
         const obj7 = { style: null, children: null };
@@ -253,10 +252,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
         obj9[0] = text;
         obj9[1] = obj;
         obj9[2] = headerTitle;
-        obj8[1] = tmp63(tmp(6319).HeaderTitle, obj9);
+        obj8[1] = callback3(colors(6319).HeaderTitle, obj9);
       }
       callback3(closure_9, obj8);
-      const tmp64 = closure_9;
     }
   } else {
     tmp33Result = null;
@@ -269,14 +267,14 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
       obj10[0] = text;
       obj10[1] = obj;
       obj10[2] = headerTitle;
-      headerTitleResult = tmp39(tmp(6319).HeaderTitle, obj10);
+      headerTitleResult = callback3(colors(6319).HeaderTitle, obj10);
     }
     const obj11 = { children: null };
     obj11[0] = headerTitleResult;
-    tmp39Result = tmp39(tmp(4670).ScreenStackHeaderCenterView, obj11);
+    tmp39Result = callback3(colors(4670).ScreenStackHeaderCenterView, obj11);
   }
   items6[1] = tmp39Result;
-  const items7 = [closure_12(closure_11, { children: items6 }), , , ];
+  const items7 = [callback(closure_11, { children: items6 }), , , ];
   if (undefined !== headerBackIcon) {
     let source;
     if (headerBackIcon != null) {
@@ -287,8 +285,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     const obj12 = { source: null };
     obj12[0] = source;
-    let tmp41Result = callback3(tmp(4670).ScreenStackHeaderBackButtonImage, obj12);
-    const tmp41 = callback3;
+    let tmp41Result = callback3(colors(4670).ScreenStackHeaderBackButtonImage, obj12);
   } else {
     tmp41Result = null;
   }
@@ -297,7 +294,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if (null != headerRightResult) {
     const obj13 = { children: null };
     obj13[0] = headerRightResult;
-    tmp43 = callback3(tmp(4670).ScreenStackHeaderRightView, obj13);
+    tmp43 = callback3(colors(4670).ScreenStackHeaderRightView, obj13);
   }
   items7[2] = tmp43;
   let tmp45 = null;
@@ -305,8 +302,8 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     const obj14 = { children: null };
     const obj15 = {};
     let merged = Object.assign(headerSearchBarOptions);
-    obj14[0] = callback3(tmp(4670).SearchBar, obj15);
-    tmp45 = callback3(tmp(4670).ScreenStackHeaderSearchBarView, obj14);
+    obj14[0] = callback3(colors(4670).SearchBar, obj15);
+    tmp45 = callback3(colors(4670).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp45;
   const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: 0.32, title: 10, titleColor: 300, titleFontFamily: 0.001, titleFontSize: 0.001, titleFontWeight: true, topInsetEnabled: "/assets/.cache/intl/ZGVzaWdu", disableTopInsetApplication: null, disableLeftInsetApplication: "72a624908b343db34ae78e6d520bec11", disableRightInsetApplication: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages", disableBottomInsetApplication: "jsona", translucent: "Flugzeug", children: "Pilot(in)", headerLeftBarButtonItems: true, headerRightBarButtonItems: true, experimental_userInterfaceStyle: true };
@@ -319,7 +316,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   obj16[11] = false === headerShown;
   obj16[12] = false === headerBackVisible;
   let tmp51 = false === headerShadowVisible;
-  tmp33Result = tmp33(tmp34, { children: items7 });
+  tmp33Result = callback(closure_11, { children: items7 });
   if (!tmp51) {
     tmp51 = null != headerBackground;
   }
@@ -387,59 +384,59 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let found;
   if (result != null) {
-    const mapped = result.map((type, index) => {
-      if ("custom" === type.type) {
+    const mapped = result.map((item, index) => {
+      if ("custom" === item.type) {
         return null;
-      } else if ("spacing" === type.type) {
-        if (null == type.spacing) {
+      } else if ("spacing" === item.type) {
+        if (null == item.spacing) {
           const _Error4 = Error;
           const _JSON4 = JSON;
           const _HermesInternal4 = HermesInternal;
-          error = new Error("Spacing item must have a 'spacing' property defined: " + JSON.stringify(type));
+          error = new Error("Spacing item must have a 'spacing' property defined: " + JSON.stringify(item));
           throw error;
         } else {
-          return type;
+          return item;
         }
       } else {
-        if ("button" !== type.type) {
-          if ("menu" !== type.type) {
+        if ("button" !== item.type) {
+          if ("menu" !== item.type) {
             const _Error = Error;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
-            const error1 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
+            const error1 = new Error("Invalid item type: " + JSON.stringify(item) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
             throw error1;
           }
         }
-        if ("menu" === type.type) {
-          if (null == type.menu) {
+        if ("menu" === item.type) {
+          if (null == item.menu) {
             const _Error3 = Error;
             const _JSON3 = JSON;
             const _HermesInternal3 = HermesInternal;
-            const error2 = new Error("Menu item must have a 'menu' property defined: " + JSON.stringify(type));
+            const error2 = new Error("Menu item must have a 'menu' property defined: " + JSON.stringify(item));
             throw error2;
           }
         }
-        ({ badge, labelStyle, icon } = type);
+        ({ badge, labelStyle, icon } = item);
         let obj = {};
-        const merged = Object.assign(closure_1_7(type, closure_1_3));
+        const merged = Object.assign(closure_1_7(item, closure_1_3));
         obj.index = index;
-        obj.title = type.label;
+        obj.title = item.label;
         obj = {};
         const merged1 = Object.assign(fonts.regular);
         const merged2 = Object.assign(labelStyle);
         obj.titleStyle = obj;
-        if (typeof closure_1_14 !== "function") {
+        if (typeof transformIcon !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        type = undefined;
+        let type;
         if (icon != null) {
           type = icon.type;
         }
         if ("image" !== type) {
           obj.icon = icon;
           if ("menu" === obj.type) {
-            if ("menu" === type.type) {
-              const menu = type.menu;
+            if ("menu" === item.type) {
+              const menu = item.menu;
               const multiselectable = menu.multiselectable;
               obj = {};
               const merged3 = Object.assign(obj);
@@ -451,8 +448,8 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               }
               obj1.singleSelection = tmp34;
               obj1.displayAsPalette = "palette" === menu.layout;
-              const items = type.menu.items;
-              obj1.items = items.map(closure_1_15);
+              const items = item.menu.items;
+              obj1.items = items.map(getMenuItem);
               obj.menu = obj1;
               let tmp23 = obj;
             }
@@ -466,7 +463,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               if (backgroundColor == null) {
                 backgroundColor = colors.notification;
               }
-              let obj6 = fonts(closure_1_2[4])(backgroundColor);
+              let obj6 = fonts(dependencyMap[4])(backgroundColor);
               let str9 = "white";
               if (obj6.isLight()) {
                 str9 = "black";
@@ -480,7 +477,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               const obj4 = { backgroundColor: null, color: null };
               obj4[0] = backgroundColor;
               obj4[1] = str9;
-              const merged7 = Object.assign(tmp12.regular);
+              const merged7 = Object.assign(fonts.regular);
               const merged8 = Object.assign(badge.style);
               obj3.style = obj4;
               obj2.badge = obj3;
@@ -494,7 +491,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           const _Error2 = Error;
           const _JSON2 = JSON;
           const _HermesInternal2 = HermesInternal;
-          const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
+          const error3 = new Error("Invalid item type: " + JSON.stringify(item) + ". Valid types are 'button' and 'menu'.");
           throw error3;
         } else if (false === icon.tinted) {
           const obj5 = { type: "imageSource", imageSource: null };
@@ -505,10 +502,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           obj6 = { type: "templateSource", templateSource: null };
           obj6[1] = icon.source;
         }
-        tmp12 = fonts;
       }
     });
-    found = mapped.filter((arg0) => null != arg0);
+    found = mapped.filter((item, index) => null != item);
   }
   obj16[33] = found;
   if (typeof processBarButtonItems !== "function") {
@@ -516,59 +512,59 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let found1;
   if (reversed != null) {
-    const mapped1 = reversed.map((type, index) => {
-      if ("custom" === type.type) {
+    const mapped1 = reversed.map((item, index) => {
+      if ("custom" === item.type) {
         return null;
-      } else if ("spacing" === type.type) {
-        if (null == type.spacing) {
+      } else if ("spacing" === item.type) {
+        if (null == item.spacing) {
           const _Error4 = Error;
           const _JSON4 = JSON;
           const _HermesInternal4 = HermesInternal;
-          error = new Error("Spacing item must have a 'spacing' property defined: " + JSON.stringify(type));
+          error = new Error("Spacing item must have a 'spacing' property defined: " + JSON.stringify(item));
           throw error;
         } else {
-          return type;
+          return item;
         }
       } else {
-        if ("button" !== type.type) {
-          if ("menu" !== type.type) {
+        if ("button" !== item.type) {
+          if ("menu" !== item.type) {
             const _Error = Error;
             const _JSON = JSON;
             const _HermesInternal = HermesInternal;
-            const error1 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
+            const error1 = new Error("Invalid item type: " + JSON.stringify(item) + ". Valid types are 'button', 'menu', 'custom' and 'spacing'.");
             throw error1;
           }
         }
-        if ("menu" === type.type) {
-          if (null == type.menu) {
+        if ("menu" === item.type) {
+          if (null == item.menu) {
             const _Error3 = Error;
             const _JSON3 = JSON;
             const _HermesInternal3 = HermesInternal;
-            const error2 = new Error("Menu item must have a 'menu' property defined: " + JSON.stringify(type));
+            const error2 = new Error("Menu item must have a 'menu' property defined: " + JSON.stringify(item));
             throw error2;
           }
         }
-        ({ badge, labelStyle, icon } = type);
+        ({ badge, labelStyle, icon } = item);
         let obj = {};
-        const merged = Object.assign(closure_1_7(type, closure_1_3));
+        const merged = Object.assign(closure_1_7(item, closure_1_3));
         obj.index = index;
-        obj.title = type.label;
+        obj.title = item.label;
         obj = {};
         const merged1 = Object.assign(fonts.regular);
         const merged2 = Object.assign(labelStyle);
         obj.titleStyle = obj;
-        if (typeof closure_1_14 !== "function") {
+        if (typeof transformIcon !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        type = undefined;
+        let type;
         if (icon != null) {
           type = icon.type;
         }
         if ("image" !== type) {
           obj.icon = icon;
           if ("menu" === obj.type) {
-            if ("menu" === type.type) {
-              const menu = type.menu;
+            if ("menu" === item.type) {
+              const menu = item.menu;
               const multiselectable = menu.multiselectable;
               obj = {};
               const merged3 = Object.assign(obj);
@@ -580,8 +576,8 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               }
               obj1.singleSelection = tmp34;
               obj1.displayAsPalette = "palette" === menu.layout;
-              const items = type.menu.items;
-              obj1.items = items.map(closure_1_15);
+              const items = item.menu.items;
+              obj1.items = items.map(getMenuItem);
               obj.menu = obj1;
               let tmp23 = obj;
             }
@@ -595,7 +591,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               if (backgroundColor == null) {
                 backgroundColor = colors.notification;
               }
-              let obj6 = fonts(closure_1_2[4])(backgroundColor);
+              let obj6 = fonts(dependencyMap[4])(backgroundColor);
               let str9 = "white";
               if (obj6.isLight()) {
                 str9 = "black";
@@ -609,7 +605,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
               const obj4 = { backgroundColor: null, color: null };
               obj4[0] = backgroundColor;
               obj4[1] = str9;
-              const merged7 = Object.assign(tmp12.regular);
+              const merged7 = Object.assign(fonts.regular);
               const merged8 = Object.assign(badge.style);
               obj3.style = obj4;
               obj2.badge = obj3;
@@ -623,7 +619,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           const _Error2 = Error;
           const _JSON2 = JSON;
           const _HermesInternal2 = HermesInternal;
-          const error3 = new Error("Invalid item type: " + JSON.stringify(type) + ". Valid types are 'button' and 'menu'.");
+          const error3 = new Error("Invalid item type: " + JSON.stringify(item) + ". Valid types are 'button' and 'menu'.");
           throw error3;
         } else if (false === icon.tinted) {
           const obj5 = { type: "imageSource", imageSource: null };
@@ -634,10 +630,9 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           obj6 = { type: "templateSource", templateSource: null };
           obj6[1] = icon.source;
         }
-        tmp12 = fonts;
       }
     });
-    found1 = mapped1.filter((arg0) => null != arg0);
+    found1 = mapped1.filter((item, index) => null != item);
   }
   obj16[34] = found1;
   let str3 = "light";

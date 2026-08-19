@@ -38,7 +38,6 @@ let fn = function t() {
     if (keys !== undefined) {
       str2 = str;
       while (keys[tmp] !== undefined) {
-        let tmp14 = tmp5;
         let tmp15 = obj[tmp5];
         let _Object = Object;
         let call = hasOwnProperty.call;
@@ -46,24 +45,20 @@ let fn = function t() {
         if (!tmp6) {
           continue;
         } else {
-          let tmp7 = sanitizeText;
           if (typeof sanitizeText !== "function") {
-            let str6 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           let _String = String;
           let str3 = String(tmp5);
-          let tmp8 = closure_15;
           let text = ` ${str3.replace(closure_15, (arg0) => table[arg0])}`;
-          if (typeof tmp7 !== "function") {
-            let str7 = "Trying to call a non-function";
+          if (typeof sanitizeText !== "function") {
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
           let _String2 = String;
           let text1 = `${tmp9}="`;
           let str4 = String(tmp15);
           let _HermesInternal = HermesInternal;
-          str = tmp4 + `${tmp9}="` + str4.replace(tmp8, (arg0) => table[arg0]) + "\"";
+          str = tmp4 + `${tmp9}="` + str4.replace(closure_15, (arg0) => table[arg0]) + "\"";
           continue;
         }
         continue;
@@ -107,10 +102,10 @@ let fn = function t() {
   function unescapeUrl(str) {
     return str.replace(closure_18, "$1");
   }
-  function parseInline(arg0, formatted, inline) {
+  function parseInline(fn, formatted, inline) {
     inline.inline = true;
     inline.inline = inline.inline || false;
-    return arg0(formatted, inline);
+    return fn(formatted, inline);
   }
   let regExp = new RegExp("^( *)((?:[*+-]|\\d+\\.)) +");
   const regExp1 = new RegExp("( *)((?:[*+-]|\\d+\\.)) +[^\\n]*(?:\\n(?!\\1(?:[*+-]|\\d+\\.) )[^\\n]*)*(\n|$)", "gm");
@@ -146,25 +141,25 @@ let fn = function t() {
   }
   const fn = function i(arg0) {
     closure_0 = arg0;
-    return (arg0, arg1, inTable) => {
+    return (arg0, fn, inTable) => {
       inTable.inline = true;
       if (typeof closure_1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       closure_0 = tmp;
       inTable.inTable = true;
-      let arr = arg1(arg0[1].trim(), inTable);
+      let arr = fn(arg0[1].trim(), inTable);
       closure_1 = arr;
       inTable.inTable = inTable.inTable;
       let items = [[]];
       closure_2 = items;
-      let item = arr.forEach((type) => {
-        if ("tableSeparator" === type.type) {
+      let item = arr.forEach((item, index) => {
+        if ("tableSeparator" === item.type) {
           let tmp9 = !closure_0;
           if (closure_0) {
-            let tmp10 = 0 !== arg1;
+            let tmp10 = 0 !== index;
             if (tmp10) {
-              tmp10 = arg1 !== length.length - 1;
+              tmp10 = index !== length.length - 1;
             }
             tmp9 = tmp10;
           }
@@ -172,17 +167,15 @@ let fn = function t() {
             let arr = items.push([]);
           }
         } else {
-          let tmp4 = "text" !== type.type;
+          let tmp4 = "text" !== item.type;
           if (!tmp4) {
-            tmp4 = null != length[arg1 + 1] && "tableSeparator" !== tmp[arg1 + 1].type;
-            const tmp3 = null != length[arg1 + 1] && "tableSeparator" !== tmp[arg1 + 1].type;
+            tmp4 = null != length[index + 1] && "tableSeparator" !== tmp[index + 1].type;
           }
           if (!tmp4) {
-            type.content = type.content.replace(length, "");
-            const str = type.content;
+            item.content = item.content.replace(length, "");
           }
           arr = items[items.length - 1];
-          arr = arr.push(type);
+          arr = arr.push(item);
         }
       });
       let str3 = str2;
@@ -190,13 +183,11 @@ let fn = function t() {
         str3 = str2.replace(closure_0, "");
       }
       const parts = str3.trim().split("|");
-      closure_0 = arg1;
+      closure_0 = fn;
       closure_1 = inTable;
       closure_2 = tmp;
       const mapped = parts.map(closure_1_5);
-      let str = arg0[1];
       const str5 = str3.trim();
-      const str6 = arg0[3];
       const parts1 = arg0[3].trim().split("\n");
       inTable.inline = false;
       const str7 = arg0[3].trim();
@@ -204,23 +195,23 @@ let fn = function t() {
         type: "table",
         header: items,
         align: mapped,
-        cells: parts1.map((str) => {
+        cells: parts1.map((item, index) => {
           if (typeof closure_1_6 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           closure_0 = items;
           closure_1.inTable = true;
-          const tmpResult = closure_0(str.trim(), closure_1);
+          const tmpResult = closure_0(item.trim(), closure_1);
           closure_1 = tmpResult;
           closure_1.inTable = closure_1.inTable;
           items = [[]];
-          const item = tmpResult.forEach((type) => {
-            if ("tableSeparator" === type.type) {
+          item = tmpResult.forEach((item, index) => {
+            if ("tableSeparator" === item.type) {
               let tmp9 = !closure_0;
               if (closure_0) {
-                let tmp10 = 0 !== arg1;
+                let tmp10 = 0 !== index;
                 if (tmp10) {
-                  tmp10 = arg1 !== length.length - 1;
+                  tmp10 = index !== length.length - 1;
                 }
                 tmp9 = tmp10;
               }
@@ -228,17 +219,15 @@ let fn = function t() {
                 let arr = items.push([]);
               }
             } else {
-              let tmp4 = "text" !== type.type;
+              let tmp4 = "text" !== item.type;
               if (!tmp4) {
-                tmp4 = null != length[arg1 + 1] && "tableSeparator" !== tmp[arg1 + 1].type;
-                const tmp3 = null != length[arg1 + 1] && "tableSeparator" !== tmp[arg1 + 1].type;
+                tmp4 = null != length[index + 1] && "tableSeparator" !== tmp[index + 1].type;
               }
               if (!tmp4) {
-                type.content = type.content.replace(length, "");
-                const str = type.content;
+                item.content = item.content.replace(length, "");
               }
               arr = items[items.length - 1];
-              arr = arr.push(type);
+              arr = arr.push(item);
             }
           });
           return items;
@@ -279,20 +268,20 @@ let fn = function t() {
       match.regex = regex;
       return match;
     }
-    function parseCaptureInline(arg0, arg1, inline) {
+    function parseCaptureInline(arg0, fn, inline) {
       if (typeof parseInline !== "function") {
         HermesBuiltin.throwTypeError();
       }
       inline.inline = true;
       inline.inline = inline.inline || false;
-      return { content: arg1(arg0[1], inline) };
+      return { content: fn(arg0[1], inline) };
     }
     function ignoreCapture() {
       return {};
     }
     let obj = { Array: null, heading: null, nptable: null, lheading: null, hr: null, codeBlock: null, fence: null, blockQuote: null, list: null, def: null, table: null, newline: null, paragraph: null, escape: null, tableSeparator: null, autolink: null, mailto: null, url: null, link: null, image: null, reflink: null, refimage: null, em: null, strong: null, u: null, del: null, inlineCode: null, br: null, text: null };
     obj = { react: null, html: null };
-    obj[0] = function react(arg0, arg1, key) {
+    obj[0] = function react(arg0, fn, key) {
       const items = [];
       num = 0;
       let num2 = 0;
@@ -300,8 +289,6 @@ let fn = function t() {
         do {
           key.key = "" + num;
           let tmp = arg0[num];
-          let tmp2 = num2;
-          let tmp3 = num;
           let tmp4 = tmp;
           let tmp5 = num;
           if ("text" === tmp.type) {
@@ -331,7 +318,7 @@ let fn = function t() {
               }
             }
           }
-          let arr = items.push(arg1(tmp4, key));
+          let arr = items.push(fn(tmp4, key));
           num = tmp5 + 1;
           num2 = num2 + 1;
         } while (num < arg0.length);
@@ -339,15 +326,13 @@ let fn = function t() {
       key.key = key.key;
       return items;
     };
-    obj[1] = function html(arg0, arg1, arg2) {
+    obj[1] = function html(arg0, fn, key) {
       num = 0;
       let str = "";
       let str2 = "";
       if (0 < arg0.length) {
         do {
           let tmp = arg0[num];
-          let tmp2 = num;
-          let tmp3 = str;
           let tmp4 = tmp;
           let tmp5 = num;
           if ("text" === tmp.type) {
@@ -377,7 +362,7 @@ let fn = function t() {
               }
             }
           }
-          str = str + arg1(tmp4, arg2);
+          str = str + fn(tmp4, key);
           num = tmp5 + 1;
           str2 = str;
         } while (num < arg0.length);
@@ -388,7 +373,7 @@ let fn = function t() {
     obj = { order: null, match: null, parse: null, react: null, html: null };
     obj[0] = 0;
     obj[1] = blockRegex(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/);
-    obj[2] = function parse(level, arg1, inline) {
+    obj[2] = function parse(level, fn, inline) {
       obj = { level: level[1].length, content: null };
       const trimmed = level[2].trim();
       if (typeof parseInline !== "function") {
@@ -396,11 +381,11 @@ let fn = function t() {
       }
       inline.inline = true;
       inline.inline = inline.inline || false;
-      obj[1] = arg1(trimmed, inline);
+      obj[1] = fn(trimmed, inline);
       return obj;
     };
-    obj[3] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj[3] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       const text = `h${content.level}`;
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
@@ -414,8 +399,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj[4] = function html(content) {
-      return htmlTag(`h${content.level}`, arg1(content.content, arg2));
+    obj[4] = function html(content, fn, key) {
+      return htmlTag(`h${content.level}`, fn(content.content, key));
     };
     obj[1] = obj;
     obj1 = { order: null, match: null, parse: null, react: null, html: null };
@@ -513,11 +498,11 @@ let fn = function t() {
     const obj6 = { order: null, match: null, parse: null, react: null, html: null };
     obj6[0] = 6;
     obj6[1] = blockRegex(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/);
-    obj6[2] = function parse(arg0, arg1, arg2) {
-      return { content: arg1(str.replace(/^ *> ?/gm, ""), arg2) };
+    obj6[2] = function parse(arg0, fn, key) {
+      return { content: fn(str.replace(/^ *> ?/gm, ""), key) };
     };
-    obj6[3] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj6[3] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -530,8 +515,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj6[4] = function html(content) {
-      return htmlTag("blockquote", arg1(content.content, arg2));
+    obj6[4] = function html(content, fn, key) {
+      return htmlTag("blockquote", fn(content.content, key));
     };
     obj[7] = obj6;
     const obj7 = { order: null, match: null, parse: null, react: null, html: null };
@@ -560,33 +545,31 @@ let fn = function t() {
       }
       let match = arg0[0].replace(closure_25, "\n").match(regExp1);
       c3 = false;
-      const str = arg0[0];
       const str2 = arg0[0].replace(closure_25, "\n");
       return {
         ordered: arg0[2].length > 1,
         start: tmp2,
-        items: match.map((str) => {
-          match = closure_1_21.exec(str);
+        items: match.map((item, index) => {
+          match = closure_1_21.exec(item);
           num = 0;
           if (match) {
             num = match[0].length;
           }
           regExp = new RegExp("^ {1," + num + "}", "gm");
-          const replaced = str.replace(regExp, "").replace(closure_1_21, "");
+          const replaced = item.replace(regExp, "").replace(closure_1_21, "");
           const diff = match.length - 1;
           let tmp5 = -1 !== replaced.indexOf("\n\n");
           if (!tmp5) {
-            tmp5 = arg1 === diff && closure_3;
-            const tmp7 = arg1 === diff && closure_3;
+            tmp5 = index === diff && closure_3;
           }
           closure_3 = tmp5;
           closure_1._list = true;
           ({ inline, _list } = closure_1);
           if (tmp5) {
-            tmp8.inline = false;
+            closure_1.inline = false;
             let replaced1 = replaced.replace(closure_1_26, "\n\n");
           } else {
-            tmp8.inline = true;
+            closure_1.inline = true;
             replaced1 = replaced.replace(closure_1_26, "");
           }
           closure_1.inline = inline;
@@ -604,13 +587,13 @@ let fn = function t() {
       }
       obj = {
         start: ordered.start,
-        children: items.map((arg0, arg1) => {
-          obj = { children: callback(arg0, closure_1) };
-          const text = `${arg1}`;
-          if (typeof closure_1_11 !== "function") {
+        children: items.map((item, index) => {
+          obj = { children: callback(item, closure_1) };
+          const text = `${index}`;
+          if (typeof reactElement !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          obj = { $$typeof: closure_1_10, type: "li", key: text, ref: null, props: obj, _owner: null };
+          obj = { $$typeof: num, type: "li", key: text, ref: null, props: obj, _owner: null };
           return obj;
         })
       };
@@ -627,17 +610,17 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj7[4] = function html(items) {
+    obj7[4] = function html(ordered) {
       closure_0 = arg1;
       closure_1 = arg2;
-      items = items.items;
-      const mapped = items.map((arg0) => closure_1_12("li", callback(arg0, closure_1)));
+      const items = ordered.items;
+      const mapped = items.map((item, index) => htmlTag("li", callback(item, closure_1)));
       let str = "ul";
       const joined = mapped.join("");
-      if (items.ordered) {
+      if (ordered.ordered) {
         str = "ol";
       }
-      return htmlTag(str, joined, { start: items.start });
+      return htmlTag(str, joined, { start: ordered.start });
     };
     obj[8] = obj7;
     const obj8 = { order: null, match: null, parse: null, react: null, html: null };
@@ -648,11 +631,10 @@ let fn = function t() {
       const target = arg0[2];
       const title = arg0[3];
       if (tmp4) {
-        const item = _refs._refs[def].forEach((arg0) => {
-          arg0.target = target;
-          arg0.title = title;
+        const item = _refs._refs[def].forEach((item, index) => {
+          item.target = target;
+          item.title = title;
         });
-        const arr = _refs._refs[def];
       }
       _refs._defs = _refs._defs || {};
       _refs._defs[def] = { target, title };
@@ -674,32 +656,32 @@ let fn = function t() {
       closure_1 = arg1;
       closure_2 = key;
       ({ header, cells } = arg0);
-      const mapped = header.map((arg0, arg1) => {
-        const text = `${arg1}`;
-        if (null == align.align[arg1]) {
+      const mapped = header.map((item, index) => {
+        const text = `${index}`;
+        if (null == align.align[index]) {
           obj = {};
         } else {
           obj = { textAlign: null };
-          obj[0] = tmp3.align[arg1];
+          obj[0] = tmp3.align[index];
         }
-        obj = { style: obj, scope: "col", children: callback(arg0, closure_2) };
-        if (typeof closure_1_11 !== "function") {
+        obj = { style: obj, scope: "col", children: callback(item, closure_2) };
+        if (typeof reactElement !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = { $$typeof: closure_1_10, type: "th", key: text, ref: null, props: obj, _owner: null };
+        obj = { $$typeof: num, type: "th", key: text, ref: null, props: obj, _owner: null };
         return obj;
       });
-      const mapped1 = cells.map((arr) => {
+      const mapped1 = cells.map((item, index) => {
         obj = {
-          children: arr.map((arg0, arg1) => {
-            const text = `${arg1}`;
-            if (null == align.align[arg1]) {
+          children: item.map((item, index) => {
+            const text = `${index}`;
+            if (null == align.align[index]) {
               obj = {};
             } else {
               obj = { textAlign: null };
-              obj[0] = tmp3.align[arg1];
+              obj[0] = tmp3.align[index];
             }
-            obj = { style: obj, children: callback(arg0, closure_2) };
+            obj = { style: obj, children: callback(item, closure_2) };
             if (typeof closure_1_11 !== "function") {
               HermesBuiltin.throwTypeError();
             }
@@ -707,11 +689,11 @@ let fn = function t() {
             return obj;
           })
         };
-        let text = `${arg1}`;
-        if (typeof closure_1_11 !== "function") {
+        let text = `${index}`;
+        if (typeof reactElement !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = { $$typeof: closure_1_10, type: "tr", key: text, ref: null, props: obj, _owner: null };
+        obj = { $$typeof: num, type: "tr", key: text, ref: null, props: obj, _owner: null };
         return obj;
       });
       if (typeof reactElement !== "function") {
@@ -729,7 +711,7 @@ let fn = function t() {
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      obj = { $$typeof: tmp4, type: "table", key: null, ref: null, props: null, _owner: null };
+      obj = { $$typeof: num, type: "table", key: null, ref: null, props: null, _owner: null };
       let tmp5;
       if (null != key.key) {
         tmp5 = key;
@@ -743,24 +725,24 @@ let fn = function t() {
       closure_1 = arg1;
       closure_2 = arg2;
       header = header.header;
-      let mapped = header.map((arg0, arg1) => {
+      let mapped = header.map((item, index) => {
         let style = "";
-        if (null != header.align[arg1]) {
-          style = `${"text-align:" + closure_0.align[arg1]};`;
+        if (null != header.align[index]) {
+          style = `${"text-align:" + closure_0.align[index]};`;
         }
-        return closure_1_12("th", callback(arg0, closure_2), { style, scope: "col" });
+        return htmlTag("th", callback(item, closure_2), { style, scope: "col" });
       });
       const cells = header.cells;
       const joined = mapped.join("");
-      const mapped1 = cells.map((arr) => {
-        const mapped = arr.map((arg0, arg1) => {
+      const mapped1 = cells.map((item, index) => {
+        const mapped = item.map((item, index) => {
           let style = "";
-          if (null != closure_0.align[arg1]) {
-            style = `${"text-align:" + closure_0.align[arg1]};`;
+          if (null != closure_0.align[index]) {
+            style = `${"text-align:" + closure_0.align[index]};`;
           }
-          return closure_1_12("td", callback(arg0, closure_2), { style });
+          return closure_1_12("td", callback(item, closure_2), { style });
         });
-        return closure_1_12("tr", mapped.join(""));
+        return htmlTag("tr", mapped.join(""));
       });
       const joined1 = mapped1.join("");
       return htmlTag("table", htmlTag("thead", htmlTag("tr", joined)) + htmlTag("tbody", joined1));
@@ -782,8 +764,8 @@ let fn = function t() {
     obj11[0] = 11;
     obj11[1] = blockRegex(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/);
     obj11[2] = parseCaptureInline;
-    obj11[3] = function react(content, arg1, key) {
-      obj = { className: "paragraph", children: arg1(content.content, key) };
+    obj11[3] = function react(content, fn, key) {
+      obj = { className: "paragraph", children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -796,8 +778,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj11[4] = function html(content) {
-      return htmlTag("div", arg1(content.content, arg2), { class: "paragraph" });
+    obj11[4] = function html(content, fn, key) {
+      return htmlTag("div", fn(content.content, key), { class: "paragraph" });
     };
     obj[12] = obj11;
     const obj12 = { order: null, requiredFirstCharacters: null, match: null, parse: null, react: null, html: null };
@@ -814,7 +796,6 @@ let fn = function t() {
       let match = null;
       if (inTable.inTable) {
         match = /^ *\| */.exec(arg0);
-        obj = /^ *\| */;
       }
       return match;
     };
@@ -833,9 +814,8 @@ let fn = function t() {
     obj14[1] = ["<"];
     obj14[2] = inlineRegex(/^<([^: >]+:\/[^ >]+)>/);
     obj14[3] = function parse(content) {
-      obj = { type: "link", content: items, target: content[1] };
       obj = { type: "text", content: content[1] };
-      items = [obj];
+      const items = [obj];
       return obj;
     };
     obj[15] = obj14;
@@ -847,7 +827,8 @@ let fn = function t() {
       if (!regex6.test(content[1])) {
         target = `mailto:${tmp}`;
       }
-      content = [{ type: "text", content: content[1] }];
+      content = [];
+      content[0] = { type: "text", content: content[1] };
       return { type: "link", content, target };
     };
     obj[16] = obj15;
@@ -856,9 +837,8 @@ let fn = function t() {
     obj16[1] = ["h"];
     obj16[2] = inlineRegex(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/);
     obj16[3] = function parse(content) {
-      obj = { type: "link", content: items, target: content[1], title: "call" };
       obj = { type: "text", content: content[1] };
-      items = [obj];
+      const items = [obj];
       return obj;
     };
     obj[17] = obj16;
@@ -868,8 +848,8 @@ let fn = function t() {
     const _RegExp3 = RegExp;
     const regExp5 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\(\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*\\)");
     obj17[2] = inlineRegex(regExp5);
-    obj17[3] = function parse(arg0, arg1, arg2) {
-      obj = { content: arg1(arg0[1], arg2), target: null, title: null };
+    obj17[3] = function parse(arg0, fn, key) {
+      obj = { content: fn(arg0[1], key), target: null, title: null };
       if (typeof unescapeUrl !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -877,8 +857,8 @@ let fn = function t() {
       obj[2] = arg0[3];
       return obj;
     };
-    obj17[4] = function react(target, arg1, key) {
-      obj = { href: sanitizeUrl(target.target), title: target.title, children: arg1(target.content, key) };
+    obj17[4] = function react(target, fn, key) {
+      obj = { href: sanitizeUrl(target.target), title: target.title, children: fn(target.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -891,8 +871,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj17[5] = function html(target) {
-      return htmlTag("a", arg1(target.content, arg2), { href: sanitizeUrl(target.target), title: target.title });
+    obj17[5] = function html(target, fn, key) {
+      return htmlTag("a", fn(target.content, key), { href: sanitizeUrl(target.target), title: target.title });
     };
     obj[18] = obj17;
     const obj18 = { order: null, match: null, parse: null, react: null, html: null };
@@ -932,8 +912,8 @@ let fn = function t() {
     const _RegExp5 = RegExp;
     const regExp7 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\s*\\[([^\\]]*)\\]");
     obj19[1] = inlineRegex(regExp7);
-    obj19[2] = function parse(arg0, arg1, _defs) {
-      obj = { type: "link", content: arg1(arg0[1], _defs) };
+    obj19[2] = function parse(arg0, fn, _defs) {
+      obj = { type: "link", content: fn(arg0[1], _defs) };
       if (typeof parseRef !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -985,8 +965,8 @@ let fn = function t() {
       closure_0 = rules;
       closure_1 = arg1;
       const keys = Object.keys(rules);
-      const found = keys.filter((arg0) => {
-        if (null != dependencyMap[arg0]) {
+      const found = keys.filter((item, index) => {
+        if (null != dependencyMap[item]) {
           if (null != str.match) {
             const order = str.order;
             let isFiniteResult = typeof order === "number";
@@ -1001,8 +981,8 @@ let fn = function t() {
             if (!isFiniteResult) {
               const _console2 = console;
               const _String = String;
-              const text = `simple-markdown: Invalid order for rule \`${arg0}`;
-              console.warn(`${`simple-markdown: Invalid order for rule \`${arg0}`}\`: ${String(order)}`);
+              const text = `simple-markdown: Invalid order for rule \`${item}`;
+              console.warn(`${`simple-markdown: Invalid order for rule \`${item}`}\`: ${String(order)}`);
             }
             return true;
           }
@@ -1044,16 +1024,15 @@ let fn = function t() {
         let tmp3 = found[num];
         closure_6 = tmp3;
         let prop = rules[tmp3].requiredFirstCharacters;
-        let tmp4 = num;
         if (null == prop) {
           let arr = items.push(tmp3);
         } else {
-          let mapped = prop.map((str) => {
-            const charCodeAtResult = str.charCodeAt(0);
+          let mapped = prop.map((item, index) => {
+            const charCodeAtResult = item.charCodeAt(0);
             if (!map.has(charCodeAtResult)) {
-              const result = obj.set(charCodeAtResult, []);
+              const result = map.set(charCodeAtResult, []);
             }
-            const value = obj.get(charCodeAtResult);
+            const value = map.get(charCodeAtResult);
             value.push(closure_6);
           });
         }
@@ -1085,11 +1064,8 @@ let fn = function t() {
           let str3 = arg0;
           if (arg0) {
             while (true) {
-              let tmp3 = map;
               let items1 = [map.get(str3.charCodeAt(0)), ];
-              let tmp4 = items;
               items1[1] = items;
-              let tmp5 = str3;
               let num2 = 0;
               let num3 = 100000;
               let num4 = -100000;
@@ -1102,12 +1078,6 @@ let fn = function t() {
               if (0 < items1.length) {
                 do {
                   let arr3 = items1[num2];
-                  let tmp12 = num2;
-                  let tmp13 = num3;
-                  let tmp14 = num4;
-                  let tmp15 = tmp6;
-                  let tmp16 = tmp7;
-                  let tmp17 = tmp8;
                   let tmp18 = num3;
                   let tmp19 = num4;
                   let tmp20 = tmp6;
@@ -1127,15 +1097,8 @@ let fn = function t() {
                     tmp22 = tmp8;
                     if (0 < arr3.length) {
                       let tmp23 = arr3[num6];
-                      let tmp24 = dependencyMap;
                       let str = dependencyMap[tmp23];
                       let order = str.order;
-                      let tmp25 = num6;
-                      let tmp26 = tmp39;
-                      let tmp27 = tmp40;
-                      let tmp28 = tmp41;
-                      let tmp29 = tmp42;
-                      let tmp30 = tmp43;
                       tmp19 = tmp40;
                       tmp20 = tmp41;
                       tmp21 = tmp42;
@@ -1147,7 +1110,6 @@ let fn = function t() {
                           str2 = merged.prevCapture[0];
                         }
                         let match = str.match(str3, merged, str2);
-                        let tmp32 = str2;
                         let tmp33 = tmp39;
                         let tmp34 = tmp40;
                         let tmp35 = tmp41;
@@ -1206,14 +1168,9 @@ let fn = function t() {
                 break;
               } else if (tmp9.index) {
                 let _Error = Error;
-                let tmp48 = new.target;
-                let str4 = "`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?";
-                let tmp49 = new.target;
                 error = new Error("`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?");
-                let tmp51 = error;
                 throw error;
               } else {
-                let tmp44 = nestedParse;
                 let parsed = tmp10.parse(tmp9, nestedParse, merged);
                 let _Array = Array;
                 if (Array.isArray(parsed)) {
@@ -1241,20 +1198,19 @@ let fn = function t() {
         if (!arg1) {
           obj = {};
         }
-        if (null != closure_1) {
+        if (null != table) {
           for (const key10006 in tmp) {
-            let tmp6 = key10006;
             let _Object = Object;
             let call = hasOwnProperty.call;
             if (typeof call === "unknown") {
               let hasOwnPropertyResult = hasOwnProperty(key10006);
             } else {
-              hasOwnPropertyResult = call(tmp, key10006);
+              hasOwnPropertyResult = call(table, key10006);
             }
             if (!hasOwnPropertyResult) {
               continue;
             } else {
-              obj[key10006] = tmp[key10006];
+              obj[key10006] = table[key10006];
               continue;
             }
             continue;
@@ -1288,18 +1244,18 @@ let fn = function t() {
     }
     function preprocess(str) {
       str = str.replace(closure_7, "\n");
-      return str.replace(closure_7, "\n").replace(closure_9, "").replace(closure_8, "    ");
+      return str.replace(closure_9, "").replace(closure_8, "    ");
     }
     const regExp9 = new RegExp(str8 + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)");
     obj21[1] = inlineRegex(regExp9);
     obj21[2] = function quality(arg0) {
       return arg0[0].length + 0.2;
     };
-    obj21[3] = function parse(arg0, arg1, arg2) {
-      return { content: arg1(arg0[2] || arg0[1], arg2) };
+    obj21[3] = function parse(arg0, fn, key) {
+      return { content: fn(arg0[2] || arg0[1], key) };
     };
-    obj21[4] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj21[4] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -1312,8 +1268,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj21[5] = function html(content) {
-      return htmlTag("em", arg1(content.content, arg2));
+    obj21[5] = function html(content, fn, key) {
+      return htmlTag("em", fn(content.content, key));
     };
     obj[22] = obj21;
     const obj22 = { order: null, requiredFirstCharacters: null, match: null, quality: null, parse: null, react: null, html: null };
@@ -1324,8 +1280,8 @@ let fn = function t() {
       return arg0[0].length + 0.1;
     };
     obj22[4] = parseCaptureInline;
-    obj22[5] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj22[5] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -1338,8 +1294,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj22[6] = function html(content) {
-      return htmlTag("strong", arg1(content.content, arg2));
+    obj22[6] = function html(content, fn, key) {
+      return htmlTag("strong", fn(content.content, key));
     };
     obj[23] = obj22;
     const obj23 = { order: null, requiredFirstCharacters: null, match: null, quality: null, parse: null, react: null, html: null };
@@ -1350,8 +1306,8 @@ let fn = function t() {
       return arg0[0].length;
     };
     obj23[4] = parseCaptureInline;
-    obj23[5] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj23[5] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -1364,8 +1320,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj23[6] = function html(content) {
-      return htmlTag("u", arg1(content.content, arg2));
+    obj23[6] = function html(content, fn, key) {
+      return htmlTag("u", fn(content.content, key));
     };
     obj[24] = obj23;
     const obj24 = { order: null, requiredFirstCharacters: null, match: null, parse: null, react: null, html: null };
@@ -1373,8 +1329,8 @@ let fn = function t() {
     obj24[1] = ["~"];
     obj24[2] = inlineRegex(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/);
     obj24[3] = parseCaptureInline;
-    obj24[4] = function react(content, arg1, key) {
-      obj = { children: arg1(content.content, key) };
+    obj24[4] = function react(content, fn, key) {
+      obj = { children: fn(content.content, key) };
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -1387,8 +1343,8 @@ let fn = function t() {
       obj[4] = obj;
       return obj;
     };
-    obj24[5] = function html(content) {
-      return htmlTag("del", arg1(content.content, arg2));
+    obj24[5] = function html(content, fn, key) {
+      return htmlTag("del", fn(content.content, key));
     };
     obj[25] = obj24;
     const obj25 = { order: null, requiredFirstCharacters: null, match: null, parse: null, react: null, html: null };
@@ -1478,7 +1434,6 @@ let fn = function t() {
               let tmp6 = callback(arg0, nestedOutput, tmp);
             } else {
               tmp6 = _Array[arg0.type][closure_1](arg0, nestedOutput, tmp);
-              const tmp3 = _Array[arg0.type];
             }
             return tmp6;
           }
@@ -1487,20 +1442,19 @@ let fn = function t() {
             if (!arg1) {
               obj = {};
             }
-            if (null != closure_2) {
+            if (null != table) {
               for (const key10006 in tmp) {
-                let tmp11 = key10006;
                 let _Object = Object;
                 let call = hasOwnProperty.call;
                 if (typeof call === "unknown") {
                   let hasOwnPropertyResult = hasOwnProperty(key10006);
                 } else {
-                  hasOwnPropertyResult = call(tmp, key10006);
+                  hasOwnPropertyResult = call(table, key10006);
                 }
                 if (!hasOwnPropertyResult) {
                   continue;
                 } else {
-                  obj[key10006] = tmp[key10006];
+                  obj[key10006] = table[key10006];
                   continue;
                 }
                 continue;
@@ -1510,10 +1464,9 @@ let fn = function t() {
               HermesBuiltin.throwTypeError();
             }
             if (Array.isArray(arg0)) {
-              let tmp9 = callback(arg0, tmp5, obj);
+              let tmp9 = callback(arg0, nestedOutput, obj);
             } else {
-              tmp9 = _Array[arg0.type][closure_1](arg0, tmp5, obj);
-              const tmp7 = _Array[arg0.type];
+              tmp9 = _Array[arg0.type][closure_1](arg0, nestedOutput, obj);
             }
             return tmp9;
           };
@@ -1557,7 +1510,7 @@ let fn = function t() {
         obj = {};
       }
       obj.inline = false;
-      return closure_35(parserForResult(arg0, obj), arg1);
+      return outputForResult(parserForResult(arg0, obj), arg1);
     }
     const obj28 = { defaultRules: null, parserFor: null, outputFor: null, inlineRegex: null, blockRegex: null, anyScopeRegex: null, parseInline: null, parseBlock: null, markdownToReact: null, markdownToHtml: null, ReactMarkdown: null, defaultBlockParse: null, defaultInlineParse: null, defaultImplicitParse: null, defaultReactOutput: null, defaultHtmlOutput: null, preprocess: null, sanitizeText: null, sanitizeUrl: null, unescapeUrl: null, htmlTag: null, reactElement: null, defaultRawParse: null, ruleOutput: null, reactFor: null, htmlFor: null, defaultParse: null, defaultOutput: null };
     obj28[0] = obj;
@@ -1567,10 +1520,10 @@ let fn = function t() {
     obj28[4] = blockRegex;
     obj28[5] = anyScopeRegex;
     obj28[6] = parseInline;
-    obj28[7] = function parseBlock(arg0, arg1, inline) {
+    obj28[7] = function parseBlock(fn, arg1, inline) {
       inline.inline = false;
       inline.inline = inline.inline || false;
-      return arg0(arg1 + "\n\n", inline);
+      return fn(arg1 + "\n\n", inline);
     };
     obj28[8] = markdownToReact;
     obj28[9] = function markdownToHtml(arg0, arg1) {
@@ -1584,10 +1537,9 @@ let fn = function t() {
       obj.inline = false;
       return outputForResult1(parserForResult(arg0, obj), arg1);
     };
-    obj28[10] = function ReactMarkdown(obj) {
+    obj28[10] = function ReactMarkdown(source) {
       obj = {};
       for (const key10006 in arg0) {
-        let tmp4 = key10006;
         let tmp5 = "source" !== key10006;
         if (!tmp5) {
           if (!tmp5) {
@@ -1605,7 +1557,6 @@ let fn = function t() {
           } else {
             hasOwnPropertyResult = call(arg0, key10006);
           }
-          let tmp2 = hasOwnPropertyResult;
         }
       }
       if (typeof markdownToReact !== "function") {
@@ -1614,7 +1565,7 @@ let fn = function t() {
       if (typeof defaultBlockParse !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      obj.children = closure_35(parserForResult(obj.source, { inline: false }), undefined);
+      obj.children = outputForResult(parserForResult(source.source, { inline: false }), undefined);
       if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -1668,10 +1619,7 @@ let fn = function t() {
           if (0 < arg0.length) {
             while (true) {
               obj.key = "" + num;
-              let tmp4 = nestedOutput;
               let tmp5 = nestedOutput(arg0[num], obj);
-              let tmp6 = num;
-              let tmp7 = tmp3;
               if (typeof tmp5 === "string") {
                 if (typeof tmp3 === "string") {
                   let sum = tmp3 + tmp5;
@@ -1700,31 +1648,30 @@ let fn = function t() {
       closure_0 = arg0;
       function nestedOutput(arr) {
         obj = arg1;
-        obj = arg1;
         if (!arg1) {
           obj = {};
         }
         if (Array.isArray(arr)) {
-          const mapped = arr.map((arr) => {
+          const mapped = arr.map((item, index) => {
             if (!obj) {
               obj = {};
             }
-            if (Array.isArray(arr)) {
-              let mapped = arr.map((arr) => {
+            if (Array.isArray(item)) {
+              let mapped = item.map((item, index) => {
                 if (!obj) {
                   obj = {};
                 }
-                if (Array.isArray(arr)) {
-                  let mapped = arr.map(() => { ... });
+                if (Array.isArray(item)) {
+                  let mapped = item.map(() => { ... });
                   let joined = mapped.join("");
                 } else {
-                  joined = closure_1_0(arr, closure_1_1, obj);
+                  joined = closure_1_0(item, closure_1_1, obj);
                 }
                 return joined;
               });
               let joined = mapped.join("");
             } else {
-              joined = closure_1_0(arr, closure_1_1, obj);
+              joined = closure_1_0(item, closure_1_1, obj);
             }
             return joined;
           });

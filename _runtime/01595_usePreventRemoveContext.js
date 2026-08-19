@@ -2,7 +2,7 @@
 
 // Module 1595 (usePreventRemoveContext)
 import PreventRemoveContext from "PreventRemoveContext" /* 1570 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

@@ -34,7 +34,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
   const checkBounds = callback(() => {
     closure_5.current = Date.now();
-    const props = closure_0.props;
+    const props = store.props;
     ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
     let num;
     if (maintainVisibleContentPosition != null) {
@@ -43,12 +43,12 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
     if (num == null) {
       num = -1;
     }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = obj.getAbsoluteLastScrollOffset();
-      const size = obj.getChildContainerDimensions();
-      const size2 = obj.getWindowSize();
+    if (store.getIsFirstLayoutComplete()) {
+      const absoluteLastScrollOffset = store.getAbsoluteLastScrollOffset();
+      const size = store.getChildContainerDimensions();
+      const size2 = store.getWindowSize();
       const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + obj.firstItemOffset;
+      const sum = (tmp2 ? size.width : size.height) + store.firstItemOffset;
       if (tmp3 > 0) {
         if (onEndReached) {
           if (onEndReachedThreshold == null) {
@@ -92,7 +92,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
     }
   }, items);
   const tmp2 = callback(() => {
-    let current = closure_0.isOffsetProjectionEnabled;
+    let current = store.isOffsetProjectionEnabled;
     if (current) {
       current = ref3.current;
     }

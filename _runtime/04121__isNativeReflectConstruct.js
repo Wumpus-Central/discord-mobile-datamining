@@ -3,8 +3,8 @@
 // Module 4121 (_isNativeReflectConstruct)
 import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
 import ModuleNotFoundError from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import importDefaultResult1 from "_inherits" /* 98 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

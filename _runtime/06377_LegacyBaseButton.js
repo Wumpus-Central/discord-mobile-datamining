@@ -27,7 +27,6 @@ import initialize from "initialize" /* 6379 */;
 
 initialize = initialize.initialize();
 for (const key10019 in require("BaseButton")) {
-  let tmp4 = key10019;
   arg5[key10019] = require("BaseButton")[key10019];
   continue;
 }

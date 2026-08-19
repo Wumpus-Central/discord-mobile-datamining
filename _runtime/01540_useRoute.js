@@ -2,7 +2,7 @@
 
 // Module 1540 (useRoute)
 import context2 from "context" /* 1541 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
 require = arg1;
 

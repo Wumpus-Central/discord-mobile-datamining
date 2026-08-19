@@ -5,13 +5,13 @@ import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6585 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6641 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const ForeignObject = arg1;
+const ForeignObject = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -59,13 +59,11 @@ const items = [
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height };
-      obj = {
+      const obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const tmp = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(6586).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = props.children;

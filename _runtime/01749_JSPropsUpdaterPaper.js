@@ -2,13 +2,13 @@
 
 // Module 1749 (JSPropsUpdaterPaper)
 import runWorkletOnJS from "runWorkletOnJS" /* 1661 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import isJest from "isJest" /* 1657 */;
 
 let JSPropsUpdaterWeb = global;
-require = arg1;
+require = fn;
 ({ NativeEventEmitter: c4, Platform } = get_ActivityIndicator);
 class JSPropsUpdaterPaper {
   constructor() {
@@ -73,7 +73,7 @@ class JSPropsUpdaterFabric {
       obj = require("runWorkletOnJS");
       fn = function t() {
         JSPropsUpdaterWeb.updateJSProps = (arg0, arg1) => {
-          closure_2_1(closure_2_2[4]).runOnJS(closure_0)(arg0, arg1);
+          runWorkletOnJS.runOnJS(closure_0)(arg0, arg1);
         };
       };
       obj = { runOnJS: null, updater: null };

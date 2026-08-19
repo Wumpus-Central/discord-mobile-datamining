@@ -31,12 +31,11 @@ arg5.storeSessionDataForTransport = function storeSessionDataForTransport(self, 
   }
 };
 arg5.updateSessionDataForTransport = function updateSessionDataForTransport(closure_4, closure_0) {
-  if (closure_4.sessionId) {
-    let obj = weakMap;
-    const tmp = weakMap.get(closure_4) || {};
-    obj = {};
+  if (sessionId.sessionId) {
+    const tmp = weakMap.get(sessionId) || {};
+    const obj = {};
     const merged = Object.assign(tmp);
     const merged1 = Object.assign(closure_0);
-    const result = obj.set(closure_4, obj);
+    const result = obj.set(sessionId, obj);
   }
 };

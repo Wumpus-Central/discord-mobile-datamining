@@ -21,15 +21,15 @@ function asString(str) {
     }
   }
 }
-function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_temperature) {
-  let str = arg0;
-  if (arg0 == null) {
+function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, ls_temperature) {
+  let str = ls_provider;
+  if (ls_provider == null) {
     str = "langchain";
   }
   let obj = {};
   obj[_mod958.GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
-  obj[_mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
-  obj[_mod958.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
+  obj[_mod958.GEN_AI_OPERATION_NAME_ATTRIBUTE] = chat;
+  obj[_mod958.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(unknown);
   obj[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = _mod979.LANGCHAIN_ORIGIN;
   if ("kwargs" in kwargs) {
     kwargs = kwargs.kwargs;
@@ -58,7 +58,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   obj = {};
   const NumberResult = Number(temperature);
   if (!Number.isNaN(NumberResult)) {
-    obj[tmp(958).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = NumberResult;
+    obj[_mod958.GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = NumberResult;
   }
   let max_tokens;
   if (temperature != null) {
@@ -83,7 +83,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   }
   const NumberResult1 = Number(max_tokens);
   if (!Number.isNaN(NumberResult1)) {
-    obj[tmp(958).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = NumberResult1;
+    obj[_mod958.GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = NumberResult1;
   }
   let top_p;
   if (temperature != null) {
@@ -101,7 +101,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   }
   const NumberResult2 = Number(top_p);
   if (!Number.isNaN(NumberResult2)) {
-    obj[tmp(958).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = NumberResult2;
+    obj[_mod958.GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = NumberResult2;
   }
   let frequency_penalty;
   if (temperature != null) {
@@ -112,7 +112,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   }
   const NumberResult3 = Number(frequency_penalty);
   if (!Number.isNaN(NumberResult3)) {
-    obj[tmp(958).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = NumberResult3;
+    obj[_mod958.GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = NumberResult3;
   }
   let presence_penalty;
   if (temperature != null) {
@@ -123,7 +123,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   }
   const NumberResult4 = Number(presence_penalty);
   if (!Number.isNaN(NumberResult4)) {
-    obj[tmp(958).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = NumberResult4;
+    obj[_mod958.GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = NumberResult4;
   }
   let tmp20 = temperature;
   if (temperature) {
@@ -136,7 +136,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
       HermesBuiltin.throwTypeError();
     }
     if (null != BooleanResult) {
-      obj[tmp(958).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
+      obj[_mod958.GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
     }
   }
   const merged = Object.assign(obj);
@@ -183,21 +183,21 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
     let _Array = Array;
     if (Array.isArray(arr)) {
       if (arr.length > 0) {
-        const mapped = arr.flat().map((_getType) => {
-          _getType = _getType._getType;
+        const mapped = arr.flat().map((item, index) => {
+          const _getType = item._getType;
           if (typeof _getType === "function") {
             const call = _getType.call;
-            const formatted = typeof call === "unknown" ? _getType() : call(_getType).toLowerCase();
+            const formatted = typeof call === "unknown" ? _getType() : call(item).toLowerCase();
             let tmp31 = callback(979).ROLE_MAP[formatted];
             if (tmp31 == null) {
               tmp31 = formatted;
             }
             let obj = { role: null, content: null };
             obj[0] = tmp31;
-            obj[1] = callback2(_getType.content);
+            obj[1] = callback2(item.content);
             return obj;
           } else {
-            const constructor = _getType.constructor;
+            const constructor = item.constructor;
             let name;
             if (constructor != null) {
               name = constructor.name;
@@ -233,35 +233,35 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
               }
               obj = { role: null, content: null };
               obj[0] = tmp26;
-              obj[1] = callback2(_getType.content);
+              obj[1] = callback2(item.content);
               return obj;
-            } else if (_getType.type) {
+            } else if (item.type) {
               const _String2 = String;
-              const str15 = String(_getType.type);
-              const formatted2 = String(_getType.type).toLowerCase().toLowerCase();
+              const str15 = String(item.type);
+              const formatted2 = String(item.type).toLowerCase().toLowerCase();
               let tmp21 = callback(979).ROLE_MAP[formatted2];
               if (tmp21 == null) {
                 tmp21 = formatted2;
               }
               obj1 = { role: null, content: null };
               obj1[0] = tmp21;
-              obj1[1] = callback2(_getType.content);
+              obj1[1] = callback2(item.content);
               return obj1;
-            } else if (_getType.role) {
+            } else if (item.role) {
               const _String = String;
-              const formatted3 = String(_getType.role).toLowerCase();
+              const formatted3 = String(item.role).toLowerCase();
               let tmp15 = callback(979).ROLE_MAP[formatted3];
               if (tmp15 == null) {
                 tmp15 = formatted3;
               }
               const obj2 = { role: null, content: null };
               obj2[0] = tmp15;
-              obj2[1] = callback2(_getType.content);
+              obj2[1] = callback2(item.content);
               return obj2;
             } else {
-              if (1 === _getType.lc) {
-                if (_getType.kwargs) {
-                  const id = _getType.id;
+              if (1 === item.lc) {
+                if (item.kwargs) {
+                  const id = item.id;
                   const _Array = Array;
                   let str2 = "";
                   if (Array.isArray(id)) {
@@ -304,7 +304,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
                   }
                   const obj3 = { role: null, content: null };
                   obj3[0] = tmp8;
-                  const kwargs = _getType.kwargs;
+                  const kwargs = item.kwargs;
                   let content;
                   if (kwargs != null) {
                     content = kwargs.content;
@@ -314,7 +314,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
                 }
               }
               obj = { role: "user", content: null };
-              obj[1] = callback2(_getType.content);
+              obj[1] = callback2(item.content);
               return obj;
             }
           }
@@ -326,14 +326,13 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
           tmpResult[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
         }
         const flatResult = arr.flat();
-        const tmp11 = setIfDefined;
         const result = truncateTextByBytes.truncateGenAiMessages(mapped);
         const tmp10 = asString(result);
-        if (typeof tmp11 !== "function") {
+        if (typeof setIfDefined !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (null != tmp10) {
-          tmpResult[tmp12(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
+          tmpResult[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
         }
         const tmp12Result = truncateTextByBytes;
       }
@@ -341,7 +340,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
   }
   return tmpResult;
 };
-arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(arg0, arr, closure_0, invocationParams, ls_provider) {
+arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(kwargs, arr, closure_0, invocationParams, ls_provider) {
   ls_provider = undefined;
   if (ls_provider != null) {
     ls_provider = ls_provider.ls_provider;
@@ -360,7 +359,7 @@ arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(arg0, ar
   if (str == null) {
     str = "unknown";
   }
-  const tmp2Result = baseRequestAttributes(ls_provider, str, "pipeline", arg0, invocationParams, ls_provider);
+  const tmp2Result = baseRequestAttributes(ls_provider, str, "pipeline", kwargs, invocationParams, ls_provider);
   if (closure_0) {
     const _Array = Array;
     if (Array.isArray(arr)) {
@@ -371,16 +370,14 @@ arg5.extractLLMRequestAttributes = function extractLLMRequestAttributes(arg0, ar
         if (null != arr.length) {
           tmp2Result[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
         }
-        const mapped = arr.map((content) => ({ role: "user", content }));
+        const mapped = arr.map((item, index) => ({ role: "user", content: item }));
         const tmp9 = asString(mapped);
-        if (typeof tmp10 !== "function") {
+        if (typeof setIfDefined !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (null != tmp9) {
-          tmp2Result[tmp11(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
+          tmp2Result[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
         }
-        tmp10 = setIfDefined;
-        tmp11 = require;
       }
     }
   }
@@ -392,28 +389,28 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
     let _Array = Array;
     if (Array.isArray(generations.generations)) {
       generations = generations.generations;
-      const mapped = generations.flat().map((generationInfo) => {
-        generationInfo = generationInfo.generationInfo;
+      const mapped = generations.flat().map((item, index) => {
+        const generationInfo = item.generationInfo;
         let finish_reason;
         if (generationInfo != null) {
           finish_reason = generationInfo.finish_reason;
         }
         if (finish_reason) {
-          let finish_reason1 = generationInfo.generationInfo.finish_reason;
+          let finish_reason1 = item.generationInfo.finish_reason;
         } else {
-          const generation_info = generationInfo.generation_info;
+          const generation_info = item.generation_info;
           let finish_reason2;
           if (generation_info != null) {
             finish_reason2 = generation_info.finish_reason;
           }
           finish_reason1 = null;
           if (finish_reason2) {
-            finish_reason1 = generationInfo.generation_info.finish_reason;
+            finish_reason1 = item.generation_info.finish_reason;
           }
         }
         return finish_reason1;
       });
-      const found = mapped.filter((str) => typeof str === "string");
+      const found = mapped.filter((item, index) => typeof item === "string");
       if (found.length > 0) {
         const tmp6 = asString(found);
         if (typeof setIfDefined !== "function") {
@@ -433,13 +430,9 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
             content = message.content;
           }
           let _Array = Array;
-          let tmp3 = content;
           if (Array.isArray(content)) {
-            let tmp4 = tmp3;
-            let tmp5 = content;
             for (const item10026 of content) {
               if ("tool_use" === item10026.type) {
-                let tmp7 = item10026;
                 let arr = items.push(tmp6);
               }
               continue;
@@ -450,13 +443,14 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         if (items.length > 0) {
           callback2(arg1, callback(table[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, callback3(items));
         }
+        const flatResult = generations.flat();
       })(generations.generations, obj);
       if (flag2) {
         const generations2 = generations.generations;
-        const mapped1 = generations2.flat().map((text) => {
-          text = text.text;
+        const mapped1 = generations2.flat().map((item, index) => {
+          let text = item.text;
           if (text == null) {
-            const message = text.message;
+            const message = item.message;
             let content;
             if (message != null) {
               content = message.content;
@@ -465,7 +459,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
           }
           return text;
         });
-        const found1 = mapped1.filter((str) => typeof str === "string");
+        const found1 = mapped1.filter((item, index) => typeof item === "string");
         if (found1.length > 0) {
           const tmp14 = asString(found1);
           if (typeof setIfDefined !== "function") {
@@ -477,7 +471,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         }
         const flatResult1 = generations2.flat();
       }
-      const flatResult = generations.flat();
+      let flatResult = generations.flat();
     }
     const llmOutput = generations.llmOutput;
     if (llmOutput) {
@@ -499,7 +493,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         const NumberResult1 = Number(tokenUsage.completionTokens);
         const _Number18 = Number;
         if (!Number.isNaN(NumberResult1)) {
-          obj[tmp28(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult1;
+          obj[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult1;
         }
         if (typeof setNumberIfDefined !== "function") {
           HermesBuiltin.throwTypeError();
@@ -508,7 +502,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         const NumberResult2 = Number(tokenUsage.totalTokens);
         const _Number20 = Number;
         if (!Number.isNaN(NumberResult2)) {
-          obj[tmp28(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult2;
+          obj[_mod958.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult2;
         }
       } else if (usage) {
         if (typeof setNumberIfDefined !== "function") {
@@ -527,7 +521,7 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         const NumberResult4 = Number(usage.output_tokens);
         const _Number4 = Number;
         if (!Number.isNaN(NumberResult4)) {
-          obj[tmp17(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult4;
+          obj[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = NumberResult4;
         }
         const _Number5 = Number;
         const NumberResult5 = Number(usage.input_tokens);
@@ -545,36 +539,36 @@ arg5.extractLlmResponseAttributes = function extractLlmResponseAttributes(genera
         }
         const sum = num3 + num4;
         if (sum > 0) {
-          if (typeof tmp16 !== "function") {
+          if (typeof setNumberIfDefined !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Number9 = Number;
           const NumberResult7 = Number(sum);
           const _Number10 = Number;
           if (!Number.isNaN(NumberResult7)) {
-            obj[tmp17(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult7;
+            obj[_mod958.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = NumberResult7;
           }
         }
         if (undefined !== usage.cache_creation_input_tokens) {
-          if (typeof tmp16 !== "function") {
+          if (typeof setNumberIfDefined !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Number11 = Number;
           const NumberResult8 = Number(usage.cache_creation_input_tokens);
           const _Number12 = Number;
           if (!Number.isNaN(NumberResult8)) {
-            obj[tmp17(958).GEN_AI_USAGE_CACHE_CREATION_INPUT_TOKENS_ATTRIBUTE] = NumberResult8;
+            obj[_mod958.GEN_AI_USAGE_CACHE_CREATION_INPUT_TOKENS_ATTRIBUTE] = NumberResult8;
           }
         }
         if (undefined !== usage.cache_read_input_tokens) {
-          if (typeof tmp16 !== "function") {
+          if (typeof setNumberIfDefined !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Number13 = Number;
           const NumberResult9 = Number(usage.cache_read_input_tokens);
           const _Number14 = Number;
           if (!Number.isNaN(NumberResult9)) {
-            obj[tmp17(958).GEN_AI_USAGE_CACHE_READ_INPUT_TOKENS_ATTRIBUTE] = NumberResult9;
+            obj[_mod958.GEN_AI_USAGE_CACHE_READ_INPUT_TOKENS_ATTRIBUTE] = NumberResult9;
           }
         }
       }
@@ -673,21 +667,21 @@ arg5.getInvocationParams = function getInvocationParams(invocation_params) {
   }
 };
 arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
-  return items.map((_getType) => {
-    _getType = _getType._getType;
+  return items.map((item, index) => {
+    const _getType = item._getType;
     if (typeof _getType === "function") {
       const call = _getType.call;
-      const formatted = typeof call === "unknown" ? _getType() : call(_getType).toLowerCase();
+      const formatted = typeof call === "unknown" ? _getType() : call(item).toLowerCase();
       let tmp31 = callback(979).ROLE_MAP[formatted];
       if (tmp31 == null) {
         tmp31 = formatted;
       }
       let obj = { role: null, content: null };
       obj[0] = tmp31;
-      obj[1] = callback2(_getType.content);
+      obj[1] = callback2(item.content);
       return obj;
     } else {
-      const constructor = _getType.constructor;
+      const constructor = item.constructor;
       let name;
       if (constructor != null) {
         name = constructor.name;
@@ -723,35 +717,35 @@ arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
         }
         obj = { role: null, content: null };
         obj[0] = tmp26;
-        obj[1] = callback2(_getType.content);
+        obj[1] = callback2(item.content);
         return obj;
-      } else if (_getType.type) {
+      } else if (item.type) {
         const _String2 = String;
-        const str15 = String(_getType.type);
-        const formatted2 = String(_getType.type).toLowerCase().toLowerCase();
+        const str15 = String(item.type);
+        const formatted2 = String(item.type).toLowerCase().toLowerCase();
         let tmp21 = callback(979).ROLE_MAP[formatted2];
         if (tmp21 == null) {
           tmp21 = formatted2;
         }
         obj1 = { role: null, content: null };
         obj1[0] = tmp21;
-        obj1[1] = callback2(_getType.content);
+        obj1[1] = callback2(item.content);
         return obj1;
-      } else if (_getType.role) {
+      } else if (item.role) {
         const _String = String;
-        const formatted3 = String(_getType.role).toLowerCase();
+        const formatted3 = String(item.role).toLowerCase();
         let tmp15 = callback(979).ROLE_MAP[formatted3];
         if (tmp15 == null) {
           tmp15 = formatted3;
         }
         const obj2 = { role: null, content: null };
         obj2[0] = tmp15;
-        obj2[1] = callback2(_getType.content);
+        obj2[1] = callback2(item.content);
         return obj2;
       } else {
-        if (1 === _getType.lc) {
-          if (_getType.kwargs) {
-            const id = _getType.id;
+        if (1 === item.lc) {
+          if (item.kwargs) {
+            const id = item.id;
             const _Array = Array;
             let str2 = "";
             if (Array.isArray(id)) {
@@ -794,7 +788,7 @@ arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
             }
             const obj3 = { role: null, content: null };
             obj3[0] = tmp8;
-            const kwargs = _getType.kwargs;
+            const kwargs = item.kwargs;
             let content;
             if (kwargs != null) {
               content = kwargs.content;
@@ -804,7 +798,7 @@ arg5.normalizeLangChainMessages = function normalizeLangChainMessages(items) {
           }
         }
         obj = { role: "user", content: null };
-        obj[1] = callback2(_getType.content);
+        obj[1] = callback2(item.content);
         return obj;
       }
     }

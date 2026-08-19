@@ -2,11 +2,10 @@
 
 // Module 4636 (baseReduce)
 
-export default function baseReduce(arg0, arg1, arg2, arg3, arg4) {
-  closure_0 = arg1;
+export default function baseReduce(closure_0, closure_0, arg2, arg3, fn) {
   closure_1 = arg2;
   closure_2 = arg3;
-  arg4(arg0, (arg0, arg1, arg2) => {
+  fn(closure_0, (arg0, arg1, arg2) => {
     if (c2) {
       c2 = false;
       let tmp6 = arg0;

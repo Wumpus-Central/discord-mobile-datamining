@@ -4,14 +4,13 @@
 import noop from "noop" /* 19 */;
 import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6408 */;
 
-function shouldUpdateDetector(arg0, handlerTag) {
-  if (undefined === arg0) {
+function shouldUpdateDetector(config, handlerTag) {
+  if (undefined === config) {
     return false;
   } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(arg0);
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(config);
     for (const item10012 of result) {
       if (item10012 === arg1.handlerTag) {
-        let tmp6 = obj2;
         obj2.return();
         let flag = true;
         return true;
@@ -36,16 +35,9 @@ export const useMountReactions = function useMountReactions(detectorUpdater, cur
         while (iter !== undefined) {
           let requireToFail = nextResult.config.requireToFail;
           let simultaneousWith = nextResult.config.simultaneousWith;
-          let tmp5 = closure_1_3;
           if (!closure_1_3(nextResult.config.blocksHandlers, arg0)) {
-            let tmp6 = requireToFail;
-            if (!tmp5(requireToFail, arg0)) {
-              let tmp7 = simultaneousWith;
-            }
           }
-          let tmp8 = callback;
           let tmp9 = callback();
-          let tmp10 = iter;
           iter.return();
         }
       }

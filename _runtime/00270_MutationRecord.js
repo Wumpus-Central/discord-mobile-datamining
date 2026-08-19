@@ -2,10 +2,10 @@
 
 // Module 270 (MutationRecord)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import setPlatformObject from "setPlatformObject" /* 126 */;
 
-const MutationRecord = arg1;
+const MutationRecord = fn;
 class MutationRecord {
   constructor(arg0) {
     tmp = closure_2(this, MutationRecord);

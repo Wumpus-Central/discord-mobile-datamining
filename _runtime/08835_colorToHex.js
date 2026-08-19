@@ -1,7 +1,7 @@
 // === Module 8835: colorToHex ===
 
 // Module 8835 (colorToHex)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 
 export const colorToHex = function colorToHex(arr) {

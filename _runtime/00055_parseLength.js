@@ -1,7 +1,9 @@
 // === Module 55: parseLength ===
 
 // Module 55 (parseLength)
-const module = arg2;
+import processColorDefault from "processColor" /* 50 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 function parseLength(arg0) {
   const match = regex.exec(arg0);
@@ -32,137 +34,89 @@ arg5.default = function processBoxShadow(str) {
       tmp48 = (function parseBoxShadowString(str) {
         const items = [];
         const parts = str.split(closure_2);
-        const mapped = parts.map((str) => str.trim());
-        const found = mapped.filter((arg0) => "" !== arg0);
+        const mapped = parts.map((item, index) => item.trim());
+        const found = mapped.filter((item, index) => "" !== item);
         const iter = found[Symbol.iterator]();
+        str = iter.next();
         while (iter !== undefined) {
           let obj = { offsetX: 0, offsetY: 0 };
           let tmp2;
           let flag = false;
           let num = 0;
-          let tmp4 = closure_3;
           let parts1 = str.split(closure_3);
-          let tmp6 = parts1;
-          let tmp7 = parts1;
           for (const item10041 of parts1) {
-            let tmp8 = item10041;
-            let tmp9 = callback;
-            let tmp10 = table;
             if (null == callback(table[0])(item10041)) {
-              let tmp17 = item10041;
-              if ("inset" !== tmp8) {
-                let tmp23 = num;
+              if ("inset" !== item10041) {
                 if (0 === num) {
                   tmp2 = item10041;
-                  let tmp42 = num;
                   num = num + 1;
                 } else if (1 === num) {
-                  let tmp38 = flag;
                   if (flag) {
-                    let tmp40 = obj2;
                     obj2.return();
-                    let tmp41 = iter;
                     let items1 = [];
                     iter.return();
                     return items1;
                   } else {
-                    tmp3 = item10041;
-                    let tmp39 = num;
                     num = num + 1;
                   }
                 } else if (2 === num) {
-                  let tmp32 = flag;
                   if (flag) {
-                    let tmp36 = obj2;
                     obj2.return();
-                    let tmp37 = iter;
                     let items2 = [];
                     iter.return();
                     return items2;
                   } else {
-                    let tmp33 = obj;
-                    let tmp34 = item10041;
-                    obj.blurRadius = tmp8;
-                    let tmp35 = num;
+                    obj.blurRadius = item10041;
                     num = num + 1;
                   }
                 } else if (3 === num) {
-                  let tmp26 = flag;
                   if (flag) {
-                    let tmp30 = obj2;
                     obj2.return();
-                    let tmp31 = iter;
                     let items3 = [];
                     iter.return();
                     return items3;
                   } else {
-                    let tmp27 = obj;
-                    let tmp28 = item10041;
-                    obj.spreadDistance = tmp8;
-                    let tmp29 = num;
+                    obj.spreadDistance = item10041;
                     num = num + 1;
                   }
                 } else {
-                  let tmp24 = obj2;
                   obj2.return();
-                  let tmp25 = iter;
                   let items4 = [];
                   iter.return();
                   return items4;
                 }
-              } else {
-                let tmp18 = obj;
-                if (null != obj.inset) {
-                  let tmp21 = obj2;
-                  obj2.return();
-                  let tmp22 = iter;
-                  let items5 = [];
-                  iter.return();
-                  return items5;
-                } else {
-                  let tmp19 = tmp2;
-                  if (null != tmp2) {
-                    flag = true;
-                  }
-                  let tmp20 = obj;
-                  obj.inset = true;
-                }
-              }
-            } else {
-              let tmp11 = obj;
-              if (null != obj.color) {
-                let tmp15 = obj2;
+              } else if (null != obj.inset) {
                 obj2.return();
-                let tmp16 = iter;
-                let items6 = [];
+                let items5 = [];
                 iter.return();
-                return items6;
+                return items5;
               } else {
-                let tmp12 = tmp2;
                 if (null != tmp2) {
                   flag = true;
                 }
-                let tmp13 = obj;
-                let tmp14 = item10041;
-                obj.color = tmp8;
+                obj.inset = true;
               }
+            } else if (null != obj.color) {
+              obj2.return();
+              let items6 = [];
+              iter.return();
+              return items6;
+            } else {
+              if (null != tmp2) {
+                flag = true;
+              }
+              obj.color = item10041;
             }
             continue;
           }
-          let tmp43 = tmp2;
           if (null != tmp2) {
-            let tmp44 = tmp3;
-            if (null != tmp3) {
-              let tmp45 = obj;
-              let tmp46 = tmp2;
+            if (null != item10041) {
               obj.offsetX = tmp2;
-              let tmp47 = tmp3;
-              obj.offsetY = tmp3;
+              obj.offsetY = item10041;
               let arr = items.push(obj);
               continue;
             }
           }
-          let tmp49 = iter;
           let items7 = [];
           iter.return();
           return items7;
@@ -175,113 +129,76 @@ arg5.default = function processBoxShadow(str) {
     while (iter !== undefined) {
       let tmp5 = nextResult;
       let obj = { offsetX: 0, offsetY: 0 };
-      let tmp6 = nextResult;
       for (const key10025 in nextResult) {
-        let tmp50 = key10025;
         if ("offsetX" === key10025) {
-          let tmp39 = nextResult;
           if (typeof tmp5.offsetX === "string") {
-            let tmp40 = parseLength;
-            let tmp41 = nextResult;
             let offsetX = parseLength(tmp5.offsetX);
           } else {
-            let tmp54 = nextResult;
             offsetX = tmp5.offsetX;
           }
           if (null == offsetX) {
-            let tmp45 = iter;
             let items1 = [];
             iter.return();
             return items1;
           } else {
-            let tmp43 = obj;
-            let tmp44 = offsetX;
             obj.offsetX = tmp42;
             continue;
           }
         } else {
           if ("offsetY" === key10025) {
-            let tmp32 = nextResult;
             if (typeof tmp5.offsetY === "string") {
-              let tmp33 = parseLength;
-              let tmp34 = nextResult;
               let offsetY = parseLength(tmp5.offsetY);
             } else {
-              let tmp53 = nextResult;
               offsetY = tmp5.offsetY;
             }
             if (null == offsetY) {
-              let tmp38 = iter;
               let items2 = [];
               iter.return();
               return items2;
             } else {
-              let tmp36 = obj;
-              let tmp37 = offsetY;
               obj.offsetY = tmp35;
               continue;
             }
           } else {
             if ("spreadDistance" === key10025) {
-              let tmp25 = nextResult;
               if (typeof tmp5.spreadDistance === "string") {
-                let tmp26 = parseLength;
-                let tmp27 = nextResult;
                 let spreadDistance = parseLength(tmp5.spreadDistance);
               } else {
-                let tmp52 = nextResult;
                 spreadDistance = tmp5.spreadDistance;
               }
               if (null == spreadDistance) {
-                let tmp31 = iter;
                 let items3 = [];
                 iter.return();
                 return items3;
               } else {
-                let tmp29 = obj;
-                let tmp30 = spreadDistance;
                 obj.spreadDistance = tmp28;
                 continue;
               }
             } else {
               if ("blurRadius" === key10025) {
-                let tmp17 = nextResult;
                 if (typeof tmp5.blurRadius === "string") {
-                  let tmp18 = parseLength;
-                  let tmp19 = nextResult;
                   let blurRadius = parseLength(tmp5.blurRadius);
                 } else {
-                  let tmp51 = nextResult;
                   blurRadius = tmp5.blurRadius;
                 }
                 let tmp20 = blurRadius;
                 if (null != blurRadius) {
-                  let tmp21 = blurRadius;
                   if (tmp20 >= 0) {
-                    let tmp22 = obj;
-                    let tmp23 = blurRadius;
                     obj.blurRadius = tmp20;
                     continue;
                   }
                 }
-                let tmp24 = iter;
                 let items4 = [];
                 iter.return();
                 return items4;
               } else {
                 if ("color" === key10025) {
-                  let tmp9 = module;
-                  let tmp10 = dependencyMap;
-                  let tmp11 = nextResult;
-                  let tmp12 = module(50)(tmp5.color);
+                  let tmp12 = processColorDefault(tmp5.color);
                   if (null == tmp12) {
-                    let tmp16 = iter;
                     let items5 = [];
                     iter.return();
                     return items5;
                   } else {
-                    let tmp14 = obj;
-                    let tmp15 = tmp12;
                     obj.color = tmp13;
                     continue;
                   }
@@ -289,8 +206,6 @@ arg5.default = function processBoxShadow(str) {
                   if ("inset" !== key10025) {
                     continue;
                   } else {
-                    let tmp7 = obj;
-                    let tmp8 = nextResult;
                     obj.inset = tmp5.inset;
                     continue;
                   }
@@ -306,7 +221,6 @@ arg5.default = function processBoxShadow(str) {
         }
         continue;
       }
-      let tmp46 = obj;
       let arr = items.push(obj);
       continue;
     }

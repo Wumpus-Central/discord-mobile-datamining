@@ -29,13 +29,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -48,7 +46,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -67,17 +64,7 @@ if (self2) {
       const $ZodError = _require(12199).$ZodError;
       $ZodError.init(prototype, arg1);
       prototype.name = "ZodError";
-      let obj = {
-        value(arg0) {
-          return closure_1_4.formatError(closure_0, arg0);
-        }
-      };
-      obj = {
-        value(arg0) {
-          return closure_1_4.flattenError(closure_0, arg0);
-        }
-      };
-      obj = {
+      const obj = {
         value(arg0) {
           const issues = prototype.issues;
           issues.push(arg0);

@@ -1,7 +1,10 @@
 // === Module 1062: _sendStandaloneClsSpan ===
 
 // Module 1062 (_sendStandaloneClsSpan)
-const require = arg1;
+import triggerHandlers from "triggerHandlers" /* 1034 */;
+import extractNetworkProtocol from "extractNetworkProtocol" /* 1059 */;
+
+require = arg1;
 let dependencyMap = arg6;
 function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {
   if (obj(1035).DEBUG_BUILD) {
@@ -10,8 +13,8 @@ function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry
     debug.log("Sending CLS span (" + arg0 + ")");
   }
   if (startTime) {
-    let tmpResult = tmp(1059);
-    tmpResult = tmp(817);
+    tmp(1059);
+    const tmpResult = tmp(817);
     let msToSecResult = tmpResult.msToSec((tmpResult.browserPerformanceTimeOrigin() || 0) + startTime.startTime);
     const tmp6 = tmpResult.browserPerformanceTimeOrigin() || 0;
   } else {
@@ -36,10 +39,10 @@ function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry
   }
   if (sources) {
     const sources1 = startTime.sources;
-    const item = sources1.forEach((node) => {
-      const combined = "cls.source." + arg1 + 1;
-      obj = obj(closure_1_1[3]);
-      obj[combined] = obj.htmlTreeAsString(node.node);
+    const item = sources1.forEach((item, index) => {
+      const combined = "cls.source." + index + 1;
+      obj = obj(dependencyMap[3]);
+      obj[combined] = obj.htmlTreeAsString(item.node);
     });
   }
   const tmpResult2 = obj(817);
@@ -51,13 +54,14 @@ function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry
     result.addEvent("cls", obj);
     result.end(msToSecResult);
   }
+  const tmpResult4 = obj(1059);
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._sendStandaloneClsSpan = _sendStandaloneClsSpan;
 arg5.trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client) {
   dependencyMap = 0;
   if (obj.supportsWebVital("layout-shift")) {
-    let tmpResult = tmp(1034);
+    let tmpResult = triggerHandlers;
     closure_2 = tmpResult.addClsInstrumentationHandler((metric) => {
       const tmp = metric.metric.entries[metric.metric.entries.length - 1];
       if (tmp) {
@@ -65,10 +69,11 @@ arg5.trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client) {
         closure_0 = tmp;
       }
     }, true);
-    tmpResult = tmp(1059);
+    tmpResult = extractNetworkProtocol;
     const result = tmpResult.listenForWebVitalReportEvents(client, (arg0, arg1) => {
       callback(c1, closure_0, arg1, arg0);
       callback();
     });
   }
+  obj = extractNetworkProtocol;
 };

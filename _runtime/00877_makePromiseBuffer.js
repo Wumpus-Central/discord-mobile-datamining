@@ -7,34 +7,28 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("SentryBufferFullError");
 arg5.SENTRY_BUFFER_FULL_ERROR = forResult;
 arg5.makePromiseBuffer = function makePromiseBuffer() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 100;
-  }
-  let set;
-  set = new Set();
-  let obj = {};
+  const set = new Set();
+  const obj = {};
   Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
-  obj.add = function add(arg0) {
+  obj.add = function add(fn) {
     if (set.size < promise) {
-      promise = arg0();
-      obj.add(promise);
-      promise.then(() => {
-        closure_1_1.delete(promise);
+      promise = fn();
+      set.add(promise);
+      promise.then((result) => {
+        set.delete(promise);
       }, () => {
-        closure_1_1.delete(promise);
+        set.delete(promise);
       });
       return promise;
     } else {
       return num(set[0]).rejectedSyncPromise(closure_1_2);
     }
-    obj = set;
   };
   obj.drain = function drain(arg0) {
     closure_0 = arg0;
     if (set.size) {
       const _Array = Array;
-      const nextPromise = Promise.allSettled(Array.from(tmp)).then(() => true);
+      const nextPromise = Promise.allSettled(Array.from(tmp)).then((result) => true);
       if (arg0) {
         const items = [nextPromise, ];
         const promise = new Promise((arg0) => {

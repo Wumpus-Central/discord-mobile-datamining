@@ -8,25 +8,25 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
   const items = [];
   return {
     $: items,
-    add(arg0) {
+    add(fn) {
       let tmp2 = undefined === promise;
       if (!tmp2) {
         tmp2 = items.length < tmp;
       }
       if (tmp2) {
-        promise = arg0();
+        promise = fn();
         let arr = items;
         if (-1 === items.indexOf(promise)) {
           arr = arr.push(promise);
         }
-        promise.then(() => {
-          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
+        promise.then((result) => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
           if (!first) {
             first = Promise.resolve(undefined);
           }
           return first;
         }).then(null, () => {
-          let first = closure_1_1.splice(closure_1_1.indexOf(promise), 1)[0];
+          let first = items.splice(items.indexOf(promise), 1)[0];
           if (!first) {
             first = Promise.resolve(undefined);
           }
@@ -42,10 +42,9 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
     },
     drain(arg0) {
       const callback = arg0;
-      return new callback(items[0]).SyncPromise((arg0, arg1) => {
-        closure_0 = arg0;
+      return new callback(items[0]).SyncPromise((fn) => {
+        closure_0 = fn;
         closure_1 = arg1;
-        const length = closure_1_1.length;
         if (length) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
@@ -57,9 +56,9 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
               callback(false);
             }
           }, closure_0);
-          const item = arr.forEach((arg0) => {
+          const item = items.forEach((item, index) => {
             const obj = callback(items[0]);
-            callback(items[0]).resolvedSyncPromise(arg0).then(() => {
+            callback(items[0]).resolvedSyncPromise(item).then((result) => {
               const diff = closure_2 - 1;
               closure_2 = diff;
               if (!diff) {
@@ -70,9 +69,9 @@ arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {
             }, closure_1);
           });
         } else {
-          return arg0(true);
+          return fn(true);
         }
-        arr = closure_1_1;
+        length = items.length;
       });
     }
   };
