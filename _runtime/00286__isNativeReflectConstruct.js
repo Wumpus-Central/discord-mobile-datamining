@@ -2,9 +2,9 @@
 import _inheritsDefault from "00098__inherits.js";
 import EventDefault from "00133_Event.js";
 import LegacySyntheticEvent from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
-import closure_3 from "metro/00096__get.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _get from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {

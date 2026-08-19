@@ -17,11 +17,9 @@ export const parsePossibleSources = function parsePossibleSources(source) {
       }
     }
     if (typeof source !== "object") {
-      let tmp2;
       if (typeof source === "number") {
         obj = { sourceDotLottieURI: null };
         obj[0] = Image.resolveAssetSource(source).uri;
-        tmp2 = obj;
       }
     }
     if (uri.includes(".lottie")) {

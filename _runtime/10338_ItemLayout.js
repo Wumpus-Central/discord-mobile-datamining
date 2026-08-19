@@ -2,7 +2,7 @@
 import noopDefault from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopDefault;
 let closure_4 = { code: "function pnpm_ItemLayoutTsx1(){const{x,size}=this.__closure;return x.value/size;}" };
 let closure_5 = { code: "function pnpm_ItemLayoutTsx2(){const{animationStyle,x,size,index}=this.__closure;return animationStyle(x.value/size,index);}" };

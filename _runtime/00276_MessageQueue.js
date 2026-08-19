@@ -1,8 +1,10 @@
 // _runtime/00276_MessageQueue.js
-const module = arg2;
+import MessageQueueDefault from "00236_MessageQueue.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   register(arg0) {
-    module(236)("RCTEventEmitter", arg0);
+    MessageQueueDefault("RCTEventEmitter", arg0);
   }
 };

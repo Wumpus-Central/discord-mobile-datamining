@@ -60,7 +60,6 @@ function getCommonStyles(arg0) {
     const items2 = [-1, 0, validLength - 1, validLength];
     const items3 = [0.25, 1, 1 - (validLength - 1) * opacityInterval, 0.25];
     let interpolateResult = cancelAnimation.interpolate(value, items2, items3);
-    const obj2 = cancelAnimation;
   } else if ("right" !== snapDirection) {
     const _Error = Error;
     error = new Error("snapDirection must be set to either left or right");
@@ -76,11 +75,9 @@ function getCommonStyles(arg0) {
     const _Number4 = Number;
     items5[4] = Number.MIN_VALUE;
     result = Math.floor(10000 * cancelAnimation.interpolate(value, items4, items5)) / 100;
-    const obj4 = cancelAnimation;
     const items6 = [-validLength, 1 - validLength, 0, 1];
     const items7 = [0.25, 1 - (validLength - 1) * opacityInterval, 1, 0.25];
     interpolateResult = cancelAnimation.interpolate(value, items6, items7);
-    const obj5 = cancelAnimation;
   }
   obj = { zIndex: Math.round(result), opacity: interpolateResult };
   return obj;
@@ -125,9 +122,9 @@ export const horizontalStackLayout = function horizontalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = closure_1_6(obj));
-    const tmp3 = closure_1_6(obj);
-    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = getCommonVariables(obj));
+    const tmp3 = getCommonVariables(obj);
+    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
       const obj2 = obj(obj[2]);
       const items = [-width, 0, validLength * num];
@@ -206,9 +203,9 @@ export const useHorizontalStackLayout = function useHorizontalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = closure_1_6(obj));
-    const tmp3 = closure_1_6(obj);
-    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = getCommonVariables(obj));
+    const tmp3 = getCommonVariables(obj);
+    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
       const obj2 = obj(obj[2]);
       const items = [-width, 0, validLength * num];
@@ -287,37 +284,37 @@ export const verticalStackLayout = function verticalStackLayout() {
       num4 = rotateZDeg;
     }
     obj = { showLength: obj.showLength, value, snapDirection: str };
-    ({ validLength, value, inputRange } = closure_1_6(obj));
-    const tmp3 = closure_1_6(obj);
-    ({ zIndex, opacity } = closure_1_7({ validLength, value, opacityInterval: num3, snapDirection: str }));
+    ({ validLength, value, inputRange } = getCommonVariables(obj));
+    const tmp3 = getCommonVariables(obj);
+    ({ zIndex, opacity } = getCommonStyles({ validLength, value, opacityInterval: num3, snapDirection: str }));
     if ("left" === str) {
-      const obj2 = obj(closure_1_1[2]);
+      const obj2 = obj(dependencyMap[2]);
       const items = [-width, 0, 0];
-      let interpolateResult = obj2.interpolate(value, inputRange, items, obj(closure_1_1[2]).Extrapolation.CLAMP);
-      const obj3 = obj(closure_1_1[2]);
+      let interpolateResult = obj2.interpolate(value, inputRange, items, obj(dependencyMap[2]).Extrapolation.CLAMP);
+      const obj3 = obj(dependencyMap[2]);
       const items1 = [1, 1, 1 - validLength * num2];
-      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, obj(closure_1_1[2]).Extrapolation.CLAMP);
-      const obj4 = obj(closure_1_1[2]);
+      let interpolateResult1 = obj3.interpolate(value, inputRange, items1, obj(dependencyMap[2]).Extrapolation.CLAMP);
+      const obj4 = obj(dependencyMap[2]);
       const items2 = [-num4, 0, 0];
       const _HermesInternal = HermesInternal;
-      let combined = "" + obj4.interpolate(value, inputRange, items2, obj(closure_1_1[2]).Extrapolation.CLAMP) + "deg";
-      const obj5 = obj(closure_1_1[2]);
+      let combined = "" + obj4.interpolate(value, inputRange, items2, obj(dependencyMap[2]).Extrapolation.CLAMP) + "deg";
+      const obj5 = obj(dependencyMap[2]);
       const items3 = [0, 0, validLength * num];
-      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      let interpolateResult2 = obj5.interpolate(value, inputRange, items3, obj(dependencyMap[2]).Extrapolation.CLAMP);
     } else if ("right" === str) {
-      const obj6 = obj(closure_1_1[2]);
+      const obj6 = obj(dependencyMap[2]);
       const items4 = [0, 0, width];
-      interpolateResult = obj6.interpolate(value, inputRange, items4, obj(closure_1_1[2]).Extrapolation.CLAMP);
-      const obj7 = obj(closure_1_1[2]);
+      interpolateResult = obj6.interpolate(value, inputRange, items4, obj(dependencyMap[2]).Extrapolation.CLAMP);
+      const obj7 = obj(dependencyMap[2]);
       const items5 = [1 - validLength * num2, 1, 1];
-      interpolateResult1 = obj7.interpolate(value, inputRange, items5, obj(closure_1_1[2]).Extrapolation.CLAMP);
-      const obj8 = obj(closure_1_1[2]);
+      interpolateResult1 = obj7.interpolate(value, inputRange, items5, obj(dependencyMap[2]).Extrapolation.CLAMP);
+      const obj8 = obj(dependencyMap[2]);
       const items6 = [0, 0, num4];
       const _HermesInternal2 = HermesInternal;
-      combined = "" + obj8.interpolate(value, inputRange, items6, obj(closure_1_1[2]).Extrapolation.CLAMP) + "deg";
-      const obj9 = obj(closure_1_1[2]);
+      combined = "" + obj8.interpolate(value, inputRange, items6, obj(dependencyMap[2]).Extrapolation.CLAMP) + "deg";
+      const obj9 = obj(dependencyMap[2]);
       const items7 = [validLength * num, 0, 0];
-      interpolateResult2 = obj9.interpolate(value, inputRange, items7, obj(closure_1_1[2]).Extrapolation.CLAMP);
+      interpolateResult2 = obj9.interpolate(value, inputRange, items7, obj(dependencyMap[2]).Extrapolation.CLAMP);
     }
     const transform = [{ translateX: interpolateResult }, { scale: interpolateResult1 }, { rotateZ: combined }, { translateY: interpolateResult2 }];
     return { transform, zIndex, opacity };

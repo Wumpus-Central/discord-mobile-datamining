@@ -1,11 +1,13 @@
 // _runtime/10336_ItemRenderer.js
 import cancelAnimation from "01654_cancelAnimation.js";
+import SINGLE_ITEM from "10314_SINGLE_ITEM.js";
 import isArraysEqual from "10337_isArraysEqual.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00019_noop.js";
+import ItemLayout from "10338_ItemLayout.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 ({ jsx: c4, Fragment: c5 } = jsxProd);
 let closure_6 = { code: "function pnpm_ItemRendererTsx1(){const{visibleRanges}=this.__closure;return visibleRanges.value;}" };
 let closure_7 = { code: "function pnpm_ItemRendererTsx2(ranges){const{runOnJS,setDisplayedItems}=this.__closure;return runOnJS(setDisplayedItems)(ranges);}" };
@@ -26,7 +28,7 @@ export const ItemRenderer = (arg0) => {
   fn.__workletHash = 13618421293040;
   fn.__initData = closure_6;
   const fn2 = function c(arg0) {
-    return closure_1_0(closure_1_1[4]).runOnJS(closure_9)(arg0);
+    return cancelAnimation.runOnJS(closure_9)(arg0);
   };
   obj = { runOnJS: cancelAnimation.runOnJS, setDisplayedItems: tmp4 };
   fn2.__closure = obj;
@@ -37,10 +39,9 @@ export const ItemRenderer = (arg0) => {
   let tmp6 = null;
   if (first) {
     obj = { children: null };
-    obj[0] = data.map((arg0, index) => {
-      closure_0 = arg0;
-      let obj = closure_1_0(closure_1_1[5]);
-      obj = { index, dataLength: closure_1, loop, autoFillData: closure_3 };
+    obj[0] = data.map((item, index) => {
+      closure_0 = item;
+      let obj = { index, dataLength: closure_1, loop, autoFillData: closure_3 };
       closure_1 = obj.computedRealIndexWithAutoFillData(obj);
       ({ negativeRange, positiveRange } = first);
       if (index < negativeRange[0]) {
@@ -59,7 +60,7 @@ export const ItemRenderer = (arg0) => {
       obj[4] = function children(animationValue) {
         return closure_1_5({ item: closure_0, index: closure_1, animationValue: animationValue.animationValue });
       };
-      tmp4Result = closure_1_4(closure_1_0(closure_1_1[6]).ItemLayout, obj, index);
+      tmp4Result = closure_1_4(ItemLayout.ItemLayout, obj, index);
     });
     tmp6 = callback(closure_5, obj);
   }

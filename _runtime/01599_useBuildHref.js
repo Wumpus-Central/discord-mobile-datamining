@@ -1,5 +1,5 @@
 // _runtime/01599_useBuildHref.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 function useBuildHref() {
@@ -61,12 +61,11 @@ function useBuildHref() {
         let someResult = obj.key === key1;
         if (someResult) {
           const routes = obj.getState().routes;
-          someResult = routes.some((key) => key.key === obj.key);
+          someResult = routes.some((item, index) => item.key === obj.key);
         }
         tmp5 = someResult;
       }
       context = tmp5;
-      obj = { routes: null };
       obj = { name: null, params: null };
       obj[0] = arg0;
       obj[1] = arg1;
@@ -81,7 +80,6 @@ function useBuildHref() {
             }
             return tmp4;
           }
-          obj = { routes: null };
           obj = {};
           const merged = Object.assign(first);
           obj.state = constructState(first.state);
@@ -156,13 +154,13 @@ function useBuildAction() {
     if (str.startsWith("/")) {
       let config;
       if (options != null) {
-        config = tmp7.config;
+        config = options.config;
       }
       const tmp6Result = getStateFromPath(str, config);
       if (tmp6Result) {
         let config1;
-        if (tmp7 != null) {
-          config1 = tmp7.config;
+        if (options != null) {
+          config1 = options.config;
         }
         let resetResult = getActionFromState(tmp6Result, config1);
         if (resetResult == null) {
@@ -175,7 +173,6 @@ function useBuildAction() {
         error = new Error("Failed to parse the href to a navigation state.");
         throw error;
       }
-      const tmp6 = getStateFromPath;
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;

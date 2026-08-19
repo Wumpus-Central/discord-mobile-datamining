@@ -1,20 +1,19 @@
 // _runtime/01610_useThenable.js
-import closure_0 from "00005_asyncGeneratorStep.js";
-import closure_1 from "metro/00032__slicedToArray.js";
-import closure_2 from "00019_noop.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 
 
 export const useThenable = function useThenable(arg0) {
   const first = items(React.useState(arg0), 1)[0];
   items = [false, undefined];
-  first.then((arg0) => {
-    items = [true, arg0];
+  first.then((result) => {
+    items = [true, result];
   });
   [tmp3, closure_2] = items(React.useState(items), 2);
   const first1 = items(tmp3, 1)[0];
   let items1 = [first, first1];
   const effect = React.useEffect(() => {
-    closure_0 = false;
     closure_0 = first(function*() {
       if (c5 === 2) {
         c5 = 3;

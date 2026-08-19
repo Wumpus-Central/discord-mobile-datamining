@@ -42,16 +42,16 @@ export const measureItemLayout = function measureItemLayout(current, closure_27)
     size.width = size.roundToNearestPixel(arg2);
     size.height = size.roundToNearestPixel(arg3);
   });
-  if (closure_27) {
+  if (styles) {
     const _Math = Math;
     const pixelSizeForLayoutSize = size.getPixelSizeForLayoutSize(size.width);
-    if (Math.abs(pixelSizeForLayoutSize - size.getPixelSizeForLayoutSize(closure_27.width)) <= 1) {
-      size.width = closure_27.width;
+    if (Math.abs(pixelSizeForLayoutSize - size.getPixelSizeForLayoutSize(styles.width)) <= 1) {
+      size.width = styles.width;
     }
     const _Math2 = Math;
     const pixelSizeForLayoutSize1 = obj.getPixelSizeForLayoutSize(size.height);
-    if (Math.abs(pixelSizeForLayoutSize1 - size.getPixelSizeForLayoutSize(closure_27.height)) <= 1) {
-      size.height = closure_27.height;
+    if (Math.abs(pixelSizeForLayoutSize1 - size.getPixelSizeForLayoutSize(styles.height)) <= 1) {
+      size.height = styles.height;
     }
   }
   return size;

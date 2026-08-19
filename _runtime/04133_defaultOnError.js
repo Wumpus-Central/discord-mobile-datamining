@@ -1,12 +1,11 @@
 // _runtime/04133_defaultOnError.js
 import _mod4134 from "metro/04134__.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
-import { NitroRiveView } from "04111_NitroRiveView.js";
 import { c } from "04135_c.js";
 
-require = arg1;
+require = fn;
 let closure_2 = ["onError", "hybridRef"];
 ({ useEffect: c4, useRef: c5 } = noop);
 function defaultOnError(message) {
@@ -14,7 +13,7 @@ function defaultOnError(message) {
 }
 
 export const RiveView = function RiveView(arg0) {
-  let obj = _c;
+  let obj = c;
   const cResult = obj.c(16);
   if (cResult[0] !== arg0) {
     ({ onError, hybridRef } = arg0);
@@ -39,8 +38,8 @@ export const RiveView = function RiveView(arg0) {
     const fn = function y() {
       return () => {
         if (ref.current) {
-          closure_1_0(closure_1_1[5]).callDispose(tmp.current);
-          tmp.current = null;
+          closure_1_0(closure_1_1[5]).callDispose(ref.current);
+          ref.current = null;
           const obj = closure_1_0(closure_1_1[5]);
         }
       };
@@ -55,18 +54,18 @@ export const RiveView = function RiveView(arg0) {
     tmp11 = cResult[5];
   }
   callback2(tmp10, tmp11);
-  if (cResult[6] !== tmp6) {
+  if (cResult[6] !== hybridRef) {
     const fn2 = function b(current) {
       closure_1.current = current;
       let f;
       if (closure_0 != null) {
-        f = obj.f;
+        f = closure_0.f;
       }
       if (f) {
-        obj.f(current);
+        closure_0.f(current);
       }
     };
-    cResult[6] = tmp6;
+    cResult[6] = hybridRef;
     cResult[7] = fn2;
     let tmp13 = fn2;
   } else {
@@ -102,7 +101,7 @@ export const RiveView = function RiveView(arg0) {
   const merged = Object.assign(tmp5);
   obj1.onError = tmp14;
   obj1.hybridRef = tmp15;
-  const tmp18 = jsx(_NitroRiveView.NitroRiveView, {});
+  const tmp18 = jsx(require("04111_NitroRiveView.js").NitroRiveView, {});
   cResult[12] = tmp5;
   cResult[13] = tmp14;
   cResult[14] = tmp15;

@@ -1,6 +1,6 @@
 // _runtime/13932_useReanimatedTransitionProgress.js
 import noopDefault from "13930_noop.js";
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 
 export default function useReanimatedTransitionProgress() {

@@ -42,9 +42,9 @@ export default function _regeneratorRuntime() {
     constructor(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      invoke = function invoke(iter, _invoke, arg2) {
+      invoke = function invoke(iter, _invoke, arg2, fn) {
         iter = arg2;
-        const tmp = closure_1_6(iter[iter], iter, _invoke);
+        const tmp = tryCatch(iter[iter], iter, _invoke);
         if ("throw" !== tmp.type) {
           iter = tmp.arg;
           const value = iter.value;
@@ -58,23 +58,23 @@ export default function _regeneratorRuntime() {
                 callResult = call(value, "__await");
               }
               if (callResult) {
-                let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                  iter("next", arg0, closure_0, closure_1);
-                }, (arg0) => {
-                  iter("throw", arg0, closure_0, closure_1);
+                let nextPromise = _Promise.resolve(value.__await).then((result) => {
+                  iter("next", result, closure_0, closure_1);
+                }, (result) => {
+                  iter("throw", result, closure_0, closure_1);
                 });
                 const resolveResult = _Promise.resolve(value.__await);
               }
               return nextPromise;
             }
           }
-          nextPromise = _Promise.resolve(value).then((value) => {
-            iter.value = value;
+          nextPromise = _Promise.resolve(value).then((result) => {
+            iter.value = result;
             callback(iter);
-          }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+          }, (result) => iter("throw", result, closure_0, closure_1));
           const resolveResult1 = _Promise.resolve(value);
         } else {
-          arg3(tmp.arg);
+          fn(tmp.arg);
         }
       };
       obj = {
@@ -82,7 +82,7 @@ export default function _regeneratorRuntime() {
               closure_0 = arg0;
               closure_1 = arg1;
               if (nextPromise) {
-                function callInvokeWithMethodAndArg() {
+                function callInvokeWithMethodAndArg(result) {
                   return new closure_1((arg0, arg1) => {
                     closure_1_2(closure_0, closure_1, arg0, arg1);
                   });
@@ -190,7 +190,6 @@ export default function _regeneratorRuntime() {
     arg0[arg1] = value.value;
   });
   closure_2 = tmp;
-  let tmp2 = typeof Symbol === "function" ? Symbol : {};
   closure_3 = tmp3;
   closure_4 = tmp5;
   try {
@@ -209,23 +208,19 @@ export default function _regeneratorRuntime() {
           if (!isNaN(next.length)) {
             c1 = -1;
             next = function next() {
-              let arr;
               const sum = sum1 + 1;
               sum1 = sum;
               if (sum < next.length) {
                 while (true) {
-                  let tmp2 = c1;
-                  let call = c1.call;
-                  arr = next;
+                  let call = v1.call;
                   let tmp3 = sum1;
-                  if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                  if (typeof call === "unknown" ? v1(tmp3) : call(next, tmp3)) {
                     break;
                   } else {
-                    let tmp4 = sum1;
                     sum1 = sum1 + 1;
                   }
                 }
-                next.value = arr[sum1];
+                next.value = next[sum1];
                 next.done = false;
                 return next;
               }
@@ -261,9 +256,9 @@ export default function _regeneratorRuntime() {
       constructor(arg0, arg1) {
         closure_0 = arg0;
         closure_1 = arg1;
-        invoke = function invoke(iter, _invoke, arg2) {
+        invoke = function invoke(iter, _invoke, arg2, fn) {
           iter = arg2;
-          const tmp = closure_1_6(iter[iter], iter, _invoke);
+          const tmp = tryCatch(iter[iter], iter, _invoke);
           if ("throw" !== tmp.type) {
             iter = tmp.arg;
             const value = iter.value;
@@ -277,23 +272,23 @@ export default function _regeneratorRuntime() {
                   callResult = call(value, "__await");
                 }
                 if (callResult) {
-                  let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                    iter("next", arg0, closure_0, closure_1);
-                  }, (arg0) => {
-                    iter("throw", arg0, closure_0, closure_1);
+                  let nextPromise = _Promise.resolve(value.__await).then((result) => {
+                    iter("next", result, closure_0, closure_1);
+                  }, (result) => {
+                    iter("throw", result, closure_0, closure_1);
                   });
                   const resolveResult = _Promise.resolve(value.__await);
                 }
                 return nextPromise;
               }
             }
-            nextPromise = _Promise.resolve(value).then((value) => {
-              iter.value = value;
+            nextPromise = _Promise.resolve(value).then((result) => {
+              iter.value = result;
               callback(iter);
-            }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+            }, (result) => iter("throw", result, closure_0, closure_1));
             const resolveResult1 = _Promise.resolve(value);
           } else {
-            arg3(tmp.arg);
+            fn(tmp.arg);
           }
         };
         obj = {
@@ -301,7 +296,7 @@ export default function _regeneratorRuntime() {
                   closure_0 = arg0;
                   closure_1 = arg1;
                   if (nextPromise) {
-                    function callInvokeWithMethodAndArg() {
+                    function callInvokeWithMethodAndArg(result) {
                       return new closure_1((arg0, arg1) => {
                         closure_1_2(closure_0, closure_1, arg0, arg1);
                       });
@@ -348,9 +343,9 @@ export default function _regeneratorRuntime() {
       function defineIteratorMethods(arg0) {
         closure_0 = arg0;
         const items = ["next", "throw", "return"];
-        const item = items.forEach((arg0) => {
-          closure_0 = arg0;
-          closure_1_5(closure_0, arg0, function(arg0) {
+        const item = items.forEach((item, index) => {
+          closure_0 = item;
+          define2(closure_0, item, function(arg0) {
             return this._invoke(closure_0, arg0);
           });
         });
@@ -379,9 +374,9 @@ export default function _regeneratorRuntime() {
         constructor(arg0, arg1) {
           closure_0 = arg0;
           closure_1 = arg1;
-          invoke = function invoke(iter, _invoke, arg2) {
+          invoke = function invoke(iter, _invoke, arg2, fn) {
             iter = arg2;
-            const tmp = closure_1_6(iter[iter], iter, _invoke);
+            const tmp = tryCatch(iter[iter], iter, _invoke);
             if ("throw" !== tmp.type) {
               iter = tmp.arg;
               const value = iter.value;
@@ -395,23 +390,23 @@ export default function _regeneratorRuntime() {
                     callResult = call(value, "__await");
                   }
                   if (callResult) {
-                    let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                      iter("next", arg0, closure_0, closure_1);
-                    }, (arg0) => {
-                      iter("throw", arg0, closure_0, closure_1);
+                    let nextPromise = _Promise.resolve(value.__await).then((result) => {
+                      iter("next", result, closure_0, closure_1);
+                    }, (result) => {
+                      iter("throw", result, closure_0, closure_1);
                     });
                     const resolveResult = _Promise.resolve(value.__await);
                   }
                   return nextPromise;
                 }
               }
-              nextPromise = _Promise.resolve(value).then((value) => {
-                iter.value = value;
+              nextPromise = _Promise.resolve(value).then((result) => {
+                iter.value = result;
                 callback(iter);
-              }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+              }, (result) => iter("throw", result, closure_0, closure_1));
               const resolveResult1 = _Promise.resolve(value);
             } else {
-              arg3(tmp.arg);
+              fn(tmp.arg);
             }
           };
           obj = {
@@ -419,7 +414,7 @@ export default function _regeneratorRuntime() {
                       closure_0 = arg0;
                       closure_1 = arg1;
                       if (nextPromise) {
-                        function callInvokeWithMethodAndArg() {
+                        function callInvokeWithMethodAndArg(result) {
                           return new closure_1((arg0, arg1) => {
                             closure_1_2(closure_0, closure_1, arg0, arg1);
                           });
@@ -462,7 +457,6 @@ export default function _regeneratorRuntime() {
           let tmp3 = constructor === GeneratorFunction;
           if (!tmp3) {
             tmp3 = "GeneratorFunction" === (constructor.displayName || constructor.name);
-            const tmp4 = constructor.displayName || constructor.name;
           }
           tmp = tmp3;
         }
@@ -486,10 +480,6 @@ export default function _regeneratorRuntime() {
       });
       obj.AsyncIterator = AsyncIterator;
       obj.async = (iter, fn) => {
-        let _Promise = arg4;
-        if (undefined === arg4) {
-          _Promise = Promise;
-        }
         if (!fn) {
           let tmp4 = Generator;
         } else {
@@ -510,7 +500,7 @@ export default function _regeneratorRuntime() {
             if (closure_3 === closure_1_9) {
               const _Error = Error;
               throw Error("Generator is already running");
-            } else if (tmp === closure_1_10) {
+            } else if (tmp === completed) {
               if ("throw" === method) {
                 throw arg1;
               } else {
@@ -520,13 +510,10 @@ export default function _regeneratorRuntime() {
               invoke.method = method;
               invoke.arg = arg1;
               while (true) {
-                iter = invoke;
                 let delegate = invoke.delegate;
                 if (delegate) {
-                  let tmp2 = closure_1_17;
-                  let tmp3 = closure_1_17(delegate, iter);
+                  let tmp3 = maybeInvokeDelegate(delegate, invoke);
                   if (tmp3) {
-                    let tmp15 = closure_1_11;
                     if (tmp3 === closure_1_11) {
                       continue;
                     } else {
@@ -534,67 +521,57 @@ export default function _regeneratorRuntime() {
                     }
                   }
                 }
-                if ("next" === iter.method) {
-                  let arg = iter.arg;
-                  iter._sent = arg;
-                  iter.sent = arg;
-                } else if ("throw" === iter.method) {
-                  let tmp5 = closure_3;
-                  let tmp6 = closure_1_7;
+                if ("next" === invoke.method) {
+                  let arg = invoke.arg;
+                  invoke._sent = arg;
+                  invoke.sent = arg;
+                } else if ("throw" === invoke.method) {
                   if (closure_3 === closure_1_7) {
                     break;
                   } else {
-                    let dispatchExceptionResult = iter.dispatchException(iter.arg);
+                    let dispatchExceptionResult = invoke.dispatchException(invoke.arg);
                   }
-                } else if ("return" === iter.method) {
-                  let abruptResult = iter.abrupt("return", iter.arg);
+                } else if ("return" === invoke.method) {
+                  let abruptResult = invoke.abrupt("return", invoke.arg);
                 }
-                let tmp9 = closure_1_9;
                 closure_3 = closure_1_9;
-                let tmp10 = closure_1_6;
-                let tmp11 = iter;
-                let tmp12 = _Promise;
-                let tmp13 = closure_1_6(iter, _Promise, iter);
+                let tmp13 = tryCatch(invoke, _Promise, invoke);
                 if ("normal" === tmp13.type) {
-                  closure_3 = iter.done ? closure_1_10 : closure_1_8;
-                  let tmp14 = closure_1_11;
+                  closure_3 = invoke.done ? completed : closure_1_8;
                   if (tmp13.arg === closure_1_11) {
                     continue;
                   } else {
                     obj = { value: null, done: null };
                     obj[0] = tmp13.arg;
-                    obj[1] = iter.done;
+                    obj[1] = invoke.done;
                     return obj;
                   }
                 } else {
                   if ("throw" !== tmp13.type) {
                     continue;
                   } else {
-                    let tmp21 = closure_1_10;
-                    closure_3 = closure_1_10;
-                    iter.method = "throw";
-                    iter.arg = tmp13.arg;
+                    closure_3 = completed;
+                    invoke.method = "throw";
+                    invoke.arg = tmp13.arg;
                     continue;
                   }
                   continue;
                 }
                 continue;
               }
-              closure_3 = closure_1_10;
-              throw iter.arg;
+              closure_3 = completed;
+              throw invoke.arg;
             }
           }
         };
-        _Promise = arg2;
         let invoke = obj;
-        c3 = closure_7;
         invoke(obj, "_invoke", obj);
-        iter = Object.create(AsyncIterator.prototype);
+        Object.create(AsyncIterator.prototype);
         iter = obj;
         c3 = undefined;
-        invoke = function invoke(iter, _invoke, arg2) {
+        invoke = function invoke(iter, _invoke, arg2, fn) {
           iter = arg2;
-          const tmp = closure_1_6(iter[iter], iter, _invoke);
+          const tmp = tryCatch(iter[iter], iter, _invoke);
           if ("throw" !== tmp.type) {
             iter = tmp.arg;
             const value = iter.value;
@@ -608,23 +585,23 @@ export default function _regeneratorRuntime() {
                   callResult = call(value, "__await");
                 }
                 if (callResult) {
-                  let nextPromise = _Promise.resolve(value.__await).then((arg0) => {
-                    iter("next", arg0, closure_0, closure_1);
-                  }, (arg0) => {
-                    iter("throw", arg0, closure_0, closure_1);
+                  let nextPromise = _Promise.resolve(value.__await).then((result) => {
+                    iter("next", result, closure_0, closure_1);
+                  }, (result) => {
+                    iter("throw", result, closure_0, closure_1);
                   });
                   const resolveResult = _Promise.resolve(value.__await);
                 }
                 return nextPromise;
               }
             }
-            nextPromise = _Promise.resolve(value).then((value) => {
-              iter.value = value;
+            nextPromise = _Promise.resolve(value).then((result) => {
+              iter.value = result;
               callback(iter);
-            }, (arg0) => iter("throw", arg0, closure_0, closure_1));
+            }, (result) => iter("throw", result, closure_0, closure_1));
             const resolveResult1 = _Promise.resolve(value);
           } else {
-            arg3(tmp.arg);
+            fn(tmp.arg);
           }
         };
         invoke(iter, "_invoke", {
@@ -632,7 +609,7 @@ export default function _regeneratorRuntime() {
             closure_0 = arg0;
             closure_1 = arg1;
             if (nextPromise) {
-              function callInvokeWithMethodAndArg() {
+              function callInvokeWithMethodAndArg(result) {
                 return new closure_1((arg0, arg1) => {
                   closure_1_2(closure_0, closure_1, arg0, arg1);
                 });
@@ -648,9 +625,9 @@ export default function _regeneratorRuntime() {
         });
         let nextPromise = iter;
         if (!iter.isGeneratorFunction(fn)) {
-          nextPromise = iter.next().then((done) => {
-            if (done.done) {
-              let nextResult = done.value;
+          nextPromise = iter.next().then((result) => {
+            if (result.done) {
+              let nextResult = result.value;
             } else {
               nextResult = iter.next();
             }
@@ -670,15 +647,13 @@ export default function _regeneratorRuntime() {
         const ObjectResult = Object(arg0);
         const items = [];
         for (const key10008 in ObjectResult) {
-          let tmp3 = key10008;
           let arr = items.push(key10008);
           continue;
         }
         const reversed = items.reverse();
         function next() {
           if (items.length) {
-            let arr = items;
-            arr = items.pop();
+            const arr = items.pop();
             next.value = arr;
             next.done = false;
             return next;
@@ -697,7 +672,6 @@ export default function _regeneratorRuntime() {
         const item = tryEntries.forEach(resetTryEntry);
         if (!arg0) {
           for (const key10018 in obj) {
-            let tmp8 = key10018;
             let tmp7 = "t" === key10018.charAt(0);
             if (!tmp7) {
               if (tmp7) {
@@ -712,14 +686,12 @@ export default function _regeneratorRuntime() {
               }
               continue;
             } else {
-              let tmp4 = hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
-                let callResult = tmp4(key10018);
+                let callResult = hasOwnProperty(key10018);
               } else {
                 callResult = call(obj, key10018);
               }
-              let tmp6 = callResult;
             }
           }
         }
@@ -743,25 +715,21 @@ export default function _regeneratorRuntime() {
             const completion = tmp2.completion;
             while ("root" !== self.tryEntries[diff].tryLoc) {
               if (tmp2.tryLoc <= self.prev) {
-                let tmp7 = hasOwnProperty;
                 let call2 = hasOwnProperty.call;
-                let tmp4 = typeof call2 === "unknown" ? tmp7("catchLoc") : call2(tmp2, "catchLoc");
-                let call = tmp7.call;
-                let tmp5 = typeof call === "unknown" ? tmp7("finallyLoc") : call(tmp2, "finallyLoc");
+                let tmp4 = typeof call2 === "unknown" ? hasOwnProperty("catchLoc") : call2(tmp2, "catchLoc");
+                let call = hasOwnProperty.call;
+                let tmp5 = typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp2, "finallyLoc");
                 if (tmp4) {
                   if (tmp5) {
                     if (self.prev < tmp2.catchLoc) {
-                      let str8 = "throw";
                       completion.type = "throw";
                       completion.arg = arg0;
                       self.next = tmp2.catchLoc;
-                      let str9 = "next";
                       self.method = "next";
                       self.arg = undefined;
                       let flag3 = true;
                       return true;
                     } else if (self.prev < tmp2.finallyLoc) {
-                      let str7 = "throw";
                       completion.type = "throw";
                       completion.arg = arg0;
                       self.next = tmp2.finallyLoc;
@@ -772,11 +740,9 @@ export default function _regeneratorRuntime() {
                 }
                 if (tmp4) {
                   if (self.prev < tmp2.catchLoc) {
-                    let str5 = "throw";
                     completion.type = "throw";
                     completion.arg = arg0;
                     self.next = tmp2.catchLoc;
-                    let str6 = "next";
                     self.method = "next";
                     self.arg = undefined;
                     let flag = true;
@@ -784,7 +750,6 @@ export default function _regeneratorRuntime() {
                   }
                 } else if (tmp5) {
                   if (self.prev < tmp2.finallyLoc) {
-                    let str12 = "throw";
                     completion.type = "throw";
                     completion.arg = arg0;
                     self.next = tmp2.finallyLoc;
@@ -792,9 +757,7 @@ export default function _regeneratorRuntime() {
                     return false;
                   }
                 } else {
-                  let tmp6 = globalThis;
                   let _Error = Error;
-                  let str4 = "try statement without catch or finally";
                   throw Error("try statement without catch or finally");
                 }
               }
@@ -814,11 +777,9 @@ export default function _regeneratorRuntime() {
         if (0 <= diff) {
           while (true) {
             let tmp3 = self.tryEntries[diff];
-            let tmp4 = diff;
             if (tmp3.tryLoc <= self.prev) {
-              let tmp5 = hasOwnProperty;
               let call = hasOwnProperty.call;
-              if (typeof call === "unknown" ? tmp5("finallyLoc") : call(tmp3, "finallyLoc")) {
+              if (typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp3, "finallyLoc")) {
                 tmp2 = tmp3;
                 if (self.prev < tmp3.finallyLoc) {
                   break;
@@ -936,23 +897,19 @@ export default function _regeneratorRuntime() {
               if (!isNaN(next.length)) {
                 c1 = -1;
                 next = function next() {
-                  let arr;
                   const sum = sum1 + 1;
                   sum1 = sum;
                   if (sum < next.length) {
                     while (true) {
-                      let tmp2 = c1;
-                      let call = c1.call;
-                      arr = next;
+                      let call = v1.call;
                       let tmp3 = sum1;
-                      if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                      if (typeof call === "unknown" ? v1(tmp3) : call(next, tmp3)) {
                         break;
                       } else {
-                        let tmp4 = sum1;
                         sum1 = sum1 + 1;
                       }
                     }
-                    next.value = arr[sum1];
+                    next.value = next[sum1];
                     next.done = false;
                     return next;
                   }

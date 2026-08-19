@@ -1,6 +1,6 @@
 // _runtime/07840_CounterMetric.js
 import _mod7835 from "metro/07835__.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 let SetMetric = require;
@@ -139,10 +139,10 @@ const items3 = [
   {
     key: "toString",
     value: function toString() {
-      const mapped = Array.from(this._value).map((str) => {
-        let simpleHashResult = str;
-        if (typeof str === "string") {
-          simpleHashResult = callback(table[2]).simpleHash(str);
+      const mapped = Array.from(this._value).map((item, index) => {
+        let simpleHashResult = item;
+        if (typeof item === "string") {
+          simpleHashResult = callback(table[2]).simpleHash(item);
           const obj = callback(table[2]);
         }
         return simpleHashResult;

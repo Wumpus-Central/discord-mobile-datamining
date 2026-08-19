@@ -1,9 +1,8 @@
 // _runtime/09699__asyncLoop.js
-import closure_3 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let Hash = require;
 function _asyncLoop() {
   const self = this;
   const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
@@ -98,7 +97,7 @@ let uint32Array = new Uint32Array([287454020]);
 let uint8Array = new Uint8Array(uint32Array.buffer);
 let closure_5 = Array.from({ length: 256 }, (arg0, arg1) => arg1.toString(16).padStart(2, "0"));
 let closure_6 = { _0: 48, _9: 57, _A: 65, _F: 70, _a: 97, _f: 102 };
-Hash = asyncGeneratorStep(function*() {
+const Hash = asyncGeneratorStep(function*() {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -165,7 +164,6 @@ export const byteSwap32 = function byteSwap32(B32) {
   let num = 0;
   if (0 < B32.length) {
     do {
-      let tmp = exports;
       B32[num] = exports.byteSwap(B32[num]);
       num = num + 1;
       length = B32.length;
@@ -180,7 +178,6 @@ export const bytesToHex = function bytesToHex(arg0) {
   let str2 = "";
   if (0 < arg0.length) {
     do {
-      let tmp2 = table;
       str = `${closure_5[arg0[num]]}`;
       num = num + 1;
       str2 = str;
@@ -209,17 +206,14 @@ export const hexToBytes = function hexToBytes(str) {
       if (0 < result) {
         while (true) {
           let charCodeAtResult = str.charCodeAt(num);
-          let tmp7 = _0;
-          let tmp8 = num;
-          let tmp9 = num5;
           if (charCodeAtResult >= _0._0) {
-            if (charCodeAtResult <= tmp7._9) {
-              let diff = charCodeAtResult - tmp7._0;
+            if (charCodeAtResult <= _0._9) {
+              let diff = charCodeAtResult - _0._0;
               sum = num + 1;
               let charCodeAtResult1 = str.charCodeAt(sum);
-              if (charCodeAtResult1 >= tmp7._0) {
-                if (charCodeAtResult1 <= tmp7._9) {
-                  let diff1 = charCodeAtResult1 - tmp7._0;
+              if (charCodeAtResult1 >= _0._0) {
+                if (charCodeAtResult1 <= _0._9) {
+                  let diff1 = charCodeAtResult1 - _0._0;
                   if (undefined === diff) {
                     break;
                   } else if (undefined === diff1) {
@@ -231,26 +225,26 @@ export const hexToBytes = function hexToBytes(str) {
                   }
                 }
               }
-              if (charCodeAtResult1 >= tmp7._A) {
-                if (charCodeAtResult1 <= tmp7._F) {
-                  diff1 = charCodeAtResult1 - (tmp7._A - 10);
+              if (charCodeAtResult1 >= _0._A) {
+                if (charCodeAtResult1 <= _0._F) {
+                  diff1 = charCodeAtResult1 - (_0._A - 10);
                 }
               }
-              if (charCodeAtResult1 >= tmp7._a) {
-                if (charCodeAtResult1 <= tmp7._f) {
-                  diff1 = charCodeAtResult1 - (tmp7._a - 10);
+              if (charCodeAtResult1 >= _0._a) {
+                if (charCodeAtResult1 <= _0._f) {
+                  diff1 = charCodeAtResult1 - (_0._a - 10);
                 }
               }
             }
           }
-          if (charCodeAtResult >= tmp7._A) {
-            if (charCodeAtResult <= tmp7._F) {
-              diff = charCodeAtResult - (tmp7._A - 10);
+          if (charCodeAtResult >= _0._A) {
+            if (charCodeAtResult <= _0._F) {
+              diff = charCodeAtResult - (_0._A - 10);
             }
           }
-          if (charCodeAtResult >= tmp7._a) {
-            if (charCodeAtResult <= tmp7._f) {
-              diff = charCodeAtResult - (tmp7._a - 10);
+          if (charCodeAtResult >= _0._a) {
+            if (charCodeAtResult <= _0._f) {
+              diff = charCodeAtResult - (_0._a - 10);
             }
           }
         }
@@ -280,8 +274,8 @@ export const utf8ToBytes = function utf8ToBytes(str) {
   } else {
     const _Uint8Array = Uint8Array;
     const _TextEncoder = TextEncoder;
-    const textEncoder = new TextEncoder();
-    const uint8Array = new Uint8Array(textEncoder.encode(str));
+    const encoder = new TextEncoder();
+    const uint8Array = new Uint8Array(encoder.encode(str));
     return uint8Array;
   }
 };
@@ -295,8 +289,8 @@ export const toBytes = function toBytes(B) {
     } else {
       const _Uint8Array = Uint8Array;
       const _TextEncoder = TextEncoder;
-      const textEncoder = new TextEncoder();
-      uint8Array = new Uint8Array(textEncoder.encode(B));
+      const encoder = new TextEncoder();
+      uint8Array = new Uint8Array(encoder.encode(B));
     }
   }
   Hash(9700).bytes(uint8Array);
@@ -312,8 +306,6 @@ export const concatBytes = function concatBytes() {
   if (0 < items.length) {
     do {
       let arr2 = items[num];
-      let tmp = Hash;
-      let tmp2 = dependencyMap;
       let bytesResult = Hash(9700).bytes(arr2);
       num2 = num2 + arr2.length;
       num = num + 1;
@@ -338,17 +330,16 @@ export const concatBytes = function concatBytes() {
 export const checkOpts = function checkOpts(arg0, arg1) {
   if (undefined !== arg1) {
     const call = toString.call;
-    if ("[object Object]" !== (typeof call === "unknown" ? tmp() : call(arg1))) {
+    if ("[object Object]" !== (typeof call === "unknown" ? toString() : call(arg1))) {
       const _Error = Error;
       error = new Error("Options should be object or undefined");
       throw error;
     }
-    tmp = toString;
   }
   return Object.assign(arg0, arg1);
 };
-export const wrapConstructor = function wrapConstructor(arg0) {
-  closure_0 = arg0;
+export const wrapConstructor = function wrapConstructor(fn) {
+  closure_0 = fn;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
@@ -359,20 +350,20 @@ export const wrapConstructor = function wrapConstructor(arg0) {
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
+    callback(dependencyMap[3]).bytes(uint8Array);
     const obj = callback();
     return callback().update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0());
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn());
   hashC.create = () => callback();
   return hashC;
 };
-export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
-  closure_0 = arg0;
+export const wrapConstructorWithOpts = function wrapConstructorWithOpts(fn) {
+  closure_0 = fn;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
@@ -383,20 +374,20 @@ export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
+    callback(dependencyMap[3]).bytes(uint8Array);
     const obj = callback(arg1);
     return callback(arg1).update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0({}));
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn({}));
   hashC.create = (arg0) => callback(arg0);
   return hashC;
 };
-export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(arg0) {
-  closure_0 = arg0;
+export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(fn) {
+  closure_0 = fn;
   function hashC(str) {
     let uint8Array = str;
     if (typeof str === "string") {
@@ -407,15 +398,15 @@ export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(ar
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
-        const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(str));
+        const encoder = new TextEncoder();
+        uint8Array = new Uint8Array(encoder.encode(str));
       }
     }
-    callback(closure_1_2[3]).bytes(uint8Array);
+    callback(dependencyMap[3]).bytes(uint8Array);
     const obj = callback(arg1);
     return callback(arg1).update(uint8Array).digest();
   }
-  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = arg0({}));
+  ({ outputLen: hashC.outputLen, blockLen: hashC.blockLen } = fn({}));
   hashC.create = (arg0) => callback(arg0);
   return hashC;
 };
@@ -425,16 +416,16 @@ export const randomBytes = function randomBytes(result) {
     num = 32;
   }
   if (Hash(9701).crypto) {
-    if (typeof tmp(9701).crypto.getRandomValues === "function") {
-      const _crypto2 = tmp(9701).crypto;
+    if (typeof Hash(9701).crypto.getRandomValues === "function") {
+      const _crypto2 = Hash(9701).crypto;
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(num);
       return _crypto2.getRandomValues(uint8Array);
     }
   }
   if (Hash(9701).crypto) {
-    if (typeof tmp(9701).crypto.randomBytes === "function") {
-      const _crypto = tmp(9701).crypto;
+    if (typeof Hash(9701).crypto.randomBytes === "function") {
+      const _crypto = Hash(9701).crypto;
       return _crypto.randomBytes(num);
     }
   }
@@ -445,20 +436,20 @@ export const u8 = (buffer) => {
   const uint8Array = new Uint8Array(buffer.buffer, buffer.byteOffset, buffer.byteLength);
   return uint8Array;
 };
-export const u32 = (buffer) => {
-  const uint32Array = new Uint32Array(buffer.buffer, buffer.byteOffset, Math.floor(buffer.byteLength / 4));
+export const u32 = (pbkdf2Result) => {
+  const uint32Array = new Uint32Array(pbkdf2Result.buffer, pbkdf2Result.byteOffset, Math.floor(pbkdf2Result.byteLength / 4));
   return uint32Array;
 };
 export const createView = (buffer) => {
   const dataView = new DataView(buffer.buffer, buffer.byteOffset, buffer.byteLength);
   return dataView;
 };
-export const rotr = (arg0, arg1) => arg0 << 32 - arg1 | arg0 >>> arg1;
+export const rotr = (A, arg1) => A << 32 - arg1 | A >>> arg1;
 export const rotl = (arg0, arg1) => arg0 << arg1 | arg0 >>> 32 - arg1 >>> 0;
 export const isLE = 68 === uint8Array[0];
-export const byteSwap = (arg0) => arg0 << 24 & 4278190080 | arg0 << 8 & 16711680 | arg0 >>> 8 & 65280 | arg0 >>> 24 & 255;
-export const byteSwapIfBE = exports.isLE ? ((arg0) => arg0) : ((arg0) => exports.byteSwap(arg0));
-export const nextTick = function nextTick(cb) {
+export const byteSwap = (B32) => B32 << 24 & 4278190080 | B32 << 8 & 16711680 | B32 >>> 8 & 65280 | B32 >>> 24 & 255;
+export const byteSwapIfBE = exports.isLE ? ((arg0) => arg0) : ((B32) => exports.byteSwap(B32));
+export const nextTick = function nextTick(arg0) {
   const self = this;
   const apply = Hash.apply;
   if (typeof apply === "unknown") {

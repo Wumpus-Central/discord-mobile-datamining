@@ -1,8 +1,8 @@
 // _runtime/01679_isWorkletFunction.js
-function isWorkletFunction(onUpdate) {
-  let __workletHash = typeof onUpdate === "function";
-  if (typeof onUpdate === "function") {
-    __workletHash = onUpdate.__workletHash;
+function isWorkletFunction(closure_1_11) {
+  let __workletHash = typeof unpackModuleId === "function";
+  if (typeof unpackModuleId === "function") {
+    __workletHash = unpackModuleId.__workletHash;
   }
   return __workletHash;
 }

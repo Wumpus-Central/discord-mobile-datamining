@@ -1,8 +1,7 @@
 // _runtime/00236_MessageQueue.js
 import MessageQueue from "00039_MessageQueue.js";
 
-let closure_0 = global;
-closure_0 = undefined;
+let closure_0;
 if (true === global.RN$Bridgeless) {
   let fn = (arg0, fn) => {
     closure_0 = fn;

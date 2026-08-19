@@ -1,12 +1,16 @@
 // _runtime/07777_sampleSpan.js
+import consoleSandbox from "07738_consoleSandbox.js";
+import getClient from "07765_getClient.js";
+import __SENTRY_DEBUG__ from "metro/07766___SENTRY_DEBUG__.js";
 import hasTracingEnabled from "07770_hasTracingEnabled.js";
+import parseSampleRate from "07778_parseSampleRate.js";
 
 require = arg1;
 const dependencyMap = arg6;
 arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
   let obj = hasTracingEnabled;
   if (obj.hasTracingEnabled(tracesSampler)) {
-    let tmpResult = tmp(7765);
+    let tmpResult = getClient;
     const isolationScope = tmpResult.getIsolationScope();
     obj = {};
     const merged = Object.assign(normalizedRequest);
@@ -21,11 +25,11 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
         num = tracesSampler.tracesSampleRate;
       }
     }
-    tmpResult = tmp(7778);
+    tmpResult = parseSampleRate;
     const parseSampleRateResult = tmpResult.parseSampleRate(num);
     if (undefined === parseSampleRateResult) {
-      if (tmp(7766).DEBUG_BUILD) {
-        const logger3 = tmp(7738).logger;
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+        const logger3 = consoleSandbox.logger;
         logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
       }
       const items = [false];
@@ -36,8 +40,8 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
         const items1 = [true, parseSampleRateResult];
         let items2 = items1;
       } else {
-        if (tmp(7766).DEBUG_BUILD) {
-          const logger2 = tmp(7738).logger;
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+          const logger2 = consoleSandbox.logger;
           const _Number = Number;
           const _HermesInternal = HermesInternal;
           logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
@@ -45,8 +49,8 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
         items2 = [false, parseSampleRateResult];
       }
     } else {
-      if (tmp(7766).DEBUG_BUILD) {
-        const logger = tmp(7738).logger;
+      if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+        const logger = consoleSandbox.logger;
         let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
         if (typeof tracesSampler.tracesSampler === "function") {
           str = "tracesSampler returned 0 or false";

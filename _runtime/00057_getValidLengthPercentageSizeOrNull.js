@@ -3,7 +3,7 @@ function getValidLengthPercentageSizeOrNull(str) {
   if (null == str) {
     return null;
   } else {
-    if (str.endsWith("px")) {
+    if ("px".endsWith("px")) {
       const _parseFloat = parseFloat;
       const parsed = parseFloat(str);
       const _Number = Number;
@@ -13,7 +13,7 @@ function getValidLengthPercentageSizeOrNull(str) {
         }
       }
     }
-    if (!str.endsWith("%")) {
+    if (!"px".endsWith("%")) {
       let tmp4 = null;
       return tmp4;
     } else {
@@ -29,62 +29,47 @@ arg5.default = function processBackgroundSize(str) {
     items = (function parseBackgroundSizeCSSString(str) {
       const items = [];
       const parts = str.split(",");
-      const mapped = parts.map((str) => str.trim());
+      const mapped = parts.map((item, index) => item.trim());
       const iter = mapped[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         str = nextResult;
         if (0 === nextResult.length) {
-          let tmp16 = iter;
           let items1 = [];
           iter.return();
           return items1;
         } else {
-          let tmp17 = nextResult;
           let parts1 = str.split(/\s+/);
-          let found = parts1.filter((arg0) => arg0.length > 0);
+          let found = parts1.filter((item, index) => item.length > 0);
           let arr9 = found;
           if (2 === found.length) {
-            let tmp6 = callback;
-            let tmp7 = found;
             let str2 = arr9[0];
             let tmp8 = callback(str2.toLowerCase());
             let str3 = arr9[1];
             let tmp9 = tmp8;
             let tmp10 = callback(str3.toLowerCase());
             if (null != tmp8) {
-              let tmp11 = tmp10;
               if (null != tmp10) {
                 let obj = { x: null, y: null };
-                let tmp12 = tmp8;
                 obj[0] = tmp9;
-                let tmp13 = tmp10;
                 obj[1] = tmp10;
                 let arr = items.push(obj);
               }
             }
-            let tmp15 = iter;
             let items2 = [];
             iter.return();
             return items2;
-          } else {
-            let tmp2 = found;
-            if (1 === arr9.length) {
-              let tmp18 = callback;
-              let tmp19 = found;
-              let str4 = arr9[0];
-              let tmp20 = callback(str4.toLowerCase());
-              if (null == tmp20) {
-                let tmp5 = iter;
-                let items3 = [];
-                iter.return();
-                return items3;
-              } else {
-                obj = { x: null, y: "auto" };
-                let tmp3 = tmp20;
-                obj[0] = tmp21;
-                arr = items.push(obj);
-              }
+          } else if (1 === arr9.length) {
+            let str4 = arr9[0];
+            let tmp20 = callback(str4.toLowerCase());
+            if (null == tmp20) {
+              let items3 = [];
+              iter.return();
+              return items3;
+            } else {
+              obj = { x: null, y: "auto" };
+              obj[0] = tmp21;
+              arr = items.push(obj);
             }
           }
           continue;

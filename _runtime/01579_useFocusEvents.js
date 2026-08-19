@@ -1,5 +1,5 @@
 // _runtime/01579_useFocusEvents.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -7,10 +7,9 @@ export const useFocusEvents = function useFocusEvents(arg0) {
   ({ state, emitter } = arg0);
   let context;
   let React;
-  let key;
   context = React.useContext(emitter(context[1]).NavigationContext);
   React = React.useRef(undefined);
-  key = state.routes[state.index].key;
+  const key = state.routes[state.index].key;
   const items = [key, emitter, context];
   const effect = React.useEffect(() => {
     let addListenerResult;

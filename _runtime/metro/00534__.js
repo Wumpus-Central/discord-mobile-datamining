@@ -7,9 +7,9 @@ export default {
     RFC1738(arg0) {
       const call = replace.call;
       if (typeof call === "unknown") {
-        let callResult = replace(tmp2, "+");
+        let callResult = replace(closure_1, "+");
       } else {
-        callResult = call(arg0, tmp2, "+");
+        callResult = call(arg0, closure_1, "+");
       }
       return callResult;
     },

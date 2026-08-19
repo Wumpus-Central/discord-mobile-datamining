@@ -1,9 +1,9 @@
 // _runtime/01288__isNativeReflectConstruct.js
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
 import _isNativeReflectConstruct2 from "01278__isNativeReflectConstruct.js";
-import StringBuilder from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -25,14 +25,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToPlainString(k2UNz_, maxSettingsForPreset) {
+function formatToPlainString(k2UNz_, Image) {
   let first = k2UNz_;
   if (typeof k2UNz_ !== "string") {
     const self = this;
-    first = this.bindFormatValues(closure_4, k2UNz_, maxSettingsForPreset)[0];
+    first = this.bindFormatValues(closure_4, k2UNz_, Image)[0];
   }
   return first;
 }
+_possibleConstructorReturn;
 class StringBuilder {
   constructor() {
     self = this;
@@ -55,6 +56,7 @@ class StringBuilder {
     return tmp3Result;
   }
 }
+_classCallCheck = StringBuilder;
 _inherits(StringBuilder, _isNativeReflectConstruct2.FormatBuilder);
 let items = [
   {

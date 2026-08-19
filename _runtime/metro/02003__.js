@@ -18,8 +18,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^(\d+)(th|st|nd|rd)?/i,
   parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+  valueCallback(match) {
+    return parseInt(match, 10);
   }
 };
 const items = [/^b/i, /^(a|c)/i];

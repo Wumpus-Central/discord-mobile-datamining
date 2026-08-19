@@ -1,16 +1,17 @@
 // _runtime/00326__isNativeReflectConstruct.js
+import _modDef38 from "metro/00038__.js";
 import _inheritsDefault from "00098__inherits.js";
-import closure_4 from "metro/00032__slicedToArray.js";
-import closure_5 from "metro/00109__objectWithoutProperties.js";
-import closure_6 from "metro/00041__classCallCheck.js";
-import closure_7 from "metro/00093__possibleConstructorReturn.js";
-import closure_8 from "00095__getPrototypeOf.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import noop from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const VirtualizedSectionList = arg1;
+const VirtualizedSectionList = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -143,7 +144,7 @@ function ItemWithSeparator(leadingItem) {
     tmp30 = tmp11;
   }
   children[2] = tmp30;
-  return closure_14(closure_13, { children });
+  return callback3(closure_13, { children });
 }
 let closure_3 = ["ItemSeparatorComponent", "SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
 let c9 = importAllResult;
@@ -181,13 +182,13 @@ class VirtualizedSectionList {
       return key;
     };
     tmp3Result._convertViewable = (index) => {
-      closure_1_1(closure_1_2[9])(null != index.index, "Received a broken ViewToken");
+      _modDef38(null != index.index, "Received a broken ViewToken");
       const _subExtractorResult = lib._subExtractor(index.index);
       if (_subExtractorResult) {
         const keyExtractor = _subExtractorResult.section.keyExtractor;
-        let keyExtractor2 = tmp3.props.keyExtractor;
+        let keyExtractor2 = lib.props.keyExtractor;
         if (!keyExtractor2) {
-          keyExtractor2 = lib(tmp[10]).keyExtractor;
+          keyExtractor2 = lib(dependencyMap[10]).keyExtractor;
         }
         if (null != keyExtractor) {
           let keyExtractorResult = keyExtractor(index.item, _subExtractorResult.index);
@@ -207,18 +208,16 @@ class VirtualizedSectionList {
       } else {
         return null;
       }
-      tmp = closure_1_2;
-      tmp3 = lib;
     };
     tmp3Result._onViewableItemsChanged = (arg0) => {
       ({ viewableItems, changed } = arg0);
       const onViewableItemsChanged = lib.props.onViewableItemsChanged;
       if (null != onViewableItemsChanged) {
         const obj = { viewableItems: null, changed: null };
-        const mapped = viewableItems.map(tmp._convertViewable, tmp);
+        const mapped = viewableItems.map(lib._convertViewable, lib);
         const _Boolean = Boolean;
         obj[0] = mapped.filter(Boolean);
-        const mapped1 = changed.map(tmp._convertViewable, tmp);
+        const mapped1 = changed.map(lib._convertViewable, lib);
         const _Boolean2 = Boolean;
         obj[1] = mapped1.filter(Boolean);
         const result = onViewableItemsChanged(obj);
@@ -255,7 +254,7 @@ class VirtualizedSectionList {
             }
           } else {
             const result = obj._getSeparatorComponent(index, _subExtractorResult, closure_0);
-            closure_2_1(closure_2_2[9])(_subExtractorResult.section.renderItem || obj.props.renderItem, "no renderItem!");
+            _modDef38(_subExtractorResult.section.renderItem || obj.props.renderItem, "no renderItem!");
             obj1 = { SeparatorComponent: null, LeadingSeparatorComponent: null, cellKey: null, index: null, item: null, leadingItem: null, leadingSection: null, prevCellKey: null, setSelfHighlightCallback: null, setSelfUpdatePropsCallback: null, updateHighlightFor: null, updatePropsFor: null, renderItem: null, section: null, trailingItem: null, trailingSection: null, inverted: null };
             obj1[0] = result;
             let prop;
@@ -272,7 +271,7 @@ class VirtualizedSectionList {
             obj1[12] = _subExtractorResult.section.renderItem || obj.props.renderItem;
             ({ section: obj2[13], trailingItem: obj2[14], trailingSection: obj2[15] } = _subExtractorResult);
             obj1[16] = obj.props.inverted;
-            return closure_2_12(closure_2_16, obj1);
+            return closure_2_12(ItemWithSeparator, obj1);
           }
         } else {
           return null;
@@ -360,8 +359,7 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let self = this;
-      self = this;
+      const self = this;
       const props = this.props;
       ({ ItemSeparatorComponent, SectionSeparatorComponent, renderItem, renderSectionFooter, renderSectionHeader, sections, stickySectionHeadersEnabled } = props);
       let num = 0;
@@ -379,15 +377,10 @@ let items = [
       while (iter !== undefined) {
         let tmp3 = nextResult;
         if (null != items) {
-          let tmp4 = num2;
           let arr = items.push(num2 + num);
         }
-        let tmp6 = num2;
         let sum = num2 + 2;
-        let tmp8 = sum;
-        sum1 = sum;
         let props2 = self.props;
-        let tmp9 = nextResult;
         sum1 = sum + props2.getItemCount(tmp3.data);
         num2 = sum1;
         continue;
@@ -395,7 +388,6 @@ let items = [
       const tmp = callback(props, closure_3);
       const obj = {};
       const _renderItemResult = self._renderItem(num2);
-      const tmp12 = closure_12;
       const merged = Object.assign(tmp);
       obj.keyExtractor = self._keyExtractor;
       obj.stickyHeaderIndices = items;
@@ -413,7 +405,7 @@ let items = [
       }
       obj.onViewableItemsChanged = prop;
       obj.ref = self._captureRef;
-      return tmp12(self(314), obj);
+      return callback2(self(314), obj);
     }
   },
   {
@@ -453,8 +445,6 @@ let items = [
       if (0 < sections.length) {
         while (true) {
           ({ data, key } = sections[num]);
-          let tmp4 = num;
-          let tmp5 = diff1;
           if (!key) {
             let _String = String;
             key = String(num);

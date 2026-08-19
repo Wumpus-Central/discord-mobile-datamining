@@ -30,11 +30,11 @@ const items = [
   },
   {
     key: "emitEvent",
-    value: function emitEvent(arg0) {
+    value: function emitEvent(fn) {
       if (0 !== this._listeners.length) {
-        closure_0 = arg0();
+        closure_0 = fn();
         const _listeners = tmp._listeners;
-        const item = _listeners.forEach((arg0) => arg0(closure_0));
+        const item = _listeners.forEach((item, index) => item(closure_0));
       }
     }
   }

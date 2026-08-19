@@ -14,34 +14,23 @@ const memoResult = memo(function BottomSheetContentComponent(detached) {
   const animationConfigs = detached.animationConfigs;
   const overrideReduceMotion = detached.overrideReduceMotion;
   const keyboardBehavior = detached.keyboardBehavior;
-  let enableDynamicSizing;
-  let overDragResistanceFactor;
-  let animatedPosition;
-  let animatedHandleHeight;
-  let animatedHighestSnapPoint;
-  let animatedContainerHeight;
-  let animatedContentHeight;
-  let animatedSheetHeight;
-  let animatedKeyboardState;
-  let animatedKeyboardHeightInContainer;
-  let isInTemporaryPosition;
   let derivedValue;
   let derivedValue1;
   let animatedStyle;
   ({ accessible, accessibilityLabel, accessibilityHint, accessibilityRole, children } = detached);
   let obj = detached(overrideReduceMotion[2]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  overDragResistanceFactor = bottomSheetInternal.overDragResistanceFactor;
-  animatedPosition = bottomSheetInternal.animatedPosition;
-  animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
-  animatedHighestSnapPoint = bottomSheetInternal.animatedHighestSnapPoint;
-  animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
-  animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  animatedSheetHeight = bottomSheetInternal.animatedSheetHeight;
-  animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
-  animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
-  isInTemporaryPosition = bottomSheetInternal.isInTemporaryPosition;
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const overDragResistanceFactor = bottomSheetInternal.overDragResistanceFactor;
+  const animatedPosition = bottomSheetInternal.animatedPosition;
+  const animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
+  const animatedHighestSnapPoint = bottomSheetInternal.animatedHighestSnapPoint;
+  const animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const animatedSheetHeight = bottomSheetInternal.animatedSheetHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  const animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
+  const isInTemporaryPosition = bottomSheetInternal.isInTemporaryPosition;
   obj1 = detached(overrideReduceMotion[3]);
   class N {
     constructor() {
@@ -125,13 +114,11 @@ const memoResult = memo(function BottomSheetContentComponent(detached) {
       const result = Math.sqrt(Math.max(value, animatedPosition.get()) - -1 * value) * overDragResistanceFactor;
       const value1 = animatedKeyboardState.get();
       let sum = result;
-      if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+      if (value1 === detached(overrideReduceMotion[5]).KEYBOARD_STATE.SHOWN) {
         sum = result + animatedKeyboardHeightInContainer.get();
       }
       return sum;
     }
-    tmp2 = detached;
-    tmp3 = overrideReduceMotion;
   };
   obj = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, animatedHighestSnapPoint, animatedPosition, overDragResistanceFactor, animatedKeyboardState, KEYBOARD_STATE: detached(overrideReduceMotion[5]).KEYBOARD_STATE, animatedKeyboardHeightInContainer };
   fn.__closure = obj;

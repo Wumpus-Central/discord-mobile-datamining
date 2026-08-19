@@ -3,13 +3,13 @@ import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06602___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const ClipPath = arg1;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -57,7 +57,6 @@ const items = [
     value: function render() {
       const props = this.props;
       const obj = { ref: this.refMethod };
-      const tmp = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(ClipPath(6586).extract(this, props));
       obj.children = props.children;
       return <tmp ref={this.refMethod} />;

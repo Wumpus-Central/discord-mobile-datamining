@@ -2,7 +2,7 @@
 import findFocusedRoute from "01527_findFocusedRoute.js";
 import validateArrayFormatSeparatorAll from "01556_validateArrayFormatSeparator.js";
 import arrayStartsWith from "01565_arrayStartsWith.js";
-import closure_4 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function prepareConfigResources(screens) {
@@ -32,11 +32,11 @@ function prepareConfigResources(screens) {
     }
     const items = [];
     const keys = Object.keys(obj);
-    const items1 = [...keys.map((arg0) => closure_1_13(arg0, obj, closure_0, [], [], []))];
-    const mapped = items.concat.apply(items1).map((arg0, order) => {
+    const items1 = [...keys.map((item, index) => closure_1_13(item, obj, closure_0, [], [], []))];
+    const mapped = items.concat.apply(items1).map((item, index) => {
       obj = {};
-      const merged = Object.assign(arg0);
-      obj.order = order;
+      const merged = Object.assign(item);
+      obj.order = index;
       return obj;
     });
     return mapped.sort((segments, segments2) => {
@@ -44,14 +44,13 @@ function prepareConfigResources(screens) {
         if (segments.routeNames.length <= segments2.routeNames.length) {
           if (segments2.routeNames.length <= segments.routeNames.length) {
             let num10 = segments.routeNames.length - segments2.routeNames.length || segments.order - segments2.order;
-            const tmp10 = segments.routeNames.length - segments2.routeNames.length || segments.order - segments2.order;
           } else {
-            let tmpResult = tmp(tmp2[3]);
+            initialRoutes(table[3]);
             num10 = 1;
           }
           let num9 = num10;
         } else {
-          tmpResult = tmp(tmp2[3]);
+          initialRoutes(table[3]);
           num9 = -1;
         }
         return num9;
@@ -67,7 +66,6 @@ function prepareConfigResources(screens) {
             if (0 < Math.max(segments.segments.length, segments2.segments.length)) {
               while (null != segments.segments[num]) {
                 if (null == segments2.segments[num]) {
-                  let num6 = -1;
                   return -1;
                 } else {
                   let obj8 = segments.segments[num];
@@ -95,7 +93,6 @@ function prepareConfigResources(screens) {
                       }
                       if (tmp9) {
                         if (!tmp8) {
-                          let num3 = -1;
                           return -1;
                         }
                       }
@@ -106,13 +103,11 @@ function prepareConfigResources(screens) {
                       }
                       if (startsWithResult1) {
                         if (!startsWithResult) {
-                          let num4 = -1;
                           return -1;
                         }
                       }
                       if (hasItem) {
                         if (!hasItem1) {
-                          let num5 = -1;
                           return -1;
                         }
                       }
@@ -131,9 +126,9 @@ function prepareConfigResources(screens) {
             }
             return segments.segments.length - segments2.segments.length;
           }
-          tmpResult2 = tmp(tmp2[3]);
+          tmpResult2 = initialRoutes(table[3]);
         }
-        tmpResult1 = tmp(tmp2[3]);
+        tmpResult1 = initialRoutes(table[3]);
       }
       obj = initialRoutes(table[2]);
     });
@@ -170,11 +165,9 @@ function prepareConfigResources(screens) {
       configsByScreen[screen] = items;
       arr2 = items;
     }
-    let tmp13 = nextResult;
     let arr = arr2.push(tmp12);
     let segments = tmp12.segments;
     let joined = segments.join("/");
-    let tmp16 = checkForDuplicatedConfigs;
     let tmp17 = checkForDuplicatedConfigs(map.get(joined), tmp12, joined);
     let result = map.set(joined, tmp12);
     continue;
@@ -187,10 +180,8 @@ function checkForDuplicatedConfigs(map, routeNames2, joined) {
     const routeNames1 = routeNames2.routeNames;
     if (routeNames.length > routeNames1.length) {
       let arrayStartsWithResult = arrayStartsWith.arrayStartsWith(routeNames, routeNames1);
-      const obj2 = arrayStartsWith;
     } else {
       arrayStartsWithResult = arrayStartsWith.arrayStartsWith(routeNames1, routeNames);
-      const obj = arrayStartsWith;
     }
     if (!arrayStartsWithResult) {
       const _Error = Error;
@@ -222,8 +213,8 @@ function getExplicitParamNames(parse) {
   }
   const entries = Object.entries(obj);
   let set;
-  const mapped = entries.map((arg0) => {
-    [tmp] = arg0;
+  const mapped = entries.map((item, index) => {
+    [tmp] = item;
     return tmp;
   });
   if (mapped.length) {
@@ -233,15 +224,15 @@ function getExplicitParamNames(parse) {
   return set;
 }
 const weakMap = new WeakMap();
-function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
+function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
   closure_0 = arg1;
-  closure_1 = first;
+  closure_1 = arg2;
   closure_2 = configsByScreen;
   closure_5 = arg0;
   function _loop(iter) {
     closure_0 = iter;
     if (iter.regex) {
-      if (closure_1_12(iter.segments[0], closure_0, closure_1)) {
+      if (canMatchFirstSegment(iter.segments[0], closure_0, closure_1)) {
         const match = closure_5.match(iter.regex);
         if (match) {
           const items = [];
@@ -251,62 +242,42 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
           const nextResult = iter.next();
           while (iter !== undefined) {
             let tmp12 = nextResult;
-            let tmp13 = table;
             let arr1 = table[nextResult];
             let found;
             if (arr1 != null) {
-              found = arr1.find((segments) => iter(items[3]).arrayStartsWith(iter.segments, segments.segments));
+              found = arr1.find((item, index) => iter(items[3]).arrayStartsWith(iter.segments, item.segments));
             }
             let tmp15 = found;
             let fromEntriesResult;
             if (found) {
               if (match.groups) {
                 let items1 = [];
-                let tmp17 = found;
                 let params = tmp15.params;
-                let tmp18 = params;
-                let tmp19 = params;
                 for (const item10051 of params) {
-                  let tmp20 = item10051;
-                  let tmp21 = nextResult;
                   if (item10051.screen === tmp12) {
-                    let tmp54 = item10051;
                     let _HermesInternal = HermesInternal;
-                    let tmp55 = match.groups["param_" + tmp20.index];
+                    let tmp55 = match.groups["param_" + item10051.index];
                     let tmp56 = tmp55;
                     if (null != tmp55) {
                       let _decodeURIComponent = decodeURIComponent;
-                      let tmp25 = tmp55;
                       let decodeURIComponentResult = decodeURIComponent(tmp56);
-                      let tmp27 = item10051;
-                      if (tmp20.regex) {
-                        let tmp28 = tmp55;
-                        let tmp29 = decodeURIComponentResult;
+                      if (item10051.regex) {
                         if (tmp56 !== decodeURIComponentResult) {
-                          let tmp30 = item10051;
-                          let regex = tmp20.regex;
-                          let tmp31 = decodeURIComponentResult;
+                          let regex = item10051.regex;
                           if (!regex.test(decodeURIComponentResult)) {
                             flag = true;
-                            let tmp32 = obj;
                             obj.return();
                             break;
                           }
                         }
                       }
-                      let tmp33 = found;
                       let parse = tmp15.parse;
                       let tmp34;
                       if (parse != null) {
-                        let tmp35 = item10051;
-                        tmp34 = parse[tmp20.name];
+                        tmp34 = parse[item10051.name];
                       }
-                      let tmp37 = items1;
-                      let tmp38 = item10051;
-                      let items2 = [tmp20.name, ];
+                      let items2 = [item10051.name, ];
                       if (tmp34) {
-                        let tmp40 = tmp34;
-                        let tmp41 = decodeURIComponentResult;
                         let tmp36Result = tmp36(decodeURIComponentResult);
                       } else {
                         tmp36Result = decodeURIComponentResult;
@@ -314,27 +285,19 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
                       items2[1] = tmp36Result;
                       items2 = items1.push(items2);
                     } else {
-                      let tmp22 = items1;
-                      let tmp23 = item10051;
-                      let items3 = [tmp20.name, undefined];
+                      let items3 = [item10051.name, undefined];
                       let arr = items1.push(items3);
                     }
                   }
                   continue;
                 }
                 while (true) {
-                  let tmp42 = flag;
                   if (flag) {
-                    let tmp52 = iter;
                     iter.return();
                     break label0;
-                  } else {
-                    let tmp43 = items1;
-                    if (items1.length) {
-                      let _Object = Object;
-                      let tmp44 = items1;
-                      fromEntriesResult = Object.fromEntries(items1);
-                    }
+                  } else if (items1.length) {
+                    let _Object = Object;
+                    fromEntriesResult = Object.fromEntries(items1);
                   }
                   break label0;
                 }
@@ -342,29 +305,22 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
               let num3 = 0;
               if (!flag) {
                 closure_4 = iter;
-                let tmp53 = closure_5;
-                let str2 = "";
                 closure_5 = closure_5.replace(match[0], "");
                 num3 = 1;
               }
               return num3;
             }
-            let tmp45 = fromEntriesResult;
             if (fromEntriesResult) {
               let _Object2 = Object;
-              let tmp46 = fromEntriesResult;
               if (Object.keys(fromEntriesResult).length) {
                 let obj = { name: null, params: null };
-                let tmp49 = nextResult;
                 obj[0] = tmp12;
-                let tmp50 = fromEntriesResult;
                 obj[1] = fromEntriesResult;
                 arr = items.push(obj);
                 continue;
               }
             }
             obj = { name: null };
-            let tmp47 = nextResult;
             obj[0] = tmp12;
             arr1 = items.push(obj);
           }
@@ -380,26 +336,21 @@ function matchAgainstConfigs(arg0, arg1, first, configs, configsByScreen) {
   while (iter !== undefined) {
     let _loopResult = _loop(iter.next());
     if (0 !== _loopResult) {
-      let tmp3 = _loopResult;
       if (1 === tmp2) {
-        let tmp4 = iter;
         iter.return();
         break;
       }
       let obj = { routes: null, remainingPath: null, config: null };
-      let tmp5 = dependencyMap;
       obj[0] = dependencyMap;
-      let tmp6 = closure_5;
       obj[1] = closure_5;
-      let tmp7 = closure_4;
       obj[2] = closure_4;
       return obj;
     }
     continue;
   }
 }
-function canMatchFirstSegment(str) {
-  let tmp = undefined === arg1;
+function canMatchFirstSegment(str, closure_0, closure_1) {
+  let tmp = undefined === closure_0;
   if (!tmp) {
     let tmp3 = undefined !== str;
     if (tmp3) {
@@ -409,9 +360,9 @@ function canMatchFirstSegment(str) {
       }
       let tmp5 = !tmp4;
       if (tmp4) {
-        let tmp6 = str === arg1;
+        let tmp6 = str === closure_0;
         if (!tmp6) {
-          tmp6 = str === arg2;
+          tmp6 = str === closure_1;
         }
         tmp5 = tmp6;
       }
@@ -428,7 +379,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
   closure_3 = arr4;
   let items = [];
   arr4.push(screen);
-  arr3.push(screen);
+  arr = arr3.push(screen);
   if (typeof arg1[screen] === "string") {
     let obj = { screen: null, path: null };
     obj[0] = screen;
@@ -438,7 +389,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
     HermesBuiltin.arraySpread(arr4, 0);
     let items2 = [];
     HermesBuiltin.arraySpread(arr2, 0);
-    items.push(createConfigItem(screen, items1, items2));
+    arr2 = items.push(createConfigItem(screen, items1, items2));
   } else if (typeof tmp3 === "object") {
     const screens = tmp3.screens;
     if (typeof tmp3.path === "string") {
@@ -454,64 +405,32 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
       if (tmp3.alias) {
         let alias = tmp3.alias;
         for (const item10023 of alias) {
-          let tmp8 = item10023;
           if (typeof item10023 === "string") {
-            let tmp20 = createConfigItem;
             let items4 = [];
-            let tmp21 = items4;
-            let tmp22 = arg5;
-            let num3 = 0;
             let arraySpreadResult1 = HermesBuiltin.arraySpread(arg5, 0);
             let items5 = [];
-            let tmp24 = items5;
-            let tmp25 = arg3;
             obj = { screen: null, path: null };
             obj[0] = arg0;
-            let tmp26 = item10023;
-            obj[1] = tmp8;
+            obj[1] = item10023;
             items5[HermesBuiltin.arraySpread(arg3, 0)] = obj;
-            let num4 = 0;
-            let tmp27 = arg0;
-            let tmp28 = items4;
-            let tmp29 = items5;
-            let tmp30 = tmp5;
             arr3 = items3.push(createConfigItem(arg0, items4, items5, tmp3.parse, tmp5));
-          } else {
-            let tmp77 = item10023;
-            if (typeof tmp8 === "object") {
-              let items6 = [];
-              let tmp79 = items6;
-              let tmp80 = arg5;
-              let num11 = 0;
-              let tmp78 = createConfigItem;
-              let arraySpreadResult2 = HermesBuiltin.arraySpread(arg5, 0);
-              let tmp82 = item10023;
-              obj = { screen: null, path: null };
-              let items7 = [];
-              if (tmp8.exact) {
-                obj[0] = arg0;
-                let tmp13 = item10023;
-                obj[1] = tmp8.path;
-                items7[0] = obj;
-                let tmp12 = items7;
-              } else {
-                let tmp9 = items7;
-                let tmp10 = arg3;
-                let num = 0;
-                obj[0] = arg0;
-                let tmp11 = item10023;
-                obj[1] = tmp8.path;
-                items7[HermesBuiltin.arraySpread(arg3, 0)] = obj;
-                tmp12 = items7;
-              }
-              let tmp14 = item10023;
-              let num2 = 0;
-              let tmp15 = arg0;
-              let tmp16 = items6;
-              let tmp17 = tmp12;
-              let tmp18 = tmp5;
-              arr4 = items3.push(tmp78(arg0, items6, tmp12, tmp8.parse, tmp5));
+          } else if (typeof item10023 === "object") {
+            let items6 = [];
+            let arraySpreadResult2 = HermesBuiltin.arraySpread(arg5, 0);
+            obj = { screen: null, path: null };
+            let items7 = [];
+            if (item10023.exact) {
+              obj[0] = arg0;
+              obj[1] = item10023.path;
+              items7[0] = obj;
+              let tmp12 = items7;
+            } else {
+              obj[0] = arg0;
+              obj[1] = item10023.path;
+              items7[HermesBuiltin.arraySpread(arg3, 0)] = obj;
+              tmp12 = items7;
             }
+            arr4 = items3.push(createConfigItem(arg0, items6, tmp12, item10023.parse, tmp5));
           }
           continue;
         }
@@ -557,10 +476,10 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, arr3, arr4) {
       }
       const _Object = Object;
       const keys = Object.keys(screens);
-      const item = keys.forEach((arg0) => {
+      const item = keys.forEach((item, index) => {
         items = [...closure_1];
         const items1 = [...closure_2];
-        const items2 = [...closure_1_13(arg0, screens, closure_0, items, items1, closure_3)];
+        const items2 = [...closure_1_13(item, screens, closure_0, items, items1, closure_3)];
         items.push.apply(items2);
       });
     }
@@ -577,11 +496,11 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
   let items = [];
   function _loop2(screen) {
     items = screen;
-    const patternParts = items(closure_1_3[4]).getPatternParts(path);
+    const patternParts = items(dependencyMap[4]).getPatternParts(path);
     items = [
-      ...patternParts.map((arg0) => {
+      ...patternParts.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(arg0);
+        const merged = Object.assign(item);
         obj.screen = closure_0;
         return obj;
       })
@@ -598,28 +517,28 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
   let regExp;
   if (items.length) {
     const _RegExp = RegExp;
-    const mapped = items.map((param) => {
-      if (param.param) {
+    const mapped = items.map((item, index) => {
+      if (item.param) {
         let str5 = "[^/]+";
-        if (param.regex) {
+        if (item.regex) {
           const _HermesInternal2 = HermesInternal;
-          str5 = "(?:" + param.regex + ")|(?=[^/]*%[0-9A-F]{2})[^/]+";
+          str5 = "(?:" + item.regex + ")|(?=[^/]*%[0-9A-F]{2})[^/]+";
         }
         let str8 = "";
-        if (param.optional) {
+        if (item.optional) {
           str8 = "?";
         }
         const _HermesInternal3 = HermesInternal;
-        let str = "(((?<param_" + arg1 + ">" + str5 + ")\\/)" + str8 + ")";
+        let str = "(((?<param_" + index + ">" + str5 + ")\\/)" + str8 + ")";
       } else {
         str = ".*\\/";
-        if ("*" !== param.segment) {
+        if ("*" !== item.segment) {
           if (typeof closure_6 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Array = Array;
           let _HermesInternal = HermesInternal;
-          str = "" + Array.from(param.segment, (str) => {
+          str = "" + Array.from(item.segment, (str) => {
             let encodeURIComponentResult = encodeURIComponent(str);
             if (encodeURIComponentResult === str) {
               str = str.charCodeAt(0);
@@ -630,7 +549,7 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
             }
             return "(?:" + callback(1563)(str) + "|" + callback(1563)(encodeURIComponentResult) + ")";
           }).join("") + "\\/";
-          const arr = Array.from(param.segment, (str) => {
+          const arr = Array.from(item.segment, (str) => {
             let encodeURIComponentResult = encodeURIComponent(str);
             if (encodeURIComponentResult === str) {
               str = str.charCodeAt(0);
@@ -649,35 +568,26 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
     regExp = new RegExp("^(" + mapped.join("") + ")$");
   }
   items1 = [];
-  const mapped1 = items.map((segment) => segment.segment);
+  const mapped1 = items.map((item, index) => item.segment);
   const set = new Set();
   const entries = items.entries();
   while (tmp9 !== undefined) {
-    let tmp11 = callback;
     let tmp12 = callback(tmp10, 2);
     [tmp13, tmp14] = tmp12;
-    let tmp15 = tmp14;
     if (tmp14.param) {
       let obj = { index: null, screen: null, name: null, regex: null };
-      let tmp16 = tmp13;
       obj[0] = tmp13;
-      let tmp17 = tmp14;
-      ({ screen: obj3[1], param: obj3[2] } = tmp15);
+      ({ screen: obj3[1], param: obj3[2] } = tmp14);
       let regExp1;
-      if (tmp15.regex) {
+      if (tmp14.regex) {
         let _RegExp2 = RegExp;
-        let tmp19 = tmp14;
         let _HermesInternal2 = HermesInternal;
-        let tmp20 = new.target;
-        let tmp21 = new.target;
-        regExp1 = new RegExp("^(?:" + tmp15.regex + ")$");
+        regExp1 = new RegExp("^(?:" + tmp14.regex + ")$");
       }
       obj[3] = regExp1;
       let arr = items1.push(obj);
-      let tmp23 = tmp14;
-      if (tmp15.screen === screen) {
-        let tmp24 = tmp14;
-        let addResult = set.add(tmp15.param);
+      if (tmp14.screen === screen) {
+        let addResult = set.add(tmp14.param);
       }
     }
     continue;
@@ -694,25 +604,18 @@ function findInitialRoute(name, items, initialRoutes) {
       let flag = true;
       let num = 0;
       if (0 < items.length) {
-        let tmp3 = num;
         let obj = items[num];
-        let tmp4 = nextResult;
         while (0 === obj.localeCompare(tmp2.parentScreens[num])) {
-          let tmp5 = num;
           let sum = num + 1;
           num = sum;
         }
         flag = false;
       }
-      let tmp7 = flag;
       if (flag) {
-        let tmp8 = name;
-        let tmp9 = nextResult;
         let initialRouteName;
         if (name !== tmp2.initialRouteName) {
           initialRouteName = nextResult.initialRouteName;
         }
-        let tmp11 = iter;
         iter.return();
         return initialRouteName;
       }
@@ -733,8 +636,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
   }
   if (0 === items.length) {
     if (items1) {
-      let obj = { index: 1, routes: null };
-      obj = { name: null };
+      let obj = { name: null };
       obj[0] = items1;
       items1 = [obj, arr];
       obj[1] = items1;
@@ -773,17 +675,13 @@ function createNestedStateObject(str, items, initialRoutes, config) {
       let tmp23 = obj;
       if (arr1) {
         while (true) {
-          let tmp10 = findInitialRoute;
           let items7 = findInitialRoute(arr1.name, items, initialRoutes);
           let index = tmp23.index;
           let tmp11 = arr1;
-          let tmp12 = tmp23;
           if (!index) {
             index = tmp23.routes.length - 1;
           }
-          let tmp13 = createStateObject;
           if (typeof createStateObject !== "function") {
-            let str3 = "Trying to call a non-function";
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
           if (0 === items.length) {
@@ -795,8 +693,6 @@ function createNestedStateObject(str, items, initialRoutes, config) {
               obj9[0] = items7;
               let items5 = [obj9, ];
               let obj10 = {};
-              let tmp17 = obj10;
-              let tmp18 = arr1;
               let merged2 = Object.assign(tmp11);
               let obj11 = { routes: null };
               obj11[0] = [];
@@ -807,8 +703,6 @@ function createNestedStateObject(str, items, initialRoutes, config) {
             } else {
               obj12 = { routes: null };
               let obj13 = {};
-              let tmp14 = obj13;
-              let tmp15 = arr1;
               let merged3 = Object.assign(tmp11);
               let obj14 = { routes: null };
               obj14[0] = [];
@@ -841,7 +735,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
       }
     }
     const findFocusedRouteResult = findFocusedRoute.findFocusedRoute(obj);
-    findFocusedRouteResult.path = str.replace(/\/$/, "");
+    findFocusedRouteResult.path = "".replace(/\/$/, "");
     let parse;
     if (config != null) {
       parse = config.parse;
@@ -858,7 +752,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
     if (config != null) {
       hasNestedScreens = config.hasNestedScreens;
     }
-    const tmp29Result = parseQueryParams(str, parse, pathParamNames, explicitParamNames, hasNestedScreens, findFocusedRouteResult.params);
+    const tmp29Result = parseQueryParams("", parse, pathParamNames, explicitParamNames, hasNestedScreens, findFocusedRouteResult.params);
     if (tmp29Result) {
       const obj18 = {};
       const merged4 = Object.assign(findFocusedRouteResult.params);
@@ -868,10 +762,10 @@ function createNestedStateObject(str, items, initialRoutes, config) {
     return obj;
   }
 }
-function parseQueryParams(arr) {
-  closure_0 = arg1;
-  let set = arg2;
-  if (arg2 === undefined) {
+function parseQueryParams(arr, parse, pathParamNames, explicitParamNames, hasNestedScreens, params) {
+  closure_0 = parse;
+  let set = pathParamNames;
+  if (pathParamNames === undefined) {
     const _Set = Set;
     set = new Set();
   }
@@ -883,7 +777,6 @@ function parseQueryParams(arr) {
   }
   if (substr) {
     parsed = validateArrayFormatSeparatorAll.parse(substr);
-    const obj2 = validateArrayFormatSeparatorAll;
   } else {
     parsed = {};
   }
@@ -893,15 +786,14 @@ function parseQueryParams(arr) {
 export const getStateFromPath = function getStateFromPath(str, screens) {
   ({ initialRoutes, configs, configsByScreen, prefixRegex } = (function getConfigResources(screens) {
     if (screens) {
-      const value = closure_8.get(screens);
+      const value = store.get(screens);
       if (value) {
         return value;
       } else {
         const tmp4 = callback(screens);
-        const result = obj.set(screens, tmp4);
+        const result = store.set(screens, tmp4);
         return tmp4;
       }
-      obj = closure_8;
     } else {
       return callback();
     }
@@ -910,24 +802,23 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
   if (screens != null) {
     screens = screens.screens;
   }
+  str = str.replace(/\/+/g, "/");
   const tmp = (function getConfigResources(screens) {
     if (screens) {
-      const value = closure_8.get(screens);
+      const value = store.get(screens);
       if (value) {
         return value;
       } else {
         const tmp4 = callback(screens);
-        const result = obj.set(screens, tmp4);
+        const result = store.set(screens, tmp4);
         return tmp4;
       }
-      obj = closure_8;
     } else {
       return callback();
     }
   })(screens);
-  str = str.replace(/\/+/g, "/");
-  const str2 = str.replace(/\/+/g, "/").replace(/^\//, "");
-  const replaced = str.replace(/\/+/g, "/").replace(/^\//, "").replace(/\?.*$/, "").replace(/%[0-9a-f]{2}/gi, (str) => str.toUpperCase());
+  const str2 = str.replace(/^\//, "");
+  const replaced = str.replace(/^\//, "").replace(/\?.*$/, "").replace(/%[0-9a-f]{2}/gi, (str) => str.toUpperCase());
   let str4 = replaced;
   if (!replaced.endsWith("/")) {
     const _HermesInternal = HermesInternal;
@@ -949,7 +840,6 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
       if (nextResult) {
         let obj = { name: null };
         let _decodeURIComponent2 = decodeURIComponent;
-        let tmp34 = nextResult;
         obj[0] = decodeURIComponent(tmp33);
         let arr = items.push(obj);
       }
@@ -961,14 +851,14 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
     }
     return tmp36;
   } else if ("/" === str5) {
-    const found = configs.find((segments) => {
-      segments = segments.segments;
+    const found = configs.find((item, index) => {
+      const segments = item.segments;
       return "" === segments.join("/");
     });
     let tmp22;
     if (found) {
       const routeNames = found.routeNames;
-      tmp22 = createNestedStateObject(str, routeNames.map((name) => ({ name })), initialRoutes, found);
+      tmp22 = createNestedStateObject(str, routeNames.map((item, index) => ({ name: item })), initialRoutes, found);
     }
     return tmp22;
   } else {
@@ -985,7 +875,9 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
           return createNestedStateObject(str, routes, initialRoutes, config);
         }
       }
+      const tmp15 = matchAgainstConfigs(str5, decodeURIComponentResult, first, configs, configsByScreen);
     } catch (err) {
     }
   }
+  const str3 = str.replace(/^\//, "").replace(/\?.*$/, "");
 };

@@ -1,9 +1,9 @@
 // _runtime/00129_HTMLCollection.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
-const HTMLCollection = arg1;
+const HTMLCollection = fn;
 let closure_3 = { value: {}, enumerable: true, configurable: false, writable: false };
 class HTMLCollection {
   constructor(arg0) {
@@ -58,7 +58,7 @@ obj = {
   }
 };
 items[3] = obj;
-let tmp2 = _createClassDefault(HTMLCollection, items);
+const tmp2 = _createClassDefault(HTMLCollection, items);
 let closure_4 = tmp2;
 setPlatformObject.setPlatformObject(tmp2);
 

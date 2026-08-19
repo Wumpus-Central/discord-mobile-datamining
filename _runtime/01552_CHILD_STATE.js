@@ -1,7 +1,7 @@
 // _runtime/01552_CHILD_STATE.js
 import _slicedToArrayDefault from "metro/00032__slicedToArray.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "00019_noop.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 let closure_2 = ["state"];
@@ -15,11 +15,11 @@ export const useRouteCache = function useRouteCache(routes) {
     const obj = { current: new Map() };
     return obj;
   }, []);
-  const reduced = routes.reduce((set, key) => {
+  const reduced = routes.reduce((acc, item, index) => {
     const current = ref.current;
-    const value = current.get(key.key);
-    const state = key.state;
-    const tmp2 = closure_1_3(key, closure_1_2);
+    const value = current.get(item.key);
+    const state = item.state;
+    const tmp2 = closure_1_3(item, closure_1_2);
     let tmp3 = tmp2;
     if (value) {
       let obj = ref(reduced[3]);
@@ -34,8 +34,8 @@ export const useRouteCache = function useRouteCache(routes) {
       obj[2] = state;
       Object.defineProperty(tmp3, tmp6, obj);
     }
-    const result = set.set(key.key, tmp3);
-    return set;
+    const result = acc.set(item.key, tmp3);
+    return acc;
   }, new Map());
   const insertionEffect = React.useInsertionEffect(() => {
     closure_0.current = reduced;

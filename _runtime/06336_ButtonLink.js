@@ -7,7 +7,7 @@ import Text from "06338_Text.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function ButtonLink(arg0) {
   ({ screen, params, action, href } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
@@ -42,16 +42,14 @@ function ButtonBase(variant) {
   } else if ("filled" === str) {
     let str4 = "white";
     if (!obj10.isDark()) {
-      const obj2 = tmp9(6328)(color);
-      str4 = tmp9(6328)(color).darken(0.71).string();
-      const darkenResult = tmp9(6328)(color).darken(0.71);
+      const obj2 = ColorDefault(color);
+      str4 = ColorDefault(color).darken(0.71).string();
+      const darkenResult = ColorDefault(color).darken(0.71);
     }
     tmp5 = str4;
     str3 = color;
     obj10 = ColorDefault(color);
-    tmp9 = importDefault;
   }
-  obj = {};
   const merged1 = Object.assign(merged);
   obj = { radius: 40, color: null };
   const obj8 = ColorDefault(tmp5);

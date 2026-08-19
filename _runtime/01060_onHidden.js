@@ -8,7 +8,7 @@ arg5.onHidden = (arg0) => {
   function onHiddenOrPageHide(type) {
     let tmp = "pagehide" !== type.type;
     if (tmp) {
-      const _document = callback(closure_1_1[0]).WINDOW.document;
+      const _document = callback(dependencyMap[0]).WINDOW.document;
       let visibilityState;
       if (_document != null) {
         visibilityState = _document.visibilityState;
@@ -19,7 +19,7 @@ arg5.onHidden = (arg0) => {
       callback(type);
     }
   }
-  _addPageListener.addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
-  const obj = _addPageListener;
-  _addPageListener.addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
+  require("01041_addPageListener.js").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
+  const obj = addPageListener;
+  require("01041_addPageListener.js").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
 };

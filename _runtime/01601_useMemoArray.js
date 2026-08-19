@@ -1,15 +1,15 @@
 // _runtime/01601_useMemoArray.js
-import closure_0 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 
 export const useMemoArray = function useMemoArray(arr) {
   const ref = current.useRef(undefined);
   current = ref.current;
-  const mapped = arr.map((arg0, arg1) => {
-    [tmp, arr] = arg0;
+  const mapped = arr.map((item, index) => {
+    [tmp, arr] = item;
     let tmp3;
     if (current != null) {
-      tmp3 = tmp2.entries[arg1];
+      tmp3 = tmp2.entries[index];
     }
     let everyResult = tmp3;
     if (tmp3) {
@@ -17,7 +17,7 @@ export const useMemoArray = function useMemoArray(arr) {
     }
     if (everyResult) {
       const deps = tmp3.deps;
-      everyResult = deps.every((arg0, arg1) => Object.is(arg0, table[arg1]));
+      everyResult = deps.every((item, index) => Object.is(item, table[index]));
     }
     if (!everyResult) {
       const obj = { item: null, deps: null };
@@ -29,12 +29,12 @@ export const useMemoArray = function useMemoArray(arr) {
   });
   if (current) {
     if (current.entries.length === mapped.length) {
-      if (mapped.every((arg0, arg1) => arg0 === current.entries[arg1])) {
+      if (mapped.every((item, index) => item === current.entries[index])) {
         return current.items;
       }
     }
   }
-  const mapped1 = mapped.map((item) => item.item);
+  const mapped1 = mapped.map((item, index) => item.item);
   ref.current = { entries: mapped, items: mapped1 };
   return mapped1;
 };

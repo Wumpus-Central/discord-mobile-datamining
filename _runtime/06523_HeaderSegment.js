@@ -1,11 +1,11 @@
 // _runtime/06523_HeaderSegment.js
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "metro/00032__slicedToArray.js";
-import closure_5 from "00019_noop.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["progress", "layout", "modal", "onGoBack", "backHref", "headerTitle", "headerLeft", "headerRight", "headerBackImage", "headerBackTitle", "headerBackButtonDisplayMode", "headerBackTruncatedTitle", "headerBackAccessibilityLabel", "headerBackTestID", "headerBackAllowFontScaling", "headerBackTitleStyle", "headerTitleContainerStyle", "headerLeftContainerStyle", "headerRightContainerStyle", "headerBackgroundContainerStyle", "headerStyle", "headerStatusBarHeight", "styleInterpolator"];
 ({ Platform, StyleSheet: closure_6 } = get_ActivityIndicator);
 
@@ -86,8 +86,7 @@ export const HeaderSegment = function HeaderSegment(progress) {
   height = tmp10;
   let items = [styleInterpolator, progress, direction, tmp10, layout, first1, first];
   const memo = obj2.useMemo(() => {
-    obj = { current: obj, next: null, direction: null, layouts: null };
-    obj = { progress: progress.current };
+    let obj = { progress: progress.current };
     let next = progress.next;
     if (next) {
       obj = { progress: null };

@@ -7,13 +7,13 @@ arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   if (arg1) {
-    let withScopeResult = _getClient.withScope(arg1, () => {
+    let withScopeResult = require("00848_getClient.js").withScope(arg1, () => {
       const activeSpan = callback(table[1]).getActiveSpan();
       if (activeSpan) {
-        let tmpResult = tmp(tmp2[1]);
+        let tmpResult = callback(table[1]);
         let spanToTraceContextResult = tmpResult.spanToTraceContext(activeSpan);
       } else {
-        tmpResult = tmp(tmp2[0]);
+        tmpResult = callback(table[0]);
         spanToTraceContextResult = tmpResult.getTraceContextFromScope(table);
       }
       const tmpResult1 = callback(table[2]);
@@ -25,7 +25,7 @@ arg5._getTraceInfoFromScope = function _getTraceInfoFromScope(arg0, arg1) {
       const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
       return items;
     });
-    const obj = _getClient;
+    const obj = getClient;
   } else {
     withScopeResult = [undefined, undefined];
   }

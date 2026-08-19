@@ -16,7 +16,7 @@ arg5.applySdkMetadata = function applySdkMetadata(_metadata) {
     const obj = { name: null, packages: null, version: null };
     const _HermesInternal = HermesInternal;
     obj[0] = "sentry.javascript." + arg1;
-    obj[1] = arr.map((arg0) => ({ name: "" + str + ":@sentry/" + arg0, version: str(closure_1_1[0]).SDK_VERSION }));
+    obj[1] = arr.map((item, index) => ({ name: "" + str + ":@sentry/" + item, version: str(dependencyMap[0]).SDK_VERSION }));
     obj[2] = str(7740).SDK_VERSION;
     tmp.sdk = obj;
   }

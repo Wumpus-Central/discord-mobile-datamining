@@ -5,13 +5,13 @@ import _mod13752 from "metro/13752__.js";
 import replaceByteInByteSequence from "13753_replaceByteInByteSequence.js";
 
 require = arg1;
-let dependencyMap = exports;
-dependencyMap = arg6;
-function parseIPv4Number(joined) {
-  if (joined.length >= 2) {
-    if ("0" === joined.charAt(0)) {
+const module = exports;
+const dependencyMap = arg6;
+function parseIPv4Number(match) {
+  if (match.length >= 2) {
+    if ("0" === match.charAt(0)) {
       if ("x" === str2.toLowerCase()) {
-        let substr = joined.substring(2);
+        let substr = match.substring(2);
         let num4 = 16;
       }
       if ("" === substr) {
@@ -32,17 +32,17 @@ function parseIPv4Number(joined) {
         }
         return parsed;
       }
-      str2 = joined.charAt(1);
+      str2 = match.charAt(1);
     }
   }
-  let tmp = joined.length >= 2;
+  let tmp = match.length >= 2;
   if (tmp) {
-    tmp = "0" === joined.charAt(0);
+    tmp = "0" === match.charAt(0);
   }
   num4 = 10;
-  substr = joined;
+  substr = match;
   if (tmp) {
-    substr = joined.substring(1);
+    substr = match.substring(1);
     num4 = 8;
   }
 }
@@ -105,8 +105,6 @@ function parseHost(buffer, arg1) {
       } else {
         while (8 !== tmp18) {
           if (58 !== decodeResult[num7]) {
-            let tmp28 = require;
-            let tmp29 = dependencyMap;
             let obj4 = _mod13752;
             let num14 = 0;
             let num15 = 0;
@@ -118,9 +116,6 @@ function parseHost(buffer, arg1) {
               while (true) {
                 let tmp32 = decodeResult[tmp30];
                 let _isNaN = isNaN;
-                let tmp33 = num14;
-                let tmp34 = num15;
-                let tmp35 = tmp30;
                 let fromCodePointResult;
                 if (!isNaN(tmp32)) {
                   let _String2 = String;
@@ -136,8 +131,6 @@ function parseHost(buffer, arg1) {
                 if (sum2 >= 4) {
                   break;
                 } else {
-                  let tmp41 = require;
-                  let tmp42 = dependencyMap;
                   let obj5 = _mod13752;
                   num14 = sum2;
                   num15 = sum;
@@ -154,105 +147,88 @@ function parseHost(buffer, arg1) {
             if (46 === decodeResult[tmp31]) {
               if (0 === num16) {
                 tmp27 = closure_4;
+              } else if (6 < tmp18) {
+                tmp27 = closure_4;
               } else {
-                let num27 = 6;
-                if (6 < tmp18) {
-                  tmp27 = closure_4;
-                } else {
-                  let diff3 = tmp31 - num16;
-                  let num28 = 256;
-                  let num29 = 2;
-                  let num30 = 255;
-                  let num31 = 10;
-                  let num18 = 0;
-                  let tmp64 = tmp18;
-                  let num19 = 0;
-                  let tmp66 = tmp18;
-                  if (undefined === decodeResult[diff3]) {
-                    tmp20 = tmp66;
-                    tmp19 = tmp17;
-                    if (4 !== num19) {
-                      tmp27 = closure_4;
-                    }
-                  } else {
-                    while (true) {
-                      let tmp45 = num18;
-                      let tmp46 = diff3;
-                      let tmp47 = tmp64;
-                      let sum7 = diff3;
-                      if (0 >= num18) {
-                        let tmp49 = require;
-                        let tmp50 = dependencyMap;
-                        let obj6 = _mod13752;
-                        if (obj6.isASCIIDigit(decodeResult[sum7])) {
-                          let tmp49Result = tmp49(13752);
-                          let tmp51 = null;
-                          let tmp52 = sum7;
-                          let tmp53 = null;
-                          let tmp54 = sum7;
-                          if (!tmp49Result.isASCIIDigit(decodeResult[sum7])) {
-                            items[tmp64] = 256 * items[tmp64] + tmp53;
-                            let sum3 = num18 + 1;
-                            let tmp62 = 2 !== sum3;
-                            if (2 !== sum3) {
-                              tmp62 = 4 !== sum3;
-                            }
-                            let sum4 = tmp64;
-                            if (!tmp62) {
-                              sum4 = tmp64 + 1;
-                            }
-                            tmp64 = sum4;
-                            num18 = sum3;
-                            diff3 = tmp54;
-                            num19 = sum3;
-                            tmp66 = sum4;
-                          } else {
-                            while (true) {
-                              let tmp55 = decodeResult[tmp52];
-                              let _isNaN2 = isNaN;
-                              let tmp56 = tmp51;
-                              let tmp57 = tmp52;
-                              let fromCodePointResult1;
-                              if (!isNaN(tmp55)) {
-                                let _String3 = String;
-                                fromCodePointResult1 = String.fromCodePoint(tmp55);
-                              }
-                              let parsed = parseInt(fromCodePointResult1);
-                              let sum6 = parsed;
-                              if (null === tmp51) {
-                                if (sum6 > 255) {
-                                  tmp27 = closure_4;
-                                } else {
-                                  let sum5 = tmp52 + 1;
-                                  let tmp80 = require;
-                                  let tmp81 = dependencyMap;
-                                  let obj8 = _mod13752;
-                                  tmp51 = sum6;
-                                  tmp52 = sum5;
-                                  tmp53 = sum6;
-                                  tmp54 = sum5;
-                                }
-                              } else if (0 === tmp51) {
-                                break;
-                              } else {
-                                sum6 = 10 * tmp51 + parsed;
-                              }
-                            }
-                            tmp27 = closure_4;
-                          }
-                        } else {
-                          tmp27 = closure_4;
-                        }
-                      } else if (46 !== decodeResult[diff3]) {
-                        break;
-                      } else if (num18 >= 4) {
-                        break;
-                      } else {
-                        sum7 = diff3 + 1;
-                      }
-                    }
+                let diff3 = tmp31 - num16;
+                let num18 = 0;
+                let tmp64 = tmp18;
+                let num19 = 0;
+                let tmp66 = tmp18;
+                if (undefined === decodeResult[diff3]) {
+                  tmp20 = tmp66;
+                  tmp19 = tmp17;
+                  if (4 !== num19) {
                     tmp27 = closure_4;
                   }
+                } else {
+                  while (true) {
+                    let sum7 = diff3;
+                    if (0 >= num18) {
+                      let obj6 = _mod13752;
+                      if (obj6.isASCIIDigit(decodeResult[sum7])) {
+                        let tmp49Result = _mod13752;
+                        let tmp51 = null;
+                        let tmp52 = sum7;
+                        let tmp53 = null;
+                        let tmp54 = sum7;
+                        if (!tmp49Result.isASCIIDigit(decodeResult[sum7])) {
+                          items[tmp64] = 256 * items[tmp64] + tmp53;
+                          let sum3 = num18 + 1;
+                          let tmp62 = 2 !== sum3;
+                          if (2 !== sum3) {
+                            tmp62 = 4 !== sum3;
+                          }
+                          let sum4 = tmp64;
+                          if (!tmp62) {
+                            sum4 = tmp64 + 1;
+                          }
+                          tmp64 = sum4;
+                          num18 = sum3;
+                          diff3 = tmp54;
+                          num19 = sum3;
+                          tmp66 = sum4;
+                        } else {
+                          while (true) {
+                            let tmp55 = decodeResult[tmp52];
+                            let _isNaN2 = isNaN;
+                            let fromCodePointResult1;
+                            if (!isNaN(tmp55)) {
+                              let _String3 = String;
+                              fromCodePointResult1 = String.fromCodePoint(tmp55);
+                            }
+                            let parsed = parseInt(fromCodePointResult1);
+                            let sum6 = parsed;
+                            if (null === tmp51) {
+                              if (sum6 > 255) {
+                                tmp27 = closure_4;
+                              } else {
+                                let sum5 = tmp52 + 1;
+                                tmp51 = sum6;
+                                tmp52 = sum5;
+                                tmp53 = sum6;
+                                tmp54 = sum5;
+                              }
+                            } else if (0 === tmp51) {
+                              break;
+                            } else {
+                              sum6 = 10 * tmp51 + parsed;
+                            }
+                          }
+                          tmp27 = closure_4;
+                        }
+                      } else {
+                        tmp27 = closure_4;
+                      }
+                    } else if (46 !== decodeResult[diff3]) {
+                      break;
+                    } else if (num18 >= 4) {
+                      break;
+                    } else {
+                      sum7 = diff3 + 1;
+                    }
+                  }
+                  tmp27 = closure_4;
                 }
               }
             } else {
@@ -305,15 +281,11 @@ function parseHost(buffer, arg1) {
           let _String = String;
           let fromCodePointResult2 = String.fromCodePoint(tmp6);
           let tmp8 = tmp6 <= 31;
-          let tmp9 = num5;
-          let tmp10 = str4;
           if (!tmp8) {
             tmp8 = tmp6 > 126;
           }
           let tmp11 = fromCodePointResult2;
           if (tmp8) {
-            let tmp12 = require;
-            let tmp13 = dependencyMap;
             let _Buffer2 = Buffer.Buffer;
             let fromResult = _Buffer2.from(fromCodePointResult2);
             let num4 = 0;
@@ -321,8 +293,6 @@ function parseHost(buffer, arg1) {
             let str3 = "";
             if (0 < fromResult.length) {
               do {
-                let tmp14 = require;
-                let tmp15 = dependencyMap;
                 let obj3 = replaceByteInByteSequence;
                 str2 = `${obj3.percentEncode(arr[num4])}`;
                 num4 = num4 + 1;
@@ -347,9 +317,9 @@ function parseHost(buffer, arg1) {
       str = closure_4;
     }
     if (str === closure_4) {
-      return tmp4;
+      return closure_4;
     } else if (-1 !== str.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|%|\/|:|\?|@|\[|\\|\]/)) {
-      return tmp4;
+      return closure_4;
     } else {
       const tmp5 = (function parseIPv4(str) {
         const parts = str.split(".");
@@ -364,20 +334,14 @@ function parseHost(buffer, arg1) {
           const nextResult = iter.next();
           while (iter !== undefined) {
             if ("" === nextResult) {
-              let tmp15 = iter;
               iter.return();
               return str;
             } else {
-              let tmp7 = callback;
-              let tmp8 = nextResult;
               let tmp9 = callback(tmp6);
-              let tmp11 = closure_4;
               if (tmp9 === closure_4) {
-                let tmp14 = iter;
                 iter.return();
                 return str;
               } else {
-                let tmp12 = tmp9;
                 let arr = items.push(tmp10);
                 continue;
               }
@@ -398,9 +362,7 @@ function parseHost(buffer, arg1) {
             let num5 = 0;
             const tmp20 = items[Symbol.iterator]();
             while (tmp20 !== undefined) {
-              let tmp24 = arr1;
               let _Math2 = Math;
-              let tmp25 = num5;
               arr1 = arr1 + tmp22 * Math.pow(256, 3 - num5);
               num5 = num5 + 1;
               continue;
@@ -415,7 +377,6 @@ function parseHost(buffer, arg1) {
       }
       return str;
     }
-    const obj = replaceByteInByteSequence;
   }
 }
 function serializeHost(host) {
@@ -426,8 +387,6 @@ function serializeHost(host) {
     do {
       let _String = String;
       let text = `${String(tmp2 % 256)}${``}`;
-      let tmp29 = num;
-      let tmp30 = rounded;
       let text1 = text;
       if (4 !== num) {
         text1 = `.${`${String(tmp2 % 256)}${``}`}`;
@@ -435,7 +394,6 @@ function serializeHost(host) {
       let _Math = Math;
       rounded = Math.floor(rounded / 256);
       num = num + 1;
-      let tmp = text1;
       let combined = text1;
     } while (num <= 4);
   } else {
@@ -453,10 +411,6 @@ function serializeHost(host) {
       let tmp7 = null;
       if (0 < host.length) {
         do {
-          let tmp8 = num3;
-          let tmp9 = num4;
-          let tmp10 = tmp4;
-          let tmp11 = num5;
           let tmp12 = tmp5;
           if (0 !== host[num3]) {
             let tmp16 = num5;
@@ -494,15 +448,12 @@ function serializeHost(host) {
       let num11 = 0;
       let flag = false;
       while (true) {
-        let tmp17 = num11;
         let sum = str;
         let tmp20 = flag;
         let tmp18 = flag;
         if (flag) {
           tmp20 = 0 === host[num11];
         }
-        let tmp21 = flag;
-        let tmp22 = sum;
         if (!tmp20) {
           break;
         } else {
@@ -513,8 +464,6 @@ function serializeHost(host) {
             continue;
           } else {
             let _HermesInternal = HermesInternal;
-            let str6 = "]";
-            let str7 = "[";
             combined = "[" + sum + "]";
           }
         }
@@ -531,7 +480,6 @@ function serializeHost(host) {
         }
         let sum1 = text2;
         let flag3 = flag2;
-        const str5 = host[num11];
       } else {
         let str4 = ":";
         if (0 === num11) {
@@ -627,7 +575,7 @@ class URLStateMachine {
   }
   parse scheme start(arg0, arg1) {
     self = this;
-    obj = require("module_13752");
+    obj = require("metro/13752__.js");
     if (obj.isASCIIAlpha(arg0)) {
       tmp2 = arg1;
       self.buffer = self.buffer + arg1.toLowerCase();
@@ -647,7 +595,7 @@ class URLStateMachine {
   }
   parse scheme(arg0, arg1) {
     self = this;
-    obj = require("module_13752");
+    obj = require("metro/13752__.js");
     if (!obj.isASCIIAlphanumeric(arg0)) {
       num = 43;
       if (43 !== arg0) {
@@ -901,7 +849,7 @@ class URLStateMachine {
             path3 = self.base.path;
             num3 = 1;
             num4 = 0;
-            self.url.path = require("module_0");
+            self.url.path = require("../discord_app/index.native.tsx");
             str = "path";
             self.state = "path";
             self.pointer = self.pointer - 1;
@@ -1100,7 +1048,7 @@ class URLStateMachine {
   }
   parse port(arg0, arg1) {
     self = this;
-    obj = require("module_13752");
+    obj = require("metro/13752__.js");
     if (obj.isASCIIDigit(arg0)) {
       tmp8 = arg1;
       self.buffer = self.buffer + arg1;
@@ -1137,7 +1085,7 @@ class URLStateMachine {
         num5 = 16;
         num6 = 2;
         num7 = 1;
-        if (parsed > require("module_2") - 1) {
+        if (parsed > require("00002_obj132.js") - 1) {
           flag3 = true;
           self.parseError = true;
           tmp7 = closure_4;
@@ -1210,7 +1158,7 @@ class URLStateMachine {
                     tmp2 = input[pointer + 1];
                     tmp3 = closure_0;
                     tmp4 = closure_2;
-                    obj = require("module_13752");
+                    obj = require("metro/13752__.js");
                     isASCIIAlphaResult = obj.isASCIIAlpha(input[pointer]);
                     if (isASCIIAlphaResult) {
                       num3 = 58;
@@ -1299,7 +1247,7 @@ class URLStateMachine {
             tmp4 = input[pointer + 1];
             tmp5 = closure_0;
             tmp6 = closure_2;
-            obj = require("module_13752");
+            obj = require("metro/13752__.js");
             isASCIIAlphaResult = obj.isASCIIAlpha(input[pointer]);
             if (isASCIIAlphaResult) {
               num3 = 58;
@@ -1329,9 +1277,9 @@ class URLStateMachine {
           if (isASCIIAlphaResult1) {
             tmp12 = closure_0;
             tmp13 = closure_2;
-            obj2 = require("module_13752");
+            obj2 = require("metro/13752__.js");
             num6 = 0;
-            isASCIIAlphaResult1 = obj2.isASCIIAlpha(require("module_0"));
+            isASCIIAlphaResult1 = obj2.isASCIIAlpha(require("../discord_app/index.native.tsx"));
           }
           if (isASCIIAlphaResult1) {
             str2 = ":";
@@ -1387,9 +1335,9 @@ class URLStateMachine {
       if (isASCIIAlphaResult) {
         tmp3 = closure_0;
         tmp4 = closure_2;
-        obj = require("module_13752");
+        obj = require("metro/13752__.js");
         num6 = 0;
-        isASCIIAlphaResult = obj.isASCIIAlpha(require("module_0"));
+        isASCIIAlphaResult = obj.isASCIIAlpha(require("../discord_app/index.native.tsx"));
       }
       if (isASCIIAlphaResult) {
         str = ":";
@@ -1506,11 +1454,11 @@ class URLStateMachine {
           if (!tmp) {
             tmp2 = closure_0;
             tmp3 = closure_2;
-            obj = require("module_13752");
+            obj = require("metro/13752__.js");
             num5 = 1;
             isASCIIHexResult = obj.isASCIIHex(self.input[self.pointer + 1]);
             if (isASCIIHexResult) {
-              tmp2Result = require("module_13752");
+              tmp2Result = require("metro/13752__.js");
               num6 = 2;
               isASCIIHexResult = tmp2Result.isASCIIHex(self.input[self.pointer + 2]);
             }
@@ -1663,9 +1611,9 @@ class URLStateMachine {
           if (isASCIIAlphaResult) {
             tmp23 = closure_0;
             tmp24 = closure_2;
-            obj4 = require("module_13752");
+            obj4 = require("metro/13752__.js");
             num16 = 0;
-            isASCIIAlphaResult = obj4.isASCIIAlpha(require("module_0"));
+            isASCIIAlphaResult = obj4.isASCIIAlpha(require("../discord_app/index.native.tsx"));
           }
           if (isASCIIAlphaResult) {
             str14 = ":";
@@ -1763,11 +1711,11 @@ class URLStateMachine {
         if (!tmp2) {
           tmp3 = closure_0;
           tmp4 = closure_2;
-          obj = require("module_13752");
+          obj = require("metro/13752__.js");
           num3 = 1;
           isASCIIHexResult = obj.isASCIIHex(self.input[self.pointer + 1]);
           if (isASCIIHexResult) {
-            tmp3Result = require("module_13752");
+            tmp3Result = require("metro/13752__.js");
             num4 = 2;
             isASCIIHexResult = tmp3Result.isASCIIHex(self.input[self.pointer + 2]);
           }
@@ -1831,11 +1779,11 @@ class URLStateMachine {
       if (!tmp) {
         tmp2 = closure_0;
         tmp3 = closure_2;
-        obj = require("module_13752");
+        obj = require("metro/13752__.js");
         num3 = 1;
         isASCIIHexResult = obj.isASCIIHex(self.input[self.pointer + 1]);
         if (isASCIIHexResult) {
-          tmp2Result = require("module_13752");
+          tmp2Result = require("metro/13752__.js");
           num4 = 2;
           isASCIIHexResult = tmp2Result.isASCIIHex(self.input[self.pointer + 2]);
         }
@@ -1918,11 +1866,11 @@ class URLStateMachine {
         if (!tmp4) {
           tmp = closure_0;
           tmp2 = closure_2;
-          obj = require("module_13752");
+          obj = require("metro/13752__.js");
           num2 = 1;
           isASCIIHexResult = obj.isASCIIHex(self.input[self.pointer + 1]);
           if (isASCIIHexResult) {
-            tmpResult = require("module_13752");
+            tmpResult = require("metro/13752__.js");
             num3 = 2;
             isASCIIHexResult = tmpResult.isASCIIHex(self.input[self.pointer + 2]);
           }
@@ -2082,7 +2030,6 @@ exports.exports.serializeURL = function serializeURL(_url) {
     const path = _url.path;
     const tmp15 = path[Symbol.iterator]();
     while (tmp15 !== undefined) {
-      let tmp19 = text;
       text = `${tmp}/${tmp17}`;
       continue;
     }
@@ -2103,7 +2050,7 @@ exports.exports.serializeURLOrigin = (scheme) => {
   scheme = scheme.scheme;
   if ("blob" === scheme) {
     try {
-      ({ exports: _exports, exports: _exports2 } = dependencyMap);
+      ({ exports: _exports, exports: _exports2 } = module);
       return _exports.serializeURLOrigin(_exports2.parseURL(scheme.path[0]));
     } catch (err) {
       return "null";
@@ -2155,26 +2102,20 @@ exports.exports.setTheUsername = (username) => {
     let _String = String;
     let fromCodePointResult = String.fromCodePoint(tmp);
     let hasItem = tmp <= 31;
-    let tmp4 = num;
     if (!hasItem) {
       hasItem = tmp > 126;
     }
     if (!hasItem) {
-      let tmp5 = set1;
       hasItem = set1.has(tmp);
     }
     if (!hasItem) {
-      let tmp6 = set2;
       hasItem = set2.has(tmp);
     }
     if (!hasItem) {
-      let tmp7 = set;
       hasItem = set.has(tmp);
     }
     let tmp8 = fromCodePointResult;
     if (hasItem) {
-      let tmp9 = require;
-      let tmp10 = dependencyMap;
       let _Buffer = Buffer.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
@@ -2182,8 +2123,6 @@ exports.exports.setTheUsername = (username) => {
       let str2 = "";
       if (0 < fromResult.length) {
         do {
-          let tmp11 = require;
-          let tmp12 = dependencyMap;
           let obj = replaceByteInByteSequence;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
@@ -2205,26 +2144,20 @@ exports.exports.setThePassword = (password) => {
     let _String = String;
     let fromCodePointResult = String.fromCodePoint(tmp);
     let hasItem = tmp <= 31;
-    let tmp4 = num;
     if (!hasItem) {
       hasItem = tmp > 126;
     }
     if (!hasItem) {
-      let tmp5 = set1;
       hasItem = set1.has(tmp);
     }
     if (!hasItem) {
-      let tmp6 = set2;
       hasItem = set2.has(tmp);
     }
     if (!hasItem) {
-      let tmp7 = set;
       hasItem = set.has(tmp);
     }
     let tmp8 = fromCodePointResult;
     if (hasItem) {
-      let tmp9 = require;
-      let tmp10 = dependencyMap;
       let _Buffer = Buffer.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
@@ -2232,8 +2165,6 @@ exports.exports.setThePassword = (password) => {
       let str2 = "";
       if (0 < fromResult.length) {
         do {
-          let tmp11 = require;
-          let tmp12 = dependencyMap;
           let obj = replaceByteInByteSequence;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
@@ -2266,7 +2197,7 @@ exports.exports.parseURL = (arg0, arg1) => {
   if (undefined === arg1) {
     obj = {};
   }
-  const _exports = dependencyMap.exports;
+  const _exports = module.exports;
   obj = { baseURL: obj.baseURL, encodingOverride: obj.encodingOverride };
   return _exports.basicURLParse(arg0, obj);
 };

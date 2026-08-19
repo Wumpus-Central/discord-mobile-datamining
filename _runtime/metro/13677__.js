@@ -1,8 +1,8 @@
 // _runtime/metro/13677__.js
 
-export default (arg0) => {
+export default (fn) => {
   try {
-    return arg0();
+    return fn();
   } catch (err) {
     return true;
   }

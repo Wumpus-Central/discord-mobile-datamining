@@ -11,7 +11,6 @@ export default function trimmedEndIndex(str) {
       const diff1 = tmp6 - 1;
       tmp3 = diff1;
       while (+tmp5) {
-        let tmp8 = regex;
         tmp5 = diff1;
         tmp3 = diff1;
         if (!regex.test(str.charAt(diff1))) {

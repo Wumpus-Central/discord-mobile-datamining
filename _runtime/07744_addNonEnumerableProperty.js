@@ -1,5 +1,6 @@
 // _runtime/07744_addNonEnumerableProperty.js
 import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
+import consoleSandbox from "07738_consoleSandbox.js";
 import isInstanceOf from "07745_isInstanceOf.js";
 import _htmlElementAsString from "07746__htmlElementAsString.js";
 import isMatchingPattern from "07747_isMatchingPattern.js";
@@ -14,11 +15,10 @@ function addNonEnumerableProperty(arg0, arg1, arg2) {
     Object.defineProperty(arg0, arg1, obj);
   } catch (err) {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const logger = tmp6(7738).logger;
+      const logger = consoleSandbox.logger;
       const _HermesInternal = HermesInternal;
       logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
     }
-    tmp6 = require;
   }
 }
 function markFunctionWrapped(arg0, arg1) {
@@ -33,26 +33,25 @@ function markFunctionWrapped(arg0, arg1) {
   } catch (err) {
   }
 }
-function convertToPlainObject(obj) {
-  obj = isInstanceOf;
-  if (obj.isError(obj)) {
+function convertToPlainObject(type) {
+  let obj = isInstanceOf;
+  if (obj.isError(type)) {
     obj = { message: null, name: null, stack: null };
-    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = obj);
-    if (typeof obj === "object") {
-      if (null !== obj) {
+    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = type);
+    if (typeof type === "object") {
+      if (null !== type) {
         obj = {};
         obj1 = obj;
         const keys = Object.keys();
         if (keys !== undefined) {
           obj1 = obj;
           while (keys[tmp] !== undefined) {
-            let tmp24 = tmp17;
             let _Object2 = Object;
             let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(obj, tmp17))) {
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
               continue;
             } else {
-              obj[tmp17] = obj[tmp17];
+              obj[tmp17] = type[tmp17];
               continue;
             }
             continue;
@@ -64,27 +63,26 @@ function convertToPlainObject(obj) {
     }
     obj1 = {};
   } else {
-    let tmp2Result = tmp2(7745);
-    if (tmp2Result.isEvent(obj)) {
+    let tmp2Result = isInstanceOf;
+    if (tmp2Result.isEvent(type)) {
       const obj2 = { type: null, target: null, currentTarget: null };
-      obj2[0] = obj.type;
-      obj2[1] = serializeEventTarget(obj.target);
-      obj2[2] = serializeEventTarget(obj.currentTarget);
-      if (typeof obj === "object") {
-        if (null !== obj) {
+      obj2[0] = type.type;
+      obj2[1] = serializeEventTarget(type.target);
+      obj2[2] = serializeEventTarget(type.currentTarget);
+      if (typeof type === "object") {
+        if (null !== type) {
           const obj3 = {};
           let obj4 = obj3;
           const keys1 = Object.keys();
           if (keys1 !== undefined) {
             obj4 = obj3;
             while (keys1[tmp] !== undefined) {
-              let tmp22 = tmp8;
               let _Object = Object;
               let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(obj, tmp8))) {
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
                 continue;
               } else {
-                obj3[tmp8] = obj[tmp8];
+                obj3[tmp8] = type[tmp8];
                 continue;
               }
               continue;
@@ -94,17 +92,17 @@ function convertToPlainObject(obj) {
         const merged1 = Object.assign(obj4);
         let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
         if (typeof globalThis.CustomEvent !== "undefined") {
-          tmp2Result = tmp2(7745);
-          isInstanceOfResult = tmp2Result.isInstanceOf(obj, globalThis.CustomEvent);
+          tmp2Result = isInstanceOf;
+          isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
-          obj2.detail = obj.detail;
+          obj2.detail = type.detail;
         }
         return obj2;
       }
       obj4 = {};
     } else {
-      return obj;
+      return type;
     }
   }
 }
@@ -155,11 +153,8 @@ function _dropUndefinedKeys(arr, map) {
       let _Object = Object;
       const ownPropertyNames = Object.getOwnPropertyNames(arr);
       for (const item10030 of ownPropertyNames) {
-        let tmp11 = item10030;
         if (undefined !== arg0[item10030]) {
-          let tmp12 = item10030;
-          let tmp13 = _dropUndefinedKeys;
-          obj[tmp11] = _dropUndefinedKeys(arg0[tmp11], arg1);
+          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
         }
         continue;
       }
@@ -174,8 +169,8 @@ function _dropUndefinedKeys(arr, map) {
       } else {
         const items = [];
         const result1 = map.set(arr, items);
-        const item = arr.forEach((arg0) => {
-          items.push(closure_1_6(arg0, closure_0));
+        const item = arr.forEach((item, index) => {
+          items.push(_dropUndefinedKeys(item, closure_0));
         });
         return items;
       }
@@ -211,7 +206,6 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
         let truncateResult = joined;
         if (length !== keys.length) {
           truncateResult = isMatchingPattern.truncate(joined, num);
-          const obj2 = isMatchingPattern;
         }
         return truncateResult;
       }
@@ -221,21 +215,20 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
     return "[object has no keys]";
   }
 };
-arg5.fill = function fill(arg0, arg1, arg2) {
-  if (arg1 in arg0) {
-    const tmp6 = arg2(arg0[arg1]);
+arg5.fill = function fill(closure_0, arg1, fn) {
+  if (arg1 in _require) {
+    const tmp6 = fn(_require[arg1]);
     if (typeof tmp6 === "function") {
       markFunctionWrapped(tmp6, tmp5);
     }
     try {
-      arg0[arg1] = tmp6;
+      _require[arg1] = tmp6;
     } catch (err) {
       if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-        const logger = tmp7(7738).logger;
+        const logger = consoleSandbox.logger;
         const _HermesInternal = HermesInternal;
         logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
       }
-      tmp7 = require;
     }
   }
 };
@@ -267,8 +260,8 @@ arg5.objectify = function objectify(arg0) {
 };
 arg5.urlEncode = function urlEncode(arg0) {
   const entries = Object.entries(arg0);
-  const mapped = entries.map((arg0) => {
-    [tmp, tmp2] = arg0;
+  const mapped = entries.map((item, index) => {
+    [tmp, tmp2] = item;
     return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
   });
   return mapped.join("&");

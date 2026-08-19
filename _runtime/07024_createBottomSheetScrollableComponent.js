@@ -1,10 +1,10 @@
 // _runtime/07024_createBottomSheetScrollableComponent.js
 import noopDefault from "00019_noop.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment", "overScrollMode", "keyboardDismissMode", "showsVerticalScrollIndicator", "contentContainerStyle", "refreshing", "onRefresh", "progressViewOffset", "refreshControl", "preserveScrollMomentum", "onScroll", "onScrollBeginDrag", "onScrollEndDrag", "lockableScrollableContentOffsetY", "onContentSizeChange"];
 ({ forwardRef: c4, useContext: c5, useImperativeHandle: closure_6, useMemo: error } = noop);
 noopDefault;
@@ -47,7 +47,7 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
         throw "'Scrollable' cannot be used out of the BottomSheet!";
       }
     }
-    let tmp4Result = tmp4(tmp5[6]);
+    let tmp4Result = tmp4(animatedComponent[6]);
     class J {
       constructor() {
         if (preserveScrollMomentum) {
@@ -72,7 +72,7 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
         return obj;
       }
     }
-    obj = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: tmp4(tmp5[7]).SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: tmp2, SCROLLABLE_STATE: tmp4(tmp5[7]).SCROLLABLE_STATE };
+    obj = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: tmp4(animatedComponent[7]).SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: tmp2, SCROLLABLE_STATE: tmp4(animatedComponent[7]).SCROLLABLE_STATE };
     J.__closure = obj;
     J.__workletHash = 1780437272380;
     J.__initData = closure_1_9;
@@ -80,7 +80,7 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
     const items1 = [tmp6];
     const animatedProps = tmp4Result.useAnimatedProps(J, items);
     const obj3 = SCROLLVIEW(animatedComponent[5]);
-    tmp4Result = tmp4(tmp5[4]);
+    tmp4Result = tmp4(animatedComponent[4]);
     const tmp10 = closure_1_7(() => {
       let result1;
       if (closure_3) {
@@ -103,6 +103,6 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
     const scrollableSetter = SCROLLVIEW(animatedComponent[4]).useScrollableSetter(scrollableRef, SCROLLVIEW, scrollableContentOffsetY, undefined !== onRefresh, focusHook);
     obj = { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent: preserveScrollMomentum, refreshControl };
     let merged = Object.assign(tmp3);
-    return closure_1_8(SCROLLVIEW(animatedComponent[9]).ScrollableContainer, obj);
+    return jsx(SCROLLVIEW(animatedComponent[9]).ScrollableContainer, { ref: scrollableRef, nativeGesture: tmp10, animatedProps, overScrollMode: str, keyboardDismissMode: str2, refreshing, scrollEventThrottle: 16, progressViewOffset, contentContainerStyle: bottomSheetContentContainerStyle, onRefresh, onScroll: scrollHandler, onContentSizeChange: stableCallback, setContentSize, ScrollableComponent: preserveScrollMomentum, refreshControl });
   });
 };

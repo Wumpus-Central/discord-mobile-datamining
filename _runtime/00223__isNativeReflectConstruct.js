@@ -3,9 +3,9 @@ import _inheritsDefault from "00098__inherits.js";
 import dispatchDefault from "00132_dispatch.js";
 import EventDefault from "00133_Event.js";
 import FileReaderModuleDefault from "00224_FileReaderModule.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const FileReader = arg1;
@@ -64,22 +64,18 @@ const items = [
     value: function _setReadyState(_readyState) {
       const self = this;
       this._readyState = _readyState;
-      let tmp = importDefault;
       this.dispatchEvent(new EventDefault("readystatechange"));
       if (2 === _readyState) {
         if (self._aborted) {
           let tmpResult = EventDefault;
-          let tmp6 = new.target;
           tmpResult = new tmpResult("abort");
           self.dispatchEvent(tmpResult);
           dispatchEvent = EventDefault;
-          tmp = new.target;
           dispatchEvent = new dispatchEvent("loadend");
           self.dispatchEvent(dispatchEvent);
         } else {
           ({ dispatchEvent, _error } = self);
           tmpResult = EventDefault;
-          tmp6 = new.target;
           if (!_error) {
             const tmpResult1 = new tmpResult("load");
             dispatchEvent(tmpResult1);
@@ -95,22 +91,22 @@ const items = [
     value: function readAsArrayBuffer(closure_0) {
       const self = this;
       this._aborted = false;
-      if (null == closure_0) {
+      if (null == _FileReader) {
         const _TypeError = TypeError;
         const typeError = new TypeError("Failed to execute 'readAsArrayBuffer' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
-        asDataURL.then((arg0) => {
+        const asDataURL = FileReaderModuleDefault.readAsDataURL(_FileReader.data);
+        asDataURL.then((result) => {
           if (!self._aborted) {
-            obj._result = self(closure_1_2[7]).toByteArray(arg0.split(",")[1]).buffer;
-            obj._setReadyState(2);
-            const obj2 = self(closure_1_2[7]);
+            self._result = self(dependencyMap[7]).toByteArray(result.split(",")[1]).buffer;
+            self._setReadyState(2);
+            const obj2 = self(dependencyMap[7]);
           }
         }, (_error) => {
           if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
+            self._error = _error;
+            self._setReadyState(2);
           }
         });
       }
@@ -121,21 +117,21 @@ const items = [
     value: function readAsDataURL(closure_0) {
       const self = this;
       this._aborted = false;
-      if (null == closure_0) {
+      if (null == _FileReader) {
         const _TypeError = TypeError;
         const typeError = new TypeError("Failed to execute 'readAsDataURL' on 'FileReader': parameter 1 is not of type 'Blob'");
         throw typeError;
       } else {
-        const asDataURL = FileReaderModuleDefault.readAsDataURL(closure_0.data);
-        asDataURL.then((_result) => {
+        const asDataURL = FileReaderModuleDefault.readAsDataURL(_FileReader.data);
+        asDataURL.then((result) => {
           if (!self._aborted) {
-            obj._result = _result;
-            obj._setReadyState(2);
+            self._result = result;
+            self._setReadyState(2);
           }
         }, (_error) => {
           if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
+            self._error = _error;
+            self._setReadyState(2);
           }
         });
       }
@@ -143,10 +139,10 @@ const items = [
   },
   {
     key: "readAsText",
-    value: function readAsText(_bodyBlob, arg1) {
+    value: function readAsText(_bodyBlob, match) {
       const self = this;
-      let str = arg1;
-      if (arg1 === undefined) {
+      let str = match;
+      if (match === undefined) {
         str = "UTF-8";
       }
       this._aborted = false;
@@ -156,15 +152,15 @@ const items = [
         throw typeError;
       } else {
         const asText = FileReaderModuleDefault.readAsText(_bodyBlob.data, str);
-        asText.then((_result) => {
+        asText.then((result) => {
           if (!self._aborted) {
-            obj._result = _result;
-            obj._setReadyState(2);
+            self._result = result;
+            self._setReadyState(2);
           }
         }, (_error) => {
           if (!self._aborted) {
-            obj._error = _error;
-            obj._setReadyState(2);
+            self._error = _error;
+            self._setReadyState(2);
           }
         });
       }

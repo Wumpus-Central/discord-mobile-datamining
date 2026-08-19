@@ -1,15 +1,20 @@
 // _runtime/00328__queryCache.js
 import noopAll from "00019_noop.js";
 import resolveAssetSourceDefault from "00081_resolveAssetSource.js";
+import flattenStyleDefault from "00148_flattenStyle.js";
 import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
 import ImageLoaderDefault from "00329_ImageLoader.js";
 import getImageSourcesFromImageProps from "00331_getImageSourcesFromImageProps.js";
-import closure_3 from "00005_asyncGeneratorStep.js";
+import convertObjectFitToResizeMode from "00332_convertObjectFitToResizeMode.js";
+import set2 from "00333_set.js";
+import noopDefault from "00336_noop.js";
+import CommandsDefault from "00337_Commands.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 import { use } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import set from "00333_set.js";
 
-require = arg1;
+require = fn;
 function _queryCache() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -203,8 +208,8 @@ function _BaseImage(arg0) {
     if (true === tmp6) {
       merged.importantForAccessibility = "no-hide-descendants";
     }
-    const tmp28 = tmp12(148)(style);
-    let tmp10Result = tmp10(332);
+    const tmp28 = flattenStyleDefault(style);
+    let tmp10Result = convertObjectFitToResizeMode;
     let objectFit;
     if (tmp28 != null) {
       objectFit = tmp28.objectFit;
@@ -221,8 +226,8 @@ function _BaseImage(arg0) {
       str4 = "cover";
     }
     merged.resizeMode = str4;
-    tmp10Result = tmp10(333);
-    const tmp33 = use(tmp12(336));
+    tmp10Result = set2;
+    const tmp33 = use(noopDefault);
     if (null !== tmp33) {
       merged.internal_analyticTag = tmp33;
     }
@@ -233,7 +238,7 @@ function _BaseImage(arg0) {
     const wrapRefWithImageAttachedCallbacks = tmp10Result.useWrapRefWithImageAttachedCallbacks(ref);
     const merged1 = Object.assign(merged);
     obj2.ref = wrapRefWithImageAttachedCallbacks;
-    return jsx(tmp12(337), {});
+    return jsx(CommandsDefault, {});
   }
 }
 set = set.unstable_getImageComponentDecorator();
@@ -251,13 +256,12 @@ resultResult.getSize = function getSize(arg0, fn) {
   } else {
     fn = arg2;
     if (!arg2) {
-      fn = () => {
+      fn = (error) => {
         console.warn(`Failed to get size for image: ${closure_0}`);
       };
     }
-    size.then((width) => callback(width.width, width.height)).catch(fn);
+    size.then((result) => callback(result.width, result.height)).catch(fn);
   }
-  const obj = ImageLoaderDefault;
 };
 resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
   closure_0 = arg0;
@@ -268,25 +272,24 @@ resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
   } else {
     fn = arg3;
     if (!arg3) {
-      fn = () => {
+      fn = (error) => {
         console.warn(`Failed to get size for image: ${closure_0}`);
       };
     }
-    sizeWithHeaders.then((width) => callback(width.width, width.height)).catch(fn);
+    sizeWithHeaders.then((result) => callback(result.width, result.height)).catch(fn);
   }
-  const obj = ImageLoaderDefault;
 };
-resultResult.prefetch = function prefetch(closure_0) {
+resultResult.prefetch = function prefetch(closure_0, fn) {
   closure_6 = tmp + 1;
-  if (arg1) {
-    arg1(tmp);
+  if (fn) {
+    fn(tmp);
   }
   return ImageLoaderDefault.prefetchImage(closure_0, +closure_6);
 };
-resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, arg3) {
+resultResult.prefetchWithMetadata = function prefetchWithMetadata(arg0, arg1, arg2, fn) {
   closure_6 = tmp + 1;
-  if (arg3) {
-    arg3(tmp);
+  if (fn) {
+    fn(tmp);
   }
   return ImageLoaderDefault.prefetchImage(arg0, +closure_6);
 };

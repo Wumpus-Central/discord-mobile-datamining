@@ -1,13 +1,13 @@
 // _runtime/01205__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-const FeedbackWidget = arg1;
+const FeedbackWidget = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   }
 }
 ({ Appearance: error, Image: closure_8, Keyboard: c9, Text: c10, TextInput: unpackModuleId, TouchableOpacity: closure_12, TouchableWithoutFeedback: map1, View: closure_14 } = get_ActivityIndicator);
-let fn = this;
+fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
+  fn = (arg0) => {
     closure_0 = arg0;
     closure_1 = arg1;
     let _Promise = arg2;
@@ -41,12 +41,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -66,8 +66,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -81,13 +81,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -303,21 +303,21 @@ class FeedbackWidget {
                       closure_0 = arg0;
                       const dataFromUri = uri(first1[10]).getDataFromUri(arg0);
                       let obj = uri(first1[10]);
-                      dataFromUri.then((arg0) => {
-                        if (null != arg0) {
+                      dataFromUri.then((result) => {
+                        if (null != result) {
                           const obj = { filename: "feedback_screenshot", attachment: null, attachmentUri: null };
-                          obj[1] = arg0;
+                          obj[1] = result;
                           obj[2] = closure_0;
                           closure_1_13.setState(obj);
                         } else {
-                          const result = closure_1_13._showImageRetrievalDevelopmentNote();
+                          result = closure_1_13._showImageRetrievalDevelopmentNote();
                           const debug = uri(first1[8]).debug;
                           debug.error("Failed to read image data from uri:", closure_0);
                         }
-                      }).catch((arg0) => {
+                      }).catch((error) => {
                         const result = closure_1_13._showImageRetrievalDevelopmentNote();
                         const debug = uri(first1[8]).debug;
-                        debug.error("Failed to read image data from uri:", closure_0, "error: ", arg0);
+                        debug.error("Failed to read image data from uri:", closure_0, "error: ", error);
                       });
                     });
                   }
@@ -359,32 +359,32 @@ class FeedbackWidget {
                     if (uri) {
                       obj = closure_2_0(closure_2_2[10]);
                       let dataFromUri = obj.getDataFromUri(uri);
-                      dataFromUri.then((arg0) => {
-                        if (null != arg0) {
+                      dataFromUri.then((result) => {
+                        if (null != result) {
                           const obj = { filename: null, attachment: null, attachmentUri: null };
                           obj[0] = fileName;
-                          obj[1] = arg0;
+                          obj[1] = result;
                           obj[2] = uri;
                           closure_13.setState(obj);
                         } else {
-                          const result = closure_13._showImageRetrievalDevelopmentNote();
+                          result = closure_13._showImageRetrievalDevelopmentNote();
                           const debug = uri(first1[8]).debug;
                           debug.error("Failed to read image data from uri:", uri);
                         }
-                      }).catch((arg0) => {
+                      }).catch((error) => {
                         const result = closure_13._showImageRetrievalDevelopmentNote();
                         const debug = uri(first1[8]).debug;
-                        debug.error("Failed to read image data from uri:", uri, "error: ", arg0);
+                        debug.error("Failed to read image data from uri:", uri, "error: ", error);
                       });
-                      const nextPromise = dataFromUri.then((arg0) => {
-                        if (null != arg0) {
+                      const nextPromise = dataFromUri.then((result) => {
+                        if (null != result) {
                           const obj = { filename: null, attachment: null, attachmentUri: null };
                           obj[0] = fileName;
-                          obj[1] = arg0;
+                          obj[1] = result;
                           obj[2] = uri;
                           closure_13.setState(obj);
                         } else {
-                          const result = closure_13._showImageRetrievalDevelopmentNote();
+                          result = closure_13._showImageRetrievalDevelopmentNote();
                           const debug = uri(first1[8]).debug;
                           debug.error("Failed to read image data from uri:", uri);
                         }
@@ -448,27 +448,27 @@ class FeedbackWidget {
         debug2.log("Setting captured screenshot:", data.filename);
         const NATIVE = FeedbackWidget(1001).NATIVE;
         const encodeToBase64Result = NATIVE.encodeToBase64(data.data);
-        NATIVE.encodeToBase64(data.data).then((arg0) => {
-          if (null != arg0) {
+        NATIVE.encodeToBase64(data.data).then((result) => {
+          if (null != result) {
             const _HermesInternal = HermesInternal;
             const obj = { filename: null, attachment: null, attachmentUri: null };
             ({ filename: obj[0], data: obj[1] } = data);
-            obj[2] = "data:" + data.contentType + ";base64," + arg0;
+            obj[2] = "data:" + data.contentType + ";base64," + result;
             data.setState(obj);
           } else {
             const debug = FeedbackWidget(817).debug;
             debug.error("Failed to read image data from:", data.filename);
           }
-        }).catch((arg0) => {
+        }).catch((error) => {
           const debug = FeedbackWidget(817).debug;
-          debug.error("Failed to read image data from:", data.filename, "error: ", arg0);
+          debug.error("Failed to read image data from:", data.filename, "error: ", error);
         });
-        const nextPromise = NATIVE.encodeToBase64(data.data).then((arg0) => {
-          if (null != arg0) {
+        const nextPromise = NATIVE.encodeToBase64(data.data).then((result) => {
+          if (null != result) {
             const _HermesInternal = HermesInternal;
             const obj = { filename: null, attachment: null, attachmentUri: null };
             ({ filename: obj[0], data: obj[1] } = data);
-            obj[2] = "data:" + data.contentType + ";base64," + arg0;
+            obj[2] = "data:" + data.contentType + ";base64," + result;
             data.setState(obj);
           } else {
             const debug = FeedbackWidget(817).debug;
@@ -493,11 +493,11 @@ class FeedbackWidget {
       if (user) {
         return user;
       } else {
-        let tmpResult = tmp(817);
+        let tmpResult = lib(817);
         const isolationScope = tmpResult.getIsolationScope();
         let user1 = isolationScope.getUser();
         if (!user1) {
-          tmpResult = tmp(817);
+          tmpResult = lib(817);
           const globalScope = tmpResult.getGlobalScope();
           user1 = globalScope.getUser();
         }
@@ -510,6 +510,7 @@ class FeedbackWidget {
         lib(1196).feedbackAlertDialog("Development note", "The feedback widget cannot retrieve image data in Expo Go. Please build your app to test this functionality.");
         const tmpResult = lib(1196);
       }
+      obj = lib(1002);
     };
     props = tmp4Result.props;
     useSentryUser = undefined;
@@ -606,15 +607,14 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let self = this;
-      self = this;
+      const self = this;
       let obj = onCancel(props2[13]);
       const onFormClose = this.props.onFormClose;
       ({ props, props: props2 } = this);
       const theme = obj.getTheme();
       ({ name, email, description } = this.state);
       const merged = Object.assign(Object.assign({}, onFormClose(props2[14])(theme)), this.props.styles);
-      onCancel = function onCancel(arg0) {
+      onCancel = function onCancel(props2) {
         if (onFormClose) {
           tmp();
         } else {
@@ -622,11 +622,11 @@ let items = [
         }
       };
       if (this.state.isVisible) {
-        let tmpResult = tmp(tmp2[15]);
+        let tmpResult = tmp(props2[15]);
         const capturedScreenshot = tmpResult.getCapturedScreenshot();
         if ("ErrorCapturingScreenshot" === capturedScreenshot) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => closure_1_16(self, undefined, undefined, function*() {
+          const timerId = setTimeout(() => fn(self, undefined, undefined, function*() {
             if (v0 === 2) {
               v0 = 3;
               HermesBuiltin.throwTypeError();
@@ -667,7 +667,7 @@ let items = [
           const result = self._setCapturedScreenshot(capturedScreenshot);
         }
         let obj2 = importAllResult;
-        tmpResult = tmp(tmp2[9]);
+        tmpResult = tmp(props2[9]);
         let dismiss;
         if (tmpResult.notWeb()) {
           dismiss = dismiss.dismiss;
@@ -686,12 +686,12 @@ let items = [
         if (showBranding) {
           const obj3 = { source: null, style: null, testID: "sentry-logo" };
           const obj4 = { uri: null };
-          obj4[0] = tmp(tmp2[16]).sentryLogo;
+          obj4[0] = tmp(props2[16]).sentryLogo;
           obj3[0] = obj4;
           obj3[1] = merged.sentryLogo;
           showBranding = <closure_8 source={null} style={null} testID="sentry-logo" />;
         }
-        const element2 = createElement2(tmp12, obj1, element, showBranding);
+        const element2 = createElement2(closure_14, obj1, element, showBranding);
         let showName = props.showName;
         if (showName) {
           const Fragment = obj2.Fragment;
@@ -711,7 +711,7 @@ let items = [
           obj6[4] = function onChangeText(name) {
             return self.setState({ name });
           };
-          const element4 = createElement4(tmp13, obj5, nameLabel, isNameRequired);
+          const element4 = createElement4(closure_10, obj5, nameLabel, isNameRequired);
           showName = createElement3(Fragment, null, element4, <closure_11 style={null} testID="sentry-feedback-name-input" placeholder={null} value={null} onChangeText={null} />);
         }
         let showEmail = props.showEmail;
@@ -733,13 +733,13 @@ let items = [
           obj8[5] = function onChangeText(email) {
             return self.setState({ email });
           };
-          const element6 = createElement6(tmp13, obj7, emailLabel, isEmailRequired);
+          const element6 = createElement6(closure_10, obj7, emailLabel, isEmailRequired);
           showEmail = createElement5(Fragment2, null, element6, <closure_11 style={null} testID="sentry-feedback-email-input" placeholder={null} keyboardType="email-address" value={null} onChangeText={null} />);
         }
         const obj9 = { style: null };
         obj9[0] = merged.label;
         const _HermesInternal3 = HermesInternal;
-        const element1 = <tmp13 style={null}>{props2.messageLabel}{" " + props2.isRequiredLabel}</tmp13>;
+        const element1 = <closure_10 style={null}>{props2.messageLabel}{" " + props2.isRequiredLabel}</closure_10>;
         const obj10 = { style: null, testID: "sentry-feedback-message-input", placeholder: null, value: null, onChangeText: null, multiline: true };
         const items = [, ];
         ({ input: arr[0], textArea: arr[1] } = merged);
@@ -752,7 +752,7 @@ let items = [
         const element3 = <closure_11 style={null} testID="sentry-feedback-message-input" placeholder={null} value={null} onChangeText={null} multiline />;
         const tmp48 = props.enableScreenshot || this.props.imagePicker || self._hasScreenshot();
         if (!tmp48) {
-          let element5 = tmp(tmp2[9]).notWeb() && props.enableTakeScreenshot && !self.state.attachmentUri;
+          let element5 = tmp(props2[9]).notWeb() && props.enableTakeScreenshot && !self.state.attachmentUri;
           if (element5) {
             const obj11 = { style: null, onPress: null };
             obj11[0] = merged.takeScreenshotButton;
@@ -767,13 +767,12 @@ let items = [
                 self.setState({ isVisible: false });
               }
               const obj = onCancel(props2[17]);
-              const tmp = onCancel;
-              const tmp2 = props2;
               onCancel(props2[17]).showScreenshotButton();
+              const tmpResult = onCancel(props2[17]);
             };
             const obj12 = { style: null, testID: "sentry-feedback-take-screenshot-button" };
             obj12[0] = merged.takeScreenshotText;
-            element5 = <closure_12 style={null} onPress={null}><tmp13 style={null} testID="sentry-feedback-take-screenshot-button">{props2.captureScreenshotButtonLabel}</tmp13></closure_12>;
+            element5 = <closure_12 style={null} onPress={null}><closure_10 style={null} testID="sentry-feedback-take-screenshot-button">{props2.captureScreenshotButtonLabel}</closure_10></closure_12>;
           }
           const obj13 = { style: null, onPress: null };
           obj13[0] = merged.submitButton;
@@ -785,8 +784,8 @@ let items = [
           obj15[1] = onCancel;
           const obj16 = { style: null };
           obj16[0] = merged.cancelText;
-          const element7 = <closure_12 style={null} onPress={null}><tmp13 style={null} testID="sentry-feedback-submit-button">{props2.submitButtonLabel}</tmp13></closure_12>;
-          return <tmp9 {......obj}><tmp12 {......obj}>{element2}{showName}{showEmail}{element1}{element3}{tmp48}{element5}{element7}<closure_12 style={null} onPress={null}><tmp13 style={null}>{props2.cancelButtonLabel}</tmp13></closure_12></tmp12></tmp9>;
+          const element7 = <closure_12 style={null} onPress={null}><closure_10 style={null} testID="sentry-feedback-submit-button">{props2.submitButtonLabel}</closure_10></closure_12>;
+          return <closure_13 {......obj}><closure_14 {......obj}>{element2}{showName}{showEmail}{element1}{element3}{tmp48}{element5}{element7}<closure_12 style={null} onPress={null}><closure_10 style={null}>{props2.cancelButtonLabel}</closure_10></closure_12></closure_14></closure_13>;
         } else {
           const obj17 = { style: null };
           obj17[0] = merged.screenshotContainer;
@@ -804,10 +803,8 @@ let items = [
           obj20[1] = self.onScreenshotButtonPress;
           const obj21 = { style: null };
           obj21[0] = merged.screenshotText;
-          const element8 = <tmp12 style={null}>{attachmentUri}<closure_12 style={null} onPress={null}><tmp13 style={null}>{self._hasScreenshot() ? props2.removeScreenshotButtonLabel : props2.addScreenshotButtonLabel}</tmp13></closure_12></tmp12>;
-          const tmp50 = closure_12;
+          const element8 = <closure_14 style={null}>{attachmentUri}<closure_12 style={null} onPress={null}><closure_10 style={null}>{self._hasScreenshot() ? props2.removeScreenshotButtonLabel : props2.addScreenshotButtonLabel}</closure_10></closure_12></closure_14>;
         }
-        const tmp9 = closure_13;
       } else {
         return null;
       }
@@ -822,7 +819,7 @@ obj = {
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(FeedbackWidget, items, items1);
-importDefaultResultResult.defaultProps = require("module_1201").defaultConfiguration;
+importDefaultResultResult.defaultProps = require("metro/01201__.js").defaultConfiguration;
 importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

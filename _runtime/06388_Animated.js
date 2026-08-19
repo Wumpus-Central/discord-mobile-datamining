@@ -2,12 +2,12 @@
 import noopDefault from "00019_noop.js";
 import createNativeWrapperDefault from "06389_createNativeWrapper.js";
 import ButtonComponentDefault from "06473_ButtonComponent.js";
-import closure_5 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import { useRef } from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["onLongPress", "onPress", "onActiveStateChange", "style"];
 let closure_3 = ["children", "style", "activeOpacity", "underlayColor"];
 let closure_4 = ["children", "style", "ref"];
@@ -102,8 +102,8 @@ class BaseButton {
       }
       if (undefined !== ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp6.current);
-        tmp6.current = undefined;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
       }
       const onFinalize = delayLongPress.onFinalize;
       if (onFinalize != null) {
@@ -165,6 +165,6 @@ export const BorderlessButton = (ref) => {
   const items = [style, false];
   obj.style = items;
   obj.children = children;
-  return closure_9(closure_14, obj);
+  return callback(closure_14, obj);
 };
 export const PureNativeButton = ButtonComponentDefault;

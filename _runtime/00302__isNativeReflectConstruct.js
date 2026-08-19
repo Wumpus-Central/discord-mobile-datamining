@@ -1,11 +1,13 @@
 // _runtime/00302__isNativeReflectConstruct.js
 import nullthrowsDefault from "00070_nullthrows.js";
 import ViewDefault from "00108_View.js";
+import dismissKeyboardDefault from "00303_dismissKeyboard.js";
 import _isNativeReflectConstructDefault from "00304__isNativeReflectConstruct.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00041__classCallCheck.js";
-import closure_6 from "metro/00093__possibleConstructorReturn.js";
-import closure_7 from "00095__getPrototypeOf.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/00309___INTERNAL_VIEW_CONFIG.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import { createRef } from "00019_noop.js";
@@ -13,7 +15,7 @@ import jsxProd from "react/00021_jsxProd.js";
 import importAllResult from "00019_noop.js";
 import importDefaultResult2 from "00254_get_hairlineWidth.js";
 
-const DrawerLayoutAndroid = arg1;
+const DrawerLayoutAndroid = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -59,11 +61,11 @@ class DrawerLayoutAndroid {
     tmp3Result.state = { drawerOpened: false };
     tmp3Result._onDrawerSlide = (arg0) => {
       if (store.props.onDrawerSlide) {
-        const props = tmp.props;
+        const props = store.props;
         props.onDrawerSlide(arg0);
       }
       if ("on-drag" === store.props.keyboardDismissMode) {
-        closure_1_1(closure_1_2[8])();
+        dismissKeyboardDefault();
       }
     };
     tmp3Result._onDrawerOpen = () => {
@@ -114,36 +116,36 @@ let obj = {
     let tmp8 = tmp2;
     if (tmp2) {
       obj = { style: null };
-      obj[0] = tmp7.drawerStatusBar;
-      tmp8 = callback4(tmp4(108), obj);
+      obj[0] = drawerSubview.drawerStatusBar;
+      tmp8 = callback4(ViewDefault, obj);
     }
     items1[1] = tmp8;
     obj[3] = items1;
-    let tmp3Result = tmp3(ViewDefault, obj);
-    obj = { style: tmp7.mainSubview, collapsable: false, children: null };
+    let tmp3Result = callback2(ViewDefault, obj);
+    obj = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    let tmp4Result = tmp4(108);
+    let tmp4Result = ViewDefault;
     if (tmp2) {
       obj1 = { translucent: true, backgroundColor: null };
       obj1[1] = self.props.statusBarBackgroundColor;
-      tmp12 = callback4(tmp4(304), obj1);
+      tmp12 = callback4(_isNativeReflectConstructDefault, obj1);
     }
     const items2 = [tmp12, , ];
     if (tmp2) {
       const obj2 = { style: null };
-      const items3 = [tmp7.statusBar, ];
+      const items3 = [drawerSubview.statusBar, ];
       const obj3 = { backgroundColor: null };
       obj3[0] = self.props.statusBarBackgroundColor;
       items3[1] = obj3;
       obj2[0] = items3;
-      tmp2 = callback4(tmp4(108), obj2);
+      tmp2 = callback4(ViewDefault, obj2);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;
     obj[2] = items2;
-    tmp3Result = tmp3(tmp4Result, obj);
+    tmp3Result = callback2(tmp4Result, obj);
     const obj4 = {};
-    tmp4Result = tmp4(309);
+    tmp4Result = __INTERNAL_VIEW_CONFIGDefault;
     const merged = Object.assign(tmp);
     obj4.ref = self._nativeRef;
     obj4.drawerBackgroundColor = str;
@@ -155,7 +157,7 @@ let obj = {
     ({ _onDrawerSlide: obj7.onDrawerSlide, _onDrawerOpen: obj7.onDrawerOpen, _onDrawerClose: obj7.onDrawerClose, _onDrawerStateChanged: obj7.onDrawerStateChanged } = self);
     const items5 = [tmp3Result, tmp3Result];
     obj4.children = items5;
-    return closure_10(tmp4Result, obj4);
+    return callback2(tmp4Result, obj4);
   }
 };
 let items = [
@@ -222,7 +224,6 @@ let items1 = [obj];
 const importDefaultResultResult = importDefaultResult(DrawerLayoutAndroid, items, items1);
 obj = { base: { flex: 1, elevation: 16 }, mainSubview: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, drawerSubview: { position: "absolute", top: 0, bottom: 0 }, statusBar: null, drawerStatusBar: null };
 obj[3] = { height: _isNativeReflectConstructDefault.currentHeight };
-let obj1 = { height: _isNativeReflectConstructDefault.currentHeight };
 obj[4] = { position: "absolute", top: 0, left: 0, right: 0, height: _isNativeReflectConstructDefault.currentHeight, backgroundColor: "rgba(0, 0, 0, 0.251)" };
 let closure_13 = importDefaultResult2.create(obj);
 

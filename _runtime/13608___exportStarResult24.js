@@ -1,13 +1,13 @@
 // _runtime/13608___exportStarResult24.js
-import digitsToString from "13581_digitsToString.js";
+import digitsToString2 from "13581_digitsToString.js";
 import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
 import __exportStarResult13 from "13596___exportStarResult13.js";
 import __exportStarResult21 from "13598___exportStarResult21.js";
-import formatToParts from "13603_formatToParts.js";
+import formatToParts2 from "13603_formatToParts.js";
 import e from "01281_e.js";
 
-let closure_2 = e.__importDefault(digitsToString);
-let closure_3 = e.__importDefault(formatToParts);
+const digitsToString = e.__importDefault(digitsToString2);
+const formatToParts = e.__importDefault(formatToParts2);
 
 export const PartitionNumberPattern = function PartitionNumberPattern(internalSlots, isNaN) {
   ({ pl, dataLocaleData } = internalSlots);
@@ -27,11 +27,10 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
         timesResult = isNaN.times(100);
       }
       [tmp7, num4] = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      timesResult1 = timesResult.times(mod.default.pow(10, -tmp7));
+      timesResult1 = timesResult.times(digitsToString.default.pow(10, -tmp7));
       num3 = tmp7;
       const ComputeExponentResult = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
-      const _default = mod.default;
-      const tmp3 = require;
+      const _default = digitsToString.default;
     }
     const result = __exportStarResult21.FormatNumericToString(internalSlots, timesResult1);
     ({ formattedString, roundedNumber } = result);
@@ -82,5 +81,5 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       num7 = num8;
     }
   }
-  return closure_3.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
+  return formatToParts.default({ roundedNumber, formattedString, exponent: num, magnitude: num2, sign: num7 }, internalSlots.dataLocaleData, pl, internalSlots);
 };

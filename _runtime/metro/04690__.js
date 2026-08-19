@@ -1,11 +1,11 @@
 // _runtime/metro/04690__.js
 import __INTERNAL_VIEW_CONFIGDefault from "04691___INTERNAL_VIEW_CONFIG.js";
-import closure_4 from "00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import importDefaultResult from "../00019_noop.js";
 import { View } from "../00017_get_ActivityIndicator.js";
 import { jsx } from "../react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["obscureBackground", "hideNavigationBar", "onFocus", "onBlur", "onSearchButtonPress", "onCancelButtonPress", "onChangeText"];
 let c5 = importDefaultResult;
 
@@ -52,10 +52,10 @@ export default importDefaultResult.forwardRef(function SearchBar(autoCapitalize,
     }
   }));
   const items = [ref];
-  importDefault = importDefaultResult.useCallback((arg0) => {
+  importDefault = importDefaultResult.useCallback((fn) => {
     const current = ref.current;
     if (current) {
-      arg0(current);
+      fn(current);
     } else {
       const _console = console;
       console.warn("Reference to native search bar component has not been updated yet");

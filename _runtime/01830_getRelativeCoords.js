@@ -1,7 +1,7 @@
 // _runtime/01830_getRelativeCoords.js
 import measureFabric from "01831_measureFabric.js";
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {
   let obj = measureFabric;

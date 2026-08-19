@@ -2,11 +2,11 @@
 import noopDefault from "00019_noop.js";
 import isNativePlatformSupported from "04673_isNativePlatformSupported.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/04693___INTERNAL_VIEW_CONFIG.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["enabled", "hasTwoStates"];
 ({ Platform, View: c5 } = get_ActivityIndicator);
 noopDefault;

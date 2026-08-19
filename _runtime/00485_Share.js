@@ -1,7 +1,7 @@
 // _runtime/00485_Share.js
 import _createClassDefault from "metro/00042__createClass.js";
 import ShareModuleDefault from "00486_ShareModule.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const Share = arg1;
 class Share {
@@ -25,13 +25,13 @@ const items = [
       Share(38)(tmp4, "Content to share must be a valid object");
       const url = message.url;
       let tmp7 = typeof url === "string";
-      let tmpResult = tmp(38);
+      let tmpResult = Share(38);
       if (typeof url !== "string") {
         tmp7 = typeof message.message === "string";
       }
       tmpResult(tmp7, "At least one of URL or message is required");
       let tmp10 = typeof obj === "object";
-      tmpResult = tmp(38);
+      tmpResult = Share(38);
       if (typeof obj === "object") {
         tmp10 = null !== obj;
       }
@@ -39,7 +39,6 @@ const items = [
       const tmp3 = Share(38);
       Share(38)(ShareModuleDefault, "ShareModule should be registered on Android.");
       let tmp16 = null == message.title;
-      const tmp13 = importDefault;
       const tmpResult1 = Share(38);
       if (!tmp16) {
         tmp16 = typeof message.title === "string";
@@ -53,8 +52,8 @@ const items = [
       obj[1] = message;
       const tmpResult2 = Share(38);
       const tmp13Result = ShareModuleDefault;
-      return ShareModuleDefault.share(obj, obj.dialogTitle).then((arg0) => {
-        const merged = Object.assign(arg0);
+      return ShareModuleDefault.share(obj, obj.dialogTitle).then((result) => {
+        const merged = Object.assign(result);
         return { activityType: null };
       });
     }

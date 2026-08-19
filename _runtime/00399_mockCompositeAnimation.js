@@ -1,26 +1,9 @@
 // _runtime/00399_mockCompositeAnimation.js
 let c0 = false;
-let obj = {
-  start() {
-
-  },
-  stop() {
-
-  },
-  reset() {
-
-  },
-  _startNativeLoop() {
-
-  },
-  _isUsingNativeDriver() {
-    return false;
-  }
-};
 function mockCompositeAnimation(arg0) {
 
 }
-obj = {
+let obj = {
   Value: require("_isNativeReflectConstruct"),
   ValueXY: require("_isNativeReflectConstruct"),
   Color: require("_isNativeReflectConstruct"),
@@ -30,14 +13,13 @@ obj = {
     return obj;
   },
   timing(arg0, arg1) {
-    let f67594 = arg1;
     closure_1 = arg0;
     obj = {};
     const merged = Object.assign(closure_1);
-    f67594 = (arg0) => {
+    const f67594 = (fn) => {
       value.setValue(f67594.toValue);
-      if (arg0 != null) {
-        arg0({ finished: true });
+      if (fn != null) {
+        fn({ finished: true });
       }
     };
     obj.start = (arg0) => {
@@ -68,14 +50,13 @@ obj = {
     return obj;
   },
   spring(animation, arg1) {
-    let f67595 = arg1;
     closure_1 = animation;
     obj = {};
     const merged = Object.assign(closure_1);
-    f67595 = (arg0) => {
+    const f67595 = (fn) => {
       animation.setValue(f67595.toValue);
-      if (arg0 != null) {
-        arg0({ finished: true });
+      if (fn != null) {
+        fn({ finished: true });
       }
     };
     obj.start = (arg0) => {
@@ -118,13 +99,12 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f67593 = arg0;
     obj = {};
     const merged = Object.assign(obj);
-    f67593 = (arg0) => {
-      const item = f67593.forEach((start) => start.start());
-      if (arg0 != null) {
-        arg0({ finished: true });
+    const f67593 = (fn) => {
+      const item = f67593.forEach((item, index) => item.start());
+      if (fn != null) {
+        fn({ finished: true });
       }
     };
     obj.start = (arg0) => {
@@ -158,13 +138,12 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f67593 = items;
     obj = {};
     const merged = Object.assign(obj);
-    f67593 = (arg0) => {
-      const item = f67593.forEach((start) => start.start());
-      if (arg0 != null) {
-        arg0({ finished: true });
+    const f67593 = (fn) => {
+      const item = f67593.forEach((item, index) => item.start());
+      if (fn != null) {
+        fn({ finished: true });
       }
     };
     obj.start = (arg0) => {
@@ -198,13 +177,12 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f67593 = arg1;
     obj = {};
     const merged = Object.assign(obj);
-    f67593 = (arg0) => {
-      const item = f67593.forEach((start) => start.start());
-      if (arg0 != null) {
-        arg0({ finished: true });
+    const f67593 = (fn) => {
+      const item = f67593.forEach((item, index) => item.start());
+      if (fn != null) {
+        fn({ finished: true });
       }
     };
     obj.start = (arg0) => {

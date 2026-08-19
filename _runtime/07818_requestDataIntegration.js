@@ -1,6 +1,6 @@
 // _runtime/07818_requestDataIntegration.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import setupIntegration from "07794_setupIntegration.js";
 
 let closure_4 = ["ip", "user"];
@@ -11,7 +11,6 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
   obj = {};
   const merged = Object.assign(include);
   const merged1 = Object.assign(obj);
@@ -37,11 +36,9 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         const items = ["method"];
         const entries = Object.entries(callback2(include, closure_4));
         while (tmp2 !== undefined) {
-          let tmp4 = callback;
           let tmp5 = callback(tmp3, 2);
           let first = tmp5[0];
           if (tmp5[1]) {
-            let tmp7 = first;
             let arr = items.push(first);
           }
           continue;
@@ -55,11 +52,9 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
             const entries1 = Object.entries(user);
             flag = items1;
             for (const item10032 of entries1) {
-              let tmp10 = callback;
               let tmp11 = callback(item10032, 2);
               let first1 = tmp11[0];
               if (tmp11[1]) {
-                let tmp13 = first1;
                 arr = items1.push(first1);
               }
               continue;
@@ -81,7 +76,6 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
           let ip = request.ip;
           if (!ip) {
             ip = request.socket && request.socket.remoteAddress;
-            const tmp6 = request.socket && request.socket.remoteAddress;
           }
           tmp5 = ip;
         }
@@ -89,7 +83,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         if (request) {
           user = request.user;
         }
-        const obj3 = obj(closure_1_1[2]);
+        const obj3 = obj(dependencyMap[2]);
         obj = { ipAddress: null, user: null };
         obj[0] = tmp5;
         obj[1] = user;
@@ -98,8 +92,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
       } else {
         let result1 = sdkProcessingMetadata;
         if (request) {
-          result1 = obj(closure_1_1[2]).addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          const obj2 = obj(closure_1_1[2]);
+          result1 = obj(dependencyMap[2]).addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+          const obj2 = obj(dependencyMap[2]);
         }
         return result1;
       }

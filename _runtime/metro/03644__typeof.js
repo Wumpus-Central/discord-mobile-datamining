@@ -2,31 +2,6 @@
 import _typeof from "03472__typeof.js";
 import requiredArgs from "../03473_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
 if (!_typeof) {
   let obj = { default: null };
   obj[0] = _typeof;
@@ -60,8 +35,8 @@ export default function max(arg0) {
   } else {
     arr = arg0;
   }
-  const item = arr.forEach((arg0) => {
-    const defaultResult = closure_1_0.default(arg0);
+  const item = arr.forEach((item, index) => {
+    const defaultResult = _typeof.default(item);
     let isNaNResult = undefined === closure_0 || closure_0 < defaultResult;
     if (!isNaNResult) {
       const _isNaN = isNaN;

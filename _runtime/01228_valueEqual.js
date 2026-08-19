@@ -10,7 +10,7 @@ function valueEqual(state, state2) {
         const _Array2 = Array;
         if (Array.isArray(state)) {
           const _Array = Array;
-          return Array.isArray(state2) && state.length === state2.length && state.every((arg0, arg1) => state(arg0, state2[arg1]));
+          return Array.isArray(state2) && state.length === state2.length && state.every((item, index) => state(item, state2[index]));
         } else {
           if (typeof state !== "object") {
             if (typeof state2 !== "object") {
@@ -37,7 +37,7 @@ function valueEqual(state, state2) {
               const _Object3 = Object;
               const _Object4 = Object;
               const keys = Object.keys(Object.assign({}, state, state2));
-              let everyResult = keys.every((arg0) => state(state[arg0], state2[arg0]));
+              let everyResult = keys.every((item, index) => state(state[item], state2[item]));
             }
             return everyResult;
           }

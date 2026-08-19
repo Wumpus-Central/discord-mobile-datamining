@@ -1,9 +1,9 @@
 // _runtime/00270_MutationRecord.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
-const MutationRecord = arg1;
+const MutationRecord = fn;
 class MutationRecord {
   constructor(arg0) {
     tmp = closure_2(this, MutationRecord);

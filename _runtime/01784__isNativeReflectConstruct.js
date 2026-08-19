@@ -1,11 +1,11 @@
 // _runtime/01784__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const EntryExitTransition = arg1;
+const EntryExitTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -73,25 +73,19 @@ class EntryExitTransition {
             let _Array = Array;
             if (Array.isArray(tmp2.animations.transform)) {
               let transform = tmp2.animations.transform;
-              let item = transform.forEach((arg0, arg1) => {
-                const keys = Object.keys(arg0);
+              let item = transform.forEach((item, index) => {
+                const keys = Object.keys(item);
                 for (const item10011 of keys) {
-                  let tmp3 = obj;
                   let transform = obj.transform;
-                  let tmp6 = delayFunction;
-                  let tmp7 = callbackV;
-                  let tmp2 = item10011;
-                  let tmp4 = closure_0;
                   let tmp5 = obj;
                   obj = delayFunction(callbackV[6]);
                   let obj2 = delayFunction(callbackV[6]);
                   let num = 0;
                   if (closure_1.initialValues.transform) {
-                    let tmp8 = item10011;
-                    num = closure_1.initialValues.transform[arg1][tmp2];
+                    num = closure_1.initialValues.transform[arg1][item10011];
                   }
                   obj = {};
-                  obj[item10011] = tmp4(tmp5, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
+                  obj[item10011] = callback(tmp5, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
                   let arr = transform.push(obj);
                   continue;
                 }
@@ -99,83 +93,53 @@ class EntryExitTransition {
             }
             continue;
           } else {
-            let tmp45 = nextResult;
             if (undefined !== tmp.animations[tmp5]) {
-              let tmp12 = nextResult;
               let items = [tmp2.animations[tmp5], , ];
-              let tmp13 = delayFunction;
-              let tmp14 = callbackV;
               let obj3 = delayFunction(callbackV[6]);
               items[1] = obj3.withTiming(tmp.initialValues[tmp5], { duration: 0 });
               items[2] = tmp.animations[tmp5];
               let items1 = items;
             } else {
-              let tmp6 = nextResult;
               items1 = [tmp2.animations[tmp5], ];
-              let tmp7 = delayFunction;
-              let tmp8 = callbackV;
               obj1 = delayFunction(callbackV[6]);
               let _Object = Object;
               let keys1 = Object.keys(targetOriginX);
               if (keys1.includes(tmp5)) {
-                let tmp11 = nextResult;
                 let tmp10 = targetOriginX[tmp5];
               } else {
-                let tmp9 = nextResult;
                 tmp10 = tmp2.initialValues[tmp5];
               }
               items1[1] = obj1.withTiming(tmp10, { duration: 0 });
             }
-            let tmp15 = nextResult;
-            let tmp16 = delayFunction;
-            let tmp17 = obj;
-            let tmp18 = delayFunction;
-            let tmp19 = callbackV;
             let tmp20 = delayFunction(callbackV[6]);
             let withSequence = tmp20.withSequence;
             let items2 = [];
-            let tmp21 = items2;
-            let tmp22 = items1;
-            let num = 0;
             let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
-            let tmp24 = withSequence;
-            let tmp25 = items2;
-            let tmp26 = tmp20;
             obj[tmp5] = delayFunction(obj, HermesBuiltin.apply(items2, tmp20));
           }
           continue;
         }
         const keys2 = Object.keys(tmp.animations);
         for (const item10093 of keys2) {
-          let tmp29 = item10093;
           if ("transform" === item10093) {
             let _Array2 = Array;
             if (Array.isArray(tmp.animations.transform)) {
               let transform1 = tmp.animations.transform;
-              let item1 = transform1.forEach((arg0, arg1) => {
-                const keys = Object.keys(arg0);
+              let item1 = transform1.forEach((item, index) => {
+                const keys = Object.keys(item);
                 for (const item10011 of keys) {
-                  let tmp2 = item10011;
-                  let tmp3 = obj;
                   let transform = obj.transform;
-                  let tmp5 = obj;
-                  let tmp8 = delayFunction;
-                  let tmp9 = callbackV;
-                  let tmp4 = lib;
-                  let tmp6 = closure_1_5;
-                  let sum = obj + closure_1_5;
+                  let sum = obj + duration;
                   obj = delayFunction(callbackV[6]);
                   let obj2 = delayFunction(callbackV[6]);
                   let num = 0;
                   if (lib.initialValues.transform) {
-                    let tmp10 = item10011;
-                    num = lib.initialValues.transform[arg1][tmp2];
+                    num = lib.initialValues.transform[arg1][item10011];
                   }
                   obj = {};
                   obj = { duration: null };
-                  obj[0] = tmp6;
-                  let tmp11 = item10011;
-                  obj[item10011] = tmp4(sum, obj.withSequence(obj2.withTiming(num, obj), arg0[tmp2]));
+                  obj[0] = duration;
+                  obj[item10011] = lib(sum, obj.withSequence(obj2.withTiming(num, obj), arg0[item10011]));
                   let arr = transform.push(obj);
                   continue;
                 }
@@ -183,22 +147,12 @@ class EntryExitTransition {
               continue;
             }
             continue;
+          } else if (undefined !== obj[item10093]) {
+            continue;
           } else {
-            let tmp46 = item10093;
-            if (undefined !== obj[tmp29]) {
-              continue;
-            } else {
-              let tmp30 = item10093;
-              let tmp31 = delayFunction;
-              let tmp32 = obj;
-              let tmp33 = delayFunction;
-              let tmp34 = callbackV;
-              let obj4 = delayFunction(callbackV[6]);
-              let tmp35 = delayFunction;
-              let tmp36 = callbackV;
-              let obj5 = delayFunction(callbackV[6]);
-              obj[tmp29] = delayFunction(obj, obj4.withSequence(obj5.withTiming(tmp.initialValues[tmp29], { duration: 0 }), tmp.animations[tmp29]));
-            }
+            let obj4 = delayFunction(callbackV[6]);
+            let obj5 = delayFunction(callbackV[6]);
+            obj[item10093] = delayFunction(obj, obj4.withSequence(obj5.withTiming(tmp.initialValues[item10093], { duration: 0 }), tmp.animations[item10093]));
           }
           continue;
         }
@@ -212,10 +166,9 @@ class EntryExitTransition {
         } else {
           transform3 = [];
         }
-        obj = { initialValues: null, animations: null, callback: null };
         obj = {};
-        const combined = transform2.concat(transform3.map((arg0) => {
-          const keys = Object.keys(arg0);
+        const combined = transform2.concat(transform3.map((item, index) => {
+          const keys = Object.keys(item);
           let length;
           if (keys != null) {
             length = keys.length;
@@ -223,18 +176,16 @@ class EntryExitTransition {
           if (length < 1) {
             const logger = lib(closure_1[7]).logger;
             logger.error("${value} is not a valid Transform object");
-            return arg0;
+            return item;
           } else {
             const first = keys[0];
-            const current = arg0[first].current;
+            const current = item[first].current;
             if (typeof current === "string") {
               obj = {};
               if (current.includes("deg")) {
                 obj[first] = "0deg";
-                let tmp3 = obj;
               } else {
                 obj[first] = "0";
-                tmp3 = obj;
               }
             } else {
               obj = {};
@@ -257,7 +208,6 @@ class EntryExitTransition {
         sum = obj + duration;
         const sum1 = obj + duration;
         const obj10 = delayFunction(callbackV[6]);
-        let obj2 = { duration };
         obj3 = { duration };
         obj1[1] = delayFunction(sum1, delayFunction(callbackV[6]).withTiming(targetOriginX.targetOriginY, obj3));
         const sum2 = obj + duration;
@@ -273,7 +223,7 @@ class EntryExitTransition {
         obj[2] = closure_1;
         return obj;
       };
-      fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: callback(closure_1_1[6]).withSequence, withTiming: callback(closure_1_1[6]).withTiming, exitingDuration: duration, logger: callback(closure_1_1[7]).logger, callback: callbackV };
+      fn.__closure = { enteringAnimation: buildResult, exitingAnimation: buildResult1, delayFunction, delay, withSequence: callback(dependencyMap[6]).withSequence, withTiming: callback(dependencyMap[6]).withTiming, exitingDuration: duration, logger: callback(dependencyMap[7]).logger, callback: callbackV };
       fn.__workletHash = 15677837188414;
       fn.__initData = closure_1_6;
       return fn;

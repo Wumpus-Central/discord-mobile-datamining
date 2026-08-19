@@ -1,8 +1,8 @@
 // _runtime/07795__isNativeReflectConstruct.js
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
 import _createClass from "metro/00042__createClass.js";
-import SentryError from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 import _wrapNativeSuper from "metro/00158__wrapNativeSuper.js";
 
@@ -25,6 +25,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 class SentryError {
   constructor(arg0) {
     str = require;
@@ -51,6 +52,7 @@ class SentryError {
     return tmp3Result;
   }
 }
+_classCallCheck = SentryError;
 _inherits(SentryError, _wrapNativeSuper(Error));
 
 export const SentryError = _createClass(SentryError);

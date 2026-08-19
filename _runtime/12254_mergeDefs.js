@@ -26,13 +26,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -45,7 +43,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -649,7 +646,6 @@ if (self2) {
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 = "Juda katta: kutilgan " + str31 + " " + str30 + code.maximum.toString() + " " + tmp32.unit + " " + tmp32.verb;
-                const str36 = code.maximum;
               } else {
                 let str32 = str31;
                 if (str31 == null) {
@@ -657,7 +653,6 @@ if (self2) {
                 }
                 const _HermesInternal12 = HermesInternal;
                 combined2 = "Juda katta: kutilgan " + str32 + " " + str30 + code.maximum.toString();
-                const str33 = code.maximum;
               }
               return combined2;
             case "MarkupParserNodeTypeError":

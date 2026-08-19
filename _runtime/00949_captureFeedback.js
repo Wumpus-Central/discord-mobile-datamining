@@ -12,9 +12,7 @@ arg5.captureFeedback = function captureFeedback(tags) {
   let currentScope = arg2;
   if (arg2 === undefined) {
     currentScope = getClient.getCurrentScope();
-    const obj3 = getClient;
   }
-  obj = { contexts: { feedback: obj }, type: "feedback", level: "info", tags: tags.tags };
   obj = { contact_email: tags.email, name: tags.name, message: tags.message, url: tags.url, source: tags.source, associated_event_id: tags.associatedEventId };
   let client;
   if (currentScope != null) {
@@ -22,7 +20,6 @@ arg5.captureFeedback = function captureFeedback(tags) {
   }
   if (!client) {
     client = getClient.getClient();
-    const obj6 = getClient;
   }
   if (client) {
     client.emit("beforeSendFeedback", obj, obj);

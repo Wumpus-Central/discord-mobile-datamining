@@ -22,13 +22,12 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _defineProperties(arg0, arg1) {
+function _defineProperties(PluralRules, items) {
   let num = 0;
-  if (0 < arg1.length) {
+  if (0 < items.length) {
     while (true) {
-      let tmp = arg1[num];
+      let tmp = items[num];
       let flag = tmp.enumerable;
-      let tmp2 = num;
       if (!flag) {
         flag = false;
       }
@@ -62,7 +61,7 @@ function _defineProperties(arg0, arg1) {
         let _String2 = String;
         StringResult1 = String(StringResult);
       }
-      let definePropertyResult = Object.defineProperty(arg0, StringResult1, tmp);
+      let definePropertyResult = Object.defineProperty(PluralRules, StringResult1, tmp);
       num = num + 1;
     }
     const _TypeError = TypeError;
@@ -84,10 +83,8 @@ function canonicalizeLocaleList(arg0) {
     if (0 < arr.length) {
       while (true) {
         let tmp3 = arr[num3];
-        let tmp4 = num3;
         let tmp5 = tmp3;
         if (tmp3) {
-          let tmp6 = _typeof;
           tmp5 = "object" === _typeof(tmp3);
         }
         str3 = tmp3;
@@ -99,7 +96,7 @@ function canonicalizeLocaleList(arg0) {
           break;
         } else {
           let parts = str3.split("-");
-          if (parts.every((arg0) => /[a-z0-9]+/i.test(arg0))) {
+          if (parts.every((item, index) => /[a-z0-9]+/i.test(item))) {
             let str6 = parts[0];
             let formatted = str6.toLowerCase();
             let tmp12 = { in: "id", iw: "he", ji: "yi" }[formatted];
@@ -115,14 +112,9 @@ function canonicalizeLocaleList(arg0) {
             num3 = num3 + 1;
           } else {
             let _JSON = JSON;
-            let str4 = "The locale ";
             let concat = "The locale ".concat;
-            let str5 = " is not a structurally valid BCP 47 language tag.";
             let _RangeError = RangeError;
-            let tmp7 = new.target;
-            let tmp8 = new.target;
             let rangeError = new RangeError("The locale ".concat(JSON.stringify(str3), " is not a structurally valid BCP 47 language tag."));
-            let tmp10 = rangeError;
             throw rangeError;
           }
         }
@@ -140,8 +132,7 @@ function canonicalizeLocaleList(arg0) {
   }
 }
 
-export default function getPluralRules(arg0, arg1, arg2, arg3) {
-  const PluralRules = arg0;
+export default function getPluralRules(PluralRules) {
   _defineProperties = arg1;
   closure_2 = arg2;
   closure_3 = arg3;
@@ -152,7 +143,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
       if (str) {
         continue;
       } else {
-        let tmp = null;
         return null;
       }
     }
@@ -179,57 +169,62 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           if (this instanceof PluralRules) {
             obj2 = closure_5;
             if (closure_5.has(self)) {
-              first = globalThis;
+              tmp128 = globalThis;
               _TypeError18 = TypeError;
-              first = new.target;
+              tmp129 = new.target;
               str27 = "Cannot initialize the same private elements twice on an object";
-              first = new.target;
-              first = new TypeError("Cannot initialize the same private elements twice on an object");
-              throw first;
+              tmp130 = new.target;
+              typeError = new TypeError("Cannot initialize the same private elements twice on an object");
+              tmp132 = typeError;
+              throw typeError;
             } else {
               result = obj2.set(self, { writable: true, value: "a" });
               obj3 = closure_6;
               if (closure_6.has(self)) {
-                first = globalThis;
+                tmp123 = globalThis;
                 _TypeError17 = TypeError;
-                first = new.target;
+                tmp124 = new.target;
                 str26 = "Cannot initialize the same private elements twice on an object";
-                first = new.target;
-                first = new TypeError("Cannot initialize the same private elements twice on an object");
-                throw first;
+                tmp125 = new.target;
+                typeError1 = new TypeError("Cannot initialize the same private elements twice on an object");
+                tmp127 = typeError1;
+                throw typeError1;
               } else {
                 result1 = obj3.set(self, { writable: true, value: "a" });
                 obj4 = closure_7;
                 if (closure_7.has(self)) {
-                  first = globalThis;
+                  tmp118 = globalThis;
                   _TypeError16 = TypeError;
-                  first = new.target;
+                  tmp119 = new.target;
                   str25 = "Cannot initialize the same private elements twice on an object";
-                  first = new.target;
-                  first = new TypeError("Cannot initialize the same private elements twice on an object");
-                  throw first;
+                  tmp120 = new.target;
+                  typeError2 = new TypeError("Cannot initialize the same private elements twice on an object");
+                  tmp122 = typeError2;
+                  throw typeError2;
                 } else {
                   result2 = obj4.set(self, { writable: true, value: "a" });
                   obj5 = closure_8;
                   if (closure_8.has(self)) {
-                    first = globalThis;
+                    tmp113 = globalThis;
                     _TypeError15 = TypeError;
-                    first = new.target;
+                    tmp114 = new.target;
                     str24 = "Cannot initialize the same private elements twice on an object";
-                    first = new.target;
-                    first = new TypeError("Cannot initialize the same private elements twice on an object");
-                    throw first;
+                    tmp115 = new.target;
+                    typeError3 = new TypeError("Cannot initialize the same private elements twice on an object");
+                    tmp117 = typeError3;
+                    throw typeError3;
                   } else {
                     result3 = obj5.set(self, { writable: true, value: "a" });
                     obj6 = closure_9;
                     if (closure_9.has(self)) {
-                      first = globalThis;
+                      tmp108 = globalThis;
                       _TypeError14 = TypeError;
-                      first = new.target;
+                      tmp109 = new.target;
                       str23 = "Cannot initialize the same private elements twice on an object";
-                      first = new.target;
-                      first = new TypeError("Cannot initialize the same private elements twice on an object");
-                      throw first;
+                      tmp110 = new.target;
+                      typeError4 = new TypeError("Cannot initialize the same private elements twice on an object");
+                      tmp112 = typeError4;
+                      throw typeError4;
                     } else {
                       result4 = obj6.set(self, { writable: true, value: "a" });
                       tmp13 = canonicalizeLocaleList;
@@ -286,7 +281,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                           if (typeof call === "unknown") {
                             result5 = set(tmp17);
                           } else {
-                            first = call(self, tmp17);
+                            callResult = call(self, tmp17);
                           }
                         } else if (value.writable) {
                           value.value = tmp17;
@@ -296,9 +291,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                           tmp33 = new.target;
                           str6 = "attempted to set read only private field";
                           tmp34 = new.target;
-                          typeError = new TypeError("attempted to set read only private field");
-                          tmp36 = typeError;
-                          throw typeError;
+                          typeError5 = new TypeError("attempted to set read only private field");
+                          tmp36 = typeError5;
+                          throw typeError5;
                         }
                         obj8 = closure_7;
                         obj9 = closure_5;
@@ -318,7 +313,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                 if (typeof call3 === "unknown") {
                                   set2Result = set2(tmp18Result);
                                 } else {
-                                  first = call3(self, tmp18Result);
+                                  call3Result = call3(self, tmp18Result);
                                 }
                               } else if (value1.writable) {
                                 value1.value = tmp18Result;
@@ -328,9 +323,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                 tmp52 = new.target;
                                 str9 = "attempted to set read only private field";
                                 tmp53 = new.target;
-                                typeError1 = new TypeError("attempted to set read only private field");
-                                tmp55 = typeError1;
-                                throw typeError1;
+                                typeError6 = new TypeError("attempted to set read only private field");
+                                tmp55 = typeError6;
+                                throw typeError6;
                               }
                               obj10 = closure_6;
                               tmp57 = closure_3;
@@ -350,7 +345,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                       if (typeof call5 === "unknown") {
                                         set3Result = set3(tmp57Result);
                                       } else {
-                                        first = call5(self, tmp57Result);
+                                        call5Result = call5(self, tmp57Result);
                                       }
                                     } else if (value2.writable) {
                                       value2.value = tmp57Result;
@@ -360,9 +355,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                       tmp72 = new.target;
                                       str12 = "attempted to set read only private field";
                                       tmp73 = new.target;
-                                      typeError2 = new TypeError("attempted to set read only private field");
-                                      tmp75 = typeError2;
-                                      throw typeError2;
+                                      typeError7 = new TypeError("attempted to set read only private field");
+                                      tmp75 = typeError7;
+                                      throw typeError7;
                                     }
                                     obj11 = closure_8;
                                     tmp77 = globalThis;
@@ -406,7 +401,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                         if (typeof call7 === "unknown") {
                                           set4Result = set4(str15);
                                         } else {
-                                          first = call7(self, str15);
+                                          call7Result = call7(self, str15);
                                         }
                                       } else if (value3.writable) {
                                         value3.value = str15;
@@ -415,9 +410,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                         tmp87 = new.target;
                                         str19 = "attempted to set read only private field";
                                         tmp88 = new.target;
-                                        typeError3 = new TypeError("attempted to set read only private field");
-                                        tmp90 = typeError3;
-                                        throw typeError3;
+                                        typeError8 = new TypeError("attempted to set read only private field");
+                                        tmp90 = typeError8;
+                                        throw typeError8;
                                       }
                                       obj12 = closure_9;
                                       tmp92 = PluralRules;
@@ -427,25 +422,26 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                       tmp95 = obj;
                                       tmp96 = new PluralRules("en", obj);
                                       if (closure_9.has(self)) {
-                                        first = tmp96;
-                                        first = obj12.get(self);
-                                        if (first.set) {
-                                          set5 = first.set;
+                                        tmp101 = tmp96;
+                                        value4 = obj12.get(self);
+                                        if (value4.set) {
+                                          set5 = value4.set;
                                           call8 = set5.call;
                                           if (typeof call8 === "unknown") {
-                                            first = set5(tmp96);
+                                            set5Result = set5(tmp96);
                                           } else {
-                                            first = call8(self, tmp96);
+                                            call8Result = call8(self, tmp96);
                                           }
-                                        } else if (first.writable) {
-                                          first.value = tmp96;
+                                        } else if (value4.writable) {
+                                          value4.value = tmp96;
                                         } else {
                                           _TypeError13 = TypeError;
-                                          first = new.target;
+                                          tmp103 = new.target;
                                           str22 = "attempted to set read only private field";
-                                          first = new.target;
-                                          first = new TypeError("attempted to set read only private field");
-                                          throw first;
+                                          tmp104 = new.target;
+                                          typeError9 = new TypeError("attempted to set read only private field");
+                                          tmp106 = typeError9;
+                                          throw typeError9;
                                         }
                                         return;
                                       } else {
@@ -453,18 +449,18 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                         tmp97 = new.target;
                                         str21 = "attempted to set private field on non-instance";
                                         tmp98 = new.target;
-                                        typeError4 = new TypeError("attempted to set private field on non-instance");
-                                        first = typeError4;
-                                        throw typeError4;
+                                        typeError10 = new TypeError("attempted to set private field on non-instance");
+                                        tmp100 = typeError10;
+                                        throw typeError10;
                                       }
                                     } else {
                                       _TypeError10 = TypeError;
                                       tmp82 = new.target;
                                       str18 = "attempted to set private field on non-instance";
                                       tmp83 = new.target;
-                                      typeError5 = new TypeError("attempted to set private field on non-instance");
-                                      tmp85 = typeError5;
-                                      throw typeError5;
+                                      typeError11 = new TypeError("attempted to set private field on non-instance");
+                                      tmp85 = typeError11;
+                                      throw typeError11;
                                     }
                                   } else {
                                     tmp65 = globalThis;
@@ -472,9 +468,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                     tmp66 = new.target;
                                     str11 = "attempted to set private field on non-instance";
                                     tmp67 = new.target;
-                                    typeError6 = new TypeError("attempted to set private field on non-instance");
-                                    tmp69 = typeError6;
-                                    throw typeError6;
+                                    typeError12 = new TypeError("attempted to set private field on non-instance");
+                                    tmp69 = typeError12;
+                                    throw typeError12;
                                   }
                                 }
                               } else {
@@ -483,9 +479,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                                 tmp59 = new.target;
                                 str10 = "attempted to get private field on non-instance";
                                 tmp60 = new.target;
-                                typeError7 = new TypeError("attempted to get private field on non-instance");
-                                tmp62 = typeError7;
-                                throw typeError7;
+                                typeError13 = new TypeError("attempted to get private field on non-instance");
+                                tmp62 = typeError13;
+                                throw typeError13;
                               }
                             } else {
                               tmp45 = globalThis;
@@ -493,9 +489,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                               tmp46 = new.target;
                               str8 = "attempted to set private field on non-instance";
                               tmp47 = new.target;
-                              typeError8 = new TypeError("attempted to set private field on non-instance");
-                              tmp49 = typeError8;
-                              throw typeError8;
+                              typeError14 = new TypeError("attempted to set private field on non-instance");
+                              tmp49 = typeError14;
+                              throw typeError14;
                             }
                           }
                         } else {
@@ -504,9 +500,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                           tmp39 = new.target;
                           str7 = "attempted to get private field on non-instance";
                           tmp40 = new.target;
-                          typeError9 = new TypeError("attempted to get private field on non-instance");
-                          tmp42 = typeError9;
-                          throw typeError9;
+                          typeError15 = new TypeError("attempted to get private field on non-instance");
+                          tmp42 = typeError15;
+                          throw typeError15;
                         }
                       } else {
                         tmp26 = globalThis;
@@ -514,9 +510,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                         tmp27 = new.target;
                         str5 = "attempted to set private field on non-instance";
                         tmp28 = new.target;
-                        typeError10 = new TypeError("attempted to set private field on non-instance");
-                        tmp30 = typeError10;
-                        throw typeError10;
+                        typeError16 = new TypeError("attempted to set private field on non-instance");
+                        tmp30 = typeError16;
+                        throw typeError16;
                       }
                     }
                   }
@@ -529,9 +525,9 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
             tmp4 = new.target;
             str = "Cannot call a class as a function";
             tmp5 = new.target;
-            typeError11 = new TypeError("Cannot call a class as a function");
-            tmp7 = typeError11;
-            throw typeError11;
+            typeError17 = new TypeError("Cannot call a class as a function");
+            tmp7 = typeError17;
+            throw typeError17;
           }
         }
         obj = {};
@@ -556,7 +552,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           ({ minimumSignificantDigits, roundingPriority } = resolvedOptionsResult);
           ({ minimumIntegerDigits, minimumFractionDigits, maximumFractionDigits, maximumSignificantDigits } = resolvedOptionsResult);
           if (weakMap.has(self)) {
-            const iter2 = obj2.get(self);
+            const iter2 = weakMap.get(self);
             if (iter2.get) {
               const get2 = iter2.get;
               const call2 = get2.call;
@@ -565,7 +561,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
               obj = { locale: null, type: null, minimumIntegerDigits: null, minimumFractionDigits: null, maximumFractionDigits: null };
               obj[0] = iter2.value;
               if (weakMap3.has(self)) {
-                const iter3 = obj4.get(self);
+                const iter3 = weakMap3.get(self);
                 if (iter3.get) {
                   const get3 = iter3.get;
                   const call3 = get3.call;
@@ -579,20 +575,20 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     obj.minimumSignificantDigits = minimumSignificantDigits;
                     obj.maximumSignificantDigits = maximumSignificantDigits;
                   }
-                  if (obj2.has(self)) {
-                    const iter4 = obj2.get(self);
+                  if (weakMap.has(self)) {
+                    const iter4 = weakMap.get(self);
                     if (iter4.get) {
                       const get4 = iter4.get;
                       const call4 = get4.call;
                       typeof call4 === "unknown" ? get4() : call4(self);
-                    } else if (obj4.has(self)) {
-                      const iter5 = obj4.get(self);
+                    } else if (weakMap3.has(self)) {
+                      const iter5 = weakMap3.get(self);
                       if (iter5.get) {
                         const get5 = iter5.get;
                         const call5 = get5.call;
                         typeof call5 === "unknown" ? get5() : call5(self);
                       } else {
-                        obj.pluralCategories = tmp20(iter4.value, "ordinal" === iter5.value).slice(0);
+                        obj.pluralCategories = callback(iter4.value, "ordinal" === iter5.value).slice(0);
                         if (!roundingPriority) {
                           roundingPriority = "auto";
                         }
@@ -609,7 +605,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     const typeError1 = new TypeError("attempted to get private field on non-instance");
                     throw typeError1;
                   }
-                  tmp20 = closure_2;
                 }
               } else {
                 const _TypeError3 = TypeError;
@@ -645,7 +640,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           const _isFinite = isFinite;
           if (isFinite(NumberResult)) {
             if (weakMap4.has(self)) {
-              const iter = obj.get(self);
+              const iter = weakMap4.get(self);
               if (iter.get) {
                 const get = iter.get;
                 const call = get.call;
@@ -655,7 +650,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                 const _Math = Math;
                 const formatResult = value.format(Math.abs(NumberResult));
                 if (weakMap2.has(self)) {
-                  const iter2 = obj2.get(self);
+                  const iter2 = weakMap2.get(self);
                   if (iter2.get) {
                     const get2 = iter2.get;
                     const call2 = get2.call;
@@ -664,7 +659,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     value = iter2.value;
                     const call3 = value.call;
                     if (weakMap3.has(self)) {
-                      const iter3 = obj3.get(self);
+                      const iter3 = weakMap3.get(self);
                       if (iter3.get) {
                         const get3 = iter3.get;
                         const call4 = get3.call;
@@ -677,21 +672,18 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                       const typeError = new TypeError("attempted to get private field on non-instance");
                       throw typeError;
                     }
-                    obj3 = weakMap3;
                   }
                 } else {
                   const _TypeError3 = TypeError;
                   const typeError1 = new TypeError("attempted to get private field on non-instance");
                   throw typeError1;
                 }
-                obj2 = weakMap2;
               }
             } else {
               const _TypeError2 = TypeError;
               const typeError2 = new TypeError("attempted to get private field on non-instance");
               throw typeError2;
             }
-            obj = weakMap4;
           } else {
             return "other";
           }
@@ -746,7 +738,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
               const _isFinite2 = isFinite;
               if (isFinite(NumberResult1)) {
                 if (weakMap1.has(self)) {
-                  const iter = obj.get(self);
+                  const iter = weakMap1.get(self);
                   if (iter.get) {
                     const get = iter.get;
                     const call = get.call;
@@ -763,7 +755,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                   const typeError4 = new TypeError("attempted to get private field on non-instance");
                   throw typeError4;
                 }
-                obj = weakMap1;
               } else {
                 const _RangeError2 = RangeError;
                 const rangeError = new RangeError("end must be finite");

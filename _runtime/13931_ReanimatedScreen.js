@@ -6,7 +6,7 @@ import importDefaultResult from "00019_noop.js";
 let closure_1 = cancelAnimationDefault.createAnimatedComponent(require("Animated").InnerScreen);
 const forwardRefResult = importDefaultResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return <closure_1 ref={arg1} />;
+  return <closure_1 ref={ref} />;
 });
 forwardRefResult.displayName = "ReanimatedScreen";
 

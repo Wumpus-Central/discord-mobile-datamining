@@ -15,19 +15,19 @@ arg5.default = {
     return str;
   },
   ComponentsConfiguration(mapped) {
-    mapped = mapped.map((arg0) => {
+    mapped = mapped.map((item, index) => {
       let str = "Y";
-      if (49 !== arg0) {
+      if (49 !== item) {
         let str2 = "Cb";
-        if (50 !== arg0) {
+        if (50 !== item) {
           let str3 = "Cr";
-          if (51 !== arg0) {
+          if (51 !== item) {
             let str4 = "R";
-            if (52 !== arg0) {
+            if (52 !== item) {
               let str5 = "G";
-              if (53 !== arg0) {
+              if (53 !== item) {
                 let str6;
-                if (54 === arg0) {
+                if (54 === item) {
                   str6 = "B";
                 }
                 str5 = str6;
@@ -128,9 +128,9 @@ arg5.default = {
     }
     return str;
   },
-  ExposureTime(parts) {
-    if (parts[0] / parts[1] > 0.25) {
-      const result = parts[0] / parts[1];
+  ExposureTime(arg0) {
+    if (arg0[0] / arg0[1] > 0.25) {
+      const result = arg0[0] / arg0[1];
       const _Number = Number;
       if (Number.isInteger(result)) {
         let text = `${obj}`;
@@ -139,13 +139,13 @@ arg5.default = {
       }
       return text;
     } else {
-      if (0 !== parts[0]) {
+      if (0 !== arg0[0]) {
         const _Math = Math;
         const _HermesInternal2 = HermesInternal;
-        let combined = "1/" + Math.round(parts[1] / parts[0]);
+        let combined = "1/" + Math.round(arg0[1] / arg0[0]);
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "0/" + parts[1];
+        combined = "0/" + arg0[1];
       }
       return combined;
     }

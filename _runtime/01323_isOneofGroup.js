@@ -5,20 +5,20 @@ arg5.setOneofValue = undefined;
 arg5.setUnknownOneofValue = undefined;
 arg5.clearOneofValue = undefined;
 arg5.getSelectedOneofValue = undefined;
-arg5.isOneofGroup = function isOneofGroup(obj) {
-  if (typeof obj === "object") {
-    if (null !== obj) {
-      if (obj.hasOwnProperty("oneofKind")) {
-        if ("string" === typeof obj.oneofKind) {
-          let tmp3 = undefined !== obj[obj.oneofKind];
+arg5.isOneofGroup = function isOneofGroup(closure_0) {
+  if (typeof closure_0 === "object") {
+    if (null !== closure_0) {
+      if (closure_0.hasOwnProperty("oneofKind")) {
+        if ("string" === typeof closure_0.oneofKind) {
+          let tmp3 = undefined !== closure_0[closure_0.oneofKind];
           if (tmp3) {
             const _Object2 = Object;
-            tmp3 = 2 == Object.keys(obj).length;
+            tmp3 = 2 == Object.keys(closure_0).length;
           }
           return tmp3;
         } else if ("undefined" === tmp) {
           const _Object = Object;
-          return 1 == Object.keys(obj).length;
+          return 1 == Object.keys(closure_0).length;
         } else {
           return false;
         }

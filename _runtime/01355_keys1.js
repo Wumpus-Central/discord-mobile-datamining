@@ -1,5 +1,5 @@
 // _runtime/01355_keys1.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 function identity(arg0) {
   return arg0;
@@ -9,11 +9,11 @@ function createImpl(arg0) {
   function useBoundStore(arg0) {
     let tmp = arg0;
     if (arg0 === undefined) {
-      tmp = closure_1_3;
+      tmp = identity;
     }
     closure_1 = tmp;
-    const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
-    const debugValue = closure_1_2.useDebugValue(syncExternalStore);
+    const syncExternalStore = noop.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+    const debugValue = noop.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
   const merged = Object.assign(useBoundStore, store);
@@ -22,18 +22,18 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp !== "function") {
+    if (typeof createImpl !== "function") {
       HermesBuiltin.throwTypeError();
     }
     store = store(1354).createStore(arg0);
     function useBoundStore(arg0) {
       let tmp = arg0;
       if (arg0 === undefined) {
-        tmp = closure_1_3;
+        tmp = identity;
       }
       closure_1 = tmp;
-      const syncExternalStore = closure_1_2.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
-      const debugValue = closure_1_2.useDebugValue(syncExternalStore);
+      const syncExternalStore = noop.useSyncExternalStore(closure_0.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+      const debugValue = noop.useDebugValue(syncExternalStore);
       return syncExternalStore;
     }
     const _Object = Object;
@@ -41,7 +41,7 @@ export const create = (arg0) => {
     let tmp2 = useBoundStore;
     const obj = store(1354);
   } else {
-    tmp2 = tmp;
+    tmp2 = createImpl;
   }
   return tmp2;
 };
@@ -52,7 +52,7 @@ export const useStore = function useStore(subscribe) {
     tmp = identity;
   }
   closure_1 = tmp;
-  const syncExternalStore = closure_2.useSyncExternalStore(subscribe.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
-  const debugValue = closure_2.useDebugValue(syncExternalStore);
+  const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, () => callback(store.getState()), () => callback(store.getInitialState()));
+  const debugValue = noop.useDebugValue(syncExternalStore);
   return syncExternalStore;
 };

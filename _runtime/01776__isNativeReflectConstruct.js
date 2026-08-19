@@ -1,9 +1,9 @@
 // _runtime/01776__isNativeReflectConstruct.js
 import PinwheelOut from "metro/00032__slicedToArray.js";
-import closure_1 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -54,9 +54,8 @@ class PinwheelIn {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(1, closure_2)) };
+        { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const obj = { scale: delayFunction(delay, first(1, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("0rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;
@@ -114,9 +113,8 @@ class PinwheelOut {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function e() {
-        let obj = { animations: null, initialValues: null, callback: null };
-        obj = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        obj = { scale: delayFunction(delay, first(0, closure_2)) };
+        { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const obj = { scale: delayFunction(delay, first(0, closure_2)) };
         const items = [obj, { rotate: delayFunction(delay, first("5rad", closure_2)) }];
         obj[1] = items;
         obj[0] = obj;

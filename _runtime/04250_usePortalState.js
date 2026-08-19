@@ -4,13 +4,13 @@ import createContext from "04247_createContext.js";
 
 const useContext = noop.useContext;
 
-export const usePortalState = (arg0) => {
+export const usePortalState = (name) => {
   const tmp = useContext(createContext.PortalStateContext);
   if (null === tmp) {
     const _Error = Error;
     error = new Error("'PortalStateContext' cannot be null, please add 'PortalProvider' to the root component.");
     throw error;
   } else {
-    return tmp[arg0] || [];
+    return tmp[name] || [];
   }
 };

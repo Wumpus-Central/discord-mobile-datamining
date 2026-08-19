@@ -1,9 +1,9 @@
 // _runtime/06353__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_1 from "metro/00109__objectWithoutProperties.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
@@ -64,9 +64,8 @@ let items = [
       ({ maskElement, children } = props);
       const tmp = callback(props, MaskedView);
       if (importAllResult.isValidElement(maskElement)) {
-        let obj = {};
         const merged = Object.assign(tmp);
-        obj = { pointerEvents: "none", style: null, children: null };
+        let obj = { pointerEvents: "none", style: null, children: null };
         obj[1] = absoluteFill.absoluteFill;
         obj[2] = maskElement;
         const items = [callback4(closure_6, obj), children];

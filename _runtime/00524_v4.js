@@ -1,15 +1,17 @@
 // _runtime/00524_v4.js
+import uint8ArrayDefault from "00516_uint8Array.js";
 import unsafeStringify from "00517_unsafeStringify.js";
+import _modDef525 from "metro/00525__.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function v4(arg0, arg1, arg2) {
   let obj = arg0;
-  if (module(525).randomUUID) {
+  if (_modDef525.randomUUID) {
     if (!arg1) {
       if (!obj) {
-        return tmp(525).randomUUID();
+        return _modDef525.randomUUID();
       }
     }
   }
@@ -18,8 +20,7 @@ arg5.default = function v4(arg0, arg1, arg2) {
   }
   let random = obj.random;
   if (!random) {
-    random = obj.rng || tmp(516)();
-    const tmp3 = obj.rng || tmp(516);
+    random = obj.rng || uint8ArrayDefault();
   }
   random[6] = 15 & random[6] | 64;
   random[8] = 63 & random[8] | 128;

@@ -17,12 +17,12 @@ arg5._INTERNAL_shouldSkipAiProviderWrapping = function _INTERNAL_shouldSkipAiPro
   return set.has(arg0);
 };
 arg5._INTERNAL_skipAiProviderWrapping = function _INTERNAL_skipAiProviderWrapping(arr) {
-  const item = arr.forEach((arg0) => {
-    set.add(arg0);
+  const item = arr.forEach((item, index) => {
+    set.add(item);
     if (callback(table[0]).DEBUG_BUILD) {
       const debug = callback(table[1]).debug;
       const _HermesInternal = HermesInternal;
-      debug.log("AI provider \"" + arg0 + "\" wrapping will be skipped");
+      debug.log("AI provider \"" + item + "\" wrapping will be skipped");
     }
   });
 };

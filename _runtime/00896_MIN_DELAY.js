@@ -1,5 +1,5 @@
 // _runtime/00896_MIN_DELAY.js
-import closure_2 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c3 = 100;
@@ -12,12 +12,13 @@ export function makeOfflineTransport(arg0) {
   function log() {
     const items = [...arguments];
     if (callback(log[1]).DEBUG_BUILD) {
-      const debug = callback(log[2]).debug;
+      const debug = callback(tmp2[2]).debug;
       log = debug.log;
       const items1 = ["[Offline]:"];
       HermesBuiltin.arraySpread(items, 1);
       HermesBuiltin.apply(items1, debug);
     }
+    tmp2 = log;
   }
   return (createStore) => {
     const callback = createStore;
@@ -26,7 +27,7 @@ export function makeOfflineTransport(arg0) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timerId);
       }
-      timerId = setTimeout(closure_2_2(function*() {
+      timerId = setTimeout(asyncGeneratorStep(function*() {
         if (arr === 2) {
           arr = 3;
           HermesBuiltin.throwTypeError();
@@ -78,8 +79,8 @@ export function makeOfflineTransport(arg0) {
                 const _Date = Date;
                 const date = new Date();
                 table[0].sent_at = date.toISOString();
-                callback(table, true).catch((arg0) => {
-                  tmp5("Failed to retry sending", arg0);
+                callback(table, true).catch((error) => {
+                  tmp5("Failed to retry sending", error);
                 });
                 const promise = callback(table, true);
               }
@@ -107,7 +108,7 @@ export function makeOfflineTransport(arg0) {
           clearTimeout(timerId);
         }
         const _setTimeout = setTimeout;
-        timerId = setTimeout(closure_2_2(function*() {
+        timerId = setTimeout(asyncGeneratorStep(function*() {
           if (arr === 2) {
             arr = 3;
             HermesBuiltin.throwTypeError();
@@ -159,8 +160,8 @@ export function makeOfflineTransport(arg0) {
                   const _Date = Date;
                   const date = new Date();
                   table[0].sent_at = date.toISOString();
-                  callback(table, true).catch((arg0) => {
-                    tmp5("Failed to retry sending", arg0);
+                  callback(table, true).catch((error) => {
+                    tmp5("Failed to retry sending", error);
                   });
                   const promise = callback(table, true);
                 }
@@ -182,7 +183,6 @@ export function makeOfflineTransport(arg0) {
         }
         const _Math = Math;
         closure_4 = Math.min(2 * closure_4, 3600000);
-        const tmp2 = closure_4;
       }
     }
     function send(arg0) {
@@ -197,7 +197,7 @@ export function makeOfflineTransport(arg0) {
     }
     function _send() {
       const self = this;
-      const tmp = closure_2_2((arg0) => {
+      const tmp = asyncGeneratorStep((arg0) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c6 = 0;
@@ -254,21 +254,21 @@ export function makeOfflineTransport(arg0) {
                     return obj1;
                   } else {
                     if (!closure_2_1) {
-                      let obj13 = closure_2_0(closure_2_1[3]);
-                      if (obj13.envelopeContainsItemType(closure_2_0, ["replay_event", "replay_recording"])) {
+                      let obj13 = createStore(closure_2_1[3]);
+                      if (obj13.envelopeContainsItemType(createStore, ["replay_event", "replay_recording"])) {
                         v02 = 2;
                         c7 = 1;
-                        let obj2 = { value: null, done: false };
-                        obj2[0] = arr.push(closure_2_0);
+                        const obj2 = { value: null, done: false };
+                        obj2[0] = arr.push(createStore);
                         return obj2;
                       }
                     }
                     let v0 = 1;
-                    if (closure_2_0.shouldSend) {
+                    if (createStore.shouldSend) {
                       v02 = 6;
                       c7 = 1;
                       const obj3 = { value: null, done: false };
-                      obj3[0] = closure_2_0.shouldSend(closure_2_0);
+                      obj3[0] = createStore.shouldSend(createStore);
                       return obj3;
                     }
                   }
@@ -293,7 +293,7 @@ export function makeOfflineTransport(arg0) {
                   v02 = 4;
                   c7 = 1;
                   const obj6 = { value: null, done: false };
-                  obj6[0] = (function shouldQueue() { ... })(closure_2_0, closure_4, closure_4);
+                  obj6[0] = (function shouldQueue() { ... })(createStore, closure_4, closure_4);
                   return obj6;
                 } else if (4 === tmp6) {
                   if (arg0 === 1) {
@@ -310,13 +310,13 @@ export function makeOfflineTransport(arg0) {
                       v02 = 8;
                       c7 = 1;
                       const obj8 = { value: null, done: false };
-                      obj8[0] = arr.unshift(closure_2_0);
+                      obj8[0] = arr.unshift(createStore);
                       return obj8;
                     } else {
                       v02 = 7;
                       c7 = 1;
                       const obj9 = { value: null, done: false };
-                      obj9[0] = arr.push(closure_2_0);
+                      obj9[0] = arr.push(createStore);
                       return obj9;
                     }
                   } else {
@@ -346,7 +346,7 @@ export function makeOfflineTransport(arg0) {
                         prop = headers["retry-after"];
                       }
                       if (!prop) {
-                        const headers2 = closure_2_2.headers;
+                        const headers2 = timerId.headers;
                         let prop1;
                         if (headers2 != null) {
                           prop1 = headers2["x-sentry-rate-limits"];
@@ -368,8 +368,8 @@ export function makeOfflineTransport(arg0) {
                         }
                       }
                     }
-                    obj5 = closure_2_0(closure_2_1[4]);
-                    arr = obj5.parseRetryAfterHeader(closure_2_2.headers["retry-after"]);
+                    obj5 = createStore(closure_2_1[4]);
+                    arr = obj5.parseRetryAfterHeader(timerId.headers["retry-after"]);
                   }
                 } else if (6 === tmp6) {
                   if (arg0 === 1) {
@@ -416,7 +416,7 @@ export function makeOfflineTransport(arg0) {
                 v02 = 5;
                 c7 = 1;
                 const obj15 = { value: null, done: false };
-                obj15[0] = closure_2_1.send(closure_2_0);
+                obj15[0] = closure_2_1.send(createStore);
                 return obj15;
               }
             } catch (tmp69) {
@@ -453,7 +453,7 @@ export function makeOfflineTransport(arg0) {
             clearTimeout(timerId);
           }
           let _setTimeout = setTimeout;
-          timerId = setTimeout(closure_1_2(function*() {
+          timerId = setTimeout(asyncGeneratorStep(function*() {
             if (arr === 2) {
               arr = 3;
               HermesBuiltin.throwTypeError();
@@ -505,8 +505,8 @@ export function makeOfflineTransport(arg0) {
                     const _Date = Date;
                     const date = new Date();
                     table[0].sent_at = date.toISOString();
-                    callback(table, true).catch((arg0) => {
-                      tmp5("Failed to retry sending", arg0);
+                    callback(table, true).catch((error) => {
+                      tmp5("Failed to retry sending", error);
                     });
                     const promise = callback(table, true);
                   }
@@ -528,7 +528,6 @@ export function makeOfflineTransport(arg0) {
           }
           let _Math = Math;
           closure_4 = Math.min(2 * closure_4, 3600000);
-          const tmp8 = closure_4;
         }
       }
       let obj = { send: null, flush: null };
@@ -541,7 +540,7 @@ export function makeOfflineTransport(arg0) {
             clearTimeout(timerId);
           }
           const _setTimeout = setTimeout;
-          timerId = setTimeout(closure_2_2(function*() {
+          timerId = setTimeout(asyncGeneratorStep(function*() {
             if (arr === 2) {
               arr = 3;
               HermesBuiltin.throwTypeError();
@@ -593,8 +592,8 @@ export function makeOfflineTransport(arg0) {
                     const _Date = Date;
                     const date = new Date();
                     table[0].sent_at = date.toISOString();
-                    callback(table, true).catch((arg0) => {
-                      tmp5("Failed to retry sending", arg0);
+                    callback(table, true).catch((error) => {
+                      tmp5("Failed to retry sending", error);
                     });
                     const promise = callback(table, true);
                   }
@@ -614,7 +613,6 @@ export function makeOfflineTransport(arg0) {
           if (unref) {
             timerId.unref();
           }
-          const tmp2 = closure_2_3;
         }
         return closure_1.flush(arg0);
       };

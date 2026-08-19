@@ -28,7 +28,6 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
       let value = iter.value;
       let concat2 = "-".concat;
       let sum = tmp2 + "-".concat(iter.key);
-      let tmp5 = num2;
       let sum1 = sum;
       if ("" !== value) {
         let concat3 = "-".concat;

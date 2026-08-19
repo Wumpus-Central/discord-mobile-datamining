@@ -1,7 +1,7 @@
 // _runtime/01476_configure.js
 import StateDefault from "01478_State.js";
 import _modAll1483 from "metro/01483__.js";
-import closure_3 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 import closure_7 from "metro/01477__.js";
@@ -11,13 +11,14 @@ function configure(arg0) {
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(arg0);
   if (closure_8) {
-    closure_8.tearDown();
+    obj2.tearDown();
     if (typeof createState !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp10 = new StateDefault(obj);
     closure_8 = tmp10;
   }
+  obj2 = closure_8;
 }
 function fetch(arg0) {
   let obj = closure_8;
@@ -48,17 +49,17 @@ function refresh() {
   } else {
     c10 = true;
     const _fetchCurrentStateResult = obj._fetchCurrentState();
-    cleanupPromise = obj._fetchCurrentState().then((arg0) => {
-      closure_0 = arg0;
-      const item = arr.forEach((arg0) => arg0(closure_0));
-      return arg0;
+    cleanupPromise = obj._fetchCurrentState().then((result) => {
+      closure_0 = result;
+      const item = arr.forEach((item, index) => item(closure_0));
+      return result;
     }).finally(() => {
       c10 = false;
     });
-    const nextPromise = obj._fetchCurrentState().then((arg0) => {
-      closure_0 = arg0;
-      const item = arr.forEach((arg0) => arg0(closure_0));
-      return arg0;
+    const nextPromise = obj._fetchCurrentState().then((result) => {
+      closure_0 = result;
+      const item = arr.forEach((item, index) => item(closure_0));
+      return result;
     });
   }
   return cleanupPromise;
@@ -103,10 +104,10 @@ function useNetInfo(arg0) {
   callback3(() => {
     obj = closure_8;
     if (!closure_8) {
-      if (typeof closure_1_9 !== "function") {
+      if (typeof createState !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      const tmp8 = new callback(closure_1_2[4])(obj);
+      const tmp8 = new callback(dependencyMap[4])(obj);
       closure_8 = tmp8;
       obj = tmp8;
     }
@@ -133,11 +134,10 @@ function useNetInfoInstance() {
     flag = false;
   }
   importAll = arg1;
-  let first;
   let callback;
   let callback2;
   let tmp = callback(callback2(), 2);
-  first = tmp[0];
+  const first = tmp[0];
   callback = tmp[1];
   let obj = { type: importAll(first[5]).NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
   const tmp3 = callback(callback2(obj), 2);
@@ -180,9 +180,8 @@ function createState() {
 }
 let c10 = false;
 let closure_11 = [];
-for (const key10038 in require("module_1483")) {
-  let tmp3 = key10038;
-  arg5[key10038] = require("module_1483")[key10038];
+for (const key10038 in require("metro/01483__.js")) {
+  arg5[key10038] = require("metro/01483__.js")[key10038];
   continue;
 }
 

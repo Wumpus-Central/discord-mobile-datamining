@@ -47,7 +47,7 @@ class Emitter {
     }
     if (arr) {
       num2 = 0;
-      substr = require("module_0");
+      substr = require("../discord_app/index.native.tsx");
       length2 = substr.length;
       if (0 < length2) {
         do {

@@ -26,13 +26,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -45,7 +43,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -84,7 +81,35 @@ if (self2) {
             case "t":
             break;
             case "to":
-            break;
+              let tmp5 = withDefinite;
+              let str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              let tmp9;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              let _HermesInternal = HermesInternal;
+              let combined = "\u05D4" + str2;
+              let _HermesInternal2 = HermesInternal;
+              let combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "Date":
             break;
             case "TypeError":
@@ -400,7 +425,35 @@ if (self2) {
             case "location":
             break;
             case "map":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "marginTop":
             break;
             case "marginBottom":
@@ -430,7 +483,35 @@ if (self2) {
             case "name":
             break;
             case "names":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "next":
             break;
             case "nm":
@@ -452,7 +533,35 @@ if (self2) {
             case "paths":
             break;
             case "pos":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "position":
             break;
             case "props":
@@ -548,35 +657,7 @@ if (self2) {
             case "useMemo":
             break;
             case "useRef":
-              let tmp6 = withDefinite;
-              let str = code.origin;
-              if (str == null) {
-                str = "array";
-              }
-              if (typeof tmp6 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              code = typeLabel;
-              if (typeof code !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              if (typeof typeEntry !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              let tmp9;
-              if (str) {
-                tmp9 = closure_0[str];
-              }
-              if (tmp9) {
-                str = tmp9.label;
-              } else if (str == null) {
-                str = closure_0.unknown.label;
-              }
-              let _HermesInternal = HermesInternal;
-              let combined = "\u05D4" + str;
-              let _HermesInternal2 = HermesInternal;
-              let combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
-              return combined1;
+            break;
             case "useState":
             break;
             case "useStateFromStores":
@@ -1020,7 +1101,35 @@ if (self2) {
             case "sur":
             break;
             case "ur":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "isExpanded":
             break;
             case "__data__":
@@ -1136,35 +1245,7 @@ if (self2) {
             case "MOCK_PERKS":
             break;
             case "PERKS_PURCHASABLE":
-              tmp6 = withDefinite;
-              str = code.origin;
-              if (str == null) {
-                str = "array";
-              }
-              if (typeof tmp6 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              code = typeLabel;
-              if (typeof code !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              if (typeof typeEntry !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              tmp9 = undefined;
-              if (str) {
-                tmp9 = closure_0[str];
-              }
-              if (tmp9) {
-                str = tmp9.label;
-              } else if (str == null) {
-                str = closure_0.unknown.label;
-              }
-              _HermesInternal = HermesInternal;
-              combined = "\u05D4" + str;
-              _HermesInternal2 = HermesInternal;
-              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
-              return combined1;
+            break;
             case "PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO":
             break;
             case "FORUM_CHANNEL_FOOTER":
@@ -1662,7 +1743,35 @@ if (self2) {
             case "efi":
             break;
             case "fi":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "fin":
             break;
             case "undelete":
@@ -1784,43 +1893,358 @@ if (self2) {
             case "contentScanMetadata":
             break;
             case "dataFormatters":
+              let label3 = code.expected;
+              let str135 = label3;
+              if (label3 == null) {
+                str135 = "";
+              }
+              if (dependencyMap[str135] != null) {
+                const parsedTypeResult = typeEntry.parsedType(code.input);
+                let tmp126 = dependencyMap[parsedTypeResult];
+                if (tmp126 == null) {
+                  let label;
+                  if (closure_0[parsedTypeResult] != null) {
+                    label = tmp128.label;
+                  }
+                  tmp126 = label;
+                }
+                if (tmp126 == null) {
+                  tmp126 = parsedTypeResult;
+                }
+                if (obj2.test(code.expected)) {
+                  const _HermesInternal24 = HermesInternal;
+                  let combined2 = "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA instanceof " + code.expected + ", \u05D4\u05EA\u05E7\u05D1\u05DC " + tmp126;
+                } else {
+                  const _HermesInternal23 = HermesInternal;
+                  combined2 = "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + tmp117 + ", \u05D4\u05EA\u05E7\u05D1\u05DC " + tmp126;
+                }
+                return combined2;
+              } else {
+                if (typeof typeLabel !== "function") {
+                  HermesBuiltin.throwTypeError();
+                }
+                if (typeof typeEntry !== "function") {
+                  HermesBuiltin.throwTypeError();
+                }
+                let tmp120;
+                if (label3) {
+                  tmp120 = closure_0[label3];
+                }
+                if (tmp120) {
+                  label3 = tmp120.label;
+                } else if (label3 == null) {
+                  label3 = closure_0.unknown.label;
+                }
+              }
             break;
             case "flag_vc":
             break;
             case "vcData":
+              if (1 === code.values.length) {
+                const _HermesInternal22 = HermesInternal;
+                return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05E2\u05E8\u05DA \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA " + typeEntry.stringifyPrimitive(code.values[0]);
+              } else {
+                const values = code.values;
+                const mapped = values.map((item, index) => closure_2.stringifyPrimitive(item));
+                if (2 === code.values.length) {
+                  const _HermesInternal21 = HermesInternal;
+                  return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF " + mapped[0] + " \u05D0\u05D5 " + mapped[1];
+                } else {
+                  const substr = mapped.slice(0, -1);
+                  const _HermesInternal20 = HermesInternal;
+                  return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF " + substr.join(", ") + " \u05D0\u05D5 " + mapped[mapped.length - 1];
+                }
+              }
             break;
             case "div":
             break;
             case "diversityChildren":
+              const origin4 = code.origin;
+              if (typeof getSizing !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              let tmp72 = null;
+              if (origin4) {
+                let tmp74 = dependencyMap[origin4];
+                if (tmp74 == null) {
+                  tmp74 = null;
+                }
+                tmp72 = tmp74;
+              }
+              let str80 = code.origin;
+              if (str80 == null) {
+                str80 = "value";
+              }
+              if (typeof withDefinite !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeEntry !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              let tmp78;
+              if (str80) {
+                tmp78 = closure_0[str80];
+              }
+              if (tmp78) {
+                str80 = tmp78.label;
+              } else if (str80 == null) {
+                str80 = closure_0.unknown.label;
+              }
+              const _HermesInternal11 = HermesInternal;
+              const combined3 = "\u05D4" + str80;
+              if ("string" === code.origin) {
+                let str118;
+                if (tmp72 != null) {
+                  str118 = tmp72.longLabel;
+                }
+                if (str118 == null) {
+                  str118 = "\u05D0\u05E8\u05D5\u05DA";
+                }
+                const str = code.maximum.toString();
+                let str120;
+                if (tmp72 != null) {
+                  str120 = tmp72.unit;
+                }
+                if (str120 == null) {
+                  str120 = "";
+                }
+                let str121 = "\u05DC\u05DB\u05DC \u05D4\u05D9\u05D5\u05EA\u05E8";
+                if (code.inclusive) {
+                  str121 = "\u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA";
+                }
+                const _HermesInternal19 = HermesInternal;
+                return "" + str118 + " \u05DE\u05D3\u05D9: " + combined3 + " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " + str + " " + str120 + " " + str121.trim();
+              } else if ("number" === code.origin) {
+                const maximum2 = code.maximum;
+                const _HermesInternal17 = HermesInternal;
+                if (code.inclusive) {
+                  let concat2Result = concat2(maximum2);
+                } else {
+                  concat2Result = concat2(maximum2);
+                }
+                const _HermesInternal18 = HermesInternal;
+                return "\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: " + combined3 + " \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + concat2Result;
+              } else {
+                if ("array" !== code.origin) {
+                  if ("set" !== code.origin) {
+                    let str83 = "<";
+                    if (code.inclusive) {
+                      str83 = "<=";
+                    }
+                    let str84 = code.origin;
+                    if (str84 == null) {
+                      str84 = "value";
+                    }
+                    if (typeof verbFor !== "function") {
+                      HermesBuiltin.throwTypeError();
+                    }
+                    if (typeof typeEntry !== "function") {
+                      HermesBuiltin.throwTypeError();
+                    }
+                    let tmp84;
+                    if (str84) {
+                      tmp84 = closure_0[str84];
+                    }
+                    let str85;
+                    if (tmp84 != null) {
+                      str85 = tmp84.gender;
+                    }
+                    if (str85 == null) {
+                      str85 = "m";
+                    }
+                    let str86 = "\u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA";
+                    if ("f" === str85) {
+                      str86 = "\u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05D9\u05D5\u05EA";
+                    }
+                    let unit;
+                    if (tmp72 != null) {
+                      unit = tmp72.unit;
+                    }
+                    if (unit) {
+                      const _HermesInternal13 = HermesInternal;
+                      let combined4 = "" + tmp72.longLabel + " \u05DE\u05D3\u05D9: " + combined3 + " " + str86 + " " + str83 + code.maximum.toString() + " " + tmp72.unit;
+                    } else {
+                      let str88;
+                      if (tmp72 != null) {
+                        str88 = tmp72.longLabel;
+                      }
+                      if (str88 == null) {
+                        str88 = "\u05D2\u05D3\u05D5\u05DC";
+                      }
+                      const _HermesInternal12 = HermesInternal;
+                      combined4 = "" + str88 + " \u05DE\u05D3\u05D9: " + combined3 + " " + str86 + " " + str83 + code.maximum.toString();
+                    }
+                    return combined4;
+                  }
+                }
+                let str102 = "\u05E6\u05E8\u05D9\u05DA";
+                if ("set" === code.origin) {
+                  str102 = "\u05E6\u05E8\u05D9\u05DB\u05D4";
+                }
+                const maximum = code.maximum;
+                if (code.inclusive) {
+                  let str107;
+                  if (!tmp95) {
+                    str107 = tmp72.unit;
+                  }
+                  if (str107 == null) {
+                    str107 = "";
+                  }
+                  const _HermesInternal15 = HermesInternal;
+                  let combined5 = "" + maximum + " " + str107 + " \u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA";
+                } else {
+                  let str104;
+                  if (!tmp95) {
+                    str104 = tmp72.unit;
+                  }
+                  if (str104 == null) {
+                    str104 = "";
+                  }
+                  const _HermesInternal14 = HermesInternal;
+                  combined5 = "\u05E4\u05D7\u05D5\u05EA \u05DE-" + maximum + " " + str104;
+                }
+                const _HermesInternal16 = HermesInternal;
+                const combined6 = "\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: " + combined3 + " " + str102 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined5;
+              }
             break;
             case "ve":
             break;
             case "ver":
+              const origin = code.origin;
+              if (typeof getSizing !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (origin) {
+                let tmp32 = dependencyMap[origin];
+                if (tmp32 == null) {
+                  tmp32 = null;
+                }
+              }
+              let str26 = code.origin;
+              if (str26 == null) {
+                str26 = "value";
+              }
+              if (typeof withDefinite !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeEntry !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              let tmp37;
+              if (str26) {
+                tmp37 = closure_0[str26];
+              }
+              if (tmp37) {
+                const label2 = tmp37.label;
+              } else if (str26 == null) {
+                label = closure_0.unknown.label;
+              }
+              tmp37 = globalThis;
+              const _HermesInternal10 = HermesInternal;
             break;
             case "renderCommunicationDisabled":
             break;
             case "PremiumMarketingComponentProperties":
+              if ("starts_with" === code.format) {
+                const _HermesInternal9 = HermesInternal;
+                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D7\u05D9\u05DC \u05D1 \"" + code.prefix + "\"";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal8 = HermesInternal;
+                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05E1\u05EA\u05D9\u05D9\u05DD \u05D1 \"" + code.suffix + "\"";
+              } else if ("includes" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05DB\u05DC\u05D5\u05DC \"" + code.includes + "\"";
+              } else if ("regex" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D0\u05D9\u05DD \u05DC\u05EA\u05D1\u05E0\u05D9\u05EA " + code.pattern;
+              } else {
+                code = table[code.format];
+                let label1;
+                if (code != null) {
+                  label1 = code.label;
+                }
+                if (label1 == null) {
+                  label1 = code.format;
+                }
+                let str14;
+                if (code != null) {
+                  str14 = code.gender;
+                }
+                if (str14 == null) {
+                  str14 = "m";
+                }
+                let str15 = "\u05EA\u05E7\u05D9\u05DF";
+                if ("f" === str14) {
+                  str15 = "\u05EA\u05E7\u05D9\u05E0\u05D4";
+                }
+                const _HermesInternal5 = HermesInternal;
+                return "" + label1 + " \u05DC\u05D0 " + str15;
+              }
             break;
             case "LhlgY9":
             break;
             case "toExpPos":
-            break;
+              const _HermesInternal4 = HermesInternal;
+              return "\u05DE\u05E1\u05E4\u05E8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA \u05DE\u05DB\u05E4\u05DC\u05D4 \u05E9\u05DC " + code.divisor;
             case "do":
             break;
             case "don":
-            break;
+              let str6 = "";
+              if (code.keys.length > 1) {
+                str6 = "\u05D5\u05EA";
+              }
+              let str7 = "\u05D4";
+              if (code.keys.length > 1) {
+                str7 = "\u05D9\u05DD";
+              }
+              const _HermesInternal3 = HermesInternal;
+              return "\u05DE\u05E4\u05EA\u05D7" + str6 + " \u05DC\u05D0 \u05DE\u05D6\u05D5\u05D4" + str7 + ": " + typeEntry.joinValues(code.keys, ", ");
             case "doneButton":
             break;
             case "doneButtonContainer":
-            break;
+              return "\u05E9\u05D3\u05D4 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8";
             case "__duration":
             break;
             case "_duration":
-            break;
+              return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";
             case "dur":
             break;
             case "durationContainer":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "ura":
             break;
             case "rat":
@@ -1834,7 +2258,8 @@ if (self2) {
             case "SEND_MESSAGE_FAILURE":
             break;
             case "REFERRAL_PROGRAM_ENTRYPOINT_REMINDER":
-            break;
+              let trimmed = str.trim();
+              return trimmed;
             case "RPC_SERVER_ERROR_CAUGHT":
             break;
             case "app_hardware_acceleration_enabled":
@@ -2436,7 +2861,35 @@ if (self2) {
             case "HEADER_TITLE_TEXT_STYLE":
             break;
             case "useRichChatInput":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "ChatInputOmniButtonActionType":
             break;
             case "mni":
@@ -2450,7 +2903,8 @@ if (self2) {
             case "Ambient_Lightmode":
             break;
             case "bie":
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "tm":
             break;
             case "mod":
@@ -3272,6 +3726,121 @@ if (self2) {
             case "#546e7a":
             break;
             case "#5865f2":
+              if ("string" === origin2) {
+                let str69;
+                if (tmp2 != tmp) {
+                  str69 = tmp2.shortLabel;
+                }
+                if (str69 == tmp) {
+                  str69 = "\u05E7\u05E6\u05E8";
+                }
+                const str1 = code.minimum.toString();
+                let str71;
+                if (tmp2 != tmp) {
+                  str71 = tmp2.unit;
+                }
+                if (str71 == tmp) {
+                  str71 = "";
+                }
+                let str72 = "\u05DC\u05E4\u05D7\u05D5\u05EA";
+                if (code.inclusive) {
+                  str72 = "\u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8";
+                }
+                return "" + str69 + " \u05DE\u05D3\u05D9: " + combined11 + " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " + str1 + " " + str71 + " " + str72.trim();
+              } else if ("number" === code.origin) {
+                const minimum2 = code.minimum;
+                const concat = code.HermesInternal.concat;
+                if (code.inclusive) {
+                  let combined7 = concat(minimum2);
+                } else {
+                  combined7 = concat(minimum2);
+                }
+                return "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined11 + " \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + combined7;
+              } else {
+                if ("array" !== code.origin) {
+                  if ("set" !== code.origin) {
+                    let str29 = ">";
+                    if (code.inclusive) {
+                      str29 = ">=";
+                    }
+                    let str30 = code.origin;
+                    if (str30 == tmp) {
+                      str30 = "value";
+                    }
+                    if (typeof verbFor !== "function") {
+                      HermesBuiltin.throwTypeError();
+                    }
+                    if (typeof tmp3 !== "function") {
+                      HermesBuiltin.throwTypeError();
+                    }
+                    let tmp42;
+                    if (str30) {
+                      tmp42 = closure_0[str30];
+                    }
+                    let str31;
+                    if (tmp42 != tmp) {
+                      str31 = tmp42.gender;
+                    }
+                    if (str31 == tmp) {
+                      str31 = "m";
+                    }
+                    let str32 = "\u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA";
+                    if ("f" === str31) {
+                      str32 = "\u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05D9\u05D5\u05EA";
+                    }
+                    let unit1;
+                    if (tmp2 != tmp) {
+                      unit1 = tmp2.unit;
+                    }
+                    if (unit1) {
+                      let combined8 = "" + tmp2.shortLabel + " \u05DE\u05D3\u05D9: " + combined11 + " " + str32 + " " + str29 + code.minimum.toString() + " " + tmp2.unit;
+                    } else {
+                      let str34;
+                      if (tmp2 != tmp) {
+                        str34 = tmp2.shortLabel;
+                      }
+                      if (str34 == tmp) {
+                        str34 = "\u05E7\u05D8\u05DF";
+                      }
+                      combined8 = "" + str34 + " \u05DE\u05D3\u05D9: " + combined11 + " " + str32 + " " + str29 + code.minimum.toString();
+                    }
+                    return combined8;
+                  }
+                }
+                let str48 = "\u05E6\u05E8\u05D9\u05DA";
+                if ("set" === code.origin) {
+                  str48 = "\u05E6\u05E8\u05D9\u05DB\u05D4";
+                }
+                if (1 === code.minimum) {
+                  if (code.inclusive) {
+                    const origin3 = code.origin;
+                    let combined9 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined11 + " " + str48 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + "\u05DC\u05E4\u05D7\u05D5\u05EA \u05E4\u05E8\u05D9\u05D8 \u05D0\u05D7\u05D3";
+                  }
+                  return combined9;
+                }
+                const minimum = code.minimum;
+                if (code.inclusive) {
+                  let str53;
+                  if (!tmp53) {
+                    str53 = tmp2.unit;
+                  }
+                  if (str53 == tmp) {
+                    str53 = "";
+                  }
+                  let combined10 = "" + minimum + " " + str53 + " \u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8";
+                } else {
+                  let str50;
+                  if (!tmp53) {
+                    str50 = tmp2.unit;
+                  }
+                  if (str50 == tmp) {
+                    str50 = "";
+                  }
+                  combined10 = "\u05D9\u05D5\u05EA\u05E8 \u05DE-" + minimum + " " + str50;
+                }
+                combined9 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined11 + " " + str48 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined10.trim();
+                const str60 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined11 + " " + str48 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined10;
+              }
             break;
             case "f2":
             break;
@@ -3312,7 +3881,35 @@ if (self2) {
             case "messageChannelId":
             break;
             case "#71368a":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "social_links":
             break;
             case "_links":
@@ -3326,7 +3923,8 @@ if (self2) {
             case "#979c9f":
             break;
             case "couple_with_heart_woman_woman_tone1_tone5":
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "6MwJo/":
             break;
             case "#992d22":
@@ -3430,29 +4028,6 @@ if (self2) {
             case "$ZodBase64":
             break;
             case "$ZodBase64URL":
-              while (true) {
-                let str4 = "";
-                if (code <= 1) {
-                  break;
-                } else {
-                  str4 = "\u05D5\u05EA";
-                  break;
-                }
-                let str5 = "\u05D4";
-                if (code.keys.length > 1) {
-                  str5 = "\u05D9\u05DD";
-                }
-                let tmp15 = typeEntry;
-                let str6 = ", ";
-                let tmp16 = globalThis;
-                let _HermesInternal3 = HermesInternal;
-                let str7 = ": ";
-                let str8 = " \u05DC\u05D0 \u05DE\u05D6\u05D5\u05D4";
-                let str9 = "\u05DE\u05E4\u05EA\u05D7";
-                let tmp17 = str4;
-                let tmp18 = str5;
-                return "\u05DE\u05E4\u05EA\u05D7" + str4 + " \u05DC\u05D0 \u05DE\u05D6\u05D5\u05D4" + str5 + ": " + typeEntry.joinValues(code.keys, ", ");
-              }
             break;
             case "ZodBase64":
             break;
@@ -3941,7 +4516,35 @@ if (self2) {
             case "IS":
             break;
             case "SO":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "Time":
             break;
             case "$ZodISODuration":
@@ -3955,9 +4558,8 @@ if (self2) {
             case "XjXqzh":
             break;
             case "zh":
-              let shortLabel = "\u05E7\u05D8\u05DF";
-              let combined2 = "" + `קטן` + " \u05DE\u05D3\u05D9: " + tmp3 + " " + tmp4 + " " + tmp5 + code.minimum.toString();
-              return combined2;
+              trimmed = str.trim();
+              return trimmed;
             case "zh-Hant":
             break;
             case "zh-Hant-HK":
@@ -4551,7 +5153,35 @@ if (self2) {
             case "numpad +":
             break;
             case "+1_tone4":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "GUILD_ONBOARDING_LOADED":
             break;
             case "woman_biking_tone5":
@@ -4565,7 +5195,8 @@ if (self2) {
             case "clearTransactionIOS":
             break;
             case "getDefaultInviteExpiration":
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "CIGa+7":
             break;
             case "+78Pfm":
@@ -5175,7 +5806,35 @@ if (self2) {
             case "man_facepalming_medium_light_skin_tone":
             break;
             case "SCIENCE_AND_TECH":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "TECH":
             break;
             case "CHANNEL_ICON_EMOJIS_GENERATED":
@@ -5189,7 +5848,8 @@ if (self2) {
             case "PARENTAL_CONSENT_LOCKOUT":
             break;
             case "TVInputHDMI4":
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "/dp6yY":
             break;
             case "Y":
@@ -5819,7 +6479,35 @@ if (self2) {
             case "LaunchApplication8":
             break;
             case "n8nU4W":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "4WNcpu":
             break;
             case "cpuHistogram":
@@ -5833,7 +6521,8 @@ if (self2) {
             case "FREQUENCIES":
             break;
             case "RE":
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "SUMMARIES_UNREAD_BAR_VIEWED":
             break;
             case "ADD_TO_COLLECTION":
@@ -6417,6 +7106,8 @@ if (self2) {
             case "7NqTJn":
             break;
             case "7Xm5QI":
+              combined11 = str.concat(tmp4);
+              origin2 = code.origin;
             break;
             case "I0mOAs":
             break;
@@ -6449,7 +7140,35 @@ if (self2) {
             case "7lZ31J":
             break;
             case "JUMP_TO_GUILD":
-            break;
+              tmp5 = withDefinite;
+              str2 = code.origin;
+              if (str2 == null) {
+                str2 = "array";
+              }
+              if (typeof tmp5 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              if (typeof typeLabel !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              code = typeEntry;
+              if (typeof code !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              tmp9 = undefined;
+              if (str2) {
+                tmp9 = closure_0[str2];
+              }
+              if (tmp9) {
+                str2 = tmp9.label;
+              } else if (str2 == null) {
+                str2 = closure_0.unknown.label;
+              }
+              _HermesInternal = HermesInternal;
+              combined = "\u05D4" + str2;
+              _HermesInternal2 = HermesInternal;
+              combined1 = "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + combined;
+              return combined1;
             case "GUILD_ADD_CHANNEL_PROMPT":
             break;
             case "CHANNEL_PROMPT":
@@ -6463,27 +7182,8 @@ if (self2) {
             case "7vb2cc":
             break;
             case "ccTotal":
-              while (true) {
-                if (tmp19) {
-                  let str16 = code.minimum;
-                  let str17 = " ";
-                  let str18 = " \u05DE\u05D3\u05D9: ";
-                  let str19 = "";
-                  let tmp26 = tmp3;
-                  let str20 = " ";
-                  let tmp27 = tmp4;
-                  let str21 = " ";
-                  let tmp28 = tmp5;
-                  let str22 = " ";
-                  combined2 = "" + tmp2.shortLabel + " \u05DE\u05D3\u05D9: " + tmp3 + " " + tmp4 + " " + tmp5 + str16.toString() + " " + tmp2.unit;
-                } else {
-                  shortLabel = undefined;
-                  if (tmp2 != tmp) {
-                    shortLabel = tmp2.shortLabel;
-                  }
-                }
-              }
-            break;
+              trimmed = str.trim();
+              return trimmed;
             case "TotalStickerCountsByTier":
             break;
             case "7wpqfj":

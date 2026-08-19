@@ -36,20 +36,20 @@ if (tmp) {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
           if (getProto) {
-            const tmp4 = tmp2(546)(tmp);
+            const tmp4 = getProto(tmp);
             const _Symbol = Symbol;
-            const tmp5 = tmp2(542)(tmp4, Symbol.toStringTag);
+            const tmp5 = _mod542(tmp4, Symbol.toStringTag);
             let tmp6 = tmp5;
             if (!tmp5) {
               tmp6 = tmp5;
               if (tmp4) {
                 const _Symbol2 = Symbol;
-                tmp6 = tmp2(542)(tmp2(546)(tmp4), Symbol.toStringTag);
-                const tmp7 = tmp2(546)(tmp4);
+                tmp6 = _mod542(getProto(tmp4), Symbol.toStringTag);
+                const tmp7 = getProto(tmp4);
               }
             }
             const text = `$${arg0}`;
-            closure_8[`$${arg0}`] = tmp2(1422)(tmp6.get);
+            closure_8[`$${arg0}`] = callBind(tmp6.get);
           }
         }
       });
@@ -59,13 +59,13 @@ if (tmp) {
         if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
-            if (_00542__) {
+            if (00542__) {
               _require = obj;
               dependencyMap = false;
-              _forEach(closure_8, (arg0, arg1) => {
+              forEach(closure_8, (fn) => {
                 if (!closure_1) {
                   try {
-                    if ("$" + arg0(closure_0) === arg1) {
+                    if ("$" + fn(closure_0) === arg1) {
                       closure_1 = closure_1_6(arg1, 1);
                     }
                   } catch (err) {
@@ -83,10 +83,10 @@ if (tmp) {
               if (tmp7) {
                 _require = obj;
                 dependencyMap = false;
-                _forEach(closure_8, (arg0, arg1) => {
+                forEach(closure_8, (fn) => {
                   if (!closure_1) {
                     try {
-                      arg0(closure_0);
+                      fn(closure_0);
                       closure_1 = closure_1_6(arg1, 1);
                     } catch (err) {
                     }
@@ -110,4 +110,14 @@ forEach(tmp2, (arg0) => {
     const text = `$${arg0}`;
     closure_8[`$${arg0}`] = callBind(tmp);
   }
+});
+let tmp3 = callBoundIntrinsic("Array.prototype.indexOf", true) || (function indexOf(arg0, arg1) {
+  let num = 0;
+  if (0 < arg0.length) {
+    while (arg0[num] !== arg1) {
+      num = num + 1;
+    }
+    return num;
+  }
+  return -1;
 });

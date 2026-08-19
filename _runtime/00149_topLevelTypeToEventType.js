@@ -12,8 +12,8 @@ arg5.topLevelTypeToEventType = function topLevelTypeToEventType(str) {
     if (charCodeAtResult >= 65) {
       formatted = str;
       if (charCodeAtResult <= 90) {
-        formatted = str.slice(3).toLowerCase();
         str = str.slice(3);
+        formatted = str.toLowerCase();
       }
     }
   }
@@ -24,7 +24,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
     return arg1 ? tmp3.captured : tmp3.bubbled;
   } else {
     for (const key10005 in map.customBubblingEventTypes) {
-      let tmp22 = key10005;
       let charCodeAtResult = key10005.charCodeAt(3);
       let formatted = key10005;
       if (key10005.startsWith("top")) {
@@ -40,8 +39,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
       if (formatted !== arg0) {
         continue;
       } else {
-        let tmp5 = require;
-        let tmp6 = dependencyMap;
         let phasedRegistrationNames = map.customBubblingEventTypes[key10005].phasedRegistrationNames;
         if (null == phasedRegistrationNames) {
           continue;
@@ -58,7 +55,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
           }
           obj[1] = captured;
         }
-        let tmp17 = null;
         if (null == obj) {
           return null;
         } else {
@@ -68,7 +64,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
           } else {
             bubbled = obj.bubbled;
           }
-          let tmp18 = bubbled;
         }
       }
       continue;
@@ -78,7 +73,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
     if (keys !== undefined) {
       obj = null;
       while (keys[tmp] !== undefined) {
-        let tmp24 = arr;
         let charCodeAtResult1 = arr.charCodeAt(3);
         let formatted1 = arr;
         if (arr.startsWith("top")) {
@@ -94,8 +88,6 @@ arg5.getEventTypePropName = function getEventTypePropName(arg0, arg1) {
         if (formatted1 !== arg0) {
           continue;
         } else {
-          let tmp14 = require;
-          let tmp15 = dependencyMap;
           let tmp16 = map.customDirectEventTypes[arr];
           if (null == tmp16.registrationName) {
             continue;

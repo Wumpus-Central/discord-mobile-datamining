@@ -4,7 +4,6 @@ import swizzle from "06334_swizzle.js";
 
 let obj = Object.create(null);
 for (const key10013 in require("keys")) {
-  let tmp3 = key10013;
   let call = hasOwnProperty.call;
   let tmp4 = require("keys");
   if (typeof call === "unknown") {
@@ -22,7 +21,8 @@ for (const key10013 in require("keys")) {
 }
 obj = { to: {}, get: {} };
 obj.get = (str) => {
-  const formatted = str.substring(0, 3).toLowerCase();
+  str = str.substring(0, 3);
+  const formatted = str.toLowerCase();
   if ("hsl" === formatted) {
     const get3 = obj.get;
     let hslResult = get3.hsl(str);
@@ -135,29 +135,22 @@ obj.get.rgb = (str) => {
             } else {
               const call = hasOwnProperty.call;
               items1 = null;
-              if (typeof call === "unknown" ? tmp9(match4[1]) : call(tmp12, match4[1])) {
-                const tmp15 = tmp10(6331)[match4[1]];
+              if (typeof call === "unknown" ? hasOwnProperty(match4[1]) : call(tmp12, match4[1])) {
+                const tmp15 = keys[match4[1]];
                 tmp15[3] = 1;
                 items1 = tmp15;
               }
-              tmp10 = require;
               tmp12 = keys;
-              tmp9 = hasOwnProperty;
             }
           }
         }
       }
     }
     do {
-      let tmp27 = globalThis;
       let _Math2 = Math;
       let _Math3 = Math;
-      let num21 = 0;
-      let num22 = 255;
       items[num7] = Math.min(Math.max(0, items[num7]), 255);
-      let num23 = 1;
       num7 = num7 + 1;
-      let num24 = 3;
     } while (num7 < 3);
     const _Math4 = Math;
     const _Math5 = Math;

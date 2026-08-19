@@ -27,11 +27,6 @@ obj = {
     return nativeEventEmitter.addListener(c0 + arg0, arg1);
   }
 };
-obj = {
-  addListener(arg0, arg1) {
-    return nativeEventEmitter.addListener(c0 + arg0, arg1);
-  }
-};
 if (Platform.Version >= 30) {
   let fn = __INTERNAL_VIEW_CONFIG.default;
 } else {

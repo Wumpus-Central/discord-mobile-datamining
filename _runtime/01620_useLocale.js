@@ -1,6 +1,6 @@
 // _runtime/01620_useLocale.js
 import context2 from "01611_context.js";
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 require = arg1;
 

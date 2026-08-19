@@ -4,12 +4,11 @@ import { useMemo } from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopDefault;
 ({ Animated: c3, StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { width: 13, height: 2, borderRadius: 1 };
-obj = { marginHorizontal: 5, width: 30, height: 30, justifyContent: "center", alignItems: "center" };
+let obj = { marginHorizontal: 5, width: 30, height: 30, justifyContent: "center", alignItems: "center" };
 obj = { arrowUpContainer: obj, arrowDownContainer: null, arrow: null, arrowLeftLine: null, arrowRightLine: null };
 const obj1 = {};
 const merged = Object.assign(obj);
@@ -34,13 +33,11 @@ const styles = StyleSheet.create(obj);
 export default function _default(disabled) {
   disabled = disabled.disabled;
   const theme = disabled.theme;
-  let keyboardState;
-  let RN;
   let obj = disabled(theme[3]);
-  keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
+  const keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
   let items = [disabled, theme, keyboardState];
   const tmp2 = keyboardState(() => ({ backgroundColor: disabled ? theme[keyboardState].disabled : theme[keyboardState].primary }), items);
-  RN = tmp2;
+  const RN = tmp2;
   const items1 = [tmp2];
   const items2 = [tmp2];
   const tmp3 = keyboardState(() => {
@@ -54,11 +51,10 @@ export default function _default(disabled) {
     tmp7 = closure_7;
     arrowUpContainer = closure_7.arrowUpContainer;
   }
-  obj = { style: arrowUpContainer, children: null };
   obj = { style: tmp7.arrow, children: null };
   const items3 = [
-    closure_5(RN.View, { style: tmp3 }),
-    closure_5(RN.View, {
+    callback(RN.View, { style: tmp3 }),
+    callback(RN.View, {
       style: keyboardState(() => {
         const items = [closure_1_7.arrowRightLine, closure_3];
         return items;
@@ -67,5 +63,5 @@ export default function _default(disabled) {
   ];
   obj[1] = items3;
   obj[1] = callback(closure_4, obj);
-  return closure_5(closure_4, obj);
+  return callback(closure_4, obj);
 };

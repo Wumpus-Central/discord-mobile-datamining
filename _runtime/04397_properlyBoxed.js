@@ -1,28 +1,28 @@
 // _runtime/04397_properlyBoxed.js
 
-export default function properlyBoxed(fn) {
+export default function properlyBoxed(call) {
   c0 = true;
   c1 = true;
-  if (typeof fn === "function") {
+  if (typeof call === "function") {
     try {
-      const call = fn.call;
-      fn = (arg0, arg1, obj) => {
+      call = call.call;
+      const fn = (arg0, arg1, obj) => {
         if (typeof obj !== "object") {
           c0 = false;
         }
       };
       if (typeof call === "unknown") {
-        fn(fn);
+        call(fn);
       } else {
         call("f", fn);
       }
-      const call2 = fn.call;
+      const call2 = call.call;
       const items = [null];
       const fn2 = function() {
         closure_1 = typeof this === "string";
       };
       if (typeof call2 === "unknown") {
-        fn(fn2, "x");
+        call(fn2, "x");
       } else {
         call2(items, fn2, "x");
       }

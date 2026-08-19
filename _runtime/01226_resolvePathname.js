@@ -57,8 +57,6 @@ export default function resolvePathname(str) {
     let num8 = 0;
     while (0 <= length) {
       let tmp6 = combined[length];
-      let tmp7 = length;
-      let tmp8 = num7;
       if ("." === tmp6) {
         let sum = length + 1;
         let length4 = combined.length;
@@ -124,7 +122,6 @@ export default function resolvePathname(str) {
       let first = combined[0];
       if (first) {
         first = "/" === combined[0].charAt(0);
-        const str14 = combined[0];
       }
       tmp22 = first;
     }

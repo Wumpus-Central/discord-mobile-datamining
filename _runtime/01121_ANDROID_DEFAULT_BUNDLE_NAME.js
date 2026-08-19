@@ -8,14 +8,12 @@ let c2 = "app:///index.android.bundle";
 export const ANDROID_DEFAULT_BUNDLE_NAME = "app:///index.android.bundle";
 export const IOS_DEFAULT_BUNDLE_NAME = "app:///main.jsbundle";
 export const createReactNativeRewriteFrames = function createReactNativeRewriteFrames() {
-  let obj = registerSpanErrorInstrumentation;
-  obj = {
+  const obj = {
     iteratee(platform) {
       if ("java" !== platform.platform) {
         if ("cocoa" !== platform.platform) {
           if (platform.filename) {
             delete tmp[tmp2];
-            const str2 = platform.filename;
             const str4 = platform.filename.replace(/^file:\/\//, "");
             platform.filename = platform.filename.replace(/^file:\/\//, "").replace(/^address at /, "").replace(/^.*\/[^.]+(\.app|CodePush|.*(?=\/))/, "");
             if ("[native code]" !== platform.filename) {
@@ -30,12 +28,12 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
                 if (isHermesEnabledResult) {
                   platform.colno = platform.colno + 1;
                 }
-                let tmp9Result = tmp9(tmp10[2]);
+                let tmp9Result = callback(table[2]);
                 if (tmp9Result.isExpo()) {
                   platform.filename = closure_2;
                   return platform;
                 } else {
-                  tmp9Result = tmp9(tmp10[2]);
+                  tmp9Result = callback(table[2]);
                   tmp9Result.isExpo();
                   if ("/InternalBytecode.js" === platform.filename) {
                     platform.in_app = false;

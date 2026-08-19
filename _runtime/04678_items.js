@@ -79,11 +79,11 @@ export const resolveSheetLargestUndimmedDetent = function resolveSheetLargestUnd
   }
   return tmp;
 };
-export const resolveSheetInitialDetentIndex = function resolveSheetInitialDetentIndex(arg0, arg1) {
+export const resolveSheetInitialDetentIndex = function resolveSheetInitialDetentIndex(sheetInitialDetentIndex, arg1) {
   let num = arg1;
-  if ("last" !== arg0) {
-    num = arg0;
-    if (null == arg0) {
+  if ("last" !== sheetInitialDetentIndex) {
+    num = sheetInitialDetentIndex;
+    if (null == sheetInitialDetentIndex) {
       num = 0;
     }
   }

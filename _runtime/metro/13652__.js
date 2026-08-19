@@ -8,14 +8,14 @@ arg5.supportedValuesOf = undefined;
 let obj = {
   enumerable: true,
   get() {
-    return shouldPolyfill.shouldPolyfill;
+    return shouldPolyfill /* shouldPolyfill */.shouldPolyfill;
   }
 };
 Object.defineProperty(arg5, "shouldPolyfill", obj);
 obj = {
   enumerable: true,
   get() {
-    return supportedValuesOf.supportedValuesOf;
+    return supportedValuesOf /* supportedValuesOf */.supportedValuesOf;
   }
 };
 Object.defineProperty(arg5, "supportedValuesOf", obj);

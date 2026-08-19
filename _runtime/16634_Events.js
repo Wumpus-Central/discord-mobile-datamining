@@ -61,7 +61,7 @@ class EventEmitter {
           substr = key10004;
           if (!c1) {
           } else {
-            substr = require("module_1");
+            substr = require("../discord_app/modules/debug/logAppStart.tsx");
           }
           arr = items.push(substr);
           continue;

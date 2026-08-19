@@ -17,11 +17,11 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
         current = current.current;
       }
       const fn = function u(arr) {
-        const findIndexResult = arr.findIndex((tag) => tag.tag === tag.tag);
+        const findIndexResult = arr.findIndex((item, index) => item.tag === tag.tag);
         if (-1 !== findIndexResult) {
           arr[findIndexResult] = closure_0;
         } else {
-          arr.push(closure_0);
+          arr = arr.push(closure_0);
         }
         if (current != null) {
           tmp5(true);
@@ -37,7 +37,7 @@ arg5.makeViewDescriptorsSet = function makeViewDescriptorsSet() {
       mutable = viewTag;
       set.delete(viewTag);
       const fn = function c(arr) {
-        const findIndexResult = arr.findIndex((tag) => tag.tag === closure_0);
+        const findIndexResult = arr.findIndex((item, index) => item.tag === closure_0);
         if (-1 !== findIndexResult) {
           arr.splice(findIndexResult, 1);
         }

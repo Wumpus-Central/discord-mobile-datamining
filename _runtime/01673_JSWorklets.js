@@ -1,6 +1,6 @@
 // _runtime/01673_JSWorklets.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const JSWorklets = arg1;
 class JSWorklets {

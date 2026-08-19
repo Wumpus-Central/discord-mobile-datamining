@@ -1,8 +1,8 @@
 // _runtime/04121__isNativeReflectConstruct.js
 import _wrapNativeSuperDefault from "metro/00158__wrapNativeSuper.js";
 import ModuleNotFoundError from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";

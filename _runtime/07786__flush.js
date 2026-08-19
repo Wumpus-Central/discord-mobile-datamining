@@ -1,15 +1,18 @@
 // _runtime/07786__flush.js
+import consoleSandbox from "07738_consoleSandbox.js";
 import getGlobalSingleton from "07739_getGlobalSingleton.js";
 import addContextToFrame from "07749_addContextToFrame.js";
+import updateSession from "07761_updateSession.js";
 import getClient from "07765_getClient.js";
+import __SENTRY_DEBUG__ from "metro/07766___SENTRY_DEBUG__.js";
+import _mod7775 from "metro/07775__.js";
 import applyClientOptions from "07787_applyClientOptions.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
-import { addContextToFrame } from "07749_addContextToFrame.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 import { getClient } from "07765_getClient.js";
 
 function _flush() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c1 = 0;
     return (function*(arg0) {
@@ -40,17 +43,16 @@ function _flush() {
           } else {
             const client = callback(table[1]).getClient();
             if (client) {
-              client.flush(tmp14);
+              client.flush(callback);
             } else {
-              if (tmp15(tmp16[3]).DEBUG_BUILD) {
-                const logger = tmp15(tmp16[4]).logger;
+              if (callback(tmp16[3]).DEBUG_BUILD) {
+                const logger = callback(tmp16[4]).logger;
                 logger.warn("Cannot flush events. No client defined.");
               }
               const resolved = Promise.resolve(false);
             }
             table = 3;
             const obj3 = callback(table[1]);
-            tmp14 = callback;
           }
         } catch (tmp8) {
           table = tmp;
@@ -70,7 +72,7 @@ function _flush() {
 }
 function _close() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c1 = 0;
     return (function*(arg0) {
@@ -101,17 +103,16 @@ function _close() {
           } else {
             const client = callback(table[1]).getClient();
             if (client) {
-              client.close(tmp14);
+              client.close(callback);
             } else {
-              if (tmp15(tmp16[3]).DEBUG_BUILD) {
-                const logger = tmp15(tmp16[4]).logger;
+              if (callback(tmp16[3]).DEBUG_BUILD) {
+                const logger = callback(tmp16[4]).logger;
                 logger.warn("Cannot flush events and disable SDK. No client defined.");
               }
               const resolved = Promise.resolve(false);
             }
             table = 3;
             const obj3 = callback(table[1]);
-            tmp14 = callback;
           }
         } catch (tmp8) {
           table = tmp;
@@ -131,16 +132,14 @@ function _close() {
 }
 function endSession() {
   const isolationScope = getClient.getIsolationScope();
-  const obj = getClient;
   const currentScope = getClient.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
-    let tmpResult = tmp(7761);
+    let tmpResult = updateSession;
     tmpResult.closeSession(tmp3);
   }
-  tmpResult = tmp(7765);
+  tmpResult = getClient;
   const isolationScope1 = tmpResult.getIsolationScope();
-  const obj3 = getClient;
   const currentScope1 = getClient.getCurrentScope();
   const tmpResult1 = getClient;
   const client = getClient.getClient();
@@ -154,6 +153,7 @@ function endSession() {
   }
   isolationScope.setSession();
   currentScope.setSession();
+  const tmpResult2 = getClient;
 }
 
 export const addEventProcessor = function addEventProcessor(arg0) {
@@ -162,20 +162,18 @@ export const addEventProcessor = function addEventProcessor(arg0) {
 };
 export const captureCheckIn = function captureCheckIn(arg0, arg1) {
   const currentScope = getClient.getCurrentScope();
-  const obj = getClient;
   const client = getClient.getClient();
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
-    } else if (tmp(7766).DEBUG_BUILD) {
-      const logger2 = tmp(7738).logger;
+    } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const logger2 = consoleSandbox.logger;
       logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-  } else if (tmp(7766).DEBUG_BUILD) {
-    const logger = tmp(7738).logger;
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    const logger = consoleSandbox.logger;
     logger.warn("Cannot capture check-in. No client defined.");
   }
-  const obj2 = getClient;
   return addContextToFrame.uuid4();
 };
 export const captureEvent = function captureEvent(arg0, arg1) {
@@ -184,7 +182,6 @@ export const captureEvent = function captureEvent(arg0, arg1) {
 };
 export const captureException = function captureException(arg0, arg1) {
   const currentScope = getClient.getCurrentScope();
-  const obj = getClient;
   return currentScope.captureException(arg0, applyClientOptions.parseEventHintOrCaptureContext(arg1));
 };
 export const captureMessage = function captureMessage(arg0, str) {
@@ -211,9 +208,7 @@ export const captureSession = function captureSession() {
     endSession();
   } else {
     const isolationScope = getClient.getIsolationScope();
-    const obj = getClient;
     const currentScope = getClient.getCurrentScope();
-    const obj3 = getClient;
     const client = getClient.getClient();
     const tmp3 = currentScope.getSession() || isolationScope.getSession();
     let tmp4 = tmp3;
@@ -223,7 +218,6 @@ export const captureSession = function captureSession() {
     if (tmp4) {
       client.captureSession(tmp3);
     }
-    const obj5 = getClient;
   }
 };
 export const close = function close(arg0) {
@@ -293,7 +287,6 @@ export const startSession = function startSession(arg0) {
   let obj = getClient;
   const client = obj.getClient();
   const isolationScope = getClient.getIsolationScope();
-  const obj3 = getClient;
   const currentScope = getClient.getCurrentScope();
   let options = client;
   if (client) {
@@ -304,13 +297,11 @@ export const startSession = function startSession(arg0) {
   }
   ({ environment, release } = options);
   if (undefined === environment) {
-    environment = tmp(7775).DEFAULT_ENVIRONMENT;
+    environment = _mod7775.DEFAULT_ENVIRONMENT;
   }
-  const obj5 = getClient;
   const userAgent = getGlobalSingleton.GLOBAL_OBJ.navigator || {}.userAgent;
-  let tmpResult = tmp(7761);
+  let tmpResult = updateSession;
   obj = { release, environment, user: null };
-  const tmp3 = getGlobalSingleton.GLOBAL_OBJ.navigator || {};
   obj[2] = currentScope.getUser() || isolationScope.getUser();
   let tmp5 = userAgent;
   if (userAgent) {
@@ -327,7 +318,7 @@ export const startSession = function startSession(arg0) {
     tmp10 = "ok" === session1.status;
   }
   if (tmp10) {
-    tmpResult = tmp(7761);
+    tmpResult = updateSession;
     tmpResult.updateSession(session1, { status: "exited" });
   }
   endSession();
@@ -347,21 +338,22 @@ export const withMonitor = function withMonitor(monitorSlug) {
     if (client) {
       if (client.captureCheckIn) {
         client.captureCheckIn(obj, undefined, currentScope);
-      } else if (tmp(7766).DEBUG_BUILD) {
-        const logger2 = tmp(7738).logger;
+      } else if (monitorSlug(7766).DEBUG_BUILD) {
+        const logger2 = monitorSlug(7738).logger;
         logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
       }
-    } else if (tmp(7766).DEBUG_BUILD) {
-      const logger = tmp(7738).logger;
+    } else if (monitorSlug(7766).DEBUG_BUILD) {
+      const logger = monitorSlug(7738).logger;
       logger.warn("Cannot capture check-in. No client defined.");
     }
     const obj4 = monitorSlug(7765);
     monitorSlug(7749).uuid4();
+    const tmpResult = monitorSlug(7749);
   }
-  let currentScope = _getClient.getCurrentScope();
+  let currentScope = require("07765_getClient.js").getCurrentScope();
   let obj = { monitorSlug, status: "in_progress" };
-  let obj2 = _getClient;
-  let client = _getClient.getClient();
+  let obj2 = getClient;
+  let client = require("07765_getClient.js").getClient();
   if (client) {
     if (client.captureCheckIn) {
       let captureCheckInResult = client.captureCheckIn(obj, arg2, currentScope);
@@ -369,7 +361,7 @@ export const withMonitor = function withMonitor(monitorSlug) {
       let logger2 = tmp(7738).logger;
       logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-    closure_2 = captureCheckInResult;
+    asyncGeneratorStep = captureCheckInResult;
     let tmpResult = tmp(7752);
     closure_3 = tmpResult.timestampInSeconds();
     tmpResult = tmp(7765);
@@ -378,7 +370,7 @@ export const withMonitor = function withMonitor(monitorSlug) {
         const tmp3 = dependencyMap();
         if (obj.isThenable(tmp3)) {
           const resolved = Promise.resolve(tmp3);
-          resolved.then(() => {
+          resolved.then((result) => {
             callback("ok");
           }, (arg0) => {
             callback("error");
@@ -397,6 +389,6 @@ export const withMonitor = function withMonitor(monitorSlug) {
     let logger = tmp(7738).logger;
     logger.warn("Cannot capture check-in. No client defined.");
   }
-  let obj3 = _getClient;
-  captureCheckInResult = _addContextToFrame.uuid4();
+  let obj3 = getClient;
+  captureCheckInResult = require("07749_addContextToFrame.js").uuid4();
 };

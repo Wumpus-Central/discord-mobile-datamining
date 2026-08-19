@@ -10,9 +10,6 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
   if (0 < str.length) {
     while (true) {
       let charCodeAtResult = str.charCodeAt(num2);
-      let tmp3 = num2;
-      let tmp4 = tmp;
-      let tmp5 = num;
       if (charCodeAtResult > 55295) {
         if (charCodeAtResult < 57344) {
           if (tmp) {
@@ -55,7 +52,6 @@ arg5.utf8ToBytes = function utf8ToBytes(str) {
             } else {
               let diff4 = tmp10 - 4;
               if (diff4 >= 0) {
-                let tmp31 = items;
                 let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
                 tmp12 = null;
                 tmp13 = diff4;

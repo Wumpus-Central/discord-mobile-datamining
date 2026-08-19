@@ -4,32 +4,32 @@ import { cancelAnimation } from "01654_cancelAnimation.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 
-export const useReactiveSharedValue = (obj) => {
+export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
   const tmp = callback2(null);
   const tmp2 = callback2(null);
   const _require = tmp2;
-  let tmp3 = obj;
-  if (obj) {
-    tmp3 = typeof obj === "object";
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
   if (tmp3) {
-    tmp3 = "value" in obj;
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
   }
   if (!tmp3) {
     if (null === tmp2.current) {
-      tmp.current = obj;
-      if (typeof obj === "object") {
-        obj = _cancelAnimation;
-        obj = {};
-        const merged = Object.assign(obj);
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        cancelAnimation;
+        let obj = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
         let mutable = obj.makeMutable(obj);
       } else {
-        mutable = _cancelAnimation.makeMutable(obj);
-        const obj3 = _cancelAnimation;
+        mutable = require("01654_cancelAnimation.js").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = cancelAnimation;
       }
       tmp2.current = mutable;
-    } else if (tmp.current !== obj) {
-      tmp2.current.value = obj;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
     }
   }
   callback(() => () => {
@@ -40,7 +40,7 @@ export const useReactiveSharedValue = (obj) => {
   }, []);
   let current = tmp2.current;
   if (current == null) {
-    current = obj;
+    current = INITIAL_CONTAINER_HEIGHT;
   }
   return current;
 };

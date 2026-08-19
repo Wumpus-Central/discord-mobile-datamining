@@ -1,6 +1,6 @@
 // _runtime/12263_JSONSchemaGenerator.js
-import closure_2 from "metro/00109__objectWithoutProperties.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const JSONSchemaGenerator = require;
@@ -141,7 +141,7 @@ const items = [
         }
       }
       JSONSchemaGenerator(12261).extractDefs(self.ctx, _idmap);
-      return callback(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
+      return _objectWithoutProperties(JSONSchemaGenerator(12261).finalize(self.ctx, _idmap), closure_4);
     }
   }
 ];

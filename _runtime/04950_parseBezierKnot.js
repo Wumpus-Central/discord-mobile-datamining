@@ -1,7 +1,7 @@
 // _runtime/04950_parseBezierKnot.js
 import getDataView from "04910_getDataView.js";
 import _modDef4927 from "metro/04927__.js";
-import closure_3 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function parseBezierKnot(dataView) {
@@ -9,25 +9,21 @@ function parseBezierKnot(dataView) {
   let num = 0;
   do {
     let sum = arg1 + num;
-    let tmp3 = dependencyMap;
-    let tmp2 = importDefault;
     let obj = _modDef4927;
     let longAt = obj.getLongAt(dataView, sum);
-    let tmp5 = num;
     let num2 = -1;
     if (longAt >>> 31 === 0) {
       num2 = 1;
     }
     let str = (2130706432 & longAt) >>> 24;
     let _parseInt = parseInt;
-    let tmp6 = require;
     let obj2 = getDataView;
     let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
     let obj3 = getDataView;
     let text = `${str.toString(2)}.`;
     let obj4 = getDataView;
     let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
-    let tmp2Result = tmp2(4927);
+    let tmp2Result = _modDef4927;
     let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
     let num3 = -1;
     if (longAt1 >>> 31 === 0) {
@@ -35,38 +31,33 @@ function parseBezierKnot(dataView) {
     }
     let str3 = (2130706432 & longAt1) >>> 24;
     let _parseInt2 = parseInt;
-    let tmp6Result = tmp6(4910);
+    let tmp6Result = getDataView;
     let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
-    tmp6Result = tmp6(4910);
+    tmp6Result = getDataView;
     let text1 = `${str3.toString(2)}.`;
-    let tmp6Result1 = tmp6(4910);
+    let tmp6Result1 = getDataView;
     let items1 = [num3 * tmp6Result.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result1.padStart(str4.toString(2), 24, "0"), 2), result];
     let arr = items.push(items1);
     num = num + 8;
   } while (num < 24);
   return items;
 }
-let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
-obj = { 2000: null, 2999: null };
+let obj = { 2000: null, 2999: null };
 obj[2000] = {
   name: "PathInformation",
   description: function pathResource(byteLength) {
     const types = {};
     const paths = [];
     for (let num = 0; num < byteLength.byteLength; num = num + 26) {
-      let tmp = importDefault;
-      let tmp2 = dependencyMap;
       let obj2 = _modDef4927;
       let shortAt = obj2.getShortAt(byteLength, num);
-      let tmp4 = table;
-      let tmp5 = num;
       if (table[shortAt]) {
         if (!types[shortAt]) {
-          types[shortAt] = tmp4[shortAt].description;
+          types[shortAt] = table[shortAt].description;
         }
         let obj = { type: null, path: null };
         obj[0] = shortAt;
-        let obj4 = tmp4[shortAt];
+        let obj4 = table[shortAt];
         obj[1] = obj4.path(byteLength, num + 2);
         let arr = paths.push(obj);
       }
@@ -122,27 +113,23 @@ let closure_4 = {
       if (longAt >>> 31 === 0) {
         num2 = 1;
       }
-      const obj = _modDef4927;
-      const obj2 = getDataView;
       const str2 = longAt & parseInt(getDataView.strRepeat("1", 24), 2);
       const text = `${str.toString(2)}.`;
       const obj3 = getDataView;
       const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + getDataView.padStart(str2.toString(2), 24, "0"), 2), , , ];
       sum = sum + 4;
-      let tmpResult = tmp(4927);
+      let tmpResult = _modDef4927;
       const longAt1 = tmpResult.getLongAt(dataView, sum);
       let num3 = num;
       if (longAt1 >>> 31 === 0) {
         num3 = 1;
       }
-      let tmp4Result = tmp4(4910);
-      const obj4 = getDataView;
-      tmp4Result = tmp4(4910);
+      const tmp4Result = getDataView;
       const text1 = `${str3.toString(2)}.`;
       const str4 = longAt1 & parseInt(tmp4Result.strRepeat("1", 24), 2);
       items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + getDataView.padStart(str4.toString(2), 24, "0"), 2);
       const sum1 = sum + 8;
-      tmpResult = tmp(4927);
+      tmpResult = _modDef4927;
       const longAt2 = tmpResult.getLongAt(dataView, sum1);
       let num4 = num;
       if (longAt2 >>> 31 === 0) {

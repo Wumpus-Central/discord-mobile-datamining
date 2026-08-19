@@ -2,10 +2,10 @@
 import RN_GLOBAL_OBJ from "00816_RN_GLOBAL_OBJ.js";
 import TurboModuleRegistry from "00997_TurboModuleRegistry.js";
 import getExpoConstants from "01003_getExpoConstants.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 
-require = arg1;
+require = fn;
 
 export const isHermesEnabled = function isHermesEnabled() {
   return RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.HermesInternal;
@@ -32,7 +32,6 @@ export const getReactNativeVersion = function getReactNativeVersion() {
     const _HermesInternal2 = HermesInternal;
     return "" + major + "." + minor + "." + patch + str2;
   }
-  const tmp = require;
 };
 export const isExpo = function isExpo() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
@@ -66,7 +65,6 @@ export const getExpoSdkVersion = function getExpoSdkVersion() {
   }
   if (typeof runtimeVersion === "string") {
     let parts = expoConstants.manifest.runtimeVersion.split(":");
-    const str = expoConstants.manifest.runtimeVersion;
   } else {
     parts = [];
   }
@@ -95,7 +93,7 @@ export const getHermesVersion = function getHermesVersion() {
   if (null !== getRuntimeProperties) {
     if (undefined !== getRuntimeProperties) {
       const call = getRuntimeProperties.call;
-      OSS_Release_Version = typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
+      const prop = typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
     }
   }
 };

@@ -1,26 +1,25 @@
 // _runtime/01800_isAnimated.js
-let isAnimated = arg1;
 let dependencyMap = arg6;
-isAnimated = function isAnimated(arr) {
-  if (Array.isArray(arr)) {
-    let someResult = arr.some(isAnimated);
+function isAnimated(onFrame) {
+  if (Array.isArray(onFrame)) {
+    let someResult = onFrame.some(isAnimated);
   } else {
-    someResult = typeof arr === "object";
-    if (typeof arr === "object") {
-      someResult = null !== arr;
+    someResult = typeof onFrame === "object";
+    if (typeof onFrame === "object") {
+      someResult = null !== onFrame;
     }
     if (someResult) {
-      let someResult1 = undefined !== arr.onFrame;
+      let someResult1 = undefined !== onFrame.onFrame;
       if (!someResult1) {
         const _Object = Object;
-        const values = Object.values(arr);
+        const values = Object.values(onFrame);
         someResult1 = values.some(isAnimated);
       }
       someResult = someResult1;
     }
   }
   return someResult;
-};
+}
 isAnimated.__closure = {};
 isAnimated.__workletHash = 4296700641760;
 isAnimated.__initData = { code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}" };
@@ -60,16 +59,16 @@ validateAnimatedStyles.__workletHash = 9250446401049;
 validateAnimatedStyles.__initData = { code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}" };
 arg5.buildWorkletsHash = function buildWorkletsHash(items1) {
   const values = Object.values(items1);
-  return values.reduce((arg0, __workletHash) => arg0 + __workletHash.__workletHash.toString(), "");
+  return values.reduce((acc, item, index) => acc + item.__workletHash.toString(), "");
 };
 arg5.buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
   let values = Object.values(memoizedGestureCallbacks);
-  const found = values.filter((arg0) => undefined !== arg0);
+  const found = values.filter((item, index) => undefined !== item);
   let tmp2 = found;
   if (arr) {
     const _Object = Object;
     values = Object.values(found);
-    arr.push(values.reduce((arg0, __workletHash) => arg0 + __workletHash.__workletHash.toString(), ""));
+    arr = arr.push(values.reduce((acc, item, index) => acc + item.__workletHash.toString(), ""));
     tmp2 = arr;
   }
   return tmp2;
@@ -111,7 +110,6 @@ arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDep
           while (true) {
             let tmp2 = dependencies[num];
             let tmp3 = savedDependencies[num];
-            let tmp4 = num;
             if (is(tmp2, tmp3)) {
               let sum = num + 1;
               num = sum;
@@ -121,7 +119,6 @@ arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDep
               }
             } else {
               let tmp5 = isAnimated;
-              let tmp6 = dependencyMap;
               let obj = isAnimated(1679);
               flag = false;
               if (!obj.isWorkletFunction(tmp2)) {
@@ -139,10 +136,10 @@ arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDep
                     let _Object2 = Object;
                     let keys = Object.keys(tmp2.__closure);
                     let _Object3 = Object;
-                    let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((arg0) => {
-                      let tmp2 = arg0 in __closure2.__closure;
+                    let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((item, index) => {
+                      let tmp2 = item in __closure2.__closure;
                       if (tmp2) {
-                        tmp2 = __closure.__closure[arg0] === tmp.__closure[arg0];
+                        tmp2 = __closure.__closure[item] === tmp.__closure[item];
                       }
                       return tmp2;
                     });

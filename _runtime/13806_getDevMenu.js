@@ -1,5 +1,5 @@
 // _runtime/13806_getDevMenu.js
-import closure_0 from "00017_get_ActivityIndicator.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 function getDevMenu() {
 

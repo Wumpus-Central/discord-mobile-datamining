@@ -1,5 +1,5 @@
 // _runtime/09939_useInvalidPreventRemoveError.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 

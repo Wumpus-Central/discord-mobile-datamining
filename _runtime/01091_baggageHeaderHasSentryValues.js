@@ -6,8 +6,8 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.baggageHeaderHasSentryValues = function baggageHeaderHasSentryValues(baggage) {
   const parts = baggage.split(",");
-  return parts.some((str) => {
-    const trimmed = str.trim();
+  return parts.some((item, index) => {
+    const trimmed = item.trim();
     return trimmed.startsWith("sentry-");
   });
 };

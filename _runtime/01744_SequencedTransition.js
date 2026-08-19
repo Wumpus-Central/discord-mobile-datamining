@@ -1,9 +1,7 @@
 // _runtime/01744_SequencedTransition.js
 arg5.SequencedTransition = function SequencedTransition(name) {
   ({ translateX, translateY, scaleX, scaleY, reversed } = arg1);
-  let obj = { name, style: null, duration: 300 };
-  obj = { 0: null, 50: null, 100: null };
-  obj = { transform: null };
+  const obj = { transform: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
   obj[0] = items;
   obj[0] = obj;

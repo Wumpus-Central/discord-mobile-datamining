@@ -19,7 +19,6 @@ export default function formatDistance(arg0, arg1, addSuffix) {
   } else {
     const _String = String;
     one = tmp.other.replace("{{count}}", String(arg1));
-    const str = tmp.other;
   }
 };
 export default exports.default;

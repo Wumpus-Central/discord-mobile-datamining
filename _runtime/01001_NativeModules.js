@@ -2,20 +2,20 @@
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import TurboModuleRegistry2 from "00997_TurboModuleRegistry.js";
 import convertToNormalizedObject from "01014_convertToNormalizedObject.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import isHermesEnabled from "01002_isHermesEnabled.js";
 import encodeUTF8 from "01004_encodeUTF8.js";
 
 let self = this;
-require = arg1;
+require = fn;
 const NativeModules = get_ActivityIndicator.NativeModules;
-let fn = this;
+fn = this;
 if (this) {
   fn = self.__awaiter;
 }
 if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
+  fn = (arg0) => {
     closure_0 = arg0;
     closure_1 = arg1;
     let _Promise = arg2;
@@ -23,12 +23,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -48,8 +48,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -63,13 +63,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -86,7 +86,6 @@ if (!fn2) {
   fn2 = (obj, arr) => {
     obj = {};
     for (const key10007 in arg0) {
-      let tmp6 = key10007;
       let _Object2 = Object;
       let call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
@@ -163,75 +162,21 @@ isHermesEnabled = {
       c2 = 0;
       c3 = 0;
       return (function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let obj2 = _self;
-                closure_1 = tmp2;
-                _self = undefined;
-                if (_self.enableNative) {
-                  if (obj2._isModuleLoaded(closure_1_6)) {
-                    c2 = 1;
-                    c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj4.fetchModules();
-                    return obj1;
-                  } else {
-                    throw obj2._NativeClientError;
-                  }
-                  obj4 = closure_1_6;
-                } else {
-                  throw obj2._DisabledNativeError;
-                }
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              _self = arg1;
-              let parsed = null;
-              if (_self) {
-                const _JSON = JSON;
-                parsed = JSON.parse(_self);
-              }
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = parsed;
-              return obj;
-            }
-          } catch (tmp11) {
-            c3 = tmp;
-            throw tmp11;
-          }
+        const obj2 = _self;
+        closure_1 = tmp2;
+        if (!_self.enableNative) {
+          throw obj2._DisabledNativeError;
         }
+        if (!obj2._isModuleLoaded(closure_1_6)) {
+          throw obj2._NativeClientError;
+        }
+        _self = yield closure_1_6.fetchModules();
+        let parsed = null;
+        if (_self) {
+          const _JSON = JSON;
+          parsed = JSON.parse(_self);
+        }
+        return parsed;
       })();
     });
   },
@@ -258,158 +203,113 @@ isHermesEnabled = {
           }
         } else {
           while (true) {
-            let num = 2;
             c3 = 2;
             if (0 === c4) {
               if (arg0 === 1) {
-                let num7 = 3;
                 c3 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                let num6 = 3;
                 c3 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
-              } else {
-                let obj14 = self;
-                if (self.enableNative) {
-                  let tmp10 = c6;
-                  if (obj14._isModuleLoaded(c6)) {
-                    let tmp11 = closure_1_2;
-                    let tmp12 = self;
-                    let tmp13 = closure_1_2(self, 2);
-                    let tmp14 = tmp13[1];
-                    let _JSON = JSON;
-                    let tmp16 = self;
-                    let tmp17 = closure_1_1;
-                    let json = JSON.stringify(tmp13[0]);
-                    obj1 = self(closure_1_1[4]);
-                    let encodeUTF8Result = obj1.encodeUTF8(json);
-                    let _Uint8Array = Uint8Array;
-                    let tmp18 = closure_1_7;
-                    let tmp19 = new.target;
-                    let tmp20 = new.target;
-                    let uint8Array = new Uint8Array(encodeUTF8Result.length + closure_1_7.length);
-                    let arr2 = uint8Array;
-                    let result = uint8Array.set(encodeUTF8Result);
-                    let result1 = uint8Array.set(closure_1_7, encodeUTF8Result.length);
-                    closure_2 = tmp14;
-                    let tmp23 = tmp14;
-                    closure_2 = tmp14;
-                    closure_1 = tmp14[Symbol.iterator]();
-                    let flag = false;
-                    let tmp24 = closure_2;
-                    let tmp25 = closure_1;
-                    let tmp27 = flag;
-                    let tmp28 = arr2;
-                    while (closure_1 !== undefined) {
-                      c6 = 1;
-                      let tmp56 = closure_1_2;
-                      let tmp57 = closure_1_2(obj14._processItem(tmp26), 2);
-                      [tmp58, tmp59] = tmp57;
-                      if (typeof tmp59 === "string") {
-                        let tmp34 = self;
-                        let tmp35 = closure_1_1;
-                        let obj6 = self(closure_1_1[4]);
-                        let encodeUTF8Result1 = obj6.encodeUTF8(tmp59);
-                        let str = "text/plain";
-                        let isHardCrashResult = flag;
+              } else if (self.enableNative) {
+                if (self._isModuleLoaded(c6)) {
+                  let tmp13 = closure_1_2(self, 2);
+                  let tmp14 = tmp13[1];
+                  let _JSON = JSON;
+                  let json = JSON.stringify(tmp13[0]);
+                  obj1 = self(closure_1_1[4]);
+                  let encodeUTF8Result = obj1.encodeUTF8(json);
+                  let _Uint8Array = Uint8Array;
+                  let uint8Array = new Uint8Array(encodeUTF8Result.length + closure_1_7.length);
+                  let arr2 = uint8Array;
+                  let result = uint8Array.set(encodeUTF8Result);
+                  let result1 = uint8Array.set(closure_1_7, encodeUTF8Result.length);
+                  closure_2 = tmp14;
+                  closure_1 = tmp14[Symbol.iterator]();
+                  let flag = false;
+                  while (closure_1 !== undefined) {
+                    c6 = 1;
+                    let tmp57 = closure_1_2(self._processItem(tmp26), 2);
+                    [tmp58, tmp59] = tmp57;
+                    if (typeof tmp59 === "string") {
+                      let obj6 = self(closure_1_1[4]);
+                      let encodeUTF8Result1 = obj6.encodeUTF8(tmp59);
+                      let str = "text/plain";
+                      let isHardCrashResult = flag;
+                    } else {
+                      let _Uint8Array3 = Uint8Array;
+                      let content_type = tmp58.content_type;
+                      if (tmp59 instanceof Uint8Array) {
+                        let str2 = "application/octet-stream";
+                        if (typeof content_type === "string") {
+                          str2 = tmp58.content_type;
+                        }
+                        str = str2;
+                        encodeUTF8Result1 = tmp59;
+                        isHardCrashResult = flag;
                       } else {
-                        let _Uint8Array3 = Uint8Array;
-                        let content_type = tmp58.content_type;
-                        if (tmp59 instanceof Uint8Array) {
-                          let str2 = "application/octet-stream";
-                          if (typeof content_type === "string") {
-                            str2 = tmp58.content_type;
-                          }
-                          str = str2;
-                          encodeUTF8Result1 = tmp59;
-                          isHardCrashResult = flag;
-                        } else {
-                          str = "application/json";
-                          if (typeof content_type === "string") {
-                            str = tmp58.content_type;
-                          }
-                          let tmp29 = self;
-                          let tmp30 = closure_1_1;
-                          let obj4 = self(closure_1_1[4]);
-                          let _JSON2 = JSON;
-                          encodeUTF8Result1 = obj4.encodeUTF8(JSON.stringify(tmp59));
-                          isHardCrashResult = flag;
-                          if (!flag) {
-                            let tmp32 = self;
-                            let tmp33 = closure_1_1;
-                            let obj5 = self(closure_1_1[6]);
-                            isHardCrashResult = obj5.isHardCrash(tmp59);
-                          }
+                        str = "application/json";
+                        if (typeof content_type === "string") {
+                          str = tmp58.content_type;
+                        }
+                        let obj4 = self(closure_1_1[4]);
+                        let _JSON2 = JSON;
+                        encodeUTF8Result1 = obj4.encodeUTF8(JSON.stringify(tmp59));
+                        isHardCrashResult = flag;
+                        if (!flag) {
+                          let obj5 = self(closure_1_1[6]);
+                          isHardCrashResult = obj5.isHardCrash(tmp59);
                         }
                       }
-                      tmp58.content_type = str;
-                      tmp58.length = encodeUTF8Result1.length;
-                      let _JSON3 = JSON;
-                      let tmp37 = self;
-                      let tmp38 = closure_1_1;
-                      let json1 = JSON.stringify(tmp58);
-                      let obj7 = self(closure_1_1[4]);
-                      let encodeUTF8Result2 = obj7.encodeUTF8(json1);
-                      let _Uint8Array2 = Uint8Array;
-                      let tmp39 = closure_1_7;
-                      let tmp40 = new.target;
-                      let tmp41 = new.target;
-                      let uint8Array1 = new Uint8Array(arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length + closure_1_7.length);
-                      let tmp42 = uint8Array1;
-                      let result2 = uint8Array1.set(arr2);
-                      let result3 = uint8Array1.set(encodeUTF8Result2, arr2.length);
-                      let result4 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length);
-                      let result5 = uint8Array1.set(encodeUTF8Result1, arr2.length + encodeUTF8Result2.length + closure_1_7.length);
-                      let result6 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length);
-                      c6 = 0;
-                      flag = isHardCrashResult;
-                      arr2 = uint8Array1;
-                      continue;
                     }
-                    let tmp48 = c6;
-                    let tmp49 = self;
-                    let tmp50 = closure_1_1;
-                    let obj9 = self(closure_1_1[7]);
-                    obj1 = { hardCrashed: null };
-                    obj1[0] = flag;
-                    c4 = 2;
-                    let num5 = 1;
-                    c3 = 1;
-                    let obj2 = { value: null, done: false };
-                    obj2[0] = c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj1);
-                    return obj2;
-                  } else {
-                    throw obj14._NativeClientError;
+                    tmp58.content_type = str;
+                    tmp58.length = encodeUTF8Result1.length;
+                    let _JSON3 = JSON;
+                    let json1 = JSON.stringify(tmp58);
+                    let obj7 = self(closure_1_1[4]);
+                    let encodeUTF8Result2 = obj7.encodeUTF8(json1);
+                    let _Uint8Array2 = Uint8Array;
+                    let uint8Array1 = new Uint8Array(arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length + closure_1_7.length);
+                    let result2 = uint8Array1.set(arr2);
+                    let result3 = uint8Array1.set(encodeUTF8Result2, arr2.length);
+                    let result4 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length);
+                    let result5 = uint8Array1.set(encodeUTF8Result1, arr2.length + encodeUTF8Result2.length + closure_1_7.length);
+                    let result6 = uint8Array1.set(closure_1_7, arr2.length + encodeUTF8Result2.length + closure_1_7.length + encodeUTF8Result1.length);
+                    c6 = 0;
+                    flag = isHardCrashResult;
+                    arr2 = uint8Array1;
+                    continue;
                   }
+                  let obj9 = self(closure_1_1[7]);
+                  obj1 = { hardCrashed: null };
+                  obj1[0] = flag;
+                  c4 = 2;
+                  c3 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = c6.captureEnvelope(obj9.base64StringFromByteArray(arr2), obj1);
+                  return obj2;
                 } else {
-                  let tmp7 = self;
-                  let tmp8 = closure_1_1;
-                  let debug = self(closure_1_1[5]).debug;
-                  let warnResult = debug.warn("Event was skipped as native SDK is not enabled.");
+                  throw self._NativeClientError;
                 }
+              } else {
+                let debug = self(closure_1_1[5]).debug;
+                let warnResult = debug.warn("Event was skipped as native SDK is not enabled.");
               }
             } else if (1 === tmp3) {
-              let tmp4 = closure_5;
-              let tmp5 = closure_5;
               c6 = 0;
-              let tmp6 = closure_1;
               closure_1.return();
               throw closure_5;
             } else if (arg0 === 1) {
-              let num3 = 3;
               c3 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              let num2 = 3;
               c3 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             }
-            let num4 = 3;
             c3 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -429,9 +329,9 @@ isHermesEnabled = {
         const _Object3 = Object;
         const merged = Object.assign({ enableNative: true, autoInitializeNativeSdk: true }, self);
         if (undefined !== self.enableLogs) {
-          let enableLogs = tmp33.enableLogs;
+          let enableLogs = self.enableLogs;
           if (enableLogs) {
-            enableLogs = "js" !== tmp33.logsOrigin;
+            enableLogs = "js" !== self.logsOrigin;
           }
           obj1 = { enableLogs: null };
           obj1[0] = enableLogs;
@@ -469,14 +369,14 @@ isHermesEnabled = {
         ignoreErrors = merged1.ignoreErrors;
         if (null !== ignoreErrors) {
           if (undefined !== ignoreErrors) {
-            const found = ignoreErrors.filter((str) => typeof str === "string");
+            const found = ignoreErrors.filter((item, index) => typeof item === "string");
           }
         }
         const ignoreErrors1 = merged1.ignoreErrors;
         if (null !== ignoreErrors1) {
           if (undefined !== ignoreErrors1) {
-            const found1 = ignoreErrors1.filter((arg0) => arg0 instanceof RegExp);
-            const mapped = found1.map((source) => source.source);
+            const found1 = ignoreErrors1.filter((item, index) => item instanceof RegExp);
+            const mapped = found1.map((item, index) => item.source);
           }
         }
         let tmp22 = found;
@@ -753,7 +653,7 @@ isHermesEnabled = {
             } else {
               if (!self.enableNative) {
                 const debug = self(817).debug;
-                debug.warn(obj4._DisabledNativeError);
+                debug.warn(self._DisabledNativeError);
                 dependencyMap = 3;
               }
               obj = closure_1_6;
@@ -761,7 +661,7 @@ isHermesEnabled = {
                 let nativeAppStart = obj.fetchNativeAppStart();
               } else {
                 const debug2 = self(817).debug;
-                debug2.error(obj4._NativeClientError);
+                debug2.error(self._NativeClientError);
                 nativeAppStart = null;
               }
             }
@@ -830,11 +730,10 @@ isHermesEnabled = {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        obj.crash();
+        RNSentry.crash();
       } else {
         throw self._NativeClientError;
       }
-      obj = RNSentry;
     }
   },
   setUser(arg0) {
@@ -871,11 +770,10 @@ isHermesEnabled = {
           const _JSON = JSON;
           json = JSON.stringify(str);
         }
-        obj.setTag(arg0, json);
+        RNSentry.setTag(arg0, json);
       } else {
         throw self._NativeClientError;
       }
-      obj = RNSentry;
     }
   },
   setExtra(arg0, str) {
@@ -883,17 +781,18 @@ isHermesEnabled = {
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
         if (typeof str === "string") {
-          return obj.setExtra(arg0, str);
+          return RNSentry.setExtra(arg0, str);
         } else if (undefined === str) {
-          return obj.setExtra(arg0, "undefined");
+          return RNSentry.setExtra(arg0, "undefined");
         } else {
           try {
+            const normalizer = registerSpanErrorInstrumentation;
             const _JSON = JSON;
-            const json = JSON.stringify(registerSpanErrorInstrumentation.normalize(str));
+            const json = JSON.stringify(normalizer.normalize(str));
             if (typeof json === "string") {
-              let setExtraResult = obj.setExtra(arg0, json);
+              let setExtraResult = RNSentry.setExtra(arg0, json);
             } else {
-              setExtraResult = obj.setExtra(arg0, "**non-stringifiable**");
+              setExtraResult = RNSentry.setExtra(arg0, "**non-stringifiable**");
             }
             return setExtraResult;
           } catch (tmp8) {
@@ -929,11 +828,10 @@ isHermesEnabled = {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        obj.clearBreadcrumbs();
+        RNSentry.clearBreadcrumbs();
       } else {
         throw self._NativeClientError;
       }
-      obj = RNSentry;
     }
   },
   setContext(arg0, data) {
@@ -941,17 +839,16 @@ isHermesEnabled = {
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
         if (null === data) {
-          return obj.setContext(arg0, null);
+          return RNSentry.setContext(arg0, null);
         } else {
           try {
             const result = convertToNormalizedObject.convertToNormalizedObject(data);
-            const setContext = obj.setContext;
+            const setContext = RNSentry.setContext;
             if (result) {
               setContext(arg0, result);
             } else {
               setContext(arg0, { error: "**non-serializable**" });
             }
-            const obj2 = convertToNormalizedObject;
           } catch (tmp8) {
             const debug = registerSpanErrorInstrumentation.debug;
             debug.error("Context for key ${key} not passed to native SDK, because it contains non-serializable values", tmp8);
@@ -998,7 +895,7 @@ isHermesEnabled = {
                 if (obj._isModuleLoaded(closure_1_6)) {
                   c1 = 3;
                   obj1 = { value: null, done: true };
-                  obj1[0] = obj1.closeNativeSdk().then(() => {
+                  obj1[0] = obj1.closeNativeSdk().then((result) => {
                     closure_0.enableNative = false;
                   });
                   return obj1;
@@ -1079,10 +976,10 @@ isHermesEnabled = {
         }
         let mapped = null;
         if (_self) {
-          mapped = _self.map((data) => {
+          mapped = _self.map((item, index) => {
             const obj = { data: null };
-            const merged = Object.assign({}, data);
-            const uint8Array = new Uint8Array(data.data);
+            const merged = Object.assign({}, item);
+            const uint8Array = new Uint8Array(item.data);
             obj[0] = uint8Array;
             return Object.assign(merged, obj);
           });
@@ -1097,75 +994,21 @@ isHermesEnabled = {
       c2 = 0;
       c3 = 0;
       return (function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let obj2 = _self;
-                closure_1 = tmp2;
-                _self = undefined;
-                if (_self.enableNative) {
-                  if (obj2._isModuleLoaded(closure_1_6)) {
-                    c2 = 1;
-                    c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = obj4.fetchViewHierarchy();
-                    return obj1;
-                  } else {
-                    throw obj2._NativeClientError;
-                  }
-                  obj4 = closure_1_6;
-                } else {
-                  throw obj2._DisabledNativeError;
-                }
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              _self = arg1;
-              let uint8Array = null;
-              if (_self) {
-                const _Uint8Array = Uint8Array;
-                uint8Array = new Uint8Array(_self);
-              }
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = uint8Array;
-              return obj;
-            }
-          } catch (tmp13) {
-            c3 = tmp;
-            throw tmp13;
-          }
+        const obj2 = _self;
+        closure_1 = tmp2;
+        if (!_self.enableNative) {
+          throw obj2._DisabledNativeError;
         }
+        if (!obj2._isModuleLoaded(closure_1_6)) {
+          throw obj2._NativeClientError;
+        }
+        _self = yield closure_1_6.fetchViewHierarchy();
+        let uint8Array = null;
+        if (_self) {
+          const _Uint8Array = Uint8Array;
+          uint8Array = new Uint8Array(_self);
+        }
+        return uint8Array;
       })();
     });
   },
@@ -1173,7 +1016,7 @@ isHermesEnabled = {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        const startProfilingResult = obj.startProfiling(arg0);
+        const startProfilingResult = RNSentry.startProfiling(arg0);
         const started = startProfilingResult.started;
         const debug = registerSpanErrorInstrumentation.debug;
         if (started) {
@@ -1185,7 +1028,6 @@ isHermesEnabled = {
       } else {
         throw self._NativeClientError;
       }
-      obj = RNSentry;
     } else {
       throw self._DisabledNativeError;
     }
@@ -1341,7 +1183,7 @@ isHermesEnabled = {
                 if (!self.enableNative) {
                   const debug = self(817).debug;
                   const _HermesInternal = HermesInternal;
-                  debug.warn("[NATIVE] `" + obj6.captureReplay.name + "` is not available when native is disabled.");
+                  debug.warn("[NATIVE] `" + self.captureReplay.name + "` is not available when native is disabled.");
                   const resolved = Promise.resolve(null);
                   dependencyMap = 3;
                 }
@@ -1355,7 +1197,7 @@ isHermesEnabled = {
                 } else {
                   const debug2 = self(817).debug;
                   const _HermesInternal2 = HermesInternal;
-                  debug2.warn("[NATIVE] `" + obj6.captureReplay.name + "` is not available when native is not available.");
+                  debug2.warn("[NATIVE] `" + self.captureReplay.name + "` is not available when native is not available.");
                   let resolved1 = Promise.resolve(null);
                 }
               }
@@ -1384,15 +1226,13 @@ isHermesEnabled = {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        let tmp10 = obj.getCurrentReplayId() || null;
-        const tmp11 = obj.getCurrentReplayId() || null;
+        const tmp10 = RNSentry.getCurrentReplayId() || null;
+        const tmp11 = RNSentry.getCurrentReplayId() || null;
       } else {
         const debug2 = registerSpanErrorInstrumentation.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.warn("[NATIVE] `" + self.getCurrentReplayId.name + "` is not available when native is not available.");
-        tmp10 = null;
       }
-      obj = RNSentry;
     } else {
       const debug = registerSpanErrorInstrumentation.debug;
       const _HermesInternal = HermesInternal;
@@ -1585,14 +1425,13 @@ isHermesEnabled = {
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
         try {
-          return obj.popTimeToDisplayFor(arg0);
+          return RNSentry.popTimeToDisplayFor(arg0);
         } catch (tmp2) {
           const debug = registerSpanErrorInstrumentation.debug;
           debug.error("Error:", tmp2);
           return Promise.resolve(null);
         }
       }
-      obj = RNSentry;
     }
     return Promise.resolve(null);
   },
@@ -1601,13 +1440,12 @@ isHermesEnabled = {
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
         try {
-          obj.setActiveSpanId(spanId);
+          RNSentry.setActiveSpanId(spanId);
         } catch (tmp3) {
           const debug = registerSpanErrorInstrumentation.debug;
           debug.error("Error:", tmp3);
         }
       }
-      obj = RNSentry;
     }
   },
   encodeToBase64(data) {
@@ -1705,8 +1543,8 @@ isHermesEnabled = {
       })();
     });
   },
-  primitiveProcessor(arg0) {
-    return arg0;
+  primitiveProcessor(closure_0) {
+    return closure_0;
   },
   _processItem(arg0) {
     const tmp = callback(arg0, 2);
@@ -1733,19 +1571,18 @@ isHermesEnabled = {
     closure_0 = arg0;
     const obj = {};
     const keys = Object.keys(arg0);
-    const item = keys.forEach((arg0) => {
+    const item = keys.forEach((item, index) => {
       let json = tmp;
-      if (typeof table[arg0] !== "string") {
+      if (typeof table[item] !== "string") {
         const _JSON = JSON;
         json = JSON.stringify(tmp);
       }
-      obj[arg0] = json;
+      obj[item] = json;
     });
     return obj;
   },
   _processLevels(level) {
-    let self = this;
-    self = this;
+    const self = this;
     let _processLevelResult;
     let merged = Object.assign({}, level);
     if (level.level) {
@@ -1756,11 +1593,11 @@ isHermesEnabled = {
     let mapped;
     if (null !== breadcrumbs) {
       if (undefined !== breadcrumbs) {
-        mapped = breadcrumbs.map((level) => {
-          level = undefined;
-          const merged = Object.assign({}, level);
-          if (level.level) {
-            level = self._processLevel(level.level);
+        mapped = breadcrumbs.map((item, index) => {
+          let level;
+          const merged = Object.assign({}, item);
+          if (item.level) {
+            level = self._processLevel(item.level);
           }
           return Object.assign(merged, { level });
         });

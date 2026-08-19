@@ -4,9 +4,8 @@ import getGlobalSingleton from "07739_getGlobalSingleton.js";
 function dateTimestampInSeconds() {
   return Date.now() / 1000;
 }
-let _performance;
 let timeOrigin;
-_performance = getGlobalSingleton.GLOBAL_OBJ.performance;
+const _performance = getGlobalSingleton.GLOBAL_OBJ.performance;
 let fn = dateTimestampInSeconds;
 if (_performance) {
   fn = dateTimestampInSeconds;

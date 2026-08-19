@@ -98,7 +98,6 @@ export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
   }
   const defaultResult2 = _typeof.default(arg0);
   const defaultResult1 = toInteger.default(num);
-  const obj = toInteger;
   const defaultResult3 = toInteger.default(arg1);
   const date = new Date(0);
   date.setFullYear(defaultResult3, 0, defaultResult1);

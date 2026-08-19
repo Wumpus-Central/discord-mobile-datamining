@@ -1,24 +1,21 @@
 // _runtime/14852_getYoutubeMeta.js
-import _regeneratorRuntime from "14853__regeneratorRuntime.js";
+import _regeneratorRuntime2 from "14853__regeneratorRuntime.js";
 import 08106__ from "metro/08106__.js";
 
-let closure_0 = module_8106(_regeneratorRuntime);
+let _regeneratorRuntime = module_8106(_regeneratorRuntime2);
 
 export const getYoutubeMeta = function getYoutubeMeta(arg0) {
-  const mod = arg0;
-  return mod.default.async(function getYoutubeMeta$(next) {
+  _regeneratorRuntime = arg0;
+  return _regeneratorRuntime.default.async(function getYoutubeMeta$(next) {
     next = next.next;
     next.prev = next;
     while (0 !== next) {
       if (2 === next) {
         let sent = next.sent;
         next.next = 5;
-        let tmp = mod;
         let _default = mod.default;
-        let tmp2 = sent;
         return _default.awrap(sent.json());
       } else if (5 === next) {
-        let str = "return";
         return next.abrupt("return", next.sent);
       } else {
         return next.stop();

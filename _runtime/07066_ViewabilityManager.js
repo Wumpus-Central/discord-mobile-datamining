@@ -1,6 +1,6 @@
 // _runtime/07066_ViewabilityManager.js
 import _createClassDefault from "metro/07051__createClass.js";
-import closure_2 from "metro/07050__classCallCheck.js";
+import _classCallCheck from "metro/07050__classCallCheck.js";
 
 const ViewabilityManager = importDefault;
 class ViewabilityManager {
@@ -13,19 +13,19 @@ class ViewabilityManager {
     this.hasInteracted = false;
     this.dispose = () => {
       const viewabilityHelpers = self.viewabilityHelpers;
-      const item = viewabilityHelpers.forEach((dispose) => dispose.dispose());
+      const item = viewabilityHelpers.forEach((item, index) => item.dispose());
     };
     this.onVisibleIndicesChanged = (arg0) => {
       self.updateViewableItems(arg0);
     };
     this.recordInteraction = () => {
       if (!self.hasInteracted) {
-        obj.hasInteracted = true;
-        const viewabilityHelpers = obj.viewabilityHelpers;
-        const item = viewabilityHelpers.forEach((arg0) => {
-          arg0.hasInteracted = true;
+        self.hasInteracted = true;
+        const viewabilityHelpers = self.viewabilityHelpers;
+        const item = viewabilityHelpers.forEach((item, index) => {
+          item.hasInteracted = true;
         });
-        obj.updateViewableItems();
+        self.updateViewableItems();
       }
     };
     this.updateViewableItems = (arg0) => {
@@ -49,12 +49,12 @@ class ViewabilityManager {
             num2 = 0;
           }
           const viewabilityHelpers = tmp.viewabilityHelpers;
-          const item = viewabilityHelpers.forEach((updateViewableItems) => {
+          const item = viewabilityHelpers.forEach((item, index) => {
             let flag = windowSize.rvManager.props.horizontal;
             if (flag == null) {
               flag = false;
             }
-            updateViewableItems.updateViewableItems(flag, closure_2, num2, windowSize, (arg0) => {
+            item.updateViewableItems(flag, closure_2, num2, windowSize, (arg0) => {
               rvManager = rvManager.rvManager;
               return rvManager.getLayout(arg0);
             }, closure_0);
@@ -64,61 +64,61 @@ class ViewabilityManager {
     };
     this.clearLastReportedViewableIndices = () => {
       const viewabilityHelpers = self.viewabilityHelpers;
-      const item = viewabilityHelpers.forEach((clearLastReportedViewableIndices) => clearLastReportedViewableIndices.clearLastReportedViewableIndices());
+      const item = viewabilityHelpers.forEach((item, index) => item.clearLastReportedViewableIndices());
     };
     this.createViewabilityHelper = (arg0, arg1) => {
       const lib = arg1;
       return new lib(self[2])(arg0, (arr, arr2, arr3) => {
         if (closure_0 != null) {
           let obj = { viewableItems: null, changed: null };
-          obj[0] = arr.map((arg0) => {
-            if (undefined !== closure_1.rvManager.props.data[arg0]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+          obj[0] = arr.map((item, index) => {
+            if (undefined !== closure_1.rvManager.props.data[item]) {
+              if (undefined !== closure_1.rvManager.props.keyExtractor) {
+                const props = closure_1.rvManager.props;
+                let keyExtractorResult = props.keyExtractor(tmp2, item);
               }
               const obj = { index: null, isViewable: true, item: null, key: null, timestamp: null };
-              obj[0] = arg0;
+              obj[0] = item;
               obj[2] = tmp2;
               obj[3] = keyExtractorResult;
               const _Date = Date;
               obj[4] = Date.now();
               return obj;
             }
-            keyExtractorResult = arg0.toString();
+            keyExtractorResult = item.toString();
           });
           const items = [];
-          let arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((arg0) => {
-            if (undefined !== closure_1.rvManager.props.data[arg0]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+          let arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((item, index) => {
+            if (undefined !== closure_1.rvManager.props.data[item]) {
+              if (undefined !== closure_1.rvManager.props.keyExtractor) {
+                const props = closure_1.rvManager.props;
+                let keyExtractorResult = props.keyExtractor(tmp2, item);
               }
               const obj = { index: null, isViewable: true, item: null, key: null, timestamp: null };
-              obj[0] = arg0;
+              obj[0] = item;
               obj[2] = tmp2;
               obj[3] = keyExtractorResult;
               const _Date = Date;
               obj[4] = Date.now();
               return obj;
             }
-            keyExtractorResult = arg0.toString();
+            keyExtractorResult = item.toString();
           }), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(arr3.map((arg0) => {
-            if (undefined !== closure_1.rvManager.props.data[arg0]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
-                let keyExtractorResult = props.keyExtractor(tmp2, arg0);
+          arraySpreadResult = HermesBuiltin.arraySpread(arr3.map((item, index) => {
+            if (undefined !== closure_1.rvManager.props.data[item]) {
+              if (undefined !== closure_1.rvManager.props.keyExtractor) {
+                const props = closure_1.rvManager.props;
+                let keyExtractorResult = props.keyExtractor(tmp2, item);
               }
               const obj = { index: null, isViewable: false, item: null, key: null, timestamp: null };
-              obj[0] = arg0;
+              obj[0] = item;
               obj[2] = tmp2;
               obj[3] = keyExtractorResult;
               const _Date = Date;
               obj[4] = Date.now();
               return obj;
             }
-            keyExtractorResult = arg0.toString();
+            keyExtractorResult = item.toString();
           }), arraySpreadResult);
           obj[1] = items;
           tmp(obj);
@@ -141,13 +141,13 @@ class ViewabilityManager {
     if (prop == null) {
       prop = [];
     }
-    item = prop.forEach((viewabilityConfig) => {
-      closure_0 = arg1;
+    item = prop.forEach((item, index) => {
+      closure_0 = index;
       const viewabilityHelpers = self.viewabilityHelpers;
-      viewabilityHelpers.push(self.createViewabilityHelper(viewabilityConfig.viewabilityConfig, (arg0) => {
+      viewabilityHelpers.push(self.createViewabilityHelper(item.viewabilityConfig, (arg0) => {
         let prop;
-        if (props.props.viewabilityConfigCallbackPairs != null) {
-          if (viewabilityConfigCallbackPairs[props] != null) {
+        if (index.props.viewabilityConfigCallbackPairs != null) {
+          if (viewabilityConfigCallbackPairs[index] != null) {
             prop = tmp3.onViewableItemsChanged;
           }
         }

@@ -1,5 +1,5 @@
 // _runtime/01584_useFocusedListenersChildrenAdapter.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -7,26 +7,23 @@ export const useFocusedListenersChildrenAdapter = function useFocusedListenersCh
   navigation = navigation.navigation;
   const focusedListeners = navigation.focusedListeners;
   let addListener;
-  let callback;
   addListener = addListener.useContext(navigation(focusedListeners[1]).NavigationBuilderContext).addListener;
   const items = [focusedListeners, navigation];
-  callback = addListener.useCallback((arg0) => {
+  const callback = addListener.useCallback((fn) => {
     if (navigation.isFocused()) {
       for (const item10012 of focusedListeners) {
         let item10012Result = item10012(arg0);
         let handled = item10012Result.handled;
-        let tmp4 = handled;
         if (handled) {
           let obj = { handled: null, result: null };
           obj[0] = handled;
           obj[1] = tmp5;
-          let tmp6 = obj;
           obj.return();
           return obj;
         }
       }
       obj = { handled: true, result: null };
-      obj[1] = arg0(navigation);
+      obj[1] = fn(navigation);
       return obj;
     } else {
       return { handled: false, result: null };

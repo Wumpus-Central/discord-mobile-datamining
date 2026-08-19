@@ -17,7 +17,6 @@ arg5.utf8read = function utf8read(arg0) {
       do {
         let sum = num4 + 1;
         let tmp2 = arg0[num4];
-        let tmp3 = num2;
         if (tmp2 < 128) {
           let num = num2 + 1;
           items1[num2] = tmp2;
@@ -48,9 +47,7 @@ arg5.utf8read = function utf8read(arg0) {
           items1[num2] = (15 & tmp2) << 12 | (63 & arg0[sum]) << 6 | 63 & arg0[sum5];
         }
         if (8191 < num) {
-          let tmp10 = fromCharCodes;
           if (typeof fromCharCodes !== "function") {
-            let str3 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           let _String = String;

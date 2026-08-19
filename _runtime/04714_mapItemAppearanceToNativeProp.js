@@ -1,11 +1,11 @@
 // _runtime/04714_mapItemAppearanceToNativeProp.js
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00032__slicedToArray.js";
-import closure_6 from "00019_noop.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function mapItemAppearanceToNativeProp(compactInline) {
   if (compactInline) {
     ({ normal, selected, focused, disabled } = compactInline);
@@ -101,7 +101,6 @@ export default function TabsScreen(onWillAppear) {
         num2 = -1;
       }
       ref1.current = num2;
-      const tmp3 = ref1;
     } else {
       ref1.current = -1;
     }
@@ -134,7 +133,7 @@ export default function TabsScreen(onWillAppear) {
   const items = [onWillAppear];
   const items1 = [onDidAppear];
   const callback = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
+    ref(dependencyMap[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
     callback(true);
     if (onWillAppear != null) {
       tmp3(arg0);
@@ -142,20 +141,20 @@ export default function TabsScreen(onWillAppear) {
   }, items);
   const items2 = [onWillDisappear];
   const callback1 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
+    ref(dependencyMap[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
     if (onDidAppear != null) {
       tmp2(arg0);
     }
   }, items1);
   const items3 = [onDidDisappear];
   const callback2 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
+    ref(dependencyMap[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
     if (onWillDisappear != null) {
       tmp2(arg0);
     }
   }, items2);
   const callback3 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
+    ref(dependencyMap[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
     callback(false);
     if (onDidDisappear != null) {
       tmp3(arg0);
@@ -188,7 +187,6 @@ export default function TabsScreen(onWillAppear) {
       obj = { imageIconResource: null };
       obj[0] = assetSource;
       obj1 = obj;
-      const tmp25 = assetSource;
     } else if ("drawableResource" === android.type) {
       obj = { drawableIconResourceName: null };
       obj[0] = android.name;

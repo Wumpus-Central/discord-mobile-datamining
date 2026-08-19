@@ -19,7 +19,7 @@ export const useStableCallback = function useStableCallback(arg0) {
     if (current != null) {
       const items1 = [];
       HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, tmp);
+      applyResult = HermesBuiltin.apply(items1, ref);
     }
     return applyResult;
   }, []);

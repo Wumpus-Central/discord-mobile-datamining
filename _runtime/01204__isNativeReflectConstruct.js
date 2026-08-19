@@ -1,13 +1,13 @@
 // _runtime/01204__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-const ScreenshotButton = arg1;
+const ScreenshotButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 let c5 = importAllResult;
 ({ Appearance: closure_6, Image: error, Text: closure_8, TouchableOpacity: c9 } = get_ActivityIndicator);
-let fn = this;
+fn = this;
 if (this) {
   fn = this.__awaiter;
 }
 if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
+  fn = (arg0) => {
     closure_0 = arg0;
     closure_1 = arg1;
     let _Promise = arg2;
@@ -42,12 +42,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -67,8 +67,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -82,13 +82,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -174,13 +174,6 @@ function takeScreenshot() {
                   return obj2;
                 } else {
                   lib = arg1;
-                  let str2 = "ErrorCapturingScreenshot";
-                  if (lib) {
-                    str2 = "ErrorCapturingScreenshot";
-                    if (lib.length > 0) {
-                      str2 = lib[0];
-                    }
-                  }
                   obj = lib(table[7]);
                   obj.showFeedbackWidget();
                   c3 = 3;
@@ -261,7 +254,7 @@ let items = [
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = tmp(1202);
+      let tmpResult = ScreenshotButton(1202);
       const styles2 = self.props.styles;
       let triggerText;
       const merged3 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerText);
@@ -271,7 +264,7 @@ let items = [
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = tmp(1202);
+      tmpResult = ScreenshotButton(1202);
       const styles3 = self.props.styles;
       let triggerIcon;
       const merged5 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerIcon);
@@ -280,7 +273,6 @@ let items = [
           triggerIcon = styles3.triggerIcon;
         }
       }
-      obj = { style: merged2, onPress: takeScreenshot, accessibilityLabel: merged.triggerAriaLabel };
       obj = { source: null, style: null };
       obj1 = { uri: null };
       const merged6 = Object.assign(merged5, triggerIcon);

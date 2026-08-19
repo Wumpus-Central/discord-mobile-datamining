@@ -18,8 +18,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^(第\s*)?\d+(日|时|分|秒)?/i,
   parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+  valueCallback(match) {
+    return parseInt(match, 10);
   }
 };
 const items = [/^(前)/i, /^(公元)/i];

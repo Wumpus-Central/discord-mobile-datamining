@@ -2,10 +2,9 @@
 import importDefaultResult from "00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-let closure_0 = arg1;
 const Linking = get_ActivityIndicator.Linking;
 const RNIapIos = get_ActivityIndicator.NativeModules.RNIapIos;
-closure_0 = importDefaultResult(function*() {
+importDefaultResult(function*() {
   if (v0 === 2) {
     v0 = 3;
     HermesBuiltin.throwTypeError();
@@ -31,7 +30,7 @@ closure_0 = importDefaultResult(function*() {
         obj[0] = arg1;
         return obj;
       } else {
-        obj = v0(closure_1_1[2]);
+        obj = v0(dependencyMap[2]);
         const iosModule = obj.getIosModule();
         v0 = 3;
         obj1 = { value: null, done: true };
@@ -44,7 +43,7 @@ closure_0 = importDefaultResult(function*() {
     }
   }
 });
-closure_0 = importDefaultResult((arg0) => {
+importDefaultResult((arg0) => {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -99,10 +98,10 @@ closure_0 = importDefaultResult((arg0) => {
             if (callback == null) {
               c1 = false;
             }
-            const receipt = closure_1_3.requestReceipt(c1);
+            const receipt = RNIapIos.requestReceipt(c1);
           }
           c5 = 3;
-          obj4 = callback(closure_1_1[2]);
+          obj4 = callback(dependencyMap[2]);
         }
       } catch (tmp16) {
         c5 = tmp;
@@ -113,7 +112,7 @@ closure_0 = importDefaultResult((arg0) => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(function*() {
+importDefaultResult(function*() {
   if (v0 === 2) {
     v0 = 3;
     HermesBuiltin.throwTypeError();
@@ -139,7 +138,7 @@ closure_0 = importDefaultResult(function*() {
         obj[0] = arg1;
         return obj;
       } else {
-        obj = v0(closure_1_1[2]);
+        obj = v0(dependencyMap[2]);
         const iosModule = obj.getIosModule();
         v0 = 3;
         obj1 = { value: null, done: true };
@@ -152,7 +151,7 @@ closure_0 = importDefaultResult(function*() {
     }
   }
 });
-closure_0 = importDefaultResult((arg0, arg1) => {
+importDefaultResult((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   c3 = 0;
@@ -238,7 +237,7 @@ function fetchJsonOrThrow(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-closure_0 = importDefaultResult((arg0) => {
+importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -282,7 +281,7 @@ closure_0 = importDefaultResult((arg0) => {
     return tmp6;
   })();
 });
-function requestAgnosticReceiptValidationIos(arg0) {
+function requestAgnosticReceiptValidationIos(c0) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -292,7 +291,7 @@ function requestAgnosticReceiptValidationIos(arg0) {
   }
   return applyArgumentsResult;
 }
-closure_0 = importDefaultResult((arg0) => {
+let closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -346,7 +345,7 @@ closure_0 = importDefaultResult((arg0) => {
             c3 = 2;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_5(c0);
+            obj2[0] = requestAgnosticReceiptValidationIos(c0);
             return obj2;
           } else {
             str = "https://buy.itunes.apple.com/verifyReceipt";

@@ -23,11 +23,11 @@ if (getOwnPropertyDescriptor2) {
             tmp4 = value;
             if (writable in value) {
               tmp4 = value;
-              if (!value[tmp5]) {
+              if (!value[writable]) {
                 const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
                 let tmp8 = tmp7;
                 if (tmp7) {
-                  tmp8 = tmp7[tmp5];
+                  tmp8 = tmp7[writable];
                 }
                 tmp4 = value;
                 if (tmp8) {

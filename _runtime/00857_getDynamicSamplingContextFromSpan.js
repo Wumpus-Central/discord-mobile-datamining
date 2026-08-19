@@ -1,7 +1,10 @@
 // _runtime/00857_getDynamicSamplingContextFromSpan.js
+import spanToJSON from "00819_spanToJSON.js";
+import unwrapScopeFromWeakRef from "00820_unwrapScopeFromWeakRef.js";
 import addNonEnumerableProperty from "00822_addNonEnumerableProperty.js";
 import baggageHeaderToDynamicSamplingContext from "00835_baggageHeaderToDynamicSamplingContext.js";
 import dsnFromString from "00837_dsnFromString.js";
+import _mod839 from "metro/00839__.js";
 import getClient from "00848_getClient.js";
 import _mod858 from "metro/00858__.js";
 
@@ -11,9 +14,9 @@ function getDynamicSamplingContextFromSpan(spanContext) {
   let obj = getClient;
   const client = obj.getClient();
   if (client) {
-    let tmpResult = tmp(819);
+    let tmpResult = spanToJSON;
     const rootSpan = tmpResult.getRootSpan(spanContext);
-    tmpResult = tmp(819);
+    tmpResult = spanToJSON;
     const spanToJSONResult = tmpResult.spanToJSON(rootSpan);
     const data = spanToJSONResult.data;
     const traceState = rootSpan.spanContext().traceState;
@@ -23,10 +26,10 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       value = traceState.get("sentry.sample_rate");
     }
     if (value == null) {
-      value = data[tmp(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+      value = data[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
     }
     if (value == null) {
-      value = data[tmp(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE];
+      value = data[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE];
     }
     if (rootSpan[_frozenDsc]) {
       let tmp23 = typeof value !== "number";
@@ -45,8 +48,8 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       }
       let result = value;
       if (value) {
-        result = tmp(835).baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult1 = tmp(835);
+        result = baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult1 = baggageHeaderToDynamicSamplingContext;
       }
       if (result) {
         let tmp21 = typeof value !== "number";
@@ -62,7 +65,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         const options = client.getOptions();
         let DEFAULT_ENVIRONMENT = options.environment;
         if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = tmp(858).DEFAULT_ENVIRONMENT;
+          DEFAULT_ENVIRONMENT = _mod858.DEFAULT_ENVIRONMENT;
         }
         obj = { environment: null, release: null, public_key: null, trace_id: null, org_id: null };
         obj[0] = DEFAULT_ENVIRONMENT;
@@ -70,33 +73,33 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         obj[2] = client.getDsn() || {}.publicKey;
         obj[3] = spanContext.spanContext().traceId;
         const tmp12 = client.getDsn() || {};
-        obj[4] = tmp(837).extractOrgIdFromClient(client);
+        obj[4] = dsnFromString.extractOrgIdFromClient(client);
         client.emit("createDsc", obj);
         const description = spanToJSONResult.description;
-        const tmpResult2 = tmp(837);
+        const tmpResult2 = dsnFromString;
         if (tmp14) {
           obj.transaction = description;
         }
-        tmp14 = "url" !== data[tmp(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        tmp14 = "url" !== data[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
         if (tmpResult3.hasSpansEnabled()) {
           const _String = String;
-          obj.sampled = String(tmp(819).spanIsSampled(rootSpan));
+          obj.sampled = String(spanToJSON.spanIsSampled(rootSpan));
           let value1;
           if (traceState != null) {
             value1 = traceState.get("sentry.sample_rand");
           }
           if (value1 == null) {
-            const scope = tmp(820).getCapturedScopesOnSpan(rootSpan).scope;
+            const scope = unwrapScopeFromWeakRef.getCapturedScopesOnSpan(rootSpan).scope;
             str = undefined;
             if (scope != null) {
               str = scope.getPropagationContext().sampleRand.toString();
               const str6 = scope.getPropagationContext().sampleRand;
             }
             value1 = str;
-            const tmpResult5 = tmp(820);
+            const tmpResult5 = unwrapScopeFromWeakRef;
           }
           obj.sample_rand = value1;
-          const tmpResult4 = tmp(819);
+          const tmpResult4 = spanToJSON;
         }
         let tmp18 = typeof value !== "number";
         if (typeof value !== "number") {
@@ -149,7 +152,6 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
     obj[4] = dsnFromString.extractOrgIdFromClient(getOptions);
     getOptions.emit("createDsc", obj);
     dsc = obj;
-    const obj2 = dsnFromString;
   }
   return dsc;
 };

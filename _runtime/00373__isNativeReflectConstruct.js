@@ -1,10 +1,10 @@
 // _runtime/00373__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00366__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
-import closure_5 from "metro/00096__get.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _get from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const AnimatedValueXY = importDefault;
@@ -76,7 +76,7 @@ class AnimatedValueXY {
     }
     tmp6 = AnimatedValueXY;
     tmp7 = closure_1;
-    tmp8 = require("module_38");
+    tmp8 = require("metro/00038__.js");
     tmp9 = point.x instanceof require("_isNativeReflectConstruct");
     if (tmp9) {
       tmp9 = point.y instanceof require("_isNativeReflectConstruct");
@@ -133,27 +133,27 @@ let items = [
   },
   {
     key: "resetAnimation",
-    value: function resetAnimation(arg0) {
+    value: function resetAnimation(fn) {
       const self = this;
       const x = this.x;
       x.resetAnimation();
       const y = this.y;
       y.resetAnimation();
-      if (arg0) {
-        arg0(self.__getValue());
+      if (fn) {
+        fn(self.__getValue());
       }
     }
   },
   {
     key: "stopAnimation",
-    value: function stopAnimation(arg0) {
+    value: function stopAnimation(fn) {
       const self = this;
       const x = this.x;
       x.stopAnimation();
       const y = this.y;
       y.stopAnimation();
-      if (arg0) {
-        arg0(self.__getValue());
+      if (fn) {
+        fn(self.__getValue());
       }
     }
   },
@@ -213,8 +213,7 @@ let items = [
       const y = this.y;
       y.__addChild(this);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__attach", this);
+      let fn = callback3(callback2(self.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -229,8 +228,7 @@ let items = [
       const y = this.y;
       y.__removeChild(this);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__detach", this);
+      let fn = callback3(callback2(self.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -245,8 +243,7 @@ let items = [
       const y = this.y;
       y.__makeNative(arg0);
       const self = this;
-      let fn;
-      fn = callback3(callback2(self.prototype), "__makeNative", this);
+      let fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

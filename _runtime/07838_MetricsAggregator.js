@@ -1,6 +1,6 @@
 // _runtime/07838_MetricsAggregator.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const MetricsAggregator = require;
@@ -15,13 +15,13 @@ class MetricsAggregator {
     this._bucketsTotalWeight = 0;
     tmp3 = MetricsAggregator;
     tmp4 = closure_1;
-    this._interval = setInterval(() => self._flush(), require("module_7835").DEFAULT_FLUSH_INTERVAL);
+    this._interval = setInterval(() => self._flush(), require("metro/07835__.js").DEFAULT_FLUSH_INTERVAL);
     if (this._interval.unref) {
       _interval = self._interval;
       unrefResult = _interval.unref();
     }
     random = Math.random();
-    self._flushShift = Math.floor(random * require("module_7835").DEFAULT_FLUSH_INTERVAL / 1000);
+    self._flushShift = Math.floor(random * require("metro/07835__.js").DEFAULT_FLUSH_INTERVAL / 1000);
     self._forceFlush = false;
     return;
   }
@@ -29,9 +29,9 @@ class MetricsAggregator {
 const items = [
   {
     key: "add",
-    value: function add(arg0, arg1, diff) {
-      let str = arg3;
-      if (arg3 === undefined) {
+    value: function add(arg0, arg1, diff, none) {
+      let str = none;
+      if (none === undefined) {
         str = "none";
       }
       let obj = arg4;
@@ -57,7 +57,7 @@ const items = [
       let num = 0;
       if (value) {
         num = 0;
-        if (arg0 === tmp5(7835).SET_METRIC_TYPE) {
+        if (arg0 === MetricsAggregator(7835).SET_METRIC_TYPE) {
           num = value.metric.weight;
         }
       }
@@ -71,7 +71,7 @@ const items = [
         }
       } else {
         obj = { metric: null, timestamp: null, metricType: null, name: null, unit: null, tags: null };
-        const tmp15 = new tmp5(7840).METRIC_MAP[arg0](diff);
+        const tmp15 = new MetricsAggregator(7840).METRIC_MAP[arg0](diff);
         obj[0] = tmp15;
         obj[1] = rounded;
         obj[2] = arg0;
@@ -90,6 +90,7 @@ const items = [
       if (self._bucketsTotalWeight >= MetricsAggregator(7835).MAX_WEIGHT) {
         self.flush();
       }
+      const tmp5Result = MetricsAggregator(7743);
     }
   },
   {
@@ -126,26 +127,22 @@ const items = [
         const _buckets = self._buckets;
         const tmp10 = _buckets[Symbol.iterator]();
         while (tmp10 !== undefined) {
-          let tmp14 = callback;
-          let tmp15 = callback(tmp12, 2);
+          let tmp15 = _slicedToArray(tmp12, 2);
           [tmp16, tmp17] = tmp15;
-          let tmp18 = tmp17;
           if (tmp17.timestamp <= diff) {
-            let tmp19 = tmp16;
-            let tmp20 = tmp17;
-            let result = map.set(tmp16, tmp18);
-            self._bucketsTotalWeight = self._bucketsTotalWeight - tmp18.metric.weight;
+            let result = map.set(tmp16, tmp17);
+            self._bucketsTotalWeight = self._bucketsTotalWeight - tmp17.metric.weight;
           }
           continue;
         }
         const tmp23 = map[Symbol.iterator]();
         while (tmp23 !== undefined) {
-          let tmp27 = callback;
           let _buckets2 = self._buckets;
-          let deleteResult = _buckets2.delete(callback(tmp25, 1)[0]);
+          let deleteResult = _buckets2.delete(_slicedToArray(tmp25, 1)[0]);
           continue;
         }
         self._captureMetrics(map);
+        const obj = MetricsAggregator(7752);
       }
     }
   },
@@ -155,8 +152,8 @@ const items = [
       if (_buckets.size > 0) {
         const self = this;
         const _Array = Array;
-        const mapped = Array.from(_buckets).map((arg0) => {
-          [, tmp] = arg0;
+        const mapped = Array.from(_buckets).map((item, index) => {
+          [, tmp] = item;
           return tmp;
         });
         const arr = Array.from(_buckets);

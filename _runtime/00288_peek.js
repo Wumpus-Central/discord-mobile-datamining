@@ -22,7 +22,6 @@ function pop(arr) {
           let sum = diff + 1;
           let tmp4 = arr[sum];
           let diff1 = tmp2.sortIndex - arr.sortIndex;
-          let tmp6 = num;
           if (0 === diff1) {
             diff1 = tmp2.id - arr.id;
           }
@@ -74,10 +73,7 @@ function advanceTimers(arg0) {
   }
   if (null !== first) {
     while (true) {
-      let tmp2 = first;
       if (null === first.callback) {
-        let tmp7 = pop;
-        let tmp8 = arr2;
         let tmp9 = pop(arr2);
         let arr = arr2;
         let first1 = null;
@@ -91,30 +87,27 @@ function advanceTimers(arg0) {
       } else if (first.startTime > arg0) {
         break;
       } else {
-        let tmp11 = pop;
-        let tmp12 = arr2;
         let tmp13 = pop(arr2);
         first.sortIndex = first.expirationTime;
         let tmp14 = arr;
         let length = arr.length;
-        arr = arr.push(first);
+        arr.push(first);
         arr = arr2;
         if (0 < length) {
           while (true) {
             let tmp3 = length - 1 >>> 1;
             let tmp4 = tmp14[tmp3];
             let diff = tmp4.sortIndex - first.sortIndex;
-            let tmp6 = length;
             if (0 === diff) {
               diff = tmp4.id - first.id;
             }
-            arr = tmp12;
+            arr = arr2;
             if (0 >= diff) {
               break;
             } else {
               tmp14[tmp3] = first;
               tmp14[length] = tmp4;
-              arr = tmp12;
+              arr = arr2;
               length = tmp3;
               if (0 < tmp3) {
                 continue;
@@ -152,7 +145,7 @@ function handleTimeout(arg0) {
       if (null !== first1) {
         closure_0 = handleTimeout;
         closure_22 = _setTimeout(() => {
-          callback(closure_1_2());
+          callback(fn());
         }, first1.startTime - arg0);
       }
     }
@@ -189,58 +182,33 @@ function performWorkUntilDeadline() {
         if (null !== tmp18) {
           if (tmp19.expirationTime <= tmp7) {
             while (true) {
-              let tmp23 = _null;
-              let tmp24 = _null;
               let callback = _null.callback;
               if (typeof callback === "function") {
-                let tmp26 = _null;
-                let tmp27 = _null;
                 _null.callback = tmp20;
-                let tmp28 = _null;
-                let tmp29 = _null;
                 let priorityLevel = _null.priorityLevel;
-                let tmp30 = callback;
-                let tmp31 = _null;
-                let tmp32 = _null;
-                let tmp33 = tmp7;
                 tmp25Result = tmp25(_null.expirationTime <= tmp7);
-                let tmp35 = tmp25Result;
-                let tmp36 = fn;
                 tmp7 = fn();
                 if (typeof tmp25Result === "function") {
                   break;
                 } else {
-                  let tmp70 = _null;
-                  let tmp71 = _null;
-                  let tmp72 = peek;
-                  let tmp73 = closure_6;
                   if (_null === peek(closure_6)) {
-                    let tmp37 = pop;
-                    let tmp38 = pop(tmp73);
+                    let tmp38 = pop(closure_6);
                   }
-                  let tmp39 = advanceTimers;
-                  let tmp40 = tmp7;
                   let tmp41 = advanceTimers(tmp7);
-                  let tmp42 = tmp73;
+                  let tmp42 = closure_6;
                 }
               } else {
-                let tmp68 = pop;
                 tmp42 = closure_6;
                 let tmp69 = pop(closure_6);
               }
-              let tmp43 = peek;
               let tmp44 = peek(tmp42);
               _null = tmp44;
               tmp21 = peek;
               if (tmp20 !== tmp44) {
-                let tmp46 = tmp44;
-                let tmp47 = tmp7;
                 if (tmp45.expirationTime <= tmp7) {
                   continue;
                 } else {
-                  let tmp74 = shouldYieldToHost;
-                  tmp21 = tmp43;
-                  let tmp59 = null;
+                  tmp21 = peek;
                   _null = tmp20;
                   tmp20 = tmp12;
                   priorityLevel = tmp12;
@@ -251,7 +219,7 @@ function performWorkUntilDeadline() {
             _null.callback = tmp25Result;
             advanceTimers(tmp7);
           } else {
-            tmp21 = tmp16;
+            tmp21 = peek;
           }
         }
         if (tmp20 === _null) {
@@ -261,7 +229,6 @@ function performWorkUntilDeadline() {
             tmp7 = requestHostTimeout(handleTimeout, tmp21Result.startTime - tmp7);
           }
         }
-        tmp16 = peek;
       } catch (tmp60) {
         _null = null;
         priorityLevel = tmp4;
@@ -281,7 +248,7 @@ function performWorkUntilDeadline() {
 function requestHostTimeout(handleTimeout, arg1) {
   closure_0 = handleTimeout;
   closure_22 = _setTimeout(() => {
-    callback(closure_1_2());
+    callback(fn());
   }, arg1);
 }
 if (typeof performance === "object") {
@@ -292,7 +259,6 @@ if (typeof performance === "object") {
       return performance.now();
     };
     let fn = fn2;
-    fn = fn2;
   }
   let closure_6 = [];
   let closure_7 = [];
@@ -305,18 +271,15 @@ if (typeof performance === "object") {
   let c12 = false;
   let c13 = false;
   let c14 = false;
-  let _setTimeout = setTimeout;
-  _setTimeout = null;
+  let _setTimeout = null;
   if (typeof setTimeout === "function") {
     _setTimeout = setTimeout;
   }
-  let _clearTimeout = clearTimeout;
-  _clearTimeout = null;
+  let _clearTimeout = null;
   if (typeof clearTimeout === "function") {
     _clearTimeout = clearTimeout;
   }
-  let _setImmediate = setImmediate;
-  _setImmediate = null;
+  let _setImmediate = null;
   if (typeof setImmediate !== "undefined") {
     _setImmediate = setImmediate;
   }
@@ -358,13 +321,13 @@ if (typeof performance === "object") {
   if (typeof globalThis.nativeRuntimeScheduler !== "undefined") {
     let unstable_scheduleCallback$1 = globalThis.nativeRuntimeScheduler.unstable_scheduleCallback;
   } else {
-    unstable_scheduleCallback$1 = function unstable_scheduleCallback$1(priorityLevel, callback, obj) {
+    unstable_scheduleCallback$1 = function unstable_scheduleCallback$1(priorityLevel, callback, delay) {
       let diff1 = fn();
       let tmp2 = diff1;
-      if (typeof obj === "object") {
+      if (typeof delay === "object") {
         tmp2 = diff1;
-        if (null !== obj) {
-          const delay = obj.delay;
+        if (null !== delay) {
+          delay = delay.delay;
           let sum = diff1;
           if (typeof delay === "number") {
             sum = diff1;
@@ -385,20 +348,18 @@ if (typeof performance === "object") {
           num = 4 === priorityLevel ? 10000 : 5000;
         }
       }
-      obj = { id: tmp4, callback, priorityLevel, startTime: tmp2, expirationTime: sum1, sortIndex: -1 };
+      const obj = { id: tmp4, callback, priorityLevel, startTime: tmp2, expirationTime: sum1, sortIndex: -1 };
       closure_8 = tmp4 + 1;
       sum1 = tmp2 + num;
       if (tmp2 > diff1) {
         obj.sortIndex = tmp2;
-        let arr = arr2;
         let length2 = arr2.length;
-        arr = arr2.push(obj);
+        let arr = arr2.push(obj);
         if (0 < length2) {
           while (true) {
             let tmp15 = length2 - 1 >>> 1;
             let tmp16 = arr[tmp15];
             let diff = tmp16.sortIndex - obj.sortIndex;
-            let tmp18 = length2;
             if (0 === diff) {
               diff = tmp16.id - obj.id;
             }
@@ -436,7 +397,7 @@ if (typeof performance === "object") {
           diff1 = tmp2 - diff1;
           closure_0 = handleTimeout;
           tmp2 = _setTimeout(() => {
-            callback(closure_1_2());
+            callback(fn());
           }, diff1);
           closure_22 = tmp2;
         }
@@ -449,7 +410,6 @@ if (typeof performance === "object") {
             let tmp6 = length - 1 >>> 1;
             let tmp7 = tmp30[tmp6];
             let diff2 = tmp7.sortIndex - obj.sortIndex;
-            let tmp9 = length;
             if (0 === diff2) {
               diff2 = tmp7.id - obj.id;
             }

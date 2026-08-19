@@ -1,5 +1,5 @@
 // _runtime/01524_useChildListeners.js
-import closure_0 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 
 export const useChildListeners = function useChildListeners() {
@@ -21,8 +21,7 @@ export const useChildListeners = function useChildListeners() {
         }
         if (tmp4) {
           c2 = true;
-          table[tmp2].splice(index, 1);
-          const arr2 = table[tmp2];
+          table[table].splice(index, 1);
         }
       };
     }, items)

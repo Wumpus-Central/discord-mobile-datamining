@@ -26,13 +26,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -45,7 +43,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -675,7 +672,6 @@ if (self2) {
               if (1 === code.values.length) {
                 const _HermesInternal14 = HermesInternal;
                 let combined1 = "Ugyldig v\u00E6rdi: forventede " + closure_2.stringifyPrimitive(code.values[0]);
-                const obj = closure_2;
               } else {
                 const _HermesInternal13 = HermesInternal;
                 combined1 = "Ugyldigt valg: forventede en af f\u00F8lgende " + closure_2.joinValues(code.values, "|");
@@ -708,7 +704,6 @@ if (self2) {
                 }
                 const _HermesInternal12 = HermesInternal;
                 let combined2 = "For stor: forventede " + str33 + " " + verb + " " + str32 + " " + str + " " + str40;
-                const str39 = code.maximum;
               } else {
                 let str34 = str33;
                 if (str33 == null) {
@@ -716,7 +711,6 @@ if (self2) {
                 }
                 const _HermesInternal11 = HermesInternal;
                 combined2 = "For stor: forventede " + str34 + " havde " + str32 + " " + code.maximum.toString();
-                const str35 = code.maximum;
               }
               return combined2;
             case "getChannelIcon":
@@ -737,11 +731,9 @@ if (self2) {
               if (tmp16) {
                 const _HermesInternal10 = HermesInternal;
                 let combined3 = "For lille: forventede " + origin + " " + tmp16.verb + " " + str20 + " " + code.minimum.toString() + " " + tmp16.unit;
-                const str25 = code.minimum;
               } else {
                 const _HermesInternal9 = HermesInternal;
                 combined3 = "For lille: forventede " + origin + " havde " + str20 + " " + code.minimum.toString();
-                const str21 = code.minimum;
               }
               return combined3;
             case "getChannelIconComponentWithGuild":

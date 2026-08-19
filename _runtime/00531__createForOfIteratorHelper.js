@@ -12,16 +12,16 @@ let str2 = require;
 let _exports = exports;
 function _createForOfIteratorHelper(iterable) {
   closure_0 = iterable;
-  iterable = typeof Symbol !== "undefined";
+  let prop = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
-    iterable = iterable[Symbol.iterator];
+    prop = iterable[Symbol.iterator];
   }
-  if (!iterable) {
-    iterable = iterable[Symbol.iterator];
+  if (!prop) {
+    prop = iterable[Symbol.iterator];
   }
-  let arr = iterable;
-  if (iterable) {
+  let arr = prop;
+  if (prop) {
     c4 = true;
     c5 = false;
     let obj = { s: null, n: null, e: null, f: null };
@@ -90,8 +90,8 @@ function _createForOfIteratorHelper(iterable) {
               return;
             }
           }
-          let name = tmp3;
-          if (tmp4) {
+          let name = tmp4;
+          if (tmp5) {
             name = iterable.constructor.name;
           }
           if ("Map" !== name) {
@@ -120,7 +120,7 @@ function _createForOfIteratorHelper(iterable) {
           }
           const _Array3 = Array;
           arr = Array.from(iterable);
-          tmp4 = "Object" === tmp3 && iterable.constructor;
+          tmp5 = "Object" === tmp4 && iterable.constructor;
         }
       }
       if (!arr) {
@@ -177,8 +177,6 @@ function pushEncodedKeyValuePair(items, key10006, value) {
           let iter2 = iter;
           if (!iter.done) {
             do {
-              let tmp15 = pushEncodedKeyValuePair;
-              let tmp16 = iter2;
               let tmp17 = pushEncodedKeyValuePair(items, key10006, iter2.value);
               let iter3 = obj3.n();
               iter2 = iter3;
@@ -194,21 +192,12 @@ function pushEncodedKeyValuePair(items, key10006, value) {
       } else {
         if (obj2.isObject(value)) {
           for (const key10033 in arg2) {
-            let tmp26 = str2;
-            let tmp27 = dependencyMap;
-            let tmp25 = key10033;
             let obj4 = str2(532);
             if (!obj4.hasOwn(arg2, key10033)) {
               continue;
             } else {
-              let tmp9 = pushEncodedKeyValuePair;
               let _HermesInternal = HermesInternal;
-              let str5 = "";
-              let tmp10 = arg1;
-              let str6 = "[";
-              let tmp11 = key10033;
-              let str7 = "]";
-              let tmp12 = pushEncodedKeyValuePair(arg0, "" + arg1 + "[" + tmp25 + "]", arg2[key10033]);
+              let tmp12 = pushEncodedKeyValuePair(arg0, "" + arg1 + "[" + key10033 + "]", arg2[key10033]);
               continue;
             }
             continue;
@@ -259,7 +248,7 @@ class Response {
         index = arr2.indexOf(":");
         tmp4 = num6;
         if (-1 !== index) {
-          str5 = require("module_0");
+          str5 = require("../discord_app/index.native.tsx");
           tmp6 = trim;
           formatted = str5.toLowerCase();
           str6 = arr2.slice(index + 1);
@@ -304,28 +293,28 @@ class Response {
   }
   _parseBody(arg0) {
     self = this;
-    application_json = closure_6.parse[this.type];
+    prop = closure_6.parse[this.type];
     if (this.req._parser) {
       req = self.req;
       _parserResult = req._parser(self, global);
     } else {
-      isMatch = !application_json;
-      if (!application_json) {
+      isMatch = !prop;
+      if (!prop) {
         obj = /[/+]json($|[^-\w])/i;
         isMatch = obj.test(self.type);
       }
       if (isMatch) {
-        application_json = tmp.parse["application/json"];
+        prop = tmp.parse["application/json"];
       }
       _parserResult = null;
-      if (application_json) {
+      if (prop) {
         _parserResult = null;
         if (global) {
           num = 0;
           if (global.length > 0) {
-            _parserResult = application_json(global);
+            _parserResult = prop(global);
           } else {
-            tmp4 = globalThis;
+            tmp5 = globalThis;
             _Object = Object;
             _parserResult = null;
           }
@@ -362,7 +351,6 @@ function parseString(str) {
   for (let num = 0; num < length; num = num + 1) {
     let arr2 = parts[num];
     let index = arr2.indexOf("=");
-    let tmp2 = num;
     if (-1 === index) {
       let _decodeURIComponent3 = decodeURIComponent;
       obj[decodeURIComponent(arr2)] = "";
@@ -388,8 +376,8 @@ class Request {
     onResult = self.on("end", () => {
       try {
         let obj = self;
-        obj = Object.create(closure_1_10.prototype);
-        closure_1_10(self);
+        obj = Object.create(Response.prototype);
+        Response(self);
         obj.emit("response", obj);
         try {
           if (!obj._isResponseOK(tmp8)) {
@@ -422,15 +410,15 @@ class Request {
         error1.parse = true;
         error1.original = tmp29;
         if (self.xhr) {
-          if (tmp2 === obj2.xhr.responseType) {
-            let response = obj2.xhr.responseText;
+          if (tmp2 === self.xhr.responseType) {
+            let response = self.xhr.responseText;
           } else {
-            response = obj2.xhr.response;
+            response = self.xhr.response;
           }
           error1.rawResponse = response;
           status = null;
-          if (obj2.xhr.status) {
-            status = obj2.xhr.status;
+          if (self.xhr.status) {
+            status = self.xhr.status;
           }
           error1.status = status;
           error1.statusCode = error1.status;
@@ -663,13 +651,13 @@ class Request {
   _end() {
     self = this;
     if (this._aborted) {
-      tmp24 = globalThis;
+      tmp25 = globalThis;
       _Error = Error;
-      tmp25 = new.target;
-      str9 = "The request has been aborted even before .end() was called";
       tmp26 = new.target;
+      str9 = "The request has been aborted even before .end() was called";
+      tmp27 = new.target;
       error = new Error("The request has been aborted even before .end() was called");
-      tmp28 = error;
+      tmp29 = error;
       return self.callback(error);
     } else {
       tmp = closure_6;
@@ -678,7 +666,7 @@ class Request {
       tmp2 = self._formData || self._data;
       _setTimeoutsResult = self._setTimeouts();
       str = "readystatechange";
-      listener = xhr.addEventListener("readystatechange", () => {
+      listener = xhr.addEventListener("readystatechange", (event) => {
         const readyState = xhr.readyState;
         let _responseTimeoutTimer = readyState >= 2;
         if (_responseTimeoutTimer) {
@@ -691,10 +679,10 @@ class Request {
         if (4 === readyState) {
           try {
             if (xhr.status) {
-              obj.emit("end");
-            } else if (!obj.timedout) {
-              if (!obj._aborted) {
-                return obj.crossDomainError();
+              self.emit("end");
+            } else if (!self.timedout) {
+              if (!self._aborted) {
+                return self.crossDomainError();
               }
             }
           } catch (err) {
@@ -743,26 +731,26 @@ class Request {
             flag3 = true;
             xhr.withCredentials = true;
           }
-          result = tmp2;
+          tmp13Result = tmp2;
           if (self._formData) {
           } else {
             str4 = "GET";
-            result = tmp2;
+            tmp13Result = tmp2;
             if ("GET" === self.method) {
             } else {
               str10 = "HEAD";
-              result = tmp2;
+              tmp13Result = tmp2;
               if ("HEAD" === self.method) {
               } else {
-                result = tmp2;
+                tmp13Result = tmp2;
                 if (typeof tmp2 === "string") {
                 } else {
-                  result = tmp2;
+                  tmp13Result = tmp2;
                   if (self._isHost(tmp2)) {
                   } else {
                     str5 = self._header["content-type"];
-                    application_json = self._serializer;
-                    if (application_json) {
+                    _serializer = self._serializer;
+                    if (_serializer) {
                     } else {
                       str6 = "";
                       if (!str5) {
@@ -770,37 +758,37 @@ class Request {
                         str7 = ";";
                         str6 = str5.split(";")[0];
                       }
-                      application_json = tmp.serialize[str6];
+                      _serializer = tmp.serialize[str6];
                     }
-                    tmp13 = !application_json;
-                    if (application_json) {
+                    tmp14 = !_serializer;
+                    if (_serializer) {
                     } else {
-                      tmp14 = isJSON;
+                      tmp15 = isJSON;
                       num = 0;
-                      tmp13 = isJSON(str5);
+                      tmp14 = isJSON(str5);
                     }
-                    if (!tmp13) {
+                    if (!tmp14) {
                     } else {
-                      application_json = tmp.serialize["application/json"];
+                      _serializer = tmp.serialize["application/json"];
                     }
-                    result = tmp2;
-                    if (!application_json) {
+                    tmp13Result = tmp2;
+                    if (!_serializer) {
                     } else {
-                      result = application_json(tmp2);
+                      tmp13Result = _serializer(tmp2);
                     }
                   }
                 }
               }
             }
           }
-          tmp15 = null;
+          tmp16 = null;
           for (const key10069 in self.header) {
-            tmp29 = key10069;
+            tmp30 = key10069;
             hasOwnResult = null !== self.header[key10069];
             if (!hasOwnResult) {
             } else {
-              tmp16 = self;
-              tmp17 = closure_2;
+              tmp17 = self;
+              tmp18 = closure_2;
               obj2 = require("_createForOfIteratorHelper");
               hasOwnResult = obj2.hasOwn(self.header, key10069);
             }
@@ -818,76 +806,36 @@ class Request {
           }
           str8 = "request";
           emitResult = self.emit("request", self);
-          tmp21 = null;
-          if (undefined === result) {
+          tmp22 = null;
+          if (undefined === tmp13Result) {
           } else {
-            tmp21 = result;
+            tmp22 = tmp13Result;
           }
-          sendResult = xhr.send(tmp21);
+          sendResult = xhr.send(tmp22);
           return;
         }
         num = xhr.open;
         flag = true;
         numResult = num(self.method, self.url, true);
-      } catch (tmp23) {
-        return obj.callback(tmp23);
+      } catch (tmp24) {
+        return obj.callback(tmp24);
       }
     }
     return;
   }
 }
 _exports = module.exports;
-_exports.Request = Request;
-_exports.getXHR = () => {
-  if (self.XMLHttpRequest) {
-    const xMLHttpRequest = new self.XMLHttpRequest();
-    return xMLHttpRequest;
-  } else {
-    const _Error = Error;
-    error = new Error("Browser-only version of superagent could not find XHR");
-    throw error;
-  }
-};
 function trim(arg0) {
 
 }
-_exports.serializeObject = function serialize(obj) {
-  if (obj.isObject(obj)) {
-    const items = [];
-    for (const key10012 in arg0) {
-      let tmp4 = key10012;
-      let tmp5 = str2;
-      let tmp6 = dependencyMap;
-      let obj2 = str2(532);
-      if (!obj2.hasOwn(arg0, key10012)) {
-        continue;
-      } else {
-        let tmp2 = pushEncodedKeyValuePair;
-        let tmp3 = pushEncodedKeyValuePair(items, key10012, arg0[key10012]);
-        continue;
-      }
-      continue;
-    }
-    return items.join("&");
-  } else {
-    return obj;
-  }
-  obj = str2(532);
-};
-_exports.parseString = parseString;
-_exports.types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
 let obj = { "application/x-www-form-urlencoded": _mod533.stringify, "application/json": defaultOptions };
-_exports.serialize = obj;
 obj = { "application/x-www-form-urlencoded": parseString, "application/json": JSON.parse };
-_exports.parse = obj;
 _createForOfIteratorHelper.mixin(Response.prototype, ResponseBase.prototype);
-_exports.Response = Response;
 Emitter(Request.prototype);
 _createForOfIteratorHelper.mixin(Request.prototype, RequestBase.prototype);
 Request.prototype.ca = Request.prototype.agent;
 Request.prototype.buffer = Request.prototype.ca;
 Request.prototype.pipe = Request.prototype.write;
-_exports.agent = () => new str2(583)();
 let items = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"];
 let num = 0;
 let num2 = 0;
@@ -924,7 +872,55 @@ function del(arg0, fn) {
   return obj;
 }
 _createForOfIteratorHelper2.prototype.del = _createForOfIteratorHelper2.prototype.delete;
-_exports.get = (arg0, fn) => {
+
+export default (arg0, fn) => {
+  if (typeof fn === "function") {
+    const request = new _exports.Request("GET", arg0);
+    let endResult = request.end(fn);
+  } else if (1 === arguments.length) {
+    endResult = new _exports.Request("GET", arg0);
+  } else {
+    endResult = new _exports.Request(arg0, fn);
+  }
+  return endResult;
+};
+export { Request };
+export const getXHR = () => {
+  if (self.XMLHttpRequest) {
+    const xMLHttpRequest = new self.XMLHttpRequest();
+    return xMLHttpRequest;
+  } else {
+    const _Error = Error;
+    error = new Error("Browser-only version of superagent could not find XHR");
+    throw error;
+  }
+};
+export const serializeObject = function serialize(obj) {
+  obj = str2(532);
+  if (obj.isObject(obj)) {
+    const items = [];
+    for (const key10012 in arg0) {
+      let obj2 = str2(532);
+      if (!obj2.hasOwn(arg0, key10012)) {
+        continue;
+      } else {
+        let tmp3 = pushEncodedKeyValuePair(items, key10012, arg0[key10012]);
+        continue;
+      }
+      continue;
+    }
+    return items.join("&");
+  } else {
+    return obj;
+  }
+};
+export { parseString };
+export const types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };
+export const serialize = obj;
+export const parse = obj;
+export { Response };
+export const agent = () => new str2(583)();
+export const get = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("GET", arg0);
   let tmp2 = fn;
@@ -940,7 +936,7 @@ _exports.get = (arg0, fn) => {
   }
   return obj;
 };
-_exports.head = (arg0, fn) => {
+export const head = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("HEAD", arg0);
   let tmp2 = fn;
@@ -956,7 +952,7 @@ _exports.head = (arg0, fn) => {
   }
   return obj;
 };
-_exports.options = (arg0, fn) => {
+export const options = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("OPTIONS", arg0);
   let tmp2 = fn;
@@ -972,9 +968,9 @@ _exports.options = (arg0, fn) => {
   }
   return obj;
 };
-_exports.del = del;
-_exports.delete = del;
-_exports.patch = (arg0, fn) => {
+export { del };
+export const delete = del;
+export const patch = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("PATCH", arg0);
   let tmp2 = fn;
@@ -990,7 +986,7 @@ _exports.patch = (arg0, fn) => {
   }
   return obj;
 };
-_exports.post = (arg0, fn) => {
+export const post = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("POST", arg0);
   let tmp2 = fn;
@@ -1006,7 +1002,7 @@ _exports.post = (arg0, fn) => {
   }
   return obj;
 };
-_exports.put = (arg0, fn) => {
+export const put = (arg0, fn) => {
   let tmp = arg2;
   const obj = _exports("PUT", arg0);
   let tmp2 = fn;
@@ -1021,16 +1017,4 @@ _exports.put = (arg0, fn) => {
     obj.end(tmp);
   }
   return obj;
-};
-
-export default (arg0, fn) => {
-  if (typeof fn === "function") {
-    const request = new _exports.Request("GET", arg0);
-    let endResult = request.end(fn);
-  } else if (1 === arguments.length) {
-    endResult = new _exports.Request("GET", arg0);
-  } else {
-    endResult = new _exports.Request(arg0, fn);
-  }
-  return endResult;
 };

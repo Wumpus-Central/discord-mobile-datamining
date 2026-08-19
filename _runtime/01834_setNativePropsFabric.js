@@ -3,16 +3,16 @@ import addLogBoxLog from "01658_addLogBoxLog.js";
 import call from "01697_call.js";
 import isJest from "01657_isJest.js";
 
-function setNativePropsFabric(arg0, arg1) {
+function setNativePropsFabric(fn) {
   if (globalThis._WORKLET) {
     let obj = call;
     obj.processColorsInProps(arg1);
     obj = { shadowNodeWrapper: null, updates: null };
-    obj[0] = arg0();
+    obj[0] = fn();
     obj[1] = arg1;
     const items = [obj];
     global._updatePropsFabric(items);
-    const tmp6 = arg0();
+    const tmp6 = fn();
   } else {
     const logger = addLogBoxLog.logger;
     logger.warn("setNativeProps() can only be used on the UI runtime.");
@@ -49,7 +49,7 @@ obj = { logger: addLogBoxLog.logger, processColorsInProps: call.processColorsInP
 setNativePropsPaper.__closure = obj;
 setNativePropsPaper.__workletHash = 9895881337862;
 setNativePropsPaper.__initData = { code: "function setNativePropsPaper_Pnpm_setNativePropsTs2(animatedRef,updates){const{logger,processColorsInProps}=this.__closure;var _viewName$value,_viewName;if(!_WORKLET){logger.warn('setNativeProps() can only be used on the UI runtime.');return;}const tag=animatedRef();const name=(_viewName$value=(_viewName=animatedRef.viewName)===null||_viewName===void 0?void 0:_viewName.value)!==null&&_viewName$value!==void 0?_viewName$value:null;processColorsInProps(updates);global._updatePropsPaper([{tag:tag,name:name,updates:updates}]);}" };
-isJest = isJest.shouldBeUseWeb();
+isJest.shouldBeUseWeb();
 if (isJest) {
   if (isJest.isJest()) {
     function setNativePropsJest() {

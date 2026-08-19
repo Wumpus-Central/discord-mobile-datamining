@@ -5,7 +5,7 @@ function _typeof(arg0) {
     if (typeof Symbol.iterator === "symbol") {
       let fn = (arg0) => typeof arg0;
     }
-    tmp.exports = fn;
+    module.exports = fn;
     return fn(arg0);
   }
   fn = (arg0) => {

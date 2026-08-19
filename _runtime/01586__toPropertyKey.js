@@ -1,10 +1,10 @@
 // _runtime/01586__toPropertyKey.js
-import closure_2 from "metro/00109__objectWithoutProperties.js";
-import closure_3 from "metro/00032__slicedToArray.js";
-import closure_4 from "00019_noop.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -45,34 +45,21 @@ export const useDescriptors = function useDescriptors(state) {
   ({ setState: closure_7, addListener } = state);
   const addKeyedListener = state.addKeyedListener;
   const onRouteFocus = state.onRouteFocus;
-  closure_11 = undefined;
   c12 = undefined;
-  c13 = undefined;
-  let onDispatchAction;
-  let onEmitEvent;
-  let onOptionsChange;
-  let scheduleUpdate;
-  let flushUpdates;
-  let stackRef;
-  let getIsStateEmitted;
-  closure_21 = undefined;
   c22 = undefined;
   c23 = undefined;
-  let getOptions;
-  let render;
-  let reduced;
   ({ router, emitter } = state);
   closure_11 = React.useContext(state(1537).ThemeContext);
   [c12, tmp2] = callback(React.useState({}), 2);
   c13 = tmp2;
   const context = React.useContext(state(1530).NavigationBuilderContext);
-  onDispatchAction = context.onDispatchAction;
-  onEmitEvent = context.onEmitEvent;
-  onOptionsChange = context.onOptionsChange;
-  scheduleUpdate = context.scheduleUpdate;
-  flushUpdates = context.flushUpdates;
-  stackRef = context.stackRef;
-  getIsStateEmitted = context.getIsStateEmitted;
+  const onDispatchAction = context.onDispatchAction;
+  const onEmitEvent = context.onEmitEvent;
+  const onOptionsChange = context.onOptionsChange;
+  const scheduleUpdate = context.scheduleUpdate;
+  const flushUpdates = context.flushUpdates;
+  const stackRef = context.stackRef;
+  const getIsStateEmitted = context.getIsStateEmitted;
   let items = [navigation, onAction, addListener, addKeyedListener, onRouteFocus, onDispatchAction, onEmitEvent, onOptionsChange, getIsStateEmitted, scheduleUpdate, flushUpdates, stackRef];
   closure_21 = React.useMemo(() => ({ navigation, onAction, addListener, addKeyedListener, onRouteFocus, onDispatchAction, onEmitEvent, onOptionsChange, getIsStateEmitted, scheduleUpdate, flushUpdates, stackRef }), items);
   let obj = state(1587);
@@ -80,10 +67,10 @@ export const useDescriptors = function useDescriptors(state) {
   ({ base: c22, navigations: c23 } = navigationCache);
   let tmp = callback(React.useState({}), 2);
   const routeCache = state(1552).useRouteCache(state.routes);
-  getOptions = function getOptions(arg0, arg1, arg2) {
+  function getOptions(arg0, arg1, arg2) {
 
-  };
-  render = function render(route, navigation, options, routeState) {
+  }
+  function render(route, navigation, options, routeState) {
     closure_0 = route;
     const props = tmp.props;
     let layout = props.layout;
@@ -105,7 +92,7 @@ export const useDescriptors = function useDescriptors(state) {
         return closure_1_13((arg0) => {
           if (closure_0.key in arg0) {
             const items = [closure_0.key];
-            return closure_2_2(arg0, items.map(closure_2_6));
+            return navigation(arg0, items.map(getState));
           } else {
             return arg0;
           }
@@ -123,17 +110,17 @@ export const useDescriptors = function useDescriptors(state) {
       obj[4] = tmp5;
       layoutResult = layout(obj);
     }
-    obj = { value: closure_21, children: tmp2(tmp3(tmp4[9]).NavigationProvider, obj1) };
+    obj = { value: closure_21, children: onAction(state(closure_1_1[9]).NavigationProvider, obj1) };
     return onAction(state(closure_1_1[5]).NavigationBuilderContext.Provider, obj, route.key);
-  };
-  reduced = routeCache.reduce((arg0, key) => {
+  }
+  let reduced = routeCache.reduce((acc, item, index) => {
     if (typeof getOptions !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    state = key;
+    state = item;
     dependencyMap = tmp;
     const items = [closure_3, , ];
-    if (dependencyMap[key.name].options) {
+    if (dependencyMap[item.name].options) {
       const options = tmp2.options;
       const _Boolean = Boolean;
       let found = options.filter(Boolean);
@@ -141,29 +128,29 @@ export const useDescriptors = function useDescriptors(state) {
       found = [];
     }
     const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
-    items[arraySpreadResult] = dependencyMap[key.name].props.options;
-    items[arraySpreadResult + 1] = _undefined[key.key];
-    reduced = items.reduce((arg0, fn) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
+    items[arraySpreadResult] = dependencyMap[item.name].props.options;
+    items[arraySpreadResult + 1] = _undefined[item.key];
+    reduced = items.reduce((acc, item, index) => {
+      let tmp = item;
+      if (typeof item === "function") {
         const obj = { route: null, navigation: null, theme: null };
         obj[0] = closure_0;
         obj[1] = closure_1;
         obj[2] = closure_1_11;
-        tmp = fn(obj);
+        tmp = item(obj);
       }
-      return Object.assign(arg0, tmp);
+      return Object.assign(acc, tmp);
     }, {});
-    state = render(key, tmp, reduced, state.routes[arg2].state);
-    arg0[key.key] = {
-      route: key,
-      navigation: _undefined2[key.key],
+    state = render(item, tmp, reduced, state.routes[index].state);
+    acc[item.key] = {
+      route: item,
+      navigation: _undefined2[item.key],
       render() {
         return closure_0;
       },
       options: reduced
     };
-    return arg0;
+    return acc;
   }, {});
   obj = {
     describe(key) {
@@ -172,7 +159,7 @@ export const useDescriptors = function useDescriptors(state) {
           HermesBuiltin.throwTypeError();
         }
         closure_0 = key;
-        dependencyMap = tmp7;
+        dependencyMap = c22;
         const items = [closure_3, , ];
         if (dependencyMap[key.name].options) {
           const options = tmp10.options;
@@ -185,18 +172,18 @@ export const useDescriptors = function useDescriptors(state) {
         const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
         items[arraySpreadResult] = dependencyMap[key.name].props.options;
         items[arraySpreadResult + 1] = obj;
-        reduced = items.reduce((arg0, fn) => {
-          let tmp = fn;
-          if (typeof fn === "function") {
+        reduced = items.reduce((acc, item, index) => {
+          let tmp = item;
+          if (typeof item === "function") {
             const obj = { route: null, navigation: null, theme: null };
             obj[0] = closure_0;
             obj[1] = closure_1;
             obj[2] = closure_1_11;
-            tmp = fn(obj);
+            tmp = item(obj);
           }
-          return Object.assign(arg0, tmp);
+          return Object.assign(acc, tmp);
         }, {});
-        closure_0 = render(key, tmp7, reduced, undefined);
+        closure_0 = render(key, c22, reduced, undefined);
         obj = { route: null, navigation: null, render: null, options: null };
         obj[0] = key;
         obj[1] = c22;

@@ -1,17 +1,17 @@
 // _runtime/06490__isNativeReflectConstruct.js
 import ButtonComponentDefault from "06473_ButtonComponent.js";
 import itemsDefault from "06491_items.js";
-import closure_6 from "metro/00109__objectWithoutProperties.js";
-import closure_7 from "metro/00041__classCallCheck.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_8 from "metro/00093__possibleConstructorReturn.js";
-import closure_9 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-let InnerBorderlessButton = arg1;
+let InnerBorderlessButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -69,56 +69,56 @@ class InnerBaseButton {
       ({ state, pointerInside } = nativeEvent);
       let tmp = pointerInside;
       if (pointerInside) {
-        let tmp4 = state === lib(closure_1_2[11]).State.BEGAN;
+        let tmp4 = state === lib(dependencyMap[11]).State.BEGAN;
         if (!tmp4) {
-          tmp4 = state === lib(closure_1_2[11]).State.ACTIVE;
+          tmp4 = state === lib(dependencyMap[11]).State.ACTIVE;
         }
         tmp = tmp4;
       }
       if (tmp8) {
-        const props = tmp7.props;
+        const props = lib.props;
         props.onActiveStateChange(tmp);
       }
-      const longPressDetected = tmp7.longPressDetected;
+      const longPressDetected = lib.longPressDetected;
       let onPress = !longPressDetected;
       if (!longPressDetected) {
-        onPress = nativeEvent.oldState === lib(closure_1_2[11]).State.ACTIVE;
+        onPress = nativeEvent.oldState === lib(dependencyMap[11]).State.ACTIVE;
       }
       if (onPress) {
-        onPress = state !== lib(closure_1_2[11]).State.CANCELLED;
+        onPress = state !== lib(dependencyMap[11]).State.CANCELLED;
       }
       if (onPress) {
-        onPress = tmp7.lastIsPressed;
+        onPress = lib.lastIsPressed;
       }
       if (onPress) {
-        onPress = tmp7.props.onPress;
+        onPress = lib.props.onPress;
       }
       if (onPress) {
-        const props2 = tmp7.props;
+        const props2 = lib.props;
         props2.onPress(pointerInside);
       }
       if (!lib.lastIsPressed) {
-        if (state === lib(closure_1_2[11]).State.BEGAN) {
+        if (state === lib(dependencyMap[11]).State.BEGAN) {
           if (pointerInside) {
-            tmp7.longPressDetected = false;
-            if (tmp7.props.onLongPress) {
+            lib.longPressDetected = false;
+            if (lib.props.onLongPress) {
               const _setTimeout = setTimeout;
-              tmp7.longPressTimeout = setTimeout(tmp7.onLongPress, tmp7.props.delayLongPress);
+              lib.longPressTimeout = setTimeout(lib.onLongPress, lib.props.delayLongPress);
             }
           }
-          tmp7.lastIsPressed = tmp;
+          lib.lastIsPressed = tmp;
         }
       }
-      let tmp18 = state !== lib(closure_1_2[11]).State.ACTIVE || pointerInside || undefined === tmp7.longPressTimeout;
+      let tmp18 = state !== lib(dependencyMap[11]).State.ACTIVE || pointerInside || undefined === lib.longPressTimeout;
       if (tmp18) {
-        let tmp19 = undefined === tmp7.longPressTimeout;
+        let tmp19 = undefined === lib.longPressTimeout;
         if (!tmp19) {
-          let tmp22 = state !== lib(closure_1_2[11]).State.END;
+          let tmp22 = state !== lib(dependencyMap[11]).State.END;
           if (tmp22) {
-            tmp22 = state !== lib(closure_1_2[11]).State.CANCELLED;
+            tmp22 = state !== lib(dependencyMap[11]).State.CANCELLED;
           }
           if (tmp22) {
-            tmp22 = state !== lib(closure_1_2[11]).State.FAILED;
+            tmp22 = state !== lib(dependencyMap[11]).State.FAILED;
           }
           tmp19 = tmp22;
         }
@@ -126,9 +126,10 @@ class InnerBaseButton {
       }
       if (!tmp18) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp7.longPressTimeout);
-        tmp7.longPressTimeout = undefined;
+        clearTimeout(lib.longPressTimeout);
+        lib.longPressTimeout = undefined;
       }
+      tmp8 = tmp !== lib.lastIsPressed && lib.props.onActiveStateChange;
     };
     tmp3Result.onLongPress = () => {
       lib.longPressDetected = true;

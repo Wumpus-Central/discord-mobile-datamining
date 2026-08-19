@@ -2,8 +2,7 @@
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const Easing = get_ActivityIndicator.Easing;
-let obj = { animation: "timing", config: null };
-obj = { duration: 350, easing: Easing.out(require("module_5")) };
+let obj = { duration: 350, easing: Easing.out(require("00005_asyncGeneratorStep.js")) };
 obj[1] = obj;
 obj = { animation: "timing", config: { duration: 150, easing: Easing.in(Easing.linear) } };
 const obj2 = { animation: "timing", config: null };

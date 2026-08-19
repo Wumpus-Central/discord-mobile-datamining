@@ -7,13 +7,11 @@ import NavigationContext from "01544_NavigationContext.js";
 import NavigationFocusedRouteStateContext from "01568_NavigationFocusedRouteStateContext.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 
 export const NavigationIndependentTree = function NavigationIndependentTree(children) {
-  let obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
-  obj = { value: "Array", children: 0 };
+  const obj = { value: "Array", children: 0 };
   obj1 = { value: "Array", children: 0 };
   obj1[1] = jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, { value: true, children: children.children });
   obj[1] = jsx(context1.IsFocusedContext.Provider, { value: "Array", children: 0 });

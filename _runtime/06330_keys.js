@@ -1,6 +1,6 @@
 // _runtime/06330_keys.js
 import keys2 from "06331_keys.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 let obj = {};
 let keys = Object.keys(keys2);
@@ -15,24 +15,14 @@ let nextResult = iter.next();
 while (iter !== undefined) {
   let tmp7 = nextResult;
   if ("channels" in obj[nextResult]) {
-    let tmp13 = nextResult;
     if ("labels" in obj[tmp7]) {
-      let tmp19 = nextResult;
       if (obj[tmp7].labels.length !== obj[tmp7].channels) {
         let _Error3 = Error;
-        let tmp25 = nextResult;
-        let str3 = "channel and label counts mismatch: ";
-        let tmp26 = new.target;
-        let tmp27 = new.target;
         let error = new Error("channel and label counts mismatch: " + tmp7);
-        let tmp29 = error;
         throw error;
       } else {
-        let tmp20 = nextResult;
-        let tmp21 = obj[tmp7];
         ({ channels, labels } = obj[tmp7]);
         delete tmp3[tmp2];
-        let tmp22 = obj[tmp7];
         delete tmp3[tmp];
         let _Object = Object;
         obj = { value: null };
@@ -46,22 +36,12 @@ while (iter !== undefined) {
       }
     } else {
       let _Error2 = Error;
-      let tmp14 = nextResult;
-      let str2 = "missing channel labels property: ";
-      let tmp15 = new.target;
-      let tmp16 = new.target;
       let error1 = new Error("missing channel labels property: " + tmp7);
-      let tmp18 = error1;
       throw error1;
     }
   } else {
     let _Error = Error;
-    let tmp8 = nextResult;
-    let str = "missing channels property: ";
-    let tmp9 = new.target;
-    let tmp10 = new.target;
     let error2 = new Error("missing channels property: " + tmp7);
-    let tmp12 = error2;
     throw error2;
   }
 }
@@ -162,14 +142,8 @@ obj.rgb.keyword = (arg0) => {
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp11 = nextResult;
-      let tmp12 = require;
-      let tmp13 = dependencyMap;
       let tmp14 = keys2[nextResult];
-      let num3 = 2;
       let sum = (arg0[0] - tmp14[0]) ** 2 + (arg0[1] - tmp14[1]) ** 2 + (arg0[2] - tmp14[2]) ** 2;
-      let tmp16 = sum;
-      let tmp17 = num;
       if (sum < num) {
         num = sum;
         tmp = nextResult;
@@ -474,7 +448,7 @@ obj.rgb.ansi16 = (arg0) => {
   if (arg1 === undefined) {
     tmp = null;
   }
-  [tmp3, tmp4, tmp5] = callback(arg0, 3);
+  [tmp3, tmp4, tmp5] = _slicedToArray(arg0, 3);
   if (null === tmp) {
     const rgb = obj.rgb;
     tmp = rgb.hsv(arg0)[2];
@@ -494,7 +468,7 @@ obj.rgb.ansi16 = (arg0) => {
     }
     return sum1;
   }
-  const tmp2 = callback(arg0, 3);
+  const tmp2 = _slicedToArray(arg0, 3);
 };
 obj.hsv.ansi16 = (arg0) => {
   ({ rgb, hsv } = obj);
@@ -567,7 +541,7 @@ obj.hex.rgb = (arg0) => {
     let joined = str2;
     if (3 === match[0].length) {
       const parts = str2.split("");
-      const mapped = parts.map((arg0) => arg0 + arg0);
+      const mapped = parts.map((item, index) => item + item);
       joined = mapped.join("");
     }
     const _parseInt = parseInt;

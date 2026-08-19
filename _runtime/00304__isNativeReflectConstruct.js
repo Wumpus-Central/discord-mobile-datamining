@@ -1,8 +1,8 @@
 // _runtime/00304__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import importDefaultResult2 from "00305_getConstants.js";
@@ -113,9 +113,9 @@ let items1 = [
       StatusBar._defaultProps.backgroundColor.value = value;
       const tmp3 = StatusBar(50)(value);
       if (null != tmp3) {
-        tmp(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
-        tmp(305).setColor(tmp3, flag);
-        const tmpResult = tmp(305);
+        StatusBar(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
+        StatusBar(305).setColor(tmp3, flag);
+        const tmpResult = StatusBar(305);
       } else {
         const _console = console;
         const _String = String;
@@ -181,7 +181,7 @@ let items1 = [
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
-        const _propsStack1 = obj._propsStack;
+        const _propsStack1 = StatusBar._propsStack;
         _propsStack1.splice(index, 1);
       }
       StatusBar._updatePropsStack();
@@ -228,7 +228,7 @@ let items1 = [
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
-        obj5._propsStack[index] = obj;
+        StatusBar._propsStack[index] = obj;
       }
       StatusBar._updatePropsStack();
       return obj;
@@ -258,7 +258,7 @@ if (null != obj.backgroundColor) {
   obj1[1] = flag;
   tmp6 = obj1;
 }
-const obj2 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
+let obj2 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
 let tmp7 = null;
 if (null != obj.barStyle) {
   const obj3 = { value: null, animated: null };
@@ -287,9 +287,8 @@ importDefaultResultResult._updatePropsStack = () => {
   importDefaultResultResult._updateImmediate = setImmediate(() => {
     ({ _currentValues, _propsStack } = _defaultProps);
     const merged = Object.assign(_defaultProps._defaultProps);
-    const reduced = _propsStack.reduce((arg0, obj) => {
+    const reduced = _propsStack.reduce((acc, item, index) => {
       for (const key10005 in arg1) {
-        let tmp = key10005;
         if (null == arg1[key10005]) {
           continue;
         } else {
@@ -298,7 +297,7 @@ importDefaultResultResult._updatePropsStack = () => {
         }
         continue;
       }
-      return arg0;
+      return acc;
     }, {});
     callback(305).setStyle(reduced.barStyle.value);
     const tmp7 = callback(50)(reduced.backgroundColor.value);
@@ -307,8 +306,8 @@ importDefaultResultResult._updatePropsStack = () => {
       const _HermesInternal = HermesInternal;
       console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
     } else {
-      tmp4(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
-      let tmp4Result = tmp4(305);
+      callback(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
+      let tmp4Result = callback(305);
       tmp4Result.setColor(tmp7, reduced.backgroundColor.animated);
     }
     let tmp12 = _currentValues;
@@ -320,7 +319,7 @@ importDefaultResultResult._updatePropsStack = () => {
       tmp12 = value === reduced.hidden.value;
     }
     if (!tmp12) {
-      tmp4Result = tmp4(305);
+      tmp4Result = callback(305);
       tmp4Result.setHidden(reduced.hidden.value);
     }
     let tmp15 = _currentValues;
@@ -331,10 +330,11 @@ importDefaultResultResult._updatePropsStack = () => {
       tmp15 = !reduced.translucent;
     }
     if (!tmp15) {
-      tmp4(305).setTranslucent(reduced.translucent);
-      const tmp4Result1 = tmp4(305);
+      callback(305).setTranslucent(reduced.translucent);
+      const tmp4Result1 = callback(305);
     }
     _defaultProps._currentValues = reduced;
+    const obj2 = callback(305);
   });
 };
 

@@ -1,10 +1,10 @@
 // _runtime/06389_createNativeWrapper.js
 import noopDefault from "00019_noop.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import { useEffect } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 noopDefault;
 

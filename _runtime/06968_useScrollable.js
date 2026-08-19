@@ -1,7 +1,6 @@
 // _runtime/06968_useScrollable.js
 import noop from "00019_noop.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
-import { GESTURE_SOURCE } from "06953_GESTURE_SOURCE.js";
 
 ({ useCallback: obj1, useRef: c3 } = noop);
 
@@ -9,14 +8,14 @@ export const useScrollable = () => {
   const tmp = callback2(null);
   const _require = tmp;
   dependencyMap = callback2(null);
-  let obj = _cancelAnimation;
-  const sharedValue = obj.useSharedValue(_GESTURE_SOURCE.SCROLLABLE_TYPE.UNDETERMINED);
-  const sharedValue1 = _cancelAnimation.useSharedValue(0);
-  const obj2 = _cancelAnimation;
-  const sharedValue2 = _cancelAnimation.useSharedValue(_GESTURE_SOURCE.SCROLLABLE_STATE.UNDETERMINED);
-  const obj3 = _cancelAnimation;
-  const sharedValue3 = _cancelAnimation.useSharedValue(false);
-  const obj4 = _cancelAnimation;
+  let obj = cancelAnimation;
+  const sharedValue = obj.useSharedValue(require("06953_GESTURE_SOURCE.js").SCROLLABLE_TYPE.UNDETERMINED);
+  const sharedValue1 = require("01654_cancelAnimation.js").useSharedValue(0);
+  const obj2 = cancelAnimation;
+  const sharedValue2 = require("01654_cancelAnimation.js").useSharedValue(require("06953_GESTURE_SOURCE.js").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = cancelAnimation;
+  const sharedValue3 = require("01654_cancelAnimation.js").useSharedValue(false);
+  const obj4 = cancelAnimation;
   obj = {
     scrollableRef: tmp,
     animatedScrollableType: sharedValue,
@@ -33,10 +32,10 @@ export const useScrollable = () => {
         id = null;
       }
       if (id !== id.id) {
-        if (tmp.current) {
-          closure_1.current = tmp.current;
+        if (ref.current) {
+          closure_1.current = ref.current;
         }
-        tmp.current = id;
+        ref.current = id;
       }
     }, []),
     removeScrollableRef: callback((current) => {
@@ -53,6 +52,7 @@ export const useScrollable = () => {
         if (findNodeHandleResult === id) {
           ref.current = ref2.current;
         }
+        const obj = ref(ref2[3]);
       } catch (err) {
         return tmp;
       }

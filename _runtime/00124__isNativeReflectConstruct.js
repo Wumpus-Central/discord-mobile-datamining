@@ -2,8 +2,8 @@
 import _inheritsDefault from "00098__inherits.js";
 import importDefaultResult1Default from "00125_importDefaultResult1.js";
 import DOMRect from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
@@ -91,10 +91,10 @@ obj = {
   value: function fromRect(arg0) {
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let tmpResult = tmp(x, y, width, height);
-      const obj = Object.create(tmp.prototype);
+      let tmpResult = DOMRect(x, y, width, height);
+      const obj = Object.create(DOMRect.prototype);
     } else {
-      tmpResult = tmp();
+      tmpResult = DOMRect();
     }
     return tmpResult;
   }

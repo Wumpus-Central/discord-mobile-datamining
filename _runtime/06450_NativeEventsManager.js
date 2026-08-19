@@ -1,6 +1,6 @@
 // _runtime/06450_NativeEventsManager.js
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06392___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "00019_noop.js";
 import { findNodeHandle } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
@@ -41,12 +41,12 @@ if (tmp4) {
       tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
       closure_6 = tmp3;
       tmp4 = closure_4(() => {
-        let num = closure_1_7(ref3.current);
+        let num = findNodeHandle(ref3.current);
         if (num == null) {
           num = -1;
         }
         ref3.__nativeTag = num;
-        ref2.current = new closure_1_9({
+        ref2.current = new NativeEventsManager({
           props: closure_6,
           _componentRef: ref3,
           _componentViewTag: num,
@@ -69,7 +69,7 @@ if (tmp4) {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
-            current.updateEvents(tmp.current);
+            current.updateEvents(ref.current);
           }
         }
         ref.current = closure_6;
@@ -101,12 +101,12 @@ if (tmp4) {
       tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
       closure_6 = tmp3;
       tmp4 = closure_4(() => {
-        let num = closure_1_7(ref3.current);
+        let num = findNodeHandle(ref3.current);
         if (num == null) {
           num = -1;
         }
         ref3.__nativeTag = num;
-        ref2.current = new closure_1_9({
+        ref2.current = new NativeEventsManager({
           props: closure_6,
           _componentRef: ref3,
           _componentViewTag: num,
@@ -129,7 +129,7 @@ if (tmp4) {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
-            current.updateEvents(tmp.current);
+            current.updateEvents(ref.current);
           }
         }
         ref.current = closure_6;
@@ -162,12 +162,12 @@ if (tmp4) {
         tmp3 = closure_5(() => ({ onGestureHandlerReanimatedStateChange, onGestureHandlerReanimatedEvent, onGestureHandlerReanimatedTouchEvent }), items);
         closure_6 = tmp3;
         tmp4 = closure_4(() => {
-          let num = closure_1_7(ref3.current);
+          let num = findNodeHandle(ref3.current);
           if (num == null) {
             num = -1;
           }
           ref3.__nativeTag = num;
-          ref2.current = new closure_1_9({
+          ref2.current = new NativeEventsManager({
             props: closure_6,
             _componentRef: ref3,
             _componentViewTag: num,
@@ -190,7 +190,7 @@ if (tmp4) {
           if (ref.current) {
             const current = ref2.current;
             if (current != null) {
-              current.updateEvents(tmp.current);
+              current.updateEvents(ref.current);
             }
           }
           ref.current = closure_6;

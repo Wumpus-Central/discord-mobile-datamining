@@ -1,12 +1,12 @@
 // _runtime/13805__isNativeReflectConstruct.js
-import StorybookSwitcher from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 import noop from "00019_noop.js";
-import closure_4 from "00017_get_ActivityIndicator.js";
-import closure_5 from "react/00021_jsxProd.js";
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import jsxProd from "react/00021_jsxProd.js";
 
 function _isNativeReflectConstruct() {
   try {
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -45,7 +46,6 @@ if (!noop) {
         if (keys !== undefined) {
           value = obj;
           while (keys[tmp] !== undefined) {
-            let tmp21 = tmp12;
             let tmp22 = "default" !== tmp12;
             if (!tmp22) {
               if (!tmp22) {
@@ -112,6 +112,7 @@ class StorybookSwitcher {
     return tmp3Result;
   }
 }
+_classCallCheck = StorybookSwitcher;
 _inherits(StorybookSwitcher, value.Component);
 obj = {
   key: "render",
@@ -122,7 +123,7 @@ obj = {
       children = <tmp />;
     }
     obj[1] = children;
-    return <RN.View style={{ flex: 1 }}>{null}</RN.View>;
+    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
   }
 };
 let items = [obj];

@@ -1,16 +1,16 @@
 // _runtime/00131__isNativeReflectConstruct.js
 import dispatchDefault from "00132_dispatch.js";
-import closure_3 from "metro/00032__slicedToArray.js";
-import closure_4 from "metro/00041__classCallCheck.js";
-import closure_5 from "metro/00093__possibleConstructorReturn.js";
-import closure_6 from "00095__getPrototypeOf.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import importAllResult from "00027_javaScriptFlagGetter.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
-const ReadOnlyNode = arg1;
+const ReadOnlyNode = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,17 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function getChildNodes(parentNode, arg1) {
+function getChildNodes(parentNode, fn) {
   const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(parentNode);
   if (null == nativeNodeReference) {
     return [];
   } else {
-    const childNodes = NativeDOMCxx.getChildNodes(nativeNodeReference);
+    const childNodes = require("00139_NativeDOMCxx.js").getChildNodes(nativeNodeReference);
     const items = [];
     for (const item10013 of childNodes) {
-      let tmp5 = ReadOnlyNode;
-      let tmp6 = dependencyMap;
-      let tmp7 = dependencyMap;
       let obj2 = ReadOnlyNode(136);
       let publicInstanceFromInstanceHandle = obj2.getPublicInstanceFromInstanceHandle(item10013);
       let tmp9 = publicInstanceFromInstanceHandle;
@@ -48,13 +45,11 @@ function getChildNodes(parentNode, arg1) {
       if (!tmp10) {
         let tmp11 = null != arg1;
         if (tmp11) {
-          let tmp12 = publicInstanceFromInstanceHandle;
           tmp11 = !arg1(tmp9);
         }
         tmp10 = tmp11;
       }
       if (!tmp10) {
-        let tmp13 = publicInstanceFromInstanceHandle;
         let arr = items.push(tmp9);
       }
       continue;
@@ -62,7 +57,6 @@ function getChildNodes(parentNode, arg1) {
     return items;
   }
   const obj = ReadOnlyNode(136);
-  const tmp = dependencyMap;
 }
 if (importAllResult.enableNativeEventTargetEventDispatching()) {
   let _Object = dispatchDefault;
@@ -85,7 +79,7 @@ class ReadOnlyNode {
     }
     tmp3Result = tmp3(self, constructResult);
     obj2 = require("getInstanceHandle");
-    setOwnerDocumentResult = obj2.setOwnerDocument(tmp3Result, arg1);
+    setOwnerDocumentResult = obj2.setOwnerDocument(tmp3Result, fn);
     obj3 = require("getInstanceHandle");
     setInstanceHandleResult = obj3.setInstanceHandle(tmp3Result, global);
     return tmp3Result;
@@ -123,7 +117,7 @@ let items = [
       const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(this);
       let isConnectedResult = null != nativeNodeReference;
       if (isConnectedResult) {
-        isConnectedResult = NativeDOMCxx.isConnected(nativeNodeReference);
+        isConnectedResult = require("00139_NativeDOMCxx.js").isConnected(nativeNodeReference);
         const obj2 = NativeDOMCxx;
       }
       return isConnectedResult;
@@ -216,20 +210,19 @@ let items = [
       if (null == nativeNodeReference) {
         return null;
       } else {
-        const parentNode = NativeDOMCxx.getParentNode(nativeNodeReference);
+        const parentNode = require("00139_NativeDOMCxx.js").getParentNode(nativeNodeReference);
         let tmp6 = null;
         if (null != parentNode) {
-          let publicInstanceFromInstanceHandle = tmp(136).getPublicInstanceFromInstanceHandle(parentNode);
+          let publicInstanceFromInstanceHandle = ReadOnlyNode(136).getPublicInstanceFromInstanceHandle(parentNode);
           if (publicInstanceFromInstanceHandle == null) {
             publicInstanceFromInstanceHandle = null;
           }
           tmp6 = publicInstanceFromInstanceHandle;
-          const tmpResult = tmp(136);
+          const tmpResult = ReadOnlyNode(136);
         }
         return tmp6;
       }
       const obj = ReadOnlyNode(136);
-      tmp = ReadOnlyNode;
     }
   },
   {
@@ -278,7 +271,7 @@ let items = [
         nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(nativeNodeReference);
         if (null != nativeNodeReference) {
           if (null != nativeNodeReference1) {
-            let DOCUMENT_POSITION_DISCONNECTED = NativeDOMCxx.compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
+            let DOCUMENT_POSITION_DISCONNECTED = require("00139_NativeDOMCxx.js").compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
             const obj3 = NativeDOMCxx;
           }
           return DOCUMENT_POSITION_DISCONNECTED;
@@ -344,7 +337,7 @@ setPlatformObject.setPlatformObject(importDefaultResultResult);
 class ReadOnlyNode {
   constructor(arg0, arg1) {
     obj = require("getInstanceHandle");
-    setOwnerDocumentResult = obj.setOwnerDocument(this, arg1);
+    setOwnerDocumentResult = obj.setOwnerDocument(this, fn);
     obj2 = require("getInstanceHandle");
     setInstanceHandleResult = obj2.setInstanceHandle(this, global);
     return;

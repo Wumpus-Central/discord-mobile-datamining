@@ -14,14 +14,13 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   dummy.style.width = "100%";
   dummy.style.height = "100%";
   _require = cloneNode;
-  let map;
   let backgroundColor;
   let onFinalize;
   let animationCancelCallback;
   let animationEndCallback;
   const obj2 = _require(dummy[0]);
   duration.easing = _require(dummy[0]).getEasingByName(easingY.easingX);
-  map = new Map();
+  const map = new Map();
   let num = 0;
   if (0 < cloneNode.children.length) {
     do {
@@ -37,41 +36,41 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   onFinalize = function onFinalize() {
 
   };
-  animationCancelCallback = function animationCancelCallback() {
+  animationCancelCallback = function animationCancelCallback(event) {
     let length;
     if (typeof onFinalize !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {
-      obj.removeChild(dummy);
+      cloneNode.removeChild(dummy);
     }
     let num = 0;
     if (0 < cloneNode.children.length) {
       do {
-        let tmp3 = obj.children[num];
-        tmp3.style.display = obj2.get(tmp3);
+        let tmp3 = cloneNode.children[num];
+        tmp3.style.display = map.get(tmp3);
         num = num + 1;
-        length = obj.children.length;
+        length = cloneNode.children.length;
       } while (num < length);
     }
     cloneNode.style.backgroundColor = backgroundColor;
     const removed = cloneNode.removeEventListener("animationcancel", animationCancelCallback);
   };
-  animationEndCallback = function animationEndCallback() {
+  animationEndCallback = function animationEndCallback(event) {
     let length;
     if (typeof onFinalize !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {
-      obj.removeChild(dummy);
+      cloneNode.removeChild(dummy);
     }
     let num = 0;
     if (0 < cloneNode.children.length) {
       do {
-        let tmp3 = obj.children[num];
-        tmp3.style.display = obj2.get(tmp3);
+        let tmp3 = cloneNode.children[num];
+        tmp3.style.display = map.get(tmp3);
         num = num + 1;
-        length = obj.children.length;
+        length = cloneNode.children.length;
       } while (num < length);
     }
     cloneNode.style.backgroundColor = backgroundColor;
@@ -83,9 +82,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   return { dummy, dummyAnimationConfig };
 };
 arg5.CurvedTransition = function CurvedTransition(name, name2, translateX) {
-  let obj = { firstKeyframeObj: null, secondKeyframeObj: null };
-  obj = { name, style: null, duration: 300 };
-  obj = { 0: null };
+  const obj = { 0: null };
   obj1 = { transform: null };
   const items = [{ translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
   obj1[0] = items;

@@ -14,8 +14,8 @@ export default tmp && (function getSideChannelMap() {
   const obj = {
     assert(arg0) {
       if (!obj.has(arg0)) {
-        let tmp3 = closure_1_0(obj[2]);
-        tmp3 = new tmp3("Side channel does not contain " + closure_1_0(obj[3])(arg0));
+        let tmp3 = require(obj[2]);
+        tmp3 = new tmp3("Side channel does not contain " + require(obj[3])(arg0));
         throw tmp3;
       }
     },

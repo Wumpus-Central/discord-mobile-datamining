@@ -32,18 +32,14 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
   closure_2 = c5;
   closure_3 = diff;
   closure_4 = diff1;
-  let num = closure_2;
-  if (closure_2 === undefined) {
-    num = 1;
-  }
   let tmp = closure_1;
   if (closure_1 === undefined) {
     tmp = new closure_1();
   }
   closure_6 = tmp;
   return new Promise((arg0) => {
-    c6 = arg0;
-    c6(closure_1, num2, false);
+    const callback = arg0;
+    callback(closure_1, num2, false);
     closure_1 = 7 * max2;
     num = -1;
     num2 = -1;
@@ -84,7 +80,7 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
         sum = sum + result * closure_2;
         closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
         if (callback2(closure_1_3, sum) === closure_1_3) {
-          if (callback3(tmp16, closure_8) === tmp16) {
+          if (callback3(closure_1_4, closure_8) === closure_1_4) {
             callback(true);
           }
         }
@@ -103,7 +99,7 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
             sum = sum + result * closure_2;
             closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
             if (callback2(closure_1_3, sum) === closure_1_3) {
-              if (callback3(tmp16, closure_8) === tmp16) {
+              if (callback3(closure_1_4, closure_8) === closure_1_4) {
                 callback(true);
               }
             }
@@ -122,7 +118,7 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
                 sum = sum + result * closure_2;
                 closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
                 if (callback2(closure_1_3, sum) === closure_1_3) {
-                  if (callback3(tmp16, closure_8) === tmp16) {
+                  if (callback3(closure_1_4, closure_8) === closure_1_4) {
                     callback(true);
                   }
                 }
@@ -131,10 +127,13 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
                 }
                 let _requestAnimationFrame = requestAnimationFrame;
                 let animationFrame = requestAnimationFrame(() => { ... });
+                let tmp14 = callback2(closure_1_3, sum);
               }
             });
+            let tmp14 = callback2(closure_1_3, sum);
           }
         });
+        let tmp14 = callback2(closure_1_3, sum);
       }
     });
   });

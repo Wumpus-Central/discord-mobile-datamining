@@ -1,18 +1,19 @@
 // _runtime/06670__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
+import appendTransformPropsDefault from "06579_appendTransformProps.js";
 import extractPropsDefault from "06586_extractProps.js";
 import extractFontDefault from "06593_extractFont.js";
 import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06671___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 import extractFont from "06593_extractFont.js";
 
-const TSpan = arg1;
+const TSpan = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -56,18 +57,19 @@ class TSpan {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = closure_1_1(closure_1_2[7])(matrix);
+        tmp = appendTransformPropsDefault(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
+      const propsAndStylesResult = lib(dependencyMap[8]).propsAndStyles(matrix);
+      const obj = lib(dependencyMap[8]);
+      const merged = Object.assign(propsAndStylesResult, lib(dependencyMap[9]).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(propsAndStylesResult);
       }
+      const obj2 = lib(dependencyMap[9]);
     };
     return tmp3Result;
   }
@@ -87,7 +89,6 @@ let items = [
       const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
       tmp2Result.ref = this.refMethod;
       obj = {};
-      const tmp2 = extractPropsDefault;
       const merged2 = Object.assign(tmp2Result);
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }

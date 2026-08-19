@@ -1,4 +1,6 @@
 // _runtime/00626_baseIsTypedArray.js
+import isLength from "00604_isLength.js";
+import toStringTag from "00607_toStringTag.js";
 import isObjectLike from "00620_isObjectLike.js";
 
 const obj = {};
@@ -28,9 +30,9 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = isObjectLike(arg0) && tmp(604)(arg0.length);
+  let tmp3 = isObjectLike(arg0) && isLength(arg0.length);
   if (tmp3) {
-    tmp3 = obj[tmp(undefined, 607)(undefined, arg0)];
+    tmp3 = obj[toStringTag(undefined, arg0)];
   }
   return tmp3;
 };

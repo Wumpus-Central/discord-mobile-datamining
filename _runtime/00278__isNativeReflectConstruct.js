@@ -1,8 +1,9 @@
 // _runtime/00278__isNativeReflectConstruct.js
 import _isNativeReflectConstruct from "00189__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "00189__isNativeReflectConstruct.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   showErrorDialog(error) {
@@ -11,7 +12,7 @@ arg5.default = {
       try {
         error.componentStack = error.componentStack;
         error.isComponentError = true;
-        module(189).handleException(error, false);
+        _isNativeReflectConstructDefault.handleException(error, false);
         return false;
       } catch (err) {
       }

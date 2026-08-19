@@ -24,7 +24,7 @@ function configureNext(duration) {
         }
       }
       importDefault = setTimeout(onAnimationComplete, num + 17);
-      const fabricUIManager = _getFabricUIManager.getFabricUIManager();
+      const fabricUIManager = require("00071_getFabricUIManager.js").getFabricUIManager();
       let prop;
       if (fabricUIManager != null) {
         prop = fabricUIManager.configureNextLayoutAnimation;
@@ -59,7 +59,7 @@ function configureNext(duration) {
           const _default2 = tmp6(68).default;
         }
       }
-      const obj = _getFabricUIManager;
+      const obj = getFabricUIManager;
     }
   }
 }
@@ -68,9 +68,7 @@ let obj = { easeInEaseOut: { duration: 300, create: { type: "easeInEaseOut", pro
 obj = {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
-    obj = { duration, create: obj, update: obj, delete: obj1 };
-    obj = { type, property };
-    obj = { type };
+    const obj = { type };
     return obj;
   },
   Types: Object.freeze({ spring: "spring", linear: "linear", easeInEaseOut: "easeInEaseOut", easeIn: "easeIn", easeOut: "easeOut", keyboard: "keyboard" }),

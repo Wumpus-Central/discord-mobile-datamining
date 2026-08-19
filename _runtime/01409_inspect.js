@@ -3,7 +3,7 @@ import checkBoxedPrimitive from "01410_checkBoxedPrimitive.js";
 import isBuffer from "01427_isBuffer.js";
 import _mod1428 from "metro/01428__.js";
 
-function inspect(arg0, flag) {
+function inspect(arg0, showHidden) {
   const obj = { seen: [], stylize: stylizeNoColor };
   if (arguments.length >= 3) {
     obj.depth = arguments[2];
@@ -11,10 +11,10 @@ function inspect(arg0, flag) {
   if (arguments.length >= 4) {
     obj.colors = arguments[3];
   }
-  if (typeof flag === "boolean") {
-    obj.showHidden = flag;
-  } else if (flag) {
-    exports._extend(obj, flag);
+  if (typeof showHidden === "boolean") {
+    obj.showHidden = showHidden;
+  } else if (showHidden) {
+    exports._extend(obj, showHidden);
   }
   if (undefined === obj.showHidden) {
     obj.showHidden = false;
@@ -83,8 +83,8 @@ function formatValue(customInspect, inspect) {
     const keys = Object.keys(inspect);
     const obj = {};
     _exports = obj;
-    const item = keys.forEach((arg0, arg1) => {
-      closure_0[arg0] = true;
+    const item = keys.forEach((item, index) => {
+      closure_0[item] = true;
     });
     let ownPropertyNames = keys;
     if (customInspect.showHidden) {
@@ -239,36 +239,30 @@ function formatValue(customInspect, inspect) {
                     let StringResult = String(num4);
                     let _Object10 = Object;
                     let call11 = hasOwnProperty.call;
-                    let tmp31 = num4;
                     let push = items1.push;
                     if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(inspect, StringResult)) {
-                      let tmp33 = formatProperty;
                       let _String2 = String;
-                      let tmp34 = customInspect;
-                      let tmp35 = inspect;
-                      let tmp36 = arg2;
-                      let tmp37 = obj;
                       let flag3 = true;
                       let arr = push(formatProperty(customInspect, inspect, arg2, obj, String(num4), true));
                     } else {
                       let arr1 = push(str17);
                     }
                   }
-                  const item1 = ownPropertyNames.forEach((str) => {
-                    if (!str.match(/^\d+$/)) {
-                      items1.push(closure_1_9(closure_0, closure_1, closure_2, obj, str, true));
+                  const item1 = ownPropertyNames.forEach((item, index) => {
+                    if (!item.match(/^\d+$/)) {
+                      items1.push(formatProperty(closure_0, closure_1, closure_2, obj, item, true));
                     }
                   });
                   let mapped = items1;
                   length = inspect.length;
                 } else {
-                  mapped = ownPropertyNames.map((arg0) => closure_1_9(closure_0, closure_1, closure_2, obj, arg0, items1));
+                  mapped = ownPropertyNames.map((item, index) => formatProperty(closure_0, closure_1, closure_2, obj, item, items1));
                 }
                 const seen1 = customInspect.seen;
                 seen1.pop();
-                if (mapped.reduce((arg0, arr) => {
-                  arr.indexOf("\n") >= 0;
-                  return arg0 + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
+                if (mapped.reduce((acc, item, index) => {
+                  item.indexOf("\n") >= 0;
+                  return acc + item.replace(/\u001b\[\d\d?m/g, "").length + 1;
                 }, 0) > 60) {
                   if (str17 !== str18) {
                     str17 = `${str18}
@@ -415,7 +409,7 @@ function formatProperty(stylize, arg1, arg2, arg3, key10009) {
     }
   }
 }
-function callbackifyOnRejected(reason) {
+function callbackifyOnRejected(reason, fn) {
   let tmp = reason;
   if (!reason) {
     const _Error = Error;
@@ -423,17 +417,17 @@ function callbackifyOnRejected(reason) {
     error.reason = reason;
     tmp = error;
   }
-  return arg1(tmp);
+  return fn(tmp);
 }
-let closure_1 = Object.getOwnPropertyDescriptors || (function getOwnPropertyDescriptors(newQuality) {
+let closure_1 = Object.getOwnPropertyDescriptors || (function getOwnPropertyDescriptors(_Object6Result) {
   let length;
-  const keys = Object.keys(newQuality);
+  const keys = Object.keys(_Object6Result);
   const obj = {};
   let num = 0;
   if (0 < keys.length) {
     do {
       let _Object = Object;
-      obj[keys[num]] = Object.getOwnPropertyDescriptor(newQuality, keys[num]);
+      obj[keys[num]] = Object.getOwnPropertyDescriptor(_Object6Result, keys[num]);
       num = num + 1;
       length = keys.length;
     } while (num < length);
@@ -445,7 +439,6 @@ let closure_3 = {};
 let regExp = /^$/;
 if (process.env.NODE_DEBUG) {
   let _process = process;
-  let str = process.env.NODE_DEBUG;
   let str3 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&");
   let str5 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*");
   let _RegExp = RegExp;
@@ -577,22 +570,17 @@ export const format = (str) => {
     let tmp16 = replaced;
     if (sum1 < length2) {
       while (true) {
-        let tmp17 = tmp13;
-        let tmp18 = replaced;
         if (null !== tmp13) {
           let tmp19 = typeof tmp13 === "object";
           if (typeof tmp13 === "object") {
             tmp19 = null !== tmp13;
           }
           if (tmp19) {
-            let tmp20 = inspect;
             let text = `${tmp11} ${inspect(tmp13)}`;
           }
-          let tmp22 = sum1;
           let sum = sum1 + 1;
           sum1 = sum;
           tmp13 = arguments[sum];
-          let tmp24 = sum1;
           replaced = text;
           tmp16 = text;
           if (sum1 >= length2) {
@@ -608,10 +596,7 @@ export const format = (str) => {
     sum1 = 0;
     if (0 < arguments.length) {
       do {
-        let tmp = inspect;
-        let tmp2 = sum1;
         let arr = items.push(inspect(arguments[sum1]));
-        let tmp4 = sum1;
         sum1 = sum1 + 1;
         length = arguments.length;
       } while (sum1 < length);
@@ -619,13 +604,11 @@ export const format = (str) => {
     return items.join(" ");
   }
 };
-export const deprecate = (arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+export const deprecate = (closure_0, closure_1) => {
   if (typeof process !== "undefined") {
     let _process = process;
     if (true === process.noDeprecation) {
-      return arg0;
+      return closure_0;
     }
   }
   if (typeof process === "undefined") {
@@ -672,23 +655,22 @@ export const deprecate = (arg0, arg1) => {
   }
 };
 export const debuglog = (str) => {
-  let formatted = str;
-  formatted = str.toUpperCase();
+  const formatted = str.toUpperCase();
   if (!table[formatted]) {
     if (regExp.test(formatted)) {
       const _process = process;
-      tmp2[formatted] = () => {
+      table[formatted] = () => {
         const format = formatted.format;
         const apply = format.apply;
         if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
+          let applyArgumentsResult = HermesBuiltin.applyArguments(formatted);
         } else {
-          applyArgumentsResult = apply(tmp, arguments);
+          applyArgumentsResult = apply(formatted, arguments);
         }
         console.error("%s %d: %s", formatted, pid, applyArgumentsResult);
       };
     } else {
-      tmp2[formatted] = () => {
+      table[formatted] = () => {
 
       };
     }
@@ -751,27 +733,27 @@ export const log = () => {
   const apply = format.apply;
   const joined1 = items1.join(" ");
   if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(tmp6);
+    let applyArgumentsResult = HermesBuiltin.applyArguments(exports);
   } else {
-    applyArgumentsResult = apply(tmp6, arguments);
+    applyArgumentsResult = apply(exports, arguments);
   }
   console.log("%s - %s", joined1, applyArgumentsResult);
 };
 export const inherits = _mod1428;
-export const _extend = (arg0, obj) => {
+export const _extend = (arg0, showHidden) => {
   let tmp5;
-  if (obj) {
-    let tmp = typeof obj === "object";
-    if (typeof obj === "object") {
-      tmp = null !== obj;
+  if (showHidden) {
+    let tmp = typeof showHidden === "object";
+    if (typeof showHidden === "object") {
+      tmp = null !== showHidden;
     }
     if (tmp) {
       const _Object = Object;
-      const keys = Object.keys(obj);
+      const keys = Object.keys(showHidden);
       let diff = tmp3 - 1;
       if (+keys.length) {
         do {
-          arg0[keys[diff]] = obj[keys[diff]];
+          arg0[keys[diff]] = showHidden[keys[diff]];
           tmp5 = +diff;
           diff = tmp5 - 1;
         } while (tmp5);
@@ -789,8 +771,8 @@ export const promisify = function promisify(fn) {
     throw typeError;
   } else {
     if (closure_11) {
-      if (fn[tmp16]) {
-        if (typeof fn[tmp16] !== "function") {
+      if (fn[closure_11]) {
+        if (typeof fn[closure_11] !== "function") {
           const _TypeError = TypeError;
           const typeError1 = new TypeError("The \"util.promisify.custom\" argument must be of type Function");
           throw typeError1;
@@ -798,7 +780,7 @@ export const promisify = function promisify(fn) {
           const _Object5 = Object;
           let obj = { value: null, enumerable: false, writable: false, configurable: true };
           obj[0] = tmp5;
-          Object.defineProperty(tmp5, tmp16, obj);
+          Object.defineProperty(tmp5, closure_11, obj);
           return tmp5;
         }
       }
@@ -840,7 +822,7 @@ export const promisify = function promisify(fn) {
       const _Object3 = Object;
       obj = { value: null, enumerable: false, writable: false, configurable: true };
       obj[0] = fn;
-      Object.defineProperty(fn, tmp16, obj);
+      Object.defineProperty(fn, closure_11, obj);
     }
     const _Object4 = Object;
     return Object.defineProperties(fn, callback(fn));
@@ -870,19 +852,18 @@ export const callbackify = function callbackify(fn) {
         const typeError = new TypeError("The last argument must be of type Function");
         throw typeError;
       } else {
-        let self = this;
-        self = this;
+        const self = this;
         function cb() {
           const apply = arr.apply;
           if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
-            applyArgumentsResult = apply(tmp2, arguments);
+            applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
         }
-        arr.apply(this, items).then((cache) => {
-          process.nextTick(cb.bind(null, null, cache));
+        arr.apply(this, items).then((result) => {
+          process.nextTick(cb.bind(null, null, result));
         }, (c165) => {
           process.nextTick(closure_1_12.bind(null, c165, cb));
         });

@@ -3,12 +3,11 @@ import tagMessage from "06382_tagMessage.js";
 import _mod6409 from "metro/06409__.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-function transformIntoHandlerTags(arg0) {
-  const obj = tagMessage;
-  const mapped = tagMessage.toArray(arg0).map((current) => {
-    let num = callback(table[2]).handlerIDToTag[current];
+function transformIntoHandlerTags(config) {
+  const mapped = tagMessage.toArray(config).map((item, index) => {
+    let num = callback(table[2]).handlerIDToTag[item];
     if (!num) {
-      current = current.current;
+      const current = item.current;
       let handlerTag;
       if (current != null) {
         handlerTag = current.handlerTag;
@@ -20,17 +19,17 @@ function transformIntoHandlerTags(arg0) {
     }
     return num;
   });
-  return mapped.filter((arg0) => arg0 > 0);
+  return mapped.filter((item, index) => item > 0);
 }
 ({ findNodeHandle: c3, Platform } = get_ActivityIndicator);
 let closure_5 = [];
 let c6 = false;
 
-export const selectProperties = (arg0, arr) => {
-  closure_0 = arg0;
-  const found = arr.filter((arg0) => arg0 in closure_0);
-  return Object.fromEntries(found.map((arg0) => {
-    const items = [arg0, table[arg0]];
+export const selectProperties = (config, arr) => {
+  closure_0 = config;
+  const found = arr.filter((item, index) => item in closure_0);
+  return Object.fromEntries(found.map((item, index) => {
+    const items = [item, table[item]];
     return items;
   }));
 };
@@ -51,39 +50,30 @@ export const filterConfig = function filterConfig(config, ALLOWED_PROPS, config2
     let tmp7 = tmp4;
     let tmp8 = undefined === tmp4;
     if (!tmp8) {
-      let tmp9 = tmp4;
       let _Object = Object;
       let tmp10 = tmp7 === Object(tmp7);
       if (tmp10) {
-        let tmp11 = tmp4;
         tmp10 = "__isNative" in tmp7;
       }
       tmp8 = tmp10;
     }
     if (!tmp8) {
-      let tmp12 = nextResult;
       tmp8 = "onHandlerStateChange" === tmp6;
     }
     if (!tmp8) {
-      let tmp13 = nextResult;
       tmp8 = "onGestureEvent" === tmp6;
     }
     if (tmp8) {
       continue;
     } else {
-      let tmp14 = nextResult;
       if ("simultaneousHandlers" !== tmp3) {
-        let tmp15 = nextResult;
         if ("waitFor" !== tmp3) {
-          let tmp16 = nextResult;
           let tmp17 = "hitSlop" === tmp3;
           if (tmp17) {
-            let tmp18 = tmp5;
             tmp17 = typeof tmp5 !== "object";
           }
           if (tmp17) {
             obj = { top: null, left: null, bottom: null, right: null };
-            let tmp19 = tmp5;
             obj[0] = tmp5;
             obj[1] = tmp5;
             obj[2] = tmp5;
@@ -91,12 +81,8 @@ export const filterConfig = function filterConfig(config, ALLOWED_PROPS, config2
             tmp5 = obj;
           }
         }
-        let tmp22 = nextResult;
-        let tmp23 = tmp5;
         obj[tmp3] = tmp5;
       }
-      let tmp20 = transformIntoHandlerTags;
-      let tmp21 = nextResult;
       tmp5 = transformIntoHandlerTags(config[tmp3]);
     }
   }
@@ -122,7 +108,6 @@ export const scheduleFlushOperations = function scheduleFlushOperations() {
       callback(table[4]).flushOperations();
       c6 = false;
     });
-    const obj = _mod6409;
   }
 };
 export const scheduleOperationToBeFlushed = function scheduleOperationToBeFlushed(arg0) {
@@ -137,6 +122,6 @@ export const scheduleOperationToBeFlushed = function scheduleOperationToBeFlushe
       callback(table[4]).flushOperations();
       c6 = false;
     });
-    const obj = _mod6409;
   }
+  arr = arr.push(arg0);
 };

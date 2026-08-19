@@ -26,13 +26,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -45,7 +43,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -60,13 +57,11 @@ if (self2) {
     if (!fn2) {
       fn2 = (obj, exports) => {
         for (const key10007 in arg0) {
-          let tmp5 = key10007;
           let tmp6 = "default" === key10007;
           if (tmp6) {
             if (tmp6) {
               continue;
             } else {
-              let tmp3 = self2;
               let tmp4 = self2(arg1, arg0, key10007);
               continue;
             }
@@ -79,7 +74,6 @@ if (self2) {
             } else {
               hasOwnPropertyResult = call(arg1, key10007);
             }
-            let tmp2 = hasOwnPropertyResult;
           }
         }
       };

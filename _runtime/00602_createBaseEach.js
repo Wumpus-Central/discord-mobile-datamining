@@ -3,7 +3,7 @@
 export default function createBaseEach(arg0) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return (arg0, arg1) => {
+  return (arg0, fn) => {
     if (null == arg0) {
       return arg0;
     } else if (callback(table[0])(arg0)) {
@@ -21,10 +21,8 @@ export default function createBaseEach(arg0) {
         tmp6 = diff < length;
       }
       if (tmp6) {
-        if (false !== arg1(ObjectResult[diff], diff, ObjectResult)) {
+        if (false !== fn(ObjectResult[diff], diff, ObjectResult)) {
           while (true) {
-            let tmp8 = table;
-            let tmp9 = diff;
             if (table) {
               let tmp12 = +diff;
               let diff1 = tmp12 - 1;
@@ -37,7 +35,7 @@ export default function createBaseEach(arg0) {
               break;
             } else {
               diff = diff1;
-              if (false === arg1(ObjectResult[diff1], diff1, ObjectResult)) {
+              if (false === fn(ObjectResult[diff1], diff1, ObjectResult)) {
                 break;
               }
             }
@@ -46,7 +44,7 @@ export default function createBaseEach(arg0) {
       }
       return arg0;
     } else {
-      return callback(arg0, arg1);
+      return callback(arg0, fn);
     }
   };
 };

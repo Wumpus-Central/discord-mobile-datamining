@@ -1,6 +1,6 @@
 // _runtime/00318_Info.js
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_1 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const FillRateHelper = global;
 class Info {
@@ -74,7 +74,7 @@ const items = [
             const diff = _performance.now() - _samplesStartTime;
             const merged = Object.assign(self._info);
             obj.total_time_spent = diff;
-            const item = arr.forEach((arg0) => arg0(obj));
+            const item = arr.forEach((item, index) => item(obj));
             self._resetData();
           }
         }
@@ -256,7 +256,7 @@ obj = {
     }
     return {
       remove() {
-        closure_3 = closure_3.filter((arg0) => closure_0 !== arg0);
+        closure_3 = closure_3.filter((item, index) => closure_0 !== item);
       }
     };
   }

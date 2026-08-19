@@ -1,6 +1,7 @@
 // _runtime/13629___exportStarResult26.js
 import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
 import __exportStarResult3 from "13585___exportStarResult3.js";
+import DefaultNumberOption from "13586_DefaultNumberOption.js";
 import __exportStarResult4 from "13587___exportStarResult4.js";
 
 require = arg1;
@@ -42,8 +43,8 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
   }
   if (flag2) {
     if (tmp11) {
-      internalSlots.minimumSignificantDigits = tmp2(13586).DefaultNumberOption(minimumSignificantDigits, 1, 21, 1);
-      internalSlots.maximumSignificantDigits = tmp2(13586).DefaultNumberOption(maximumSignificantDigits, internalSlots.minimumSignificantDigits, 21, 21);
+      internalSlots.minimumSignificantDigits = DefaultNumberOption.DefaultNumberOption(minimumSignificantDigits, 1, 21, 1);
+      internalSlots.maximumSignificantDigits = DefaultNumberOption.DefaultNumberOption(maximumSignificantDigits, internalSlots.minimumSignificantDigits, 21, 21);
     } else {
       internalSlots.minimumSignificantDigits = 1;
       internalSlots.maximumSignificantDigits = 21;
@@ -51,10 +52,10 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
   }
   if (flag) {
     if (tmp12) {
-      const DefaultNumberOptionResult = tmp2(13586).DefaultNumberOption(minimumFractionDigits, 0, 100, undefined);
-      const DefaultNumberOptionResult1 = tmp2(13586).DefaultNumberOption(maximumFractionDigits, 0, 100, undefined);
+      const DefaultNumberOptionResult = DefaultNumberOption.DefaultNumberOption(minimumFractionDigits, 0, 100, undefined);
+      const DefaultNumberOptionResult1 = DefaultNumberOption.DefaultNumberOption(maximumFractionDigits, 0, 100, undefined);
       if (undefined === DefaultNumberOptionResult) {
-        tmp2(13582).invariant(undefined !== DefaultNumberOptionResult1, "maximumFractionDigits must be defined");
+        getMultiInternalSlots.invariant(undefined !== DefaultNumberOptionResult1, "maximumFractionDigits must be defined");
         const _Math2 = Math;
         let bound = Math.min(minimumFractionDigits, DefaultNumberOptionResult1);
         let bound1 = DefaultNumberOptionResult1;
@@ -91,9 +92,9 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
     }
     if (tmp10) {
       const _TypeError = TypeError;
-      tmp2(13582).invariant("fractionDigits" === internalSlots.roundingType, "Invalid roundingType", TypeError);
+      getMultiInternalSlots.invariant("fractionDigits" === internalSlots.roundingType, "Invalid roundingType", TypeError);
       const _RangeError = RangeError;
-      tmp2(13582).invariant(internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits, "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.", RangeError);
+      getMultiInternalSlots.invariant(internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits, "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.", RangeError);
     }
   }
   if ("morePrecision" === GetOptionResult1) {
@@ -109,5 +110,6 @@ arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internal
     internalSlots.roundingType = "fractionDigits";
     internalSlots.roundingPriority = "auto";
   }
+  const GetOptionResult2 = __exportStarResult4.GetOption(result1, "trailingZeroDisplay", "string", ["auto", "stripIfInteger"], "auto");
 };
 const set = new Set([1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 2500, 5000]);

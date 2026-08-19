@@ -1,9 +1,9 @@
 // _runtime/07864__asyncOptionalChainDelete2.js
-import closure_2 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 function _asyncOptionalChainDelete2() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;

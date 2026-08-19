@@ -1,12 +1,12 @@
 // _runtime/01581_shouldPreventRemove.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");
 function shouldPreventRemove(emitter, beforeRemoveListeners, routes, routes2, target) {
   let tmp = target;
-  closure_0 = routes2.map((key) => key.key);
-  const found = routes.filter((key) => !closure_0.includes(key.key));
+  closure_0 = routes2.map((item, index) => item.key);
+  const found = routes.filter((item, index) => !closure_0.includes(item.key));
   let reversed = found.reverse();
   let tmp3 = closure_3;
   if (!(closure_3 in target)) {
@@ -29,11 +29,9 @@ export const useOnPreventRemove = function useOnPreventRemove(getState) {
   getState = getState.getState;
   const emitter = getState.emitter;
   const beforeRemoveListeners = getState.beforeRemoveListeners;
-  let addKeyedListener;
-  let key;
-  addKeyedListener = beforeRemoveListeners.useContext(getState(emitter[1]).NavigationBuilderContext).addKeyedListener;
+  const addKeyedListener = beforeRemoveListeners.useContext(getState(emitter[1]).NavigationBuilderContext).addKeyedListener;
   const context = beforeRemoveListeners.useContext(getState(emitter[2]).NavigationRouteContext);
-  key = undefined;
+  let key;
   if (context != null) {
     key = context.key;
   }
@@ -42,7 +40,7 @@ export const useOnPreventRemove = function useOnPreventRemove(getState) {
     if (key) {
       let tmp2Result;
       if (addKeyedListener != null) {
-        tmp2Result = tmp2("beforeRemove", tmp, (arg0) => closure_1_4(closure_1, closure_2, callback().routes, [], arg0));
+        tmp2Result = tmp2("beforeRemove", tmp, (arg0) => key(closure_1, closure_2, callback().routes, [], arg0));
       }
       return tmp2Result;
     }

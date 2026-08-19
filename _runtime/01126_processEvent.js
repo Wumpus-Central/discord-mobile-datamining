@@ -91,7 +91,6 @@ function processEvent(arg0, arg1) {
             }
             closure_0 = HermesBuiltin.arraySpread(attachments, closure_0);
             attachments.attachments = items;
-            const tmp20 = attachments;
           }
           c6 = 3;
           const obj4 = { value: null, done: true };
@@ -123,12 +122,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -148,8 +147,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -163,13 +162,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);

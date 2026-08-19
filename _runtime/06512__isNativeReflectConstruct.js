@@ -2,15 +2,15 @@
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06510__isNativeReflectConstruct.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00041__classCallCheck.js";
-import closure_6 from "metro/00093__possibleConstructorReturn.js";
-import closure_7 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const TouchableOpacity = arg1;
+const TouchableOpacity = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -71,15 +71,16 @@ class TouchableOpacity {
       }
       obj[3] = flag;
       closure_1_8.timing(store.opacity, obj).start();
+      const timingResult = closure_1_8.timing(store.opacity, obj);
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === store(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
+      if (arg1 === store(dependencyMap[9]).TOUCHABLE_STATE.BEGAN) {
         store.setOpacityTo(store.props.activeOpacity, 0);
       } else {
         if (!tmp3) {
           store.setOpacityTo(store.getChildStyleOpacityWithDefault(), 150);
         }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 = arg1 !== store(dependencyMap[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== store(dependencyMap[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     return tmp3Result;
@@ -104,7 +105,7 @@ let obj = {
     if (self.props.children) {
       let children = self.props.children;
     } else {
-      children = tmp2(closure_11, {});
+      children = <closure_11 />;
     }
     obj.children = children;
     return jsx(_isNativeReflectConstructDefault, {});

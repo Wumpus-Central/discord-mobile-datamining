@@ -2,83 +2,6 @@
 import noop from "00019_noop.js";
 
 let fn = function t(exports, React) {
-  c0 = React;
-  let emptyFunction = function _objectSpread2(prototype) {
-    closure_0 = prototype;
-    for (let num = 1; num < arguments.length; num = num + 1) {
-      let tmp = num;
-      let tmp2 = null != arguments[num] ? arguments[num] : {};
-      closure_1 = tmp2;
-      let _Object = Object;
-      if (num % 2) {
-        let _ObjectResult = _Object(tmp2);
-        closure_0 = _ObjectResult;
-        let _Object7 = Object;
-        let keys = Object.keys(_ObjectResult);
-        let _Object8 = Object;
-        if (Object.getOwnPropertySymbols) {
-          let _Object9 = Object;
-          let ownPropertySymbols = Object.getOwnPropertySymbols(_ObjectResult);
-          let push2 = keys.push;
-          let applyResult = push2.apply(keys, ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_0, arg0).enumerable));
-        }
-        let item = keys.forEach((arg0) => {
-          if (arg0 in closure_0) {
-            const _Object = Object;
-            const obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = tmp2;
-            Object.defineProperty(tmp, arg0, obj);
-          } else {
-            tmp[arg0] = tmp2;
-          }
-        });
-      } else {
-        let _Object2 = Object;
-        if (_Object.getOwnPropertyDescriptors) {
-          let _Object6 = Object;
-          let definePropertiesResult = _Object2.defineProperties(prototype, Object.getOwnPropertyDescriptors(tmp2));
-        } else {
-          let _Object2Result = _Object2(tmp2);
-          closure_0 = _Object2Result;
-          let _Object3 = Object;
-          let keys1 = Object.keys(_Object2Result);
-          let _Object4 = Object;
-          if (Object.getOwnPropertySymbols) {
-            let _Object5 = Object;
-            let push = keys1.push;
-            let applyResult1 = push.apply(keys1, Object.getOwnPropertySymbols(_Object2Result));
-          }
-          let item1 = keys1.forEach((arg0) => {
-            Object.defineProperty(closure_0, arg0, Object.getOwnPropertyDescriptor(closure_1, arg0));
-          });
-        }
-      }
-    }
-    return prototype;
-  };
-  let emptyFunctionWithReset = function _typeof(arg0) {
-    if (typeof Symbol === "function") {
-      let _Symbol = Symbol;
-      if (typeof Symbol.iterator === "symbol") {
-        let fn = (arg0) => typeof arg0;
-      }
-      return fn(arg0);
-    }
-    fn = (arg0) => {
-      if (arg0) {
-        const _Symbol = Symbol;
-        if (typeof Symbol === "function") {
-          const _Symbol3 = Symbol;
-          if (arg0.constructor === Symbol) {
-            const _Symbol2 = Symbol;
-            let str = "symbol";
-          }
-          return str;
-        }
-      }
-      str = typeof arg0;
-    };
-  };
   function _objectWithoutProperties(arg0, arr) {
     if (null == arg0) {
       return {};
@@ -91,7 +14,6 @@ let fn = function t(exports, React) {
         const keys = Object.keys(arg0);
         for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
           let tmp2 = keys[num3];
-          let tmp3 = num3;
           if (arr.indexOf(tmp2) < 0) {
             obj[tmp2] = arg0[tmp2];
           }
@@ -103,7 +25,6 @@ let fn = function t(exports, React) {
         const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
         for (let num6 = 0; num6 < ownPropertySymbols.length; num6 = num6 + 1) {
           let tmp5 = ownPropertySymbols[num6];
-          let tmp6 = num6;
           if (arr.indexOf(tmp5) < 0) {
             let _Object4 = Object;
             let call = propertyIsEnumerable.call;
@@ -126,38 +47,37 @@ let fn = function t(exports, React) {
         let tmp6 = iterable;
         if (iterable) {
           const _Symbol = Symbol;
-          iterable = typeof Symbol !== "undefined";
+          let prop = typeof Symbol !== "undefined";
           if (typeof Symbol !== "undefined") {
             const _Symbol2 = Symbol;
-            iterable = iterable[Symbol.iterator];
+            prop = iterable[Symbol.iterator];
           }
-          if (!iterable) {
-            iterable = iterable[Symbol.iterator];
+          if (!prop) {
+            prop = iterable[Symbol.iterator];
           }
-          tmp6 = iterable;
+          tmp6 = prop;
         }
         if (null != tmp6) {
           let flag2 = false;
           try {
             const items = [];
             try {
-              const call = tmp8.call;
+              const call = tmp9.call;
               if (typeof call === "unknown") {
-                let iter = tmp8();
+                let iter = tmp9();
               } else {
                 iter = call(iterable);
               }
               const iter3 = iter.next();
               const done = iter3.done;
-              let tmp10 = done;
+              let tmp11 = done;
               if (!done) {
                 items.push(iter4.value);
                 if (!arg1) {
                   const iter5 = iter2.next();
                   const done2 = iter5.done;
-                  tmp10 = done2;
+                  tmp11 = done2;
                   while (!done2) {
-                    let tmp15 = iter5;
                     let arr = items.push(iter6.value);
                     if (!arg1) {
                       continue;
@@ -169,11 +89,11 @@ let fn = function t(exports, React) {
                 }
               }
               try {
-                let tmp17 = tmp10;
-                if (!tmp10) {
-                  tmp17 = null == iter2.return;
+                let tmp18 = tmp11;
+                if (!tmp11) {
+                  tmp18 = null == iter2.return;
                 }
-                if (!tmp17) {
+                if (!tmp18) {
                   iter2.return();
                 }
                 if (flag2) {
@@ -181,34 +101,34 @@ let fn = function t(exports, React) {
                 } else {
                   return items;
                 }
-              } catch (tmp23) {
+              } catch (tmp24) {
                 if (tmp2) {
                   throw tmp;
                 } else {
-                  throw tmp23;
+                  throw tmp24;
                 }
               }
             } catch (tmp5) {
               flag2 = true;
             }
-          } catch (tmp26) {
+          } catch (tmp27) {
             try {
               if (!tmp3) {
-                const tmp28 = tmp4 == obj.return;
+                const tmp29 = tmp4 == obj.return;
               }
-              if (!tmp28) {
+              if (!tmp29) {
                 obj.return();
               }
               if (tmp2) {
                 throw tmp;
               } else {
-                throw tmp26;
+                throw tmp27;
               }
-            } catch (tmp33) {
+            } catch (tmp34) {
               if (tmp2) {
                 throw tmp;
               } else {
-                throw tmp33;
+                throw tmp34;
               }
             }
           }
@@ -252,11 +172,8 @@ let fn = function t(exports, React) {
                     arr = array;
                   } while (num6 < num5);
                 }
-              } else {
-                const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
               }
             }
-            let tmp2 = arr;
           }
           const _Array2 = Array;
           arr = Array.from(iterable);
@@ -270,22 +187,20 @@ let fn = function t(exports, React) {
       const _Array3 = Array;
       array = new Array(num8);
       let num9 = 0;
-      tmp2 = array;
       if (0 < num8) {
         do {
           array[num9] = iterable[num9];
           num9 = num9 + 1;
-          tmp2 = array;
         } while (num9 < num8);
       }
     }
   }
-  emptyFunction = function emptyFunction() {
+  function emptyFunction() {
 
-  };
-  emptyFunctionWithReset = function emptyFunctionWithReset() {
+  }
+  function emptyFunctionWithReset() {
 
-  };
+  }
   c0 = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
   emptyFunctionWithReset.resetWarningCache = emptyFunction;
   let tmp = (function o() {
@@ -401,8 +316,8 @@ let fn = function t(exports, React) {
               } else {
                 closure_0 = arg0;
                 closure_1 = arg1;
-                return keys2.every(function pred(arg0) {
-                  return closure_1_27(table[arg0], table2[arg0]);
+                return keys2.every(function pred(item, index) {
+                  return isEqual(table[item], table2[item]);
                 });
               }
             }
@@ -417,7 +332,7 @@ let fn = function t(exports, React) {
 
   }
   c12 = "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.";
-  function validateStripe(elements, arg1) {
+  function validateStripe(elements, c12) {
     if (arguments.length > 1) {
       if (undefined !== arguments[1]) {
         let tmp = arguments[1];
@@ -452,7 +367,7 @@ let fn = function t(exports, React) {
     }
     tmp = c12;
   }
-  function parseStripeProp(elements) {
+  function parseStripeProp(elements, arg1) {
     if (arguments.length > 1) {
       if (undefined !== arguments[1]) {
         let tmp = arguments[1];
@@ -471,9 +386,9 @@ let fn = function t(exports, React) {
       if (tmp5) {
         let obj = { tag: "async", stripePromise: null };
         const resolved = Promise.resolve(elements);
-        obj[1] = resolved.then((arg0) => {
-          closure_1_13(arg0, closure_0);
-          return arg0;
+        obj[1] = resolved.then((result) => {
+          validateStripe(result, closure_0);
+          return result;
         });
         return obj;
       } else {
@@ -506,17 +421,17 @@ let fn = function t(exports, React) {
       obj = options;
       items = [];
       items[0] = stripe;
-      memo = options.useMemo(() => closure_1_14(options), items);
+      memo = options.useMemo(() => parseStripeProp(options), items);
       closure_2 = memo;
       tmp2 = closure_4(options.useState(() => {
         let stripe = null;
         if ("sync" === memo.tag) {
-          stripe = tmp.stripe;
+          stripe = memo.stripe;
         }
         const obj = { stripe, elements: null };
         let elementsResult = null;
         if ("sync" === memo.tag) {
-          stripe = tmp.stripe;
+          stripe = memo.stripe;
           elementsResult = stripe.elements(ref1);
         }
         obj[1] = elementsResult;
@@ -533,13 +448,13 @@ let fn = function t(exports, React) {
         let stripe = true;
         if ("async" === memo.tag) {
           if (!value.stripe) {
-            tmp.stripePromise.then((arg0) => {
-              let tmp = arg0;
-              if (arg0) {
+            memo.stripePromise.then((result) => {
+              let tmp = result;
+              if (result) {
                 tmp = closure_0;
               }
               if (tmp) {
-                closure_0 = arg0;
+                closure_0 = result;
                 closure_1_4((stripe) => {
                   let tmp = stripe;
                   if (!stripe.stripe) {
@@ -552,18 +467,18 @@ let fn = function t(exports, React) {
                 });
               }
             });
-            const stripePromise = tmp.stripePromise;
+            const stripePromise = memo.stripePromise;
           }
           return () => {
             c0 = false;
           };
         }
-        stripe = "sync" !== tmp.tag;
+        stripe = "sync" !== memo.tag;
         if (!stripe) {
           stripe = value.stripe;
         }
         if (!stripe) {
-          stripe = tmp.stripe;
+          stripe = memo.stripe;
           callback((stripe) => {
             let tmp = stripe;
             if (!stripe.stripe) {
@@ -622,13 +537,13 @@ let fn = function t(exports, React) {
       items5[2] = first.elements;
       effect4 = obj.useEffect(() => {
         if (value.elements) {
-          if (typeof closure_1_11 !== "function") {
+          if (typeof extractAllowedOptionsUpdates !== "function") {
             HermesBuiltin.throwTypeError();
           }
           closure_0 = tmp3;
           closure_1 = current2;
           closure_2 = ["clientSecret", "fonts"];
-          if (typeof closure_1_8 !== "function") {
+          if (typeof isUnknownObject !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
@@ -639,45 +554,45 @@ let fn = function t(exports, React) {
           if (tmp7) {
             const _Object = Object;
             const keys = Object.keys(tmp3);
-            reduced = keys.reduce((arg0, arg1) => {
-              if (typeof closure_1_8 !== "function") {
+            reduced = keys.reduce((acc, item, index) => {
+              if (typeof current !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              let tmp2 = null !== tmp;
+              let tmp2 = null !== dependencyMap;
               if (tmp2) {
-                tmp2 = "object" === lib(tmp);
+                tmp2 = "object" === lib(dependencyMap);
               }
               let tmp4 = !tmp2;
               if (tmp2) {
-                tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
+                tmp4 = !closure_1_10(dependencyMap[item], dependencyMap[item]);
               }
-              if (lib.includes(arg1)) {
-                let tmp7 = arg0;
+              if (lib.includes(item)) {
+                let tmp7 = acc;
                 if (tmp4) {
                   const _console = console;
                   const concat = "Unsupported prop change: options.".concat;
-                  console.warn("Unsupported prop change: options.".concat(arg1, " is not a mutable property."));
-                  tmp7 = arg0;
+                  console.warn("Unsupported prop change: options.".concat(item, " is not a mutable property."));
+                  tmp7 = acc;
                 }
               } else {
-                tmp7 = arg0;
+                tmp7 = acc;
                 if (tmp4) {
-                  let obj = arg0;
-                  if (!arg0) {
+                  let obj = acc;
+                  if (!acc) {
                     obj = {};
                   }
                   obj = {};
-                  closure_1(obj, obj);
+                  dependencyMap(obj, obj);
                   obj = {};
-                  if (arg1 in obj) {
+                  if (item in obj) {
                     const _Object = Object;
                     obj1 = { value: null, enumerable: true, configurable: true, writable: true };
                     obj1[0] = tmp11;
-                    Object.defineProperty(obj, arg1, obj1);
+                    Object.defineProperty(obj, item, obj1);
                   } else {
-                    obj[arg1] = tmp11;
+                    obj[item] = tmp11;
                   }
-                  closure_1(obj, {}, obj);
+                  dependencyMap(obj, {}, obj);
                 }
               }
               return tmp7;
@@ -687,14 +602,13 @@ let fn = function t(exports, React) {
             const elements = tmp.elements;
             elements.update(reduced);
           }
-          const tmp4 = current2;
         }
       }, items5);
       items6 = [];
       items6[0] = first.stripe;
       effect5 = obj.useEffect(() => {
         const stripe = value.stripe;
-        if (typeof closure_1_15 !== "function") {
+        if (typeof registerWithStripeJs !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -762,7 +676,7 @@ let fn = function t(exports, React) {
       obj = checkoutSdk;
       items = [];
       items[0] = stripe;
-      memo = checkoutSdk.useMemo(() => closure_1_14(checkoutSdk, "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+      memo = checkoutSdk.useMemo(() => parseStripeProp(checkoutSdk, "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
       closure_2 = memo;
       tmp2 = closure_4(checkoutSdk.useState(null), 2);
       first = tmp2[0];
@@ -792,10 +706,10 @@ let fn = function t(exports, React) {
         c0 = true;
         if ("async" === memo.tag) {
           if (!first1.stripe) {
-            tmp.stripePromise.then((initCheckout) => {
-              closure_0 = initCheckout;
-              let tmp = initCheckout;
-              if (initCheckout) {
+            memo.stripePromise.then((result) => {
+              closure_0 = result;
+              let tmp = result;
+              if (result) {
                 tmp = closure_0;
               }
               if (tmp) {
@@ -803,13 +717,13 @@ let fn = function t(exports, React) {
               }
               if (tmp) {
                 closure_1_8.current = true;
-                const checkout = initCheckout.initCheckout(closure_1_1);
-                checkout.then((on) => {
-                  if (on) {
+                const checkout = result.initCheckout(ref2);
+                checkout.then((result) => {
+                  if (result) {
                     if (typeof closure_1_7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    closure_1 = on;
+                    closure_1 = result;
                     closure_1_6((stripe) => {
                       let tmp = stripe;
                       if (!stripe.stripe) {
@@ -820,33 +734,32 @@ let fn = function t(exports, React) {
                       }
                       return tmp;
                     });
-                    on.on("change", closure_1_4);
-                    const tmp2 = closure_0;
+                    result.on("change", closure_1_4);
                   }
                 });
               }
             });
-            const stripePromise = tmp.stripePromise;
+            const stripePromise = memo.stripePromise;
           }
           return () => {
             c0 = false;
           };
         }
-        let tmp4 = "sync" === tmp.tag && tmp.stripe;
+        let tmp4 = "sync" === memo.tag && memo.stripe;
         if (tmp4) {
           tmp4 = !ref.current;
         }
         if (tmp4) {
           ref.current = true;
-          let stripe = tmp.stripe;
+          let stripe = memo.stripe;
           let checkout = stripe.initCheckout(ref2);
-          checkout.then((on) => {
-            if (on) {
+          checkout.then((result) => {
+            if (result) {
               if (typeof closure_7 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               stripe = stripe.stripe;
-              closure_1 = on;
+              closure_1 = result;
               callback((stripe) => {
                 let tmp = stripe;
                 if (!stripe.stripe) {
@@ -857,7 +770,7 @@ let fn = function t(exports, React) {
                 }
                 return tmp;
               });
-              on.on("change", closure_4);
+              result.on("change", closure_4);
             }
           });
         }
@@ -946,7 +859,7 @@ let fn = function t(exports, React) {
           let tmp7 = !tmp6;
           checkoutSdk = !current3;
           if (!current3) {
-            checkoutSdk = tmp.checkoutSdk;
+            checkoutSdk = first1.checkoutSdk;
           }
           let tmp9 = appearance1;
           if (appearance1) {
@@ -956,7 +869,7 @@ let fn = function t(exports, React) {
             tmp9 = tmp7;
           }
           if (tmp9) {
-            const checkoutSdk2 = tmp.checkoutSdk;
+            const checkoutSdk2 = first1.checkoutSdk;
             checkoutSdk2.changeAppearance(appearance1);
           }
         }
@@ -965,7 +878,7 @@ let fn = function t(exports, React) {
       items7[0] = first1.stripe;
       effect6 = obj.useEffect(() => {
         const stripe = first1.stripe;
-        if (typeof closure_1_15 !== "function") {
+        if (typeof registerWithStripeJs !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -996,7 +909,7 @@ let fn = function t(exports, React) {
       return element;
     }
   }
-  obj = { stripe: _default.any, options: _default.shape(obj).isRequired };
+  { stripe: _default.any, options: _default.shape(obj).isRequired };
   obj = { fetchClientSecret: _default.func.isRequired, elementsOptions: _default.object };
   CheckoutProvider.propTypes = obj;
   function useElementsOrCheckoutSdkContextWithUseCase(arg0) {
@@ -1014,10 +927,9 @@ let fn = function t(exports, React) {
     let combined = "".concat(formatted + address.slice(1), "Element");
     const tmp3 = arg1 ? (function ServerElement(id) {
       combined = "mounts <".concat(combined, ">");
-      if (typeof closure_1_23 !== "function") {
+      if (typeof useElementsOrCheckoutSdkContextWithUseCase !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let obj = address;
       context = address.useContext(closure_1_20);
       context1 = address.useContext(closure_1_16);
       if (context) {
@@ -1029,7 +941,7 @@ let fn = function t(exports, React) {
         }
       }
       if (context) {
-        if (typeof closure_1_21 !== "function") {
+        if (typeof parseCheckoutSdkContext !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context) {
@@ -1039,7 +951,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof closure_1_17 !== "function") {
+        if (typeof parseElementsContext !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1049,8 +961,7 @@ let fn = function t(exports, React) {
           throw error2;
         }
       }
-      obj = { id: id.id, className: id.className };
-      return <div id={arg0.id} className={arg0.className} />;
+      return <div id={id.id} className={id.className} />;
     }) : (function ClientElement(options) {
       options = options.options;
       ({ id, className } = options);
@@ -1061,7 +972,7 @@ let fn = function t(exports, React) {
       let ref14 = onReady;
       ({ onChange, onEscape, onClick, onLoadError, onLoaderStart, onNetworksChange, onConfirm, onCancel, onShippingAddressChange, onShippingRateChange } = options);
       combined = "mounts <".concat(ref14, ">");
-      if (typeof closure_1_23 !== "function") {
+      if (typeof useElementsOrCheckoutSdkContextWithUseCase !== "function") {
         HermesBuiltin.throwTypeError();
       }
       context = address.useContext(closure_1_20);
@@ -1075,7 +986,7 @@ let fn = function t(exports, React) {
         }
       }
       if (context) {
-        if (typeof closure_1_21 !== "function") {
+        if (typeof parseCheckoutSdkContext !== "function") {
           HermesBuiltin.throwTypeError();
         }
         context1 = context;
@@ -1086,7 +997,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof closure_1_17 !== "function") {
+        if (typeof parseElementsContext !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1106,43 +1017,41 @@ let fn = function t(exports, React) {
         checkoutSdk = context1.checkoutSdk;
       }
       onReady = checkoutSdk;
-      const tmp18 = closure_1_4(address.useState(null), 2);
+      const tmp18 = _slicedToArray(address.useState(null), 2);
       const first = tmp18[0];
       let ref13 = first;
       closure_5 = tmp18[1];
-      closure_6 = obj2.useRef(null);
-      const ref = obj2.useRef(null);
-      if (typeof closure_1_6 !== "function") {
+      closure_6 = address.useRef(null);
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "blur";
       onReady = onBlur;
-      onReady = tmp22;
       const ref1 = address.useRef(onBlur);
       ref13 = ref1;
       const items = [onBlur];
-      const effect = obj2.useEffect(() => {
+      const effect = address.useEffect(() => {
         ref13.current = onReady;
       }, items);
       const items1 = [onBlur, "blur", first, ref1];
-      const effect1 = obj2.useEffect(() => {
+      const effect1 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1151,37 +1060,36 @@ let fn = function t(exports, React) {
 
         };
       }, items1);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "focus";
       onReady = onFocus;
-      onReady = tmp26;
       const ref2 = address.useRef(onFocus);
       ref13 = ref2;
       const items2 = [onFocus];
-      const effect2 = obj2.useEffect(() => {
+      const effect2 = address.useEffect(() => {
         ref13.current = onReady;
       }, items2);
       const items3 = [onFocus, "focus", first, ref2];
-      const effect3 = obj2.useEffect(() => {
+      const effect3 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1190,37 +1098,36 @@ let fn = function t(exports, React) {
 
         };
       }, items3);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "escape";
       onReady = onEscape;
-      onReady = tmp30;
       const ref3 = address.useRef(onEscape);
       ref13 = ref3;
       const items4 = [onEscape];
-      const effect4 = obj2.useEffect(() => {
+      const effect4 = address.useEffect(() => {
         ref13.current = onReady;
       }, items4);
       const items5 = [onEscape, "escape", first, ref3];
-      const effect5 = obj2.useEffect(() => {
+      const effect5 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1229,37 +1136,36 @@ let fn = function t(exports, React) {
 
         };
       }, items5);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "click";
       onReady = onClick;
-      onReady = tmp34;
       const ref4 = address.useRef(onClick);
       ref13 = ref4;
       const items6 = [onClick];
-      const effect6 = obj2.useEffect(() => {
+      const effect6 = address.useEffect(() => {
         ref13.current = onReady;
       }, items6);
       const items7 = [onClick, "click", first, ref4];
-      const effect7 = obj2.useEffect(() => {
+      const effect7 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1268,37 +1174,36 @@ let fn = function t(exports, React) {
 
         };
       }, items7);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "loaderror";
       onReady = onLoadError;
-      onReady = tmp38;
       const ref5 = address.useRef(onLoadError);
       ref13 = ref5;
       const items8 = [onLoadError];
-      const effect8 = obj2.useEffect(() => {
+      const effect8 = address.useEffect(() => {
         ref13.current = onReady;
       }, items8);
       const items9 = [onLoadError, "loaderror", first, ref5];
-      const effect9 = obj2.useEffect(() => {
+      const effect9 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1307,37 +1212,36 @@ let fn = function t(exports, React) {
 
         };
       }, items9);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "loaderstart";
       onReady = onLoaderStart;
-      onReady = tmp42;
       const ref6 = address.useRef(onLoaderStart);
       ref13 = ref6;
       const items10 = [onLoaderStart];
-      const effect10 = obj2.useEffect(() => {
+      const effect10 = address.useEffect(() => {
         ref13.current = onReady;
       }, items10);
       const items11 = [onLoaderStart, "loaderstart", first, ref6];
-      const effect11 = obj2.useEffect(() => {
+      const effect11 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1346,37 +1250,36 @@ let fn = function t(exports, React) {
 
         };
       }, items11);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "networkschange";
       onReady = onNetworksChange;
-      onReady = tmp46;
       const ref7 = address.useRef(onNetworksChange);
       ref13 = ref7;
       const items12 = [onNetworksChange];
-      const effect12 = obj2.useEffect(() => {
+      const effect12 = address.useEffect(() => {
         ref13.current = onReady;
       }, items12);
       const items13 = [onNetworksChange, "networkschange", first, ref7];
-      const effect13 = obj2.useEffect(() => {
+      const effect13 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1385,37 +1288,36 @@ let fn = function t(exports, React) {
 
         };
       }, items13);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "confirm";
       onReady = onConfirm;
-      onReady = tmp50;
       const ref8 = address.useRef(onConfirm);
       ref13 = ref8;
       const items14 = [onConfirm];
-      const effect14 = obj2.useEffect(() => {
+      const effect14 = address.useEffect(() => {
         ref13.current = onReady;
       }, items14);
       const items15 = [onConfirm, "confirm", first, ref8];
-      const effect15 = obj2.useEffect(() => {
+      const effect15 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1424,37 +1326,36 @@ let fn = function t(exports, React) {
 
         };
       }, items15);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "cancel";
       onReady = onCancel;
-      onReady = tmp54;
       const ref9 = address.useRef(onCancel);
       ref13 = ref9;
       const items16 = [onCancel];
-      const effect16 = obj2.useEffect(() => {
+      const effect16 = address.useEffect(() => {
         ref13.current = onReady;
       }, items16);
       const items17 = [onCancel, "cancel", first, ref9];
-      const effect17 = obj2.useEffect(() => {
+      const effect17 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1463,37 +1364,36 @@ let fn = function t(exports, React) {
 
         };
       }, items17);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "shippingaddresschange";
       onReady = onShippingAddressChange;
-      onReady = tmp58;
       const ref10 = address.useRef(onShippingAddressChange);
       ref13 = ref10;
       const items18 = [onShippingAddressChange];
-      const effect18 = obj2.useEffect(() => {
+      const effect18 = address.useEffect(() => {
         ref13.current = onReady;
       }, items18);
       const items19 = [onShippingAddressChange, "shippingaddresschange", first, ref10];
-      const effect19 = obj2.useEffect(() => {
+      const effect19 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1502,37 +1402,36 @@ let fn = function t(exports, React) {
 
         };
       }, items19);
-      if (typeof closure_1_6 !== "function") {
+      if (typeof useAttachEvent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "shippingratechange";
       onReady = onShippingRateChange;
-      onReady = tmp62;
       const ref11 = address.useRef(onShippingRateChange);
       ref13 = ref11;
       const items20 = [onShippingRateChange];
-      const effect20 = obj2.useEffect(() => {
+      const effect20 = address.useEffect(() => {
         ref13.current = onReady;
       }, items20);
       const items21 = [onShippingRateChange, "shippingratechange", first, ref11];
-      const effect21 = obj2.useEffect(() => {
+      const effect21 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1541,37 +1440,36 @@ let fn = function t(exports, React) {
 
         };
       }, items21);
-      if (typeof closure_1_6 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
+      if (typeof useAttachEvent !== "function") {
+        HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "change";
       onReady = onChange;
-      onReady = tmp66;
       const ref12 = address.useRef(onChange);
       ref13 = ref12;
       const items22 = [onChange];
-      const effect22 = obj2.useEffect(() => {
+      const effect22 = address.useEffect(() => {
         ref13.current = onReady;
       }, items22);
       const items23 = [onChange, "change", first, ref12];
-      const effect23 = obj2.useEffect(() => {
+      const effect23 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1589,36 +1487,35 @@ let fn = function t(exports, React) {
         }
         tmp70 = onReady;
       }
-      if (typeof closure_1_6 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
+      if (typeof useAttachEvent !== "function") {
+        HermesBuiltin.throwTypeError();
       }
       options = first;
       ref14 = "ready";
-      onReady = tmp70;
       onReady = tmp72;
-      ref13 = obj2.useRef(tmp70);
+      ref13 = address.useRef(tmp70);
       const items24 = [tmp70];
-      const effect24 = obj2.useEffect(() => {
+      const effect24 = address.useEffect(() => {
         ref13.current = onReady;
       }, items24);
       const items25 = [tmp70, "ready", first, ref13];
-      const effect25 = obj2.useEffect(() => {
+      const effect25 = address.useEffect(() => {
         if (onReady) {
           if (decoratedCb) {
             decoratedCb = function decoratedCb() {
               if (ref.current) {
-                current = tmp.current;
+                current = ref.current;
                 const apply = current.apply;
                 if (typeof apply === "unknown") {
-                  HermesBuiltin.applyArguments(tmp);
+                  HermesBuiltin.applyArguments(ref);
                 } else {
-                  apply(tmp, arguments);
+                  apply(ref, arguments);
                 }
               }
             };
             obj.on(ref14, decoratedCb);
             return () => {
-              decoratedCb.off(closure_1_1, decoratedCb);
+              decoratedCb.off(ref14, decoratedCb);
             };
           }
           obj = decoratedCb;
@@ -1628,35 +1525,35 @@ let fn = function t(exports, React) {
         };
       }, items25);
       const items26 = [elements, checkoutSdk, options];
-      const layoutEffect = obj2.useLayoutEffect(() => {
+      const layoutEffect = address.useLayoutEffect(() => {
         if (null === ref.current) {
           if (null !== ref.current) {
             if (onReady) {
               if (onReady) {
                 if ("payment" === options) {
-                  let paymentElement = obj.createPaymentElement(options);
-                } else if ("address" === tmp6) {
+                  let paymentElement = onReady.createPaymentElement(options);
+                } else if ("address" === options) {
                   if ("mode" in options) {
-                    const mode = tmp14.mode;
-                    const tmp22 = closure_2_3(tmp14, closure_2_24);
+                    const mode = options.mode;
+                    const tmp22 = _objectWithoutProperties(options, closure_2_24);
                     if ("shipping" === mode) {
-                      paymentElement = obj.createShippingAddressElement(tmp22);
+                      paymentElement = onReady.createShippingAddressElement(tmp22);
                     } else if ("billing" !== mode) {
                       const _Error3 = Error;
                       error = new Error("Invalid options.mode. mode must be 'billing' or 'shipping'.");
                       throw error;
                     } else {
-                      paymentElement = obj.createBillingAddressElement(tmp22);
+                      paymentElement = onReady.createBillingAddressElement(tmp22);
                     }
                   } else {
                     const _Error2 = Error;
                     const error1 = new Error("You must supply options.mode. mode must be 'billing' or 'shipping'.");
                     throw error1;
                   }
-                } else if ("expressCheckout" === tmp6) {
-                  paymentElement = obj.createExpressCheckoutElement(options);
-                } else if ("currencySelector" === tmp6) {
-                  paymentElement = obj.createCurrencySelectorElement();
+                } else if ("expressCheckout" === options) {
+                  paymentElement = onReady.createExpressCheckoutElement(options);
+                } else if ("currencySelector" === options) {
+                  paymentElement = onReady.createCurrencySelectorElement();
                 } else {
                   const _Error = Error;
                   const concat = "Invalid Element type ".concat;
@@ -1665,8 +1562,8 @@ let fn = function t(exports, React) {
                 }
               } else {
                 paymentElement = null;
-                if (obj2) {
-                  paymentElement = obj2.create(options, options);
+                if (onReady) {
+                  paymentElement = onReady.create(options, options);
                 }
               }
               tmp.current = paymentElement;
@@ -1678,74 +1575,74 @@ let fn = function t(exports, React) {
           }
         }
       }, items26);
-      if (typeof closure_1_7 !== "function") {
-        combined = HermesBuiltin.throwTypeError();
+      if (typeof usePrevious !== "function") {
+        HermesBuiltin.throwTypeError();
       }
-      ref14 = obj2.useRef(options);
+      ref14 = address.useRef(options);
       const items27 = [options];
-      const effect26 = obj2.useEffect(() => {
+      const effect26 = address.useEffect(() => {
         ref14.current = options;
       }, items27);
       let current = ref14.current;
       const items28 = [options, current];
-      const effect27 = obj2.useEffect(() => {
+      const effect27 = address.useEffect(() => {
         if (ref.current) {
-          if (typeof closure_2_11 !== "function") {
+          if (typeof extractAllowedOptionsUpdates !== "function") {
             HermesBuiltin.throwTypeError();
           }
           closure_0 = tmp3;
           closure_1 = current;
           closure_2 = ["paymentRequest"];
-          if (typeof closure_2_8 !== "function") {
+          if (typeof isUnknownObject !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
           if (tmp7) {
-            tmp7 = "object" === closure_2_2(tmp3);
+            tmp7 = "object" === emptyFunctionWithReset(tmp3);
           }
           let reduced = null;
           if (tmp7) {
             let _Object = Object;
             const keys = Object.keys(tmp3);
-            reduced = keys.reduce((arg0, arg1) => {
-              if (typeof closure_1_8 !== "function") {
+            reduced = keys.reduce((acc, item, index) => {
+              if (typeof current !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              let tmp2 = null !== tmp;
+              let tmp2 = null !== dependencyMap;
               if (tmp2) {
-                tmp2 = "object" === lib(tmp);
+                tmp2 = "object" === lib(dependencyMap);
               }
               let tmp4 = !tmp2;
               if (tmp2) {
-                tmp4 = !closure_1_10(dependencyMap[arg1], tmp[arg1]);
+                tmp4 = !closure_1_10(dependencyMap[item], dependencyMap[item]);
               }
-              if (lib.includes(arg1)) {
-                let tmp7 = arg0;
+              if (lib.includes(item)) {
+                let tmp7 = acc;
                 if (tmp4) {
                   const _console = console;
                   const concat = "Unsupported prop change: options.".concat;
-                  console.warn("Unsupported prop change: options.".concat(arg1, " is not a mutable property."));
-                  tmp7 = arg0;
+                  console.warn("Unsupported prop change: options.".concat(item, " is not a mutable property."));
+                  tmp7 = acc;
                 }
               } else {
-                tmp7 = arg0;
+                tmp7 = acc;
                 if (tmp4) {
-                  let obj = arg0;
-                  if (!arg0) {
+                  let obj = acc;
+                  if (!acc) {
                     obj = {};
                   }
                   obj = {};
-                  closure_1(obj, obj);
+                  dependencyMap(obj, obj);
                   obj = {};
-                  if (arg1 in obj) {
+                  if (item in obj) {
                     const _Object = Object;
                     obj1 = { value: null, enumerable: true, configurable: true, writable: true };
                     obj1[0] = tmp11;
-                    Object.defineProperty(obj, arg1, obj1);
+                    Object.defineProperty(obj, item, obj1);
                   } else {
-                    obj[arg1] = tmp11;
+                    obj[item] = tmp11;
                   }
-                  closure_1(obj, {}, obj);
+                  dependencyMap(obj, {}, obj);
                 }
               }
               return tmp7;
@@ -1753,28 +1650,27 @@ let fn = function t(exports, React) {
           }
           let tmp11 = reduced;
           if (reduced) {
-            tmp11 = "update" in tmp.current;
+            tmp11 = "update" in ref.current;
           }
           if (tmp11) {
-            current = tmp.current;
+            current = ref.current;
             current.update(reduced);
           }
-          let tmp4 = current;
         }
       }, items28);
-      const layoutEffect1 = obj2.useLayoutEffect(() => () => {
+      const layoutEffect1 = address.useLayoutEffect(() => () => {
         if (ref.current) {
-          if (typeof tmp.current.destroy === "function") {
+          if (typeof ref.current.destroy === "function") {
             try {
-              current = tmp.current;
+              current = ref.current;
               current.destroy();
-              tmp.current = null;
+              ref.current = null;
             } catch (err) {
             }
           }
         }
       }, []);
-      return <div id={id} className={className} ref={ref} />;
+      return <div id={id} className={className} ref={address.useRef(null)} />;
     });
     tmp3.propTypes = { id: _default.string, className: _default.string, onChange: _default.func, onBlur: _default.func, onFocus: _default.func, onReady: _default.func, onEscape: _default.func, onClick: _default.func, onLoadError: _default.func, onLoaderStart: _default.func, onNetworksChange: _default.func, onConfirm: _default.func, onCancel: _default.func, onShippingAddressChange: _default.func, onShippingRateChange: _default.func, options: _default.object };
     tmp3.displayName = combined;
@@ -1857,12 +1753,11 @@ let fn = function t(exports, React) {
           if (ref.current) {
             if (closure_0) {
               try {
-                obj.unmount();
+                closure_0.unmount();
                 tmp.current = false;
               } catch (err) {
               }
             }
-            obj = closure_0;
           }
         };
       }, items);
@@ -1879,11 +1774,10 @@ let fn = function t(exports, React) {
   });
   exports.EmbeddedCheckoutProvider = function EmbeddedCheckoutProvider(stripe) {
     stripe = stripe.stripe;
-    let options = stripe;
-    options = stripe.options;
+    let options = stripe.options;
     let ref2 = options;
     const items = [stripe];
-    const memo = options.useMemo(() => closure_1_14(options, "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
+    const memo = options.useMemo(() => parseStripeProp(options, "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details."), items);
     closure_3 = options.useRef(null);
     const ref = options.useRef(null);
     const tmp3 = ref(options.useState({ embeddedCheckout: null }), 2);
@@ -1897,30 +1791,30 @@ let fn = function t(exports, React) {
 
           }
           if ("async" === memo.tag) {
-            if (!tmp.current) {
-              tmp3.stripePromise.then((current) => {
-                if (current) {
+            if (!ref.current) {
+              memo.stripePromise.then((result) => {
+                if (result) {
                   if (typeof setStripeAndInitEmbeddedCheckout !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  current = closure_1_4.current;
+                  current = ref.current;
                   if (!current) {
                     current = closure_1_3.current;
                   }
                   if (!current) {
-                    tmp2.current = current;
-                    current2 = tmp2.current;
-                    const embeddedCheckout = current2.initEmbeddedCheckout(closure_1_1);
-                    closure_1_3.current = embeddedCheckout.then((embeddedCheckout) => {
-                      callback({ embeddedCheckout });
+                    ref.current = result;
+                    current2 = ref.current;
+                    const embeddedCheckout = current2.initEmbeddedCheckout(ref2);
+                    closure_1_3.current = embeddedCheckout.then((result) => {
+                      callback({ embeddedCheckout: result });
                     });
                   }
                 }
               });
-              const stripePromise = tmp3.stripePromise;
+              const stripePromise = memo.stripePromise;
             }
           }
-          let tmp5 = "sync" !== tmp3.tag || tmp.current;
+          let tmp5 = "sync" !== memo.tag || ref.current;
           if (!tmp5) {
             const clientSecret = ref2.clientSecret;
             let tmp6 = !clientSecret;
@@ -1930,16 +1824,16 @@ let fn = function t(exports, React) {
             tmp5 = tmp6;
           }
           if (!tmp5) {
-            current = tmp.current;
+            current = ref.current;
             if (!current) {
-              current = tmp2.current;
+              current = ref.current;
             }
             if (!current) {
-              tmp.current = tmp3.stripe;
-              current2 = tmp.current;
+              ref.current = memo.stripe;
+              current2 = ref.current;
               let embeddedCheckout = current2.initEmbeddedCheckout(ref2);
-              tmp2.current = embeddedCheckout.then((embeddedCheckout) => {
-                callback({ embeddedCheckout });
+              ref.current = embeddedCheckout.then((result) => {
+                callback({ embeddedCheckout: result });
               });
             }
           }
@@ -1949,12 +1843,12 @@ let fn = function t(exports, React) {
     const items2 = [value.embeddedCheckout];
     const effect1 = options.useEffect(() => () => {
       if (embeddedCheckout.embeddedCheckout) {
-        tmp2.current = null;
+        ref.current = null;
         embeddedCheckout = tmp.embeddedCheckout;
         embeddedCheckout.destroy();
-      } else if (tmp2.current) {
-        current = tmp2.current;
-        current.then(() => {
+      } else if (ref.current) {
+        current = ref.current;
+        current.then((result) => {
           closure_3.current = null;
           if (closure_5.embeddedCheckout) {
             const embeddedCheckout = closure_5.embeddedCheckout;
@@ -1965,19 +1859,19 @@ let fn = function t(exports, React) {
     }, items2);
     const items3 = [ref];
     const effect2 = options.useEffect(() => {
-      if (typeof closure_1_15 !== "function") {
+      if (typeof registerWithStripeJs !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let registerAppInfo = obj;
+      let registerAppInfo = ref;
       if (ref) {
-        registerAppInfo = obj._registerWrapper;
+        registerAppInfo = ref._registerWrapper;
       }
       if (registerAppInfo) {
-        registerAppInfo = obj.registerAppInfo;
+        registerAppInfo = ref.registerAppInfo;
       }
       if (registerAppInfo) {
-        obj._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
-        obj.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
+        ref._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
+        ref.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
       }
     }, items3);
     if (typeof current !== "function") {
@@ -2039,19 +1933,19 @@ let fn = function t(exports, React) {
             const _console7 = console;
             console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.");
           }
-          tmp10 = null != tmp.fetchClientSecret && tmp22.fetchClientSecret !== tmp.fetchClientSecret;
-          tmp13 = null != tmp.onComplete && tmp22.onComplete !== tmp.onComplete;
-          tmp16 = null != tmp.onShippingDetailsChange && tmp22.onShippingDetailsChange !== tmp.onShippingDetailsChange;
-          tmp19 = null != tmp.onLineItemsChange && tmp22.onLineItemsChange !== tmp.onLineItemsChange;
-          tmp4 = undefined === tmp22.clientSecret && undefined === tmp22.fetchClientSecret;
-          tmp7 = null != tmp.clientSecret && tmp22.clientSecret !== tmp.clientSecret;
+          tmp10 = null != current2.fetchClientSecret && ref2.fetchClientSecret !== current2.fetchClientSecret;
+          tmp13 = null != current2.onComplete && ref2.onComplete !== current2.onComplete;
+          tmp16 = null != current2.onShippingDetailsChange && ref2.onShippingDetailsChange !== current2.onShippingDetailsChange;
+          tmp19 = null != current2.onLineItemsChange && ref2.onLineItemsChange !== current2.onLineItemsChange;
+          tmp4 = undefined === ref2.clientSecret && undefined === ref2.fetchClientSecret;
+          tmp7 = null != current2.clientSecret && ref2.clientSecret !== current2.clientSecret;
         } else {
           const _console = console;
           console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.");
         }
       }
     }, items7);
-    return <context3.Provider value={value}>{arg0.children}</context3.Provider>;
+    return <context3.Provider value={value}>{stripe.children}</context3.Provider>;
   };
   exports.EpsBankElement = elementComponent9;
   exports.ExpressCheckoutElement = elementComponent11;
@@ -2070,7 +1964,7 @@ let fn = function t(exports, React) {
       HermesBuiltin.throwTypeError();
     }
     if (context) {
-      context1 = obj.useContext(context2);
+      context1 = React.useContext(context2);
       if (context1) {
         return context1;
       } else {
@@ -2084,7 +1978,6 @@ let fn = function t(exports, React) {
       const error1 = new Error("Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat("calls useCheckout()", " in an <CheckoutProvider> provider."));
       throw error1;
     }
-    obj = React;
   };
   exports.useElements = function useElements() {
     if (typeof useElementsContextWithUseCase !== "function") {

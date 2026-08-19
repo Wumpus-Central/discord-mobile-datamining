@@ -1,6 +1,6 @@
 // _runtime/06480_useIsScreenReaderEnabled.js
-import closure_0 from "00005_asyncGeneratorStep.js";
-import closure_1 from "metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import { AccessibilityInfo } from "00017_get_ActivityIndicator.js";
 
@@ -10,7 +10,7 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
   const tmp = callback(callback3(false), 2);
   closure_0 = tmp[1];
   callback2(() => {
-    callback = callback(function*() {
+    callback(function*() {
       closure_1 = tmp3;
       c3 = 1;
       yield closure_2_4.isScreenReaderEnabled();
@@ -40,8 +40,8 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
       }
       return applyArgumentsResult;
     })();
-    callback = closure_1_4.addEventListener("screenReaderChanged", (arg0) => {
-      lib(arg0);
+    callback = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
+      lib(event);
     });
     return () => {
       lib.remove();

@@ -1,4 +1,6 @@
 // _runtime/00780_stackSet.js
+import MapCache from "00732_MapCache.js";
+import getNative from "00747_getNative.js";
 import ListCache from "00748_ListCache.js";
 
 
@@ -8,9 +10,9 @@ export default function stackSet(arg0, arg1) {
   let obj = __data__;
   if (__data__ instanceof ListCache) {
     __data__ = __data__.__data__;
-    if (tmp(747)) {
+    if (getNative) {
       if (__data__.length >= 199) {
-        const tmp6 = new tmp(732)(__data__);
+        const tmp6 = new MapCache(__data__);
         self.__data__ = tmp6;
         obj = tmp6;
       }

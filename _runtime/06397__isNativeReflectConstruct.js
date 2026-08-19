@@ -1,11 +1,11 @@
 // _runtime/06397__isNativeReflectConstruct.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 
-let ExclusiveGesture = arg1;
+let ExclusiveGesture = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -115,7 +115,7 @@ let items = [
     key: "toGestureArray",
     value: function toGestureArray() {
       const gestures = this.gestures;
-      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+      return gestures.flatMap((item, index) => item.toGestureArray());
     }
   }
 ];
@@ -146,8 +146,7 @@ obj = {
   key: "prepare",
   value: function prepare() {
     let length;
-    let self = this;
-    self = this;
+    const self = this;
     let num = 0;
     if (0 < this.gestures.length) {
       do {

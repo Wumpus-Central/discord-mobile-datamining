@@ -1,6 +1,6 @@
 // _runtime/07049_RenderTimeTracker.js
 import _createClassDefault from "metro/07051__createClass.js";
-import closure_2 from "metro/07050__classCallCheck.js";
+import _classCallCheck from "metro/07050__classCallCheck.js";
 
 const RenderTimeTracker = arg1;
 class RenderTimeTracker {

@@ -1,11 +1,11 @@
 // _runtime/01788__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const SequencedTransition = arg1;
+const SequencedTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -57,14 +57,12 @@ class SequencedTransition {
       let obj = { duration: num / 2 };
       const reversed = delayFunction.reversed;
       const fn = function e(currentOriginX) {
-        obj = { initialValues: obj, animations: null, callback: null };
-        obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
         const obj3 = delayFunction(callbackV[5]);
         obj = { originX: null, originY: null, width: null, height: null };
         const obj4 = delayFunction(callbackV[5]);
-        let tmp3Result = tmp3(tmp4[5]);
+        let tmp3Result = delayFunction(callbackV[5]);
         obj[0] = delayFunction(delay, obj3.withSequence(delayFunction(callbackV[5]).withTiming(reversed ? currentOriginX.currentOriginX : currentOriginX.targetOriginX, obj), tmp3Result.withTiming(currentOriginX.targetOriginX, obj)));
-        tmp3Result = tmp3(tmp4[5]);
+        tmp3Result = delayFunction(callbackV[5]);
         const withTimingResult = delayFunction(callbackV[5]).withTiming(reversed ? currentOriginX.currentOriginX : currentOriginX.targetOriginX, obj);
         const tmp3Result1 = delayFunction(callbackV[5]);
         const withTimingResult1 = delayFunction(callbackV[5]).withTiming(reversed ? currentOriginX.targetOriginY : currentOriginX.currentOriginY, obj);
@@ -83,7 +81,7 @@ class SequencedTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withSequence: callback(closure_1_1[5]).withSequence, withTiming: callback(closure_1_1[5]).withTiming, reverse: reversed, config: obj, callback: callbackV };
+      obj = { delayFunction, delay, withSequence: callback(dependencyMap[5]).withSequence, withTiming: callback(dependencyMap[5]).withTiming, reverse: reversed, config: obj, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 255577740024;
       fn.__initData = closure_1_6;

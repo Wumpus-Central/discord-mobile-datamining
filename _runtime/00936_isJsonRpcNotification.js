@@ -1,5 +1,6 @@
 // _runtime/00936_isJsonRpcNotification.js
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import consoleSandbox from "00824_consoleSandbox.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -23,22 +24,22 @@ arg5.isJsonRpcNotification = function isJsonRpcNotification(closure_2) {
   }
   return tmp;
 };
-arg5.isJsonRpcRequest = function isJsonRpcRequest(method) {
-  let tmp = typeof method === "object";
-  if (typeof method === "object") {
-    tmp = null !== method;
+arg5.isJsonRpcRequest = function isJsonRpcRequest(jsonrpc) {
+  let tmp = typeof jsonrpc === "object";
+  if (typeof jsonrpc === "object") {
+    tmp = null !== jsonrpc;
   }
   if (tmp) {
-    tmp = "jsonrpc" in method;
+    tmp = "jsonrpc" in jsonrpc;
   }
   if (tmp) {
-    tmp = "2.0" === method.jsonrpc;
+    tmp = "2.0" === jsonrpc.jsonrpc;
   }
   if (tmp) {
-    tmp = "method" in method;
+    tmp = "method" in jsonrpc;
   }
   if (tmp) {
-    tmp = "id" in method;
+    tmp = "id" in jsonrpc;
   }
   return tmp;
 };
@@ -88,11 +89,10 @@ arg5.validateMcpServerInstance = function validateMcpServerInstance(obj) {
   if (!flag) {
     flag = false;
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const debug = tmp(824).debug;
+      const debug = consoleSandbox.debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;
     }
-    tmp = require;
   }
   return flag;
 };

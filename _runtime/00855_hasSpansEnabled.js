@@ -18,12 +18,10 @@ arg5.hasSpansEnabled = function hasSpansEnabled(options) {
       options = client.getOptions();
     }
     tmp = options;
-    const obj = getClient;
   }
   let tmp6 = !tmp;
   if (tmp) {
     tmp6 = null == tmp.tracesSampleRate && !tmp.tracesSampler;
-    const tmp8 = null == tmp.tracesSampleRate && !tmp.tracesSampler;
   }
   return !tmp6;
 };

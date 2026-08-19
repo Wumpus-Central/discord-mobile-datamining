@@ -1,48 +1,52 @@
 // _runtime/04443_ToPropertyDescriptor.js
+import _mod541 from "metro/00541__.js";
+import bind from "00573_bind.js";
 import isObject from "04391_isObject.js";
+import apply from "04426_apply.js";
+import ToBoolean from "04444_ToBoolean.js";
 
 
 export default function ToPropertyDescriptor(enumerable) {
   if (isObject(enumerable)) {
     const obj = {};
-    if (tmp(573)(enumerable, "enumerable")) {
-      obj["[[Enumerable]]"] = tmp(4444)(enumerable.enumerable);
+    if (bind(enumerable, "enumerable")) {
+      obj["[[Enumerable]]"] = ToBoolean(enumerable.enumerable);
     }
-    if (tmp(573)(enumerable, "configurable")) {
-      obj["[[Configurable]]"] = tmp(4444)(enumerable.configurable);
+    if (bind(enumerable, "configurable")) {
+      obj["[[Configurable]]"] = ToBoolean(enumerable.configurable);
     }
-    if (tmp(573)(enumerable, "value")) {
+    if (bind(enumerable, "value")) {
       obj["[[Value]]"] = enumerable.value;
     }
-    if (tmp(573)(enumerable, "writable")) {
-      obj["[[Writable]]"] = tmp(4444)(enumerable.writable);
+    if (bind(enumerable, "writable")) {
+      obj["[[Writable]]"] = ToBoolean(enumerable.writable);
     }
-    if (tmp(573)(enumerable, "get")) {
+    if (bind(enumerable, "get")) {
       const get = enumerable.get;
       if (undefined !== get) {
-        if (!tmp(4426)(get)) {
-          const tmp9 = new tmp(541)("getter must be a function");
+        if (!apply(get)) {
+          const tmp9 = new _mod541("getter must be a function");
           throw tmp9;
         }
       }
       obj["[[Get]]"] = get;
     }
-    if (tmp(573)(enumerable, "set")) {
+    if (bind(enumerable, "set")) {
       if (undefined !== enumerable.set) {
-        if (!tmp(4426)(set)) {
-          const tmp13 = new tmp(541)("setter must be a function");
+        if (!apply(set)) {
+          const tmp13 = new _mod541("setter must be a function");
           throw tmp13;
         }
       }
       obj["[[Set]]"] = enumerable.set;
     }
-    if (tmp(573)(obj, "[[Get]]")) {
-      const tmp17 = new tmp(541)("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
+    if (bind(obj, "[[Get]]")) {
+      const tmp17 = new _mod541("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
       throw tmp17;
     }
     return obj;
   } else {
-    const tmp5 = new tmp(541)("ToPropertyDescriptor requires an object");
+    const tmp5 = new _mod541("ToPropertyDescriptor requires an object");
     throw tmp5;
   }
 };

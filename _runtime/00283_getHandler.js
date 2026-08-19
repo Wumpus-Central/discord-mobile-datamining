@@ -4,17 +4,17 @@ import SymbolResult1 from "00134_SymbolResult1.js";
 import getInstanceHandle from "00136_getInstanceHandle.js";
 import _isNativeReflectConstructDefault from "00141__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault2 from "00285__isNativeReflectConstruct.js";
-import closure_3 from "00284_recordTouchStart.js";
+import recordTouchStart from "00284_recordTouchStart.js";
 
 require = arg1;
 function getHandler(arg0, arg1) {
   const tmp = getInstanceHandle.getCurrentProps(arg0)[arg1];
   return typeof tmp === "function" ? tmp : undefined;
 }
-function dispatchResponderEvent(nativeElementReference3, responderEnd, responderIgnoreScroll, self) {
+function dispatchResponderEvent(c5, responderEnd, responderIgnoreScroll, self) {
   const registrationName = tmp.registrationName;
   if (null != registrationName) {
-    const tmp4 = getHandler(nativeElementReference3, registrationName);
+    const tmp4 = getHandler(c5, registrationName);
     if (null != tmp4) {
       const tmp14 = new _isNativeReflectConstructDefault2(responderEnd, { bubbles: false, cancelable: true }, responderIgnoreScroll, tmp, closure_3.touchHistory);
       let tmp16 = null;
@@ -22,10 +22,10 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
         tmp16 = self;
       }
       SymbolResult1.setTarget(tmp14, tmp16);
-      let tmp15Result = tmp15(134);
-      tmp15Result.setCurrentTarget(tmp14, nativeElementReference3);
+      let tmp15Result = SymbolResult1;
+      tmp15Result.setCurrentTarget(tmp14, c5);
       try {
-        tmp15Result = tmp15(134);
+        tmp15Result = SymbolResult1;
         tmp15Result.setCurrentTarget(tmp14, null);
         return tmp4(tmp14);
       } catch (tmp21) {
@@ -34,7 +34,6 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
           c8 = tmp21;
         }
       }
-      const obj = SymbolResult1;
     }
   }
 }
@@ -56,11 +55,8 @@ export const rethrowCaughtError = function rethrowCaughtError() {
 };
 export const processResponderEvent = function processResponderEvent(arg0, self, responderIgnoreScroll) {
   let tmp41;
-  let tmp42;
   let tmp49;
-  let tmp50;
-  let nativeElementReference3 = "topTouchStart" === arg0;
-  if (nativeElementReference3) {
+  if ("topTouchStart" === arg0) {
     closure_6 = closure_6 + 1;
   } else {
     let tmp2 = "topTouchEnd" === arg0;
@@ -73,7 +69,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
       }
     }
   }
-  if (!nativeElementReference3) {
+  if ("topTouchStart" !== arg0) {
     if ("topTouchMove" !== arg0) {
       let tmp5 = "topTouchEnd" === arg0;
       if (!tmp5) {
@@ -98,7 +94,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
         tmp13 = tmp15;
       }
       if (!tmp13) {
-        tmp13 = nativeElementReference3;
+        tmp13 = tmp;
       }
       if (!tmp13) {
         tmp13 = "topTouchMove" === arg0;
@@ -108,7 +104,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
     if (tmp12) {
       if (null != tmp11) {
         let str13 = "startShouldSetResponder";
-        if (!nativeElementReference3) {
+        if (!tmp) {
           let str9 = "moveShouldSetResponder";
           if ("topTouchMove" !== arg0) {
             let str11 = "scrollShouldSetResponder";
@@ -141,31 +137,27 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
             tmp21 = null;
             if (null != phasedRegistrationNames) {
               let num7 = 0;
-              let tmp40 = tmp36;
+              let tmp40 = require;
               if (0 < items.length) {
                 while (true) {
                   tmp41 = items[num7];
-                  tmp42 = require;
-                  let tmp43 = dependencyMap;
                   let obj2 = getInstanceHandle;
                   let tmp44 = obj2.getCurrentProps(tmp41)[tmp39];
-                  let tmp45 = num7;
                   let tmp46;
                   if (typeof tmp44 === "function") {
                     tmp46 = tmp44;
                   }
                   if (null != tmp46) {
-                    let tmp42Result = tmp42(134);
+                    let tmp42Result = SymbolResult1;
                     let setCurrentTargetResult = tmp42Result.setCurrentTarget(tmp34, tmp41);
                     if (true === tmp46(tmp34)) {
                       break;
                     }
                   }
                   num7 = num7 + 1;
-                  let tmp27 = tmp43;
-                  tmp40 = tmp42;
+                  tmp40 = require;
                 }
-                tmp42Result = tmp42(134);
+                tmp42Result = SymbolResult1;
                 tmp42Result.setCurrentTarget(tmp34, null);
                 tmp21 = tmp41;
               }
@@ -173,27 +165,23 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               if (0 <= diff) {
                 while (true) {
                   tmp49 = items[diff];
-                  tmp50 = require;
-                  let tmp51 = dependencyMap;
                   let obj4 = getInstanceHandle;
                   let tmp52 = obj4.getCurrentProps(tmp49)[tmp38];
-                  let tmp53 = diff;
                   let tmp54;
                   if (typeof tmp52 === "function") {
                     tmp54 = tmp52;
                   }
                   if (null != tmp54) {
-                    let tmp50Result = tmp50(134);
+                    let tmp50Result = SymbolResult1;
                     let setCurrentTargetResult2 = tmp50Result.setCurrentTarget(tmp34, tmp49);
                     if (true === tmp54(tmp34)) {
                       break;
                     }
                   }
                   diff = diff - 1;
-                  tmp27 = tmp51;
-                  tmp40 = tmp50;
+                  tmp40 = require;
                 }
-                tmp50Result = tmp50(134);
+                tmp50Result = SymbolResult1;
                 tmp50Result.setCurrentTarget(tmp34, null);
                 tmp21 = tmp49;
               }
@@ -201,8 +189,6 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               tmp21 = null;
               const tmp40Result = tmp40(134);
             }
-            const obj = SymbolResult1;
-            tmp36 = require;
           }
         } else {
           let tmp19 = _null;
@@ -235,133 +221,110 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
           }
         }
         if (null != tmp21) {
-          nativeElementReference3 = _null;
           if (tmp21 !== _null) {
-            nativeElementReference3 = dispatchResponderEvent;
-            nativeElementReference3 = tmp21;
-            nativeElementReference3 = responderIgnoreScroll;
-            nativeElementReference3 = tmp11;
-            nativeElementReference3 = true === dispatchResponderEvent(tmp21, "responderGrant", responderIgnoreScroll, tmp11);
-            nativeElementReference3 = _null;
+            const tmp119 = true === dispatchResponderEvent(tmp21, "responderGrant", responderIgnoreScroll, tmp11);
             if (null != _null) {
-              if (false !== nativeElementReference3(_null, "responderTerminationRequest", responderIgnoreScroll, tmp11)) {
-                const result = nativeElementReference3(tmp61, "responderTerminate", responderIgnoreScroll, tmp11);
+              if (false !== dispatchResponderEvent(_null, "responderTerminationRequest", responderIgnoreScroll, tmp11)) {
+                dispatchResponderEvent(tmp61, "responderTerminate", responderIgnoreScroll, tmp11);
                 _null = tmp21;
                 const fabricUIManager = getFabricUIManager.getFabricUIManager();
                 if (null != _null) {
-                  let tmp74Result = tmp74(136);
+                  let tmp74Result = getInstanceHandle;
                   const nativeElementReference = tmp74Result.getNativeElementReference(tmp73);
                   if (null != nativeElementReference) {
                     if (fabricUIManager != null) {
-                      fabricUIManager.setIsJSResponder(nativeElementReference, false, nativeElementReference3);
+                      fabricUIManager.setIsJSResponder(nativeElementReference, false, tmp119);
                     }
                   }
                 }
                 if (null != tmp21) {
-                  tmp74Result = tmp74(136);
+                  tmp74Result = getInstanceHandle;
                   const nativeElementReference1 = tmp74Result.getNativeElementReference(tmp21);
                   if (null != nativeElementReference1) {
                     if (fabricUIManager != null) {
-                      fabricUIManager.setIsJSResponder(nativeElementReference1, true, nativeElementReference3);
+                      fabricUIManager.setIsJSResponder(nativeElementReference1, true, tmp119);
                     }
                   }
                 }
-                const obj10 = getFabricUIManager;
                 tmp73 = _null;
               } else {
-                const result1 = nativeElementReference3(tmp21, "responderReject", responderIgnoreScroll, tmp11);
+                dispatchResponderEvent(tmp21, "responderReject", responderIgnoreScroll, tmp11);
               }
             } else {
               _null = tmp21;
-              nativeElementReference3 = require;
-              nativeElementReference3 = dependencyMap;
-              nativeElementReference3 = _null;
               const fabricUIManager1 = getFabricUIManager.getFabricUIManager();
               if (null != _null) {
-                const result2 = nativeElementReference3(136);
-                const nativeElementReference2 = result2.getNativeElementReference(nativeElementReference3);
+                let tmp122Result = getInstanceHandle;
+                const nativeElementReference2 = tmp122Result.getNativeElementReference(tmp121);
                 if (null != nativeElementReference2) {
                   if (fabricUIManager1 != null) {
-                    fabricUIManager1.setIsJSResponder(nativeElementReference2, false, nativeElementReference3);
+                    fabricUIManager1.setIsJSResponder(nativeElementReference2, false, tmp119);
                   }
                 }
               }
               if (null != tmp21) {
-                const result3 = nativeElementReference3(136);
-                nativeElementReference3 = result3.getNativeElementReference(tmp21);
+                tmp122Result = getInstanceHandle;
+                const nativeElementReference3 = tmp122Result.getNativeElementReference(tmp21);
                 if (null != nativeElementReference3) {
                   if (fabricUIManager1 != null) {
-                    nativeElementReference3 = fabricUIManager1.setIsJSResponder(nativeElementReference3, true, nativeElementReference3);
+                    fabricUIManager1.setIsJSResponder(nativeElementReference3, true, tmp119);
                   }
                 }
               }
-              const obj19 = getFabricUIManager;
+              tmp121 = _null;
             }
           }
         }
       }
     }
     if (null != _null) {
-      nativeElementReference3 = _null;
-      if (nativeElementReference3) {
-        nativeElementReference3 = dispatchResponderEvent;
-        nativeElementReference3 = responderIgnoreScroll;
-        nativeElementReference3 = tmp11;
-        nativeElementReference3 = dispatchResponderEvent(nativeElementReference3, "responderStart", responderIgnoreScroll, tmp11);
+      if (tmp) {
+        dispatchResponderEvent(tmp126, "responderStart", responderIgnoreScroll, tmp11);
       } else if ("topTouchMove" === arg0) {
-        nativeElementReference3 = dispatchResponderEvent;
-        nativeElementReference3 = responderIgnoreScroll;
-        nativeElementReference3 = tmp11;
-        nativeElementReference3 = dispatchResponderEvent(nativeElementReference3, "responderMove", responderIgnoreScroll, tmp11);
+        dispatchResponderEvent(tmp126, "responderMove", responderIgnoreScroll, tmp11);
       } else {
         let tmp81 = "topTouchEnd" === arg0;
         if (!tmp81) {
           tmp81 = "topTouchCancel" === arg0;
         }
         if (tmp81) {
-          dispatchResponderEvent(nativeElementReference3, "responderEnd", responderIgnoreScroll, tmp11);
+          dispatchResponderEvent(tmp126, "responderEnd", responderIgnoreScroll, tmp11);
           if ("topTouchCancel" === arg0) {
-            tmp82(nativeElementReference3, "responderTerminate", responderIgnoreScroll, tmp11);
+            dispatchResponderEvent(tmp126, "responderTerminate", responderIgnoreScroll, tmp11);
             _null = null;
-            nativeElementReference3 = require;
-            nativeElementReference3 = dependencyMap;
             const fabricUIManager2 = getFabricUIManager.getFabricUIManager();
             if (null != _null) {
-              const result4 = nativeElementReference3(136);
-              nativeElementReference3 = result4.getNativeElementReference(tmp99);
-              if (null != nativeElementReference3) {
+              const nativeElementReference4 = getInstanceHandle.getNativeElementReference(tmp99);
+              if (null != nativeElementReference4) {
                 if (fabricUIManager2 != null) {
-                  nativeElementReference3 = fabricUIManager2.setIsJSResponder(nativeElementReference3, false, false);
+                  fabricUIManager2.setIsJSResponder(nativeElementReference4, false, false);
                 }
               }
+              const tmp100Result = getInstanceHandle;
             }
-            const obj16 = getFabricUIManager;
             tmp99 = _null;
           } else {
             const touches = responderIgnoreScroll.touches;
-            nativeElementReference3 = globalThis;
             const _Array = Array;
-            nativeElementReference3 = Array.isArray(touches);
-            let tmp87 = !nativeElementReference3;
-            if (nativeElementReference3) {
+            const isArray = Array.isArray(touches);
+            let tmp87 = !isArray;
+            if (isArray) {
               tmp87 = 0 === touches.length;
             }
             if (tmp87) {
-              tmp82(nativeElementReference3, "responderRelease", responderIgnoreScroll, tmp11);
+              dispatchResponderEvent(tmp126, "responderRelease", responderIgnoreScroll, tmp11);
               _null = null;
               const fabricUIManager3 = getFabricUIManager.getFabricUIManager();
               if (null != _null) {
-                nativeElementReference3 = tmp93(136).getNativeElementReference(tmp92);
-                if (null != nativeElementReference3) {
+                const nativeElementReference5 = getInstanceHandle.getNativeElementReference(tmp92);
+                if (null != nativeElementReference5) {
                   if (fabricUIManager3 != null) {
-                    nativeElementReference3 = fabricUIManager3.setIsJSResponder(nativeElementReference3, false, false);
+                    fabricUIManager3.setIsJSResponder(nativeElementReference5, false, false);
                   }
                 }
-                const tmp93Result = tmp93(136);
+                const tmp93Result = getInstanceHandle;
               }
-              const obj14 = getFabricUIManager;
               tmp92 = _null;
-              tmp93 = require;
             }
           }
         }

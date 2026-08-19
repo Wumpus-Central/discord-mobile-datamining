@@ -1,12 +1,12 @@
 // _runtime/01749_JSPropsUpdaterPaper.js
 import runWorkletOnJS from "01661_runWorkletOnJS.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import isJest from "01657_isJest.js";
 
 let JSPropsUpdaterWeb = global;
-require = arg1;
+require = fn;
 ({ NativeEventEmitter: c4, Platform } = get_ActivityIndicator);
 class JSPropsUpdaterPaper {
   constructor() {
@@ -71,7 +71,7 @@ class JSPropsUpdaterFabric {
       obj = require("runWorkletOnJS");
       fn = function t() {
         JSPropsUpdaterWeb.updateJSProps = (arg0, arg1) => {
-          closure_2_1(closure_2_2[4]).runOnJS(closure_0)(arg0, arg1);
+          runWorkletOnJS.runOnJS(closure_0)(arg0, arg1);
         };
       };
       obj = { runOnJS: null, updater: null };

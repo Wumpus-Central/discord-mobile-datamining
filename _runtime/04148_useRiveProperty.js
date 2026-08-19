@@ -1,9 +1,8 @@
 // _runtime/04148_useRiveProperty.js
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
-import { useDisposableMemo } from "04149_useDisposableMemo.js";
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
 export const useRiveProperty = function useRiveProperty(instance, FillColor, f29193) {
@@ -13,7 +12,7 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];
-  const disposableMemo = _useDisposableMemo.useDisposableMemo(() => {
+  const disposableMemo = require("04149_useDisposableMemo.js").useDisposableMemo(() => {
     if (closure_0) {
       return callback(tmp, closure_1);
     }
@@ -49,8 +48,8 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f29
   const items3 = [disposableMemo];
   disposableMemo(() => {
     if (disposableMemo) {
-      callback2(iter.value);
-      closure_0 = iter.addListener((arg0) => {
+      callback2(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
         callback2(arg0);
       });
       return () => {

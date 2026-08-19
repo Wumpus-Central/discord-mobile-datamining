@@ -2,7 +2,7 @@
 import _createClassDefault from "metro/00042__createClass.js";
 import _classPrivateFieldKeyDefault from "00091__classPrivateFieldKey.js";
 import EventEmitter from "metro/00041__classCallCheck.js";
-import closure_1 from "00090__classPrivateFieldBase.js";
+import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
 
 let closure_2 = _classPrivateFieldKeyDefault("registry");
 class EventEmitter {

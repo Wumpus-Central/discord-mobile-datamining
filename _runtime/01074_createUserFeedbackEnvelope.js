@@ -12,7 +12,6 @@ arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, 
     sdk = metadata.sdk;
   }
   if (sdk) {
-    obj = { sdk: null };
     obj = { name: null, version: null };
     obj[0] = metadata.sdk.name;
     obj[1] = metadata.sdk.version;
@@ -25,7 +24,6 @@ arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, 
     obj1 = { dsn: null };
     obj1[0] = registerSpanErrorInstrumentation.dsnToString(dsn);
     tmp3 = obj1;
-    const obj6 = registerSpanErrorInstrumentation;
   }
   const merged1 = Object.assign(tmp3);
   const items = [{ type: "user_report" }, event_id];

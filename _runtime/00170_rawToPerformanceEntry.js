@@ -115,13 +115,13 @@ arg5.rawToPerformanceEntry = function rawToPerformanceEntry(entryType) {
 arg5.rawToPerformanceEntryType = function rawToPerformanceEntryType(arg0) {
   if (obj.MARK === arg0) {
     return "mark";
-  } else if (tmp.MEASURE === arg0) {
+  } else if (obj.MEASURE === arg0) {
     return "measure";
-  } else if (tmp.EVENT === arg0) {
+  } else if (obj.EVENT === arg0) {
     return "event";
-  } else if (tmp.LONGTASK === arg0) {
+  } else if (obj.LONGTASK === arg0) {
     return "longtask";
-  } else if (tmp.RESOURCE === arg0) {
+  } else if (obj.RESOURCE === arg0) {
     return "resource";
   } else {
     const _TypeError = TypeError;

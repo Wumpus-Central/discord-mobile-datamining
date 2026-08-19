@@ -1,5 +1,5 @@
 // _runtime/01585_useOnGetState.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -7,11 +7,10 @@ export const useOnGetState = function useOnGetState(getState) {
   getState = getState.getState;
   const getStateListeners = getState.getStateListeners;
   let addKeyedListener;
-  let str;
   let callback;
   addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
   const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  str = "root";
+  let str = "root";
   if (context) {
     str = context.key;
   }
@@ -19,15 +18,15 @@ export const useOnGetState = function useOnGetState(getState) {
   callback = obj.useCallback(() => {
     const tmp = getState();
     const routes = tmp.routes;
-    const mapped = routes.map((state) => {
+    const mapped = routes.map((item, index) => {
       let tmpResult;
-      if (table[state.key] != null) {
+      if (table[item.key] != null) {
         tmpResult = tmp();
       }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
+      let tmp3 = item;
+      if (item.state !== tmpResult) {
         const obj = {};
-        const merged = Object.assign(state);
+        const merged = Object.assign(item);
         obj.state = tmpResult;
         tmp3 = obj;
       }

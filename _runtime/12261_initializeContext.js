@@ -195,26 +195,15 @@ function extractDefs(initializeContextResult, _idmap) {
       }
       let tmp18 = id;
       if (id) {
-        let tmp19 = id;
         let value1 = map.get(tmp18);
         if (value1) {
-          let tmp22 = value1;
-          let tmp23 = nextResult;
           if (tmp21 !== tmp15[0]) {
             let _Error2 = Error;
-            let tmp27 = id;
             let _HermesInternal = HermesInternal;
-            let str2 = "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.";
-            let str3 = "Duplicate schema id \"";
-            let tmp28 = new.target;
-            let tmp29 = new.target;
             error = new Error("Duplicate schema id \"" + tmp18 + "\" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.");
-            let tmp31 = error;
             throw error;
           }
         }
-        let tmp24 = id;
-        let tmp25 = nextResult;
         let result = map.set(tmp18, tmp15[0]);
       }
       continue;
@@ -226,13 +215,13 @@ function extractDefs(initializeContextResult, _idmap) {
           str = "$defs";
         }
         if (initializeContextResult.external) {
-          const registry = tmp4.external.registry;
+          const registry = initializeContextResult.external.registry;
           value = registry.get(arg0[0]);
           let id;
           if (value != null) {
             id = value.id;
           }
-          let fn = tmp4.external.uri;
+          let fn = initializeContextResult.external.uri;
           if (fn == null) {
             fn = (__shared) => __shared;
           }
@@ -245,7 +234,7 @@ function extractDefs(initializeContextResult, _idmap) {
               id2 = arg0[1].schema.id;
             }
             if (id2 == null) {
-              tmp4.counter = +tmp4.counter + 1;
+              initializeContextResult.counter = +initializeContextResult.counter + 1;
               id2 = `schema${tmp13}`;
             }
             arg0[1].defId = id2;
@@ -261,7 +250,7 @@ function extractDefs(initializeContextResult, _idmap) {
           id = arg0[1].schema.id;
           const combined = "#/" + str + "/";
           if (id == null) {
-            tmp4.counter = +tmp4.counter + 1;
+            initializeContextResult.counter = +initializeContextResult.counter + 1;
             id = `__schema${tmp9}`;
           }
           obj = { defId: null, ref: null };
@@ -277,7 +266,6 @@ function extractDefs(initializeContextResult, _idmap) {
         }
         const schema = tmp3.schema;
         for (const key10071 in schema) {
-          let tmp20 = key10071;
           delete tmp[tmp2];
           continue;
         }
@@ -289,21 +277,14 @@ function extractDefs(initializeContextResult, _idmap) {
       const entries1 = seen4.entries();
       for (const item10070 of entries1) {
         let tmp33 = item10070[1];
-        let tmp34 = tmp33;
         if (tmp33.cycle) {
           let cycle = tmp33.cycle;
           let joined;
           if (cycle != null) {
-            let str5 = "/";
             joined = cycle.join("/");
           }
           let _HermesInternal2 = HermesInternal;
-          let str6 = "/<root>\n\nSet the `cycles` parameter to `\"ref\"` to resolve cyclical schemas with defs.";
-          let str7 = "Cycle detected: #/";
-          let tmp36 = new.target;
-          let tmp37 = new.target;
           let error1 = new Error("Cycle detected: #/" + joined + "/<root>\n\nSet the `cycles` parameter to `\"ref\"` to resolve cyclical schemas with defs.");
-          let tmp39 = error1;
           throw error1;
         }
       }
@@ -318,43 +299,34 @@ function extractDefs(initializeContextResult, _idmap) {
       if (_idmap !== nextResult1[0]) {
         if (initializeContextResult.external) {
           let registry = initializeContextResult.external.registry;
-          let tmp49 = nextResult1;
           let value2 = registry.get(tmp45[0]);
           if (value2 != null) {
             id = value2.id;
           }
-          let tmp52 = nextResult1;
           if (_idmap !== tmp45[0]) {
-            let tmp53 = id;
             if (tmp51) {
-              let tmp62 = nextResult1;
               let extractToDefResult = extractToDef(tmp45);
               continue;
             }
           }
         }
         let metadataRegistry2 = initializeContextResult.metadataRegistry;
-        let tmp54 = nextResult1;
         let value3 = metadataRegistry2.get(tmp45[0]);
         let id1;
         if (value3 != null) {
           id1 = value3.id;
         }
         if (!id1) {
-          let tmp57 = tmp46;
           id1 = tmp46.cycle;
         }
         if (!id1) {
-          let tmp58 = tmp46;
           let tmp59 = tmp46.count > 1 && "ref" === initializeContextResult.reused;
           id1 = tmp59;
         }
         if (id1) {
-          let tmp60 = nextResult1;
           let extractToDefResult1 = extractToDef(tmp45);
         }
       } else {
-        let tmp47 = nextResult1;
         let extractToDefResult2 = extractToDef(tmp45);
       }
       continue;
@@ -371,9 +343,9 @@ function finalize(seen, _standard) {
   seen = seen.seen;
   let value = seen.get(_standard);
   if (value) {
-    function flattenRef(parent) {
+    function flattenRef(item10028) {
       seen = seen.seen;
-      let value = seen.get(parent);
+      let value = seen.get(item10028);
       if (null !== value.ref) {
         let schema = value.def;
         if (schema == null) {
@@ -401,9 +373,8 @@ function finalize(seen, _standard) {
           }
           const _Object2 = Object;
           const merged2 = Object.assign(schema, obj);
-          if (parent._zod.parent === ref) {
+          if (item10028._zod.parent === ref) {
             for (const key10046 in tmp10) {
-              let tmp31 = key10046;
               let tmp20 = "$ref" !== key10046;
               if (tmp20) {
                 tmp20 = "allOf" !== key10046;
@@ -425,7 +396,6 @@ function finalize(seen, _standard) {
           if (schema2.$ref) {
             if (value.def) {
               for (const key10055 in tmp10) {
-                let tmp32 = key10055;
                 let tmp22 = "$ref" !== key10055;
                 if (tmp22) {
                   tmp22 = "allOf" !== key10055;
@@ -450,7 +420,7 @@ function finalize(seen, _standard) {
             }
           }
         }
-        parent = parent._zod.parent;
+        const parent = item10028._zod.parent;
         if (parent) {
           if (parent !== ref) {
             flattenRef(parent);
@@ -464,7 +434,6 @@ function finalize(seen, _standard) {
               schema.$ref = value1.schema.$ref;
               if (value1.def) {
                 for (const key10079 in tmp10) {
-                  let tmp37 = key10079;
                   let tmp27 = "$ref" !== key10079;
                   if (tmp27) {
                     tmp27 = "allOf" !== key10079;
@@ -491,7 +460,7 @@ function finalize(seen, _standard) {
           }
         }
         obj = { zodSchema: null, jsonSchema: null, path: null };
-        obj[0] = parent;
+        obj[0] = item10028;
         obj[1] = schema;
         let path = value.path;
         if (path == null) {
@@ -560,11 +529,9 @@ function finalize(seen, _standard) {
       let tmp30 = tmp29;
       let defId = tmp29.def;
       if (defId) {
-        let tmp31 = tmp29;
         defId = tmp30.defId;
       }
       if (defId) {
-        let tmp32 = tmp29;
         defs[tmp30.defId] = tmp30.def;
       }
       continue;
@@ -651,9 +618,6 @@ function isTransforming(def, arg1) {
                             return tmp22Result;
                           } else if ("object" === def.type) {
                             for (const key10060 in def.shape) {
-                              let tmp41 = key10060;
-                              let tmp42 = isTransforming;
-                              let tmp43 = isTransforming;
                               if (!isTransforming(def.shape[key10060], tmp)) {
                                 continue;
                               } else {
@@ -665,10 +629,7 @@ function isTransforming(def, arg1) {
                           } else if ("union" === def.type) {
                             const options = def.options;
                             for (const item10048 of options) {
-                              let tmp18 = isTransforming;
-                              let tmp19 = isTransforming;
                               if (isTransforming(item10048, tmp)) {
-                                let tmp20 = obj3;
                                 obj3.return();
                                 let flag3 = true;
                                 return true;
@@ -678,10 +639,7 @@ function isTransforming(def, arg1) {
                           } else if ("tuple" === def.type) {
                             const items = def.items;
                             for (const item10028 of items) {
-                              let tmp10 = isTransforming;
-                              let tmp11 = isTransforming;
                               if (isTransforming(item10028, tmp)) {
-                                let tmp12 = obj2;
                                 obj2.return();
                                 let flag2 = true;
                                 return true;
@@ -723,30 +681,22 @@ arg5.extractDefs = extractDefs;
 arg5.finalize = finalize;
 arg5.createToJSONSchemaMethod = (arg0) => {
   closure_0 = arg0;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
   return (arg0) => {
     obj = {};
     const merged = Object.assign(arg0);
     obj.processors = obj;
-    const tmp2 = closure_1_3(obj);
-    closure_1_4(closure_0, tmp2);
-    closure_1_5(tmp2, closure_0);
-    return closure_1_6(tmp2, closure_0);
+    const tmp2 = initializeContext(obj);
+    process(closure_0, tmp2);
+    extractDefs(tmp2, closure_0);
+    return finalize(tmp2, closure_0);
   };
 };
 arg5.createStandardJSONSchemaMethod = (arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = arg2;
-  if (arg2 === undefined) {
-    obj = {};
-  }
-  return (arg0) => {
-    obj = arg0;
-    if (arg0 == null) {
+  return (target) => {
+    obj = target;
+    if (target == null) {
       obj = {};
     }
     let libraryOptions = obj.libraryOptions;
@@ -758,9 +708,9 @@ arg5.createStandardJSONSchemaMethod = (arg0, arg1) => {
     obj.target = obj.target;
     obj.io = closure_1;
     obj.processors = obj;
-    const tmpResult = closure_1_3(obj);
-    closure_1_4(closure_0, tmpResult);
-    closure_1_5(tmpResult, closure_0);
-    return closure_1_6(tmpResult, closure_0);
+    const tmpResult = initializeContext(obj);
+    process(closure_0, tmpResult);
+    extractDefs(tmpResult, closure_0);
+    return finalize(tmpResult, closure_0);
   };
 };

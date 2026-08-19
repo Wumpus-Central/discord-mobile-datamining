@@ -1,5 +1,5 @@
 // _runtime/00995_flushWithTimeout.js
-import closure_2 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 function flushWithTimeout(arg0) {
   const self = this;
@@ -13,7 +13,7 @@ function flushWithTimeout(arg0) {
 }
 function _flushWithTimeout() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -54,7 +54,7 @@ function _flushWithTimeout() {
 }
 function _flushIfServerless() {
   const self = this;
-  const tmp = callback(() => {
+  const tmp = asyncGeneratorStep(() => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;

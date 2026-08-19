@@ -9,20 +9,19 @@ export function useEventHandlerRegistration(arg0) {
   closure_0 = arg0;
   return (workletEventHandler) => {
     if (workletEventHandler.current) {
-      let findNodeHandleResult = ref(closure_1_1[2]).findNodeHandle(tmp.current);
+      let findNodeHandleResult = ref(dependencyMap[2]).findNodeHandle(tmp.current);
       if (findNodeHandleResult) {
         if ("workletEventHandler" in workletEventHandler) {
           workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
-          workletEventHandler = workletEventHandler.workletEventHandler;
         } else {
           workletEventHandler.registerForEvents(findNodeHandleResult);
         }
       }
-      const obj = ref(closure_1_1[2]);
+      const obj = ref(dependencyMap[2]);
     } else {
       const _queueMicrotask = queueMicrotask;
       queueMicrotask(function attachWorkletHandlers() {
-        const findNodeHandleResult = workletEventHandler(closure_2_1[2]).findNodeHandle(workletEventHandler.current);
+        const findNodeHandleResult = workletEventHandler(dependencyMap[2]).findNodeHandle(workletEventHandler.current);
         if (findNodeHandleResult) {
           if ("workletEventHandler" in workletEventHandler) {
             obj2.workletEventHandler.registerForEvents(findNodeHandleResult);
@@ -33,7 +32,7 @@ export function useEventHandlerRegistration(arg0) {
       });
     }
     return () => {
-      const findNodeHandleResult = workletEventHandler(closure_2_1[2]).findNodeHandle(workletEventHandler.current);
+      const findNodeHandleResult = workletEventHandler(dependencyMap[2]).findNodeHandle(workletEventHandler.current);
       if (findNodeHandleResult) {
         if ("workletEventHandler" in workletEventHandler) {
           obj2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);

@@ -1,10 +1,10 @@
 // _runtime/01278__isNativeReflectConstruct.js
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 import _wrapNativeSuper from "metro/00158__wrapNativeSuper.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_4 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const MissingValueError = require;
 function _isNativeReflectConstruct() {
@@ -34,7 +34,7 @@ function bindFormatValuesWithBuilder(builder) {
   let sum;
   builder = builder.builder;
   ({ originalMessage: dependencyMap, nodes } = builder);
-  ({ locales: closure_3, values: closure_4, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
+  ({ locales: _getPrototypeOf, values: _classCallCheck, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
   if (1 === nodes.length) {
     if (typeof nodes[0] === "string") {
       builder.pushLiteralText(nodes[0]);
@@ -45,64 +45,54 @@ function bindFormatValuesWithBuilder(builder) {
   if (0 < nodes.length) {
     do {
       let tmp = (function _loop() {
-        let pushLiteralTextResult1 = v0;
-        if (typeof pushLiteralTextResult1[v0] === "string") {
+        if (typeof nodes[v0] === "string") {
           builder.pushLiteralText(tmp2);
           return 0;
         } else {
           const first = tmp2[0];
           if (first === builder(originalMessage[6]).FormatJsNodeType.Pound) {
             if (typeof currentPluralValue === "number") {
-              pushLiteralTextResult1 = dataFormatters;
-              pushLiteralTextResult1 = builder;
-              pushLiteralTextResult1 = builder;
-              pushLiteralTextResult1 = builder.pushLiteralText(dataFormatters.formatNumber(tmp93));
+              builder.pushLiteralText(dataFormatters.formatNumber(tmp93));
             }
             return 0;
           } else {
-            pushLiteralTextResult1 = tmp2[1];
-            pushLiteralTextResult1 = values;
-            if (!(pushLiteralTextResult1 in values)) {
-              if (!formatConfig(pushLiteralTextResult1)) {
-                const tmp10 = new currentPluralValue(pushLiteralTextResult1, pushLiteralTextResult1, first);
+            if (!(tmp2[1] in values)) {
+              if (!formatConfig(tmp100)) {
+                const tmp10 = new currentPluralValue(tmp100, closure_1, first);
                 throw tmp10;
               }
             }
             builder = tmp12;
-            if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
+            if (tmp98(originalMessage[6]).FormatJsNodeType.Argument === first) {
               if (typeof tmp12 !== "object") {
                 if (typeof tmp12 !== "function") {
-                  pushLiteralTextResult1 = builder;
-                  pushLiteralTextResult1 = builder;
-                  pushLiteralTextResult1 = globalThis;
                   const _String = String;
-                  pushLiteralTextResult1 = builder.pushLiteralText(String(tmp12));
+                  builder.pushLiteralText(String(tmp12));
                 }
               }
               builder.pushObject(tmp12);
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Date === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Date === first) {
               if (tmp2[2] in formatConfig.date) {
                 let result = formatConfig.date[tmp83];
               } else if (null != tmp83) {
-                result = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp83);
+                result = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp83);
               }
               builder.pushLiteralText(dataFormatters.formatDate(tmp12, result));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Time === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Time === first) {
               if (tmp2[2] in formatConfig.time) {
                 let result1 = formatConfig.time[tmp76];
               } else if (null != tmp76) {
-                result1 = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp76);
+                result1 = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp76);
               }
               builder.pushLiteralText(dataFormatters.formatTime(tmp12, result1));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Number === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Number === first) {
               if (tmp2[2] in formatConfig.number) {
                 let parseNumberSkeletonResult = formatConfig.number[tmp67];
               } else if (null != tmp67) {
-                parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
+                parseNumberSkeletonResult = tmp98(originalMessage[7]).parseNumberSkeleton(tmp98(originalMessage[7]).parseNumberSkeletonFromString(tmp67));
               }
               let result2 = tmp12;
               if (typeof tmp12 === "number") {
-                pushLiteralTextResult1 = null;
                 let scale;
                 if (null != parseNumberSkeletonResult) {
                   scale = parseNumberSkeletonResult.scale;
@@ -117,75 +107,64 @@ function bindFormatValuesWithBuilder(builder) {
                 result2 = tmp12 * num5;
               }
               builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Tag === first) {
               let obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
               obj[0] = builder.constructor;
               obj[1] = tmp2[2];
               obj[2] = closure_3;
               obj[3] = dataFormatters;
               obj[4] = formatConfig;
-              obj[5] = pushLiteralTextResult1;
+              obj[5] = values;
               obj[6] = currentPluralValue;
               const _HermesInternal5 = HermesInternal;
-              obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
+              obj[7] = "" + keyPrefix + "." + v0;
               const tmp49 = v0(obj);
               if (null != tmp2[3]) {
                 obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
                 obj[0] = obj6.constructor;
                 obj[1] = tmp40;
                 obj[2] = tmp43;
-                obj[3] = tmp44;
-                obj[4] = tmp45;
-                obj[5] = pushLiteralTextResult1;
-                obj[6] = tmp46;
+                obj[3] = dataFormatters;
+                obj[4] = formatConfig;
+                obj[5] = values;
+                obj[6] = currentPluralValue;
                 const _HermesInternal6 = HermesInternal;
-                obj[7] = "" + tmp47 + "." + pushLiteralTextResult1 + "-control";
-                let items = tmp41(obj);
+                obj[7] = "" + keyPrefix + "." + v0 + "-control";
+                let items = v0(obj);
               } else {
                 items = [];
               }
-              if (formatConfig(pushLiteralTextResult1)) {
-                obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
+              if (formatConfig(tmp100)) {
+                obj6.pushRichTextTag(tmp100, tmp49, items);
               } else if (typeof tmp12 !== "function") {
                 const _HermesInternal7 = HermesInternal;
-                throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
+                throw "expected a function type for a Tag formatting value, " + tmp100 + ". got " + typeof tmp12 + ": " + tmp12;
               } else {
                 const _HermesInternal8 = HermesInternal;
-                pushLiteralTextResult1 = tmp12(tmp49, "" + tmp47 + "." + pushLiteralTextResult1);
+                const tmp12Result = tmp12(tmp49, "" + keyPrefix + "." + v0);
                 const _Array = Array;
-                let tmp55 = pushLiteralTextResult1;
-                if (!Array.isArray(pushLiteralTextResult1)) {
-                  items = [pushLiteralTextResult1];
+                let tmp55 = tmp12Result;
+                if (!Array.isArray(tmp12Result)) {
+                  items = [tmp12Result];
                   tmp55 = items;
                 }
                 for (const item10128 of tmp55) {
-                  let tmp58 = item10128;
                   if (typeof item10128 === "string") {
-                    let tmp59 = builder;
-                    let tmp60 = builder;
-                    let tmp61 = item10128;
-                    let pushLiteralTextResult5 = builder.pushLiteralText(tmp58);
+                    let pushLiteralTextResult6 = builder.pushLiteralText(item10128);
                   } else {
-                    pushLiteralTextResult1 = builder;
-                    pushLiteralTextResult1 = builder;
-                    pushLiteralTextResult1 = item10128;
-                    pushLiteralTextResult1 = builder.pushObject(tmp58);
+                    let pushObjectResult1 = builder.pushObject(item10128);
                   }
                   continue;
                 }
               }
-              tmp41 = v0;
               tmp43 = closure_3;
-              tmp44 = dataFormatters;
-              tmp45 = formatConfig;
-              tmp46 = currentPluralValue;
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Select === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Select === first) {
               const tmp26 = tmp12 in tmp2[2] ? tmp2[2][tmp12] : tmp2[2].other;
               if (null == tmp26) {
                 const _Object2 = Object;
                 const keys = Object.keys(tmp25);
                 const _HermesInternal4 = HermesInternal;
-                throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
+                throw "" + tmp12 + " is not a known option for select value " + tmp100 + ". Valid options are " + keys.join(", ");
               } else {
                 obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
                 obj1[0] = builder;
@@ -193,58 +172,55 @@ function bindFormatValuesWithBuilder(builder) {
                 obj1[2] = closure_3;
                 obj1[3] = dataFormatters;
                 obj1[4] = formatConfig;
-                obj1[5] = pushLiteralTextResult1;
+                obj1[5] = values;
                 const _HermesInternal3 = HermesInternal;
-                obj1[6] = "" + keyPrefix + "." + pushLiteralTextResult1;
+                obj1[6] = "" + keyPrefix + "." + v0;
                 keyPrefix(obj1);
               }
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Plural === first) {
-              pushLiteralTextResult1 = tmp2[2];
-              pushLiteralTextResult1 = tmp2[3];
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Plural === first) {
+              closure_1 = tmp102;
+              nodes = tmp103;
               closure_3 = tmp2[4];
-              pushLiteralTextResult1 = (() => {
+              const tmp104 = (() => {
                 const combined = "=" + closure_0;
-                if (combined in pushLiteralTextResult1) {
-                  return tmp3[combined];
+                if (combined in other) {
+                  return other[combined];
                 } else {
                   const obj = { type: null };
                   obj[0] = closure_3;
-                  const pluralRules = closure_1_5.getPluralRules(obj);
+                  const pluralRules = dataFormatters.getPluralRules(obj);
                   let num = 0;
-                  if (null != pushLiteralTextResult1) {
-                    num = pushLiteralTextResult1;
+                  if (null != closure_2) {
+                    num = closure_2;
                   }
-                  let other = tmp3[pluralRules.select(pluralRules, tmp - num)];
+                  other = other[pluralRules.select(pluralRules, closure_0 - num)];
                   if (null === other) {
-                    other = tmp3.other;
+                    other = other.other;
                   }
                   return other;
                 }
-                tmp = closure_0;
               })();
-              pushLiteralTextResult1 = null;
-              if (null == pushLiteralTextResult1) {
+              if (null == tmp104) {
                 const _Object = Object;
-                const keys1 = Object.keys(pushLiteralTextResult1);
+                const keys1 = Object.keys(tmp102);
                 const _HermesInternal2 = HermesInternal;
-                throw "" + tmp12 + " is not a known option for plural value " + pushLiteralTextResult1 + ". Valid options are " + keys1.join(", ");
+                throw "" + tmp12 + " is not a known option for plural value " + tmp100 + ". Valid options are " + keys1.join(", ");
               } else {
                 obj = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
                 obj[0] = builder;
-                obj[1] = pushLiteralTextResult1;
+                obj[1] = tmp104;
                 obj[2] = closure_3;
                 obj[3] = dataFormatters;
                 obj[4] = formatConfig;
-                obj[5] = pushLiteralTextResult1;
+                obj[5] = values;
                 let num2 = 0;
-                if (null != pushLiteralTextResult1) {
-                  num2 = pushLiteralTextResult1;
+                if (null != tmp103) {
+                  num2 = tmp103;
                 }
                 obj[6] = tmp12 - num2;
                 const _HermesInternal = HermesInternal;
-                obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
+                obj[7] = "" + keyPrefix + "." + v0;
                 keyPrefix(obj);
-                const tmp13 = keyPrefix;
               }
             }
           }
@@ -278,64 +254,54 @@ function bindFormatValues(Builder) {
     if (0 < nodes.length) {
       do {
         let tmp = (function _loop() {
-          let pushLiteralTextResult1 = v0;
-          if (typeof pushLiteralTextResult1[v0] === "string") {
+          if (typeof nodes[v0] === "string") {
             builder.pushLiteralText(tmp2);
             return 0;
           } else {
             const first = tmp2[0];
             if (first === builder(originalMessage[6]).FormatJsNodeType.Pound) {
               if (typeof currentPluralValue === "number") {
-                pushLiteralTextResult1 = dataFormatters;
-                pushLiteralTextResult1 = builder;
-                pushLiteralTextResult1 = builder;
-                pushLiteralTextResult1 = builder.pushLiteralText(dataFormatters.formatNumber(tmp93));
+                builder.pushLiteralText(dataFormatters.formatNumber(tmp93));
               }
               return 0;
             } else {
-              pushLiteralTextResult1 = tmp2[1];
-              pushLiteralTextResult1 = values;
-              if (!(pushLiteralTextResult1 in values)) {
-                if (!formatConfig(pushLiteralTextResult1)) {
-                  const tmp10 = new currentPluralValue(pushLiteralTextResult1, pushLiteralTextResult1, first);
+              if (!(tmp2[1] in values)) {
+                if (!formatConfig(tmp100)) {
+                  const tmp10 = new currentPluralValue(tmp100, closure_1, first);
                   throw tmp10;
                 }
               }
               builder = tmp12;
-              if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
+              if (tmp98(originalMessage[6]).FormatJsNodeType.Argument === first) {
                 if (typeof tmp12 !== "object") {
                   if (typeof tmp12 !== "function") {
-                    pushLiteralTextResult1 = builder;
-                    pushLiteralTextResult1 = builder;
-                    pushLiteralTextResult1 = globalThis;
                     const _String = String;
-                    pushLiteralTextResult1 = builder.pushLiteralText(String(tmp12));
+                    builder.pushLiteralText(String(tmp12));
                   }
                 }
                 builder.pushObject(tmp12);
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Date === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Date === first) {
                 if (tmp2[2] in formatConfig.date) {
                   let result = formatConfig.date[tmp83];
                 } else if (null != tmp83) {
-                  result = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp83);
+                  result = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp83);
                 }
                 builder.pushLiteralText(dataFormatters.formatDate(tmp12, result));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Time === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Time === first) {
                 if (tmp2[2] in formatConfig.time) {
                   let result1 = formatConfig.time[tmp76];
                 } else if (null != tmp76) {
-                  result1 = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp76);
+                  result1 = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp76);
                 }
                 builder.pushLiteralText(dataFormatters.formatTime(tmp12, result1));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Number === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Number === first) {
                 if (tmp2[2] in formatConfig.number) {
                   let parseNumberSkeletonResult = formatConfig.number[tmp67];
                 } else if (null != tmp67) {
-                  parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
+                  parseNumberSkeletonResult = tmp98(originalMessage[7]).parseNumberSkeleton(tmp98(originalMessage[7]).parseNumberSkeletonFromString(tmp67));
                 }
                 let result2 = tmp12;
                 if (typeof tmp12 === "number") {
-                  pushLiteralTextResult1 = null;
                   let scale;
                   if (null != parseNumberSkeletonResult) {
                     scale = parseNumberSkeletonResult.scale;
@@ -350,75 +316,64 @@ function bindFormatValues(Builder) {
                   result2 = tmp12 * num5;
                 }
                 builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Tag === first) {
                 let obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
                 obj[0] = builder.constructor;
                 obj[1] = tmp2[2];
                 obj[2] = closure_3;
                 obj[3] = dataFormatters;
                 obj[4] = formatConfig;
-                obj[5] = pushLiteralTextResult1;
+                obj[5] = values;
                 obj[6] = currentPluralValue;
                 const _HermesInternal5 = HermesInternal;
-                obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
+                obj[7] = "" + keyPrefix + "." + v0;
                 const tmp49 = v0(obj);
                 if (null != tmp2[3]) {
                   obj = { Builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
                   obj[0] = obj6.constructor;
                   obj[1] = tmp40;
                   obj[2] = tmp43;
-                  obj[3] = tmp44;
-                  obj[4] = tmp45;
-                  obj[5] = pushLiteralTextResult1;
-                  obj[6] = tmp46;
+                  obj[3] = dataFormatters;
+                  obj[4] = formatConfig;
+                  obj[5] = values;
+                  obj[6] = currentPluralValue;
                   const _HermesInternal6 = HermesInternal;
-                  obj[7] = "" + tmp47 + "." + pushLiteralTextResult1 + "-control";
-                  let items = tmp41(obj);
+                  obj[7] = "" + keyPrefix + "." + v0 + "-control";
+                  let items = v0(obj);
                 } else {
                   items = [];
                 }
-                if (formatConfig(pushLiteralTextResult1)) {
-                  obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
+                if (formatConfig(tmp100)) {
+                  obj6.pushRichTextTag(tmp100, tmp49, items);
                 } else if (typeof tmp12 !== "function") {
                   const _HermesInternal7 = HermesInternal;
-                  throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
+                  throw "expected a function type for a Tag formatting value, " + tmp100 + ". got " + typeof tmp12 + ": " + tmp12;
                 } else {
                   const _HermesInternal8 = HermesInternal;
-                  pushLiteralTextResult1 = tmp12(tmp49, "" + tmp47 + "." + pushLiteralTextResult1);
+                  const tmp12Result = tmp12(tmp49, "" + keyPrefix + "." + v0);
                   const _Array = Array;
-                  let tmp55 = pushLiteralTextResult1;
-                  if (!Array.isArray(pushLiteralTextResult1)) {
-                    items = [pushLiteralTextResult1];
+                  let tmp55 = tmp12Result;
+                  if (!Array.isArray(tmp12Result)) {
+                    items = [tmp12Result];
                     tmp55 = items;
                   }
                   for (const item10128 of tmp55) {
-                    let tmp58 = item10128;
                     if (typeof item10128 === "string") {
-                      let tmp59 = builder;
-                      let tmp60 = builder;
-                      let tmp61 = item10128;
-                      let pushLiteralTextResult5 = builder.pushLiteralText(tmp58);
+                      let pushLiteralTextResult6 = builder.pushLiteralText(item10128);
                     } else {
-                      pushLiteralTextResult1 = builder;
-                      pushLiteralTextResult1 = builder;
-                      pushLiteralTextResult1 = item10128;
-                      pushLiteralTextResult1 = builder.pushObject(tmp58);
+                      let pushObjectResult1 = builder.pushObject(item10128);
                     }
                     continue;
                   }
                 }
-                tmp41 = v0;
                 tmp43 = closure_3;
-                tmp44 = dataFormatters;
-                tmp45 = formatConfig;
-                tmp46 = currentPluralValue;
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Select === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Select === first) {
                 const tmp26 = tmp12 in tmp2[2] ? tmp2[2][tmp12] : tmp2[2].other;
                 if (null == tmp26) {
                   const _Object2 = Object;
                   const keys = Object.keys(tmp25);
                   const _HermesInternal4 = HermesInternal;
-                  throw "" + tmp12 + " is not a known option for select value " + pushLiteralTextResult1 + ". Valid options are " + keys.join(", ");
+                  throw "" + tmp12 + " is not a known option for select value " + tmp100 + ". Valid options are " + keys.join(", ");
                 } else {
                   obj1 = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, keyPrefix: null };
                   obj1[0] = builder;
@@ -426,58 +381,55 @@ function bindFormatValues(Builder) {
                   obj1[2] = closure_3;
                   obj1[3] = dataFormatters;
                   obj1[4] = formatConfig;
-                  obj1[5] = pushLiteralTextResult1;
+                  obj1[5] = values;
                   const _HermesInternal3 = HermesInternal;
-                  obj1[6] = "" + keyPrefix + "." + pushLiteralTextResult1;
+                  obj1[6] = "" + keyPrefix + "." + v0;
                   keyPrefix(obj1);
                 }
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Plural === first) {
-                pushLiteralTextResult1 = tmp2[2];
-                pushLiteralTextResult1 = tmp2[3];
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Plural === first) {
+                closure_1 = tmp102;
+                nodes = tmp103;
                 closure_3 = tmp2[4];
-                pushLiteralTextResult1 = (() => {
+                const tmp104 = (() => {
                   const combined = "=" + closure_0;
-                  if (combined in pushLiteralTextResult1) {
-                    return tmp3[combined];
+                  if (combined in other) {
+                    return other[combined];
                   } else {
                     const obj = { type: null };
                     obj[0] = closure_3;
-                    const pluralRules = closure_1_5.getPluralRules(obj);
+                    const pluralRules = dataFormatters.getPluralRules(obj);
                     let num = 0;
-                    if (null != pushLiteralTextResult1) {
-                      num = pushLiteralTextResult1;
+                    if (null != closure_2) {
+                      num = closure_2;
                     }
-                    let other = tmp3[pluralRules.select(pluralRules, tmp - num)];
+                    other = other[pluralRules.select(pluralRules, closure_0 - num)];
                     if (null === other) {
-                      other = tmp3.other;
+                      other = other.other;
                     }
                     return other;
                   }
-                  tmp = closure_0;
                 })();
-                pushLiteralTextResult1 = null;
-                if (null == pushLiteralTextResult1) {
+                if (null == tmp104) {
                   const _Object = Object;
-                  const keys1 = Object.keys(pushLiteralTextResult1);
+                  const keys1 = Object.keys(tmp102);
                   const _HermesInternal2 = HermesInternal;
-                  throw "" + tmp12 + " is not a known option for plural value " + pushLiteralTextResult1 + ". Valid options are " + keys1.join(", ");
+                  throw "" + tmp12 + " is not a known option for plural value " + tmp100 + ". Valid options are " + keys1.join(", ");
                 } else {
                   obj = { builder: null, nodes: null, locales: null, dataFormatters: null, formatConfig: null, values: null, currentPluralValue: null, keyPrefix: null };
                   obj[0] = builder;
-                  obj[1] = pushLiteralTextResult1;
+                  obj[1] = tmp104;
                   obj[2] = closure_3;
                   obj[3] = dataFormatters;
                   obj[4] = formatConfig;
-                  obj[5] = pushLiteralTextResult1;
+                  obj[5] = values;
                   let num2 = 0;
-                  if (null != pushLiteralTextResult1) {
-                    num2 = pushLiteralTextResult1;
+                  if (null != tmp103) {
+                    num2 = tmp103;
                   }
                   obj[6] = tmp12 - num2;
                   const _HermesInternal = HermesInternal;
-                  obj[7] = "" + keyPrefix + "." + pushLiteralTextResult1;
+                  obj[7] = "" + keyPrefix + "." + v0;
                   keyPrefix(obj);
-                  const tmp13 = keyPrefix;
                 }
               }
             }
@@ -492,6 +444,7 @@ function bindFormatValues(Builder) {
   }
   return finishResult;
 }
+_possibleConstructorReturn;
 class FormatBuilder {
   constructor(arg0) {
     tmp = closure_4(this, FormatBuilder);

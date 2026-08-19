@@ -1,13 +1,15 @@
 // _runtime/13927__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import ReanimatedNativeStackScreenDefault from "13928_ReanimatedNativeStackScreen.js";
+import ReanimatedScreenDefault from "13931_ReanimatedScreen.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const ReanimatedScreenWrapper = arg1;
+const ReanimatedScreenWrapper = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -73,9 +75,9 @@ let items = [
     value: function render() {
       const self = this;
       if (this.props.isNativeStack) {
-        let tmpResult = tmp(13928);
+        let tmpResult = ReanimatedNativeStackScreenDefault;
       } else {
-        tmpResult = tmp(13931);
+        tmpResult = ReanimatedScreenDefault;
       }
       const obj = {};
       const merged = Object.assign(self.props);

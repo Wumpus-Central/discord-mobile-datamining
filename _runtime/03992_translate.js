@@ -5,8 +5,6 @@ if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
       const _module = t;
-      let closure_0;
-      let closure_1;
       const translate2 = function translate(arg0, arg1, arg2) {
         const text = `${arg0} `;
         if ("ss" === arg2) {
@@ -94,9 +92,9 @@ if (typeof exports === "object") {
         }
       };
       const split = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split;
-      closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
+      let closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
       const split2 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split;
-      closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
+      let closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
       let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d.", week: null };
       obj[0] = function months(arg0, arg1) {
         if (arg0) {
@@ -258,7 +256,7 @@ if (typeof globalThis.define === "function") {
       }
       closure_0 = "stycze\u0144_luty_marzec_kwiecie\u0144_maj_czerwiec_lipiec_sierpie\u0144_wrzesie\u0144_pa\u017Adziernik_listopad_grudzie\u0144".split("_");
       closure_1 = "stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_wrze\u015Bnia_pa\u017Adziernika_listopada_grudnia".split("_");
-      obj = {
+      {
         months(arg0, arg1) {
           if (arg0) {
             if ("" === arg1) {
@@ -324,8 +322,6 @@ if (typeof globalThis.define === "function") {
   }
 }
 const moment = this.moment;
-closure_0 = undefined;
-closure_1 = undefined;
 function translate(arg0, arg1, arg2) {
   const text = `${arg0} `;
   if ("ss" === arg2) {
@@ -444,3 +440,35 @@ obj = {
   week: { dow: 1, doy: 4 }
 };
 moment.defineLocale("pl", obj);
+obj2 = {
+  sameDay: "[Dzi\u015B o] LT",
+  nextDay: "[Jutro o] LT",
+  nextWeek() {
+    const dayResult = this.day();
+    if (0 === dayResult) {
+      return "[W niedziel\u0119 o] LT";
+    } else if (2 === dayResult) {
+      return "[We wtorek o] LT";
+    } else if (3 === dayResult) {
+      return "[W \u015Brod\u0119 o] LT";
+    } else if (6 === dayResult) {
+      return "[W sobot\u0119 o] LT";
+    } else {
+      return "[W] dddd [o] LT";
+    }
+  },
+  lastDay: "[Wczoraj o] LT",
+  lastWeek() {
+    const dayResult = this.day();
+    if (0 === dayResult) {
+      return "[W zesz\u0142\u0105 niedziel\u0119 o] LT";
+    } else if (3 === dayResult) {
+      return "[W zesz\u0142\u0105 \u015Brod\u0119 o] LT";
+    } else if (6 === dayResult) {
+      return "[W zesz\u0142\u0105 sobot\u0119 o] LT";
+    } else {
+      return "[W zesz\u0142y] dddd [o] LT";
+    }
+  },
+  sameElse: "L"
+};

@@ -22,7 +22,6 @@ export default function formatDistance(arg0, arg1, addSuffix) {
       if (addSuffix.onlyNumeric) {
         const _String2 = String;
         one = tmp.other.replace("{{count}}", String(arg1));
-        const str3 = tmp.other;
       }
     }
     if (arg1 < 13) {
@@ -32,7 +31,6 @@ export default function formatDistance(arg0, arg1, addSuffix) {
       StringResult = String(arg1);
     }
     one = tmp.other.replace("{{count}}", StringResult);
-    const str = tmp.other;
   }
 };
 export default exports.default;

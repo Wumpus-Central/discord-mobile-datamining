@@ -1,14 +1,17 @@
 // _runtime/06380_onGestureHandlerEvent.js
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import map2 from "06381_map.js";
+import _mod6383 from "metro/06383__.js";
+import t from "06384_t.js";
+import _mod6385 from "metro/06385__.js";
 
 function onGestureHandlerEvent(handlerTag) {
   let obj = map2;
   const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {
-      if (handlerTag.oldState === tmp(6383).State.UNDETERMINED) {
-        if (handlerTag.state === tmp(6383).State.BEGAN) {
+      if (handlerTag.oldState === _mod6383.State.UNDETERMINED) {
+        if (handlerTag.state === _mod6383.State.BEGAN) {
           const handlers11 = findHandlerResult.handlers;
           const onBegin = handlers11.onBegin;
           if (onBegin != null) {
@@ -16,8 +19,8 @@ function onGestureHandlerEvent(handlerTag) {
           }
         }
       }
-      if (handlerTag.oldState === tmp(6383).State.BEGAN) {
-        if (handlerTag.state === tmp(6383).State.ACTIVE) {
+      if (handlerTag.oldState === _mod6383.State.BEGAN) {
+        if (handlerTag.state === _mod6383.State.ACTIVE) {
           const handlers6 = findHandlerResult.handlers;
           const onStart = handlers6.onStart;
           if (onStart != null) {
@@ -27,8 +30,8 @@ function onGestureHandlerEvent(handlerTag) {
         }
       }
       if (handlerTag.oldState !== handlerTag.state) {
-        if (handlerTag.state === tmp(6383).State.END) {
-          if (handlerTag.oldState === tmp(6383).State.ACTIVE) {
+        if (handlerTag.state === _mod6383.State.END) {
+          if (handlerTag.oldState === _mod6383.State.ACTIVE) {
             const handlers9 = findHandlerResult.handlers;
             const onEnd2 = handlers9.onEnd;
             if (onEnd2 != null) {
@@ -43,15 +46,15 @@ function onGestureHandlerEvent(handlerTag) {
           table[findHandlerResult.handlers.handlerTag] = undefined;
         }
       }
-      let tmp18 = handlerTag.state !== tmp(6383).State.FAILED;
+      let tmp18 = handlerTag.state !== _mod6383.State.FAILED;
       if (tmp18) {
-        tmp18 = handlerTag.state !== tmp(6383).State.CANCELLED;
+        tmp18 = handlerTag.state !== _mod6383.State.CANCELLED;
       }
       if (!tmp18) {
         tmp18 = handlerTag.oldState === handlerTag.state;
       }
       if (!tmp18) {
-        if (handlerTag.oldState === tmp(6383).State.ACTIVE) {
+        if (handlerTag.oldState === _mod6383.State.ACTIVE) {
           const handlers7 = findHandlerResult.handlers;
           const onEnd = handlers7.onEnd;
           if (onEnd != null) {
@@ -68,12 +71,12 @@ function onGestureHandlerEvent(handlerTag) {
       }
     } else if (null != handlerTag.eventType) {
       if (!map.has(handlerTag.handlerTag)) {
-        const GestureStateManager = tmp(6384).GestureStateManager;
-        const result = obj5.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
+        const GestureStateManager = t.GestureStateManager;
+        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
       }
-      const value = obj5.get(handlerTag.handlerTag);
+      const value = map.get(handlerTag.handlerTag);
       const eventType = handlerTag.eventType;
-      if (tmp(6385).TouchEventType.TOUCHES_DOWN === eventType) {
+      if (_mod6385.TouchEventType.TOUCHES_DOWN === eventType) {
         const handlers5 = findHandlerResult.handlers;
         if (handlers5 != null) {
           const onTouchesDown = handlers5.onTouchesDown;
@@ -81,7 +84,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesDown(handlerTag, value);
           }
         }
-      } else if (tmp(6385).TouchEventType.TOUCHES_MOVE === eventType) {
+      } else if (_mod6385.TouchEventType.TOUCHES_MOVE === eventType) {
         const handlers4 = findHandlerResult.handlers;
         if (handlers4 != null) {
           const onTouchesMove = handlers4.onTouchesMove;
@@ -89,7 +92,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesMove(handlerTag, value);
           }
         }
-      } else if (tmp(6385).TouchEventType.TOUCHES_UP === eventType) {
+      } else if (_mod6385.TouchEventType.TOUCHES_UP === eventType) {
         const handlers3 = findHandlerResult.handlers;
         if (handlers3 != null) {
           const onTouchesUp = handlers3.onTouchesUp;
@@ -97,7 +100,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesUp(handlerTag, value);
           }
         }
-      } else if (tmp(6385).TouchEventType.TOUCHES_CANCEL === eventType) {
+      } else if (_mod6385.TouchEventType.TOUCHES_CANCEL === eventType) {
         const handlers13 = findHandlerResult.handlers;
         if (handlers13 != null) {
           const onTouchesCancelled = handlers13.onTouchesCancelled;
@@ -129,7 +132,7 @@ function onGestureHandlerEvent(handlerTag) {
       tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
     }
   } else {
-    const result2 = tmp(6381).findOldGestureHandler(handlerTag.handlerTag);
+    const result2 = map2.findOldGestureHandler(handlerTag.handlerTag);
     if (result2) {
       obj = { nativeEvent: null };
       obj[0] = handlerTag;
@@ -139,7 +142,7 @@ function onGestureHandlerEvent(handlerTag) {
         result2.onGestureEvent(obj);
       }
     }
-    const tmpResult = tmp(6381);
+    const tmpResult = map2;
   }
 }
 const DeviceEventEmitter = get_ActivityIndicator.DeviceEventEmitter;

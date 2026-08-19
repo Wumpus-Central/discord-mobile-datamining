@@ -2,7 +2,6 @@
 
 export default (arg0) => {
   let map = arg0;
-  map = arg0;
   if (!arg0) {
     const _Map = Map;
     map = new Map();
@@ -33,15 +32,15 @@ export default (arg0) => {
       let value = map.get(arg0);
       if (value) {
         const substr = value.slice();
-        const mapped = substr.map((arg0) => {
-          arg0(closure_1);
+        const mapped = substr.map((item, index) => {
+          item(closure_1);
         });
       }
       value = arg0.get("*");
       if (value) {
         const substr1 = value.slice();
-        const mapped1 = substr1.map((arg0) => {
-          arg0(closure_0, closure_1);
+        const mapped1 = substr1.map((item, index) => {
+          item(closure_0, closure_1);
         });
       }
     }

@@ -29,13 +29,11 @@ export const forUIKit = function forUIKit(arg0) {
     obj[1] = [0, 1];
     num8 = progress2.interpolate(obj);
   }
-  const tmp2Result = closure_0(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num8);
-  obj = { leftButtonStyle: null, leftLabelStyle: null, rightButtonStyle: null, titleStyle: null, backgroundStyle: null };
+  const tmp2Result = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num8);
   obj = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
   obj[0] = obj;
   obj1 = { transform: null };
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const tmp2 = closure_0;
   const items = [num2, 0, -result];
   const items1 = [{ translateX: callback(num7, tmp2Result.interpolate({ inputRange: [0, 1, 2], outputRange: items })) }];
   obj1[0] = items1;
@@ -67,9 +65,8 @@ export const forFade = function forFade(next) {
     obj[1] = [0, 1];
     num = progress2.interpolate(obj);
   }
-  const tmpResult = closure_0(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
+  const tmpResult = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
   const interpolateResult1 = tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0, 1, 0] });
-  obj = { leftButtonStyle: { opacity: interpolateResult1 }, rightButtonStyle: { opacity: interpolateResult1 }, titleStyle: { opacity: interpolateResult1 }, backgroundStyle: null };
   obj = { opacity: tmpResult.interpolate({ inputRange: [0, 1, 1.9, 2], outputRange: [0, 1, 1, 0] }) };
   obj[3] = obj;
   return obj;
@@ -87,7 +84,6 @@ export const forSlideLeft = function forSlideLeft(next) {
     num = progress2.interpolate(obj);
   }
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const tmp = closure_0;
   obj = { inputRange: [0, 1, 2], outputRange: null };
   if ("rtl" === next.direction) {
     const items = [-screen.width, 0, screen.width];
@@ -95,7 +91,7 @@ export const forSlideLeft = function forSlideLeft(next) {
   } else {
     items1 = [screen.width, 0, -screen.width];
   }
-  obj = { translateX: closure_0(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj) };
+  obj = { translateX: callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj) };
   obj[1] = items1;
   const transform = [obj];
   return { leftButtonStyle: { transform }, rightButtonStyle: { transform }, titleStyle: { transform }, backgroundStyle: { transform } };
@@ -113,7 +109,6 @@ export const forSlideRight = function forSlideRight(next) {
     num = progress2.interpolate(obj);
   }
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const tmp = closure_0;
   obj = { inputRange: [0, 1, 2], outputRange: null };
   if ("rtl" === next.direction) {
     const items = [screen.width, 0, -screen.width];
@@ -121,7 +116,7 @@ export const forSlideRight = function forSlideRight(next) {
   } else {
     items1 = [-screen.width, 0, screen.width];
   }
-  obj = { translateX: closure_0(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj) };
+  obj = { translateX: callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj) };
   obj[1] = items1;
   const transform = [obj];
   return { leftButtonStyle: { transform }, rightButtonStyle: { transform }, titleStyle: { transform }, backgroundStyle: { transform } };
@@ -140,9 +135,8 @@ export const forSlideUp = function forSlideUp(next) {
   }
   obj = { translateY: null };
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const tmp = closure_0;
   const items = [-header.height, 0, -header.height];
-  obj[0] = closure_0(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate({ inputRange: [0, 1, 2], outputRange: items });
+  obj[0] = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate({ inputRange: [0, 1, 2], outputRange: items });
   const transform = [obj];
   return { leftButtonStyle: { transform }, rightButtonStyle: { transform }, titleStyle: { transform }, backgroundStyle: { transform } };
 };

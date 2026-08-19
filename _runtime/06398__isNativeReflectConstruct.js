@@ -1,9 +1,9 @@
 // _runtime/06398__isNativeReflectConstruct.js
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "00098__inherits.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
-import closure_4 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 let ContinousBaseGesture = arg1;
 function _isNativeReflectConstruct() {
@@ -175,8 +175,8 @@ let items = [
   },
   {
     key: "hitSlop",
-    value: function hitSlop(closure_22) {
-      this.config.hitSlop = closure_22;
+    value: function hitSlop(pressRetentionOffset) {
+      this.config.hitSlop = pressRetentionOffset;
       return this;
     }
   },
@@ -210,7 +210,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("simultaneousWith", tmp2);
         }
         continue;
@@ -227,7 +226,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("requireToFail", tmp2);
         }
         continue;
@@ -244,7 +242,6 @@ let items = [
       const nextResult = iter.next();
       while (iter !== undefined) {
         if (nextResult) {
-          let tmp3 = nextResult;
           let addDependencyResult = self.addDependency("blocksHandlers", tmp2);
         }
         continue;

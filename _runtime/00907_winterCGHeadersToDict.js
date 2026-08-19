@@ -2,9 +2,9 @@
 function winterCGHeadersToDict(arr) {
   const obj = {};
   try {
-    const item = arr.forEach((str) => {
-      if (typeof str === "string") {
-        obj[arg1] = str;
+    const item = arr.forEach((item, index) => {
+      if (typeof item === "string") {
+        obj[index] = item;
       }
     });
     return obj;
@@ -16,8 +16,8 @@ function headersToDict(arg0) {
   try {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item = entries.forEach((item, index) => {
+      [tmp, tmp2] = item;
       if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
       }
@@ -26,7 +26,7 @@ function headersToDict(arg0) {
   } catch (err) {
   }
 }
-function addSpanAttribute(arg0, str, str2, arr) {
+function addSpanAttribute(arg0, str, str2, arr, flag) {
   const replaced = str.replace(/-/g, "_");
   if (str2) {
     const _HermesInternal2 = HermesInternal;
@@ -40,22 +40,22 @@ function addSpanAttribute(arg0, str, str2, arr) {
     tmp3 = str;
   }
   closure_0 = tmp3;
-  if (arg4) {
-    let someResult = closure_2.some((arg0) => str.includes(arg0));
+  if (flag) {
+    let someResult = closure_2.some((item, index) => str.includes(item));
   } else {
     const items = [];
     HermesBuiltin.arraySpread(closure_2, HermesBuiltin.arraySpread(closure_3, 0));
-    someResult = items.some((arg0) => str.includes(arg0));
+    someResult = items.some((item, index) => str.includes(item));
   }
   let str4 = "[Filtered]";
   if (!someResult) {
     const _Array = Array;
     if (Array.isArray(arr)) {
-      const mapped = arr.map((arg0) => {
-        let StringResult = arg0;
-        if (null != arg0) {
+      const mapped = arr.map((item, index) => {
+        let StringResult = item;
+        if (null != item) {
           const _String = String;
-          StringResult = String(arg0);
+          StringResult = String(item);
         }
         return StringResult;
       });
@@ -99,14 +99,14 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
   try {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    const item = entries.forEach((arg0) => {
-      [str, arr] = arg0;
+    const item = entries.forEach((item, index) => {
+      [str, arr] = item;
       if (null != arr) {
         const formatted = str.toLowerCase();
         if ("cookie" === formatted) {
           if (typeof arr === "string") {
             if ("" !== arr) {
-              const index = arr.indexOf(";");
+              index = arr.indexOf(";");
               let num = arr;
               if ("set-cookie" === formatted) {
                 num = arr;
@@ -125,7 +125,7 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
             }
           }
         }
-        closure_1_4(obj, formatted, "", arr, flag);
+        addSpanAttribute(obj, formatted, "", arr, flag);
       }
     });
     return obj;

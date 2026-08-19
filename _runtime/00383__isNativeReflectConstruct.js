@@ -1,10 +1,10 @@
 // _runtime/00383__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00366__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
-import closure_5 from "metro/00096__get.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _get from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const AnimatedTransform = importDefault;
@@ -74,24 +74,20 @@ let items = [
     value: function __getValue() {
       const _transforms = this._transforms;
       const f102873 = (__getValue) => __getValue.__getValue();
-      return _transforms.map((obj) => {
-        obj = {};
+      return _transforms.map((item, index) => {
+        let obj = {};
         for (const key10006 in arg0) {
-          let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f102876;
-          let tmp7 = closure_1_1;
-          if (arr instanceof f102876(closure_1_1[6])) {
-            let tmp4 = f102876;
+          if (arr instanceof f102876(dependencyMap[6])) {
             obj[key10006] = f102876(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
-              obj[key10006] = arr.map((arg0) => {
-                let tmp = arg0;
-                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
-                  tmp = callback(arg0);
+              obj[key10006] = arr.map((item, index) => {
+                let tmp = item;
+                if (item instanceof closure_1_0(closure_1_1[6])) {
+                  tmp = callback(item);
                 }
                 return tmp;
               });
@@ -99,15 +95,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 obj = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
-                  let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f102876;
-                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(closure_1_1[6])) {
-                    let tmp2 = f102876;
+                  if (tmp9 instanceof f102876(dependencyMap[6])) {
                     tmp3 = f102876(tmp9);
                   }
                   obj[key10013] = tmp3;
@@ -132,29 +123,21 @@ let items = [
   {
     key: "__getValueWithStaticTransforms",
     value: function __getValueWithStaticTransforms(arr) {
-      let f102875 = [];
       const _transforms = this._transforms;
-      f102875 = (__getValue) => {
-        f102875.push(__getValue.__getValue());
-      };
-      const mapped = _transforms.map((obj) => {
-        obj = {};
+      const mapped = _transforms.map((item, index) => {
+        let obj = {};
         for (const key10006 in arg0) {
-          let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f102876;
-          let tmp7 = closure_1_1;
-          if (arr instanceof f102876(closure_1_1[6])) {
-            let tmp4 = f102876;
+          if (arr instanceof f102876(dependencyMap[6])) {
             obj[key10006] = f102876(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
-              obj[key10006] = arr.map((arg0) => {
-                let tmp = arg0;
-                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
-                  tmp = callback(arg0);
+              obj[key10006] = arr.map((item, index) => {
+                let tmp = item;
+                if (item instanceof closure_1_0(closure_1_1[6])) {
+                  tmp = callback(item);
                 }
                 return tmp;
               });
@@ -162,15 +145,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 obj = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
-                  let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f102876;
-                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(closure_1_1[6])) {
-                    let tmp2 = f102876;
+                  if (tmp9 instanceof f102876(dependencyMap[6])) {
                     tmp3 = f102876(tmp9);
                   }
                   obj[key10013] = tmp3;
@@ -190,25 +168,21 @@ let items = [
         }
         return obj;
       });
-      f102875 = () => f102875.shift();
-      return arr.map((obj) => {
-        obj = {};
+      const f102875 = () => f102875.shift();
+      return arr.map((item, index) => {
+        let obj = {};
         for (const key10006 in arg0) {
-          let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f102876;
-          let tmp7 = closure_1_1;
-          if (arr instanceof f102876(closure_1_1[6])) {
-            let tmp4 = f102876;
+          if (arr instanceof f102876(dependencyMap[6])) {
             obj[key10006] = f102876(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
-              obj[key10006] = arr.map((arg0) => {
-                let tmp = arg0;
-                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
-                  tmp = callback(arg0);
+              obj[key10006] = arr.map((item, index) => {
+                let tmp = item;
+                if (item instanceof closure_1_0(closure_1_1[6])) {
+                  tmp = callback(item);
                 }
                 return tmp;
               });
@@ -216,15 +190,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 obj = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
-                  let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f102876;
-                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(closure_1_1[6])) {
-                    let tmp2 = f102876;
+                  if (tmp9 instanceof f102876(dependencyMap[6])) {
                     tmp3 = f102876(tmp9);
                   }
                   obj[key10013] = tmp3;
@@ -251,24 +220,20 @@ let items = [
     value: function __getAnimatedValue() {
       const _transforms = this._transforms;
       const f102876 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
-      return _transforms.map((obj) => {
-        obj = {};
+      return _transforms.map((item, index) => {
+        let obj = {};
         for (const key10006 in arg0) {
-          let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f102876;
-          let tmp7 = closure_1_1;
-          if (arr instanceof f102876(closure_1_1[6])) {
-            let tmp4 = f102876;
+          if (arr instanceof f102876(dependencyMap[6])) {
             obj[key10006] = f102876(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
-              obj[key10006] = arr.map((arg0) => {
-                let tmp = arg0;
-                if (arg0 instanceof closure_1_0(closure_1_1[6])) {
-                  tmp = callback(arg0);
+              obj[key10006] = arr.map((item, index) => {
+                let tmp = item;
+                if (item instanceof closure_1_0(closure_1_1[6])) {
+                  tmp = callback(item);
                 }
                 return tmp;
               });
@@ -276,15 +241,10 @@ let items = [
             } else {
               if (typeof arr === "object") {
                 obj = {};
-                let tmp = arr;
                 for (const key10013 in arr) {
-                  let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f102876;
-                  let tmp11 = closure_1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f102876(closure_1_1[6])) {
-                    let tmp2 = f102876;
+                  if (tmp9 instanceof f102876(dependencyMap[6])) {
                     tmp3 = f102876(tmp9);
                   }
                   obj[key10013] = tmp3;
@@ -346,13 +306,8 @@ let items = [
       const _transforms = this._transforms;
       for (let num = 0; num < length; num = num + 1) {
         let tmp = _transforms[num];
-        let tmp2 = tmp;
-        let tmp3 = num;
         for (const key10012 in tmp) {
-          let tmp6 = key10012;
           let obj5 = tmp[key10012];
-          let tmp7 = AnimatedTransform;
-          let tmp8 = dependencyMap;
           let push = items.push;
           if (obj5 instanceof AnimatedTransform(367)) {
             let obj = { type: "animated", property: null, nodeTag: null };
@@ -363,7 +318,7 @@ let items = [
           } else {
             obj = { type: "static", property: null, value: null };
             obj[1] = key10012;
-            let tmp7Result = tmp7(357);
+            let tmp7Result = AnimatedTransform(357);
             obj[2] = tmp7Result.transformDataType(obj5);
             arr = push(obj);
             continue;
@@ -387,13 +342,8 @@ obj = {
     const items1 = [];
     for (let num = 0; num < length; num = num + 1) {
       let tmp = items[num];
-      let tmp2 = tmp;
-      let tmp3 = num;
       for (const key10017 in tmp) {
-        let tmp8 = key10017;
         let tmp9 = tmp[key10017];
-        let tmp10 = AnimatedTransform;
-        let tmp11 = dependencyMap;
         if (!(tmp9 instanceof AnimatedTransform(367))) {
           continue;
         } else {
@@ -419,11 +369,11 @@ obj = {
       } else {
         constructResult = obj.apply(obj, items2);
       }
-      const tmp16Result = closure_3(obj, constructResult);
+      const tmp16Result = callback(obj, constructResult);
       tmp16Result._nodes = items1;
       tmp16Result._transforms = _transforms;
-      const tmp16 = closure_3;
     }
+    length = items.length;
   }
 };
 let items1 = [obj];

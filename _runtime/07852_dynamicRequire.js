@@ -2,8 +2,8 @@
 import getSDKSource from "07853_getSDKSource.js";
 
 require = arg1;
-let dependencyMap = arg4;
-dependencyMap = arg6;
+const module = arg4;
+const dependencyMap = arg6;
 function dynamicRequire(require) {
   return require.require(arg1);
 }
@@ -27,7 +27,7 @@ arg5.isNodeEnv = function isNodeEnv() {
 arg5.loadModule = function loadModule(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = dependencyMap;
+    tmp = module;
   }
   try {
     let tmp3 = dynamicRequire(tmp, arg0);

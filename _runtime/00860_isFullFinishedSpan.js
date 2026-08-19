@@ -1,5 +1,5 @@
 // _runtime/00860_isFullFinishedSpan.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const SentrySpan = require;
@@ -42,7 +42,7 @@ class SentrySpan {
     self._links = obj.links;
     self._attributes = {};
     obj = { [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
-    obj[require("module_839").SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
+    obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
     merged = Object.assign(obj.attributes);
     setAttributesResult = self.setAttributes(obj);
     self._name = obj.name;
@@ -128,7 +128,7 @@ let items = [
       const self = this;
       closure_0 = arg0;
       const keys = Object.keys(arg0);
-      const item = keys.forEach((arg0) => self.setAttribute(arg0, table[arg0]));
+      const item = keys.forEach((item, index) => self.setAttribute(item, table[item]));
       return this;
     }
   },
@@ -176,13 +176,13 @@ let items = [
       obj[12] = SentrySpan(862).timedEventsToMeasurements(this._events);
       let _isStandaloneSpan = this._isStandaloneSpan;
       if (_isStandaloneSpan) {
-        let tmpResult = tmp(819);
+        let tmpResult = SentrySpan(819);
         _isStandaloneSpan = tmpResult.getRootSpan(self) === self;
       }
       obj[13] = _isStandaloneSpan;
       let spanId;
       if (self._isStandaloneSpan) {
-        tmpResult = tmp(819);
+        tmpResult = SentrySpan(819);
         const rootSpan = tmpResult.getRootSpan(self);
         spanId = rootSpan.spanContext().spanId;
       }
@@ -207,7 +207,7 @@ let items = [
     key: "addEvent",
     value: function addEvent(name, num) {
       if (SentrySpan(823).DEBUG_BUILD) {
-        const debug = tmp(824).debug;
+        const debug = SentrySpan(824).debug;
         debug.log("[Tracing] Adding an event to span:", name);
       }
       let isArray = num;
@@ -226,7 +226,7 @@ let items = [
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
-          let tmpResult = tmp(838);
+          let tmpResult = SentrySpan(838);
           timestampInSecondsResult = tmpResult.timestampInSeconds();
         }
         tmp7 = timestampInSecondsResult;
@@ -252,7 +252,7 @@ let items = [
         }
       }
       obj = { name, time: null, attributes: null };
-      tmpResult = tmp(819);
+      tmpResult = SentrySpan(819);
       obj[1] = tmpResult.spanTimeInputToSeconds(tmp7);
       obj[2] = obj;
       const _events = this._events;
@@ -277,10 +277,10 @@ let items = [
       if (self._isStandaloneSpan) {
         if (self._isStandaloneSpan) {
           if (self._sampled) {
-            let tmpResult = tmp(863);
+            let tmpResult = SentrySpan(863);
             const items = [self];
             const spanEnvelope = tmpResult.createSpanEnvelope(items, client);
-            tmpResult = tmp(848);
+            tmpResult = SentrySpan(848);
             const client1 = tmpResult.getClient();
             if (client1) {
               if (spanEnvelope[1]) {
@@ -291,8 +291,8 @@ let items = [
               client1.recordDroppedEvent("before_send", "span");
             }
           } else {
-            if (tmp(823).DEBUG_BUILD) {
-              const debug = tmp(824).debug;
+            if (SentrySpan(823).DEBUG_BUILD) {
+              const debug = SentrySpan(824).debug;
               debug.log("[Tracing] Discarding standalone span because its trace was not chosen to be sampled.");
             }
             if (client) {
@@ -302,25 +302,25 @@ let items = [
         } else {
           const result = self._convertSpanToTransaction();
           if (result) {
-            let scope = tmp(820).getCapturedScopesOnSpan(self).scope;
+            let scope = SentrySpan(820).getCapturedScopesOnSpan(self).scope;
             if (!scope) {
-              scope = tmp(848).getCurrentScope();
-              const tmpResult2 = tmp(848);
+              scope = SentrySpan(848).getCurrentScope();
+              const tmpResult2 = SentrySpan(848);
             }
             scope.captureEvent(result);
-            const tmpResult1 = tmp(820);
+            const tmpResult1 = SentrySpan(820);
           }
         }
       } else {
-        const tmpResult3 = tmp(819);
+        SentrySpan(819);
       }
+      const obj = SentrySpan(848);
     }
   },
   {
     key: "_convertSpanToTransaction",
     value: function _convertSpanToTransaction() {
-      let self = this;
-      self = this;
+      const self = this;
       let obj = self(819);
       const spanToJSONResult = obj.spanToJSON(this);
       if (tmp6) {
@@ -343,25 +343,24 @@ let items = [
         if (true === self._sampled) {
           tmp3Result = tmp3(819);
           const spanDescendants = tmp3Result.getSpanDescendants(self);
-          const found = spanDescendants.filter((isStandaloneSpan) => {
-            let tmp = isStandaloneSpan !== self;
+          const found = spanDescendants.filter((item, index) => {
+            let tmp = item !== self;
             if (tmp) {
-              tmp = !(isStandaloneSpan instanceof closure_1_3 && isStandaloneSpan.isStandaloneSpan());
-              const tmp3 = isStandaloneSpan instanceof closure_1_3 && isStandaloneSpan.isStandaloneSpan();
+              tmp = !(item instanceof closure_1_3 && item.isStandaloneSpan());
+              const tmp3 = item instanceof closure_1_3 && item.isStandaloneSpan();
             }
             return tmp;
           });
-          const mapped = found.map((arg0) => self(819).spanToJSON(arg0));
+          const mapped = found.map((item, index) => self(819).spanToJSON(item));
           const found1 = mapped.filter(isFullFinishedSpan);
           const tmp11 = self._attributes[tmp3(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
           const _attributes = self._attributes;
           let SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = tmp3(839).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
           delete tmp2[tmp];
-          const item = found1.forEach((arg0) => {
+          const item = found1.forEach((item, index) => {
             const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = self(839).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME;
             delete tmp2[tmp];
           });
-          obj = { contexts: null, spans: null, start_timestamp: null, timestamp: null, transaction: null, type: "transaction", sdkProcessingMetadata: null, request: null };
           obj = { trace: null };
           obj[0] = tmp3(819).spanToTransactionTraceContext(self);
           obj[0] = obj;
@@ -406,6 +405,7 @@ let items = [
           return obj;
         }
       }
+      tmp6 = spanToJSONResult.start_timestamp && spanToJSONResult.timestamp && spanToJSONResult.span_id && spanToJSONResult.trace_id;
     }
   }
 ];

@@ -3,13 +3,13 @@ import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00141__isNativeReflectConstruct.js";
 import setDefault from "00144_set.js";
-import closure_4 from "metro/00041__classCallCheck.js";
-import closure_5 from "metro/00093__possibleConstructorReturn.js";
-import closure_6 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
-const ReactNativeElement = arg1;
+const ReactNativeElement = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -52,7 +52,7 @@ class ReactNativeElement {
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.__nativeTag = global;
     tmp3Result.__internalInstanceHandle = importDefault;
-    tmp3Result.__viewConfig = arg1;
+    tmp3Result.__viewConfig = fn;
     return tmp3Result;
   }
 }
@@ -71,7 +71,7 @@ let items = [
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(NativeDOMCxx.getOffset(nativeElementReference)[2]);
+        return Math.round(require("00139_NativeDOMCxx.js").getOffset(nativeElementReference)[2]);
       } else {
         return 0;
       }
@@ -83,7 +83,7 @@ let items = [
     get() {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        const offset = NativeDOMCxx.getOffset(nativeElementReference);
+        const offset = require("00139_NativeDOMCxx.js").getOffset(nativeElementReference);
         if (null != offset[0]) {
           return ReactNativeElement(136).getPublicInstanceFromInstanceHandle(offset[0]);
         }
@@ -98,7 +98,7 @@ let items = [
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(NativeDOMCxx.getOffset(nativeElementReference)[1]);
+        return Math.round(require("00139_NativeDOMCxx.js").getOffset(nativeElementReference)[1]);
       } else {
         return 0;
       }
@@ -125,6 +125,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
+      obj = setDefault;
     }
   },
   {
@@ -141,6 +142,7 @@ let items = [
         }
         obj2 = javaScriptFlagGetterAll;
       }
+      obj = setDefault;
     }
   },
   {
@@ -148,9 +150,10 @@ let items = [
     value: function measure(arg0) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        NativeDOMCxx.measure(nativeElementReference, arg0);
+        require("00139_NativeDOMCxx.js").measure(nativeElementReference, arg0);
         const obj2 = NativeDOMCxx;
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
@@ -158,9 +161,10 @@ let items = [
     value: function measureAsyncOnUI(_measureCallback, _measureCallback) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        NativeDOMCxx.measureAsyncOnUI(nativeElementReference, _measureCallback);
+        require("00139_NativeDOMCxx.js").measureAsyncOnUI(nativeElementReference, _measureCallback);
         const obj2 = NativeDOMCxx;
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
@@ -168,19 +172,20 @@ let items = [
     value: function measureInWindow(arg0) {
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (null != nativeElementReference) {
-        NativeDOMCxx.measureInWindow(nativeElementReference, arg0);
+        require("00139_NativeDOMCxx.js").measureInWindow(nativeElementReference, arg0);
         const obj2 = NativeDOMCxx;
       }
+      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "measureLayout",
-    value: function measureLayout(nativeElementReference3) {
-      if (nativeElementReference3 instanceof ReactNativeElement) {
+    value: function measureLayout(c5) {
+      if (c5 instanceof ReactNativeElement) {
         const self = this;
         const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
         const obj = ReactNativeElement(136);
-        const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(nativeElementReference3);
+        const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(c5);
         if (tmp6) {
           let tmp7 = arg2;
           const obj3 = NativeDOMCxx;
@@ -205,9 +210,11 @@ let items = [
       obj = obj.create(arg0, this.__viewConfig.validAttributes);
       const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
       if (tmp4) {
-        NativeDOMCxx.setNativeProps(nativeElementReference, obj);
+        require("00139_NativeDOMCxx.js").setNativeProps(nativeElementReference, obj);
         const obj3 = NativeDOMCxx;
       }
+      const obj2 = ReactNativeElement(136);
+      tmp4 = null != nativeElementReference && null != obj;
     }
   },
 
@@ -219,7 +226,7 @@ obj = {
     if (null == currentProps) {
       return null;
     } else {
-      const eventTypePropName = tmp(149).getEventTypePropName(arg0, arg1);
+      const eventTypePropName = ReactNativeElement(149).getEventTypePropName(arg0, arg1);
       if (null == eventTypePropName) {
         return null;
       } else {
@@ -229,10 +236,9 @@ obj = {
         }
         return tmp8;
       }
-      const tmpResult = tmp(149);
+      const tmpResult = ReactNativeElement(149);
     }
     const obj = ReactNativeElement(136);
-    tmp = ReactNativeElement;
   }
 };
 items[12] = obj;
@@ -244,7 +250,7 @@ class ReactNativeElement {
     setInstanceHandleResult = obj2.setInstanceHandle(this, importDefault);
     this.__nativeTag = global;
     this.__internalInstanceHandle = importDefault;
-    this.__viewConfig = arg1;
+    this.__viewConfig = fn;
     return;
   }
 }

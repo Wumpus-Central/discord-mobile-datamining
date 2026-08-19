@@ -2,7 +2,7 @@
 import noop from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import closure_4 from "00019_noop.js";
+import noop2 from "00019_noop.js";
 
 ({ Animated: obj1, RefreshControl: c3 } = get_ActivityIndicator);
 const useMemo = noop.useMemo;
@@ -120,7 +120,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
   }, items3);
   obj[4] = ListEmptyComponentStyle(() => {
     if (typeof renderScrollComponent === "function") {
-      if (!tmpResult.isComponentClass(tmp3)) {
+      if (!tmpResult.isComponentClass(renderScrollComponent)) {
         let CompatAnimatedScroller = ListEmptyComponent.forwardRef((arg0, ref) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -133,13 +133,13 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     }
     CompatAnimatedScroller = ListHeaderComponent(ListHeaderComponentStyle[6]).CompatAnimatedScroller;
     if (renderScrollComponent) {
-      CompatAnimatedScroller = tmp3;
+      CompatAnimatedScroller = renderScrollComponent;
     }
   }, items5);
   obj[5] = ListEmptyComponentStyle(() => {
     let backdropComponent;
     if (stickyHeaderConfig != null) {
-      backdropComponent = tmp.backdropComponent;
+      backdropComponent = stickyHeaderConfig.backdropComponent;
     }
     let tmp4Result = null;
     if (backdropComponent) {
@@ -147,13 +147,12 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
       const items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
       obj[0] = items;
       let backdropComponent1;
-      if (tmp != null) {
-        backdropComponent1 = tmp.backdropComponent;
+      if (stickyHeaderConfig != null) {
+        backdropComponent1 = stickyHeaderConfig.backdropComponent;
       }
       obj[1] = ListHeaderComponent(ListHeaderComponentStyle[5]).getValidComponent(backdropComponent1);
       tmp4Result = renderScrollComponent(ListHeaderComponent(ListHeaderComponentStyle[4]).CompatView, obj);
       const obj2 = ListHeaderComponent(ListHeaderComponentStyle[5]);
-      const tmp4 = renderScrollComponent;
     }
     return tmp4Result;
   }, items4);

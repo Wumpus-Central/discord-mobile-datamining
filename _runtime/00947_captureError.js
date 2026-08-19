@@ -1,5 +1,8 @@
 // _runtime/00947_captureError.js
+import spanToJSON from "00819_spanToJSON.js";
+import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
 import getClient from "00848_getClient.js";
+import captureCheckIn from "00869_captureCheckIn.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -8,7 +11,7 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
   try {
     let obj = getClient;
     if (obj.getClient()) {
-      let tmpResult = tmp(819);
+      let tmpResult = spanToJSON;
       const activeSpan = tmpResult.getActiveSpan();
       let isRecordingResult;
       if (activeSpan != null) {
@@ -16,11 +19,11 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
       }
       if (isRecordingResult) {
         obj = { code: null, message: "internal_error" };
-        obj[0] = tmp(840).SPAN_STATUS_ERROR;
-        activeSpan.setStatus(obj);
+        obj[0] = getSpanStatusFromHttpCode.SPAN_STATUS_ERROR;
+        obj4.setStatus(obj);
       }
       let str = prompt_execution;
-      tmpResult = tmp(869);
+      tmpResult = captureCheckIn;
       if (!prompt_execution) {
         str = "handler_execution";
       }
@@ -32,6 +35,7 @@ arg5.captureError = function captureError(error, prompt_execution, arg2) {
       obj1[2] = obj2;
       obj[0] = obj1;
       tmpResult.captureException(error, obj);
+      obj4 = activeSpan;
     }
   } catch (err) {
   }

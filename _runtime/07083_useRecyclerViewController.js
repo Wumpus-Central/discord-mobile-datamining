@@ -1,36 +1,35 @@
 // _runtime/07083_useRecyclerViewController.js
-import closure_2 from "07084_asyncGeneratorStep.js";
-import closure_3 from "metro/07041__slicedToArray.js";
+import asyncGeneratorStep from "07084_asyncGeneratorStep.js";
+import _slicedToArray from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 import { I18nManager } from "00017_get_ActivityIndicator.js";
 import { useUnmountFlag } from "07085_useUnmountFlag.js";
-import { useUnmountAwareTimeout } from "07086_useUnmountAwareTimeout.js";
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c4, useImperativeHandle: c5, useMemo: closure_6, useRef: error, useState: closure_8 } = noop);
 
 export const useRecyclerViewController = function useRecyclerViewController(recyclerViewManager, arg1, arg2, arg3) {
   const _require = recyclerViewManager;
   dependencyMap = arg2;
   closure_2 = arg3;
-  const unmountFlag = _useUnmountFlag.useUnmountFlag();
-  let obj = _useUnmountFlag;
+  const unmountFlag = require("07085_useUnmountFlag.js").useUnmountFlag();
+  let obj = useUnmountFlag;
   [r10016, closure_4] = unmountFlag(callback4(0), 2);
   const callback2 = _setTimeout(false);
   const callback3 = _setTimeout(recyclerViewManager.getDataLength());
   let tmp2 = unmountFlag(callback4(0), 2);
-  _setTimeout = _useUnmountAwareTimeout.useUnmountAwareTimeout().setTimeout;
+  _setTimeout = require("07086_useUnmountAwareTimeout.js").useUnmountAwareTimeout().setTimeout;
   callback4 = _setTimeout(undefined);
   closure_9 = _setTimeout(undefined);
   closure_10 = _setTimeout([]);
   const items = [recyclerViewManager];
-  let tmp3 = callback((arg0, arg1) => {
+  let tmp3 = callback((arg0, fn) => {
     if (undefined !== store.updateScrollOffset(arg0)) {
       const current = ref7.current;
-      current.push(arg1);
+      current.push(fn);
       callback((arg0) => arg0 + 1);
     } else {
-      arg1();
+      fn();
     }
   }, items);
   closure_11 = tmp3;
@@ -62,7 +61,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
     ({ horizontal, data } = store.props);
     let current = ref7.current;
     ref7.current = [];
-    const item = current.forEach((arg0) => arg0());
+    const item = current.forEach((item, index) => item());
     const dataLength = store.getDataLength();
     if (store.getIsFirstLayoutComplete()) {
       if (obj.hasStableDataKeys()) {
@@ -75,7 +74,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 if (tmp5) {
                   let findIndexResult;
                   if (data != null) {
-                    findIndexResult = data.findIndex((arg0, bound) => store.getDataKey(bound) === ref.current);
+                    findIndexResult = data.findIndex((item, index) => store.getDataKey(index) === ref.current);
                   }
                   const tmp8 = findIndexResult;
                 }
@@ -317,22 +316,22 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
     };
     obj.scrollToIndex = function scrollToIndex(arg0) {
       ({ index: closure_0, animated: closure_1, viewPosition: closure_2, viewOffset: closure_3 } = arg0);
-      return new Promise((arg0) => {
-        closure_0 = arg0;
+      return new Promise((fn) => {
+        closure_0 = fn;
         const horizontal = closure_1_0.props.horizontal;
         if (closure_1_1.current) {
           if (closure_0 >= 0) {
-            if (tmp < obj.getDataLength()) {
+            if (tmp < closure_1_0.getDataLength()) {
               closure_1_5.current = true;
-              let result = obj.setOffsetProjectionEnabled(false);
+              let result = closure_1_0.setOffsetProjectionEnabled(false);
               function getFinalOffset() {
                 const size = closure_2_0.getLayout(closure_0);
                 const tmp2 = horizontal ? size.x : size.y;
                 if (undefined !== getFinalOffset) {
-                  const size2 = obj.getWindowSize();
+                  const size2 = closure_2_0.getWindowSize();
                   let diff = tmp2;
-                  if (undefined !== tmp3) {
-                    diff = tmp2 - ((tmp ? size2.width : size2.height) - (tmp ? size.width : size.height)) * tmp3;
+                  if (undefined !== getFinalOffset) {
+                    diff = tmp2 - ((horizontal ? size2.width : size2.height) - (horizontal ? size.width : size.height)) * getFinalOffset;
                   }
                   let sum = diff;
                   if (undefined !== setScrollDirection) {
@@ -343,8 +342,8 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 }
                 return sum + closure_2_0.firstItemOffset;
               }
-              let setScrollDirection = obj.getAbsoluteLastScrollOffset();
-              let size = obj.getWindowSize();
+              let setScrollDirection = closure_1_0.getAbsoluteLastScrollOffset();
+              let size = closure_1_0.getWindowSize();
               let result1 = 2 * (horizontal ? size.width : size.height);
               function getStartScrollOffset() {
 
@@ -355,12 +354,12 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 let _Math2 = Math;
                 result1 = finalOffset - result1;
                 let bound = Math.max(result1, setScrollDirection);
-                setScrollDirection = obj.setScrollDirection;
+                setScrollDirection = closure_1_0.setScrollDirection;
                 setScrollDirection("forward");
               } else {
                 let _Math = Math;
                 bound = Math.min(finalOffset + result1, setScrollDirection);
-                obj.setScrollDirection("backward");
+                closure_1_0.setScrollDirection("backward");
               }
               closure_8 = closure_6;
               function performScrollStep(arg0) {
@@ -390,7 +389,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                     num5 = 300;
                   }
                   closure_2_7(() => { ... }, num5);
-                  const tmp22 = closure_2_7;
                 } else {
                   if (horizontal) {
                     let sum = closure_8 + arg0 / 4 * (bound - closure_8);
@@ -398,7 +396,6 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                     sum = bound + arg0 / 4 * (closure_8 - bound);
                   }
                   closure_2_11(sum, () => { ... });
-                  const tmp = closure_2_11;
                 }
               }
               function finishScrollToIndex() {
@@ -408,7 +405,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             }
           }
         }
-        arg0();
+        fn();
       });
     };
     obj.scrollToItem = function scrollToItem(item) {
@@ -416,7 +413,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       const data = item.props.data;
       if (closure_1.current) {
         if (data) {
-          const findIndexResult = data.findIndex((arg0) => arg0 === item);
+          const findIndexResult = data.findIndex((item, index) => item === item);
           if (findIndexResult >= 0) {
             const obj = { index: null, animated: null, viewPosition: null, viewOffset: null };
             obj[0] = findIndexResult;
@@ -511,19 +508,17 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
             obj[0] = sum;
             num4(obj);
             point = _setTimeout(() => {
-              closure_1_13.scrollToOffset({ offset: closure_0, animated: false, skipFirstItemOffset: false });
+              handlerMethods.scrollToOffset({ offset: closure_0, animated: false, skipFirstItemOffset: false });
             }, 0);
-            const tmp = _setTimeout;
           }
         }
       }
     }
   }, items4);
   callback2(arg1, () => {
-    let obj = {};
     const merged = Object.assign(ref.current);
     const merged1 = Object.assign(handlerMethods);
-    obj = {
+    const obj = {
       get() {
         return props.props;
       },

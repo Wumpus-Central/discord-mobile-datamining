@@ -1,6 +1,6 @@
 // _runtime/01587_useNavigationCache.js
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "00019_noop.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 let closure_2 = ["emit"];
@@ -11,12 +11,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
   const setOptions = getState.setOptions;
   const router = getState.router;
   const emitter = getState.emitter;
-  let base;
-  closure_6 = undefined;
-  let navigations;
   const stackRef = emitter.useContext(getState(navigation[2]).NavigationBuilderContext).stackRef;
   let items = [navigation, router.actionCreators];
-  base = emitter.useMemo(() => {
+  const base = emitter.useMemo(() => {
     const tmp = router(dispatch, setOptions);
     closure_0 = tmp;
     let obj = {};
@@ -27,9 +24,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
       throw error;
     };
     const keys = Object.keys(obj);
-    const reduced = keys.reduce((arg0, arg1) => {
-      arg0[arg1] = dispatch;
-      return arg0;
+    const reduced = keys.reduce((acc, item, index) => {
+      acc[item] = dispatch;
+      return acc;
     }, {});
     obj = {};
     const merged2 = Object.assign(tmp);
@@ -46,7 +43,7 @@ export const useNavigationCache = function useNavigationCache(getState) {
     obj.getParent = function getParent(arg0) {
       if (undefined !== arg0) {
         if (arg0 === store.getId()) {
-          let parent = closure_1_5;
+          let parent = base;
         }
         return parent;
       }
@@ -64,31 +61,31 @@ export const useNavigationCache = function useNavigationCache(getState) {
   const items1 = [base, getState, navigation, setOptions, emitter];
   closure_6 = emitter.useMemo(() => ({ current: {} }), items1);
   const routes = getState.state.routes;
-  navigations = routes.reduce((arg0, key) => {
-    closure_0 = arg0;
-    closure_1 = key;
-    if (ref.current[key.key]) {
-      arg0[key.key] = tmp;
+  const navigations = routes.reduce((acc, item, index) => {
+    closure_0 = acc;
+    closure_1 = item;
+    if (ref.current[item.key]) {
+      acc[item.key] = tmp;
     } else {
       function dispatch(arg0) {
 
       }
-      function withStack(arg0) {
-        arg0();
+      function withStack(fn) {
+        fn();
       }
       let obj = {};
       let merged = Object.assign(withStack.actionCreators);
       let merged1 = Object.assign(getState(navigation[3]).CommonActions);
       const _Object = Object;
       const keys = Object.keys(obj);
-      const reduced = keys.reduce((arg0, arg1) => {
-        closure_0 = arg1;
-        arg0[arg1] = () => {
+      const reduced = keys.reduce((acc, item, index) => {
+        closure_0 = item;
+        acc[item] = () => {
           closure_0 = [...arguments];
-          closure_1_3(() => {
+          withStack(() => {
             const items = [...closure_0];
             const applyResult = closure_2_4[args].apply(items);
-            if (typeof closure_2_2 !== "function") {
+            if (typeof dispatch !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let applyResultResult = applyResult;
@@ -97,73 +94,71 @@ export const useNavigationCache = function useNavigationCache(getState) {
             }
             if (null != applyResultResult) {
               obj = { source: null };
-              obj[0] = closure_2_1.key;
+              obj[0] = item.key;
               const merged = Object.assign(applyResultResult);
               closure_1_1.dispatch(obj);
             }
           });
         };
-        return arg0;
+        return acc;
       }, {});
       obj = {};
       let merged2 = Object.assign(base);
       const merged3 = Object.assign(reduced);
-      const merged4 = Object.assign(obj.create(key.key));
+      const merged4 = Object.assign(obj.create(item.key));
       obj.dispatch = function dispatch(arg0) {
         closure_0 = arg0;
         withStack(() => {
-          if (typeof closure_1_2 !== "function") {
+          if (typeof dispatch !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          let tmpResult = tmp;
+          let tmpResult = callback;
           if (typeof callback === "function") {
-            tmpResult = tmp(callback());
+            tmpResult = callback(callback());
           }
           if (null != tmpResult) {
             obj = { source: null };
-            obj[0] = closure_1_1.key;
+            obj[0] = item.key;
             const merged = Object.assign(tmpResult);
-            closure_1_1.dispatch(obj);
+            item.dispatch(obj);
           }
         });
       };
       obj.getParent = function getParent(arg0) {
         if (undefined !== arg0) {
-          if (arg0 === closure_1_5.getId()) {
-            let parent = table[key.key];
+          if (arg0 === base.getId()) {
+            let parent = acc[item.key];
           }
           return parent;
         }
-        parent = closure_1_5.getParent(arg0);
+        parent = base.getParent(arg0);
       };
       obj.setOptions = function setOptions(arg0) {
         closure_0 = arg0;
         dispatch((arg0) => {
-          obj = {};
           const merged = Object.assign(arg0);
           obj = {};
-          const merged1 = Object.assign(arg0[closure_1_1.key]);
+          const merged1 = Object.assign(arg0[item.key]);
           const merged2 = Object.assign(closure_0);
-          obj[closure_1_1.key] = obj;
+          obj[item.key] = obj;
           return obj;
         });
       };
       obj.isFocused = function isFocused() {
-        const state = closure_1_5.getState();
-        let tmp2 = state.routes[state.index].key === key.key;
+        const state = base.getState();
+        let tmp2 = state.routes[state.index].key === item.key;
         if (tmp2) {
-          let isFocusedResult = !key;
-          if (key) {
-            isFocusedResult = obj.isFocused();
+          let isFocusedResult = !item;
+          if (item) {
+            isFocusedResult = item.isFocused();
           }
           tmp2 = isFocusedResult;
-          obj = key;
         }
         return tmp2;
       };
-      arg0[key.key] = obj;
+      acc[item.key] = obj;
     }
-    return arg0;
+    return acc;
   }, {});
   const insertionEffect = emitter.useInsertionEffect(() => {
     closure_6.current = navigations;

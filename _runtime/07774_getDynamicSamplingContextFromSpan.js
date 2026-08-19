@@ -1,6 +1,8 @@
 // _runtime/07774_getDynamicSamplingContextFromSpan.js
+import spanTimeInputToSeconds from "07743_spanTimeInputToSeconds.js";
 import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
 import baggageHeaderToDynamicSamplingContext from "07751_baggageHeaderToDynamicSamplingContext.js";
+import _mod7753 from "metro/07753__.js";
 import getClient from "07765_getClient.js";
 import _mod7775 from "metro/07775__.js";
 
@@ -10,7 +12,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
   let obj = getClient;
   const client = obj.getClient();
   if (client) {
-    let tmpResult = tmp(7743);
+    let tmpResult = spanTimeInputToSeconds;
     const rootSpan = tmpResult.getRootSpan(spanContext);
     if (rootSpan[_frozenDsc]) {
       return tmp5;
@@ -22,7 +24,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       }
       let result = value;
       if (value) {
-        tmpResult = tmp(7751);
+        tmpResult = baggageHeaderToDynamicSamplingContext;
         result = tmpResult.baggageHeaderToDynamicSamplingContext(value);
       }
       if (result) {
@@ -32,33 +34,33 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         const tmp9 = client.getDsn() || {};
         let DEFAULT_ENVIRONMENT = options.environment;
         if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = tmp(7775).DEFAULT_ENVIRONMENT;
+          DEFAULT_ENVIRONMENT = _mod7775.DEFAULT_ENVIRONMENT;
         }
         obj = { environment: null, release: null, public_key: null, trace_id: null };
         obj[0] = DEFAULT_ENVIRONMENT;
         obj[1] = options.release;
         obj[2] = tmp9.publicKey;
         obj[3] = spanContext.spanContext().traceId;
-        const dropUndefinedKeysResult = tmp(7744).dropUndefinedKeys(obj);
+        const dropUndefinedKeysResult = addNonEnumerableProperty.dropUndefinedKeys(obj);
         client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult1 = tmp(7744);
-        const spanToJSONResult = tmp(7743).spanToJSON(rootSpan);
+        const tmpResult1 = addNonEnumerableProperty;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
         const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[tmp(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        const tmp14 = tmp13[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
         if (null != tmp14) {
           const _HermesInternal = HermesInternal;
           dropUndefinedKeysResult.sample_rate = "" + tmp14;
         }
         const description = spanToJSONResult.description;
-        const tmpResult2 = tmp(7743);
+        const tmpResult2 = spanTimeInputToSeconds;
         if (tmp17) {
           dropUndefinedKeysResult.transaction = description;
         }
-        tmp17 = "url" !== tmp13[tmp(undefined, 7753).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        tmp17 = "url" !== tmp13[_mod7753.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
         if (tmpResult3.hasTracingEnabled()) {
           const _String = String;
-          dropUndefinedKeysResult.sampled = String(tmp(7743).spanIsSampled(rootSpan));
-          const tmpResult4 = tmp(7743);
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult4 = spanTimeInputToSeconds;
         }
         client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
         return dropUndefinedKeysResult;
@@ -92,7 +94,7 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
     let obj = addNonEnumerableProperty;
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = tmp5(7775).DEFAULT_ENVIRONMENT;
+      DEFAULT_ENVIRONMENT = _mod7775.DEFAULT_ENVIRONMENT;
     }
     obj = { environment: null, release: null, public_key: null, trace_id: null };
     obj[0] = DEFAULT_ENVIRONMENT;
@@ -103,7 +105,6 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
     getOptions.emit("createDsc", dropUndefinedKeysResult);
     dsc = dropUndefinedKeysResult;
     const tmp4 = getOptions.getDsn() || {};
-    tmp5 = require;
   }
   return dsc;
 };

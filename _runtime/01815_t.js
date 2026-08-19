@@ -11,12 +11,12 @@ const fn = function t() {
     function loop(previousFrameTimestamp) {
       closure_0 = previousFrameTimestamp;
       if (closure_1 === self.nextCallId) {
-        if (null === tmp.previousFrameTimestamp) {
-          tmp.previousFrameTimestamp = previousFrameTimestamp;
+        if (null === self.previousFrameTimestamp) {
+          self.previousFrameTimestamp = previousFrameTimestamp;
         }
-        closure_1 = previousFrameTimestamp - tmp.previousFrameTimestamp;
-        const item = tmp.activeFrameCallbacks.forEach((arg0) => {
-          const value = closure_1_2.frameCallbackRegistry.get(arg0);
+        closure_1 = previousFrameTimestamp - self.previousFrameTimestamp;
+        const item = self.activeFrameCallbacks.forEach((item, index) => {
+          const value = self.frameCallbackRegistry.get(item);
           const startTime = value.startTime;
           if (null === startTime) {
             value.startTime = closure_0;
@@ -30,15 +30,16 @@ const fn = function t() {
             obj[2] = closure_0 - startTime;
             value.callback(obj);
           }
+          const frameCallbackRegistry = self.frameCallbackRegistry;
         });
-        if (tmp.activeFrameCallbacks.size > 0) {
-          tmp.previousFrameTimestamp = previousFrameTimestamp;
+        if (self.activeFrameCallbacks.size > 0) {
+          self.previousFrameTimestamp = previousFrameTimestamp;
           const _requestAnimationFrame = requestAnimationFrame;
           const animationFrame = requestAnimationFrame(closure_0);
         } else {
-          tmp.previousFrameTimestamp = null;
+          self.previousFrameTimestamp = null;
         }
-        const activeFrameCallbacks = tmp.activeFrameCallbacks;
+        const activeFrameCallbacks = self.activeFrameCallbacks;
       }
     }
     if (tmp) {

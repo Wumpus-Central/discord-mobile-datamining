@@ -11,7 +11,7 @@ if (BooleanResult) {
       if (typeof params === "object") {
         const _Object = Object;
         const keys = Object.keys(params);
-        const mapped = keys.map((arg0) => "" + arg0 + ":" + params[arg0]);
+        const mapped = keys.map((item, index) => "" + item + ":" + params[item]);
         let joined = mapped.join(" ");
       } else {
         let str = params;

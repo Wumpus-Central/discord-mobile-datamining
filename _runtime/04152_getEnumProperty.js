@@ -1,7 +1,7 @@
 // _runtime/04152_getEnumProperty.js
 import c from "04135_c.js";
 import useRiveProperty from "04148_useRiveProperty.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function getEnumProperty(enumProperty) {
@@ -11,7 +11,6 @@ function getEnumProperty(enumProperty) {
 export const useRiveEnum = function useRiveEnum(FillColor, instance) {
   let obj = c;
   const cResult = obj.c(4);
-  const obj2 = useRiveProperty;
   [tmp3, tmp4, tmp5] = callback(useRiveProperty.useRiveProperty(instance, FillColor, getEnumProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {

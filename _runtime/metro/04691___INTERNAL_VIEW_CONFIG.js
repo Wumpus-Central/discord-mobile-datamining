@@ -6,8 +6,7 @@ import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
 ({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
-let obj = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
-obj = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: result.colorAttribute, tintColor: result.colorAttribute, textColor: result.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: result.colorAttribute, headerIconColor: result.colorAttribute, shouldShowHintSearchIcon: true };
+let obj = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: result.colorAttribute, tintColor: result.colorAttribute, textColor: result.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: result.colorAttribute, headerIconColor: result.colorAttribute, shouldShowHintSearchIcon: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
 obj[2] = obj;
 obj = {

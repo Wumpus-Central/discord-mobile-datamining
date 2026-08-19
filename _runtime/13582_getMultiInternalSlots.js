@@ -17,9 +17,9 @@ function getMultiInternalSlots(get) {
   require = value;
   if (value) {
     const _Object = Object;
-    return items.reduce((arg0, arg1) => {
-      arg0[arg1] = value[arg1];
-      return arg0;
+    return items.reduce((acc, item, index) => {
+      acc[item] = value[item];
+      return acc;
     }, Object.create(null));
   } else {
     const _TypeError = TypeError;
@@ -31,7 +31,6 @@ function getMultiInternalSlots(get) {
 let obj = { strategy: monadic.strategies.variadic };
 obj = { strategy: monadic.strategies.variadic };
 obj = { strategy: monadic.strategies.variadic };
-const obj1 = { strategy: monadic.strategies.variadic };
 
 export const repeat = function repeat(str) {
   let length;
@@ -62,7 +61,6 @@ export const setMultiInternalSlots = function setMultiInternalSlots(get) {
   const keys = Object.keys(arg2);
   for (let num = 0; num < keys.length; num = num + 1) {
     let tmp = keys[num];
-    let tmp2 = num;
     if (!get.get(arg1)) {
       let _Object = Object;
       let result = get.set(arg1, Object.create(null));
@@ -80,8 +78,8 @@ export const isLiteralPart = function isLiteralPart(type) {
 export const defineProperty = function defineProperty(arg0, arg1, value) {
   Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
 };
-export const createDataProperty = function createDataProperty(arg0, direction, firstDay) {
-  Object.defineProperty(arg0, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
+export const createDataProperty = function createDataProperty(closure_2, direction, firstDay) {
+  Object.defineProperty(closure_2, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
 };
 export const invariant = function invariant(arg0, arg1, arg2) {
   let _Error = arg2;
@@ -107,7 +105,6 @@ export const createMemoizedNumberFormat = monadic.memoize(() => {
   }
   const bind = NumberFormat.bind;
   const items1 = [undefined];
-  const obj = e;
   return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedDateTimeFormat = monadic.memoize(() => {
@@ -123,7 +120,6 @@ export const createMemoizedDateTimeFormat = monadic.memoize(() => {
   }
   const bind = DateTimeFormat.bind;
   const items1 = [undefined];
-  const obj = e;
   return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedPluralRules = monadic.memoize(() => {
@@ -139,7 +135,6 @@ export const createMemoizedPluralRules = monadic.memoize(() => {
   }
   const bind = PluralRules.bind;
   const items1 = [undefined];
-  const obj = e;
   return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedLocale = monadic.memoize(() => {
@@ -155,7 +150,6 @@ export const createMemoizedLocale = monadic.memoize(() => {
   }
   const bind = Locale.bind;
   const items1 = [undefined];
-  const obj = e;
   return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
 }, { strategy: monadic.strategies.variadic });
 export const createMemoizedListFormat = monadic.memoize(() => {
@@ -171,6 +165,5 @@ export const createMemoizedListFormat = monadic.memoize(() => {
   }
   const bind = ListFormat.bind;
   const items1 = [undefined];
-  const obj = e;
   return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
 }, { strategy: monadic.strategies.variadic });

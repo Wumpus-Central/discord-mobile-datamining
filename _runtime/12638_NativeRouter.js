@@ -5,7 +5,7 @@ import _extends from "metro/04208__extends.js";
 import { Alert } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 class NativeRouter {
   constructor(arg0) {
     obj = {};
@@ -15,8 +15,8 @@ class NativeRouter {
 }
 noopDefault;
 NativeRouter.defaultProps = {
-  getUserConfirmation(arg0, arg1) {
-    closure_0 = arg1;
+  getUserConfirmation(captureScreenshotError, fn2) {
+    closure_0 = fn2;
     const items = [
       {
         text: "Cancel",
@@ -31,7 +31,7 @@ NativeRouter.defaultProps = {
         }
       }
     ];
-    Alert.alert("Confirm", arg0, items);
+    Alert.alert("Confirm", captureScreenshotError, items);
   }
 };
 NativeRouter.propTypes = { initialEntries: emptyFunctionDefault.array, initialIndex: emptyFunctionDefault.number, getUserConfirmation: emptyFunctionDefault.func, keyLength: emptyFunctionDefault.number, children: emptyFunctionDefault.node };

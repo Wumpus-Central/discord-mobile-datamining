@@ -13,6 +13,7 @@ if (typeof process === "object") {
         };
       }
       module.exports = fn;
+      obj = /\bsemver\b/i;
     }
   }
 }

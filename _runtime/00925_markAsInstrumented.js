@@ -1,7 +1,8 @@
 // _runtime/00925_markAsInstrumented.js
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00853__toArray.js";
+import consoleSandbox from "00824_consoleSandbox.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _toArray from "00853__toArray.js";
 import setupIntegration from "00887_setupIntegration.js";
 
 function markAsInstrumented(arg0) {
@@ -52,7 +53,7 @@ function translateFiltersIntoMethods(str, str2) {
       } else {
         if ("or" !== str) {
           if (!str.endsWith(".or")) {
-            const arr = callback(str2.split("."));
+            const arr = _toArray(str2.split("."));
             const first = arr[0];
             const substr = arr.slice(1);
             let startsWithResult;
@@ -95,7 +96,7 @@ function translateFiltersIntoMethods(str, str2) {
               str3 = str5;
             }
             const _HermesInternal = HermesInternal;
-            return "" + str3 + "(" + str + ", " + substr.join(".") + ")";
+            return "" + str3 + "(" + "." + ", " + substr.join(".") + ")";
           }
         }
         const _HermesInternal2 = HermesInternal;
@@ -122,8 +123,8 @@ function instrumentAuthOperation(arg0) {
       if (closure_1) {
         str2 = "(admin) ";
       }
-      obj = { name: "auth " + str2 + lib.name, attributes: null };
-      obj = { [tmp(tmp2[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [tmp(tmp2[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      { name: "auth " + str2 + lib.name, attributes: null };
+      obj = { [tmp(flag[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [tmp(flag[3]).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
       if (closure_1) {
         str = "admin.";
       }
@@ -132,56 +133,58 @@ function instrumentAuthOperation(arg0) {
       return obj.startSpan(obj, (arg0) => {
         closure_0 = arg0;
         const applyResult = Reflect.apply(closure_0, closure_1, args);
-        const nextPromise = Reflect.apply(closure_0, closure_1, args).then((obj) => {
-          if (obj) {
-            if (typeof obj === "object") {
-              if ("error" in obj) {
-                if (obj.error) {
+        const nextPromise = Reflect.apply(closure_0, closure_1, args).then((result) => {
+          if (result) {
+            if (typeof result === "object") {
+              if ("error" in result) {
+                if (result.error) {
                   obj = { code: null };
                   obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
                   store.setStatus(obj);
                   obj = { mechanism: null };
                   obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(closure_1_1[5]).captureException(obj.error, obj);
+                  store(closure_1_1[5]).captureException(result.error, obj);
                   obj = store;
                   const obj4 = store(closure_1_1[5]);
                 }
                 obj.end();
-                return obj;
+                return result;
               }
             }
           }
           obj = store;
           store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
+          obj1 = { code: store(closure_1_1[4]).SPAN_STATUS_OK };
         });
         items = [...closure_2];
-        return Reflect.apply(closure_0, closure_1, args).then((obj) => {
-          if (obj) {
-            if (typeof obj === "object") {
-              if ("error" in obj) {
-                if (obj.error) {
+        return Reflect.apply(closure_0, closure_1, args).then((result) => {
+          if (result) {
+            if (typeof result === "object") {
+              if ("error" in result) {
+                if (result.error) {
                   obj = { code: null };
                   obj[0] = store(closure_1_1[4]).SPAN_STATUS_ERROR;
                   store.setStatus(obj);
                   obj = { mechanism: null };
                   obj[0] = { handled: false, type: "auto.db.supabase.auth" };
-                  store(closure_1_1[5]).captureException(obj.error, obj);
+                  store(closure_1_1[5]).captureException(result.error, obj);
                   obj = store;
                   const obj4 = store(closure_1_1[5]);
                 }
                 obj.end();
-                return obj;
+                return result;
               }
             }
           }
           obj = store;
           store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_OK });
-        }).catch((arg0) => {
+          obj1 = { code: store(closure_1_1[4]).SPAN_STATUS_OK };
+        }).catch((error) => {
           store.setStatus({ code: store(closure_1_1[4]).SPAN_STATUS_ERROR });
           store.end();
           obj = { code: store(closure_1_1[4]).SPAN_STATUS_ERROR };
-          store(closure_1_1[5]).captureException(arg0, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
-          throw arg0;
+          store(closure_1_1[5]).captureException(error, { mechanism: { handled: false, type: "auto.db.supabase.auth" } });
+          throw error;
         }).then.apply(items);
       });
     }
@@ -193,12 +196,12 @@ let closure_4 = ["reauthenticate", "signInAnonymously", "signInWithOAuth", "sign
 let closure_5 = ["createUser", "deleteUser", "listUsers", "getUserById", "updateUserById", "inviteUserByEmail"];
 let obj = { eq: "eq", neq: "neq", gt: "gt", gte: "gte", lt: "lt", lte: "lte", like: "like", "like(all)": "likeAllOf", "like(any)": "likeAnyOf", ilike: "ilike", "ilike(all)": "ilikeAllOf", "ilike(any)": "ilikeAnyOf", is: "is", in: "in", cs: "contains", cd: "containedBy", sr: "rangeGt", nxl: "rangeGte", sl: "rangeLt", nxr: "rangeLte", adj: "rangeAdjacent", ov: "overlaps", fts: "", plfts: "plain", phfts: "phrase", wfts: "websearch", not: "not" };
 let items = ["select", "insert", "upsert", "update", "delete"];
-function instrumentSupabaseClient(auth) {
-  if (auth) {
+function instrumentSupabaseClient(supabaseClient) {
+  if (supabaseClient) {
     const _Function = Function;
-    let constructor = auth;
-    if (auth.constructor !== Function) {
-      constructor = auth.constructor;
+    let constructor = supabaseClient;
+    if (supabaseClient.constructor !== Function) {
+      constructor = supabaseClient.constructor;
     }
     if (!isInstrumented(constructor.prototype.from)) {
       const _Proxy = Proxy;
@@ -247,23 +250,18 @@ function instrumentSupabaseClient(auth) {
       constructor.prototype.from = proxy;
       markAsInstrumented(constructor.prototype.from);
     }
-    (function instrumentSupabaseAuthClient(auth) {
-      auth = auth.auth;
+    (function instrumentSupabaseAuthClient(supabaseClient) {
+      const auth = supabaseClient.auth;
       if (auth) {
-        if (!callback2(auth.auth)) {
+        if (!callback2(supabaseClient.auth)) {
           for (const item10014 of closure_4) {
-            let tmp4 = item10014;
             let tmp5 = auth[item10014];
             let tmp6 = tmp5;
             if (tmp5) {
-              let tmp7 = item10014;
-              tmp5 = typeof arg0.auth[tmp4] === "function";
+              tmp5 = typeof arg0.auth[item10014] === "function";
             }
             if (tmp5) {
-              let tmp8 = item10014;
-              let tmp9 = callback3;
-              let tmp10 = tmp6;
-              arg0.auth[tmp4] = callback3(tmp6);
+              arg0.auth[item10014] = callback3(tmp6);
             }
             continue;
           }
@@ -274,28 +272,20 @@ function instrumentSupabaseClient(auth) {
             let tmp17 = auth.admin[nextResult];
             let tmp18 = tmp17;
             if (tmp17) {
-              let tmp19 = nextResult;
-              tmp17 = typeof auth.auth.admin[tmp16] === "function";
+              tmp17 = typeof supabaseClient.auth.admin[tmp16] === "function";
             }
             if (tmp17) {
-              let tmp20 = nextResult;
-              let tmp21 = callback3;
-              let tmp22 = tmp18;
-              auth.auth.admin[tmp16] = callback3(tmp18, true);
+              supabaseClient.auth.admin[tmp16] = callback3(tmp18, true);
             }
             continue;
           }
-          callback(auth.auth);
-          const tmp11 = dependencyMap;
+          callback(supabaseClient.auth);
         }
       }
-    })(auth);
-  } else {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const debug = tmp(824).debug;
-      debug.warn("Supabase integration was not installed because no Supabase client was provided.");
-    }
-    tmp = require;
+    })(supabaseClient);
+  } else if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
+    debug.warn("Supabase integration was not installed because no Supabase client was provided.");
   }
 }
 
@@ -307,16 +297,16 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
   supabaseClient = supabaseClient.supabaseClient;
   return {
     setupOnce() {
-      if (typeof closure_1_13 !== "function") {
+      if (typeof instrumentSupabaseClient !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (supabaseClient) {
         const _Function = Function;
-        let constructor = tmp;
-        if (tmp.constructor !== Function) {
-          constructor = tmp.constructor;
+        let constructor = supabaseClient;
+        if (supabaseClient.constructor !== Function) {
+          constructor = supabaseClient.constructor;
         }
-        if (!closure_1_9(constructor.prototype.from)) {
+        if (!isInstrumented(constructor.prototype.from)) {
           let _Proxy = Proxy;
           obj = { apply: null };
           obj[0] = function apply(arg0, arg1, arg2) {
@@ -344,25 +334,20 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
           };
           let proxy = new Proxy(constructor.prototype.from, obj);
           constructor.prototype.from = proxy;
-          closure_1_8(constructor.prototype.from);
+          markAsInstrumented(constructor.prototype.from);
         }
-        (function instrumentSupabaseAuthClient(auth) {
-          auth = auth.auth;
+        (function instrumentSupabaseAuthClient(supabaseClient) {
+          const auth = supabaseClient.auth;
           if (auth) {
-            if (!callback2(auth.auth)) {
+            if (!callback2(supabaseClient.auth)) {
               for (const item10014 of closure_4) {
-                let tmp4 = item10014;
                 let tmp5 = auth[item10014];
                 let tmp6 = tmp5;
                 if (tmp5) {
-                  let tmp7 = item10014;
-                  tmp5 = typeof arg0.auth[tmp4] === "function";
+                  tmp5 = typeof arg0.auth[item10014] === "function";
                 }
                 if (tmp5) {
-                  let tmp8 = item10014;
-                  let tmp9 = callback3;
-                  let tmp10 = tmp6;
-                  arg0.auth[tmp4] = callback3(tmp6);
+                  arg0.auth[item10014] = callback3(tmp6);
                 }
                 continue;
               }
@@ -373,29 +358,20 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
                 let tmp17 = auth.admin[nextResult];
                 let tmp18 = tmp17;
                 if (tmp17) {
-                  let tmp19 = nextResult;
-                  tmp17 = typeof auth.auth.admin[tmp16] === "function";
+                  tmp17 = typeof supabaseClient.auth.admin[tmp16] === "function";
                 }
                 if (tmp17) {
-                  let tmp20 = nextResult;
-                  let tmp21 = callback3;
-                  let tmp22 = tmp18;
-                  auth.auth.admin[tmp16] = callback3(tmp18, true);
+                  supabaseClient.auth.admin[tmp16] = callback3(tmp18, true);
                 }
                 continue;
               }
-              callback(auth.auth);
-              const tmp11 = dependencyMap;
+              callback(supabaseClient.auth);
             }
           }
-        })(tmp);
-      } else {
-        if (supabaseClient(closure_1_1[9]).DEBUG_BUILD) {
-          let debug = tmp2(tmp3[10]).debug;
-          debug.warn("Supabase integration was not installed because no Supabase client was provided.");
-        }
-        tmp2 = supabaseClient;
-        tmp3 = closure_1_1;
+        })(supabaseClient);
+      } else if (supabaseClient(dependencyMap[9]).DEBUG_BUILD) {
+        let debug = supabaseClient(dependencyMap[10]).debug;
+        debug.warn("Supabase integration was not installed because no Supabase client was provided.");
       }
     },
     name: "Supabase"

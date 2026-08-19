@@ -1,17 +1,14 @@
 // _runtime/00942_extractTargetInfo.js
 import _mod940 from "metro/00940__.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let obj = { "tools/call": null, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };
-obj = { targetField: "name", targetAttribute: _mod940.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
+let obj = { targetField: "name", targetAttribute: _mod940.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
 obj[0] = obj;
 obj = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
 obj[1] = obj;
 obj[2] = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
-let obj1 = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
 obj[3] = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
-const obj2 = { targetField: "uri", targetAttribute: _mod940.MCP_RESOURCE_URI_ATTRIBUTE };
 obj[4] = { targetField: "name", targetAttribute: _mod940.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
 
 export const extractTargetInfo = function extractTargetInfo(method, params) {
@@ -60,11 +57,8 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
               const entries = Object.entries(tmp5);
               const tmp29 = entries[Symbol.iterator]();
               while (tmp29 !== undefined) {
-                let tmp9 = callback;
-                let tmp10 = callback(tmp7, 2);
+                let tmp10 = _slicedToArray(tmp7, 2);
                 let str = tmp10[0];
-                let tmp11 = require;
-                let tmp12 = dependencyMap;
                 let _HermesInternal = HermesInternal;
                 let _JSON = JSON;
                 let combined = "" + _mod940.MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();

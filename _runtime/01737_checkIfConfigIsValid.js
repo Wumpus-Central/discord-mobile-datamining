@@ -1,16 +1,15 @@
 // _runtime/01737_checkIfConfigIsValid.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import { addLogBoxLog } from "01658_addLogBoxLog.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
-const require = arg1;
+const require = fn;
 function checkIfConfigIsValid(duration) {
   const _require = duration;
   dependencyMap = "";
   const items = ["stiffness", "damping", "dampingRatio", "restDisplacementThreshold", "restSpeedThreshold", "mass"];
-  const item = items.forEach((arg0) => {
-    if (duration[arg0] <= 0) {
+  const item = items.forEach((item, index) => {
+    if (duration[item] <= 0) {
       const _HermesInternal = HermesInternal;
-      closure_1 = closure_1 + ", " + arg0 + " must be grater than zero but got " + tmp;
+      closure_1 = closure_1 + ", " + item + " must be grater than zero but got " + tmp;
     }
   });
   if (duration.duration < 0) {
@@ -38,7 +37,7 @@ function checkIfConfigIsValid(duration) {
     dependencyMap = dependencyMap + ", clamp.min should be lower than clamp.max, got clamp: {min: " + duration.clamp.min + ", max: " + duration.clamp.max + "} ";
   }
   if ("" !== dependencyMap) {
-    const logger = _addLogBoxLog.logger;
+    const logger = require("01658_addLogBoxLog.js").logger;
     logger.warn(`Invalid spring config${closure_1}`);
   }
   return "" === dependencyMap;
@@ -59,8 +58,6 @@ function bisectRoot(arg0) {
     if (maxIterations > 0) {
       while (true) {
         let diff = maxIterations - 1;
-        let tmp5 = tmp3;
-        let tmp6 = max;
         let tmp7 = min;
         let tmp8 = tmp3;
         if (func(tmp3) < 0) {
@@ -175,7 +172,7 @@ function scaleZetaToMatchClamps(toValue, clamp) {
     items2[1] = absolute3;
     const _Math9 = Math;
     const items3 = [];
-    items3[HermesBuiltin.arraySpread(items2.filter((arg0) => undefined !== arg0), 0)] = zeta;
+    items3[HermesBuiltin.arraySpread(items2.filter((item, index) => undefined !== item), 0)] = zeta;
     const _Math10 = Math;
     return HermesBuiltin.apply(items3, Math);
   }
@@ -230,8 +227,6 @@ function calculateNewMassToMatchDuration(diff, skipAnimation, velocity) {
       if (maxIterations > 0) {
         while (true) {
           diff = maxIterations - 1;
-          let tmp8 = tmp6;
-          let tmp9 = max;
           let tmp10 = min;
           let tmp11 = tmp6;
           if (func(tmp6) < 0) {
@@ -290,7 +285,6 @@ function isAnimationTerminatingCalculation(velocity, overshootClamping) {
     let tmp2 = current > toValue && startValue < toValue;
     if (!tmp2) {
       tmp2 = current < toValue && startValue > toValue;
-      const tmp3 = current < toValue && startValue > toValue;
     }
     overshootClamping = tmp2;
   }

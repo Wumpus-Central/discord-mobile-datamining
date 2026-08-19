@@ -32,5 +32,4 @@ arg5.getDefaultRelease = function getDefaultRelease() {
     return combined;
   }
   obj = isHermesEnabled;
-  const tmp = require;
 };

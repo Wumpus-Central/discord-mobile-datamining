@@ -5,8 +5,7 @@ import getDebugMetadata from "01119_getDebugMetadata.js";
 require = arg1;
 const dependencyMap = arg6;
 function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {
-  let obj = { debug_meta: null, build_id: null, device_cpu_frequencies: null, device_is_emulator: null, device_locale: null, device_manufacturer: null, device_model: null, device_os_name: null, device_os_version: null, device_physical_memory_bytes: null, environment: null, profile_id: null, timestamp: null, release: null, dist: null, transaction_id: null, transaction_name: null, trace_id: null, version_name: null, version_code: null };
-  obj = { images: null };
+  const obj = { images: null };
   const merged = Object.assign({}, build_id);
   obj[0] = getDebugMetadata.getDebugMetadata();
   obj[0] = obj;
@@ -183,7 +182,6 @@ arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFro
     if ("transaction" === arg1) {
       for (let num = 1; num < arg0.length; num = num + 1) {
         let contexts = arg0[num].contexts;
-        let tmp = num;
         let trace;
         if (null !== contexts) {
           if (undefined !== contexts) {
@@ -203,7 +201,6 @@ arg5.findProfiledTransactionsFromEnvelope = function findProfiledTransactionsFro
           }
         }
         if (profile_id) {
-          let tmp5 = items;
           let arr = items.push(arg0[num]);
         }
       }
@@ -251,7 +248,6 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
         let environment = contexts.environment;
         if (!environment) {
           environment = isHermesEnabled.getDefaultEnvironment();
-          const obj4 = isHermesEnabled;
         }
         obj[4] = environment;
         const contexts2 = contexts.contexts;
@@ -431,8 +427,7 @@ arg5.enrichCombinedProfileWithEventContext = function enrichCombinedProfileWithE
 };
 arg5.enrichAndroidProfileWithEventContext = enrichAndroidProfileWithEventContext;
 arg5.createHermesProfilingEvent = function createHermesProfilingEvent(result1) {
-  obj = { platform: "javascript", version: "1", profile: result1, transaction: obj };
-  obj = { active_thread_id: result1.active_thread_id };
+  const obj = { active_thread_id: result1.active_thread_id };
   return obj;
 };
 arg5.addProfilesToEnvelope = function addProfilesToEnvelope(arg0, arg1) {

@@ -43,26 +43,25 @@ class AsyncIterator {
       closure_0 = arg0;
       let nextPromise = arg1;
       if (nextPromise) {
-        function callInvokeWithMethodAndArg() {
-          return new Promise((arg0, arg1) => {
+        function callInvokeWithMethodAndArg(result) {
+          return new Promise((arg0, fn) => {
             closure_0 = arg0;
-            closure_1 = arg1;
+            closure_1 = fn;
             const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
             if ("throw" !== tmp.type) {
-              iter = tmp.arg;
-              let value = iter.value;
+              let value = tmp.arg.value;
               if (value) {
                 if (typeof value === "object") {
                   let call = closure_1_0.call;
                   if (typeof call === "unknown") {
-                    let callResult = tmp8("__await");
+                    let callResult = closure_1_0("__await");
                   } else {
                     callResult = call(value, "__await");
                   }
                   if (callResult) {
                     let resolved = Promise.resolve(value.__await);
-                    resolved.then((arg0) => {
-                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                    resolved.then((result) => {
+                      const tmp2 = closure_1_10(lib.next, lib, result);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
                         const value = iter.value;
@@ -76,8 +75,8 @@ class AsyncIterator {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -132,14 +131,14 @@ class AsyncIterator {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -178,8 +177,8 @@ class AsyncIterator {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -234,14 +233,14 @@ class AsyncIterator {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -267,18 +266,17 @@ class AsyncIterator {
                       }
                     });
                   }
-                  tmp8 = closure_1_0;
                 }
               }
               let resolved1 = Promise.resolve(value);
-              resolved1.then((value) => {
-                iter.value = value;
+              resolved1.then((result) => {
+                iter.value = result;
                 lib(iter);
               }, (arg0) => {
                 const tmp2 = closure_1_10(lib.throw, lib, arg0);
                 if ("throw" !== tmp2.type) {
                   iter = tmp2.arg;
-                  let fn = iter.value;
+                  fn = iter.value;
                   if (fn) {
                     if (typeof fn === "object") {
                       const call = lib.call;
@@ -316,8 +314,8 @@ class AsyncIterator {
                         closure_1(tmp2.arg);
                       }
                     };
-                    nextPromise = resolved.then((arg0) => {
-                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                    nextPromise = resolved.then((result) => {
+                      const tmp2 = closure_1_10(lib.next, lib, result);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
                         const value = iter.value;
@@ -344,14 +342,14 @@ class AsyncIterator {
                     }, fn);
                   }
                   const resolved1 = Promise.resolve(fn);
-                  nextPromise = resolved1.then((value) => {
-                    iter.value = value;
+                  nextPromise = resolved1.then((result) => {
+                    iter.value = result;
                     lib(iter);
                   }, (arg0) => {
                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
-                      let fn = iter.value;
+                      fn = iter.value;
                       if (fn) {
                         if (typeof fn === "object") {
                           const call = lib.call;
@@ -376,32 +374,32 @@ class AsyncIterator {
                   closure_1(tmp2.arg);
                 }
               });
+              iter = tmp.arg;
             } else {
-              arg1(tmp.arg);
+              fn(tmp.arg);
             }
           });
         }
         nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
       } else {
-        nextPromise = new Promise((arg0, arg1) => {
+        nextPromise = new Promise((arg0, fn) => {
           closure_0 = arg0;
-          closure_1 = arg1;
+          closure_1 = fn;
           const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
           if ("throw" !== tmp.type) {
-            iter = tmp.arg;
-            let value = iter.value;
+            let value = tmp.arg.value;
             if (value) {
               if (typeof value === "object") {
                 let call = closure_1_0.call;
                 if (typeof call === "unknown") {
-                  let callResult = tmp8("__await");
+                  let callResult = closure_1_0("__await");
                 } else {
                   callResult = call(value, "__await");
                 }
                 if (callResult) {
                   let resolved = Promise.resolve(value.__await);
-                  resolved.then((arg0) => {
-                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                  resolved.then((result) => {
+                    const tmp2 = closure_1_10(lib.next, lib, result);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
                       const value = iter.value;
@@ -415,8 +413,8 @@ class AsyncIterator {
                           }
                           if (callResult) {
                             const resolved = Promise.resolve(value.__await);
-                            resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -430,8 +428,8 @@ class AsyncIterator {
                                     }
                                     if (callResult) {
                                       const resolved = Promise.resolve(value.__await);
-                                      resolved.then((arg0) => {
-                                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                      resolved.then((result) => {
+                                        const tmp2 = closure_1_10(lib.next, lib, result);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
                                           const value = iter.value;
@@ -486,14 +484,14 @@ class AsyncIterator {
                                   }
                                 }
                                 const resolved1 = Promise.resolve(value);
-                                resolved1.then((value) => {
-                                  iter.value = value;
+                                resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -532,8 +530,8 @@ class AsyncIterator {
                                     }
                                     if (callResult) {
                                       const resolved = Promise.resolve(value.__await);
-                                      resolved.then((arg0) => {
-                                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                      resolved.then((result) => {
+                                        const tmp2 = closure_1_10(lib.next, lib, result);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
                                           const value = iter.value;
@@ -588,14 +586,14 @@ class AsyncIterator {
                                   }
                                 }
                                 const resolved1 = Promise.resolve(value);
-                                resolved1.then((value) => {
-                                  iter.value = value;
+                                resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -625,14 +623,14 @@ class AsyncIterator {
                         }
                       }
                       const resolved1 = Promise.resolve(value);
-                      resolved1.then((value) => {
-                        iter.value = value;
+                      resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -670,8 +668,8 @@ class AsyncIterator {
                                 closure_1(tmp2.arg);
                               }
                             };
-                            nextPromise = resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            nextPromise = resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -698,14 +696,14 @@ class AsyncIterator {
                             }, fn);
                           }
                           const resolved1 = Promise.resolve(fn);
-                          nextPromise = resolved1.then((value) => {
-                            iter.value = value;
+                          nextPromise = resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -748,8 +746,8 @@ class AsyncIterator {
                           }
                           if (callResult) {
                             const resolved = Promise.resolve(value.__await);
-                            resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -763,8 +761,8 @@ class AsyncIterator {
                                     }
                                     if (callResult) {
                                       const resolved = Promise.resolve(value.__await);
-                                      resolved.then((arg0) => {
-                                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                      resolved.then((result) => {
+                                        const tmp2 = closure_1_10(lib.next, lib, result);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
                                           const value = iter.value;
@@ -819,14 +817,14 @@ class AsyncIterator {
                                   }
                                 }
                                 const resolved1 = Promise.resolve(value);
-                                resolved1.then((value) => {
-                                  iter.value = value;
+                                resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -865,8 +863,8 @@ class AsyncIterator {
                                     }
                                     if (callResult) {
                                       const resolved = Promise.resolve(value.__await);
-                                      resolved.then((arg0) => {
-                                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                      resolved.then((result) => {
+                                        const tmp2 = closure_1_10(lib.next, lib, result);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
                                           const value = iter.value;
@@ -921,14 +919,14 @@ class AsyncIterator {
                                   }
                                 }
                                 const resolved1 = Promise.resolve(value);
-                                resolved1.then((value) => {
-                                  iter.value = value;
+                                resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -958,14 +956,14 @@ class AsyncIterator {
                         }
                       }
                       const resolved1 = Promise.resolve(value);
-                      resolved1.then((value) => {
-                        iter.value = value;
+                      resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -1003,8 +1001,8 @@ class AsyncIterator {
                                 closure_1(tmp2.arg);
                               }
                             };
-                            nextPromise = resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            nextPromise = resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -1031,14 +1029,14 @@ class AsyncIterator {
                             }, fn);
                           }
                           const resolved1 = Promise.resolve(fn);
-                          nextPromise = resolved1.then((value) => {
-                            iter.value = value;
+                          nextPromise = resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -1068,18 +1066,17 @@ class AsyncIterator {
                     }
                   });
                 }
-                tmp8 = closure_1_0;
               }
             }
             let resolved1 = Promise.resolve(value);
-            resolved1.then((value) => {
-              iter.value = value;
+            resolved1.then((result) => {
+              iter.value = result;
               lib(iter);
             }, (arg0) => {
               const tmp2 = closure_1_10(lib.throw, lib, arg0);
               if ("throw" !== tmp2.type) {
                 iter = tmp2.arg;
-                let fn = iter.value;
+                fn = iter.value;
                 if (fn) {
                   if (typeof fn === "object") {
                     const call = lib.call;
@@ -1106,8 +1103,8 @@ class AsyncIterator {
                           }
                           if (callResult) {
                             const resolved = Promise.resolve(value.__await);
-                            resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -1162,14 +1159,14 @@ class AsyncIterator {
                         }
                       }
                       const resolved1 = Promise.resolve(value);
-                      resolved1.then((value) => {
-                        iter.value = value;
+                      resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -1194,8 +1191,8 @@ class AsyncIterator {
                       closure_1(tmp2.arg);
                     }
                   };
-                  nextPromise = resolved.then((arg0) => {
-                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                  nextPromise = resolved.then((result) => {
+                    const tmp2 = closure_1_10(lib.next, lib, result);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
                       const value = iter.value;
@@ -1209,8 +1206,8 @@ class AsyncIterator {
                           }
                           if (callResult) {
                             const resolved = Promise.resolve(value.__await);
-                            resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -1265,14 +1262,14 @@ class AsyncIterator {
                         }
                       }
                       const resolved1 = Promise.resolve(value);
-                      resolved1.then((value) => {
-                        iter.value = value;
+                      resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -1299,14 +1296,14 @@ class AsyncIterator {
                   }, fn);
                 }
                 const resolved1 = Promise.resolve(fn);
-                nextPromise = resolved1.then((value) => {
-                  iter.value = value;
+                nextPromise = resolved1.then((result) => {
+                  iter.value = result;
                   lib(iter);
                 }, (arg0) => {
                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                   if ("throw" !== tmp2.type) {
                     iter = tmp2.arg;
-                    let fn = iter.value;
+                    fn = iter.value;
                     if (fn) {
                       if (typeof fn === "object") {
                         const call = lib.call;
@@ -1344,8 +1341,8 @@ class AsyncIterator {
                           closure_1(tmp2.arg);
                         }
                       };
-                      nextPromise = resolved.then((arg0) => {
-                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                      nextPromise = resolved.then((result) => {
+                        const tmp2 = closure_1_10(lib.next, lib, result);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
                           const value = iter.value;
@@ -1372,14 +1369,14 @@ class AsyncIterator {
                       }, fn);
                     }
                     const resolved1 = Promise.resolve(fn);
-                    nextPromise = resolved1.then((value) => {
-                      iter.value = value;
+                    nextPromise = resolved1.then((result) => {
+                      iter.value = result;
                       lib(iter);
                     }, (arg0) => {
                       const tmp2 = closure_1_10(lib.throw, lib, arg0);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
-                        let fn = iter.value;
+                        fn = iter.value;
                         if (fn) {
                           if (typeof fn === "object") {
                             const call = lib.call;
@@ -1408,8 +1405,9 @@ class AsyncIterator {
                 closure_1(tmp2.arg);
               }
             });
+            iter = tmp.arg;
           } else {
-            arg1(tmp.arg);
+            fn(tmp.arg);
           }
         });
       }
@@ -1551,10 +1549,8 @@ if (regeneratorRuntime) {
           iter = obj;
           let delegate = obj.delegate;
           if (delegate) {
-            let tmp2 = closure_1_15;
-            let tmp3 = closure_1_15(delegate, iter);
+            let tmp3 = maybeInvokeDelegate(delegate, iter);
             if (tmp3) {
-              let tmp15 = closure_1_8;
               if (tmp3 === closure_1_8) {
                 continue;
               } else {
@@ -1567,8 +1563,6 @@ if (regeneratorRuntime) {
             iter._sent = arg;
             iter.sent = arg;
           } else if ("throw" === iter.method) {
-            let tmp5 = closure_3;
-            let tmp6 = closure_1_4;
             if (closure_3 === closure_1_4) {
               break;
             } else {
@@ -1577,15 +1571,10 @@ if (regeneratorRuntime) {
           } else if ("return" === iter.method) {
             let abruptResult = iter.abrupt("return", iter.arg);
           }
-          let tmp9 = closure_1_6;
           closure_3 = closure_1_6;
-          let tmp10 = closure_1_10;
-          let tmp11 = iter;
-          let tmp12 = c1;
-          let tmp13 = closure_1_10(iter, c1, iter);
+          let tmp13 = tryCatch(iter, c1, iter);
           if ("normal" === tmp13.type) {
             closure_3 = iter.done ? closure_1_7 : closure_1_5;
-            let tmp14 = closure_1_8;
             if (tmp13.arg === closure_1_8) {
               continue;
             } else {
@@ -1598,7 +1587,6 @@ if (regeneratorRuntime) {
             if ("throw" !== tmp13.type) {
               continue;
             } else {
-              let tmp25 = closure_1_7;
               closure_3 = closure_1_7;
               iter.method = "throw";
               iter.arg = tmp13.arg;
@@ -1636,26 +1624,25 @@ if (regeneratorRuntime) {
         closure_0 = arg0;
         let nextPromise = arg1;
         if (nextPromise) {
-          function callInvokeWithMethodAndArg() {
-            return new Promise((arg0, arg1) => {
+          function callInvokeWithMethodAndArg(result) {
+            return new Promise((arg0, fn) => {
               closure_0 = arg0;
-              closure_1 = arg1;
+              closure_1 = fn;
               const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
               if ("throw" !== tmp.type) {
-                iter = tmp.arg;
-                let value = iter.value;
+                let value = tmp.arg.value;
                 if (value) {
                   if (typeof value === "object") {
                     let call = closure_1_0.call;
                     if (typeof call === "unknown") {
-                      let callResult = tmp8("__await");
+                      let callResult = closure_1_0("__await");
                     } else {
                       callResult = call(value, "__await");
                     }
                     if (callResult) {
                       let resolved = Promise.resolve(value.__await);
-                      resolved.then((arg0) => {
-                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                      resolved.then((result) => {
+                        const tmp2 = closure_1_10(lib.next, lib, result);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
                           const value = iter.value;
@@ -1669,8 +1656,8 @@ if (regeneratorRuntime) {
                               }
                               if (callResult) {
                                 const resolved = Promise.resolve(value.__await);
-                                resolved.then((arg0) => {
-                                  const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                resolved.then((result) => {
+                                  const tmp2 = closure_1_10(lib.next, lib, result);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
                                     const value = iter.value;
@@ -1725,14 +1712,14 @@ if (regeneratorRuntime) {
                             }
                           }
                           const resolved1 = Promise.resolve(value);
-                          resolved1.then((value) => {
-                            iter.value = value;
+                          resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -1771,8 +1758,8 @@ if (regeneratorRuntime) {
                               }
                               if (callResult) {
                                 const resolved = Promise.resolve(value.__await);
-                                resolved.then((arg0) => {
-                                  const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                resolved.then((result) => {
+                                  const tmp2 = closure_1_10(lib.next, lib, result);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
                                     const value = iter.value;
@@ -1827,14 +1814,14 @@ if (regeneratorRuntime) {
                             }
                           }
                           const resolved1 = Promise.resolve(value);
-                          resolved1.then((value) => {
-                            iter.value = value;
+                          resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -1860,18 +1847,17 @@ if (regeneratorRuntime) {
                         }
                       });
                     }
-                    tmp8 = closure_1_0;
                   }
                 }
                 let resolved1 = Promise.resolve(value);
-                resolved1.then((value) => {
-                  iter.value = value;
+                resolved1.then((result) => {
+                  iter.value = result;
                   lib(iter);
                 }, (arg0) => {
                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                   if ("throw" !== tmp2.type) {
                     iter = tmp2.arg;
-                    let fn = iter.value;
+                    fn = iter.value;
                     if (fn) {
                       if (typeof fn === "object") {
                         const call = lib.call;
@@ -1909,8 +1895,8 @@ if (regeneratorRuntime) {
                           closure_1(tmp2.arg);
                         }
                       };
-                      nextPromise = resolved.then((arg0) => {
-                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                      nextPromise = resolved.then((result) => {
+                        const tmp2 = closure_1_10(lib.next, lib, result);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
                           const value = iter.value;
@@ -1937,14 +1923,14 @@ if (regeneratorRuntime) {
                       }, fn);
                     }
                     const resolved1 = Promise.resolve(fn);
-                    nextPromise = resolved1.then((value) => {
-                      iter.value = value;
+                    nextPromise = resolved1.then((result) => {
+                      iter.value = result;
                       lib(iter);
                     }, (arg0) => {
                       const tmp2 = closure_1_10(lib.throw, lib, arg0);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
-                        let fn = iter.value;
+                        fn = iter.value;
                         if (fn) {
                           if (typeof fn === "object") {
                             const call = lib.call;
@@ -1969,32 +1955,32 @@ if (regeneratorRuntime) {
                     closure_1(tmp2.arg);
                   }
                 });
+                iter = tmp.arg;
               } else {
-                arg1(tmp.arg);
+                fn(tmp.arg);
               }
             });
           }
           nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
         } else {
-          nextPromise = new Promise((arg0, arg1) => {
+          nextPromise = new Promise((arg0, fn) => {
             closure_0 = arg0;
-            closure_1 = arg1;
+            closure_1 = fn;
             const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
             if ("throw" !== tmp.type) {
-              iter = tmp.arg;
-              let value = iter.value;
+              let value = tmp.arg.value;
               if (value) {
                 if (typeof value === "object") {
                   let call = closure_1_0.call;
                   if (typeof call === "unknown") {
-                    let callResult = tmp8("__await");
+                    let callResult = closure_1_0("__await");
                   } else {
                     callResult = call(value, "__await");
                   }
                   if (callResult) {
                     let resolved = Promise.resolve(value.__await);
-                    resolved.then((arg0) => {
-                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                    resolved.then((result) => {
+                      const tmp2 = closure_1_10(lib.next, lib, result);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
                         const value = iter.value;
@@ -2008,8 +1994,8 @@ if (regeneratorRuntime) {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2023,8 +2009,8 @@ if (regeneratorRuntime) {
                                       }
                                       if (callResult) {
                                         const resolved = Promise.resolve(value.__await);
-                                        resolved.then((arg0) => {
-                                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                        resolved.then((result) => {
+                                          const tmp2 = closure_1_10(lib.next, lib, result);
                                           if ("throw" !== tmp2.type) {
                                             iter = tmp2.arg;
                                             const value = iter.value;
@@ -2079,14 +2065,14 @@ if (regeneratorRuntime) {
                                     }
                                   }
                                   const resolved1 = Promise.resolve(value);
-                                  resolved1.then((value) => {
-                                    iter.value = value;
+                                  resolved1.then((result) => {
+                                    iter.value = result;
                                     lib(iter);
                                   }, (arg0) => {
                                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
-                                      let fn = iter.value;
+                                      fn = iter.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = lib.call;
@@ -2125,8 +2111,8 @@ if (regeneratorRuntime) {
                                       }
                                       if (callResult) {
                                         const resolved = Promise.resolve(value.__await);
-                                        resolved.then((arg0) => {
-                                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                        resolved.then((result) => {
+                                          const tmp2 = closure_1_10(lib.next, lib, result);
                                           if ("throw" !== tmp2.type) {
                                             iter = tmp2.arg;
                                             const value = iter.value;
@@ -2181,14 +2167,14 @@ if (regeneratorRuntime) {
                                     }
                                   }
                                   const resolved1 = Promise.resolve(value);
-                                  resolved1.then((value) => {
-                                    iter.value = value;
+                                  resolved1.then((result) => {
+                                    iter.value = result;
                                     lib(iter);
                                   }, (arg0) => {
                                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
-                                      let fn = iter.value;
+                                      fn = iter.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = lib.call;
@@ -2218,14 +2204,14 @@ if (regeneratorRuntime) {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -2263,8 +2249,8 @@ if (regeneratorRuntime) {
                                   closure_1(tmp2.arg);
                                 }
                               };
-                              nextPromise = resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              nextPromise = resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2291,14 +2277,14 @@ if (regeneratorRuntime) {
                               }, fn);
                             }
                             const resolved1 = Promise.resolve(fn);
-                            nextPromise = resolved1.then((value) => {
-                              iter.value = value;
+                            nextPromise = resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -2341,8 +2327,8 @@ if (regeneratorRuntime) {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2356,8 +2342,8 @@ if (regeneratorRuntime) {
                                       }
                                       if (callResult) {
                                         const resolved = Promise.resolve(value.__await);
-                                        resolved.then((arg0) => {
-                                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                        resolved.then((result) => {
+                                          const tmp2 = closure_1_10(lib.next, lib, result);
                                           if ("throw" !== tmp2.type) {
                                             iter = tmp2.arg;
                                             const value = iter.value;
@@ -2412,14 +2398,14 @@ if (regeneratorRuntime) {
                                     }
                                   }
                                   const resolved1 = Promise.resolve(value);
-                                  resolved1.then((value) => {
-                                    iter.value = value;
+                                  resolved1.then((result) => {
+                                    iter.value = result;
                                     lib(iter);
                                   }, (arg0) => {
                                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
-                                      let fn = iter.value;
+                                      fn = iter.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = lib.call;
@@ -2458,8 +2444,8 @@ if (regeneratorRuntime) {
                                       }
                                       if (callResult) {
                                         const resolved = Promise.resolve(value.__await);
-                                        resolved.then((arg0) => {
-                                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                        resolved.then((result) => {
+                                          const tmp2 = closure_1_10(lib.next, lib, result);
                                           if ("throw" !== tmp2.type) {
                                             iter = tmp2.arg;
                                             const value = iter.value;
@@ -2514,14 +2500,14 @@ if (regeneratorRuntime) {
                                     }
                                   }
                                   const resolved1 = Promise.resolve(value);
-                                  resolved1.then((value) => {
-                                    iter.value = value;
+                                  resolved1.then((result) => {
+                                    iter.value = result;
                                     lib(iter);
                                   }, (arg0) => {
                                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
-                                      let fn = iter.value;
+                                      fn = iter.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = lib.call;
@@ -2551,14 +2537,14 @@ if (regeneratorRuntime) {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -2596,8 +2582,8 @@ if (regeneratorRuntime) {
                                   closure_1(tmp2.arg);
                                 }
                               };
-                              nextPromise = resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              nextPromise = resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2624,14 +2610,14 @@ if (regeneratorRuntime) {
                               }, fn);
                             }
                             const resolved1 = Promise.resolve(fn);
-                            nextPromise = resolved1.then((value) => {
-                              iter.value = value;
+                            nextPromise = resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -2661,18 +2647,17 @@ if (regeneratorRuntime) {
                       }
                     });
                   }
-                  tmp8 = closure_1_0;
                 }
               }
               let resolved1 = Promise.resolve(value);
-              resolved1.then((value) => {
-                iter.value = value;
+              resolved1.then((result) => {
+                iter.value = result;
                 lib(iter);
               }, (arg0) => {
                 const tmp2 = closure_1_10(lib.throw, lib, arg0);
                 if ("throw" !== tmp2.type) {
                   iter = tmp2.arg;
-                  let fn = iter.value;
+                  fn = iter.value;
                   if (fn) {
                     if (typeof fn === "object") {
                       const call = lib.call;
@@ -2699,8 +2684,8 @@ if (regeneratorRuntime) {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2755,14 +2740,14 @@ if (regeneratorRuntime) {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -2787,8 +2772,8 @@ if (regeneratorRuntime) {
                         closure_1(tmp2.arg);
                       }
                     };
-                    nextPromise = resolved.then((arg0) => {
-                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                    nextPromise = resolved.then((result) => {
+                      const tmp2 = closure_1_10(lib.next, lib, result);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
                         const value = iter.value;
@@ -2802,8 +2787,8 @@ if (regeneratorRuntime) {
                             }
                             if (callResult) {
                               const resolved = Promise.resolve(value.__await);
-                              resolved.then((arg0) => {
-                                const tmp2 = closure_1_10(lib.next, lib, arg0);
+                              resolved.then((result) => {
+                                const tmp2 = closure_1_10(lib.next, lib, result);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
                                   const value = iter.value;
@@ -2858,14 +2843,14 @@ if (regeneratorRuntime) {
                           }
                         }
                         const resolved1 = Promise.resolve(value);
-                        resolved1.then((value) => {
-                          iter.value = value;
+                        resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -2892,14 +2877,14 @@ if (regeneratorRuntime) {
                     }, fn);
                   }
                   const resolved1 = Promise.resolve(fn);
-                  nextPromise = resolved1.then((value) => {
-                    iter.value = value;
+                  nextPromise = resolved1.then((result) => {
+                    iter.value = result;
                     lib(iter);
                   }, (arg0) => {
                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
-                      let fn = iter.value;
+                      fn = iter.value;
                       if (fn) {
                         if (typeof fn === "object") {
                           const call = lib.call;
@@ -2937,8 +2922,8 @@ if (regeneratorRuntime) {
                             closure_1(tmp2.arg);
                           }
                         };
-                        nextPromise = resolved.then((arg0) => {
-                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                        nextPromise = resolved.then((result) => {
+                          const tmp2 = closure_1_10(lib.next, lib, result);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
                             const value = iter.value;
@@ -2965,14 +2950,14 @@ if (regeneratorRuntime) {
                         }, fn);
                       }
                       const resolved1 = Promise.resolve(fn);
-                      nextPromise = resolved1.then((value) => {
-                        iter.value = value;
+                      nextPromise = resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -3001,8 +2986,9 @@ if (regeneratorRuntime) {
                   closure_1(tmp2.arg);
                 }
               });
+              iter = tmp.arg;
             } else {
-              arg1(tmp.arg);
+              fn(tmp.arg);
             }
           });
         }
@@ -3050,23 +3036,19 @@ if (regeneratorRuntime) {
             if (!isNaN(next.length)) {
               c1 = -1;
               next = function next() {
-                let arr;
                 const sum = sum1 + 1;
                 sum1 = sum;
                 if (sum < next.length) {
                   while (true) {
-                    let tmp2 = next;
                     let call = next.call;
-                    arr = next;
                     let tmp3 = sum1;
-                    if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                    if (typeof call === "unknown" ? next(tmp3) : call(next, tmp3)) {
                       break;
                     } else {
-                      let tmp4 = sum1;
                       sum1 = sum1 + 1;
                     }
                   }
-                  next.value = arr[sum1];
+                  next.value = next[sum1];
                   next.done = false;
                   return next;
                 }
@@ -3106,26 +3088,25 @@ if (regeneratorRuntime) {
             closure_0 = arg0;
             let nextPromise = arg1;
             if (nextPromise) {
-              function callInvokeWithMethodAndArg() {
-                return new Promise((arg0, arg1) => {
+              function callInvokeWithMethodAndArg(result) {
+                return new Promise((arg0, fn) => {
                   closure_0 = arg0;
-                  closure_1 = arg1;
+                  closure_1 = fn;
                   const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
                   if ("throw" !== tmp.type) {
-                    iter = tmp.arg;
-                    let value = iter.value;
+                    let value = tmp.arg.value;
                     if (value) {
                       if (typeof value === "object") {
                         let call = closure_1_0.call;
                         if (typeof call === "unknown") {
-                          let callResult = tmp8("__await");
+                          let callResult = closure_1_0("__await");
                         } else {
                           callResult = call(value, "__await");
                         }
                         if (callResult) {
                           let resolved = Promise.resolve(value.__await);
-                          resolved.then((arg0) => {
-                            const tmp2 = closure_1_10(lib.next, lib, arg0);
+                          resolved.then((result) => {
+                            const tmp2 = closure_1_10(lib.next, lib, result);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
                               const value = iter.value;
@@ -3139,8 +3120,8 @@ if (regeneratorRuntime) {
                                   }
                                   if (callResult) {
                                     const resolved = Promise.resolve(value.__await);
-                                    resolved.then((arg0) => {
-                                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                    resolved.then((result) => {
+                                      const tmp2 = closure_1_10(lib.next, lib, result);
                                       if ("throw" !== tmp2.type) {
                                         iter = tmp2.arg;
                                         const value = iter.value;
@@ -3195,14 +3176,14 @@ if (regeneratorRuntime) {
                                 }
                               }
                               const resolved1 = Promise.resolve(value);
-                              resolved1.then((value) => {
-                                iter.value = value;
+                              resolved1.then((result) => {
+                                iter.value = result;
                                 lib(iter);
                               }, (arg0) => {
                                 const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
-                                  let fn = iter.value;
+                                  fn = iter.value;
                                   if (fn) {
                                     if (typeof fn === "object") {
                                       const call = lib.call;
@@ -3241,8 +3222,8 @@ if (regeneratorRuntime) {
                                   }
                                   if (callResult) {
                                     const resolved = Promise.resolve(value.__await);
-                                    resolved.then((arg0) => {
-                                      const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                    resolved.then((result) => {
+                                      const tmp2 = closure_1_10(lib.next, lib, result);
                                       if ("throw" !== tmp2.type) {
                                         iter = tmp2.arg;
                                         const value = iter.value;
@@ -3297,14 +3278,14 @@ if (regeneratorRuntime) {
                                 }
                               }
                               const resolved1 = Promise.resolve(value);
-                              resolved1.then((value) => {
-                                iter.value = value;
+                              resolved1.then((result) => {
+                                iter.value = result;
                                 lib(iter);
                               }, (arg0) => {
                                 const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                 if ("throw" !== tmp2.type) {
                                   iter = tmp2.arg;
-                                  let fn = iter.value;
+                                  fn = iter.value;
                                   if (fn) {
                                     if (typeof fn === "object") {
                                       const call = lib.call;
@@ -3330,18 +3311,17 @@ if (regeneratorRuntime) {
                             }
                           });
                         }
-                        tmp8 = closure_1_0;
                       }
                     }
                     let resolved1 = Promise.resolve(value);
-                    resolved1.then((value) => {
-                      iter.value = value;
+                    resolved1.then((result) => {
+                      iter.value = result;
                       lib(iter);
                     }, (arg0) => {
                       const tmp2 = closure_1_10(lib.throw, lib, arg0);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
-                        let fn = iter.value;
+                        fn = iter.value;
                         if (fn) {
                           if (typeof fn === "object") {
                             const call = lib.call;
@@ -3379,8 +3359,8 @@ if (regeneratorRuntime) {
                               closure_1(tmp2.arg);
                             }
                           };
-                          nextPromise = resolved.then((arg0) => {
-                            const tmp2 = closure_1_10(lib.next, lib, arg0);
+                          nextPromise = resolved.then((result) => {
+                            const tmp2 = closure_1_10(lib.next, lib, result);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
                               const value = iter.value;
@@ -3407,14 +3387,14 @@ if (regeneratorRuntime) {
                           }, fn);
                         }
                         const resolved1 = Promise.resolve(fn);
-                        nextPromise = resolved1.then((value) => {
-                          iter.value = value;
+                        nextPromise = resolved1.then((result) => {
+                          iter.value = result;
                           lib(iter);
                         }, (arg0) => {
                           const tmp2 = closure_1_10(lib.throw, lib, arg0);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
-                            let fn = iter.value;
+                            fn = iter.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = lib.call;
@@ -3439,32 +3419,32 @@ if (regeneratorRuntime) {
                         closure_1(tmp2.arg);
                       }
                     });
+                    iter = tmp.arg;
                   } else {
-                    arg1(tmp.arg);
+                    fn(tmp.arg);
                   }
                 });
               }
               nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
             } else {
-              nextPromise = new Promise((arg0, arg1) => {
+              nextPromise = new Promise((arg0, fn) => {
                 closure_0 = arg0;
-                closure_1 = arg1;
+                closure_1 = fn;
                 const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
                 if ("throw" !== tmp.type) {
-                  iter = tmp.arg;
-                  let value = iter.value;
+                  let value = tmp.arg.value;
                   if (value) {
                     if (typeof value === "object") {
                       let call = closure_1_0.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp8("__await");
+                        let callResult = closure_1_0("__await");
                       } else {
                         callResult = call(value, "__await");
                       }
                       if (callResult) {
                         let resolved = Promise.resolve(value.__await);
-                        resolved.then((arg0) => {
-                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                        resolved.then((result) => {
+                          const tmp2 = closure_1_10(lib.next, lib, result);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
                             const value = iter.value;
@@ -3478,8 +3458,8 @@ if (regeneratorRuntime) {
                                 }
                                 if (callResult) {
                                   const resolved = Promise.resolve(value.__await);
-                                  resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -3493,8 +3473,8 @@ if (regeneratorRuntime) {
                                           }
                                           if (callResult) {
                                             const resolved = Promise.resolve(value.__await);
-                                            resolved.then((arg0) => {
-                                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                            resolved.then((result) => {
+                                              const tmp2 = closure_1_10(lib.next, lib, result);
                                               if ("throw" !== tmp2.type) {
                                                 iter = tmp2.arg;
                                                 const value = iter.value;
@@ -3549,14 +3529,14 @@ if (regeneratorRuntime) {
                                         }
                                       }
                                       const resolved1 = Promise.resolve(value);
-                                      resolved1.then((value) => {
-                                        iter.value = value;
+                                      resolved1.then((result) => {
+                                        iter.value = result;
                                         lib(iter);
                                       }, (arg0) => {
                                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
-                                          let fn = iter.value;
+                                          fn = iter.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = lib.call;
@@ -3595,8 +3575,8 @@ if (regeneratorRuntime) {
                                           }
                                           if (callResult) {
                                             const resolved = Promise.resolve(value.__await);
-                                            resolved.then((arg0) => {
-                                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                            resolved.then((result) => {
+                                              const tmp2 = closure_1_10(lib.next, lib, result);
                                               if ("throw" !== tmp2.type) {
                                                 iter = tmp2.arg;
                                                 const value = iter.value;
@@ -3651,14 +3631,14 @@ if (regeneratorRuntime) {
                                         }
                                       }
                                       const resolved1 = Promise.resolve(value);
-                                      resolved1.then((value) => {
-                                        iter.value = value;
+                                      resolved1.then((result) => {
+                                        iter.value = result;
                                         lib(iter);
                                       }, (arg0) => {
                                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
-                                          let fn = iter.value;
+                                          fn = iter.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = lib.call;
@@ -3688,14 +3668,14 @@ if (regeneratorRuntime) {
                               }
                             }
                             const resolved1 = Promise.resolve(value);
-                            resolved1.then((value) => {
-                              iter.value = value;
+                            resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -3733,8 +3713,8 @@ if (regeneratorRuntime) {
                                       closure_1(tmp2.arg);
                                     }
                                   };
-                                  nextPromise = resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  nextPromise = resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -3761,14 +3741,14 @@ if (regeneratorRuntime) {
                                   }, fn);
                                 }
                                 const resolved1 = Promise.resolve(fn);
-                                nextPromise = resolved1.then((value) => {
-                                  iter.value = value;
+                                nextPromise = resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -3811,8 +3791,8 @@ if (regeneratorRuntime) {
                                 }
                                 if (callResult) {
                                   const resolved = Promise.resolve(value.__await);
-                                  resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -3826,8 +3806,8 @@ if (regeneratorRuntime) {
                                           }
                                           if (callResult) {
                                             const resolved = Promise.resolve(value.__await);
-                                            resolved.then((arg0) => {
-                                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                            resolved.then((result) => {
+                                              const tmp2 = closure_1_10(lib.next, lib, result);
                                               if ("throw" !== tmp2.type) {
                                                 iter = tmp2.arg;
                                                 const value = iter.value;
@@ -3882,14 +3862,14 @@ if (regeneratorRuntime) {
                                         }
                                       }
                                       const resolved1 = Promise.resolve(value);
-                                      resolved1.then((value) => {
-                                        iter.value = value;
+                                      resolved1.then((result) => {
+                                        iter.value = result;
                                         lib(iter);
                                       }, (arg0) => {
                                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
-                                          let fn = iter.value;
+                                          fn = iter.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = lib.call;
@@ -3928,8 +3908,8 @@ if (regeneratorRuntime) {
                                           }
                                           if (callResult) {
                                             const resolved = Promise.resolve(value.__await);
-                                            resolved.then((arg0) => {
-                                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                            resolved.then((result) => {
+                                              const tmp2 = closure_1_10(lib.next, lib, result);
                                               if ("throw" !== tmp2.type) {
                                                 iter = tmp2.arg;
                                                 const value = iter.value;
@@ -3984,14 +3964,14 @@ if (regeneratorRuntime) {
                                         }
                                       }
                                       const resolved1 = Promise.resolve(value);
-                                      resolved1.then((value) => {
-                                        iter.value = value;
+                                      resolved1.then((result) => {
+                                        iter.value = result;
                                         lib(iter);
                                       }, (arg0) => {
                                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                         if ("throw" !== tmp2.type) {
                                           iter = tmp2.arg;
-                                          let fn = iter.value;
+                                          fn = iter.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = lib.call;
@@ -4021,14 +4001,14 @@ if (regeneratorRuntime) {
                               }
                             }
                             const resolved1 = Promise.resolve(value);
-                            resolved1.then((value) => {
-                              iter.value = value;
+                            resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -4066,8 +4046,8 @@ if (regeneratorRuntime) {
                                       closure_1(tmp2.arg);
                                     }
                                   };
-                                  nextPromise = resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  nextPromise = resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -4094,14 +4074,14 @@ if (regeneratorRuntime) {
                                   }, fn);
                                 }
                                 const resolved1 = Promise.resolve(fn);
-                                nextPromise = resolved1.then((value) => {
-                                  iter.value = value;
+                                nextPromise = resolved1.then((result) => {
+                                  iter.value = result;
                                   lib(iter);
                                 }, (arg0) => {
                                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
-                                    let fn = iter.value;
+                                    fn = iter.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = lib.call;
@@ -4131,18 +4111,17 @@ if (regeneratorRuntime) {
                           }
                         });
                       }
-                      tmp8 = closure_1_0;
                     }
                   }
                   let resolved1 = Promise.resolve(value);
-                  resolved1.then((value) => {
-                    iter.value = value;
+                  resolved1.then((result) => {
+                    iter.value = result;
                     lib(iter);
                   }, (arg0) => {
                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
-                      let fn = iter.value;
+                      fn = iter.value;
                       if (fn) {
                         if (typeof fn === "object") {
                           const call = lib.call;
@@ -4169,8 +4148,8 @@ if (regeneratorRuntime) {
                                 }
                                 if (callResult) {
                                   const resolved = Promise.resolve(value.__await);
-                                  resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -4225,14 +4204,14 @@ if (regeneratorRuntime) {
                               }
                             }
                             const resolved1 = Promise.resolve(value);
-                            resolved1.then((value) => {
-                              iter.value = value;
+                            resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -4257,8 +4236,8 @@ if (regeneratorRuntime) {
                             closure_1(tmp2.arg);
                           }
                         };
-                        nextPromise = resolved.then((arg0) => {
-                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                        nextPromise = resolved.then((result) => {
+                          const tmp2 = closure_1_10(lib.next, lib, result);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
                             const value = iter.value;
@@ -4272,8 +4251,8 @@ if (regeneratorRuntime) {
                                 }
                                 if (callResult) {
                                   const resolved = Promise.resolve(value.__await);
-                                  resolved.then((arg0) => {
-                                    const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                  resolved.then((result) => {
+                                    const tmp2 = closure_1_10(lib.next, lib, result);
                                     if ("throw" !== tmp2.type) {
                                       iter = tmp2.arg;
                                       const value = iter.value;
@@ -4328,14 +4307,14 @@ if (regeneratorRuntime) {
                               }
                             }
                             const resolved1 = Promise.resolve(value);
-                            resolved1.then((value) => {
-                              iter.value = value;
+                            resolved1.then((result) => {
+                              iter.value = result;
                               lib(iter);
                             }, (arg0) => {
                               const tmp2 = closure_1_10(lib.throw, lib, arg0);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
-                                let fn = iter.value;
+                                fn = iter.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = lib.call;
@@ -4362,14 +4341,14 @@ if (regeneratorRuntime) {
                         }, fn);
                       }
                       const resolved1 = Promise.resolve(fn);
-                      nextPromise = resolved1.then((value) => {
-                        iter.value = value;
+                      nextPromise = resolved1.then((result) => {
+                        iter.value = result;
                         lib(iter);
                       }, (arg0) => {
                         const tmp2 = closure_1_10(lib.throw, lib, arg0);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
-                          let fn = iter.value;
+                          fn = iter.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = lib.call;
@@ -4407,8 +4386,8 @@ if (regeneratorRuntime) {
                                 closure_1(tmp2.arg);
                               }
                             };
-                            nextPromise = resolved.then((arg0) => {
-                              const tmp2 = closure_1_10(lib.next, lib, arg0);
+                            nextPromise = resolved.then((result) => {
+                              const tmp2 = closure_1_10(lib.next, lib, result);
                               if ("throw" !== tmp2.type) {
                                 iter = tmp2.arg;
                                 const value = iter.value;
@@ -4435,14 +4414,14 @@ if (regeneratorRuntime) {
                             }, fn);
                           }
                           const resolved1 = Promise.resolve(fn);
-                          nextPromise = resolved1.then((value) => {
-                            iter.value = value;
+                          nextPromise = resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -4471,8 +4450,9 @@ if (regeneratorRuntime) {
                       closure_1(tmp2.arg);
                     }
                   });
+                  iter = tmp.arg;
                 } else {
-                  arg1(tmp.arg);
+                  fn(tmp.arg);
                 }
               });
             }
@@ -4492,7 +4472,6 @@ if (regeneratorRuntime) {
           let tmp3 = constructor === GeneratorFunction;
           if (!tmp3) {
             tmp3 = "GeneratorFunction" === (constructor.displayName || constructor.name);
-            const tmp4 = constructor.displayName || constructor.name;
           }
           tmp = tmp3;
         }
@@ -4523,9 +4502,9 @@ if (regeneratorRuntime) {
         }
       }
       let items = ["next", "throw", "return"];
-      let item = items.forEach((arg0) => {
-        closure_0 = arg0;
-        closure_0[arg0] = function(arg0) {
+      let item = items.forEach((item, index) => {
+        closure_0 = item;
+        closure_0[item] = function(arg0) {
           return this._invoke(closure_0, arg0);
         };
       });
@@ -4549,8 +4528,6 @@ if (regeneratorRuntime) {
         obj.tryEntries = items1;
         const item = items.forEach(pushTryEntry, obj);
         obj.reset(true);
-        let iter = arg0;
-        c1 = arg2;
         const generatorFunction = closure_4;
         obj._invoke = function invoke(method, arg1) {
           if (closure_3 === closure_1_6) {
@@ -4570,10 +4547,8 @@ if (regeneratorRuntime) {
               iter = obj;
               let delegate = obj.delegate;
               if (delegate) {
-                let tmp2 = closure_1_15;
-                let tmp3 = closure_1_15(delegate, iter);
+                let tmp3 = maybeInvokeDelegate(delegate, iter);
                 if (tmp3) {
-                  let tmp15 = closure_1_8;
                   if (tmp3 === closure_1_8) {
                     continue;
                   } else {
@@ -4586,8 +4561,6 @@ if (regeneratorRuntime) {
                 iter._sent = arg;
                 iter.sent = arg;
               } else if ("throw" === iter.method) {
-                let tmp5 = closure_3;
-                let tmp6 = closure_1_4;
                 if (closure_3 === closure_1_4) {
                   break;
                 } else {
@@ -4596,15 +4569,10 @@ if (regeneratorRuntime) {
               } else if ("return" === iter.method) {
                 let abruptResult = iter.abrupt("return", iter.arg);
               }
-              let tmp9 = closure_1_6;
               closure_3 = closure_1_6;
-              let tmp10 = closure_1_10;
-              let tmp11 = iter;
-              let tmp12 = c1;
-              let tmp13 = closure_1_10(iter, c1, iter);
+              let tmp13 = tryCatch(iter, c1, iter);
               if ("normal" === tmp13.type) {
                 closure_3 = iter.done ? closure_1_7 : closure_1_5;
-                let tmp14 = closure_1_8;
                 if (tmp13.arg === closure_1_8) {
                   continue;
                 } else {
@@ -4617,7 +4585,6 @@ if (regeneratorRuntime) {
                 if ("throw" !== tmp13.type) {
                   continue;
                 } else {
-                  let tmp25 = closure_1_7;
                   closure_3 = closure_1_7;
                   iter.method = "throw";
                   iter.arg = tmp13.arg;
@@ -4631,33 +4598,32 @@ if (regeneratorRuntime) {
             throw iter.arg;
           }
         };
-        iter = Object.create(AsyncIterator.prototype);
-        iter = obj;
+        Object.create(AsyncIterator.prototype);
+        let iter = obj;
         c1 = undefined;
         iter._invoke = function enqueue(arg0, arg1) {
           closure_0 = arg0;
           let nextPromise = arg1;
           if (nextPromise) {
-            function callInvokeWithMethodAndArg() {
-              return new Promise((arg0, arg1) => {
+            function callInvokeWithMethodAndArg(result) {
+              return new Promise((arg0, fn) => {
                 closure_0 = arg0;
-                closure_1 = arg1;
+                closure_1 = fn;
                 const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
                 if ("throw" !== tmp.type) {
-                  iter = tmp.arg;
-                  let value = iter.value;
+                  let value = tmp.arg.value;
                   if (value) {
                     if (typeof value === "object") {
                       let call = closure_1_0.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp8("__await");
+                        let callResult = closure_1_0("__await");
                       } else {
                         callResult = call(value, "__await");
                       }
                       if (callResult) {
                         let resolved = Promise.resolve(value.__await);
-                        resolved.then((arg0) => {
-                          const tmp2 = closure_1_10(lib.next, lib, arg0);
+                        resolved.then((result) => {
+                          const tmp2 = closure_1_10(lib.next, lib, result);
                           if ("throw" !== tmp2.type) {
                             iter = tmp2.arg;
                             const value = iter.value;
@@ -4708,18 +4674,17 @@ if (regeneratorRuntime) {
                           }
                         });
                       }
-                      tmp8 = closure_1_0;
                     }
                   }
                   let resolved1 = Promise.resolve(value);
-                  resolved1.then((value) => {
-                    iter.value = value;
+                  resolved1.then((result) => {
+                    iter.value = result;
                     lib(iter);
                   }, (arg0) => {
                     const tmp2 = closure_1_10(lib.throw, lib, arg0);
                     if ("throw" !== tmp2.type) {
                       iter = tmp2.arg;
-                      let fn = iter.value;
+                      fn = iter.value;
                       if (fn) {
                         if (typeof fn === "object") {
                           const call = lib.call;
@@ -4740,32 +4705,32 @@ if (regeneratorRuntime) {
                       closure_1(tmp2.arg);
                     }
                   });
+                  iter = tmp.arg;
                 } else {
-                  arg1(tmp.arg);
+                  fn(tmp.arg);
                 }
               });
             }
             nextPromise = nextPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg);
           } else {
-            nextPromise = new Promise((arg0, arg1) => {
+            nextPromise = new Promise((arg0, fn) => {
               closure_0 = arg0;
-              closure_1 = arg1;
+              closure_1 = fn;
               const tmp = closure_1_10(closure_1_0[closure_0], closure_1_0, closure_1);
               if ("throw" !== tmp.type) {
-                iter = tmp.arg;
-                let value = iter.value;
+                let value = tmp.arg.value;
                 if (value) {
                   if (typeof value === "object") {
                     let call = closure_1_0.call;
                     if (typeof call === "unknown") {
-                      let callResult = tmp8("__await");
+                      let callResult = closure_1_0("__await");
                     } else {
                       callResult = call(value, "__await");
                     }
                     if (callResult) {
                       let resolved = Promise.resolve(value.__await);
-                      resolved.then((arg0) => {
-                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                      resolved.then((result) => {
+                        const tmp2 = closure_1_10(lib.next, lib, result);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
                           const value = iter.value;
@@ -4779,8 +4744,8 @@ if (regeneratorRuntime) {
                               }
                               if (callResult) {
                                 const resolved = Promise.resolve(value.__await);
-                                resolved.then((arg0) => {
-                                  const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                resolved.then((result) => {
+                                  const tmp2 = closure_1_10(lib.next, lib, result);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
                                     const value = iter.value;
@@ -4835,14 +4800,14 @@ if (regeneratorRuntime) {
                             }
                           }
                           const resolved1 = Promise.resolve(value);
-                          resolved1.then((value) => {
-                            iter.value = value;
+                          resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -4881,8 +4846,8 @@ if (regeneratorRuntime) {
                               }
                               if (callResult) {
                                 const resolved = Promise.resolve(value.__await);
-                                resolved.then((arg0) => {
-                                  const tmp2 = closure_1_10(lib.next, lib, arg0);
+                                resolved.then((result) => {
+                                  const tmp2 = closure_1_10(lib.next, lib, result);
                                   if ("throw" !== tmp2.type) {
                                     iter = tmp2.arg;
                                     const value = iter.value;
@@ -4937,14 +4902,14 @@ if (regeneratorRuntime) {
                             }
                           }
                           const resolved1 = Promise.resolve(value);
-                          resolved1.then((value) => {
-                            iter.value = value;
+                          resolved1.then((result) => {
+                            iter.value = result;
                             lib(iter);
                           }, (arg0) => {
                             const tmp2 = closure_1_10(lib.throw, lib, arg0);
                             if ("throw" !== tmp2.type) {
                               iter = tmp2.arg;
-                              let fn = iter.value;
+                              fn = iter.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = lib.call;
@@ -4970,18 +4935,17 @@ if (regeneratorRuntime) {
                         }
                       });
                     }
-                    tmp8 = closure_1_0;
                   }
                 }
                 let resolved1 = Promise.resolve(value);
-                resolved1.then((value) => {
-                  iter.value = value;
+                resolved1.then((result) => {
+                  iter.value = result;
                   lib(iter);
                 }, (arg0) => {
                   const tmp2 = closure_1_10(lib.throw, lib, arg0);
                   if ("throw" !== tmp2.type) {
                     iter = tmp2.arg;
-                    let fn = iter.value;
+                    fn = iter.value;
                     if (fn) {
                       if (typeof fn === "object") {
                         const call = lib.call;
@@ -5019,8 +4983,8 @@ if (regeneratorRuntime) {
                           closure_1(tmp2.arg);
                         }
                       };
-                      nextPromise = resolved.then((arg0) => {
-                        const tmp2 = closure_1_10(lib.next, lib, arg0);
+                      nextPromise = resolved.then((result) => {
+                        const tmp2 = closure_1_10(lib.next, lib, result);
                         if ("throw" !== tmp2.type) {
                           iter = tmp2.arg;
                           const value = iter.value;
@@ -5047,14 +5011,14 @@ if (regeneratorRuntime) {
                       }, fn);
                     }
                     const resolved1 = Promise.resolve(fn);
-                    nextPromise = resolved1.then((value) => {
-                      iter.value = value;
+                    nextPromise = resolved1.then((result) => {
+                      iter.value = result;
                       lib(iter);
                     }, (arg0) => {
                       const tmp2 = closure_1_10(lib.throw, lib, arg0);
                       if ("throw" !== tmp2.type) {
                         iter = tmp2.arg;
-                        let fn = iter.value;
+                        fn = iter.value;
                         if (fn) {
                           if (typeof fn === "object") {
                             const call = lib.call;
@@ -5079,8 +5043,9 @@ if (regeneratorRuntime) {
                     closure_1(tmp2.arg);
                   }
                 });
+                iter = tmp.arg;
               } else {
-                arg1(tmp.arg);
+                fn(tmp.arg);
               }
             });
           }
@@ -5088,9 +5053,9 @@ if (regeneratorRuntime) {
         };
         let nextPromise = iter;
         if (!generatorFunction.isGeneratorFunction(fn)) {
-          nextPromise = iter.next().then((done) => {
-            if (done.done) {
-              let nextResult = done.value;
+          nextPromise = iter.next().then((result) => {
+            if (result.done) {
+              let nextResult = result.value;
             } else {
               nextResult = iter.next();
             }
@@ -5102,9 +5067,9 @@ if (regeneratorRuntime) {
       };
       items2 = obj;
       let items1 = ["next", "throw", "return"];
-      const item1 = items1.forEach((arg0) => {
-        closure_0 = arg0;
-        closure_0[arg0] = function(arg0) {
+      const item1 = items1.forEach((item, index) => {
+        closure_0 = item;
+        closure_0[item] = function(arg0) {
           return this._invoke(closure_0, arg0);
         };
       });
@@ -5117,15 +5082,13 @@ if (regeneratorRuntime) {
         closure_0 = obj;
         const items = [];
         for (const key10004 in arg0) {
-          let tmp2 = key10004;
           let arr = items.push(key10004);
           continue;
         }
         const reversed = items.reverse();
         next = function next() {
           if (items.length) {
-            let arr = items;
-            arr = items.pop();
+            const arr = items.pop();
             next.value = arr;
             next.done = false;
             return next;
@@ -5144,7 +5107,6 @@ if (regeneratorRuntime) {
         const item = tryEntries.forEach(resetTryEntry);
         if (!arg0) {
           for (const key10018 in obj) {
-            let tmp8 = key10018;
             let tmp7 = "t" === key10018.charAt(0);
             if (!tmp7) {
               if (tmp7) {
@@ -5159,14 +5121,12 @@ if (regeneratorRuntime) {
               }
               continue;
             } else {
-              let tmp4 = items2;
               let call = items2.call;
               if (typeof call === "unknown") {
-                let callResult = tmp4(key10018);
+                let callResult = items2(key10018);
               } else {
                 callResult = call(obj, key10018);
               }
-              let tmp6 = callResult;
             }
           }
         }
@@ -5190,25 +5150,21 @@ if (regeneratorRuntime) {
             const completion = tmp2.completion;
             while ("root" !== self.tryEntries[diff].tryLoc) {
               if (tmp2.tryLoc <= self.prev) {
-                let tmp11 = items2;
                 let call2 = items2.call;
-                let tmp4 = typeof call2 === "unknown" ? tmp11("catchLoc") : call2(tmp2, "catchLoc");
-                let call = tmp11.call;
-                let tmp5 = typeof call === "unknown" ? tmp11("finallyLoc") : call(tmp2, "finallyLoc");
+                let tmp4 = typeof call2 === "unknown" ? items2("catchLoc") : call2(tmp2, "catchLoc");
+                let call = items2.call;
+                let tmp5 = typeof call === "unknown" ? items2("finallyLoc") : call(tmp2, "finallyLoc");
                 if (tmp4) {
                   if (tmp5) {
                     if (self.prev < tmp2.catchLoc) {
-                      let str8 = "throw";
                       completion.type = "throw";
                       completion.arg = arg0;
                       self.next = tmp2.catchLoc;
-                      let str9 = "next";
                       self.method = "next";
                       self.arg = undefined;
                       let flag3 = true;
                       return true;
                     } else if (self.prev < tmp2.finallyLoc) {
-                      let str7 = "throw";
                       completion.type = "throw";
                       completion.arg = arg0;
                       self.next = tmp2.finallyLoc;
@@ -5219,11 +5175,9 @@ if (regeneratorRuntime) {
                 }
                 if (tmp4) {
                   if (self.prev < tmp2.catchLoc) {
-                    let str5 = "throw";
                     completion.type = "throw";
                     completion.arg = arg0;
                     self.next = tmp2.catchLoc;
-                    let str6 = "next";
                     self.method = "next";
                     self.arg = undefined;
                     let flag = true;
@@ -5231,7 +5185,6 @@ if (regeneratorRuntime) {
                   }
                 } else if (tmp5) {
                   if (self.prev < tmp2.finallyLoc) {
-                    let str12 = "throw";
                     completion.type = "throw";
                     completion.arg = arg0;
                     self.next = tmp2.finallyLoc;
@@ -5239,13 +5192,8 @@ if (regeneratorRuntime) {
                     return false;
                   }
                 } else {
-                  let tmp6 = globalThis;
                   let _Error = Error;
-                  let tmp7 = new.target;
-                  let str4 = "try statement without catch or finally";
-                  let tmp8 = new.target;
                   error = new Error("try statement without catch or finally");
-                  let tmp10 = error;
                   throw error;
                 }
               }
@@ -5265,11 +5213,9 @@ if (regeneratorRuntime) {
         if (0 <= diff) {
           while (true) {
             let tmp3 = self.tryEntries[diff];
-            let tmp4 = diff;
             if (tmp3.tryLoc <= self.prev) {
-              let tmp5 = items2;
               let call = items2.call;
-              if (typeof call === "unknown" ? tmp5("finallyLoc") : call(tmp3, "finallyLoc")) {
+              if (typeof call === "unknown" ? items2("finallyLoc") : call(tmp3, "finallyLoc")) {
                 tmp2 = tmp3;
                 if (self.prev < tmp3.finallyLoc) {
                   break;
@@ -5391,23 +5337,19 @@ if (regeneratorRuntime) {
             if (!isNaN(next.length)) {
               c1 = -1;
               next = function next() {
-                let arr;
                 const sum = sum1 + 1;
                 sum1 = sum;
                 if (sum < next.length) {
                   while (true) {
-                    let tmp2 = next;
                     let call = next.call;
-                    arr = next;
                     let tmp3 = sum1;
-                    if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                    if (typeof call === "unknown" ? next(tmp3) : call(next, tmp3)) {
                       break;
                     } else {
-                      let tmp4 = sum1;
                       sum1 = sum1 + 1;
                     }
                   }
-                  next.value = arr[sum1];
+                  next.value = next[sum1];
                   next.done = false;
                   return next;
                 }
@@ -5445,23 +5387,19 @@ if (regeneratorRuntime) {
         if (!isNaN(items2.length)) {
           c1 = -1;
           next = function next() {
-            let arr;
             const sum = sum1 + 1;
             sum1 = sum;
             if (sum < next.length) {
               while (true) {
-                let tmp2 = next;
                 let call = next.call;
-                arr = next;
                 let tmp3 = sum1;
-                if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                if (typeof call === "unknown" ? next(tmp3) : call(next, tmp3)) {
                   break;
                 } else {
-                  let tmp4 = sum1;
                   sum1 = sum1 + 1;
                 }
               }
-              next.value = arr[sum1];
+              next.value = next[sum1];
               next.done = false;
               return next;
             }
@@ -5483,3 +5421,4 @@ if (regeneratorRuntime) {
     }
   }
 }
+tmp4 = tmp2.asyncIterator || "@@asyncIterator";

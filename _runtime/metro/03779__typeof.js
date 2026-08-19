@@ -1,7 +1,6 @@
 // _runtime/metro/03779__typeof.js
 import Parser2 from "../03778_Parser.js";
 
-let _createSuperInternal = require;
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -55,7 +54,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 const Parser = Parser2.Parser;
-_createSuperInternal = undefined;
+let _createSuperInternal;
 class YearParser {
   constructor() {
     if (this instanceof closure_1) {
@@ -147,7 +146,6 @@ YearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
   _setPrototypeOf(YearParser, Parser);
 }
-_createSuperInternal = YearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -258,7 +256,6 @@ if (0 < items.length) {
   do {
     let tmp5 = items[num];
     let flag = tmp5.enumerable;
-    let tmp6 = num;
     if (!flag) {
       flag = false;
     }

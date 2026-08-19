@@ -5,7 +5,7 @@ arg5.unstable_hasComponent = function unstable_hasComponent(arg0) {
   let value = map.get(arg0);
   if (null == value) {
     if (global.__nativeComponentRegistry__hasComponent) {
-      const result = obj2.__nativeComponentRegistry__hasComponent(arg0);
+      const result = global.__nativeComponentRegistry__hasComponent(arg0);
       const result1 = map.set(arg0, result);
       value = result;
     } else {
@@ -14,7 +14,6 @@ arg5.unstable_hasComponent = function unstable_hasComponent(arg0) {
       error = new Error("unstable_hasComponent('" + arg0 + "'): Global function is not registered");
       throw error;
     }
-    obj2 = global;
   }
   return value;
 };

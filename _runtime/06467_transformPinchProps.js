@@ -30,12 +30,11 @@ fillInDefaultValues.__workletHash = 10393435493424;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePinchGestureTs2(event){event.scaleChange=1;}" };
 const map = new Map();
 let closure_6 = {};
-arg5.usePinchGesture = function usePinchGesture(gestureHandlerProps) {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
+arg5.usePinchGesture = function usePinchGesture(closure_6) {
+  let tmp = closure_6;
+  if (closure_6 === undefined) {
     tmp = closure_6;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformPinchProps);
-  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.Pinch, clonedAndRemappedConfig);
 };

@@ -1,5 +1,5 @@
 // _runtime/00331_getImageSourcesFromImageProps.js
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 
 export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {
@@ -17,9 +17,9 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
     const items = [];
     const parts = srcSet.split(", ");
     c4 = true;
-    const item = parts.forEach((str) => {
-      const tmp = obj(str.split(" "), 2);
-      str = "1x";
+    const item = parts.forEach((item, index) => {
+      const tmp = obj(item.split(" "), 2);
+      let str = "1x";
       if (undefined !== tmp[1]) {
         str = tmp2;
       }

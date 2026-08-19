@@ -1,14 +1,14 @@
 // _runtime/06415__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
 import _isNativeReflectConstructDefault from "06404__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import importDefaultResult3 from "06416_PlatformConstants.js";
 
-const ForceTouchFallback = arg1;
+const ForceTouchFallback = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;

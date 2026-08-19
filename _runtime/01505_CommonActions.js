@@ -5,9 +5,8 @@ import openDrawer from "01510_openDrawer.js";
 import TabRouter from "01511_TabRouter.js";
 import StackRouter from "01514_StackRouter.js";
 
-for (const key10013 in require("module_1506")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("module_1506")[key10013];
+for (const key10013 in require("metro/01506__.js")) {
+  arg5[key10013] = require("metro/01506__.js")[key10013];
   continue;
 }
 

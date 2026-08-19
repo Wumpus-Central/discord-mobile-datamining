@@ -2,10 +2,10 @@
 arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternalSlots) {
   const internalSlots = getInternalSlots.getInternalSlots(arg0);
   const regExp = new RegExp("s?[".concat(internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].rangeSign, "]s?"));
-  const findIndexResult = items.findIndex((type) => {
-    let isMatch = "literal" === type.type;
+  const findIndexResult = items.findIndex((item, index) => {
+    let isMatch = "literal" === item.type;
     if (isMatch) {
-      isMatch = regExp.test(type.value);
+      isMatch = regExp.test(item.value);
     }
     return isMatch;
   });
@@ -16,7 +16,6 @@ arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternal
       let arr = items.unshift(items[diff]);
       const diff1 = diff - 1;
       while (0 <= diff1) {
-        let tmp8 = regExp;
         diff = diff1;
         if (!regExp.has(items[diff1].type)) {
           break;
@@ -24,7 +23,7 @@ arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternal
       }
     }
   }
-  const mapped = items.map((value) => value.value);
+  const mapped = items.map((item, index) => item.value);
   if (Array.from(mapped.join("")).length > 1) {
     const _Array3 = Array;
     arr = Array.from(items);
@@ -38,7 +37,6 @@ arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternal
         items1.push(items[sum]);
         const sum1 = sum + 1;
         while (sum1 < items.length) {
-          let tmp12 = regExp;
           sum = sum1;
           if (!regExp.has(items[sum1].type)) {
             break;
@@ -47,7 +45,7 @@ arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternal
       }
     }
     const _Array = Array;
-    const mapped1 = items1.map((value) => value.value);
+    const mapped1 = items1.map((item, index) => item.value);
     if (Array.from(mapped1.join("")).length > 1) {
       const _Array2 = Array;
       const arr2 = Array.from(items);

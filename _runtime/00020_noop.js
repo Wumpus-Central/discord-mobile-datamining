@@ -50,7 +50,7 @@ class PureComponent {
 function noop() {
 
 }
-function mapIntoArray(element, items, arg2, arg3, arg4) {
+function mapIntoArray(element, items, arg2, arg3, fn) {
   let tmp = typeof element !== "undefined";
   if (typeof element !== "undefined") {
     tmp = typeof element !== "boolean";
@@ -73,7 +73,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
               if (closure_1 !== $$typeof) {
                 flag = false;
                 if (closure_6 === $$typeof) {
-                  return mapIntoArray(tmp2._init(tmp2._payload), items, arg2, arg3, arg4);
+                  return mapIntoArray(tmp2._init(tmp2._payload), items, arg2, arg3, fn);
                 }
               }
             }
@@ -84,20 +84,20 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
     flag = true;
   }
   if (flag) {
-    element = arg4(tmp2);
+    element = fn(tmp2);
     if ("" !== arg3) {
       if (isArray(element)) {
         mapIntoArray(element, items, `${arg3.replace(closure_15, "$&/")}/`, "", (arg0) => arg0);
       } else if (null != element) {
-        let tmp50 = typeof element === "object";
+        let tmp51 = typeof element === "object";
         if (typeof element === "object") {
-          tmp50 = null !== element;
+          tmp51 = null !== element;
         }
-        if (tmp50) {
-          tmp50 = element.$$typeof === c0;
+        if (tmp51) {
+          tmp51 = element.$$typeof === c0;
         }
-        let tmp51 = element;
-        if (tmp50) {
+        let tmp52 = element;
+        if (tmp51) {
           let str18 = "";
           if (null != element.key) {
             if (!tmp2) {
@@ -113,21 +113,21 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
           obj[0] = c0;
           obj[1] = element.type;
           obj[2] = arg2 + str18 + arg3;
-          let tmp56 = null;
+          let tmp57 = null;
           if (undefined !== props.ref) {
-            tmp56 = ref;
+            tmp57 = ref;
           }
-          obj[3] = tmp56;
+          obj[3] = tmp57;
           obj[4] = props;
-          tmp51 = obj;
+          tmp52 = obj;
         }
-        items.push(tmp51);
+        items.push(tmp52);
       }
       return 1;
     } else {
       if (typeof tmp2 === "object") {
         if (null !== tmp2) {
-          const text1 = `.${tmp45}`;
+          const text1 = `.${tmp46}`;
         }
         const text2 = `${tmp2.key}`;
         c0 = { "=": "=0", ":": "=2" };
@@ -146,21 +146,14 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
       let num7 = 0;
       if (0 < tmp2.length) {
         while (true) {
-          let tmp35 = tmp2[num12];
-          let tmp36 = num12;
-          let tmp37 = num13;
-          if (typeof tmp35 === "object") {
-            if (null !== tmp35) {
-              if (null != tmp35.key) {
-                let text4 = `${tmp35.key}`;
+          let tmp36 = tmp2[num12];
+          if (typeof tmp36 === "object") {
+            if (null !== tmp36) {
+              if (null != tmp36.key) {
+                let text4 = `${tmp36.key}`;
                 c0 = { "=": "=0", ":": "=2" };
-                let text5 = `$${`${tmp35.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`;
-                let num14 = 0;
-                let tmp40 = tmp35;
-                let tmp41 = items;
-                let tmp42 = arg2;
-                let tmp43 = arg4;
-                num13 = num13 + tmp34(tmp35, items, arg2, str5 + `$${`${tmp35.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, arg4);
+                let text5 = `$${`${tmp36.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`;
+                num13 = num13 + tmp35(tmp36, items, arg2, str5 + `$${`${tmp36.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, fn);
                 num12 = num12 + 1;
                 num7 = num13;
                 if (num12 >= tmp2.length) {
@@ -177,18 +170,18 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
       if (!tmp3) {
         tmp14 = null;
         if (typeof tmp2 === "object") {
-          iterable = iterator;
+          let prop = iterator;
           if (iterator) {
-            iterable = tmp2[iterator];
+            prop = tmp2[iterator];
           }
-          if (!iterable) {
-            iterable = tmp2[Symbol.iterator];
+          if (!prop) {
+            prop = tmp2[Symbol.iterator];
           }
-          let tmp15 = null;
-          if (typeof iterable === "function") {
-            tmp15 = iterable;
+          let tmp16 = null;
+          if (typeof prop === "function") {
+            tmp16 = prop;
           }
-          tmp14 = tmp15;
+          tmp14 = tmp16;
         }
       }
       if (typeof tmp14 === "function") {
@@ -201,8 +194,6 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
         if (!iter2.done) {
           while (true) {
             let value = iter2.value;
-            let tmp26 = num5;
-            let tmp27 = num6;
             if (typeof value === "object") {
               if (null !== value) {
                 if (null != value.key) {
@@ -210,12 +201,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
                   c0 = { "=": "=0", ":": "=2" };
                   let text7 = `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`;
                   num5 = num5 + 1;
-                  let num8 = 0;
-                  let tmp30 = value;
-                  let tmp31 = items;
-                  let tmp32 = arg2;
-                  let tmp33 = arg4;
-                  num6 = num6 + tmp25(value, items, arg2, str5 + `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, arg4);
+                  num6 = num6 + tmp26(value, items, arg2, str5 + `$${`${value2.key}`.replace(/[=:]/g, (arg0) => _null[arg0])}`, fn);
                   let iter3 = iter.next();
                   iter2 = iter3;
                   num7 = num6;
@@ -243,15 +229,15 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
                 tmp2.then(noop, noop);
               } else {
                 tmp2.status = "pending";
-                tmp2.then((value) => {
+                tmp2.then((result) => {
                   if ("pending" === _null.status) {
-                    tmp.status = "fulfilled";
-                    tmp.value = value;
+                    _null.status = "fulfilled";
+                    _null.value = result;
                   }
                 }, (reason) => {
                   if ("pending" === _null.status) {
-                    tmp.status = "rejected";
-                    tmp.reason = reason;
+                    _null.status = "rejected";
+                    _null.reason = reason;
                   }
                 });
               }
@@ -264,7 +250,7 @@ function mapIntoArray(element, items, arg2, arg3, arg4) {
                 throw tmp2;
               }
             }
-            return mapIntoArray(value, items, arg2, arg3, arg4);
+            return mapIntoArray(value, items, arg2, arg3, fn);
           } else {
             const _String = String;
             let StringResult = String(tmp2);
@@ -285,23 +271,23 @@ function lazyInitializer(_status) {
   closure_0 = _status;
   if (-1 === _status._status) {
     const _resultResult = _status._result();
-    _resultResult.then((_result) => {
+    _resultResult.then((result) => {
       let tmp2 = 0 !== _status._status;
       if (tmp2) {
-        tmp2 = -1 !== tmp._status;
+        tmp2 = -1 !== _status._status;
       }
       if (!tmp2) {
-        tmp._status = 1;
-        tmp._result = _result;
+        _status._status = 1;
+        _status._result = result;
       }
     }, (_result) => {
       let tmp2 = 0 !== _status._status;
       if (tmp2) {
-        tmp2 = -1 !== tmp._status;
+        tmp2 = -1 !== _status._status;
       }
       if (!tmp2) {
-        tmp._status = 2;
-        tmp._result = _result;
+        _status._status = 2;
+        _status._result = _result;
       }
     });
     if (-1 === _status._status) {
@@ -350,35 +336,35 @@ obj = assign(obj, Component.prototype);
 obj.isPureReactComponent = true;
 obj = { H: null, A: null, T: null, S: null };
 const re15 = /\/+/g;
-let closure_18 = typeof reportError === "function" ? reportError : ((obj) => {
+let closure_18 = typeof reportError === "function" ? reportError : ((message) => {
   if (typeof window === "object") {
     const _window3 = window;
     if (typeof window.ErrorEvent === "function") {
       const _window = window;
-      if (typeof obj === "object") {
-        if (null !== obj) {
-          if (typeof obj.message === "string") {
+      if (typeof message === "object") {
+        if (null !== message) {
+          if (typeof message.message === "string") {
             const _String2 = String;
-            let StringResult = String(obj.message);
+            let StringResult = String(message.message);
           }
           obj = { bubbles: true, cancelable: true, message: null, error: null };
           obj[2] = StringResult;
-          obj[3] = obj;
+          obj[3] = message;
           tmp = new tmp("error", obj);
           const _window2 = window;
         }
       }
       const _String = String;
-      StringResult = String(obj);
+      StringResult = String(message);
     }
     const _console = console;
-    console.error(obj);
+    console.error(message);
   }
   if (typeof process === "object") {
     const _process = process;
     if (typeof process.emit === "function") {
       const _process2 = process;
-      process.emit("uncaughtException", obj);
+      process.emit("uncaughtException", message);
     }
   }
 });
@@ -521,10 +507,8 @@ arg5.cloneElement = (props, key, children) => {
       if (keys !== undefined) {
         tmp3 = key;
         while (keys[tmp] !== undefined) {
-          let tmp19 = tmp5;
-          let tmp20 = hasOwnProperty;
           let call = hasOwnProperty.call;
-          let tmp6 = typeof call === "unknown" ? tmp20(tmp5) : call(key, tmp5);
+          let tmp6 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(key, tmp5);
           let tmp7 = !tmp6;
           if (tmp6) {
             tmp7 = "key" === tmp5;
@@ -597,10 +581,8 @@ arg5.createElement = (defaultProps, key, children) => {
     if (keys !== undefined) {
       tmp2 = text;
       while (keys[tmp] !== undefined) {
-        let tmp16 = tmp6;
-        let tmp17 = hasOwnProperty;
         let call = hasOwnProperty.call;
-        let tmp7 = (typeof call === "unknown" ? tmp17(tmp6) : call(key, tmp6)) && "key" !== tmp6 && "__self" !== tmp6 && "__source" !== tmp6;
+        let tmp7 = (typeof call === "unknown" ? hasOwnProperty(tmp6) : call(key, tmp6)) && "key" !== tmp6 && "__self" !== tmp6 && "__source" !== tmp6;
         if (!tmp7) {
           continue;
         } else {
@@ -632,7 +614,6 @@ arg5.createElement = (defaultProps, key, children) => {
       const keys1 = Object.keys();
       if (keys1 !== undefined) {
         while (keys1[1] !== undefined) {
-          let tmp18 = tmp14;
           if (undefined !== obj[tmp14]) {
             continue;
           } else {
@@ -657,7 +638,6 @@ arg5.createRef = () => ({ current: null });
 arg5.forwardRef = (render) => ({ $$typeof: closure_4, render });
 arg5.isValidElement = isValidElement;
 arg5.lazy = (_result) => {
-  obj = { $$typeof: closure_6, _payload: obj, _init: lazyInitializer };
   obj = { _status: -1, _result };
   return obj;
 };
@@ -670,12 +650,12 @@ arg5.memo = (type) => {
   obj[2] = tmp;
   return obj;
 };
-arg5.startTransition = (arg0) => {
+arg5.startTransition = (fn) => {
   const T = obj.T;
   obj = {};
   obj.T = obj;
   try {
-    const promise = arg0();
+    const promise = fn();
     const S = tmp4.S;
     if (null !== S) {
       tmp6(obj, promise);
@@ -769,9 +749,9 @@ arg5.useOptimistic = (arg0, arg1) => {
   const H = obj.H;
   return H.useOptimistic(arg0, arg1);
 };
-arg5.useReducer = (lastRenderedReducer) => {
+arg5.useReducer = (lastRenderedReducer, closure_0, fn) => {
   const H = obj.H;
-  return H.useReducer(lastRenderedReducer, arg1, arg2);
+  return H.useReducer(lastRenderedReducer, closure_0, fn);
 };
 arg5.useRef = (stateFromStores) => {
   const H = obj.H;

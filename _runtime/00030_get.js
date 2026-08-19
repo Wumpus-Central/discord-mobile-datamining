@@ -1,8 +1,9 @@
 // _runtime/00030_get.js
 import genModule from "00031_genModule.js";
+import _modDef38 from "metro/00038__.js";
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 __turboModuleProxy = __turboModuleProxy.__turboModuleProxy;
 arg5.get = function get(arg0) {
@@ -29,6 +30,6 @@ arg5.getEnforcing = function getEnforcing(RNGestureHandlerModule) {
   } else {
     tmpResult = tmp(RNGestureHandlerModule);
   }
-  module(38)(null != tmpResult, "TurboModuleRegistry.getEnforcing(...): '" + RNGestureHandlerModule + "' could not be found. Verify that a module by this name is registered in the native binary.");
+  _modDef38(null != tmpResult, "TurboModuleRegistry.getEnforcing(...): '" + RNGestureHandlerModule + "' could not be found. Verify that a module by this name is registered in the native binary.");
   return tmpResult;
 };

@@ -1,10 +1,10 @@
 // _runtime/00325__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
-import closure_5 from "metro/00096__get.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _get from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const StateSafePureComponent = importDefault;
@@ -54,9 +54,8 @@ let items = [
   {
     key: "setState",
     value: function setState(fn) {
-      let self = this;
       let fn2 = this;
-      self = fn;
+      const self = fn;
       if (typeof fn === "function") {
         fn = callback3(callback2(self.prototype), "setState", self);
         fn2 = fn;
@@ -94,7 +93,7 @@ let items = [
       ({ props: dependencyMap, state: closure_2 } = this);
       let obj = {
         get() {
-          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
+          self(dependencyMap[7])(!self._inAsyncStateUpdate, "\"this.props\" should not be accessed during state updates");
           return closure_1;
         },
         set(arg0) {
@@ -104,7 +103,7 @@ let items = [
       Object.defineProperty(this, "props", obj);
       obj = {
         get() {
-          self(closure_1_1[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
+          self(dependencyMap[7])(!self._inAsyncStateUpdate, "\"this.state\" should not be acceessed during state updates");
           return closure_2;
         },
         set(arg0) {

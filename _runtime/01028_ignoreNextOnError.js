@@ -35,10 +35,10 @@ function wrap(__sentry_wrapped__) {
             const items = [...arguments];
             try {
               const self = this;
-              return items.apply(this, items.map((arg0) => closure_1_4(arg0, closure_1)));
+              return items.apply(this, items.map((item, index) => closure_1_4(item, closure_1)));
             } catch (tmp2) {
               obj = tmp2;
-              closure_1_3();
+              ignoreNextOnError();
               obj = __sentry_wrapped__(obj[0]);
               obj.withScope((addEventProcessor) => {
                 addEventProcessor.addEventProcessor((extra) => {
@@ -62,10 +62,8 @@ function wrap(__sentry_wrapped__) {
           }
           try {
             for (const key10019 in arg0) {
-              let tmp17 = key10019;
               let _Object = Object;
               let call = hasOwnProperty.call;
-              let tmp16 = key10019;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10019);
               } else {
@@ -74,8 +72,7 @@ function wrap(__sentry_wrapped__) {
               if (!hasOwnPropertyResult) {
                 continue;
               } else {
-                let tmp9 = tmp16;
-                sentryWrapped[tmp17] = arg0[tmp17];
+                sentryWrapped[key10019] = arg0[key10019];
                 continue;
               }
               continue;
@@ -102,8 +99,6 @@ export const getHttpRequestData = function getHttpRequestData() {
   let obj = registerSpanErrorInstrumentation;
   const locationHref = obj.getLocationHref();
   const referrer = registerSpanErrorInstrumentation.GLOBAL_OBJ.document || {}.referrer;
-  const tmp = require;
-  const tmp4 = registerSpanErrorInstrumentation.GLOBAL_OBJ.document || {};
   const userAgent = registerSpanErrorInstrumentation.GLOBAL_OBJ.navigator || {}.userAgent;
   obj = { url: locationHref, headers: null };
   let tmp6 = referrer;

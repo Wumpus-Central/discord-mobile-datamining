@@ -42,8 +42,7 @@ arg5.findHostInstance = function findHostInstance(_componentRef) {
     if (_componentRef2 == null) {
       _componentRef2 = _componentRef;
     }
-    tmp = closure_2(_componentRef2);
-    let tmp4 = closure_2;
+    tmp = callback(_componentRef2);
   }
   return tmp;
 };

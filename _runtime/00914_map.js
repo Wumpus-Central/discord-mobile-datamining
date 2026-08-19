@@ -12,40 +12,27 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
   if (exception != null) {
     const values = exception.values;
     if (values != null) {
-      let item = values.forEach((stacktrace) => {
-        stacktrace = stacktrace.stacktrace;
+      let item = values.forEach((item, index) => {
+        const stacktrace = item.stacktrace;
         if (stacktrace != null) {
           const frames = stacktrace.frames;
           if (frames != null) {
-            const item = frames.forEach((filename) => {
-              if (filename.filename) {
-                if (!filename.module_metadata) {
+            item = frames.forEach((item, index) => {
+              if (item.filename) {
+                if (!item.module_metadata) {
                   (function ensureMetadataStacksAreParsed(closure_0) {
                     if (callback(821).GLOBAL_OBJ._sentryModuleMetadata) {
                       const _Object = Object;
                       const keys = Object.keys(callback(821).GLOBAL_OBJ._sentryModuleMetadata);
                       for (const item10026 of keys) {
-                        let tmp11 = item10026;
-                        let tmp12 = callback;
-                        let tmp13 = callback;
-                        let tmp14 = dependencyMap;
-                        let tmp15 = dependencyMap;
                         let tmp16 = callback(821).GLOBAL_OBJ._sentryModuleMetadata[item10026];
-                        let obj = set;
                         if (!set.has(item10026)) {
-                          let tmp17 = item10026;
-                          let addResult = obj.add(tmp11);
-                          let obj2 = arg0(tmp11);
+                          let addResult = set.add(item10026);
+                          let obj2 = arg0(item10026);
                           let reversed = obj2.reverse();
-                          let tmp20 = reversed;
-                          let tmp21 = reversed;
                           for (const item10050 of reversed) {
                             if (item10050.filename) {
-                              let tmp23 = closure_2;
-                              let tmp24 = item10050;
-                              let tmp25 = tmp16;
                               let result = closure_2.set(tmp22.filename, tmp16);
-                              let tmp27 = obj3;
                               obj3.return();
                               break;
                             }
@@ -56,9 +43,9 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
                       }
                     }
                   })(closure_0);
-                  const value = closure_1_2.get(filename.filename);
+                  const value = closure_1_2.get(item.filename);
                   if (value) {
-                    filename.module_metadata = value;
+                    item.module_metadata = value;
                   }
                 }
               }
@@ -69,27 +56,18 @@ arg5.addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exceptio
     }
   }
 };
-arg5.getFilenameToMetadataMap = function getFilenameToMetadataMap(arg0) {
+arg5.getFilenameToMetadataMap = function getFilenameToMetadataMap(fn) {
   const obj = {};
   if (_mod821.GLOBAL_OBJ._sentryModuleMetadata) {
     const _Object = Object;
     const keys = Object.keys(_mod821.GLOBAL_OBJ._sentryModuleMetadata);
     for (const item10026 of keys) {
-      let tmp11 = require;
-      let tmp12 = require;
-      let tmp13 = dependencyMap;
-      let tmp14 = dependencyMap;
       let tmp15 = _mod821.GLOBAL_OBJ._sentryModuleMetadata[item10026];
       let obj2 = arg0(item10026);
       let reversed = obj2.reverse();
-      let tmp17 = reversed;
-      let tmp18 = reversed;
       for (const item10043 of reversed) {
         if (item10043.filename) {
-          let tmp20 = item10043;
-          let tmp21 = tmp15;
           obj[tmp19.filename] = tmp15;
-          let tmp22 = obj3;
           obj3.return();
           break;
         }
@@ -101,9 +79,6 @@ arg5.getFilenameToMetadataMap = function getFilenameToMetadataMap(arg0) {
   } else {
     return obj;
   }
-  const tmp = require;
-  const tmp2 = require;
-  const tmp3 = dependencyMap;
 };
 arg5.getMetadataForUrl = function getMetadataForUrl(closure_0) {
   (function ensureMetadataStacksAreParsed(closure_0) {
@@ -111,27 +86,14 @@ arg5.getMetadataForUrl = function getMetadataForUrl(closure_0) {
       const _Object = Object;
       const keys = Object.keys(callback(821).GLOBAL_OBJ._sentryModuleMetadata);
       for (const item10026 of keys) {
-        let tmp11 = item10026;
-        let tmp12 = callback;
-        let tmp13 = callback;
-        let tmp14 = dependencyMap;
-        let tmp15 = dependencyMap;
         let tmp16 = callback(821).GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        let obj = set;
         if (!set.has(item10026)) {
-          let tmp17 = item10026;
-          let addResult = obj.add(tmp11);
-          let obj2 = arg0(tmp11);
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
           let reversed = obj2.reverse();
-          let tmp20 = reversed;
-          let tmp21 = reversed;
           for (const item10050 of reversed) {
             if (item10050.filename) {
-              let tmp23 = closure_2;
-              let tmp24 = item10050;
-              let tmp25 = tmp16;
               let result = closure_2.set(tmp22.filename, tmp16);
-              let tmp27 = obj3;
               obj3.return();
               break;
             }
@@ -149,12 +111,12 @@ arg5.stripMetadataFromStackFrames = function stripMetadataFromStackFrames(except
   if (exception != null) {
     const values = exception.values;
     if (values != null) {
-      let item = values.forEach((stacktrace) => {
-        stacktrace = stacktrace.stacktrace;
+      let item = values.forEach((item, index) => {
+        const stacktrace = item.stacktrace;
         if (stacktrace != null) {
           const frames = stacktrace.frames;
           if (frames != null) {
-            const item = frames.forEach((arg0) => {
+            item = frames.forEach((item, index) => {
               delete tmp[tmp2];
             });
           }

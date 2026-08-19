@@ -1,10 +1,10 @@
 // _runtime/09932_NativeStackNavigator.js
 import createStandardNavigationFactories2 from "01501_createStandardNavigationFactories.js";
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import createStandardNavigationFactories from "01501_createStandardNavigationFactories.js";
 
-require = arg1;
+require = fn;
 function NativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
@@ -37,7 +37,7 @@ function NativeStackNavigator(arg0) {
             }
             if (tmp2) {
               const obj = {};
-              const StackActions = closure_2_0(closure_2_1[2]).StackActions;
+              const StackActions = state(navigation[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
               obj.target = closure_0.key;
               closure_1.dispatch(obj);
@@ -48,7 +48,6 @@ function NativeStackNavigator(arg0) {
     }
     return addListenerResult;
   }, items);
-  obj = { children: null };
   obj = {};
   const merged1 = Object.assign(merged);
   obj.state = state;

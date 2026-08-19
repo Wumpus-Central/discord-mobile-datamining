@@ -18,8 +18,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^(\d+)(-?(е|я|й|ое|ье|ая|ья|ый|ой|ий|ый))?/i,
   parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+  valueCallback(match) {
+    return parseInt(match, 10);
   }
 };
 const items = [/^д/i, /^н/i];

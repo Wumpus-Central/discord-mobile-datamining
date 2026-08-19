@@ -1,5 +1,5 @@
 // _runtime/01561_getPatternParts.js
-import closure_0 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 
 export const getPatternParts = function getPatternParts(path) {
@@ -15,13 +15,7 @@ export const getPatternParts = function getPatternParts(path) {
   if (0 <= path.length) {
     while (true) {
       let tmp = path[num];
-      let tmp2 = num;
-      let tmp3 = num2;
       let flag6 = flag;
-      let tmp4 = flag2;
-      let tmp5 = flag3;
-      let tmp6 = flag4;
-      let tmp7 = obj;
       if (null != tmp) {
         obj.segment = obj.segment + tmp;
       }
@@ -34,14 +28,9 @@ export const getPatternParts = function getPatternParts(path) {
           flag7 = flag3;
           flag8 = flag4;
           if (!flag4) {
-            let tmp30 = globalThis;
             let _Error4 = Error;
             let _HermesInternal4 = HermesInternal;
-            let str8 = "Encountered ':' in the middle of a segment in path: ";
-            let tmp31 = new.target;
-            let tmp32 = new.target;
             error = new Error("Encountered ':' in the middle of a segment in path: " + path);
-            let tmp34 = error;
             throw error;
           }
         }
@@ -128,14 +117,9 @@ export const getPatternParts = function getPatternParts(path) {
                   }
                 }
               }
-              let tmp14 = globalThis;
               let _Error2 = Error;
               let _HermesInternal2 = HermesInternal;
-              let str2 = "Encountered ')' without preceding '(' in path: ";
-              let tmp15 = new.target;
-              let tmp16 = new.target;
               let error1 = new Error("Encountered ')' without preceding '(' in path: " + path);
-              let tmp18 = error1;
               throw error1;
             }
           }
@@ -148,14 +132,9 @@ export const getPatternParts = function getPatternParts(path) {
               flag7 = false;
               flag8 = flag4;
             } else {
-              let tmp19 = globalThis;
               let _Error3 = Error;
               let _HermesInternal3 = HermesInternal;
-              let str3 = "Encountered '?' without preceding ':' in path: ";
-              let tmp20 = new.target;
-              let tmp21 = new.target;
               let error2 = new Error("Encountered '?' without preceding ':' in path: " + path);
-              let tmp23 = error2;
               throw error2;
             }
           }
@@ -219,26 +198,18 @@ export const getPatternParts = function getPatternParts(path) {
     const error4 = new Error("Could not find closing ')' in path: " + path);
     throw error4;
   } else {
-    const mapped = items.map((param) => param.param);
+    const mapped = items.map((item, index) => item.param);
     const _Boolean = Boolean;
     const found = mapped.filter(Boolean);
     const entries = found.entries();
     const tmp43 = entries[Symbol.iterator]();
     while (tmp43 !== undefined) {
-      let tmp47 = callback;
       let tmp48 = callback(tmp45, 2);
       [tmp49, tmp50] = tmp48;
-      let tmp51 = tmp50;
       if (found.indexOf(tmp50) !== tmp49) {
         let _Error5 = Error;
-        let tmp52 = tmp50;
         let _HermesInternal5 = HermesInternal;
-        let str9 = "' found in path: ";
-        let str10 = "Duplicate param name '";
-        let tmp53 = new.target;
-        let tmp54 = new.target;
-        let error5 = new Error("Duplicate param name '" + tmp51 + "' found in path: " + path);
-        let tmp56 = error5;
+        let error5 = new Error("Duplicate param name '" + tmp50 + "' found in path: " + path);
         throw error5;
       }
     }

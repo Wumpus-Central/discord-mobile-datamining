@@ -1,8 +1,6 @@
 // _runtime/06464_n.js
 import _mod6420 from "metro/06420__.js";
 import noop from "00019_noop.js";
-import { handleStateChangeEvent } from "06463_handleStateChangeEvent.js";
-import { 06420__ } from "metro/06420__.js";
 
 ({ useEffect: obj1, useMemo: c3, useRef: c4 } = noop);
 let closure_5 = ["onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedTouchEvent"];
@@ -38,17 +36,17 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
     }
     if (isWorkletFunctionResult) {
-      let obj = tmp3;
+      let obj = memoizedGestureCallbacks;
     } else {
       obj = {};
-      const merged = Object.assign(tmp3);
-      obj.onUpdate = closure_1_6;
+      const merged = Object.assign(memoizedGestureCallbacks);
+      obj.onUpdate = fn;
     }
     return obj;
   }, items);
   const callback3 = tmp;
   fn = function h(handlerTag) {
-    let tmp = closure_1_7.value[handlerTag.handlerTag];
+    let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
       const obj = { lastUpdateEvent: "r" };
       iter.value[handlerTag.handlerTag] = obj;
@@ -56,7 +54,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
     }
     handlerTag(memoizedGestureCallbacks[2]).eventHandler(handlerTag, handlerTag, closure_4, closure_2, tmp, false, closure_3);
   };
-  fn.__closure = { lastUpdateEventMap: mutable, eventHandler: _handleStateChangeEvent.eventHandler, handlerTag, workletizedHandlers: tmp, changeEventCalculator, fillInDefaultValues };
+  fn.__closure = { lastUpdateEventMap: mutable, eventHandler: require("06463_handleStateChangeEvent.js").eventHandler, handlerTag, workletizedHandlers: tmp, changeEventCalculator, fillInDefaultValues };
   fn.__workletHash = 3272953373395;
   fn.__initData = closure_9;
   const tmp2 = callback3(handlerTag);
@@ -65,7 +63,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
   callback(() => {
     closure_5.current = closure_0;
     return () => {
-      const Reanimated = closure_1_0(closure_1_1[1]).Reanimated;
+      const Reanimated = handlerTag(memoizedGestureCallbacks[1]).Reanimated;
       if (Reanimated != null) {
         const runOnUI = Reanimated.runOnUI;
         if (runOnUI != null) {
@@ -74,7 +72,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       }
     };
   }, items1);
-  let Reanimated = _06420__.Reanimated;
+  let Reanimated = require("metro/06420__.js").Reanimated;
   let event;
   if (Reanimated != null) {
     let tmp5 = tmp2.current !== handlerTag;
@@ -86,7 +84,6 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       tmp5 = doDependenciesDiffer;
     }
     event = Reanimated.useEvent(fn, closure_5, tmp5);
-    const tmp6 = closure_5;
   }
   return event;
 };

@@ -3,9 +3,9 @@ import noop from "00019_noop.js";
 
 let useEffect = noop.useEffect;
 
-export const useUpdateGestureConfig = (arg0, enabled) => {
+export const useUpdateGestureConfig = (arg0, options) => {
   useEffect = arg0;
-  enabled = enabled.enabled;
+  const enabled = options.enabled;
   const items = [enabled, arg0];
   useEffect(() => {
     if (undefined !== enabled) {

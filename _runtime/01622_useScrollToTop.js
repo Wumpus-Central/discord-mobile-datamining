@@ -1,5 +1,5 @@
 // _runtime/01622_useScrollToTop.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -16,13 +16,12 @@ export const useScrollToTop = function useScrollToTop(ref) {
     const effect = obj.useEffect(() => {
       const items = [];
       for (let parent = closure_1; parent; parent = parent.getParent()) {
-        let tmp = parent;
         if ("tab" === parent.getState().type) {
           let arr = items.push(parent);
         }
       }
       if (0 !== items.length) {
-        closure_1 = items.map((addListener) => addListener.addListener("tabPress", (arg0) => {
+        closure_1 = items.map((item, index) => item.addListener("tabPress", (arg0) => {
           closure_0 = arg0;
           closure_1 = closure_1_1.isFocused();
           let hasItem = closure_0.includes(closure_1_1);
@@ -53,15 +52,15 @@ export const useScrollToTop = function useScrollToTop(ref) {
                 }
               }
             } else {
-              if (!("scrollToTop" in tmp.current)) {
-                if (!("scrollTo" in tmp.current)) {
-                  if (!("scrollToOffset" in tmp.current)) {
-                    if (!("scrollResponderScrollTo" in tmp.current)) {
-                      const current = tmp.current;
-                      if ("getScrollResponder" in tmp.current) {
+              if (!("scrollToTop" in ref.current)) {
+                if (!("scrollTo" in ref.current)) {
+                  if (!("scrollToOffset" in ref.current)) {
+                    if (!("scrollResponderScrollTo" in ref.current)) {
+                      const current = ref.current;
+                      if ("getScrollResponder" in ref.current) {
                         let current3 = current.getScrollResponder();
                       } else {
-                        const current2 = tmp.current;
+                        const current2 = ref.current;
                         if ("getNode" in current) {
                           current3 = current2.getNode();
                         } else {
@@ -72,12 +71,12 @@ export const useScrollToTop = function useScrollToTop(ref) {
                   }
                 }
               }
-              current3 = tmp.current;
+              current3 = ref.current;
             }
           });
         }));
         return () => {
-          const item = closure_1.forEach((arg0) => arg0());
+          const item = closure_1.forEach((item, index) => item());
         };
       }
     }, items);

@@ -1,16 +1,17 @@
 // _runtime/metro/07843__addTracingHeadersToFetchRequest.js
 import errorCallback from "../07734_errorCallback.js";
+import isInstanceOf from "../07745_isInstanceOf.js";
 import SyncPromise from "../07762_SyncPromise.js";
 import hasTracingEnabled from "../07770_hasTracingEnabled.js";
 import getTraceData from "../07809_getTraceData.js";
-import closure_2 from "../00853__toArray.js";
-import __SENTRY_DEBUG__ from "07737___SENTRY_DEBUG__.js";
+import _toArray from "../00853__toArray.js";
+import "__SENTRY_DEBUG__";
 import consoleSandbox from "../07738_consoleSandbox.js";
 import dateTimestampInSeconds from "../07752_dateTimestampInSeconds.js";
+import __SENTRY_DEBUG__ from "07766___SENTRY_DEBUG__.js";
 
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  let obj = getTraceData;
-  obj = { span };
+  let obj = { span };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp4, baggage } = traceData);
   if (tmp4) {
@@ -19,7 +20,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Request = Request;
       let isInstanceOfResult = typeof Request !== "undefined";
       if (typeof Request !== "undefined") {
-        let tmpResult = tmp(7745);
+        let tmpResult = isInstanceOf;
         const _Request2 = Request;
         isInstanceOfResult = tmpResult.isInstanceOf(headers, Request);
       }
@@ -33,7 +34,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Headers = Headers;
       let isInstanceOfResult1 = typeof Headers !== "undefined";
       if (typeof Headers !== "undefined") {
-        tmpResult = tmp(7745);
+        tmpResult = isInstanceOf;
         const _Headers3 = Headers;
         isInstanceOfResult1 = tmpResult.isInstanceOf(headers, Headers);
       }
@@ -45,8 +46,8 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
           const str6 = headers2.get("baggage");
           if (str6) {
             let parts = str6.split(",");
-            let found = parts.filter((arg0) => {
-              const first = arg0.split("=")[0];
+            let found = parts.filter((item, index) => {
+              const first = item.split("=")[0];
               return !first.startsWith(callback(table[15]).SENTRY_BAGGAGE_KEY_PREFIX);
             });
             let joined = found.join(",");
@@ -64,25 +65,25 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       } else {
         const _Array = Array;
         if (Array.isArray(headers)) {
-          const found1 = headers.filter((arg0) => {
-            let isArray = Array.isArray(arg0);
+          const found1 = headers.filter((item, index) => {
+            let isArray = Array.isArray(item);
             if (isArray) {
-              isArray = "sentry-trace" === arg0[0];
+              isArray = "sentry-trace" === item[0];
             }
             return !isArray;
           });
           let items = [];
           const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((arg0) => {
-            if (Array.isArray(arg0)) {
-              if ("baggage" === arg0[0]) {
-                if (typeof arg0[1] === "string") {
-                  const arr = callback(arg0);
+          items[HermesBuiltin.arraySpread(found1.map((item, index) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = callback(item);
                   const items = [arr[0], ];
                   const substr = arr.slice(2);
                   const parts = arr[1].split(",");
-                  const found = parts.filter((arg0) => {
-                    const first = arg0.split("=")[0];
+                  const found = parts.filter((item, index) => {
+                    const first = item.split("=")[0];
                     return !first.startsWith(callback(table[15]).SENTRY_BAGGAGE_KEY_PREFIX);
                   });
                   items[1] = found.join(",");
@@ -91,7 +92,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
                 }
               }
             }
-            return arg0;
+            return item;
           }), 0)] = items1;
           if (baggage) {
             const items2 = ["baggage", baggage];
@@ -105,26 +106,26 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
           }
           const _Array2 = Array;
           if (Array.isArray(baggage)) {
-            const mapped = baggage.map((str) => {
-              let joined = str;
-              if (typeof str === "string") {
-                const parts = str.split(",");
-                const found = parts.filter((arg0) => {
-                  const first = arg0.split("=")[0];
+            const mapped = baggage.map((item, index) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item, index) => {
+                  const first = item.split("=")[0];
                   return !first.startsWith(callback(table[15]).SENTRY_BAGGAGE_KEY_PREFIX);
                 });
                 joined = found.join(",");
               }
               return joined;
             });
-            let found2 = mapped.filter((arg0) => "" === arg0);
+            let found2 = mapped.filter((item, index) => "" === item);
           } else {
             const items3 = [];
             found2 = items3;
             if (baggage) {
               const parts1 = baggage.split(",");
-              const found3 = parts1.filter((arg0) => {
-                const first = arg0.split("=")[0];
+              const found3 = parts1.filter((item, index) => {
+                const first = item.split("=")[0];
                 return !first.startsWith(callback(table[15]).SENTRY_BAGGAGE_KEY_PREFIX);
               });
               items3.push(found3.join(","));
@@ -158,7 +159,7 @@ SyncPromise;
 export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
   return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
 };
-export const instrumentFetchRequest = function instrumentFetchRequest(fetchData) {
+export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2) {
   let str = arg4;
   if (arg4 === undefined) {
     str = "auto.http.browser";
@@ -170,7 +171,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
     let obj = hasTracingEnabled;
     let hasTracingEnabledResult = obj.hasTracingEnabled();
     if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = arg1(endResult.fetchData.url);
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
     }
     if (endResult.endTimestamp) {
       if (hasTracingEnabledResult) {
@@ -239,7 +240,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
       }
       endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
       arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (arg2(endResult.fetchData.url)) {
+      if (fn2(endResult.fetchData.url)) {
         let obj2 = endResult.args[1];
         if (!obj2) {
           obj2 = {};
@@ -256,7 +257,6 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
           obj2.headers = tmp13Result;
         }
         setHttpStatusResult5 = setHttpStatus(7770);
-        const tmp13 = _addTracingHeadersToFetchRequest;
       }
       return startInactiveSpanResult;
     }

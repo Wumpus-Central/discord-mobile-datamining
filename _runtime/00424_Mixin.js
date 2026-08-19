@@ -17,8 +17,7 @@ const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_PRESS_IN = "RESPONDER_ACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_LONG_PRESS_IN = "RESPONDER_ACTIVE_LONG_PRESS_IN";
 const ERROR = "ERROR";
-let obj = { NOT_RESPONDER: false, RESPONDER_INACTIVE_PRESS_IN: false, RESPONDER_INACTIVE_PRESS_OUT: false, RESPONDER_ACTIVE_PRESS_IN: false, RESPONDER_ACTIVE_PRESS_OUT: false, RESPONDER_ACTIVE_LONG_PRESS_IN: false, RESPONDER_ACTIVE_LONG_PRESS_OUT: false, ERROR: false };
-obj = {};
+let obj = {};
 const merged = Object.assign(obj);
 obj.RESPONDER_ACTIVE_PRESS_OUT = true;
 obj.RESPONDER_ACTIVE_PRESS_IN = true;
@@ -155,7 +154,6 @@ let obj2 = {
         tmp3 = sum2;
         tmp4 = sum1;
         tmp5 = sum;
-        const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
       if (typeof f18646 !== "function") {
@@ -227,7 +225,6 @@ let obj2 = {
     if (null != responderID) {
       if (typeof responderID === "number") {
         measureDefault.measure(responderID, self._handleQueryLayout);
-        obj = measureDefault;
       } else {
         responderID.measure(self._handleQueryLayout);
       }
@@ -254,16 +251,12 @@ let obj2 = {
       const self = this;
       if (this.state.touchable.positionOnActivate) {
         PositionDefault.release(self.state.touchable.positionOnActivate);
-        obj = PositionDefault;
       }
       if (self.state.touchable.dimensionsOnActivate) {
         BoundingDimensionsDefault.release(self.state.touchable.dimensionsOnActivate);
-        const obj2 = BoundingDimensionsDefault;
       }
       self.state.touchable.positionOnActivate = PositionDefault.getPooled(arg4, arg5);
-      const obj3 = PositionDefault;
       self.state.touchable.dimensionsOnActivate = BoundingDimensionsDefault.getPooled(arg2, arg3);
-      const obj4 = BoundingDimensionsDefault;
     }
   },
   _handleDelay(persist) {
@@ -420,7 +413,7 @@ let obj2 = {
       if (!_isHighlightResult) {
         self._startHighlight(nativeEvent);
       }
-      if (obj[touchState]) {
+      if (tmp11[touchState]) {
         if (arg2 === RESPONDER_RELEASE) {
           let tmp20 = obj1[touchState];
           if (tmp20) {
@@ -452,7 +445,6 @@ let obj2 = {
             }
             self.touchableHandlePress(nativeEvent);
           }
-          const tmp31 = obj1;
         }
       }
       if (self.touchableDelayTimeout) {
@@ -468,6 +460,7 @@ let obj2 = {
     if (tmp15) {
       self._endHighlight(nativeEvent);
     }
+    tmp11 = obj;
   },
   _startHighlight(nativeEvent) {
     const self = this;
@@ -477,8 +470,7 @@ let obj2 = {
     }
   },
   _endHighlight(closure_0) {
-    let self = this;
-    self = this;
+    const self = this;
     if (this.touchableHandleActivePressOut) {
       if (self.touchableGetPressOutDelayMS) {
         if (self.touchableGetPressOutDelayMS()) {

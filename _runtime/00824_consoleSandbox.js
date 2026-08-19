@@ -1,41 +1,41 @@
 // _runtime/00824_consoleSandbox.js
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
 import getGlobalSingleton from "00825_getGlobalSingleton.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function consoleSandbox(arg0) {
+function consoleSandbox(fn) {
   if ("console" in console(821).GLOBAL_OBJ) {
-    console = console(821).GLOBAL_OBJ.console;
+    console = tmp(821).GLOBAL_OBJ.console;
     dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
-    const item = keys.forEach((arg0) => {
-      closure_1[arg0] = console[arg0];
-      console[arg0] = closure_1_2[arg0];
+    const item = keys.forEach((item, index) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
     });
     try {
-      const item1 = keys.forEach((arg0) => {
-        console[arg0] = table[arg0];
+      const item1 = keys.forEach((item, index) => {
+        console[item] = table[item];
       });
-      return arg0();
+      return fn();
     } catch (tmp8) {
-      const item2 = arr.forEach((arg0) => {
-        console[arg0] = table[arg0];
+      const item2 = arr.forEach((item, index) => {
+        console[item] = table[item];
       });
       throw tmp8;
     }
   } else {
-    return arg0();
+    return fn();
   }
+  tmp = console;
 }
 function _maybeLog(arg0) {
   const _require = arg0;
   dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;
+  const DEBUG_BUILD = require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {
@@ -57,8 +57,7 @@ function _maybeLog(arg0) {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let obj = {};
-obj = {
+const obj = {
   enable() {
     if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));

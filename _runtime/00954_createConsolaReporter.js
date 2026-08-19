@@ -1,5 +1,5 @@
 // _runtime/00954_createConsolaReporter.js
-import closure_2 from "metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 
 let closure_3 = ["type", "level", "message", "args", "tag", "date"];
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -23,7 +23,7 @@ export const createConsolaReporter = function createConsolaReporter() {
   obj = {
     log(arg0) {
       ({ type, level, message, args, tag, date } = arg0);
-      const tmp = closure_1_2(arg0, closure_1_3);
+      const tmp = _objectWithoutProperties(arg0, closure_1_3);
       if (!client) {
         client = set(client[1]).getClient();
         const obj2 = set(client[1]);

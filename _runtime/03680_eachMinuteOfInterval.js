@@ -66,9 +66,7 @@ export default function eachMinuteOfInterval(start, step) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
-            let tmp6 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
-            let tmp8 = addMinutes;
             let defaultResult3 = addMinutes.default(defaultResult1, NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();

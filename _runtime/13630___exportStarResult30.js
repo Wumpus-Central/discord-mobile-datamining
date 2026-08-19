@@ -13,13 +13,9 @@ arg5.PartitionPattern = function PartitionPattern(arr) {
     if (index > -1) {
       while (true) {
         let index1 = arr.indexOf("}", index);
-        let tmp3 = require;
-        let tmp4 = dependencyMap;
         let concat = "Invalid pattern ".concat;
         let tmp5 = index1 > index;
         let invariantResult = getMultiInternalSlots.invariant(tmp5, "Invalid pattern ".concat(arr));
-        let tmp7 = num4;
-        let tmp8 = index;
         if (index > num4) {
           let obj = { type: "literal", value: null };
           obj[1] = arr.substring(num4, index);

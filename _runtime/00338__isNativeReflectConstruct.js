@@ -1,9 +1,9 @@
 // _runtime/00338__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "metro/00041__classCallCheck.js";
-import closure_5 from "metro/00093__possibleConstructorReturn.js";
-import closure_6 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import jsxProd from "react/00021_jsxProd.js";
@@ -74,12 +74,9 @@ let items = [
       ({ style, importantForAccessibility } = props);
       ({ children, imageStyle, imageRef } = props);
       const size = ImageBackground(148)(style);
-      let obj = { accessibilityIgnoresInvertColors: true, importantForAccessibility, style, ref: this._captureRef, children: null };
       const tmp = callback(props, closure_2);
-      const tmp2 = closure_8;
-      obj = {};
+      let obj = {};
       const tmp3 = ImageBackground(108);
-      const tmp4 = closure_7;
       const merged = Object.assign(tmp);
       obj.importantForAccessibility = importantForAccessibility;
       const items = [ImageBackground(254).absoluteFill, , ];
@@ -97,9 +94,9 @@ let items = [
       items[2] = imageStyle;
       obj.style = items;
       obj.ref = imageRef;
-      const items1 = [tmp4(ImageBackground(328), obj), children];
+      const items1 = [callback2(ImageBackground(328), obj), children];
       obj[4] = items1;
-      return tmp2(tmp3, obj);
+      return callback3(tmp3, obj);
     }
   }
 ];

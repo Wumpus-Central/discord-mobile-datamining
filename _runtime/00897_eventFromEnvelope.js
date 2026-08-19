@@ -1,10 +1,9 @@
 // _runtime/00897_eventFromEnvelope.js
-import closure_2 from "00005_asyncGeneratorStep.js";
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 function eventFromEnvelope(arg0, arg1) {
   const _require = arg1;
-  _forEachEnvelopeItem.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  require("00864_forEachEnvelopeItem.js").forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if (items.includes(arg1)) {
       const _Array = Array;
       let tmp3;
@@ -46,17 +45,14 @@ export function makeMultiplexedTransport(arg0, arg1) {
           let tmp9 = lib;
           result = {};
           if (arg1) {
-            lib = arg1;
             merged = Object.assign(merged);
             result.url = envelopeEndpointWithUrlEncodedAuth;
-            lib = undefined;
-            table = undefined;
             let tmp9Result = tmp9(result);
             table = tmp9Result;
             let obj = {};
             const merged1 = Object.assign(tmp9Result);
-            tmp9 = closure_2_2;
-            lib = closure_2_2((arg0) => {
+            tmp9 = asyncGeneratorStep;
+            lib = asyncGeneratorStep((arg0) => {
               closure_0 = arg0;
               c1 = 0;
               return (function*(arg0) {
@@ -85,7 +81,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      const tmp6 = closure_2_4(closure_0, ["event", "transaction", "profile", "replay_event"]);
+                      const tmp6 = getTransport(closure_0, ["event", "transaction", "profile", "replay_event"]);
                       if (tmp6) {
                         tmp6.release = closure_0;
                       }
@@ -127,7 +123,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
     }
     function _send() {
       const self = this;
-      const tmp = closure_2_2((arg0) => {
+      const tmp = asyncGeneratorStep((arg0) => {
         closure_0 = arg0;
         c2 = 0;
         c1 = 0;
@@ -158,7 +154,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
     }
     function _flush() {
       const self = this;
-      const tmp = closure_2_2((arg0) => {
+      const tmp = asyncGeneratorStep((arg0) => {
         closure_0 = arg0;
         c3 = 0;
         c4 = 0;

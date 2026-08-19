@@ -1,5 +1,7 @@
 // _runtime/13209_Deflate.js
 import assign from "13208_assign.js";
+import ZStream from "13210_ZStream.js";
+import flush_block_only from "13211_flush_block_only.js";
 import _mod13212 from "metro/13212__.js";
 import assign2 from "13216_assign.js";
 
@@ -45,7 +47,7 @@ class Deflate {
           _Error2 = Error;
           tmp23 = new.target;
           tmp24 = new.target;
-          error = new Error(require("module_13212")[deflateInit2Result]);
+          error = new Error(require("metro/13212__.js")[deflateInit2Result]);
           tmp26 = error;
           throw error;
         } else {
@@ -79,7 +81,7 @@ class Deflate {
               _Error = Error;
               tmp18 = new.target;
               tmp19 = new.target;
-              error1 = new Error(require("module_13212")[deflateSetDictionaryResult]);
+              error1 = new Error(require("metro/13212__.js")[deflateSetDictionaryResult]);
               tmp21 = error1;
               throw error1;
             } else {

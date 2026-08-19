@@ -12,18 +12,13 @@ arg5.default = function parseHermesStack(str) {
   if (0 < parts.length) {
     while (true) {
       str = parts[num2];
-      let tmp2 = num2;
-      let tmp3 = num;
-      let tmp4 = items;
       let tmp5 = num;
       let items1 = items;
       if (str) {
-        let tmp6 = closure_0;
         let match = str.match(closure_0);
         if (match) {
           break;
         } else {
-          let tmp8 = closure_1;
           let match1 = str.match(closure_1);
           let tmp10;
           if (match1) {
@@ -37,7 +32,6 @@ arg5.default = function parseHermesStack(str) {
             tmp5 = num;
             items1 = items;
           } else {
-            let tmp13 = regex;
             tmp5 = num;
             items1 = items;
             if (!regex.test(str)) {

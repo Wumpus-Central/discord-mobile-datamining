@@ -1,46 +1,48 @@
 // _runtime/01613_clone.js
 import BaseNavigationContainer from "01503_BaseNavigationContainer.js";
 import useEffectDefault from "01522_useEffect.js";
-import closure_3 from "00019_noop.js";
+import get_options from "01600_get_options.js";
+import useDeepStableValue from "01614_useDeepStableValue.js";
+import noop from "00019_noop.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 
-require = arg1;
-function clone(obj, arg1, get) {
+require = fn;
+function clone(screen, arg1, get) {
   let keys = arg1;
   if (arg1 === undefined) {
     keys = closure_4;
   }
-  if (typeof obj === "object") {
-    if (null != obj) {
+  if (typeof screen === "object") {
+    if (null != screen) {
       let value;
       if (get != null) {
-        value = get.get(obj);
+        value = get.get(screen);
       }
       if (value) {
         return value;
       } else {
         const _Array = Array;
-        const isArray = Array.isArray(obj);
+        const isArray = Array.isArray(screen);
         if (keys === closure_5) {
-          if ("screen" in obj) {
-            if (typeof obj.screen !== "string") {
-              if ("state" in obj) {
-                if (typeof obj.state === "object") {
-                  if (null != obj.state) {
-                    if ("routes" in obj.state) {
+          if ("screen" in screen) {
+            if (typeof screen.screen !== "string") {
+              if ("state" in screen) {
+                if (typeof screen.state === "object") {
+                  if (null != screen.state) {
+                    if ("routes" in screen.state) {
                       const _Array2 = Array;
                     }
                   }
                 }
               }
-              return obj;
+              return screen;
             }
           }
         }
         let tmp8;
         if (keys === closure_5) {
-          obj = {};
-          const merged = Object.assign(obj);
+          let obj = {};
+          const merged = Object.assign(screen);
           tmp8 = obj;
         }
         let tmp12 = tmp8;
@@ -51,67 +53,51 @@ function clone(obj, arg1, get) {
         }
         let tmp15 = tmp12;
         if (tmp12 == null) {
-          tmp15 = obj;
+          tmp15 = screen;
         }
-        const result = weakMap.set(obj, tmp15);
+        const result = weakMap.set(screen, tmp15);
         if (isArray) {
-          keys = obj.keys();
+          keys = screen.keys();
         }
         const iter = keys[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let _Reflect = Reflect;
           let tmp21 = nextResult;
-          value = Reflect.get(obj, nextResult);
+          value = Reflect.get(screen, nextResult);
           let tmp23 = value;
-          let tmp24 = clone;
           if ("params" === nextResult) {
-            let tmp26 = closure_5;
-            let tmp27 = closure_5;
             let tmp25 = closure_5;
           } else {
             tmp25 = closure_4;
           }
-          let tmp24Result = tmp24(value, tmp25, weakMap);
-          let tmp30 = value;
+          let tmp24Result = clone(value, tmp25, weakMap);
           if (tmp24Result !== tmp23) {
-            let tmp31 = tmp12;
             if (tmp12 != null) {
-              let tmp39 = tmp12;
-              let result1 = weakMap.set(obj, tmp12);
+              let result1 = weakMap.set(screen, tmp12);
               let _Object = Object;
               obj = {};
-              let tmp41 = nextResult;
-              let tmp42 = tmp24Result;
               obj[tmp21] = tmp29;
               let merged1 = Object.assign(tmp12, obj);
+            } else if (isArray) {
+              let items = [];
+              let arraySpreadResult = HermesBuiltin.arraySpread(screen, 0);
+              obj = items;
             } else {
-              if (isArray) {
-                let items = [];
-                let tmp35 = items;
-                let tmp36 = obj;
-                let num2 = 0;
-                let arraySpreadResult = HermesBuiltin.arraySpread(obj, 0);
-                obj = items;
-              } else {
-                obj = {};
-                let tmp32 = obj;
-                let tmp33 = obj;
-                let merged2 = Object.assign(obj);
-              }
-              let tmp38 = obj;
+              obj = {};
+              let merged2 = Object.assign(screen);
             }
           }
           continue;
         }
         if (tmp12 == null) {
-          tmp12 = obj;
+          tmp12 = screen;
         }
         return tmp12;
       }
     }
   }
-  return obj;
+  return screen;
 }
 let closure_4 = ["payload", "params", "state", "routes"];
 let closure_5 = ["params", "state"];
@@ -119,10 +105,9 @@ let closure_5 = ["params", "state"];
 export const useLinkProps = function useLinkProps(arg0) {
   ({ screen: require, params: importDefault, action: dependencyMap } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let context1;
   let obj = merged;
   const context = merged.useContext(BaseNavigationContainer.NavigationContainerRefContext);
-  context1 = merged.useContext(BaseNavigationContainer.NavigationHelpersContext);
+  let context1 = merged.useContext(BaseNavigationContainer.NavigationHelpersContext);
   if (context1 == null) {
     context1 = context;
   }
@@ -131,24 +116,24 @@ export const useLinkProps = function useLinkProps(arg0) {
     error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
     throw error;
   } else {
-    const options = obj.useContext(tmp2(1600).LinkingContext).options;
+    const options = obj.useContext(get_options.LinkingContext).options;
     const tmp14 = useEffectDefault((preventDefault) => {
       if (preventDefault != null) {
         preventDefault.preventDefault();
       }
       if (null != closure_2) {
-        let tmp8 = closure_1_6(tmp2);
+        let tmp8 = clone(tmp2);
       } else if (null == closure_0) {
         const _Error = Error;
         error = new Error("Couldn't find a screen to navigate to. Make sure to provide a screen name.");
         throw error;
       } else {
-        const CommonActions = closure_1_0(closure_1_2[2]).CommonActions;
-        tmp8 = closure_1_6(CommonActions.navigate(tmp3, closure_1));
+        const CommonActions = BaseNavigationContainer.CommonActions;
+        tmp8 = clone(CommonActions.navigate(tmp3, closure_1));
       }
       context1.dispatch(tmp8);
     });
-    const items = [merged.href, tmp2(1614).useDeepStableValue(undefined), , ];
+    const items = [merged.href, useDeepStableValue.useDeepStableValue(undefined), , ];
     let getPathFromState;
     if (options != null) {
       getPathFromState = options.getPathFromState;

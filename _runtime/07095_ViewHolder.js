@@ -23,8 +23,8 @@ export const ViewHolder = noopDefault.memo((index) => {
   onSizeChanged(() => {
     const result = refHolder.set(index, ref);
     return () => {
-      if (closure_2.get(closure_1) === closure_0) {
-        closure_2.delete(closure_1);
+      if (map.get(closure_1) === closure_0) {
+        map.delete(closure_1);
       }
     };
   }, items);
@@ -109,7 +109,6 @@ export const ViewHolder = noopDefault.memo((index) => {
     const layout = index.layout;
     const layout2 = index2.layout;
     tmp = layout.x === layout2.x && layout.y === layout2.y && layout.width === layout2.width && layout.height === layout2.height && layout.enforcedWidth === layout2.enforcedWidth && layout.enforcedHeight === layout2.enforcedHeight && layout.minWidth === layout2.minWidth && layout.minHeight === layout2.minHeight && layout.maxWidth === layout2.maxWidth && layout.maxHeight === layout2.maxHeight;
-    const tmp2 = layout.x === layout2.x && layout.y === layout2.y && layout.width === layout2.width && layout.height === layout2.height && layout.enforcedWidth === layout2.enforcedWidth && layout.enforcedHeight === layout2.enforcedHeight && layout.minWidth === layout2.minWidth && layout.minHeight === layout2.minHeight && layout.maxWidth === layout2.maxWidth && layout.maxHeight === layout2.maxHeight;
   }
   if (tmp) {
     tmp = index.refHolder === index2.refHolder;

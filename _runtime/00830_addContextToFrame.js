@@ -18,7 +18,7 @@ arg5.addContextToFrame = function addContextToFrame(arr, lineno) {
     const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
     const _Math4 = Math;
     const substr = arr.slice(Math.max(0, bound - num), bound);
-    lineno.pre_context = substr.map((arg0) => callback(832).snipLine(arg0, 0));
+    lineno.pre_context = substr.map((item, index) => callback(832).snipLine(item, 0));
     const _Math5 = Math;
     const bound1 = Math.min(length - 1, bound);
     let num2 = lineno.colno;
@@ -28,8 +28,7 @@ arg5.addContextToFrame = function addContextToFrame(arr, lineno) {
     lineno.context_line = isMatchingPattern.snipLine(arr[bound1], num2);
     const _Math = Math;
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
-    lineno.post_context = substr1.map((arg0) => callback(832).snipLine(arg0, 0));
-    const obj = isMatchingPattern;
+    lineno.post_context = substr1.map((item, index) => callback(832).snipLine(item, 0));
   }
 };
 arg5.addExceptionMechanism = function addExceptionMechanism(exception, data) {
@@ -180,8 +179,8 @@ arg5.uuid4 = function uuid4() {
       randomUUID = tmp.randomUUID;
     }
     if (randomUUID) {
-      let obj = _safeDateNow;
-      return _safeDateNow.withRandomSafeContext(() => lib.randomUUID()).replace(/-/g, "");
+      let obj = safeDateNow;
+      return require("00831_safeDateNow.js").withRandomSafeContext(() => lib.randomUUID()).replace(/-/g, "");
     } else {
       let str3 = c2;
       if (!c2) {

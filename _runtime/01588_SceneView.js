@@ -1,8 +1,8 @@
 // _runtime/01588_SceneView.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 
 export const SceneView = function SceneView(getState) {
   ({ screen, route } = getState);
@@ -10,27 +10,18 @@ export const SceneView = function SceneView(getState) {
   getState = getState.getState;
   const setState = getState.setState;
   const clearOptions = getState.clearOptions;
-  closure_5 = undefined;
-  let callback;
-  let addOptionsGetter;
-  let callback1;
-  let callback2;
-  let callback3;
-  closure_11 = undefined;
-  let callback4;
-  let context;
   closure_5 = getState.useRef(undefined);
-  callback = getState.useCallback(() => ref.current, []);
-  let obj = route(routeState[2]);
-  obj = { key: route.key, options: getState.options, navigation };
-  addOptionsGetter = obj.useOptionsGetters(obj).addOptionsGetter;
-  callback1 = getState.useCallback((current) => {
+  const callback = getState.useCallback(() => ref.current, []);
+  route(routeState[2]);
+  let obj = { key: route.key, options: getState.options, navigation };
+  const addOptionsGetter = obj.useOptionsGetters(obj).addOptionsGetter;
+  const callback1 = getState.useCallback((current) => {
     closure_5.current = current;
   }, []);
   let items = [getState, route.key];
-  callback2 = getState.useCallback(() => {
+  const callback2 = getState.useCallback(() => {
     const routes = getState().routes;
-    const found = routes.find((key) => key.key === key.key);
+    const found = routes.find((item, index) => item.key === key.key);
     let state;
     if (found) {
       state = found.state;
@@ -38,17 +29,17 @@ export const SceneView = function SceneView(getState) {
     return state;
   }, items);
   let items1 = [getState, route.key, setState];
-  callback3 = getState.useCallback((arg0) => {
+  const callback3 = getState.useCallback((arg0) => {
     closure_0 = arg0;
     let tmp = getState();
     const routes = tmp.routes;
-    const mapped = routes.map((key) => {
-      let tmp = key;
-      if (key.key === key.key) {
-        tmp = key;
-        if (key.state !== key) {
+    const mapped = routes.map((item, index) => {
+      let tmp = item;
+      if (item.key === key.key) {
+        tmp = item;
+        if (item.state !== key) {
           const obj = {};
-          const merged = Object.assign(key);
+          const merged = Object.assign(item);
           obj.state = tmp2;
           tmp = obj;
         }
@@ -68,8 +59,8 @@ export const SceneView = function SceneView(getState) {
     closure_11.current = false;
   });
   const effect1 = getState.useEffect(() => clearOptions, []);
-  callback4 = getState.useCallback(() => ref2.current, []);
-  context = getState.useContext(route(routeState[4]).NavigationFocusedRouteStateContext);
+  const callback4 = getState.useCallback(() => ref2.current, []);
+  const context = getState.useContext(route(routeState[4]).NavigationFocusedRouteStateContext);
   let items2 = [context, , , , ];
   ({ key: arr3[1], name: arr3[2], params: arr3[3], path: arr3[4] } = route);
   const items3 = [routeState, callback2, callback3, callback, callback1, callback4, addOptionsGetter];
@@ -83,7 +74,6 @@ export const SceneView = function SceneView(getState) {
         first = state.routes[0];
       }
       if (first) {
-        obj = { routes: null };
         obj = {};
         const merged = Object.assign(first);
         obj.state = addState(first.state);

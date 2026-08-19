@@ -3,10 +3,10 @@ import noopDefault from "00019_noop.js";
 import _modDef9022 from "metro/09022__.js";
 import _modDef9023 from "metro/09023__.js";
 import _modDef9042 from "metro/09042__.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
@@ -179,10 +179,10 @@ class Video {
     };
     tmp3Result._onReadyForDisplay = (nativeEvent) => {
       if (!store.props.audioOnly) {
-        obj._hidePoster();
+        store._hidePoster();
       }
       if (store.props.onReadyForDisplay) {
-        const props = obj.props;
+        const props = store.props;
         props.onReadyForDisplay(nativeEvent.nativeEvent);
       }
     };
@@ -243,30 +243,30 @@ class Video {
     tmp3Result._onGetLicense = (nativeEvent) => {
       if (store.props.drm) {
         const _Function = Function;
-        if (tmp.props.drm.getLicense instanceof Function) {
+        if (store.props.drm.getLicense instanceof Function) {
           nativeEvent = nativeEvent.nativeEvent;
           if (nativeEvent) {
             if (nativeEvent.spcBase64) {
-              const drm = tmp.props.drm;
+              const drm = store.props.drm;
               const resolved = Promise.resolve(drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl));
-              resolved.then((arg0) => {
-                if (undefined !== arg0) {
+              resolved.then((result) => {
+                if (undefined !== result) {
                   const VideoManager2 = closure_1_7.VideoManager;
-                  VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
+                  VideoManager2.setLicenseResult(result, closure_1_10(closure_0._root));
                 } else if (closure_1_7.VideoManager.setLicenseError) {
                   const VideoManager = closure_1_7.VideoManager;
                   VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
                 }
-              }).catch((arg0) => {
+              }).catch((error) => {
                 if (closure_1_7.VideoManager.setLicenseError) {
                   const VideoManager = tmp.VideoManager;
-                  VideoManager.setLicenseError(arg0, closure_1_10(closure_0._root));
+                  VideoManager.setLicenseError(error, closure_1_10(closure_0._root));
                 }
               });
-              const nextPromise = resolved.then((arg0) => {
-                if (undefined !== arg0) {
+              const nextPromise = resolved.then((result) => {
+                if (undefined !== result) {
                   const VideoManager2 = closure_1_7.VideoManager;
-                  VideoManager2.setLicenseResult(arg0, closure_1_10(closure_0._root));
+                  VideoManager2.setLicenseResult(result, closure_1_10(closure_0._root));
                 } else if (closure_1_7.VideoManager.setLicenseError) {
                   const VideoManager = closure_1_7.VideoManager;
                   VideoManager.setLicenseError("Empty license result", closure_1_10(closure_0._root));
@@ -276,16 +276,16 @@ class Video {
           }
           if (closure_1_7.VideoManager.setLicenseError) {
             let VideoManager = closure_1_7.VideoManager;
-            VideoManager.setLicenseError("No spc received", closure_1_10(tmp._root));
+            VideoManager.setLicenseError("No spc received", closure_1_10(store._root));
           }
         }
       }
     };
     tmp3Result.getViewManagerConfig = (arg0) => {
       if (getViewManagerConfig.getViewManagerConfig) {
-        let viewManagerConfig = obj.getViewManagerConfig(arg0);
+        let viewManagerConfig = getViewManagerConfig.getViewManagerConfig(arg0);
       } else {
-        viewManagerConfig = obj[arg0];
+        viewManagerConfig = getViewManagerConfig[arg0];
       }
       return viewManagerConfig;
     };
@@ -311,20 +311,20 @@ let items = [
   obj,
   {
     key: "toTypeString",
-    value: function toTypeString(toISOString) {
-      if ("object" === typeof toISOString) {
+    value: function toTypeString(closure_1) {
+      if ("object" === typeof dependencyMap) {
         const _Date = Date;
-        if (toISOString instanceof Date) {
-          let toISOStringResult = toISOString.toISOString();
+        if (dependencyMap instanceof Date) {
+          let toISOStringResult = dependencyMap.toISOString();
         } else {
           const _JSON = JSON;
-          toISOStringResult = JSON.stringify(toISOString);
+          toISOStringResult = JSON.stringify(dependencyMap);
         }
         return toISOStringResult;
       } else if ("undefined" === tmp) {
         return "";
       } else {
-        return toISOString.toString();
+        return dependencyMap.toString();
       }
     }
   },
@@ -335,8 +335,8 @@ let items = [
       closure_1 = headers;
       const obj = {};
       const keys = Object.keys(headers);
-      const item = keys.forEach((arg0) => {
-        obj[arg0] = self.toTypeString(headers[arg0]);
+      const item = keys.forEach((item, index) => {
+        obj[item] = self.toTypeString(headers[item]);
       });
       return obj;
     }
@@ -375,17 +375,16 @@ let items = [
       const viewManagerConfig = self.getViewManagerConfig("RNVVideo");
       if (resizeMode === Video(9020).stretch) {
         let ScaleNone = viewManagerConfig.Constants.ScaleToFill;
-      } else if (resizeMode === tmp(9020).contain) {
+      } else if (resizeMode === Video(9020).contain) {
         ScaleNone = viewManagerConfig.Constants.ScaleAspectFit;
-      } else if (resizeMode === tmp(9020).cover) {
+      } else if (resizeMode === Video(9020).cover) {
         ScaleNone = viewManagerConfig.Constants.ScaleAspectFill;
       } else {
         ScaleNone = viewManagerConfig.Constants.ScaleNone;
       }
       const merged = Object.assign({}, self.props);
-      let obj = { style: items, resizeMode: ScaleNone, src: null, onVideoLoadStart: null, onVideoLoad: null, onVideoError: null, onVideoProgress: null, onVideoSeek: null, onVideoEnd: null, onVideoBuffer: null, onVideoBandwidthUpdate: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onGetLicense: null, onPictureInPictureStatusChanged: null, onRestoreUserInterfaceForPictureInPictureStop: null };
-      items = [base.base, merged.style];
-      obj = { uri: str2, isNetwork: !tmp9, isAsset: !tmp10, shouldCache: !tmp3.__packager_asset, type: null, mainVer: null, patchVer: null, requestHeaders: null };
+      const items = [base.base, merged.style];
+      let obj = { uri: str2, isNetwork: !tmp9, isAsset: !tmp10, shouldCache: !tmp3.__packager_asset, type: null, mainVer: null, patchVer: null, requestHeaders: null };
       let str5 = tmp3.type;
       if (!str5) {
         str5 = "";
@@ -423,7 +422,7 @@ let items = [
       }
       items1[1] = showPoster;
       obj1[1] = items1;
-      return closure_13(closure_8, obj1);
+      return callback2(closure_8, obj1);
     }
   }
 ];
@@ -514,7 +513,6 @@ obj[40] = importDefaultResult3.bool;
 obj[41] = importDefaultResult3.bool;
 obj[42] = importDefaultResult3.number;
 obj[43] = importDefaultResult3.bool;
-const obj6 = { minBufferMs: importDefaultResult3.number, maxBufferMs: importDefaultResult3.number, bufferForPlaybackMs: importDefaultResult3.number, bufferForPlaybackAfterRebufferMs: importDefaultResult3.number };
 obj[44] = importDefaultResult3.oneOf(["ignore", "obey"]);
 obj[45] = importDefaultResult3.bool;
 obj[46] = importDefaultResult3.bool;

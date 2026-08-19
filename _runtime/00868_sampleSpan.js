@@ -5,19 +5,19 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
   const _require = parentSampled;
-  let obj = _hasSpansEnabled;
+  let obj = hasSpansEnabled;
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       obj = {};
       const merged = Object.assign(parentSampled);
       obj.inheritOrSampleWith = function inheritOrSampleWith(arg0) {
         if (typeof parentSampled.parentSampleRate === "number") {
-          let parentSampleRate = tmp.parentSampleRate;
+          let parentSampleRate = parentSampled.parentSampleRate;
         } else {
           parentSampleRate = arg0;
-          if (typeof tmp.parentSampled === "boolean") {
+          if (typeof parentSampled.parentSampled === "boolean") {
             const _Number = Number;
-            parentSampleRate = Number(tmp.parentSampled);
+            parentSampleRate = Number(parentSampled.parentSampled);
           }
         }
         return parentSampleRate;

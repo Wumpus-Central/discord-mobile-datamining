@@ -1,6 +1,6 @@
 // _runtime/01596_useStateForPath.js
 import NavigationFocusedRouteStateContext from "01568_NavigationFocusedRouteStateContext.js";
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 require = arg1;
 

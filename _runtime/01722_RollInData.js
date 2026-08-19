@@ -1,8 +1,7 @@
 // _runtime/01722_RollInData.js
 import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
-obj = { RollInLeft: { name: "RollInLeft", style: obj, duration: 0.3 }, RollInRight: { name: "RollInRight", style: obj, duration: 0.3 } };
-obj = { 0: { transform: items }, 100: null };
+let obj = { 0: { transform: items }, 100: null };
 items = [{ translateX: "-100vw", rotate: "-180deg" }];
 const items1 = [{ translateX: "0vw", rotate: "0deg" }];
 obj[100] = { transform: items1 };

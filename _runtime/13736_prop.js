@@ -1,8 +1,8 @@
-// _runtime/13736___core-js_shared__.js
-import __core_js_shared__ from "13688___core-js_shared__.js";
+// _runtime/13736_prop.js
+import prop from "13688_prop.js";
 import sum from "13695_sum.js";
 
-let closure_2 = __core_js_shared__("keys");
+let closure_2 = prop("keys");
 
 export default (arg0) => {
   let tmp2 = table[arg0];

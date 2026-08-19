@@ -21,32 +21,32 @@ class URL {
     self = this;
     tmp = URL(this, URL);
     this._searchParamsInstance = null;
-    if (arg1) {
+    if (fn) {
       obj = /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
       if (!obj.test(global)) {
-        if (typeof arg1 === "string") {
+        if (typeof fn === "string") {
           obj2 = /^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z0-9\u00a1-\uffff][a-z0-9\u00a1-\uffff_-]{0,62})?[a-z0-9\u00a1-\uffff]\.)*(?:[a-z\u00a1-\uffff]{2,}\.?))(?::\d{2,5})?(?:[/?#]\S*)?$/;
-          str = arg1;
-          if (!obj2.test(arg1)) {
+          str = fn;
+          if (!obj2.test(fn)) {
             tmp2 = globalThis;
             _TypeError = TypeError;
             _HermesInternal = HermesInternal;
             str = "Invalid base URL: ";
             tmp3 = new.target;
             tmp4 = new.target;
-            typeError = new TypeError("Invalid base URL: " + arg1);
+            typeError = new TypeError("Invalid base URL: " + fn);
             tmp6 = typeError;
             throw typeError;
           }
         } else {
-          str = arg1.toString();
+          str = fn.toString();
         }
         str2 = "/";
         substr = str;
         if (str.endsWith("/")) {
           num = 1;
           num2 = 0;
-          substr = require("module_0");
+          substr = require("../discord_app/index.native.tsx");
         }
         combined = global;
         if (!global.startsWith("/")) {
@@ -295,7 +295,7 @@ obj = {
       throw error;
     } else {
       const _HermesInternal = HermesInternal;
-      return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+      return "" + closure_1 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
     }
   }
 };

@@ -23,13 +23,13 @@ arg5.ApplyUnsignedRoundingMode = function ApplyUnsignedRoundingMode(eq, timesRes
       } else if (minusResult1.lessThan(minusResult)) {
         return roundedNumber;
       } else {
-        tmp2(13582).invariant(minusResult.eq(minusResult1), "d1 should be equal to d2");
+        getMultiInternalSlots.invariant(minusResult.eq(minusResult1), "d1 should be equal to d2");
         if ("half-zero" === result) {
           return timesResult;
         } else if ("half-infinity" === result) {
           return roundedNumber;
         } else {
-          tmp2(13582).invariant("half-even" === result, "unsignedRoundingMode should be half-even");
+          getMultiInternalSlots.invariant("half-even" === result, "unsignedRoundingMode should be half-even");
           const divResult = timesResult.div(roundedNumber.minus(timesResult));
           return timesResult.div(roundedNumber.minus(timesResult)).mod(2).isZero() ? timesResult : roundedNumber;
         }

@@ -1,11 +1,8 @@
 // _runtime/01729_validateConfig.js
 import t from "01665_t.js";
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
-import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
-import { rubberBandDecay } from "01731_rubberBandDecay.js";
-import { rigidDecay } from "01732_rigidDecay.js";
 
-require = arg1;
+require = fn;
 let dependencyMap = arg6;
 function validateConfig(clamp) {
   if (clamp.clamp) {
@@ -37,18 +34,18 @@ validateConfig.__closure = {};
 validateConfig.__workletHash = 14532293098342;
 validateConfig.__initData = { code: "function validateConfig_Pnpm_decayTs1(config){if(config.clamp){if(!Array.isArray(config.clamp)){throw new ReanimatedError(\"`config.clamp` must be an array but is \"+typeof config.clamp+\".\");}if(config.clamp.length!==2){throw new ReanimatedError(\"`clamp array` must contain 2 items but is given \"+config.clamp.length+\".\");}}if(config.velocityFactor<=0){throw new ReanimatedError(\"`config.velocityFactor` must be greater then 0 but is \"+config.velocityFactor+\".\");}if(config.rubberBandEffect&&!config.clamp){throw new ReanimatedError('You need to set `clamp` property when using `rubberBandEffect`.');}}" };
 let closure_3 = { code: "function pnpm_decayTs3(){const{userConfig,isValidRubberBandConfig,rubberBandDecay,rigidDecay,validateConfig,callback,getReduceMotionForAnimation}=this.__closure;var _config$velocity;const config={deceleration:0.998,velocityFactor:1,velocity:0,rubberBandFactor:0.6};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}const decay=isValidRubberBandConfig(config)?function(animation,now){return rubberBandDecay(animation,now,config);}:function(animation,now){return rigidDecay(animation,now,config);};function onStart(animation,value,now){const initialVelocity=config.velocity;animation.current=value;animation.lastTimestamp=now;animation.startTimestamp=now;animation.initialVelocity=initialVelocity;animation.velocity=initialVelocity;validateConfig(config);if(animation.reduceMotion&&config.clamp){if(value<config.clamp[0]){animation.current=config.clamp[0];}else if(value>config.clamp[1]){animation.current=config.clamp[1];}}}return{onFrame:decay,onStart:onStart,callback:callback,velocity:(_config$velocity=config.velocity)!==null&&_config$velocity!==void 0?_config$velocity:0,initialVelocity:0,current:undefined,lastTimestamp:0,startTimestamp:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}" };
-let fn = function n(userConfig, callback) {
+fn = function n(userConfig, callback) {
   const _require = userConfig;
   dependencyMap = callback;
-  let obj = _isValidLayoutAnimationProp;
+  isValidLayoutAnimationProp;
   const fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
     if (obj) {
       const _Object = Object;
       const keys = Object.keys(tmp);
-      const item = keys.forEach((arg0) => {
-        obj[arg0] = obj[arg0];
-        return obj[arg0];
+      const item = keys.forEach((item, index) => {
+        obj[item] = obj[item];
+        return obj[item];
       });
     }
     obj = {
@@ -66,14 +63,15 @@ let fn = function n(userConfig, callback) {
         reduceMotion.startTimestamp = lastTimestamp;
         reduceMotion.initialVelocity = velocity;
         reduceMotion.velocity = velocity;
-        closure_2_2(obj);
+        validateConfig(obj);
         if (tmp3) {
-          if (current < tmp.clamp[0]) {
-            reduceMotion.current = tmp.clamp[0];
-          } else if (current > tmp.clamp[1]) {
-            reduceMotion.current = tmp.clamp[1];
+          if (current < obj.clamp[0]) {
+            reduceMotion.current = obj.clamp[0];
+          } else if (current > obj.clamp[1]) {
+            reduceMotion.current = obj.clamp[1];
           }
         }
+        tmp3 = reduceMotion.reduceMotion && obj.clamp;
       },
       callback: table,
       velocity: null,
@@ -89,12 +87,10 @@ let fn = function n(userConfig, callback) {
     }
     obj[3] = num;
     const obj2 = userConfig(table[2]);
-    const tmp4 = userConfig;
-    const tmp5 = table;
     obj[8] = userConfig(table[1]).getReduceMotionForAnimation(obj.reduceMotion);
     return obj;
   };
-  obj = { userConfig, isValidRubberBandConfig: _isValidRubberBandConfig.isValidRubberBandConfig, rubberBandDecay: _rubberBandDecay.rubberBandDecay, rigidDecay: _rigidDecay.rigidDecay, validateConfig, callback, getReduceMotionForAnimation: _isValidLayoutAnimationProp.getReduceMotionForAnimation };
+  let obj = { userConfig, isValidRubberBandConfig: require("01730_isValidRubberBandConfig.js").isValidRubberBandConfig, rubberBandDecay: require("01731_rubberBandDecay.js").rubberBandDecay, rigidDecay: require("01732_rigidDecay.js").rigidDecay, validateConfig, callback, getReduceMotionForAnimation: require("01694_isValidLayoutAnimationProp.js").getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 17099614658252;
   fn.__initData = closure_3;

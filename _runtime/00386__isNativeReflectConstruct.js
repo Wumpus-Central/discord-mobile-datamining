@@ -1,10 +1,10 @@
 // _runtime/00386__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import AnimationDefault from "00379_Animation.js";
-import closure_1 from "metro/00041__classCallCheck.js";
-import closure_2 from "metro/00093__possibleConstructorReturn.js";
-import closure_3 from "00095__getPrototypeOf.js";
-import closure_4 from "metro/00096__get.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _get from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const DecayAnimation = global;
@@ -65,8 +65,6 @@ let items = [
     key: "start",
     value: function start(_lastValue, _onUpdate, arg2, arg3, self) {
       self = this;
-      self = this;
-      self = this;
       const tmp = callback3(callback2(self.prototype), "start", this);
       closure_1 = tmp;
       let fn = tmp;
@@ -107,8 +105,7 @@ let items = [
   {
     key: "stop",
     value: function stop() {
-      let self = this;
-      self = this;
+      const self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);

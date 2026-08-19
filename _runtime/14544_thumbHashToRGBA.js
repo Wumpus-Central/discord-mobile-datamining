@@ -1,12 +1,12 @@
 // _runtime/14544_thumbHashToRGBA.js
-import closure_0 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 function thumbHashToRGBA(arg0) {
-  let diff3 = arg0[0] | arg0[1] << 8 | arg0[2] << 16;
-  const result = (63 & diff3) / 63;
-  const diff = (diff3 >> 6 & 63) / 31.5 - 1;
-  const diff1 = (diff3 >> 12 & 63) / 31.5 - 1;
-  const result1 = (diff3 >> 18 & 31) / 31;
+  const result = (63 & tmp) / 63;
+  const tmp7 = (arg0[0] | arg0[1] << 8 | arg0[2] << 16) >> 23;
+  const diff = (tmp >> 6 & 63) / 31.5 - 1;
+  const diff1 = (tmp >> 12 & 63) / 31.5 - 1;
+  const result1 = (tmp >> 18 & 31) / 31;
   if ((arg0[3] | arg0[4] << 8) >> 15) {
     let num = 7;
     if (tmp7) {
@@ -27,12 +27,12 @@ function thumbHashToRGBA(arg0) {
   }
   const maxResult1 = max(3, num2);
   let num3 = 1;
-  if (diff3 >> 23) {
+  if (tmp7) {
     num3 = (15 & arg0[5]) / 15;
   }
   let num4 = 5;
   const result2 = (arg0[5] >> 4) / 15;
-  if (diff3 >> 23) {
+  if (tmp7) {
     num4 = 6;
   }
   const items = [];
@@ -41,8 +41,6 @@ function thumbHashToRGBA(arg0) {
   let num7 = 0;
   if (0 < maxResult1) {
     do {
-      let tmp13 = num5;
-      let tmp14 = num6;
       let num8 = 1;
       if (num6) {
         num8 = 0;
@@ -69,8 +67,6 @@ function thumbHashToRGBA(arg0) {
   const items1 = [];
   let num9 = 0;
   do {
-    let tmp23 = num7;
-    let tmp24 = num9;
     let num10 = 1;
     if (num9) {
       num10 = 0;
@@ -95,8 +91,6 @@ function thumbHashToRGBA(arg0) {
   const items2 = [];
   let num11 = 0;
   do {
-    let tmp33 = tmp27;
-    let tmp34 = num11;
     let num12 = 1;
     if (num11) {
       num12 = 0;
@@ -119,12 +113,10 @@ function thumbHashToRGBA(arg0) {
     tmp27 = tmp37;
   } while (num11 < 3);
   let tmp42 = tmp7;
-  if (diff3 >> 23) {
+  if (tmp7) {
     const items3 = [];
     let num13 = 0;
     do {
-      let tmp43 = tmp37;
-      let tmp44 = num13;
       let num14 = 1;
       if (num13) {
         num14 = 0;
@@ -182,14 +174,11 @@ function thumbHashToRGBA(arg0) {
   let num20 = 0;
   if (0 < h) {
     do {
-      let sum14 = num19;
-      let tmp62 = num20;
+      let sum16 = num19;
       let num21 = 0;
       let tmp63 = num19;
       if (0 < w) {
         do {
-          let tmp64 = num21;
-          let tmp65 = sum14;
           let num22 = 3;
           if (tmp7) {
             num22 = 5;
@@ -212,9 +201,6 @@ function thumbHashToRGBA(arg0) {
           let tmp70 = result;
           if (0 < maxResult1) {
             do {
-              let tmp71 = num26;
-              let tmp72 = num27;
-              let tmp73 = tmp69;
               let num28 = 1;
               if (num27) {
                 num28 = 0;
@@ -246,10 +232,6 @@ function thumbHashToRGBA(arg0) {
           let tmp82 = diff1;
           let tmp83 = diff;
           do {
-            let tmp84 = num29;
-            let tmp85 = num30;
-            let tmp86 = tmp82;
-            let tmp87 = tmp83;
             let num31 = 1;
             if (num30) {
               num31 = 0;
@@ -284,40 +266,39 @@ function thumbHashToRGBA(arg0) {
           let tmp98 = num3;
           if (tmp7) {
             do {
-              let tmp99 = num32;
-              diff3 = num33;
-              diff3 = tmp97;
               let num34 = 1;
               if (num33) {
                 num34 = 0;
               }
-              diff3 = 5 - num33;
-              diff3 = num32;
-              diff3 = tmp97;
-              diff3 = num32;
-              diff3 = tmp97;
+              let diff3 = 5 - num33;
+              let sum15 = num32;
+              let sum14 = tmp97;
+              let tmp106 = num32;
+              let tmp107 = tmp97;
               if (num34 < diff3) {
                 do {
-                  diff3 = diff3 + tmp42[diff3] * items4[num34] * diff3;
+                  sum14 = sum14 + tmp42[sum15] * items4[num34] * tmp102;
                   num34 = num34 + 1;
-                  diff3 = diff3 + 1;
+                  sum15 = sum15 + 1;
+                  tmp106 = sum15;
+                  tmp107 = sum14;
                 } while (num34 < diff3);
               }
               num33 = num33 + 1;
-              num32 = diff3;
-              tmp97 = diff3;
-              tmp98 = diff3;
+              num32 = tmp106;
+              tmp97 = tmp107;
+              tmp98 = tmp107;
             } while (num33 < 5);
           }
-          diff3 = tmp70 - 0.6666666666666666 * tmp95;
-          diff3 = (3 * tmp70 - diff3 + tmp94) / 2;
-          rgba[sum14] = max(0, 255 * min(1, diff3));
-          rgba[sum14 + 1] = max(0, 255 * min(1, diff3 - tmp94));
-          rgba[sum14 + 2] = max(0, 255 * min(1, diff3));
-          rgba[sum14 + 3] = max(0, 255 * min(1, tmp98));
+          let diff4 = tmp70 - 0.6666666666666666 * tmp95;
+          let result15 = (3 * tmp70 - diff4 + tmp94) / 2;
+          rgba[sum16] = max(0, 255 * min(1, result15));
+          rgba[sum16 + 1] = max(0, 255 * min(1, result15 - tmp94));
+          rgba[sum16 + 2] = max(0, 255 * min(1, diff4));
+          rgba[sum16 + 3] = max(0, 255 * min(1, tmp98));
           num21 = num21 + 1;
-          sum14 = sum14 + 4;
-          tmp63 = sum14;
+          sum16 = sum16 + 4;
+          tmp63 = sum16;
         } while (num21 < w);
       }
       num20 = num20 + 1;
@@ -343,21 +324,10 @@ function rgbaToDataURL(w, h, rgba) {
   if (0 < h) {
     do {
       sum2 = num2 + 1;
-      let tmp10 = sum4;
-      let tmp11 = num;
-      let tmp12 = num3;
-      let tmp13 = num4;
       let num7 = 1;
       if (sum2 < h) {
         num7 = 0;
       }
-      let tmp14 = items;
-      let tmp15 = num7;
-      let tmp16 = tmp7;
-      let tmp17 = tmp4;
-      let tmp18 = tmp6;
-      let tmp19 = tmp5;
-      let num8 = 0;
       let arr = items.push(num7, tmp7, tmp4, tmp6, tmp5, 0);
       let result = (num3 + num4) % 65521;
       let sum3 = num;
@@ -392,41 +362,28 @@ function rgbaToDataURL(w, h, rgba) {
   const items3 = [37, 41 + sum1];
   items2[1] = items3;
   while (tmp31 !== undefined) {
-    let tmp33 = callback;
     let tmp34 = callback(tmp32, 2);
     [tmp35, tmp36] = tmp34;
-    let tmp37 = tmp36;
     let num9 = -1;
     let tmp38 = tmp35;
     if (tmp35 < tmp36) {
       do {
-        let tmp39 = num9;
-        let tmp40 = tmp38;
         let tmp41 = num9 ^ items[tmp38];
-        let tmp42 = tmp41;
         let tmp43 = tmp41 >>> 4 ^ items1[15 & tmp41];
-        let tmp44 = tmp43;
         num9 = tmp43 >>> 4 ^ items1[15 & tmp43];
         sum5 = tmp38 + 1;
         tmp38 = sum5;
-        let tmp46 = tmp36;
-      } while (sum5 < tmp37);
+      } while (sum5 < tmp36);
     }
-    let tmp47 = num9;
     let tmp48 = ~num9;
-    let tmp49 = tmp48;
-    let tmp50 = tmp36;
-    let tmp51 = +tmp37;
+    let tmp51 = +tmp36;
     let sum6 = tmp51 + 1;
-    let tmp53 = sum6;
     items[tmp51] = tmp48 >>> 24;
     let tmp54 = +sum6;
     let sum7 = tmp54 + 1;
-    let tmp56 = sum7;
     items[tmp54] = tmp48 >> 16 & 255;
     let tmp57 = +sum7;
     let sum8 = tmp57 + 1;
-    let tmp59 = sum8;
     items[tmp57] = tmp48 >> 8 & 255;
     let tmp60 = +sum8;
     let sum9 = tmp60 + 1;
@@ -527,7 +484,6 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
         let num5 = 0;
         if (0 < arg2) {
           do {
-            let tmp = num;
             let tmp2 = num2;
             let tmp3 = num3;
             let num6 = 0;
@@ -536,15 +492,9 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
             if (0 < maxResult2 * (arg2 - num)) {
               do {
                 let tmp6 = closure_0;
-                let tmp7 = num6;
-                let tmp8 = tmp2;
-                let tmp9 = tmp3;
                 let num7 = 0;
                 if (0 < closure_0) {
                   do {
-                    let tmp10 = cos;
-                    let tmp11 = PI;
-                    let tmp12 = closure_0;
                     items1[num7] = cos(PI / closure_0 * num6 * (num7 + 0.5));
                     num7 = num7 + 1;
                     tmp6 = closure_0;
@@ -556,17 +506,12 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
                 let num10 = 0;
                 if (0 < closure_1) {
                   do {
-                    let tmp14 = cos;
-                    let tmp15 = PI;
-                    let tmp16 = closure_1;
                     let tmp18 = closure_0;
-                    let tmp19 = num8;
                     let sum = num9;
                     let num11 = 0;
                     let tmp21 = num9;
                     if (0 < closure_0) {
                       do {
-                        let tmp22 = closure_0;
                         sum = sum + items[num11 + num8 * closure_0] * items1[num11] * tmp17;
                         num11 = num11 + 1;
                         tmp21 = sum;
@@ -583,8 +528,6 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
                 let result = num10 / (tmp6 * tmp13);
                 if (num6) {
                   let arr = items.push(result);
-                  let tmp27 = max;
-                  let tmp28 = abs;
                   let tmp24 = max(tmp2, abs(result));
                   let tmp25 = tmp3;
                 } else {
@@ -622,7 +565,7 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
       const maxResult2 = max(3, maxResult);
       let tmp21 = callback;
       [tmp23, tmp24, tmp25] = callback(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
-      let tmp22 = callback(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
+      const tmp22 = callback(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
       [tmp27, tmp28, tmp29] = callback(encodeChannel(items1, 3, 3), 3);
       const tmp26 = callback(encodeChannel(items1, 3, 3), 3);
       [tmp31, tmp32, tmp33] = callback(encodeChannel(items2, 3, 3), 3);

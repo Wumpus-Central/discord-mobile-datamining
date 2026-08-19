@@ -1,5 +1,5 @@
 // _runtime/01621_useRoutePath.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -33,12 +33,12 @@ export const useRoutePath = function useRoutePath() {
     return obj.useMemo(() => {
       let enabled;
       if (options != null) {
-        enabled = tmp.enabled;
+        enabled = options.enabled;
       }
       if (false !== enabled) {
         let config;
-        if (tmp != null) {
-          config = tmp.config;
+        if (options != null) {
+          config = options.config;
         }
         return getPathFromState(stateForPath, config);
       }

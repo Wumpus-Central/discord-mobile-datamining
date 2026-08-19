@@ -8,14 +8,12 @@ arg5.parallaxLayout = function parallaxLayout(size) {
     obj = {};
   }
   size = undefined;
-  let vertical;
-  let num;
   let num2;
   let parallaxAdjacentItemScale;
   size = size.size;
-  vertical = size.vertical;
+  const vertical = size.vertical;
   const parallaxScrollingOffset = obj.parallaxScrollingOffset;
-  num = 100;
+  let num = 100;
   if (undefined !== parallaxScrollingOffset) {
     num = parallaxScrollingOffset;
   }

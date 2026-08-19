@@ -1,10 +1,10 @@
 // _runtime/07097_ViewHolderCollection.js
-import closure_2 from "metro/07041__slicedToArray.js";
+import _slicedToArray from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
-import closure_6 from "00019_noop.js";
+import noop2 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ useEffect: c3, useImperativeHandle: c4, useLayoutEffect: c5 } = noop);
 
 export const ViewHolderCollection = (data) => {
@@ -31,9 +31,8 @@ export const ViewHolderCollection = (data) => {
   callback4(() => {
     if (first > 0) {
       if (closure_17 != null) {
-        obj.layout();
+        closure_17.layout();
       }
-      obj = closure_17;
     }
   }, items);
   const items1 = [first];
@@ -103,14 +102,9 @@ export const ViewHolderCollection = (data) => {
     const _Array = Array;
     size = Array.from(renderStack.entries(), (arg0) => {
       [tmp, ] = arg0;
-      let tmp5;
       if (closure_8) {
-        if (!callback2(tmp2)) {
-          tmp5 = tmp3[tmp2 + 1];
-        }
       }
-      let obj = { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null };
-      obj = {};
+      const obj = {};
       const merged = Object.assign(callback(tmp2));
       obj[3] = obj;
       obj[4] = closure_2;
@@ -126,7 +120,7 @@ export const ViewHolderCollection = (data) => {
       }
       obj[12] = tmp11;
       obj[13] = closure_14;
-      return closure_1_7(data(closure_1_1[5]).ViewHolder, obj, tmp);
+      return jsx(data(dependencyMap[5]).ViewHolder, {}, tmp);
     });
   }
   obj[1] = size;

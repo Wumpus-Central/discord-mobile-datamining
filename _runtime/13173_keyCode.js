@@ -2,13 +2,13 @@
 let num2;
 let num3;
 let num4;
-function keyCode(obj) {
-  let tmp = obj;
-  if (obj) {
-    tmp = obj;
-    if (typeof obj === "object") {
-      tmp = obj;
-      if (obj.which || obj.keyCode || obj.charCode) {
+function keyCode(which) {
+  let tmp = which;
+  if (which) {
+    tmp = which;
+    if (typeof which === "object") {
+      tmp = which;
+      if (which.which || which.keyCode || which.charCode) {
         tmp = tmp2;
       }
     }
@@ -33,10 +33,10 @@ function keyCode(obj) {
     return tmp6;
   }
 }
-keyCode.isEventKey = function isEventKey(obj, str) {
-  if (obj) {
-    if (typeof obj === "object") {
-      if (null == (obj.which || obj.keyCode || obj.charCode)) {
+keyCode.isEventKey = function isEventKey(which, str) {
+  if (which) {
+    if (typeof which === "object") {
+      if (null == (which.which || which.keyCode || which.charCode)) {
         return false;
       } else {
         if (typeof str === "string") {
@@ -89,7 +89,6 @@ keyCode.names = obj;
 const keys = Object.keys();
 if (keys !== undefined) {
   while (keys[10] !== undefined) {
-    let tmp5 = tmp2;
     obj[obj[tmp2]] = tmp2;
     continue;
   }
@@ -97,7 +96,6 @@ if (keys !== undefined) {
 const keys1 = Object.keys();
 if (keys1 !== undefined) {
   while (keys1[10] !== undefined) {
-    let tmp6 = tmp4;
     obj[tmp4] = obj[tmp4];
     continue;
   }

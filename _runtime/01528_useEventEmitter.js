@@ -1,5 +1,5 @@
 // _runtime/01528_useEventEmitter.js
-import closure_0 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 
 export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitEvent) {
@@ -23,7 +23,7 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
           obj = {};
         }
         closure_1_4.current[arg0] = obj;
-        let items = tmp.current[arg0][closure_0];
+        let items = closure_1_4.current[arg0][closure_0];
         if (!items) {
           items = [];
         }
@@ -38,12 +38,11 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
               tmp3 = closure_1_4.current[tmp][closure_0];
             }
             if (tmp3) {
-              const index = tmp3.indexOf(tmp2);
+              const index = tmp3.indexOf(closure_1);
               if (index > -1) {
                 tmp3.splice(index, 1);
               }
             }
-            tmp2 = closure_1;
           }
         };
       },
@@ -63,13 +62,11 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
   }, []);
   const callback1 = React.useCallback((arg0) => {
     ({ type, data, target } = arg0);
-    let substr;
     c1 = undefined;
     let ref;
-    substr = ref3.current[type];
+    let substr = ref3.current[type];
     if (undefined === substr) {
-      let obj = { type: null };
-      obj = { enumerable: true, value: null };
+      let obj = { enumerable: true, value: null };
       obj[1] = type;
       obj[0] = obj;
       if (undefined !== target) {
@@ -103,7 +100,7 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
         current(definePropertiesResult);
       }
       if (undefined != null) {
-        const item = undefined.forEach((arg0) => arg0(c2));
+        const item = undefined.forEach((item, index) => item(c2));
       }
       const current2 = ref2.current;
       if (current2 != null) {
@@ -122,8 +119,8 @@ export const useEventEmitter = function useEventEmitter(stateFromStores, onEmitE
       const _Object = Object;
       const keys = Object.keys(substr);
       const items1 = [];
-      HermesBuiltin.arraySpread(keys.map((arg0) => substr[arg0]), 0);
-      found = HermesBuiltin.apply(items1, items).filter((arg0, arg1, arr) => arr.lastIndexOf(arg0) === arg1);
+      HermesBuiltin.arraySpread(keys.map((item, index) => substr[item]), 0);
+      found = HermesBuiltin.apply(items1, items).filter((item, index, arr) => arr.lastIndexOf(item) === index);
       const applyResult = HermesBuiltin.apply(items1, items);
     }
   }, []);

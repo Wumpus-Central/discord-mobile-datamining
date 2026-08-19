@@ -13,8 +13,8 @@ arg5.getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
       const hybridObject = NitroModules.createHybridObject(callback);
       const prototypeOf = Object.getPrototypeOf(hybridObject);
       if (constructorFunc.prototype !== prototypeOf) {
-        tmp3.prototype = prototypeOf;
-        tmp3.prototypeInitialized = true;
+        constructorFunc.prototype = prototypeOf;
+        constructorFunc.prototypeInitialized = true;
       }
       return hybridObject;
     }
@@ -26,8 +26,8 @@ arg5.getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
       if (!constructorFunc.prototypeInitialized) {
         const NitroModules = callback(constructorFunc[0]).NitroModules;
         const _Object = Object;
-        tmp.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(callback));
-        tmp.prototypeInitialized = true;
+        constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(callback));
+        constructorFunc.prototypeInitialized = true;
       }
       let prototypeOf = Object.getPrototypeOf(arg0);
       if (null != prototypeOf) {

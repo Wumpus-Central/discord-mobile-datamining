@@ -1,25 +1,22 @@
 // _runtime/01807_useAnimatedReaction.js
 import noop from "00019_noop.js";
-import { isJest } from "01657_isJest.js";
 import { useSharedValue } from "01806_useSharedValue.js";
 
 let useEffect = noop.useEffect;
 let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}" };
 
-export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1) {
+export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) {
   const _require = fn;
   dependencyMap = fn2;
-  useEffect = _useSharedValue.useSharedValue(null);
+  useEffect = require("01806_useSharedValue.js").useSharedValue(null);
   let __closure = fn.__closure;
   if (__closure == null) {
     __closure = {};
   }
   const values = Object.values(__closure);
-  let arr2 = values;
-  const obj = _useSharedValue;
-  let tmp = _require;
-  let tmp3 = _isJest.shouldBeUseWeb() && !values.length;
-  arr2 = items1;
+  const obj = useSharedValue;
+  let tmp3 = require("01657_isJest.js").shouldBeUseWeb() && !values.length;
+  let arr2 = items;
   if (tmp3) {
     let length;
     if (arr2 != null) {
@@ -32,7 +29,7 @@ export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1)
     if (__closure1 == null) {
       __closure1 = {};
     }
-    const items = [, ];
+    items = [, ];
     let arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
     let __closure2 = fn2.__closure;
     if (__closure2 == null) {

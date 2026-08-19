@@ -21,7 +21,6 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
       let tmp7Result = tmp7(831);
       const result = tmp7Result.withRandomSafeContext(() => _performance.now());
       tmp7Result = tmp7(831);
-      const safeDateNowResult = tmp7Result.safeDateNow();
       timeOrigin = _performance.timeOrigin;
       if (typeof timeOrigin !== "number") {
         const timing = _performance.timing;
@@ -39,6 +38,7 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
         const _Math = Math;
         tmp3 = timeOrigin;
       }
+      safeDateNowResult = tmp7Result.safeDateNow();
     }
     timeOrigin = tmp3;
     tmp = tmp3;

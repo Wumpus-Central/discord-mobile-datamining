@@ -15,14 +15,14 @@ arg5.buildMethodPath = function buildMethodPath(arg0, arg1) {
 };
 arg5.getFinalOperationName = function getFinalOperationName(closure_0) {
   let str = "messages";
-  if (!closure_0.includes("messages")) {
+  if (!_require.includes("messages")) {
     let str2 = "completions";
-    if (!closure_0.includes("completions")) {
+    if (!_require.includes("completions")) {
       let str3 = "models";
-      if (!closure_0.includes("models")) {
+      if (!_require.includes("models")) {
         let str4 = "chat";
-        if (!closure_0.includes("chat")) {
-          const parts = closure_0.split(".");
+        if (!_require.includes("chat")) {
+          const parts = _require.split(".");
           str4 = parts.pop() || "unknown";
           const tmp = parts.pop() || "unknown";
         }
@@ -71,13 +71,13 @@ arg5.getTruncatedJsonString = function getTruncatedJsonString(arr) {
 };
 arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   let num = arg1;
-  if (undefined !== arg1) {
+  if (tmp) {
     let obj = {};
     obj[_mod958.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = arg2;
-  if (undefined !== arg2) {
+  if (tmp5) {
     obj = {};
     obj[_mod958.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
     setAttributes.setAttributes(obj);
@@ -100,4 +100,6 @@ arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   }
   const sum2 = sum1 + num4;
   setAttributes.setAttributes({ [closure_0(closure_1[0]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE]: sum2 });
+  tmp = undefined !== arg1;
+  tmp5 = undefined !== arg2;
 };

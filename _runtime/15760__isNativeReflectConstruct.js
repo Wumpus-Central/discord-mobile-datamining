@@ -2,9 +2,9 @@
 import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import get_ActivityIndicatorDefault from "15761_get_ActivityIndicator.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
@@ -70,7 +70,7 @@ function validateOptions(options) {
   }
   if (tmp12) {
     errors.push("option quality should be a number between 0.0 and 1.0");
-    options.quality = tmp3.quality;
+    options.quality = closure_12.quality;
   }
   if (typeof options.snapshotContentContainer !== "boolean") {
     errors.push("option snapshotContentContainer should be a boolean");
@@ -79,28 +79,28 @@ function validateOptions(options) {
     errors.push("option handleGLSurfaceViewOnAndroid should be a boolean");
   }
   if (-1 === closure_10.indexOf(options.format)) {
-    options.format = tmp3.format;
+    options.format = closure_12.format;
     const text = `option format '${size.format}`;
     errors.push(`${`option format '${size.format}`}' is not in valid formats: ${obj.join(" | ")}`);
   }
   if (-1 === closure_11.indexOf(options.result)) {
-    options.result = tmp3.result;
+    options.result = closure_12.result;
     const text1 = `option result '${size.result}`;
     errors.push(`${`option result '${size.result}`}' is not in valid formats: ${obj2.join(" | ")}`);
   }
   return { options, errors };
 }
-function captureRef(obj, options) {
+function captureRef(current, options) {
   if (ViewShot(15761)) {
-    let tmp9 = obj;
-    if (obj) {
-      tmp9 = obj;
-      if (typeof obj === "object") {
-        tmp9 = obj;
-        if ("current" in obj) {
-          tmp9 = obj;
-          if (obj.current) {
-            if (!obj.current) {
+    let tmp9 = current;
+    if (current) {
+      tmp9 = current;
+      if (typeof current === "object") {
+        tmp9 = current;
+        if ("current" in current) {
+          tmp9 = current;
+          if (current.current) {
+            if (!current.current) {
               const _Error2 = Error;
               error = new Error("ref.current is null");
               return Promise.reject(error);
@@ -121,13 +121,12 @@ function captureRef(obj, options) {
     }
     ({ errors, options } = validateOptions(options));
     const tmp23 = validateOptions(options);
-    return tmp(15761).captureRef(tmp15, options);
+    return ViewShot(15761).captureRef(tmp15, options);
   } else {
     const _Error = Error;
     const error2 = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error2;
   }
-  tmp = ViewShot;
 }
 function releaseCapture(str) {
   if (typeof str === "string") {
@@ -179,7 +178,7 @@ class ViewShot {
       closure_0.resolveFirstLayout = resolveFirstLayout;
     });
     tmp3Result.firstLayoutPromise = promise;
-    tmp3Result.capture = () => closure_0.firstLayoutPromise.then(() => {
+    tmp3Result.capture = () => closure_0.firstLayoutPromise.then((result) => {
       const root = closure_0.root;
       if (root) {
         let tmp2 = closure_1_14(root, tmp.props.options);
@@ -187,21 +186,21 @@ class ViewShot {
         tmp2 = closure_1_9;
       }
       return tmp2;
-    }).then((arg0) => {
-      closure_0.onCapture(arg0);
-      return arg0;
+    }).then((result) => {
+      closure_0.onCapture(result);
+      return result;
     }, (arg0) => {
       closure_0.onCaptureFailure(arg0);
       throw arg0;
     });
     tmp3Result.onCapture = (lastCapturedURI) => {
       if (closure_0.root) {
-        if (tmp.lastCapturedURI) {
+        if (closure_0.lastCapturedURI) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(closure_1_15, 500, tmp.lastCapturedURI);
+          const timerId = setTimeout(releaseCapture, 500, closure_0.lastCapturedURI);
         }
-        tmp.lastCapturedURI = lastCapturedURI;
-        const onCapture = tmp.props.onCapture;
+        closure_0.lastCapturedURI = lastCapturedURI;
+        const onCapture = closure_0.props.onCapture;
         if (onCapture) {
           onCapture(lastCapturedURI);
         }
@@ -297,11 +296,10 @@ export const captureScreen = function captureScreen(options) {
   if (ViewShot(15761)) {
     ({ errors, options } = validateOptions(options));
     const tmp10 = validateOptions(options);
-    return tmp(15761).captureScreen(options);
+    return ViewShot(15761).captureScreen(options);
   } else {
     const _Error = Error;
     error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error;
   }
-  tmp = ViewShot;
 };

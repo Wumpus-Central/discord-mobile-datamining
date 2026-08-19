@@ -1,6 +1,6 @@
 // _runtime/01739_InnerKeyframe.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const InnerKeyframe = arg1;
 let closure_3 = { code: "function pnpm_KeyframeTs1(){const{keyframes,delayFunction,delay,withTiming,Easing,withSequence,initialValues,makeKeyframeKey,callback}=this.__closure;const animations={};const addAnimation=function(key){const keyframePoints=keyframes[key];if(keyframePoints.length===0){return;}const animation=delayFunction(delay,keyframePoints.length===1?withTiming(keyframePoints[0].value,{duration:keyframePoints[0].duration,easing:keyframePoints[0].easing?keyframePoints[0].easing:Easing.linear}):withSequence(...keyframePoints.map(function(keyframePoint){return withTiming(keyframePoint.value,{duration:keyframePoint.duration,easing:keyframePoint.easing?keyframePoint.easing:Easing.linear});})));if(key.includes('transform')){if(!('transform'in animations)){animations.transform=[];}animations.transform.push({[key.split(':')[1]]:animation});}else{animations[key]=animation;}};Object.keys(initialValues).forEach(function(key){if(key.includes('transform')){initialValues[key].forEach(function(transformProp,index){Object.keys(transformProp).forEach(function(transformPropKey){addAnimation(makeKeyframeKey(index,transformPropKey));});});}else{addAnimation(key);}});return{animations:animations,initialValues:initialValues,callback:callback};}" };
@@ -22,10 +22,10 @@ class InnerKeyframe {
         const fn = function n() {
           let obj = {};
           function addAnimation(arr) {
-            let first = closure_1_2[arr];
+            let first = keyframes[arr];
             if (0 !== first.length) {
               if (1 === first.length) {
-                obj = delayV(delayFunction[3]);
+                delayV(delayFunction[3]);
                 obj = { duration: null, easing: null };
                 obj[0] = first[0].duration;
                 if (first[0].easing) {
@@ -40,10 +40,10 @@ class InnerKeyframe {
                 const tmp3 = delayV(delayFunction[3]);
                 const withSequence = tmp3.withSequence;
                 const items = [];
-                HermesBuiltin.arraySpread(first.map((duration) => {
-                  obj = callback(table[3]);
-                  obj = { duration: duration.duration, easing: duration.easing || callback(table[4]).Easing.linear };
-                  return obj.withTiming(duration.value, obj);
+                HermesBuiltin.arraySpread(first.map((item, index) => {
+                  callback(table[3]);
+                  obj = { duration: item.duration, easing: item.easing || callback(table[4]).Easing.linear };
+                  return obj.withTiming(item.value, obj);
                 }), 0);
                 const tmp17Result = tmp17(tmp18, HermesBuiltin.apply(items, tmp3));
                 if (arr.includes("transform")) {
@@ -53,7 +53,7 @@ class InnerKeyframe {
                   const transform = tmp15.transform;
                   obj = {};
                   obj[arr.split(":")[1]] = tmp17Result;
-                  transform.push(obj);
+                  arr = transform.push(obj);
                 } else {
                   tmp15[arr] = tmp17Result;
                 }
@@ -61,21 +61,20 @@ class InnerKeyframe {
             }
           }
           let keys = Object.keys(initialValues);
-          let item = keys.forEach((arr) => {
-            if (arr.includes("transform")) {
-              let item = closure_1_3[arr].forEach((arg0, arg1) => {
-                closure_0 = arg1;
-                const keys = Object.keys(arg0);
-                const item = keys.forEach((arg0) => {
+          let item = keys.forEach((item, index) => {
+            if (item.includes("transform")) {
+              item = initialValues[item].forEach((item, index) => {
+                closure_0 = index;
+                const keys = Object.keys(item);
+                item = keys.forEach((item, index) => {
                   if (typeof closure_3_6 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  closure_1_1("" + closure_0 + "_transform:" + arg0);
+                  closure_1_1("" + closure_0 + "_transform:" + item);
                 });
               });
-              arr = closure_1_3[arr];
             } else {
-              addAnimation(arr);
+              addAnimation(item);
             }
           });
           obj = { animations: obj, initialValues, callback: callbackV };
@@ -85,11 +84,11 @@ class InnerKeyframe {
         obj[0] = keyframes;
         obj[1] = delayFunction;
         obj[2] = delayV;
-        obj[3] = self(closure_1_1[3]).withTiming;
-        obj[4] = self(closure_1_1[4]).Easing;
-        obj[5] = self(closure_1_1[3]).withSequence;
+        obj[3] = self(dependencyMap[3]).withTiming;
+        obj[4] = self(dependencyMap[4]).Easing;
+        obj[5] = self(dependencyMap[3]).withSequence;
         obj[6] = initialValues;
-        obj[7] = closure_1_6;
+        obj[7] = makeKeyframeKey;
         obj[8] = callbackV;
         fn.__closure = obj;
         fn.__workletHash = 2209924843920;
@@ -106,8 +105,7 @@ let items = [
   {
     key: "parseDefinitions",
     value: function parseDefinitions() {
-      let self = this;
-      self = this;
+      const self = this;
       let obj = {};
       if (this.definitions.from) {
         if (self.definitions[0]) {
@@ -133,31 +131,26 @@ let items = [
         const first = self.definitions[0];
         let _Object = Object;
         let keys = Object.keys(first);
-        let item = keys.forEach((arg0) => {
-          if ("transform" === arg0) {
+        let item = keys.forEach((item, index) => {
+          if ("transform" === item) {
             const _Array = Array;
             if (Array.isArray(first.transform)) {
-              const transform = tmp3.transform;
-              let item = transform.forEach((arg0, arg1) => {
-                closure_0 = arg1;
-                const keys = Object.keys(arg0);
-                const item = keys.forEach((arg0) => {
+              const transform = first.transform;
+              item = transform.forEach((item, index) => {
+                closure_0 = index;
+                const keys = Object.keys(item);
+                item = keys.forEach((item, index) => {
                   if (typeof closure_2_6 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  closure_1_1["" + closure_0 + "_transform:" + arg0] = [];
+                  closure_1_1["" + closure_0 + "_transform:" + item] = [];
                 });
               });
             }
-            tmp3 = first;
           } else {
-            obj[arg0] = [];
+            obj[item] = [];
           }
         });
-        let num3 = 500;
-        if (self.durationV) {
-          num3 = self.durationV;
-        }
         let _Array = Array;
         const _Object2 = Object;
         const _Number = Number;
@@ -165,12 +158,12 @@ let items = [
         getAnimationDuration = function getAnimationDuration(arg0) {
 
         };
-        const found = mapped.filter((arg0) => 0 !== arg0);
+        const found = mapped.filter((item, index) => 0 !== item);
         const sorted = found.sort((arg0, arg1) => arg0 - arg1);
-        const item1 = sorted.forEach((arg0) => {
-          closure_0 = arg0;
-          if (arg0 >= 0) {
-            if (arg0 <= 100) {
+        const item1 = sorted.forEach((item, index) => {
+          closure_0 = item;
+          if (item >= 0) {
+            if (item <= 100) {
               closure_1 = tmp4;
               const easing = tmp4.easing;
               delete tmp2[tmp];
@@ -179,40 +172,38 @@ let items = [
               }
               const _Object = Object;
               let keys = Object.keys(tmp4);
-              let item = keys.forEach((arg0) => {
-                if ("transform" === arg0) {
+              item = keys.forEach((item, index) => {
+                if ("transform" === item) {
                   const _Array = Array;
                   if (Array.isArray(transform.transform)) {
                     transform = tmp15.transform;
-                    let item = transform.forEach((arg0, arg1) => {
-                      closure_0 = arg0;
-                      closure_1 = arg1;
-                      const keys = Object.keys(arg0);
-                      const item = keys.forEach((arg0) => {
+                    item = transform.forEach((item, index) => {
+                      closure_0 = item;
+                      closure_1 = index;
+                      const keys = Object.keys(item);
+                      item = keys.forEach((item, index) => {
                         if (typeof closure_3_6 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
-                        const combined = "" + closure_1 + "_transform:" + arg0;
-                        if (typeof tmp !== "function") {
+                        const combined = "" + index + "_transform:" + item;
+                        if (typeof closure_1_3 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
-                        if (combined in closure_1) {
-                          let arr = tmp6[combined];
-                          if (typeof table !== "function") {
+                        if (combined in index) {
+                          let arr = index[combined];
+                          if (typeof item !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
                           obj = { duration: null, value: null, easing: null };
                           const result = tmp4 / 100 * closure_1_3;
-                          obj[0] = result - tmp6[combined].reduce(() => { ... }, 0);
-                          obj[1] = table[arg0];
+                          obj[0] = result - index[combined].reduce(() => { ... }, 0);
+                          obj[1] = item[item];
                           obj[2] = tmp5;
                           arr = arr.push(obj);
                         } else {
                           const reanimatedError = new closure_2_0(closure_2_1[5]).ReanimatedError("Keyframe can contain only that set of properties that were provide with initial values (keyframe 0 or 'from')");
                           throw reanimatedError;
                         }
-                        tmp = closure_1_3;
-                        const tmp2 = closure_1;
                       });
                     });
                   }
@@ -221,18 +212,17 @@ let items = [
                   if (typeof addKeyPointWith !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (arg0 in transform) {
-                    let arr = tmp3[arg0];
+                  if (item in transform) {
+                    let arr = tmp3[item];
                     if (typeof closure_0 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj = { duration: null, value: null, easing: null };
                     let result = tmp / 100 * addKeyPointWith;
-                    obj[0] = result - tmp3[arg0].reduce((arg0, duration) => arg0 + duration.duration, 0);
-                    obj[1] = transform[arg0];
+                    obj[0] = result - tmp3[item].reduce((acc, item, index) => acc + item.duration, 0);
+                    obj[1] = transform[item];
                     obj[2] = tmp2;
                     arr = arr.push(obj);
-                    const arr2 = tmp3[arg0];
                   } else {
                     let reanimatedError = new getAnimationDuration(obj[5]).ReanimatedError("Keyframe can contain only that set of properties that were provide with initial values (keyframe 0 or 'from')");
                     throw reanimatedError;
@@ -288,7 +278,7 @@ let items = [
       const reduceMotionV = this.reduceMotionV;
       if (this.delayV) {
         const fn2 = function t(arg0, arg1) {
-          return reduceMotionV(closure_1_1[3]).withDelay(arg0, arg1, reduceMotionV);
+          return reduceMotionV(dependencyMap[3]).withDelay(arg0, arg1, reduceMotionV);
         };
         let obj = { withDelay: null, reduceMotion: null };
         obj[0] = reduceMotionV(1726).withDelay;
@@ -299,7 +289,7 @@ let items = [
         let fn = fn2;
       } else {
         fn = function n(arg0, arg1) {
-          arg1.reduceMotion = reduceMotionV(closure_1_1[6]).getReduceMotionFromConfig(reduceMotionV);
+          arg1.reduceMotion = reduceMotionV(dependencyMap[6]).getReduceMotionFromConfig(reduceMotionV);
           return arg1;
         };
         obj = { getReduceMotionFromConfig: null, reduceMotion: null };

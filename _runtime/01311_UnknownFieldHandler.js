@@ -46,7 +46,7 @@ UnknownFieldHandler.list = (arg0, arg1) => {
   if (isArray) {
     let found = arr;
     if (arg1) {
-      found = arr.filter((no) => no.no == closure_0);
+      found = arr.filter((item, index) => item.no == closure_0);
     }
     return found;
   } else {

@@ -1,9 +1,9 @@
 // _runtime/09705__isNativeReflectConstruct.js
 import _asyncLoop from "09699__asyncLoop.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import c3 from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 const HashMD = require;
@@ -70,7 +70,6 @@ let items = [
         do {
           let _Math = Math;
           let bound = Math.min(blockLen - self.pos, length - num);
-          let tmp3 = num;
           if (bound !== blockLen) {
             let result = buffer.set(toBytesResult.subarray(num, num + bound), self.pos);
             self.pos = self.pos + bound;
@@ -82,8 +81,6 @@ let items = [
               tmp8 = sum;
             }
           } else {
-            let tmp4 = HashMD;
-            let tmp5 = dependencyMap;
             let tmp7 = num;
             tmp8 = num;
             if (blockLen <= length - num) {
@@ -208,6 +205,6 @@ let items = [
   }
 ];
 
-export const Chi = (arg0, arg1, arg2) => arg0 & arg1 ^ ~arg0 & arg2;
-export const Maj = (arg0, arg1, arg2) => arg0 & arg1 ^ arg0 & arg2 ^ arg1 & arg2;
+export const Chi = (E, F, G) => E & F ^ ~E & G;
+export const Maj = (A, B, C) => A & B ^ A & C ^ B & C;
 export const HashMD = _createClass(HashMD, items);

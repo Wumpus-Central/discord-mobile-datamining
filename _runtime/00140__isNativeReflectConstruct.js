@@ -3,11 +3,10 @@ import _inheritsDefault from "00098__inherits.js";
 import NativeDOMCxxDefault from "00139_NativeDOMCxx.js";
 import _isNativeReflectConstructDefault from "00141__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault2 from "00143__isNativeReflectConstruct.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { _isNativeReflectConstruct } from "00131__isNativeReflectConstruct.js";
 
 const ReactNativeDocument = arg1;
 function _isNativeReflectConstruct() {
@@ -103,7 +102,7 @@ let items = [
   {
     key: "nodeType",
     get() {
-      return _isNativeReflectConstruct.DOCUMENT_NODE;
+      return require("00131__isNativeReflectConstruct.js").DOCUMENT_NODE;
     }
   },
   {
@@ -132,8 +131,6 @@ let items = [
         }
         return tmp6;
       }
-      const obj = NativeDOMCxxDefault;
-      const tmp = importDefault;
     }
   }
 ];

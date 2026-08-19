@@ -2,10 +2,10 @@
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06510__isNativeReflectConstruct.js";
-import closure_3 from "metro/00109__objectWithoutProperties.js";
-import closure_4 from "metro/00041__classCallCheck.js";
-import closure_5 from "metro/00093__possibleConstructorReturn.js";
-import closure_6 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";

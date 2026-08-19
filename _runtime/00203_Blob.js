@@ -1,6 +1,6 @@
 // _runtime/00203_Blob.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const Blob = arg1;
 class Blob {

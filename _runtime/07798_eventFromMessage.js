@@ -2,10 +2,11 @@
 import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
 import isInstanceOf from "07745_isInstanceOf.js";
 import addContextToFrame from "07749_addContextToFrame.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import normalize from "07783_normalize.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 
-export const eventFromMessage = function eventFromMessage(arg0, message, arg2, event_id) {
+export const eventFromMessage = function eventFromMessage(fn, message, arg2, event_id) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
@@ -17,9 +18,8 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
   if (arg4) {
     if (event_id) {
       if (event_id.syntheticException) {
-        const arr = arg0(event_id.syntheticException.stack || "", 1);
+        const arr = fn(event_id.syntheticException.stack || "", 1);
         if (arr.length) {
-          obj = { values: null };
           obj = { value: null, stacktrace: null };
           obj[0] = message;
           obj1 = { frames: null };
@@ -29,9 +29,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
           obj[0] = items;
           obj.exception = obj;
           const result = addContextToFrame.addExceptionMechanism(obj, { synthetic: true });
-          const obj5 = addContextToFrame;
         }
-        const tmp = event_id.syntheticException.stack || "";
       }
     }
   }
@@ -45,7 +43,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
   }
   obj6 = isInstanceOf;
 };
-export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, arg1, name, data) {
+export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, fn, name, data) {
   if (data) {
     data = data.data;
   }
@@ -61,20 +59,19 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
     let items3 = items;
   } else {
     data.synthetic = true;
-    let tmp2Result = tmp2(7745);
+    let tmp2Result = isInstanceOf;
     if (tmp2Result.isPlainObject(name)) {
       let normalizeDepth = getOptions;
       if (getOptions) {
         normalizeDepth = getOptions.getOptions().normalizeDepth;
       }
       let obj = { __serialized__: null };
-      tmp2Result = tmp2(7783);
+      tmp2Result = normalize;
       obj[0] = tmp2Result.normalizeToSize(name, normalizeDepth);
       let tmp12;
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[tmp] !== undefined) {
-          let tmp33 = tmp14;
           let _Object = Object;
           let call = hasOwnProperty.call;
           if (!(typeof call === "unknown" ? hasOwnProperty(tmp14) : call(name, tmp14))) {
@@ -124,7 +121,6 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
           }
         }
         const result = addNonEnumerableProperty.extractExceptionKeysForMessage(name);
-        const obj6 = addNonEnumerableProperty;
         if (obj7.isErrorEvent(name)) {
           const _HermesInternal4 = HermesInternal;
           message = "Event `ErrorEvent` captured as exception with message `" + name.message + "`";
@@ -169,9 +165,9 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
       items3 = [syntheticException, undefined];
     }
   }
-  [error, tmp27] = callback(items3, 2);
+  [error, tmp27] = _slicedToArray(items3, 2);
   obj = { type: error.name || error.constructor.name, value: error.message };
-  const arr5 = arg1(error.stack || "", 1);
+  const arr5 = fn(error.stack || "", 1);
   if (arr5.length) {
     obj1 = { frames: null };
     obj1[0] = arr5;
@@ -182,11 +178,8 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (tmp27) {
     obj2.extra = tmp27;
   }
-  const tmp26 = callback(items3, 2);
-  const tmp28 = error.name || error.constructor.name;
-  const tmp29 = error.stack || "";
+  const tmp26 = _slicedToArray(items3, 2);
   const result1 = addContextToFrame.addExceptionTypeValue(obj2, undefined, undefined);
-  const obj11 = addContextToFrame;
   const result2 = addContextToFrame.addExceptionMechanism(obj2, data);
   const obj3 = {};
   const merged = Object.assign(obj2);
@@ -197,9 +190,9 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   obj3.event_id = event_id;
   return obj3;
 };
-export const exceptionFromError = function exceptionFromError(arg0, name) {
+export const exceptionFromError = function exceptionFromError(fn, name) {
   let obj = { type: name.name || name.constructor.name, value: name.message };
-  const arr = arg0(name.stack || "", 1);
+  const arr = fn(name.stack || "", 1);
   if (arr.length) {
     obj = { frames: null };
     obj[0] = arr;
@@ -207,6 +200,6 @@ export const exceptionFromError = function exceptionFromError(arg0, name) {
   }
   return obj;
 };
-export const parseStackFrames = function parseStackFrames(arg0, stack) {
-  return arg0(stack.stack || "", 1);
+export const parseStackFrames = function parseStackFrames(fn, stack) {
+  return fn(stack.stack || "", 1);
 };

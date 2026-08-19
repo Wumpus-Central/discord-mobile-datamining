@@ -1,10 +1,10 @@
 // _runtime/00438_defaultItemToKey.js
-import closure_3 from "metro/00032__slicedToArray.js";
-import closure_4 from "00019_noop.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop2 from "00019_noop.js";
 import noop from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function defaultItemToKey(key) {
   if (typeof key.key !== "string") {
     const _TypeError = TypeError;
@@ -18,14 +18,11 @@ function defaultItemToKey(key) {
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 
 export const createVirtualCollectionView = function createVirtualCollectionView(arg0, initial) {
-  let spacerStyle = arg0;
   initial = initial.initial;
   const next = initial.next;
-  let obj;
   function VirtualCollectionSpacer(nativeID) {
     const virtualItemCount = nativeID.virtualItemCount;
     const onRenderMoreItems = nativeID.onRenderMoreItems;
-    closure_2 = undefined;
     const tmp = obj(closure_1_7(obj), 2);
     closure_2 = tmp[1];
     obj = {
@@ -36,7 +33,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
           const tmp2 = callback(mode);
           obj = { SpacerView: null };
           spacerStyle = tmp2.spacerStyle;
-          obj[0] = closure_1_4.forwardRef(function SpacerView_withRef(itemCount, ref) {
+          obj[0] = VirtualCollectionSpacer.forwardRef(function SpacerView_withRef(itemCount, ref) {
             itemCount = itemCount.itemCount;
             const merged = Object.assign(itemCount, Object.create(null));
             const items = [itemCount];
@@ -52,7 +49,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     };
     return closure_1_8(tmp[0].SpacerView, obj);
   }
-  obj = {
+  let obj = {
     SpacerView: VirtualCollectionSpacer.forwardRef(function SpacerView_withRef(itemCount, ref) {
       itemCount = itemCount.itemCount;
       const merged = Object.assign(itemCount, Object.create(null));
@@ -61,14 +58,14 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       return closure_1_8(closure_1_6(() => spacerStyle(closure_2_2[3]).createHiddenVirtualView(itemCount(itemCount)), items), { ref });
     })
   };
-  spacerStyle = initial.spacerStyle;
+  let spacerStyle = initial.spacerStyle;
   return function VirtualCollectionView(children) {
     children = children.children;
     closure_0 = children;
     let items = children.items;
     let itemToKey = children.itemToKey;
     if (itemToKey === undefined) {
-      itemToKey = closure_1_10;
+      itemToKey = defaultItemToKey;
     }
     let flag = children.removeClippedSubviews;
     if (flag === undefined) {
@@ -76,9 +73,6 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     }
     const testID = children.testID;
     const merged = Object.assign(children, Object.create(null));
-    closure_5 = undefined;
-    closure_6 = undefined;
-    c7 = undefined;
     const tmp2 = obj(closure_1_7(Math.ceil(items.itemCount)), 2);
     closure_5 = tmp2[1];
     items = [children, itemToKey, flag];
@@ -132,8 +126,6 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
           callback((arg0) => arg0 + closure_0);
         };
         tmp3Result = closure_2_8(testID, obj);
-        const tmp3 = closure_2_8;
-        const tmp4 = testID;
       }
       return tmp3Result;
     }, items2);

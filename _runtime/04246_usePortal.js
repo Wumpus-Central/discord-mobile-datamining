@@ -3,12 +3,11 @@ import noop from "00019_noop.js";
 
 ({ useCallback: obj1, useContext: c3 } = noop);
 
-export const usePortal = () => {
-  let str = arg0;
-  if (arg0 === undefined) {
+export const usePortal = (hostName) => {
+  let str = hostName;
+  if (hostName === undefined) {
     str = "root";
   }
-  dependencyMap = undefined;
   const tmp = callback2(str(4247).PortalDispatchContext);
   dependencyMap = tmp;
   if (null === tmp) {

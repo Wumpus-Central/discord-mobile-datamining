@@ -1,8 +1,8 @@
 // _runtime/01664__makeShareableClone.js
 import t from "01665_t.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
-require = arg1;
+require = fn;
 global._makeShareableClone = () => {
   const reanimatedError = new t.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
   throw reanimatedError;
@@ -22,35 +22,31 @@ function updatePropsDOM(arg0, arg1, arg2) {
 
 }
 
-export const createJSReanimatedModule = require("module_1668").createJSReanimatedModule;
-export const _updatePropsJS = (arg0, getAnimatableRef) => {
-  const _require = arg0;
-  if (getAnimatableRef) {
-    let animatableRef = getAnimatableRef;
-    if (getAnimatableRef.getAnimatableRef) {
-      animatableRef = getAnimatableRef.getAnimatableRef();
+export const createJSReanimatedModule = require("metro/01668__.js").createJSReanimatedModule;
+export const _updatePropsJS = (closure_0, closure_02, closure_1) => {
+  const _require = closure_0;
+  if (animatableRef) {
+    if (animatableRef.getAnimatableRef) {
+      animatableRef = animatableRef.getAnimatableRef();
     }
     const _Object = Object;
-    const keys = Object.keys(arg0);
+    const keys = Object.keys(closure_0);
     const items = [{}, {}];
-    first = first(keys.reduce((arg0, arg1) => {
+    first = first(keys.reduce((acc, item, index) => {
       let num = 0;
-      if (typeof table[arg1] === "function") {
+      if (typeof table[item] === "function") {
         num = 1;
       }
-      arg0[num][arg1] = table[arg1];
-      return arg0;
+      acc[num][item] = table[item];
+      return acc;
     }, items), 1)[0];
     if (typeof animatableRef.setNativeProps === "function") {
       if (typeof setNativeProps !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (arg2) {
+      if (closure_1) {
         let obj = {};
         for (const key10106 in first) {
-          let tmp41 = key10106;
-          let tmp42 = _require;
-          let tmp43 = animatableRef;
           if (!_require(animatableRef[4]).PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST[key10106]) {
             continue;
           } else {
@@ -96,16 +92,13 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
           let tmp19 = undefined !== tmp36(tmp37[2]).createTextShadowValue;
           if (tmp19) {
             tmp19 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
-            const tmp20 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
           }
           if (tmp19) {
             ({ textShadowColor: obj6[0], textShadowOffset: obj6[1], textShadowRadius: obj6[2] } = reactDOMStyle);
             reactDOMStyle.textShadow = tmp36(tmp37[2]).createTextShadowValue({ textShadowColor: null, textShadowOffset: null, textShadowRadius: null });
-            const obj3 = { textShadowColor: null, textShadowOffset: null, textShadowRadius: null };
             const tmp36Result1 = tmp36(tmp37[2]);
           }
           for (const key10094 in reactDOMStyle) {
-            let tmp39 = key10094;
             if (arg2) {
               if ("INPUT" === animatableRef.nodeName) {
                 if ("text" === key10094) {
@@ -128,10 +121,10 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
       if (Object.keys(animatableRef.props).length > 0) {
         const _Object3 = Object;
         const keys1 = Object.keys(animatableRef.props);
-        const item = keys1.forEach((str) => {
-          if (first[str]) {
+        const item = keys1.forEach((item, index) => {
+          if (first[item]) {
             const _touchableNode = animatableRef._touchableNode;
-            const attr = _touchableNode.setAttribute(str.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase()), tmp[str]);
+            const attr = _touchableNode.setAttribute(item.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase()), tmp[item]);
           }
         });
       } else {

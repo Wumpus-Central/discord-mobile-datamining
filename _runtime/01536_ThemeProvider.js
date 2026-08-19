@@ -3,7 +3,7 @@ import noopAll from "00019_noop.js";
 import context from "01537_context.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 
 export const ThemeProvider = function ThemeProvider(arg0) {

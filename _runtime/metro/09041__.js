@@ -2,6 +2,7 @@
 import colorPropType from "../09025_colorPropType.js";
 import _mod9032 from "09032__.js";
 import emptyFunction from "../04205_emptyFunction.js";
+import "emptyFunction";
 
 let obj = {};
 const module_9032 = Object.assign(_mod9032);

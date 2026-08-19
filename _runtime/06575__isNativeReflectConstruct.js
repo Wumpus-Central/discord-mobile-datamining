@@ -4,17 +4,18 @@ import _inheritsDefault from "00098__inherits.js";
 import extractOpacityDefault from "06577_extractOpacity.js";
 import keysDefault from "06578_keys.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06583___INTERNAL_VIEW_CONFIG.js";
+import reducedDefault from "06584_reduced.js";
 import _isNativeReflectConstructDefault from "06585__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault2 from "06595__isNativeReflectConstruct.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00041__classCallCheck.js";
-import closure_6 from "metro/00093__possibleConstructorReturn.js";
-import closure_7 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Svg = arg1;
+const Svg = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -84,8 +85,8 @@ class Svg {
     tmp3Result.toDataURL = (arg0, arg1) => {
       if (arg0) {
         const tmp4 = closure_1_8(lib.root);
-        lib(closure_1_2[9]).default.toDataURL(tmp4, arg1, arg0);
-        const _default = lib(closure_1_2[9]).default;
+        lib(dependencyMap[9]).default.toDataURL(tmp4, arg1, arg0);
+        const _default = lib(dependencyMap[9]).default;
       }
     };
     return tmp3Result;
@@ -202,7 +203,7 @@ let items = [
       obj.ref = function ref(arg0) {
         return self.refMethod(arg0);
       };
-      const merged4 = Object.assign(tmp21(6584)({ viewBox, preserveAspectRatio }));
+      const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
       obj.children = jsx(_isNativeReflectConstructDefault, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
       return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }

@@ -1,16 +1,16 @@
 // _runtime/06509__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06510__isNativeReflectConstruct.js";
-import closure_4 from "metro/00109__objectWithoutProperties.js";
-import closure_5 from "metro/00041__classCallCheck.js";
-import closure_6 from "metro/00093__possibleConstructorReturn.js";
-import closure_7 from "00095__getPrototypeOf.js";
+import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import closure_8 from "00019_noop.js";
+import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const TouchableHighlight = arg1;
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -53,7 +53,6 @@ class TouchableHighlight {
     tmp3Result.showUnderlay = () => {
       let obj = lib;
       if (lib.hasPressHandler()) {
-        obj = { extraChildStyle: null, extraUnderlayStyle: null };
         obj = { opacity: null };
         obj[0] = obj.props.activeOpacity;
         obj[0] = obj;
@@ -78,13 +77,13 @@ class TouchableHighlight {
       }
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === lib(closure_1_2[9]).TOUCHABLE_STATE.BEGAN) {
+      if (arg1 === lib(dependencyMap[9]).TOUCHABLE_STATE.BEGAN) {
         lib.showUnderlay();
       } else {
         if (!tmp3) {
           lib.hideUnderlay();
         }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 = arg1 !== lib(dependencyMap[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== lib(dependencyMap[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };

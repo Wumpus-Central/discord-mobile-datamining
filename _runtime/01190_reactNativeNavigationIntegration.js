@@ -20,13 +20,11 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
-  let defaultIdleOptions;
-  c7 = undefined;
   let pushRecentComponentId;
   let discardLatestNavigationSpan;
   let clearStateChangeTimeout;
   closure_5 = [];
-  defaultIdleOptions = flag2(1160).defaultIdleOptions;
+  const defaultIdleOptions = flag2(1160).defaultIdleOptions;
   c7 = null;
   function startIdleNavigationSpan() {
     if (_undefined2) {
@@ -78,6 +76,7 @@ arg5.reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     const client = flag2(_undefined[2]).getClient();
     const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined2, flag2(_undefined[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c4 === closure_0);
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
+    const obj8 = flag2(_undefined[2]);
   }
   let result = navigation.events().registerCommandListener(startIdleNavigationSpan);
   if (flag) {

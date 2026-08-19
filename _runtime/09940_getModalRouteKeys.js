@@ -1,16 +1,16 @@
 // _runtime/09940_getModalRouteKeys.js
 arg5.getModalRouteKeys = (arr) => {
   closure_0 = arg1;
-  return arr.reduce((arr, key) => {
+  return arr.reduce((acc, item, index) => {
     let options;
-    if (table[key.key] != null) {
+    if (table[item.key] != null) {
       options = tmp.options;
     }
     if (options == null) {
       options = {};
     }
     const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
+    let tmp2 = acc.length && !presentation;
     if (!tmp2) {
       tmp2 = "modal" === presentation;
     }
@@ -33,8 +33,8 @@ arg5.getModalRouteKeys = (arr) => {
       tmp2 = "pageSheet" === presentation;
     }
     if (tmp2) {
-      arr.push(key.key);
+      acc.push(item.key);
     }
-    return arr;
+    return acc;
   }, []);
 };

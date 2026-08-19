@@ -7,31 +7,24 @@ import toKey from "00725_toKey.js";
 import castPath from "00728_castPath.js";
 
 
-export default function hasPath(arg0, arg1, arg2) {
+export default function hasPath(closure_0, arg1, fn) {
   let tmp4;
-  let tmp = require;
-  const arr = castPath(arg1, arg0);
+  const arr = castPath(arg1, closure_0);
   let num = 0;
-  let tmp3 = arg0;
+  let tmp3 = closure_0;
   let flag = false;
   let num2 = 0;
-  let arr2 = arg0;
+  let arr2 = closure_0;
   if (0 < arr.length) {
     while (true) {
-      let tmp5 = require;
-      let tmp6 = dependencyMap;
       let tmp7 = toKey(arr[num]);
       let tmp8 = null != tmp3;
-      let tmp9 = num;
-      let tmp10 = tmp3;
       if (tmp8) {
-        tmp8 = arg2(tmp3, tmp7);
+        tmp8 = fn(tmp3, tmp7);
       }
       tmp4 = tmp7;
       num2 = num;
       arr2 = tmp3;
-      let tmp2 = tmp6;
-      tmp = tmp5;
       flag = tmp8;
       if (!tmp8) {
         break;
@@ -41,8 +34,6 @@ export default function hasPath(arg0, arg1, arg2) {
         tmp4 = tmp7;
         flag = tmp8;
         arr2 = tmp3;
-        tmp2 = tmp6;
-        tmp = tmp5;
         num2 = num;
         if (num >= length) {
           break;

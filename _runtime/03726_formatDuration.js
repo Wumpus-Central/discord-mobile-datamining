@@ -54,13 +54,13 @@ export default function formatDuration(arg0, locale) {
       }
     }
     if (locale.formatDistance) {
-      const reduced = format.reduce((arr) => {
-        let combined = arr;
-        if (typeof table[arg1] === "number") {
+      const reduced = format.reduce((acc, item, index) => {
+        let combined = acc;
+        if (typeof table[item] === "number") {
           if (closure_2) {
-            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+            combined = acc.concat(locale.formatDistance(tmp, tmp3));
           } else {
-            combined = arr;
+            combined = acc;
           }
         }
         return combined;

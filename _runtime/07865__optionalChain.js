@@ -10,8 +10,6 @@ arg5._optionalChain = function _optionalChain(arg0) {
       let tmp4 = arg0[num];
       let tmp5 = arg0[num + 1];
       let tmp6 = "optionalAccess" === tmp4;
-      let tmp7 = num;
-      let tmp8 = tmp2;
       if (tmp6) {
         if (null == tmp2) {
           break;

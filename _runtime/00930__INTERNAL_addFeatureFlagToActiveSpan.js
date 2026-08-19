@@ -2,7 +2,6 @@
 import spanToJSON from "00819_spanToJSON.js";
 import getClient from "00848_getClient.js";
 import { getClient } from "00848_getClient.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -10,7 +9,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = "flag.evaluation.";
 arg5._INTERNAL_FLAG_BUFFER_SIZE = 100;
 arg5._INTERNAL_MAX_FLAGS_PER_SPAN = 10;
-arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToActiveSpan(first, value) {
+arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToActiveSpan(flagKey, value) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 10;
@@ -18,23 +17,21 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
   if (typeof value === "boolean") {
     const activeSpan = spanToJSON.getActiveSpan();
     if (activeSpan) {
-      const data = tmp6(819).spanToJSON(activeSpan).data;
+      const data = spanToJSON.spanToJSON(activeSpan).data;
       const _HermesInternal = HermesInternal;
-      if ("" + c2 + first in data) {
+      if ("" + c2 + flagKey in data) {
         const _HermesInternal3 = HermesInternal;
-        const attr = activeSpan.setAttribute("" + tmp2 + first, value);
+        const attr = activeSpan.setAttribute("" + c2 + flagKey, value);
       } else {
         const _Object = Object;
         const keys = Object.keys(data);
-        if (keys.filter((str) => str.startsWith(closure_2)).length < num) {
+        if (keys.filter((item, index) => item.startsWith(closure_2)).length < num) {
           const _HermesInternal2 = HermesInternal;
-          const attr1 = activeSpan.setAttribute("" + tmp2 + first, value);
+          const attr1 = activeSpan.setAttribute("" + c2 + flagKey, value);
         }
       }
-      const tmp6Result = tmp6(819);
+      const tmp6Result = spanToJSON;
     }
-    const obj2 = spanToJSON;
-    tmp6 = require;
   }
 };
 arg5._INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
@@ -54,12 +51,12 @@ arg5._INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScope
   }
   return contexts;
 };
-arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, value) {
+arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(flagKey, value) {
   let num = arg2;
   if (arg2 === undefined) {
     num = 100;
   }
-  let obj = _getClient;
+  let obj = getClient;
   const currentScope = obj.getCurrentScope();
   const contexts = currentScope.getScopeData().contexts;
   if (!contexts.flags) {
@@ -68,7 +65,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
     contexts.flags = obj;
   }
   const values = contexts.flags.values;
-  _require = first;
+  _require = flagKey;
   if (typeof value === "boolean") {
     if (values.length > num) {
       if (tmp(823).DEBUG_BUILD) {
@@ -77,7 +74,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + num);
       }
     } else {
-      const findIndexResult = values.findIndex((flag) => flag.flag === closure_0);
+      const findIndexResult = values.findIndex((item, index) => item.flag === closure_0);
       if (-1 !== findIndexResult) {
         values.splice(findIndexResult, 1);
       }
@@ -85,7 +82,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
         values.shift();
       }
       obj = { flag: null, result: null };
-      obj[0] = first;
+      obj[0] = flagKey;
       obj[1] = value;
       values.push(obj);
     }
@@ -95,24 +92,24 @@ arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, a
   const _require = arg1;
   if (typeof flag === "boolean") {
     if (arr.length > arg3) {
-      if (___SENTRY_DEBUG__.DEBUG_BUILD) {
+      if (require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD) {
         const debug = tmp5(824).debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);
       }
       tmp5 = _require;
     } else {
-      const findIndexResult = arr.findIndex((flag) => flag.flag === closure_0);
+      const findIndexResult = arr.findIndex((item, index) => item.flag === closure_0);
       if (-1 !== findIndexResult) {
         arr.splice(findIndexResult, 1);
       }
       if (arr.length === arg3) {
-        arr.shift();
+        arr = arr.shift();
       }
       const obj = { flag: null, result: null };
       obj[0] = arg1;
       obj[1] = flag;
-      arr.push(obj);
+      arr = arr.push(obj);
     }
   }
 };

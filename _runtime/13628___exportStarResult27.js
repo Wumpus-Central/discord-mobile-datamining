@@ -1,6 +1,8 @@
 // _runtime/13628___exportStarResult27.js
 import getMultiInternalSlots from "13582_getMultiInternalSlots.js";
 import __exportStarResult4 from "13587___exportStarResult4.js";
+import __exportStarResult9 from "13592___exportStarResult9.js";
+import __exportStarResult10 from "13593___exportStarResult10.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -15,7 +17,7 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
   const str = __exportStarResult4.GetOption(obj, "currency", "string", undefined, undefined);
   let result = undefined === str;
   if (!result) {
-    result = tmp4(13592).IsWellFormedCurrencyCode(str);
+    result = __exportStarResult9.IsWellFormedCurrencyCode(str);
   }
   getMultiInternalSlots.invariant(result, "Malformed currency code", RangeError);
   let tmp10 = "currency" !== GetOptionResult;
@@ -27,7 +29,7 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
   const GetOptionResult3 = __exportStarResult4.GetOption(obj, "unit", "string", undefined, undefined);
   result1 = undefined === GetOptionResult3;
   if (!result1) {
-    result1 = tmp4(13593).IsWellFormedUnitIdentifier(GetOptionResult3);
+    result1 = __exportStarResult10.IsWellFormedUnitIdentifier(GetOptionResult3);
   }
   getMultiInternalSlots.invariant(result1, "Invalid unit argument for Intl.NumberFormat()", RangeError);
   let tmp17 = "unit" !== GetOptionResult;
@@ -45,4 +47,5 @@ arg5.SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSl
     internalSlots.unit = GetOptionResult3;
     internalSlots.unitDisplay = GetOptionResult4;
   }
+  GetOptionResult4 = __exportStarResult4.GetOption(obj, "unitDisplay", "string", ["short", "narrow", "long"], "short");
 };

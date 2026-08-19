@@ -18,8 +18,8 @@ if (!buildMatchPatternFn) {
 obj2 = {
   matchPattern: /^(\d+)(일|번째)?/i,
   parsePattern: /\d+/i,
-  valueCallback(joined) {
-    return parseInt(joined, 10);
+  valueCallback(match) {
+    return parseInt(match, 10);
   }
 };
 const items = [/^(bc|기원전)/i, /^(ad|서기)/i];

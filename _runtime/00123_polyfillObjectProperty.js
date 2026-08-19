@@ -17,7 +17,6 @@ arg5.polyfillObjectProperty = function polyfillObjectProperty(_navigator, produc
     obj[1] = false !== tmp2;
     obj[2] = false !== tmp3;
     defineLazyObjectProperty.default(_navigator, product, obj);
-    const obj2 = defineLazyObjectProperty;
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${product} is not configurable.`);
@@ -36,7 +35,6 @@ arg5.polyfillGlobal = function polyfillGlobal(arg0, arg1) {
     obj[1] = false !== tmp3;
     obj[2] = false !== tmp4;
     defineLazyObjectProperty.default(global, arg0, obj);
-    const obj2 = defineLazyObjectProperty;
   } else {
     const _console = console;
     console.error(`Failed to set polyfill. ${arg0} is not configurable.`);

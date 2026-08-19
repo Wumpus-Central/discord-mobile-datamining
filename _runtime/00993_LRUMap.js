@@ -1,6 +1,6 @@
 // _runtime/00993_LRUMap.js
 import _readOnlyError from "metro/00377__readOnlyError.js";
-import LRUMap from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -13,6 +13,7 @@ class LRUMap {
     return;
   }
 }
+_classCallCheck = LRUMap;
 let items = [
   {
     key: "size",
@@ -80,7 +81,7 @@ let items = [
     value: function values() {
       const items = [];
       const _cache = this._cache;
-      const item = _cache.forEach((arg0) => items.push(arg0));
+      const item = _cache.forEach((item, index) => items.push(item));
       return items;
     }
   }

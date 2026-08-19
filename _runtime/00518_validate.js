@@ -1,11 +1,12 @@
 // _runtime/00518_validate.js
-const module = arg2;
+import _modDef519 from "metro/00519__.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function validate(str) {
   let isMatch = typeof str === "string";
   if (typeof str === "string") {
-    isMatch = module(519).test(str);
-    const obj = module(519);
+    isMatch = _modDef519.test(str);
   }
   return isMatch;
 };

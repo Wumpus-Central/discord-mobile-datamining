@@ -4,7 +4,7 @@ import { useMemo } from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopDefault;
 ({ Platform, TouchableNativeFeedback: c3, TouchableOpacity, View: c4 } = get_ActivityIndicator);
 
@@ -16,9 +16,8 @@ export default function _default(disabled) {
     num = 18;
   }
   ({ style, theme } = disabled);
-  let keyboardState;
   let obj = disabled(num[3]);
-  keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
+  const keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
   const items = [disabled];
   const items1 = [keyboardState, num, theme];
   obj = { accessibilityHint, accessibilityLabel, accessibilityRole: "button", accessibilityState: theme(() => ({ disabled }), items), background: theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1), style, testID, onPress, children: <closure_4 style={style}>{children}</closure_4> };

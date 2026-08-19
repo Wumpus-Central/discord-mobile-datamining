@@ -4,8 +4,9 @@ import _mod13677 from "metro/13677__.js";
 import call from "13680_call.js";
 import call2 from "13696_call.js";
 import all from "13699_all.js";
+import _mod13733 from "metro/13733__.js";
 import state from "13734_state.js";
-import closure_2 from "13732___core-js_shared__.js";
+import prop from "13732_prop.js";
 
 let closure_5 = call("".slice);
 let closure_6 = call("".replace);
@@ -19,7 +20,7 @@ const tmp = getOwnPropertyDescriptor && !_mod13677(() => 8 !== defineProperty(()
 let closure_9 = String(String).split("String");
 const fn = (toString, toString2) => {
   let text = toString2;
-  if ("Symbol(" === callback2(String(toString2), 0, 7)) {
+  if ("Symbol(" === callback(String(toString2), 0, 7)) {
     text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
   let getter = arg2;
@@ -41,11 +42,10 @@ const fn = (toString, toString2) => {
   const tmp8 = call2(toString, "name");
   let tmp9 = !tmp8;
   if (tmp8) {
-    tmp9 = tmp6(13733).CONFIGURABLE && toString.name !== text2;
-    const tmp10 = tmp6(13733).CONFIGURABLE && toString.name !== text2;
+    tmp9 = _mod13733.CONFIGURABLE && toString.name !== text2;
   }
   if (tmp9) {
-    if (tmp6(13676)) {
+    if (getOwnPropertyDescriptor) {
       let obj = { value: null, configurable: true };
       obj[0] = text2;
       defineProperty(toString, "name", obj);
@@ -58,7 +58,7 @@ const fn = (toString, toString2) => {
     tmp13 = arg2;
   }
   if (tmp13) {
-    tmp13 = tmp6(13696)(arg2, "arity");
+    tmp13 = call2(arg2, "arity");
   }
   if (tmp13) {
     tmp13 = toString.length !== arg2.arity;
@@ -70,21 +70,19 @@ const fn = (toString, toString2) => {
   }
   try {
     if (arg2) {
-      if (tmp6(13696)(arg2, "constructor")) {
+      if (call2(arg2, "constructor")) {
         if (arg2.constructor) {
-          if (tmp6(13676)) {
+          if (getOwnPropertyDescriptor) {
             defineProperty(toString, "prototype", { writable: false });
           }
         }
-        const enforceResult = tmp6(13734).enforce(toString);
-        if (!tmp6(13696)(enforceResult, "source")) {
+        const enforceResult = state.enforce(toString);
+        if (!call2(enforceResult, "source")) {
           let str11 = "";
           if (typeof text2 === "string") {
             str11 = text2;
           }
-          enforceResult.source = closure_7(closure_9, str11);
-          const tmp19 = closure_7;
-          const tmp20 = closure_9;
+          enforceResult.source = callback2(closure_9, str11);
         }
         return toString;
       }
@@ -103,7 +101,7 @@ function toString() {
     const tmpResult = state;
   }
   if (!source) {
-    source = callback(self);
+    source = prop(self);
   }
   return source;
 }

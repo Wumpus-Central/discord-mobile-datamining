@@ -1,5 +1,5 @@
 // _runtime/13784_sendToReactotron.js
-import closure_0 from "00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 let closure_1 = { ignore: [] };
 
@@ -56,13 +56,11 @@ export default (arg0) => {
                 c6 = 1;
                 if (c8.indexOf(closure_0) < 0) {
                   obj = { key: null, value: null };
-                  obj[0] = tmp26;
-                  obj[1] = tmp27;
-                  closure_1_10("setItem", obj);
+                  obj[0] = closure_0;
+                  obj[1] = callback;
+                  sendToReactotron("setItem", obj);
                 }
                 c6 = 0;
-                tmp26 = closure_0;
-                tmp27 = callback;
               }
             } else {
               c6 = 0;
@@ -129,17 +127,16 @@ export default (arg0) => {
                 c5 = 1;
                 if (closure_1_8.indexOf(closure_0) < 0) {
                   obj = { key: null };
-                  obj[0] = tmp25;
-                  closure_1_10("removeItem", obj);
+                  obj[0] = closure_0;
+                  sendToReactotron("removeItem", obj);
                 }
                 c5 = 0;
-                tmp25 = closure_0;
               }
             } else {
               c5 = 0;
             }
             c7 = 3;
-            tmp16 = closure_1_2(closure_0, closure_1);
+            tmp16 = removeItem(closure_0, closure_1);
           } catch (tmp17) {
             closure_4 = tmp17;
             if (tmp4 === c5) {
@@ -201,19 +198,17 @@ export default (arg0) => {
                 c6 = 1;
                 if (c8.indexOf(closure_0) < 0) {
                   obj = { key: null, value: null };
-                  obj[0] = tmp26;
-                  obj[1] = tmp27;
-                  closure_1_10("mergeItem", obj);
+                  obj[0] = closure_0;
+                  obj[1] = closure_1;
+                  sendToReactotron("mergeItem", obj);
                 }
                 c6 = 0;
-                tmp26 = closure_0;
-                tmp27 = closure_1;
               }
             } else {
               c6 = 0;
             }
             c8 = 3;
-            tmp17 = closure_1_3(closure_0, closure_1, closure_2);
+            tmp17 = mergeItem(closure_0, closure_1, closure_2);
           } catch (tmp18) {
             closure_5 = tmp18;
             if (tmp4 === c6) {
@@ -226,7 +221,7 @@ export default (arg0) => {
         }
       })();
     });
-    function mergeItem(arg0, arg1, arg2) {
+    function mergeItem(closure_0, closure_1, closure_2) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -271,7 +266,7 @@ export default (arg0) => {
                 closure_2 = tmp3;
                 closure_1 = tmp16;
                 let v0 = 1;
-                closure_1_10("clear");
+                sendToReactotron("clear");
                 v0 = 0;
               }
             } else {
@@ -341,20 +336,20 @@ export default (arg0) => {
                 if (!closure_0) {
                   items = [];
                 }
-                const found = items.filter((arg0) => {
-                  let first = arg0;
-                  if (arg0) {
-                    first = arg0[0];
+                const found = items.filter((item, index) => {
+                  let first = item;
+                  if (item) {
+                    first = item[0];
                   }
                   if (first) {
-                    first = closure_8.indexOf(arg0[0]) < 0;
+                    first = closure_8.indexOf(item[0]) < 0;
                   }
                   return first;
                 });
                 if (found.length > 0) {
                   obj = { pairs: null };
                   obj[0] = found;
-                  closure_1_10("multiSet", obj);
+                  sendToReactotron("multiSet", obj);
                 }
                 v0 = 0;
               }
@@ -425,11 +420,11 @@ export default (arg0) => {
                 if (!closure_0) {
                   items = [];
                 }
-                const found = items.filter((arg0) => closure_8.indexOf(arg0) < 0);
+                const found = items.filter((item, index) => closure_8.indexOf(item) < 0);
                 if (found.length > 0) {
                   obj = { keys: null };
                   obj[0] = found;
-                  closure_1_10("multiRemove", obj);
+                  sendToReactotron("multiRemove", obj);
                 }
                 c5 = 0;
               }
@@ -500,20 +495,20 @@ export default (arg0) => {
                 if (!closure_0) {
                   items = [];
                 }
-                const found = items.filter((arg0) => {
-                  let first = arg0;
-                  if (arg0) {
-                    first = arg0[0];
+                const found = items.filter((item, index) => {
+                  let first = item;
+                  if (item) {
+                    first = item[0];
                   }
                   if (first) {
-                    first = closure_8.indexOf(arg0[0]) < 0;
+                    first = closure_8.indexOf(item[0]) < 0;
                   }
                   return first;
                 });
                 if (found.length > 0) {
                   obj = { pairs: null };
                   obj[0] = found;
-                  closure_1_10("multiMerge", obj);
+                  sendToReactotron("multiMerge", obj);
                 }
                 c5 = 0;
               }

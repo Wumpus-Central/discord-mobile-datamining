@@ -1,8 +1,8 @@
 // _runtime/01164_stallTrackingIntegration.js
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import { AppState } from "00017_get_ActivityIndicator.js";
 
-const require = arg1;
+const require = fn;
 
 export const stallTrackingIntegration = () => {
   let obj = arg0;
@@ -13,18 +13,7 @@ export const stallTrackingIntegration = () => {
   if (num === undefined) {
     num = 50;
   }
-  let map;
-  obj = undefined;
-  let _onSpanStart;
-  let _onSpanEnd;
-  let _onChildSpanEnd;
-  let _markSpanFinish;
-  let _getCurrentStats;
-  let _startTracking;
-  let _shouldStopTracking;
-  let _reset;
-  let _flushLeakedTransactions;
-  map = new Map();
+  const map = new Map();
   obj = {
     isTracking: false,
     timeout: null,
@@ -59,28 +48,22 @@ export const stallTrackingIntegration = () => {
         const entries = map.entries();
         const tmp26 = entries[Symbol.iterator]();
         while (tmp26 !== undefined) {
-          let tmp7 = obj;
           let tmp8 = obj(tmp5, 2);
           [tmp9, tmp10] = tmp8;
           let longestStallTime = tmp10.longestStallTime;
           num = 0;
-          let tmp11 = tmp10;
           if (null !== longestStallTime) {
-            let tmp13 = longestStallTime;
             num = 0;
             if (undefined !== tmp12) {
               num = longestStallTime;
             }
           }
-          let tmp15 = map;
-          let tmp16 = tmp9;
           let _Object = Object;
           let _Object2 = Object;
-          let tmp17 = tmp10;
           let bound = Math.max(num, diff1);
           obj = { longestStallTime: null };
           obj[0] = bound;
-          let result1 = map.set(tmp9, Object.assign(Object.assign({}, tmp11), obj));
+          let result1 = map.set(tmp9, Object.assign(Object.assign({}, tmp10), obj));
           continue;
         }
       }
@@ -89,14 +72,15 @@ export const stallTrackingIntegration = () => {
         const _setTimeout = setTimeout;
         tmp19.timeout = setTimeout(tmp19.iteration, 50);
       }
+      tmp20 = obj.isTracking && !obj.isBackground;
     }
   };
-  _onSpanStart = function _onSpanStart(activeSpan) {
+  function _onSpanStart(activeSpan) {
     obj = num(map[3]);
     if (obj.isRootSpan(activeSpan)) {
       obj1 = map;
       if (map.has(activeSpan)) {
-        const debug = tmp(tmp2[2]).debug;
+        const debug = tmp(map[2]).debug;
         debug.error("[StallTracking] Tried to start stall tracking on a transaction already being tracked. Measurements might be lost.");
       } else {
         if (typeof _startTracking !== "function") {
@@ -106,14 +90,13 @@ export const stallTrackingIntegration = () => {
         if (!obj.isTracking) {
           obj2.isTracking = true;
           const _Math = Math;
-          obj2.lastIntervalMs = Math.floor(1000 * tmp(tmp2[2]).timestampInSeconds());
+          obj2.lastIntervalMs = Math.floor(1000 * tmp(map[2]).timestampInSeconds());
           obj2.iteration();
-          const tmpResult = tmp(tmp2[2]);
+          const tmpResult = tmp(map[2]);
         }
         if (typeof _getCurrentStats !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = { stall_count: null, stall_total_time: null, stall_longest_time: null };
         obj = { value: null, unit: "none" };
         obj[0] = obj2.stallCount;
         obj[0] = obj;
@@ -143,27 +126,26 @@ export const stallTrackingIntegration = () => {
         _flushLeakedTransactions();
       }
     }
-  };
-  _onSpanEnd = function _onSpanEnd(activeSpan) {
+  }
+  function _onSpanEnd(activeSpan) {
     obj = num(map[3]);
     if (obj.isRootSpan(activeSpan)) {
       let value = map.get(activeSpan);
-      let tmpResult = tmp(tmp2[2]);
+      let tmpResult = tmp(map[2]);
       if (value) {
         const timestamp2 = tmpResult.spanToJSON(activeSpan).timestamp;
-        tmpResult = tmp(tmp2[4]);
+        tmpResult = tmp(map[4]);
         if (tmpResult.isNearToNow(timestamp2)) {
           if (typeof _getCurrentStats !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          obj = { stall_count: null, stall_total_time: null, stall_longest_time: null };
           obj = { value: null, unit: "none" };
           obj[0] = obj.stallCount;
           obj[0] = obj;
           obj1 = { value: null, unit: "millisecond" };
           obj1[0] = obj.totalStallTime;
           obj[1] = obj1;
-          value = obj11.get(activeSpan);
+          value = map.get(activeSpan);
           let longestStallTime;
           if (null !== value) {
             if (undefined !== value) {
@@ -182,26 +164,26 @@ export const stallTrackingIntegration = () => {
           obj[2] = obj2;
           let stats = obj;
         } else {
-          const latestChildSpanEndTimestamp = tmp(tmp2[4]).getLatestChildSpanEndTimestamp(activeSpan);
+          const latestChildSpanEndTimestamp = tmp(map[4]).getLatestChildSpanEndTimestamp(activeSpan);
           if (latestChildSpanEndTimestamp !== timestamp2) {
-            const debug3 = tmp(tmp2[2]).debug;
+            const debug3 = tmp(map[2]).debug;
             debug3.log("[StallTracking] Stall measurements not added due to a custom `endTimestamp` (root end is not equal to the latest child span end).");
           }
           if (!value.atTimestamp) {
-            const debug4 = tmp(tmp2[2]).debug;
+            const debug4 = tmp(map[2]).debug;
             debug4.log("[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now. And no previous stats from child end were found.");
           }
           if (tmp29) {
             stats = value.atTimestamp.stats;
           }
           tmp29 = latestChildSpanEndTimestamp === timestamp2 && value.atTimestamp;
-          const tmpResult1 = tmp(tmp2[4]);
+          const tmpResult1 = tmp(map[4]);
         }
-        obj11.delete(activeSpan);
+        map.delete(activeSpan);
         if (typeof _shouldStopTracking !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (0 === obj11.size) {
+        if (0 === map.size) {
           obj.isTracking = false;
           if (null !== obj.timeout) {
             const _clearTimeout2 = clearTimeout;
@@ -214,28 +196,28 @@ export const stallTrackingIntegration = () => {
           obj.stallCount = 0;
           obj.totalStallTime = 0;
           obj.lastIntervalMs = 0;
-          obj11.clear();
+          map.clear();
         }
         if (stats) {
-          const tmpResult2 = tmp(tmp2[4]);
-          tmpResult2.setSpanMeasurement(activeSpan, tmp(tmp2[5]).STALL_COUNT, stats.stall_count.value - value.atStart.stall_count.value, value.atStart.stall_count.unit);
-          const tmpResult3 = tmp(tmp2[4]);
-          tmpResult3.setSpanMeasurement(activeSpan, tmp(tmp2[5]).STALL_TOTAL_TIME, stats.stall_total_time.value - value.atStart.stall_total_time.value, value.atStart.stall_total_time.unit);
-          const tmpResult4 = tmp(tmp2[4]);
-          tmpResult4.setSpanMeasurement(activeSpan, tmp(tmp2[5]).STALL_LONGEST_TIME, stats.stall_longest_time.value, stats.stall_longest_time.unit);
+          const tmpResult2 = tmp(map[4]);
+          tmpResult2.setSpanMeasurement(activeSpan, tmp(map[5]).STALL_COUNT, stats.stall_count.value - value.atStart.stall_count.value, value.atStart.stall_count.unit);
+          const tmpResult3 = tmp(map[4]);
+          tmpResult3.setSpanMeasurement(activeSpan, tmp(map[5]).STALL_TOTAL_TIME, stats.stall_total_time.value - value.atStart.stall_total_time.value, value.atStart.stall_total_time.unit);
+          const tmpResult4 = tmp(map[4]);
+          tmpResult4.setSpanMeasurement(activeSpan, tmp(map[5]).STALL_LONGEST_TIME, stats.stall_longest_time.value, stats.stall_longest_time.unit);
         } else if (undefined !== timestamp2) {
-          const debug5 = tmp(tmp2[2]).debug;
-          debug5.log("[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now.", "endTimestamp", timestamp2, "now", tmp(tmp2[2]).timestampInSeconds());
-          const tmpResult5 = tmp(tmp2[2]);
+          const debug5 = tmp(map[2]).debug;
+          debug5.log("[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now.", "endTimestamp", timestamp2, "now", tmp(map[2]).timestampInSeconds());
+          const tmpResult5 = tmp(map[2]);
         }
       } else {
         const debug2 = tmpResult.debug;
         debug2.log("[StallTracking] Stall measurements were not added to transaction due to exceeding the max count.");
-        obj11.delete(activeSpan);
+        map.delete(activeSpan);
         if (typeof _shouldStopTracking !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (0 === obj11.size) {
+        if (0 === map.size) {
           obj.isTracking = false;
           if (null !== obj.timeout) {
             const _clearTimeout = clearTimeout;
@@ -248,16 +230,16 @@ export const stallTrackingIntegration = () => {
           obj.stallCount = 0;
           obj.totalStallTime = 0;
           obj.lastIntervalMs = 0;
-          obj11.clear();
+          map.clear();
         }
       }
     } else {
       if (typeof _onChildSpanEnd !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      const rootSpan = tmp(tmp2[2]).getRootSpan(activeSpan);
-      const tmpResult6 = tmp(tmp2[2]);
-      const timestamp = tmp(tmp2[2]).spanToJSON(activeSpan).timestamp;
+      const rootSpan = tmp(map[2]).getRootSpan(activeSpan);
+      const tmpResult6 = tmp(map[2]);
+      const timestamp = tmp(map[2]).spanToJSON(activeSpan).timestamp;
       if (timestamp) {
         if (typeof _markSpanFinish !== "function") {
           HermesBuiltin.throwTypeError();
@@ -267,7 +249,7 @@ export const stallTrackingIntegration = () => {
         if (value1) {
           const _Math = Math;
           if (Math.abs(tmpResult8.timestampInSeconds() - timestamp) > 0.02) {
-            const debug = tmp(tmp2[2]).debug;
+            const debug = tmp(map[2]).debug;
             debug.log("[StallTracking] Span end not logged due to end timestamp being outside the margin of error from now.");
             if (tmp14) {
               const _Object = Object;
@@ -312,55 +294,50 @@ export const stallTrackingIntegration = () => {
             obj7[0] = obj3;
             const result1 = obj3.set(rootSpan, Object.assign(merged, obj7));
           }
-          tmpResult8 = tmp(tmp2[2]);
+          tmpResult8 = tmp(map[2]);
         }
       }
+      const tmpResult7 = tmp(map[2]);
     }
-  };
-  _onChildSpanEnd = function _onChildSpanEnd(arg0) {
+  }
+  function _onChildSpanEnd(arg0) {
 
-  };
-  _markSpanFinish = function _markSpanFinish(arg0, arg1) {
+  }
+  function _markSpanFinish(arg0, arg1) {
 
-  };
-  _getCurrentStats = function _getCurrentStats(arg0) {
+  }
+  function _getCurrentStats(arg0) {
 
-  };
-  _startTracking = function _startTracking() {
+  }
+  function _startTracking() {
 
-  };
-  _shouldStopTracking = function _shouldStopTracking() {
+  }
+  function _shouldStopTracking() {
 
-  };
-  _reset = function _reset() {
+  }
+  function _reset() {
 
-  };
-  _flushLeakedTransactions = function _flushLeakedTransactions() {
+  }
+  function _flushLeakedTransactions() {
     if (map.size > 10) {
       num = 0;
-      const diff = obj.size - 10;
-      const keys = obj.keys();
+      const diff = map.size - 10;
+      const keys = map.keys();
       const iter = keys[Symbol.iterator]();
       while (iter !== undefined) {
-        let tmp10 = num;
         if (num >= diff) {
-          let tmp16 = iter;
           iter.return();
           break;
         } else {
-          let tmp11 = num;
           num = num + 1;
-          let tmp12 = map;
-          let tmp13 = map;
-          let tmp14 = nextResult;
           let deleteResult = map.delete(tmp9);
           continue;
         }
         break;
       }
-      nextResult = iter.next();
+      const nextResult = iter.next();
     }
-  };
+  }
   let isAvailable;
   if (null != _onSpanStart) {
     isAvailable = obj3.isAvailable;

@@ -3,7 +3,7 @@ import _mod1557 from "metro/01557__.js";
 import decodeComponents from "01558_decodeComponents.js";
 import _mod1559 from "metro/01559__.js";
 import _mod1560 from "metro/01560__.js";
-import closure_3 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 
 function validateArrayFormatSeparator(arrayFormatSeparator) {
   const typeError = new TypeError("arrayFormatSeparator must be single character string");
@@ -25,7 +25,7 @@ function keysSorter(arr) {
     if (typeof arr === "object") {
       const _Object = Object;
       const sorted1 = keysSorter(Object.keys(arr)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-      sorted = sorted1.map((arg0) => keys[arg0]);
+      sorted = sorted1.map((item, index) => keys[item]);
       const obj = keysSorter(Object.keys(arr));
     }
   }
@@ -63,10 +63,9 @@ function parseValue(str, parseNumbers) {
   }
 }
 function parse(str) {
-  let obj = globalThis;
   const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
-  obj = Object.create(null);
+  let obj = Object.create(null);
   if (typeof str !== "string") {
     return obj;
   } else {
@@ -78,34 +77,22 @@ function parse(str) {
       while (iter !== undefined) {
         let str4 = nextResult;
         if ("" !== nextResult) {
-          let tmp43 = obj;
-          let tmp44 = dependencyMap;
-          let tmp46 = nextResult;
           let tmp45 = obj(1559);
           if (merged.decode) {
             let replaced = str4.replace(/\+/g, " ");
           } else {
             replaced = str4;
           }
-          let tmp12 = callback;
-          let tmp13 = callback(tmp45(replaced, "="), 2);
+          let tmp13 = _slicedToArray(tmp45(replaced, "="), 2);
           [tmp14, tmp15] = tmp13;
-          let tmp17 = null;
           if (undefined === tmp15) {
-            let tmp22 = null;
-            let tmp23 = decode;
-            let tmp24 = tmp14;
             let tmp4Result = tmp4(decode(tmp14, merged), null, obj);
           } else {
             let items = ["comma", "separator", "bracket-separator"];
             if (items.includes(merged.arrayFormat)) {
-              let tmp20 = tmp15;
             } else {
-              let tmp18 = decode;
-              let tmp19 = tmp15;
-              tmp20 = decode(tmp16, merged);
+              let tmp20 = decode(tmp16, merged);
             }
-            let tmp21 = tmp20;
           }
         }
         continue;
@@ -115,28 +102,18 @@ function parse(str) {
       for (const item10065 of keys) {
         let tmp30 = obj[item10065];
         let tmp31 = tmp30;
-        let tmp29 = item10065;
         if (typeof tmp30 === "object") {
-          let tmp47 = tmp30;
           if (null !== tmp31) {
             let _Object2 = Object;
-            let tmp35 = tmp30;
             let keys1 = Object.keys(tmp31);
-            let tmp37 = keys1;
-            let tmp38 = keys1;
             for (const item10081 of keys1) {
-              let tmp39 = tmp30;
-              let tmp40 = parseValue;
               tmp31[item10081] = parseValue(tmp31[item10081], merged);
               continue;
             }
             continue;
           }
         }
-        let tmp32 = item10065;
-        let tmp33 = parseValue;
-        let tmp34 = tmp30;
-        obj[tmp29] = parseValue(tmp31, merged);
+        obj[item10065] = parseValue(tmp31, merged);
       }
       if (false === merged.sort) {
         return obj;
@@ -152,8 +129,8 @@ function parse(str) {
         }
         const _Object5 = obj.Object;
         obj = _Object5.create(null);
-        const reduced = sorted.reduce((arg0, arg1) => {
-          if (Boolean(keys[arg1])) {
+        const reduced = sorted.reduce((acc, item, index) => {
+          if (Boolean(keys[item])) {
             if (typeof obj === "object") {
               const _Array2 = Array;
               if (!Array.isArray(obj)) {
@@ -173,21 +150,21 @@ function parse(str) {
                       sorted1 = keys;
                       if (typeof keys === "object") {
                         const _Object2 = Object;
-                        const sorted2 = closure_1_7(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                        sorted1 = sorted2.map((arg0) => keys[arg0]);
-                        const obj3 = closure_1_7(Object.keys(keys));
+                        const sorted2 = keysSorter(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
+                        sorted1 = sorted2.map((item, index) => keys[item]);
+                        const obj3 = keysSorter(Object.keys(keys));
                       }
                     }
                     keys = sorted1.sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                    const mapped = keys.map((arg0) => keys[arg0]);
+                    const mapped = keys.map((item, index) => keys[item]);
                   }
                 }
-                arg0[arg1] = sorted;
+                acc[item] = sorted;
               }
-              return arg0;
+              return acc;
             }
           }
-          arg0[arg1] = keys[arg1];
+          acc[item] = keys[item];
         }, obj);
       }
     } else {
@@ -195,6 +172,147 @@ function parse(str) {
     }
     const str5 = str.trim();
   }
+  tmp4 = (function parserForArrayFormat(merged) {
+    closure_0 = merged;
+    const arrayFormat = merged.arrayFormat;
+    if ("index" === arrayFormat) {
+      return (str) => {
+        const table = /\[(\d*)\]$/.exec(str);
+        const replaced = str.replace(/\[\d*\]$/, "");
+        if (table) {
+          if (undefined === arg2[replaced]) {
+            arg2[replaced] = {};
+          }
+          arg2[replaced][table[1]] = arg1;
+        } else {
+          arg2[replaced] = arg1;
+        }
+      };
+    } else if ("bracket" === arrayFormat) {
+      return (str) => {
+        closure_1 = /(\[\])$/.exec(str);
+        const replaced = str.replace(/\[\]$/, "");
+        if (closure_1) {
+          if (undefined !== arg2[replaced]) {
+            const items = [];
+            arg2[replaced] = items.concat(arg2[replaced], arg1);
+          } else {
+            const items1 = [arg1];
+            arg2[replaced] = items1;
+          }
+        } else {
+          arg2[replaced] = arg1;
+        }
+      };
+    } else if ("colon-list-separator" === arrayFormat) {
+      return (str) => {
+        closure_1 = /(:list)$/.exec(str);
+        const replaced = str.replace(/:list$/, "");
+        if (closure_1) {
+          if (undefined !== arg2[replaced]) {
+            const items = [];
+            arg2[replaced] = items.concat(arg2[replaced], arg1);
+          } else {
+            const items1 = [arg1];
+            arg2[replaced] = items1;
+          }
+        } else {
+          arg2[replaced] = arg1;
+        }
+      };
+    } else {
+      if ("comma" !== arrayFormat) {
+        if ("separator" !== arrayFormat) {
+          return "bracket-separator" === arrayFormat ? ((str, str2) => {
+            const isMatch = /(\[\])$/.test(str);
+            const replaced = str.replace(/\[\]$/, "");
+            if (isMatch) {
+              if (null === str2) {
+                let items = [];
+              } else {
+                const parts = str2.split(merged.arrayFormatSeparator);
+                items = parts.map((item, index) => {
+                  let tmp = item;
+                  if (decode.decode) {
+                    tmp = merged(closure_1_2[2])(item);
+                  }
+                  return tmp;
+                });
+              }
+              if (undefined !== arg2[replaced]) {
+                const items1 = [];
+                arg2[replaced] = items1.concat(arg2[replaced], items);
+              } else {
+                arg2[replaced] = items;
+              }
+            } else {
+              let tmp3 = str2;
+              if (str2) {
+                let tmp5 = str2;
+                if (merged.decode) {
+                  tmp5 = merged(closure_1_2[2])(str2);
+                }
+                tmp3 = tmp5;
+              }
+              arg2[replaced] = tmp3;
+            }
+          }) : ((arg0, arg1, arg2) => {
+            if (undefined !== arg2[arg0]) {
+              const items = [];
+              arg2[arg0] = items.concat(arg2[arg0], arg1);
+            } else {
+              arg2[arg0] = arg1;
+            }
+          });
+        }
+      }
+      return (arg0, str) => {
+        let hasItem1 = typeof str === "string";
+        let hasItem = hasItem1;
+        if (typeof str === "string") {
+          hasItem = str.includes(merged.arrayFormatSeparator);
+        }
+        if (typeof str === "string") {
+          hasItem1 = !hasItem;
+        }
+        if (hasItem1) {
+          obj = str;
+          if (merged.decode) {
+            obj = merged(closure_1_2[2])(str);
+          }
+          hasItem1 = obj.includes(merged.arrayFormatSeparator);
+        }
+        if (hasItem1) {
+          let tmp7 = str;
+          if (merged.decode) {
+            tmp7 = merged(closure_1_2[2])(str);
+          }
+          str = tmp7;
+        }
+        if (!hasItem) {
+          if (!hasItem1) {
+            let mapped = str;
+            if (null !== str) {
+              let tmp13 = str;
+              if (merged.decode) {
+                tmp13 = merged(closure_1_2[2])(str);
+              }
+              mapped = tmp13;
+            }
+          }
+          arg2[arg0] = mapped;
+        }
+        const parts = str.split(merged.arrayFormatSeparator);
+        mapped = parts.map((item, index) => {
+          let tmp = item;
+          if (decode.decode) {
+            tmp = merged(closure_1_2[2])(item);
+          }
+          return tmp;
+        });
+      };
+    }
+  })(merged);
 }
 let closure_4 = Symbol("encodeFragmentIdentifier");
 
@@ -252,21 +370,21 @@ export const stringify = (arg0, merged) => {
                   const items = [];
                   encode = items1.encode;
                   if (!encode) {
-                    items1 = [tmp24, "[", length, "]"];
+                    items1 = [lib, "[", length, "]"];
                     length = items1.join("");
                     items[arraySpreadResult] = length;
                     let items2 = items;
                   } else if (items1.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp24);
+                    let encodeURIComponentResult = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent4 = encodeURIComponent;
-                    encodeURIComponentResult = encodeURIComponent(tmp24);
+                    encodeURIComponentResult = encodeURIComponent(lib);
                   }
                   arraySpreadResult = HermesBuiltin.arraySpread(encode, 0);
                 } else {
                   items2 = [];
                   if (!items1.encode) {
-                    const items3 = [tmp35, "[", , , ];
+                    const items3 = [lib, "[", , , ];
                     if (!items1.encode) {
                       items3[2] = length;
                       items3[3] = "]=";
@@ -286,10 +404,10 @@ export const stringify = (arg0, merged) => {
                       encodeURIComponentResult2 = encodeURIComponent(length);
                     }
                   } else if (items1.strict) {
-                    let encodeURIComponentResult3 = lib(closure_2_2[1])(tmp35);
+                    let encodeURIComponentResult3 = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
-                    encodeURIComponentResult3 = encodeURIComponent(tmp35);
+                    encodeURIComponentResult3 = encodeURIComponent(lib);
                   }
                 }
               } else {
@@ -307,39 +425,39 @@ export const stringify = (arg0, merged) => {
             let tmp = arg0;
             if (undefined !== arg1) {
               if (!lib.skipNull) {
-                if (tmp25.skipEmptyString) {
+                if (lib.skipEmptyString) {
                   tmp = items1;
                 }
                 if (null === arg1) {
                   const items = [];
-                  if (!tmp25.encode) {
-                    items1 = [tmp18, "[]"];
+                  if (!lib.encode) {
+                    items1 = [lib, "[]"];
                     items[tmp17] = items1.join("");
                     let items2 = items;
-                  } else if (tmp25.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                  } else if (lib.strict) {
+                    let encodeURIComponentResult = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent3 = encodeURIComponent;
-                    encodeURIComponentResult = encodeURIComponent(tmp18);
+                    encodeURIComponentResult = encodeURIComponent(lib);
                   }
                 } else {
                   items2 = [];
-                  if (!tmp25.encode) {
-                    const items3 = [tmp30, "[]=", ];
-                    if (!tmp25.encode) {
+                  if (!lib.encode) {
+                    const items3 = [lib, "[]=", ];
+                    if (!lib.encode) {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
-                    } else if (tmp25.strict) {
+                    } else if (lib.strict) {
                       let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
                     } else {
                       const _encodeURIComponent2 = encodeURIComponent;
                       encodeURIComponentResult1 = encodeURIComponent(arg1);
                     }
-                  } else if (tmp25.strict) {
-                    let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                  } else if (lib.strict) {
+                    let encodeURIComponentResult2 = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
-                    encodeURIComponentResult2 = encodeURIComponent(tmp30);
+                    encodeURIComponentResult2 = encodeURIComponent(lib);
                   }
                 }
               } else {
@@ -357,39 +475,39 @@ export const stringify = (arg0, merged) => {
             let tmp = arg0;
             if (undefined !== arg1) {
               if (!lib.skipNull) {
-                if (tmp25.skipEmptyString) {
+                if (lib.skipEmptyString) {
                   tmp = items1;
                 }
                 if (null === arg1) {
                   const items = [];
-                  if (!tmp25.encode) {
-                    items1 = [tmp18, ":list="];
+                  if (!lib.encode) {
+                    items1 = [lib, ":list="];
                     items[tmp17] = items1.join("");
                     let items2 = items;
-                  } else if (tmp25.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                  } else if (lib.strict) {
+                    let encodeURIComponentResult = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent3 = encodeURIComponent;
-                    encodeURIComponentResult = encodeURIComponent(tmp18);
+                    encodeURIComponentResult = encodeURIComponent(lib);
                   }
                 } else {
                   items2 = [];
-                  if (!tmp25.encode) {
-                    const items3 = [tmp30, ":list=", ];
-                    if (!tmp25.encode) {
+                  if (!lib.encode) {
+                    const items3 = [lib, ":list=", ];
+                    if (!lib.encode) {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
-                    } else if (tmp25.strict) {
+                    } else if (lib.strict) {
                       let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
                     } else {
                       const _encodeURIComponent2 = encodeURIComponent;
                       encodeURIComponentResult1 = encodeURIComponent(arg1);
                     }
-                  } else if (tmp25.strict) {
-                    let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                  } else if (lib.strict) {
+                    let encodeURIComponentResult2 = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
-                    encodeURIComponentResult2 = encodeURIComponent(tmp30);
+                    encodeURIComponentResult2 = encodeURIComponent(lib);
                   }
                 }
               } else {
@@ -410,40 +528,40 @@ export const stringify = (arg0, merged) => {
                   let tmp = arg0;
                   if (undefined !== arg1) {
                     if (!lib.skipNull) {
-                      if (tmp26.skipEmptyString) {
+                      if (lib.skipEmptyString) {
                         tmp = encode;
                       }
                       if (null === arg1) {
                         const items = [];
-                        encode = tmp26.encode;
+                        encode = lib.encode;
                         if (!encode) {
-                          items[arraySpreadResult] = tmp18;
+                          items[arraySpreadResult] = lib;
                           let items1 = items;
-                        } else if (tmp26.strict) {
-                          let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                        } else if (lib.strict) {
+                          let encodeURIComponentResult = lib(closure_2_2[1])(lib);
                         } else {
                           const _encodeURIComponent3 = encodeURIComponent;
-                          encodeURIComponentResult = encodeURIComponent(tmp18);
+                          encodeURIComponentResult = encodeURIComponent(lib);
                         }
                         arraySpreadResult = HermesBuiltin.arraySpread(encode, 0);
                       } else {
                         items1 = [];
-                        if (!tmp26.encode) {
-                          const items2 = [tmp30, "=", ];
-                          if (!tmp26.encode) {
+                        if (!lib.encode) {
+                          const items2 = [lib, "=", ];
+                          if (!lib.encode) {
                             items2[2] = arg1;
                             items1[tmp29] = items2.join("");
-                          } else if (tmp26.strict) {
+                          } else if (lib.strict) {
                             let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
                           } else {
                             const _encodeURIComponent2 = encodeURIComponent;
                             encodeURIComponentResult1 = encodeURIComponent(arg1);
                           }
-                        } else if (tmp26.strict) {
-                          let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                        } else if (lib.strict) {
+                          let encodeURIComponentResult2 = lib(closure_2_2[1])(lib);
                         } else {
                           const _encodeURIComponent = encodeURIComponent;
-                          encodeURIComponentResult2 = encodeURIComponent(tmp30);
+                          encodeURIComponentResult2 = encodeURIComponent(lib);
                         }
                       }
                     } else {
@@ -456,17 +574,13 @@ export const stringify = (arg0, merged) => {
             }
           }
         }
-        let str6 = "=";
-        if ("bracket-separator" === merged.arrayFormat) {
-          str6 = "[]=";
-        }
         return (arg0) => {
           closure_0 = arg0;
           return (arg0, arg1) => {
             let tmp = arg0;
             if (undefined !== arg1) {
               if (!lib.skipNull) {
-                if (tmp25.skipEmptyString) {
+                if (lib.skipEmptyString) {
                   tmp = arg0;
                 }
                 let str3 = "";
@@ -474,30 +588,30 @@ export const stringify = (arg0, merged) => {
                   str3 = arg1;
                 }
                 if (0 === arg0.length) {
-                  if (!tmp25.encode) {
-                    const items = [tmp10, closure_1_1, ];
-                    if (!tmp25.encode) {
+                  if (!lib.encode) {
+                    const items = [lib, str6, ];
+                    if (!lib.encode) {
                       items[2] = str3;
                       const items1 = [items.join("")];
                       let items3 = items1;
-                    } else if (tmp25.strict) {
+                    } else if (lib.strict) {
                       let encodeURIComponentResult = lib(closure_2_2[1])(str3);
                     } else {
                       const _encodeURIComponent3 = encodeURIComponent;
                       encodeURIComponentResult = encodeURIComponent(str3);
                     }
-                  } else if (tmp25.strict) {
-                    let encodeURIComponentResult1 = lib(closure_2_2[1])(tmp10);
+                  } else if (lib.strict) {
+                    let encodeURIComponentResult1 = lib(closure_2_2[1])(lib);
                   } else {
                     const _encodeURIComponent2 = encodeURIComponent;
-                    encodeURIComponentResult1 = encodeURIComponent(tmp10);
+                    encodeURIComponentResult1 = encodeURIComponent(lib);
                   }
                 } else {
                   const items2 = [arg0, ];
-                  if (!tmp25.encode) {
+                  if (!lib.encode) {
                     items2[1] = str3;
-                    items3 = [items2.join(tmp25.arrayFormatSeparator)];
-                  } else if (tmp25.strict) {
+                    items3 = [items2.join(lib.arrayFormatSeparator)];
+                  } else if (lib.strict) {
                     let encodeURIComponentResult2 = lib(closure_2_2[1])(str3);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
@@ -517,10 +631,8 @@ export const stringify = (arg0, merged) => {
     const _Object2 = Object;
     const keys = Object.keys(arg0);
     for (const item10024 of keys) {
-      let tmp8 = item10024;
       if (!shouldFilter(item10024)) {
-        let tmp9 = item10024;
-        obj[tmp8] = arg0[tmp8];
+        obj[item10024] = arg0[item10024];
       }
       continue;
     }
@@ -529,50 +641,50 @@ export const stringify = (arg0, merged) => {
     if (false !== merged.sort) {
       const sorted = keys1.sort(merged.sort);
     }
-    const mapped = keys1.map((arg0) => {
-      if (undefined === dependencyMap[arg0]) {
+    const mapped = keys1.map((item, index) => {
+      if (undefined === dependencyMap[item]) {
         return "";
       } else if (null === arr) {
         if (!merged.encode) {
-          let text = arg0;
+          let text = item;
         } else if (tmp22.strict) {
-          let encodeURIComponentResult = dependencyMap(1557)(arg0);
+          let encodeURIComponentResult = dependencyMap(1557)(item);
         } else {
           const _encodeURIComponent3 = encodeURIComponent;
-          encodeURIComponentResult = encodeURIComponent(arg0);
+          encodeURIComponentResult = encodeURIComponent(item);
         }
       } else {
         const _Array = Array;
         if (Array.isArray(arr)) {
           if (0 !== arr.length) {
-            const reduced = arr.reduce(dependencyMap2(arg0), []);
+            const reduced = arr.reduce(dependencyMap2(item), []);
             let joined = reduced.join("&");
           }
-          if (!tmp13.encode) {
-            joined = `${arg0}[]`;
-          } else if (tmp13.strict) {
-            let encodeURIComponentResult1 = dependencyMap(1557)(arg0);
+          if (!merged.encode) {
+            joined = `${item}[]`;
+          } else if (merged.strict) {
+            let encodeURIComponentResult1 = dependencyMap(1557)(item);
           } else {
-            encodeURIComponentResult1 = `[]`.encodeURIComponent(arg0);
+            encodeURIComponentResult1 = `[]`.encodeURIComponent(item);
           }
         } else if (!merged.encode) {
-          if (!tmp.encode) {
-            text = `${arg0}=${arr}`;
-          } else if (tmp.strict) {
+          if (!merged.encode) {
+            text = `${item}=${arr}`;
+          } else if (merged.strict) {
             let encodeURIComponentResult2 = dependencyMap(1557)(arr);
           } else {
             const _encodeURIComponent2 = encodeURIComponent;
             encodeURIComponentResult2 = encodeURIComponent(arr);
           }
-        } else if (tmp.strict) {
-          let encodeURIComponentResult3 = dependencyMap(1557)(arg0);
+        } else if (merged.strict) {
+          let encodeURIComponentResult3 = dependencyMap(1557)(item);
         } else {
           const _encodeURIComponent = encodeURIComponent;
-          encodeURIComponentResult3 = encodeURIComponent(arg0);
+          encodeURIComponentResult3 = encodeURIComponent(item);
         }
       }
     });
-    const found = mapped.filter((arg0) => arg0.length > 0);
+    const found = mapped.filter((item, index) => item.length > 0);
     return found.join("&");
   } else {
     return "";
@@ -580,9 +692,8 @@ export const stringify = (arg0, merged) => {
 };
 export const parseUrl = (arr) => {
   const merged = Object.assign({ decode: true }, arg1);
-  [str, tmp5] = callback(_mod1559(arr, "#"), 2);
-  const tmp2 = require;
-  const tmp4 = callback(_mod1559(arr, "#"), 2);
+  [str, tmp5] = _slicedToArray(_mod1559(arr, "#"), 2);
+  const tmp4 = _slicedToArray(_mod1559(arr, "#"), 2);
   let obj = { url: str.split("?")[0] || "", query: null };
   const index = arr.indexOf("#");
   let substr = arr;
@@ -608,11 +719,12 @@ export const parseUrl = (arr) => {
       return Object.assign(obj, {});
     }
   }
+  const tmp6 = str.split("?")[0] || "";
 };
-export const stringifyUrl = (url) => {
+export const stringifyUrl = (url, merged) => {
   const obj = { encode: true, strict: true };
   obj[closure_4] = true;
-  const merged = Object.assign(obj, arg1);
+  merged = Object.assign(obj, merged);
   url = url.url;
   const index = url.indexOf("#");
   let str = url;
@@ -636,7 +748,7 @@ export const stringifyUrl = (url) => {
     return "" + tmp4 + combined + str2;
   } else {
     const fragmentIdentifier = url.fragmentIdentifier;
-    if (merged[tmp]) {
+    if (merged[closure_4]) {
       if (!merged.encode) {
         let tmp8 = fragmentIdentifier;
       } else if (merged.strict) {
@@ -651,6 +763,7 @@ export const stringifyUrl = (url) => {
     const _HermesInternal2 = HermesInternal;
     const combined1 = "#" + tmp8;
   }
+  tmp4 = str.split("?")[0] || "";
 };
 export const pick = (arg0, arg1, arg2) => {
   let obj = { parseFragmentIdentifier: true };

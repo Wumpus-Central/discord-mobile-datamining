@@ -1,6 +1,6 @@
 // _runtime/01575_useRegisterNavigator.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00019_noop.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -13,12 +13,11 @@ export const useRegisterNavigator = function useRegisterNavigator() {
     throw error;
   } else {
     const items = [context, first];
-    const effect = obj.useEffect(() => {
+    const effect = React.useEffect(() => {
       const unregister = context.unregister;
       context.register(unregister);
       return () => unregister(unregister);
     }, items);
     return first;
   }
-  obj = React;
 };

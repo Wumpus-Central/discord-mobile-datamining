@@ -1,14 +1,14 @@
 // _runtime/01195__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import isModalSupported from "01196_isModalSupported.js";
 
-const FeedbackWidgetProvider = arg1;
+const FeedbackWidgetProvider = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -57,7 +57,7 @@ class FeedbackWidgetProvider {
     tmp3Result.state = obj;
     obj1 = {
       onStartShouldSetPanResponder(arg0, dy) {
-            let isScrollAtTop = store(closure_1_1[8]).notWeb();
+            let isScrollAtTop = store(dependencyMap[8]).notWeb();
             if (isScrollAtTop) {
               isScrollAtTop = store.state.isScrollAtTop;
             }
@@ -66,8 +66,8 @@ class FeedbackWidgetProvider {
             }
             return isScrollAtTop;
           },
-      onMoveShouldSetPanResponder(arg0, dy) {
-            let isScrollAtTop = store(closure_1_1[8]).notWeb();
+      onMoveShouldSetPanResponder(arg0, closure_0) {
+            let isScrollAtTop = store(dependencyMap[8]).notWeb();
             if (isScrollAtTop) {
               isScrollAtTop = store.state.isScrollAtTop;
             }
@@ -83,10 +83,10 @@ class FeedbackWidgetProvider {
             }
           },
       onPanResponderRelease(arg0, dy) {
-            if (dy.dy > store(closure_1_1[9]).PULL_DOWN_CLOSE_THRESHOLD) {
+            if (dy.dy > store(dependencyMap[9]).PULL_DOWN_CLOSE_THRESHOLD) {
               const obj = { toValue: null, duration: null, useNativeDriver: true };
               obj[0] = closure_1_8.get("screen").height;
-              obj[1] = store(closure_1_1[9]).SLIDE_ANIMATION_DURATION;
+              obj[1] = store(dependencyMap[9]).SLIDE_ANIMATION_DURATION;
               closure_1_6.timing(store.state.panY, obj).start(() => {
                 closure_0._handleClose();
               });
@@ -111,11 +111,11 @@ class FeedbackWidgetProvider {
         obj = { toValue: null, duration: null, useNativeDriver: true, easing: null };
         ({ parallel, timing } = closure_1_6);
         obj[0] = closure_1_8.get("screen").height;
-        obj[1] = store(closure_1_1[9]).SLIDE_ANIMATION_DURATION;
+        obj[1] = store(dependencyMap[9]).SLIDE_ANIMATION_DURATION;
         obj[3] = closure_1_9.out(closure_1_9.quad);
         const items = [timing(store.state.panY, obj), ];
         obj = { toValue: 0, duration: null, useNativeDriver: null, easing: null };
-        obj[1] = store(closure_1_1[9]).BACKGROUND_ANIMATION_DURATION;
+        obj[1] = store(dependencyMap[9]).BACKGROUND_ANIMATION_DURATION;
         obj[2] = closure_1_15;
         obj[3] = closure_1_9.out(closure_1_9.quad);
         items[1] = closure_1_6.timing(store.state.backgroundOpacity, obj);
@@ -192,6 +192,7 @@ let items = [
         const backgroundOpacity = self.state.backgroundOpacity;
         backgroundOpacity.setValue(0);
       }
+      tmp7 = isVisible.isVisible && !self.state.isVisible;
     }
   },
   {
@@ -200,7 +201,7 @@ let items = [
       const self = this;
       let obj = FeedbackWidgetProvider(1196);
       if (obj.isModalSupported()) {
-        let tmpResult = tmp(1199);
+        let tmpResult = FeedbackWidgetProvider(1199);
         ({ isButtonVisible, isScreenshotButtonVisible, isVisible, backgroundOpacity } = self.state);
         obj = { inputRange: null, outputRange: null };
         obj[0] = [0, 1];
@@ -211,18 +212,18 @@ let items = [
         const children = self.props.children;
         if (isButtonVisible) {
           const _Object = Object;
-          tmpResult = tmp(1133);
-          isButtonVisible = obj3.createElement(tmp(1200).FeedbackButton, Object.assign({}, tmpResult.getFeedbackButtonOptions()));
+          tmpResult = FeedbackWidgetProvider(1133);
+          isButtonVisible = obj3.createElement(FeedbackWidgetProvider(1200).FeedbackButton, Object.assign({}, tmpResult.getFeedbackButtonOptions()));
         }
         if (isScreenshotButtonVisible) {
           const _Object2 = Object;
-          isScreenshotButtonVisible = obj3.createElement(tmp(1204).ScreenshotButton, Object.assign({}, tmp(1133).getScreenshotButtonOptions()));
-          const tmpResult1 = tmp(1133);
+          isScreenshotButtonVisible = obj3.createElement(FeedbackWidgetProvider(1204).ScreenshotButton, Object.assign({}, FeedbackWidgetProvider(1133).getScreenshotButtonOptions()));
+          const tmpResult1 = FeedbackWidgetProvider(1133);
         }
         let element = isVisible;
         if (isVisible) {
           obj = { style: null };
-          const items = [tmp(1202).modalWrapper, ];
+          const items = [FeedbackWidgetProvider(1202).modalWrapper, ];
           obj1 = { backgroundColor: null };
           obj1[0] = interpolateResult;
           items[1] = obj1;
@@ -232,11 +233,11 @@ let items = [
           obj2[3] = self._handleClose;
           obj3 = { style: null };
           ({ createElement, createElement: createElement2 } = obj3);
-          obj3[0] = tmp(1202).topSpacer;
+          obj3[0] = FeedbackWidgetProvider(1202).topSpacer;
           const element2 = createElement2(closure_13, obj3);
           const _Object3 = Object;
           const obj4 = { style: null };
-          const items1 = [tmp(1202).modalSheetContainer(theme), ];
+          const items1 = [FeedbackWidgetProvider(1202).modalSheetContainer(theme), ];
           const obj5 = { transform: null };
           const obj6 = { translateY: null };
           obj6[0] = self.state.panY;
@@ -249,15 +250,14 @@ let items = [
           const merged = Object.assign(obj4, self._panResponder.panHandlers);
           ({ createElement: createElement3, createElement: createElement4 } = obj3);
           const _Object4 = Object;
-          const tmpResult2 = tmp(1202);
+          const tmpResult2 = FeedbackWidgetProvider(1202);
           ({ _handleClose: obj17[0], _handleClose: obj17[1] } = self);
-          element = <RN.View style={null}><closure_10 visible={null} transparent animationType="none" onRequestClose={null} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(closure_12, obj7, createElement4(tmp(1205).FeedbackWidget, Object.assign({}, tmp(1133).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_10></RN.View>;
-          const obj8 = { onFormClose: null, onFormSubmitted: null };
-          const tmpResult3 = tmp(1133);
+          element = <RN.View style={null}><closure_10 visible={null} transparent animationType="none" onRequestClose={null} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(closure_12, obj7, createElement4(FeedbackWidgetProvider(1205).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(1133).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_10></RN.View>;
+          const tmpResult3 = FeedbackWidgetProvider(1133);
         }
         return <>{children}{isButtonVisible}{isScreenshotButtonVisible}{element}</>;
       } else {
-        const debug = tmp(817).debug;
+        const debug = FeedbackWidgetProvider(817).debug;
         debug.error("FeedbackWidget Modal is not supported in React Native < 0.71 with Fabric renderer.");
         return <>{self.props.children}</>;
       }

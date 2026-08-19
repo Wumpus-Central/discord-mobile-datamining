@@ -12,11 +12,9 @@ function addGestureBreadcrumb(message, event) {
     const _Object = Object;
     const keys = Object.keys(table);
     for (const item10018 of keys) {
-      let tmp7 = table;
       let tmp8 = table[item10018];
       let tmp9 = tmp8;
       if (tmp8 in event) {
-        let tmp10 = tmp8;
         obj[tmp9] = event[tmp9];
       }
       continue;
@@ -27,9 +25,8 @@ function addGestureBreadcrumb(message, event) {
   const debug = registerSpanErrorInstrumentation.debug;
   debug.log("[GestureTracing] " + obj.message);
 }
-let gesture = "gesture";
 const user = "user";
-gesture = "gesture";
+const gesture = "gesture";
 let closure_6 = { NUMBER_OF_POINTERS: "numberOfPointers", NUMBER_OF_TOUCHES: "numberOfTouches", FORCE: "force", FORCE_CHANGE: "forceChange", ROTATION: "rotation", ROTATION_CHANGE: "rotationChange", SCALE: "scale", SCALE_CHANGE: "scaleChange", DURATION: "duration", VELOCITY: "velocity", VELOCITY_X: "velocityX", VELOCITY_Y: "velocityY" };
 arg5.DEFAULT_BREADCRUMB_CATEGORY = "gesture";
 arg5.DEFAULT_BREADCRUMB_TYPE = "user";
@@ -42,28 +39,27 @@ arg5.sentryTraceGesture = function sentryTraceGesture(arg0, handlers) {
       if (arg0) {
         if (handlers.handlerName.length > 14) {
           let formatted = handlers.handlerName.substring(0, handlers.handlerName.length - 14).toLowerCase();
-          const str4 = handlers.handlerName;
           const str5 = handlers.handlerName.substring(0, handlers.handlerName.length - 14);
         } else {
           formatted = gesture;
         }
         const onBegin = handlers.handlers.onBegin;
         handlers.handlers.onBegin = (event) => {
-          let obj = callback(formatted[1]);
-          obj = { elementId: callback, op: "" + callback(formatted[2]).UI_ACTION + "." + formatted };
+          callback(formatted[1]);
+          let obj = { elementId: callback, op: "" + callback(formatted[2]).UI_ACTION + "." + formatted };
           const result = obj.startUserInteractionSpan(obj);
           if (result) {
-            const attr = result.setAttribute(tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(tmp2[3]).SPAN_ORIGIN_AUTO_INTERACTION);
+            const attr = result.setAttribute(callback(formatted[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, callback(formatted[3]).SPAN_ORIGIN_AUTO_INTERACTION);
           }
           obj = { event, name: formatted };
-          closure_1_5("Gesture " + callback + " begin.", obj);
+          addGestureBreadcrumb("Gesture " + callback + " begin.", obj);
           if (onBegin) {
             onBegin(event);
           }
         };
         const onEnd = handlers.handlers.onEnd;
         handlers.handlers.onEnd = (event) => {
-          closure_1_5("Gesture " + closure_0 + " end.", { event, name: formatted });
+          addGestureBreadcrumb("Gesture " + closure_0 + " end.", { event, name: formatted });
           if (onEnd) {
             tmp2(event);
           }

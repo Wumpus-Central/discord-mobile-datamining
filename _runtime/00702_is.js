@@ -1,6 +1,5 @@
 // _runtime/00702_is.js
 import noop from "00019_noop.js";
-import { checkIfSnapshotChanged } from "00703_checkIfSnapshotChanged.js";
 
 if (typeof Object.is === "function") {
   const _Object = Object;
@@ -16,7 +15,6 @@ if (typeof Object.is === "function") {
     }
     if (!tmp) {
       tmp = arg0 != arg0 && arg1 != arg1;
-      const tmp3 = arg0 != arg0 && arg1 != arg1;
     }
     return tmp;
   };
@@ -63,8 +61,8 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
           closure_0 = tmp;
           tmp3 = callback(tmp);
           if (undefined !== closure_3) {
-            if (closure_1_4.hasValue) {
-              const value = closure_1_4.value;
+            if (current.hasValue) {
+              const value = current.value;
               if (tmp4(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;
@@ -92,13 +90,14 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
             closure_0 = tmp;
             tmp10 = tmp6;
           }
+          tmp6 = closure_1;
         } else {
           callback = true;
           closure_0 = tmp;
           tmp3 = callback(tmp);
           if (undefined !== callback2) {
-            if (closure_1_4.hasValue) {
-              const value = closure_1_4.value;
+            if (current.hasValue) {
+              const value = current.value;
               if (callback2(value, tmp3)) {
                 closure_1 = value;
                 tmp3 = value;
@@ -113,7 +112,7 @@ export const useSyncExternalStoreWithSelector = (subscribe) => {
     items[1] = fn;
     return items;
   }, items);
-  syncExternalStore = _checkIfSnapshotChanged.useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
+  syncExternalStore = require("00703_checkIfSnapshotChanged.js").useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
   const items1 = [syncExternalStore];
   current(() => {
     current.hasValue = true;

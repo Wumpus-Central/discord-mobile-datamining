@@ -16,7 +16,6 @@ export default function setDefaultOptions(obj) {
   obj = {};
   const defaultOptions = getDefaultOptions.getDefaultOptions();
   for (const key10017 in defaultOptions) {
-    let tmp8 = key10017;
     let _Object = Object;
     let call = hasOwnProperty.call;
     if (typeof call === "unknown") {
@@ -33,7 +32,6 @@ export default function setDefaultOptions(obj) {
     continue;
   }
   for (const key10023 in arg0) {
-    let tmp9 = key10023;
     let _Object2 = Object;
     let call2 = hasOwnProperty2.call;
     if (typeof call2 === "unknown") {

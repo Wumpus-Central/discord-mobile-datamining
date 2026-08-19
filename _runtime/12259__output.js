@@ -1,13 +1,14 @@
 // _runtime/12259__output.js
-import $ZodRegistry from "metro/00041__classCallCheck.js";
+import "_classCallCheck";
 import _createClass from "metro/00042__createClass.js";
 
-$ZodRegistry = function $ZodRegistry(arg0, $ZodRegistry) {
-  $ZodRegistry(this, $ZodRegistry);
+export function $ZodRegistry() {
+  _classCallCheck(this, _classCallCheck);
   const weakMap = new WeakMap();
   this._map = weakMap;
   this._idmap = new Map();
-};
+}
+const _classCallCheck = $ZodRegistry;
 const items = [
   {
     key: "add",
@@ -110,5 +111,4 @@ export const registry = function registry() {
 };
 export const $output = Symbol("ZodOutput");
 export const $input = Symbol("ZodInput");
-export const $ZodRegistry = _moduleResult;
 export const globalRegistry = globalThis.__zod_globalRegistry;

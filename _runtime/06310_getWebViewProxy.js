@@ -1,6 +1,8 @@
 // _runtime/06310_getWebViewProxy.js
-const module = arg2;
+import nativeEventEmitterDefault from "06311_nativeEventEmitter.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.default = function getWebViewProxy(EMBEDDED_ACTIVITY_WEB_VIEW_KEY) {
-  return new module(6311)(EMBEDDED_ACTIVITY_WEB_VIEW_KEY);
+  return new nativeEventEmitterDefault(EMBEDDED_ACTIVITY_WEB_VIEW_KEY);
 };

@@ -22,7 +22,6 @@ arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
         let hasItem = host.includes(dsn.host);
         if (hasItem) {
           hasItem = /(^|&|\?)sentry_key=/.test(result.search);
-          const obj3 = /(^|&|\?)sentry_key=/;
         }
         tmp5 = hasItem;
       }

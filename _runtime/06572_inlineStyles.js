@@ -6,13 +6,11 @@ import _isNativeReflectConstruct from "06678__isNativeReflectConstruct.js";
 import _fetchText from "06680__fetchText.js";
 import RNSVGCircle from "06681_RNSVGCircle.js";
 
-for (const key10013 in require("module_6573")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("module_6573")[key10013];
+for (const key10013 in require("metro/06573__.js")) {
+  arg5[key10013] = require("metro/06573__.js")[key10013];
   continue;
 }
 for (const key10017 in require("Circle")) {
-  let tmp3 = key10017;
   arg5[key10017] = require("Circle")[key10017];
   continue;
 }

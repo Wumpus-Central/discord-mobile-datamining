@@ -9,7 +9,7 @@ export const NavigationBuilderContext = noopAll.createContext({
   onEmitEvent() {
 
   },
-  onOptionsChange() {
+  onOptionsChange(current) {
 
   },
   getIsStateEmitted() {

@@ -14,12 +14,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -39,8 +39,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+            tmp = new tmp((fn) => {
+              fn(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -54,13 +54,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -71,11 +71,11 @@ if (!fn) {
 }
 const asyncExpiringMap = new AsyncExpiringMap.AsyncExpiringMap({ ttl: 60000 });
 
-export const addTimeToInitialDisplayFallback = (arg0, arg1) => {
-  const result = asyncExpiringMap.set(arg0, arg1);
+export const addTimeToInitialDisplayFallback = (spanId, newScreenTimeToDisplay) => {
+  const result = asyncExpiringMap.set(spanId, newScreenTimeToDisplay);
 };
-export const getTimeToInitialDisplayFallback = (arg0) => {
-  const callback = arg0;
+export const getTimeToInitialDisplayFallback = (closure_1) => {
+  const callback = closure_1;
   return callback(undefined, undefined, undefined, function*() {
     if (c0 === 2) {
       c0 = 3;

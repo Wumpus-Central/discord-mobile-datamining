@@ -1,16 +1,16 @@
 // _runtime/07084_asyncGeneratorStep.js
-function asyncGeneratorStep(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
+function asyncGeneratorStep(arg0, fn, fn2) {
   try {
     const iter = arg0[arg5](arg6);
     const value = iter.value;
     if (iter.done) {
-      arg1(value);
+      fn(value);
     } else {
       const resolved = Promise.resolve(value);
       resolved.then(arg3, arg4);
     }
   } catch (tmp13) {
-    arg2(tmp13);
+    fn2(tmp13);
   }
 }
 

@@ -2,19 +2,6 @@
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let obj = {
-  attachReduxState: true,
-  actionTransformer(arg0) {
-    return arg0;
-  },
-  stateTransformer(arg0) {
-    let tmp = arg0;
-    if (!arg0) {
-      tmp = null;
-    }
-    return tmp;
-  }
-};
 arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
   obj = {};
   const merged = Object.assign(obj);
@@ -23,7 +10,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
     closure_0 = arg0;
     return (arg0, arg1) => {
       if (lib.attachReduxState) {
-        obj = obj(closure_2_1[0]);
+        obj = obj(dependencyMap[0]);
         const globalScope = obj.getGlobalScope();
         globalScope.addEventProcessor((type, attachments) => {
           try {
@@ -56,14 +43,14 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
         const currentScope = obj.getCurrentScope();
         const actionTransformerResult = lib.actionTransformer(arg1);
         if (null != actionTransformerResult) {
-          let tmp2Result = tmp2(tmp3[0]);
+          let tmp2Result = lib(closure_2_1[0]);
           obj = { category: "redux.action", data: null, type: "info" };
           obj[1] = actionTransformerResult;
           tmp2Result.addBreadcrumb(obj);
         }
         const stateTransformerResult = lib.stateTransformer(tmp);
         if (null != stateTransformerResult) {
-          tmp2Result = tmp2(tmp3[0]);
+          tmp2Result = lib(closure_2_1[0]);
           const client = tmp2Result.getClient();
           let options;
           if (client != null) {
@@ -80,13 +67,13 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
           obj1 = { type: "redux", value: null };
           obj1[1] = stateTransformerResult;
           obj[0] = obj1;
-          const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
+          const result = lib(closure_2_1[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
           currentScope.setContext("state", obj);
-          const tmp2Result1 = tmp2(tmp3[0]);
+          const tmp2Result1 = lib(closure_2_1[0]);
         } else {
           currentScope.setContext("state", null);
         }
-        const configureScopeWithState = obj3.configureScopeWithState;
+        const configureScopeWithState = lib.configureScopeWithState;
         if (typeof configureScopeWithState === "function") {
           const result1 = configureScopeWithState(currentScope, tmp);
         }
@@ -102,14 +89,14 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
               const currentScope = obj.getCurrentScope();
               const actionTransformerResult = lib.actionTransformer(arg1);
               if (null != actionTransformerResult) {
-                let tmp2Result = tmp2(tmp3[0]);
+                let tmp2Result = lib(closure_2_1[0]);
                 obj = { category: "redux.action", data: null, type: "info" };
                 obj[1] = actionTransformerResult;
                 tmp2Result.addBreadcrumb(obj);
               }
               const stateTransformerResult = lib.stateTransformer(tmp);
               if (null != stateTransformerResult) {
-                tmp2Result = tmp2(tmp3[0]);
+                tmp2Result = lib(closure_2_1[0]);
                 const client = tmp2Result.getClient();
                 let options;
                 if (client != null) {
@@ -126,13 +113,13 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 obj1 = { type: "redux", value: null };
                 obj1[1] = stateTransformerResult;
                 obj[0] = obj1;
-                const result = tmp2(tmp3[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
+                const result = lib(closure_2_1[0]).addNonEnumerableProperty(obj, "__sentry_override_normalization_depth__", 3 + num);
                 currentScope.setContext("state", obj);
-                const tmp2Result1 = tmp2(tmp3[0]);
+                const tmp2Result1 = lib(closure_2_1[0]);
               } else {
                 currentScope.setContext("state", null);
               }
-              const configureScopeWithState = obj3.configureScopeWithState;
+              const configureScopeWithState = lib.configureScopeWithState;
               if (typeof configureScopeWithState === "function") {
                 const result1 = configureScopeWithState(currentScope, tmp);
               }

@@ -70,8 +70,8 @@ arg5.useCommonVariables = function useCommonVariables(initProps) {
   fn3.__initData = sharedValue;
   const fn4 = function l(shouldComputed) {
     if (shouldComputed.shouldComputed) {
-      let obj = dataLength(loop[3]);
-      obj = { handlerOffset: null, prevSize: null, size: null };
+      dataLength(loop[3]);
+      const obj = { handlerOffset: null, prevSize: null, size: null };
       obj[0] = defaultScrollOffsetValue.value;
       obj[1] = tmp;
       obj[2] = tmp2;

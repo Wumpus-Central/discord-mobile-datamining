@@ -12,7 +12,6 @@ let fn = function t() {
   let year = hooks;
   let s = function extend(arg0, obj) {
     for (const key10005 in arg1) {
-      let tmp4 = key10005;
       let _Object = Object;
       let call3 = hasOwnProperty3.call;
       if (typeof call3 === "unknown") {
@@ -58,7 +57,7 @@ let fn = function t() {
         _isValid._pf = obj;
       }
       const _pf = _isValid._pf;
-      const call = closure_1.call;
+      const call = lib.call;
       const parsedDateParts = _pf.parsedDateParts;
       const fn = (arg0) => null != arg0;
       const _isNaN = isNaN;
@@ -94,7 +93,6 @@ let fn = function t() {
         let tmp6 = !meridiem;
         if (meridiem) {
           tmp6 = _pf.meridiem && tmp2;
-          const tmp7 = _pf.meridiem && tmp2;
         }
         tmp5 = tmp6;
       }
@@ -120,63 +118,55 @@ let fn = function t() {
         }
       }
       _isValid._isValid = tmp8;
-      const tmp = closure_1;
-      tmp2 = typeof call === "unknown" ? closure_1(fn) : call(parsedDateParts, fn);
+      tmp2 = typeof call === "unknown" ? lib(fn) : call(parsedDateParts, fn);
     }
     return _isValid._isValid;
   }
-  function copyConfig(arg0, self) {
-    let arr;
-    if (undefined !== self._isAMomentObject) {
-      arg0._isAMomentObject = self._isAMomentObject;
+  function copyConfig(arg0, preparseResult) {
+    if (undefined !== preparseResult._isAMomentObject) {
+      arg0._isAMomentObject = preparseResult._isAMomentObject;
     }
-    if (undefined !== self._i) {
-      arg0._i = self._i;
+    if (undefined !== preparseResult._i) {
+      arg0._i = preparseResult._i;
     }
-    if (undefined !== self._f) {
-      arg0._f = self._f;
+    if (undefined !== preparseResult._f) {
+      arg0._f = preparseResult._f;
     }
-    if (undefined !== self._l) {
-      arg0._l = self._l;
+    if (undefined !== preparseResult._l) {
+      arg0._l = preparseResult._l;
     }
-    if (undefined !== self._strict) {
-      arg0._strict = self._strict;
+    if (undefined !== preparseResult._strict) {
+      arg0._strict = preparseResult._strict;
     }
-    if (undefined !== self._tzm) {
-      arg0._tzm = self._tzm;
+    if (undefined !== preparseResult._tzm) {
+      arg0._tzm = preparseResult._tzm;
     }
-    if (undefined !== self._isUTC) {
-      arg0._isUTC = self._isUTC;
+    if (undefined !== preparseResult._isUTC) {
+      arg0._isUTC = preparseResult._isUTC;
     }
-    if (undefined !== self._offset) {
-      arg0._offset = self._offset;
+    if (undefined !== preparseResult._offset) {
+      arg0._offset = preparseResult._offset;
     }
-    if (undefined !== self._pf) {
-      if (null == self._pf) {
+    if (undefined !== preparseResult._pf) {
+      if (null == preparseResult._pf) {
         obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj[1] = [];
         obj[2] = [];
         obj[10] = [];
-        self._pf = obj;
+        preparseResult._pf = obj;
       }
-      arg0._pf = self._pf;
+      arg0._pf = preparseResult._pf;
     }
-    if (undefined !== self._locale) {
-      arg0._locale = self._locale;
+    if (undefined !== preparseResult._locale) {
+      arg0._locale = preparseResult._locale;
     }
     if (items.length > 0) {
-      let num2 = 0;
-      if (0 < items.length) {
-        do {
-          let tmp2 = items[num2];
-          let tmp3 = self[tmp2];
-          let tmp4 = num2;
-          arr = items;
-          if (undefined !== tmp3) {
-            arg0[tmp2] = tmp3;
-          }
-          num2 = num2 + 1;
-        } while (num2 < arr.length);
+      for (let num2 = 0; num2 < items.length; num2 = num2 + 1) {
+        let tmp2 = items[num2];
+        let tmp3 = preparseResult[tmp2];
+        if (undefined !== tmp3) {
+          arg0[tmp2] = tmp3;
+        }
       }
     }
     return arg0;
@@ -220,8 +210,6 @@ let fn = function t() {
     const absolute = Math.abs(arg0.length - arg1.length);
     if (0 < bound) {
       while (true) {
-        let tmp4 = num;
-        let tmp5 = num2;
         let tmp6 = arg2;
         if (arg2) {
           tmp6 = arg0[num2] !== arg1[num2];
@@ -235,7 +223,6 @@ let fn = function t() {
               let _isFinite = isFinite;
               isFiniteResult = isFinite(tmp7);
             }
-            let num4 = 0;
             if (isFiniteResult) {
               break;
             } else {
@@ -245,19 +232,15 @@ let fn = function t() {
                 let _isFinite2 = isFinite;
                 isFiniteResult1 = isFinite(tmp12);
               }
-              let num5 = 0;
               if (!isFiniteResult1) {
                 flag = false;
+              } else if (tmp12 < 0) {
+                let _Math4 = Math;
+                let tmp15 = Math.ceil(tmp12) || 0;
+                let rounded = tmp15;
               } else {
-                if (tmp12 < 0) {
-                  let _Math4 = Math;
-                  let tmp15 = Math.ceil(tmp12) || 0;
-                  let rounded = tmp15;
-                } else {
-                  let _Math3 = Math;
-                  rounded = Math.floor(tmp12);
-                }
-                let tmp16 = rounded;
+                let _Math3 = Math;
+                rounded = Math.floor(tmp12);
               }
             }
           }
@@ -286,7 +269,6 @@ let fn = function t() {
     obj = {};
     s(obj, _config);
     for (const key10011 in arg1) {
-      let tmp25 = key10011;
       let _Object5 = Object;
       let call5 = hasOwnProperty2.call;
       if (typeof call5 === "unknown") {
@@ -306,7 +288,6 @@ let fn = function t() {
             if (!tmp10) {
               if (tmp10) {
                 obj[key10011] = {};
-                let tmp13 = s;
                 let tmp14 = s(obj[key10011], arg0[key10011]);
                 let tmp15 = s(obj[key10011], arg1[key10011]);
                 continue;
@@ -319,7 +300,6 @@ let fn = function t() {
               } else {
                 toString2Result = call2(tmp9);
               }
-              let tmp12 = "[object Object]" === toString2Result;
             }
           }
           if (null != arg1[key10011]) {
@@ -338,13 +318,11 @@ let fn = function t() {
           } else {
             str = call(tmp5);
           }
-          let tmp8 = "[object Object]" === str;
         }
       }
       continue;
     }
     for (const key10041 in arg0) {
-      let tmp26 = key10041;
       let _Object6 = Object;
       let call6 = hasOwnProperty3.call;
       if (typeof call6 === "unknown") {
@@ -366,13 +344,11 @@ let fn = function t() {
             } else {
               toString3Result = call4(tmp19);
             }
-            let tmp22 = "[object Object]" === toString3Result;
           }
         }
         if (!hasOwnProperty3Result) {
           continue;
         } else {
-          let tmp23 = s;
           obj = {};
           let tmp24 = s(obj, obj[key10041]);
           obj[key10041] = obj;
@@ -387,7 +363,6 @@ let fn = function t() {
         } else {
           hasOwnPropertyResult = call3(arg1, key10041);
         }
-        let tmp18 = !hasOwnPropertyResult;
       }
     }
     return obj;
@@ -404,14 +379,13 @@ let fn = function t() {
   function formatMoment(self, Z) {
     const localeDataResult = self.localeData();
     if (isValidResult) {
-      let str2 = localeDataResult;
       regex.lastIndex = 0;
       function replaceLongDateFormatTokens(arg0) {
         return closure_0.longDateFormat(arg0) || arg0;
       }
       let num2 = 5;
       let str = Z;
-      str2 = Z;
+      let str2 = Z;
       if (regex.test(Z)) {
         const replaced = str.replace(regex, replaceLongDateFormatTokens);
         regex.lastIndex = 0;
@@ -421,19 +395,16 @@ let fn = function t() {
           num2 = diff;
           str = replaced;
           str2 = replaced;
-          if (!obj2.test(replaced)) {
+          if (!regex.test(replaced)) {
             break;
           }
         }
-        obj2 = regex;
       }
       let fn = table[str2];
       if (!fn) {
         const match = str2.match(closure_16);
-        const length = match.length;
         for (let num4 = 0; num4 < length; num4 = num4 + 1) {
           let str4 = match[num4];
-          let tmp9 = num4;
           if (obj[match[num4]]) {
             match[num4] = obj[str4];
           } else {
@@ -459,10 +430,8 @@ let fn = function t() {
                 let tmp8 = str2;
                 let tmp9 = typeof call2 === "unknown" ? tmp6(tmp8) : call2(arg0, tmp8);
               } else {
-                let tmp7 = tmp6;
                 str = `${tmp6}`;
                 num = num + 1;
-                let tmp10 = length;
                 str2 = str;
               }
             }
@@ -472,9 +441,10 @@ let fn = function t() {
           }
           return str2;
         };
+        length = match.length;
       }
       table[str2] = fn;
-      let invalidDateResult = tmp7[str2](self);
+      let invalidDateResult = table[str2](self);
     } else {
       invalidDateResult = localeDataResult.invalidDate();
     }
@@ -550,7 +520,7 @@ let fn = function t() {
       _d["set" + str2 + closure_0](arg2);
     }
   }
-  function handleStrictParse(toLocaleLowerCase) {
+  function handleStrictParse(toLocaleLowerCase, arg1, arg2) {
     let tmp = this;
     const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
     if (!this._monthsParse) {
@@ -560,9 +530,6 @@ let fn = function t() {
       let num3 = 0;
       do {
         items = [2000, num3];
-        let tmp3 = createLocalOrUTC;
-        let num4 = 0;
-        let tmp4 = items;
         let flag = true;
         obj = createLocalOrUTC(items, undefined, undefined, undefined, true);
         let utcResult = obj.utc();
@@ -575,52 +542,45 @@ let fn = function t() {
     }
     if (arg2) {
       if ("MMM" === arg1) {
-        const call6 = closure_35.call;
+        const call6 = callback.call;
         const _shortMonthsParse3 = tmp._shortMonthsParse;
-        const tmp18 = typeof call6 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call6(_shortMonthsParse3, toLocaleLowerCaseResult);
+        const tmp18 = typeof call6 === "unknown" ? callback(toLocaleLowerCaseResult) : call6(_shortMonthsParse3, toLocaleLowerCaseResult);
         tmp = null;
         if (-1 !== tmp18) {
           tmp = tmp18;
         }
-        let tmp16 = tmp;
-        const tmp17 = closure_35;
       } else {
-        const call5 = closure_35.call;
+        const call5 = callback.call;
         const _longMonthsParse3 = tmp._longMonthsParse;
-        const tmp15 = typeof call5 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call5(_longMonthsParse3, toLocaleLowerCaseResult);
-        tmp16 = null;
-        if (-1 !== tmp15) {
-          tmp16 = tmp15;
-        }
-        const tmp14 = closure_35;
+        const tmp15 = typeof call5 === "unknown" ? callback(toLocaleLowerCaseResult) : call5(_longMonthsParse3, toLocaleLowerCaseResult);
       }
     } else {
       if ("MMM" === arg1) {
-        const call3 = closure_35.call;
+        const call3 = callback.call;
         const _shortMonthsParse2 = tmp._shortMonthsParse;
-        let tmp11 = typeof call3 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
+        let tmp11 = typeof call3 === "unknown" ? callback(toLocaleLowerCaseResult) : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
         if (-1 !== tmp11) {
           let tmp13 = tmp11;
         } else {
-          const call4 = tmp10.call;
+          const call4 = callback.call;
           const _longMonthsParse2 = tmp._longMonthsParse;
-          const tmp12 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
-          tmp11 = tmp12;
+          tmp11 = typeof call4 === "unknown" ? callback(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
           tmp13 = null;
+          const tmp12 = typeof call4 === "unknown" ? callback(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
         }
         let tmp9 = tmp13;
       } else {
-        const call = closure_35.call;
+        const call = callback.call;
         const _longMonthsParse = tmp._longMonthsParse;
-        let tmp7 = typeof call === "unknown" ? tmp6(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
+        let tmp7 = typeof call === "unknown" ? callback(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
         if (-1 !== tmp7) {
           tmp9 = tmp7;
         } else {
-          const call2 = tmp6.call;
+          const call2 = callback.call;
           const _shortMonthsParse = tmp._shortMonthsParse;
-          const tmp8 = typeof call2 === "unknown" ? tmp6(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
-          tmp7 = tmp8;
+          tmp7 = typeof call2 === "unknown" ? callback(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
           tmp9 = null;
+          const tmp8 = typeof call2 === "unknown" ? callback(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
         }
       }
       return tmp9;
@@ -714,9 +674,6 @@ let fn = function t() {
     let num = 0;
     do {
       let items3 = [2000, num];
-      let tmp = createLocalOrUTC;
-      let num2 = 0;
-      let tmp2 = items3;
       let flag = true;
       obj = createLocalOrUTC(items3, undefined, undefined, undefined, true);
       let utcResult = obj.utc();
@@ -790,13 +747,13 @@ let fn = function t() {
     }
     return date;
   }
-  function dayOfYearFromWeeks(year, arg1, isoWeekdayResult, dow, doy) {
+  function dayOfYearFromWeeks(GG, arg1, isoWeekdayResult, dow, doy) {
     const diff = 7 + dow - doy;
     const diff1 = arg1 - 1;
     const diff2 = 7 + isoWeekdayResult - dow;
-    const sum = 1 + 7 * diff1 + diff2 % 7 + (-7 + createUTCDate(year, 0, diff).getUTCDay() - dow % 7 + diff - 1);
+    const sum = 1 + 7 * diff1 + diff2 % 7 + (-7 + createUTCDate(GG, 0, diff).getUTCDay() - dow % 7 + diff - 1);
     if (sum <= 0) {
-      const diff3 = year - 1;
+      const diff3 = GG - 1;
       const result = diff3 % 4;
       let tmp11 = result === 0;
       if (result === 0) {
@@ -812,29 +769,30 @@ let fn = function t() {
       let dayOfYear = num10 + sum;
       year = diff3;
     } else {
-      const result1 = year % 4;
+      const result1 = GG % 4;
       let tmp5 = result1 === 0;
       if (result1 === 0) {
-        tmp5 = year % 100 !== 0;
+        tmp5 = GG % 100 !== 0;
       }
       if (!tmp5) {
-        tmp5 = year % 400 === 0;
+        tmp5 = GG % 400 === 0;
       }
       let num3 = 365;
       let num4 = 365;
       if (tmp5) {
         num4 = 366;
       }
+      year = GG;
       dayOfYear = sum;
       if (num4 < sum) {
-        const result2 = year % 4;
+        const result2 = GG % 4;
         let tmp8 = result2 === 0;
-        const sum2 = year + 1;
+        const sum2 = GG + 1;
         if (result2 === 0) {
-          tmp8 = year % 100 !== 0;
+          tmp8 = GG % 100 !== 0;
         }
         if (!tmp8) {
-          tmp8 = year % 400 === 0;
+          tmp8 = GG % 400 === 0;
         }
         if (tmp8) {
           num3 = 366;
@@ -853,31 +811,28 @@ let fn = function t() {
       const diff2 = self.year() - 1;
       let week = sum + weeksInYear(diff2, dow, doy);
       year = diff2;
+    } else if (sum > weeksInYear(self.year(), dow, doy)) {
+      week = sum - weeksInYear(self.year(), dow, doy);
+      year = self.year() + 1;
     } else {
-      if (sum > weeksInYear(self.year(), dow, doy)) {
-        week = sum - tmp4(self.year(), dow, doy);
-        year = self.year() + 1;
-      } else {
-        year = self.year();
-        week = sum;
-      }
-      tmp4 = weeksInYear;
+      year = self.year();
+      week = sum;
     }
     return { week, year };
   }
-  function weeksInYear(diff2, dow, doy) {
+  function weeksInYear(GG, dow, doy) {
     const diff = 7 + dow - doy;
     const diff1 = 7 + dow - doy;
-    diff2 = 7 + createUTCDate(diff2, 0, diff).getUTCDay() - dow;
-    obj = createUTCDate(diff2, 0, diff);
-    const result = diff2 % 4;
+    const diff2 = 7 + createUTCDate(GG, 0, diff).getUTCDay() - dow;
+    obj = createUTCDate(GG, 0, diff);
+    const result = GG % 4;
     let tmp6 = result === 0;
-    const diff3 = 7 + createUTCDate(diff2 + 1, 0, diff1).getUTCDay() - dow;
+    const diff3 = 7 + createUTCDate(GG + 1, 0, diff1).getUTCDay() - dow;
     if (result === 0) {
-      tmp6 = diff2 % 100 !== 0;
+      tmp6 = GG % 100 !== 0;
     }
     if (!tmp6) {
-      tmp6 = diff2 % 400 === 0;
+      tmp6 = GG % 400 === 0;
     }
     let num3 = 365;
     if (tmp6) {
@@ -885,7 +840,7 @@ let fn = function t() {
     }
     return (num3 - (-diff2 % 7 + diff - 1) + (-diff3 % 7 + diff1 - 1)) / 7;
   }
-  function handleStrictParse$1(toLocaleLowerCase) {
+  function handleStrictParse$1(toLocaleLowerCase, arg1, arg2) {
     let tmp = this;
     const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
     if (!this._weekdaysParse) {
@@ -894,8 +849,6 @@ let fn = function t() {
       tmp._minWeekdaysParse = [];
       let num3 = 0;
       do {
-        let tmp3 = createLocalOrUTC;
-        let num4 = 0;
         let flag = true;
         obj = createLocalOrUTC([2000, 1], undefined, undefined, undefined, true);
         let utcResult = obj.utc();
@@ -911,89 +864,76 @@ let fn = function t() {
     }
     if (arg2) {
       if ("dddd" === arg1) {
-        const call12 = closure_35.call;
+        const call12 = callback.call;
         const _weekdaysParse4 = tmp._weekdaysParse;
-        const tmp27 = typeof call12 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call12(_weekdaysParse4, toLocaleLowerCaseResult);
+        const tmp27 = typeof call12 === "unknown" ? callback(toLocaleLowerCaseResult) : call12(_weekdaysParse4, toLocaleLowerCaseResult);
         tmp = null;
         if (-1 !== tmp27) {
           tmp = tmp27;
         }
-        let tmp22 = tmp;
-        const tmp26 = closure_35;
       } else if ("ddd" === arg1) {
-        const call11 = closure_35.call;
+        const call11 = callback.call;
         const _shortWeekdaysParse4 = tmp._shortWeekdaysParse;
-        const tmp24 = typeof call11 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call11(_shortWeekdaysParse4, toLocaleLowerCaseResult);
-        let tmp25 = null;
-        if (-1 !== tmp24) {
-          tmp25 = tmp24;
-        }
-        tmp22 = tmp25;
-        const tmp23 = closure_35;
+        const tmp24 = typeof call11 === "unknown" ? callback(toLocaleLowerCaseResult) : call11(_shortWeekdaysParse4, toLocaleLowerCaseResult);
       } else {
-        const call10 = closure_35.call;
+        const call10 = callback.call;
         const _minWeekdaysParse4 = tmp._minWeekdaysParse;
-        const tmp21 = typeof call10 === "unknown" ? closure_35(toLocaleLowerCaseResult) : call10(_minWeekdaysParse4, toLocaleLowerCaseResult);
-        tmp22 = null;
-        if (-1 !== tmp21) {
-          tmp22 = tmp21;
-        }
-        const tmp20 = closure_35;
+        const tmp21 = typeof call10 === "unknown" ? callback(toLocaleLowerCaseResult) : call10(_minWeekdaysParse4, toLocaleLowerCaseResult);
       }
     } else {
       if ("dddd" === arg1) {
-        const call7 = closure_35.call;
+        const call7 = callback.call;
         const _weekdaysParse3 = tmp._weekdaysParse;
-        let tmp16 = typeof call7 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
+        let tmp16 = typeof call7 === "unknown" ? callback(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
         if (-1 === tmp16) {
-          const call8 = tmp15.call;
+          const call8 = callback.call;
           const _shortWeekdaysParse3 = tmp._shortWeekdaysParse;
-          const tmp17 = typeof call8 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
+          const tmp17 = typeof call8 === "unknown" ? callback(toLocaleLowerCaseResult) : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
           tmp16 = tmp17;
           if (-1 === tmp17) {
-            const call9 = tmp15.call;
+            const call9 = callback.call;
             const _minWeekdaysParse3 = tmp._minWeekdaysParse;
-            const tmp18 = typeof call9 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
-            tmp16 = tmp18;
+            tmp16 = typeof call9 === "unknown" ? callback(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
             let tmp19 = null;
+            const tmp18 = typeof call9 === "unknown" ? callback(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
           }
           let tmp9 = tmp19;
         }
         tmp19 = tmp16;
       } else if ("ddd" === arg1) {
-        const call4 = closure_35.call;
+        const call4 = callback.call;
         const _shortWeekdaysParse2 = tmp._shortWeekdaysParse;
-        let tmp11 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
+        let tmp11 = typeof call4 === "unknown" ? callback(toLocaleLowerCaseResult) : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
         if (-1 === tmp11) {
-          const call5 = tmp10.call;
+          const call5 = callback.call;
           const _weekdaysParse2 = tmp._weekdaysParse;
-          const tmp12 = typeof call5 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call5(_weekdaysParse2, toLocaleLowerCaseResult);
+          const tmp12 = typeof call5 === "unknown" ? callback(toLocaleLowerCaseResult) : call5(_weekdaysParse2, toLocaleLowerCaseResult);
           tmp11 = tmp12;
           if (-1 === tmp12) {
-            const call6 = tmp10.call;
+            const call6 = callback.call;
             const _minWeekdaysParse2 = tmp._minWeekdaysParse;
-            const tmp13 = typeof call6 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
-            tmp11 = tmp13;
+            tmp11 = typeof call6 === "unknown" ? callback(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
             let tmp14 = null;
+            const tmp13 = typeof call6 === "unknown" ? callback(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
           }
           tmp9 = tmp14;
         }
         tmp14 = tmp11;
       } else {
-        const call = closure_35.call;
+        const call = callback.call;
         const _minWeekdaysParse = tmp._minWeekdaysParse;
-        let tmp6 = typeof call === "unknown" ? tmp5(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
+        let tmp6 = typeof call === "unknown" ? callback(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
         if (-1 === tmp6) {
-          const call2 = tmp5.call;
+          const call2 = callback.call;
           const _weekdaysParse = tmp._weekdaysParse;
-          const tmp7 = typeof call2 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
+          const tmp7 = typeof call2 === "unknown" ? callback(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
           tmp6 = tmp7;
           if (-1 === tmp7) {
-            const call3 = tmp5.call;
+            const call3 = callback.call;
             const _shortWeekdaysParse = tmp._shortWeekdaysParse;
-            const tmp8 = typeof call3 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
-            tmp6 = tmp8;
+            tmp6 = typeof call3 === "unknown" ? callback(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
             tmp9 = null;
+            const tmp8 = typeof call3 === "unknown" ? callback(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
           }
         }
         tmp9 = tmp6;
@@ -1009,8 +949,6 @@ let fn = function t() {
     const items3 = [];
     let num = 0;
     do {
-      let tmp = createLocalOrUTC;
-      let num2 = 0;
       let flag = true;
       obj = createLocalOrUTC([2000, 1], undefined, undefined, undefined, true);
       let utcResult = obj.utc();
@@ -1058,9 +996,9 @@ let fn = function t() {
   }
   function loadLocale(_abbr2) {
     if (!dependencyMap3[_abbr2]) {
-      if (undefined !== closure_1) {
-        if (tmp2) {
-          if (tmp2.exports) {
+      if (undefined !== lib) {
+        if (lib) {
+          if (lib.exports) {
             try {
               (() => {
                 error = new Error("Dynamic require defined at line 1838; not supported by Metro");
@@ -1110,10 +1048,10 @@ let fn = function t() {
       parentLocale.abbr = bg;
       if (null != dependencyMap3[bg]) {
         if (null != year.deprecationHandler) {
-          obj2.deprecationHandler("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
+          year.deprecationHandler("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
         }
         if (!defineLocaleOverride.defineLocaleOverride) {
-          let warn = false === obj2.suppressDeprecationWarnings;
+          let warn = false === year.suppressDeprecationWarnings;
           if (warn) {
             const _console = console;
             warn = typeof console !== "undefined";
@@ -1128,17 +1066,17 @@ let fn = function t() {
           }
           tmp10.defineLocaleOverride = true;
         }
-        _config = tmp4[bg]._config;
+        _config = dependencyMap3[bg]._config;
       } else if (null != parentLocale.parentLocale) {
-        if (null != tmp4[parentLocale.parentLocale]) {
-          _config = tmp4[parentLocale.parentLocale]._config;
+        if (null != dependencyMap3[parentLocale.parentLocale]) {
+          _config = dependencyMap3[parentLocale.parentLocale]._config;
         } else {
           const tmp6 = loadLocale(parentLocale.parentLocale);
           if (null == tmp6) {
             if (!dependencyMap4[parentLocale.parentLocale]) {
-              tmp7[parentLocale.parentLocale] = [];
+              dependencyMap4[parentLocale.parentLocale] = [];
             }
-            let arr = tmp7[parentLocale.parentLocale];
+            let arr = dependencyMap4[parentLocale.parentLocale];
             obj = { name: null, config: null };
             obj[0] = bg;
             obj[1] = parentLocale;
@@ -1153,10 +1091,9 @@ let fn = function t() {
       const result = obj.set(mergeConfigs(_config, parentLocale));
       dependencyMap3[bg] = obj;
       if (dependencyMap4[bg]) {
-        const item = dependencyMap4[bg].forEach((name) => {
-          callback(name.name, name.config);
+        const item = dependencyMap4[bg].forEach((item, index) => {
+          callback(item.name, item.config);
         });
-        const arr2 = dependencyMap4[bg];
       }
       if (bg) {
         const tmp21 = getLocale(bg);
@@ -1211,7 +1148,6 @@ let fn = function t() {
         if (0 < arr.length) {
           while (true) {
             let str4 = arr[num4];
-            let tmp8 = num4;
             let str5 = str4;
             if (str4) {
               let str6 = str4.toLowerCase();
@@ -1234,16 +1170,9 @@ let fn = function t() {
               num4 = sum;
               break;
             } else {
-              let tmp11 = loadLocale;
               let substr = parts.slice(0, length);
               let tmp12 = loadLocale(substr.join("-"));
-              let tmp13 = length;
               while (!tmp12) {
-                if (parts1) {
-                  if (parts1.length >= length) {
-                    let tmp14 = compareArrays;
-                  }
-                }
                 length = length - 1;
               }
             }
@@ -1262,24 +1191,24 @@ let fn = function t() {
       return closure_56;
     }
   }
-  function checkOverflow(_a) {
-    _a = _a._a;
+  function checkOverflow(preparseResult) {
+    const _a = preparseResult._a;
     let tmp = _a;
     if (_a) {
-      if (null == _a._pf) {
+      if (null == preparseResult._pf) {
         obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj[1] = [];
         obj[2] = [];
         obj[10] = [];
-        _a._pf = obj;
+        preparseResult._pf = obj;
       }
-      tmp = -2 === _a._pf.overflow;
+      tmp = -2 === preparseResult._pf.overflow;
     }
     if (tmp) {
       let tmp4 = c27;
       if (_a[c27] >= 0) {
-        tmp4 = tmp3;
-        if (_a[tmp3] <= 11) {
+        tmp4 = c27;
+        if (_a[c27] <= 11) {
           let tmp11 = c28;
           if (_a[c28] >= 1) {
             const _isNaN2 = isNaN;
@@ -1309,23 +1238,23 @@ let fn = function t() {
                 }
               }
             }
-            tmp11 = tmp24;
-            if (_a[tmp24] <= num3) {
+            tmp11 = c28;
+            if (_a[c28] <= num3) {
               let tmp13 = c29;
               if (_a[c29] >= 0) {
-                tmp13 = tmp29;
-                if (_a[tmp29] <= 24) {
-                  if (24 !== _a[tmp29]) {
+                tmp13 = c29;
+                if (_a[c29] <= 24) {
+                  if (24 !== _a[c29]) {
                     let tmp16 = c30;
                     if (_a[c30] >= 0) {
-                      tmp16 = tmp15;
-                      if (_a[tmp15] <= 59) {
+                      tmp16 = c30;
+                      if (_a[c30] <= 59) {
                         let tmp18 = c31;
                         if (_a[c31] >= 0) {
-                          tmp18 = tmp17;
-                          if (_a[tmp17] <= 59) {
+                          tmp18 = c31;
+                          if (_a[c31] <= 59) {
                             if (_a[c32] < 0) {
-                              let num14 = tmp19;
+                              let num14 = c32;
                             } else {
                               num14 = -1;
                             }
@@ -1337,11 +1266,11 @@ let fn = function t() {
                     }
                     tmp13 = tmp16;
                   } else {
-                    tmp13 = tmp29;
+                    tmp13 = c29;
                     if (0 === _a[c30]) {
-                      tmp13 = tmp29;
+                      tmp13 = c29;
                       if (0 === _a[c31]) {
-                        tmp13 = tmp29;
+                        tmp13 = c29;
                       }
                     }
                   }
@@ -1353,14 +1282,14 @@ let fn = function t() {
           tmp4 = tmp11;
         }
       }
-      if (null == _a._pf) {
+      if (null == preparseResult._pf) {
         obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj[1] = [];
         obj[2] = [];
         obj[10] = [];
-        _a._pf = obj;
+        preparseResult._pf = obj;
       }
-      let _overflowDayOfYear = _a._pf._overflowDayOfYear;
+      let _overflowDayOfYear = preparseResult._pf._overflowDayOfYear;
       if (_overflowDayOfYear) {
         let tmp22 = tmp4 < c26;
         if (!tmp22) {
@@ -1371,44 +1300,44 @@ let fn = function t() {
       if (_overflowDayOfYear) {
         tmp4 = c28;
       }
-      if (null == _a._pf) {
+      if (null == preparseResult._pf) {
         obj = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj[1] = [];
         obj[2] = [];
         obj[10] = [];
-        _a._pf = obj;
+        preparseResult._pf = obj;
       }
-      let _overflowWeeks = _a._pf._overflowWeeks;
+      let _overflowWeeks = preparseResult._pf._overflowWeeks;
       if (_overflowWeeks) {
         _overflowWeeks = -1 === tmp4;
       }
       if (_overflowWeeks) {
         tmp4 = c33;
       }
-      if (null == _a._pf) {
+      if (null == preparseResult._pf) {
         obj1 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj1[1] = [];
         obj1[2] = [];
         obj1[10] = [];
-        _a._pf = obj1;
+        preparseResult._pf = obj1;
       }
-      let _overflowWeekday = _a._pf._overflowWeekday;
+      let _overflowWeekday = preparseResult._pf._overflowWeekday;
       if (_overflowWeekday) {
         _overflowWeekday = -1 === tmp4;
       }
       if (_overflowWeekday) {
         tmp4 = c34;
       }
-      if (null == _a._pf) {
+      if (null == preparseResult._pf) {
         const obj2 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
         obj2[1] = [];
         obj2[2] = [];
         obj2[10] = [];
-        _a._pf = obj2;
+        preparseResult._pf = obj2;
       }
-      _a._pf.overflow = tmp4;
+      preparseResult._pf.overflow = tmp4;
     }
-    return _a;
+    return preparseResult;
   }
   function configFromArray(_d) {
     if (!_d._d) {
@@ -1458,7 +1387,7 @@ let fn = function t() {
                 if (!tmp18) {
                   tmp18 = d > 6;
                 }
-                let tmp12 = tmp54;
+                let tmp12 = c26;
                 let num = doy;
                 let num2 = dow;
                 let tmp13 = d;
@@ -1466,7 +1395,7 @@ let fn = function t() {
                 let tmp15 = gg;
                 if (tmp18) {
                   let flag = true;
-                  tmp12 = tmp54;
+                  tmp12 = c26;
                   num = doy;
                   num2 = dow;
                   tmp13 = d;
@@ -1474,7 +1403,7 @@ let fn = function t() {
                   tmp15 = gg;
                 }
               } else {
-                tmp12 = tmp54;
+                tmp12 = c26;
                 num = doy;
                 num2 = dow;
                 tmp13 = dow;
@@ -1486,7 +1415,7 @@ let fn = function t() {
                   if (!tmp17) {
                     tmp17 = _w2.e > 6;
                   }
-                  tmp12 = tmp54;
+                  tmp12 = c26;
                   num = doy;
                   num2 = dow;
                   tmp13 = sum;
@@ -1494,7 +1423,7 @@ let fn = function t() {
                   tmp15 = gg;
                   if (tmp17) {
                     flag = true;
-                    tmp12 = tmp54;
+                    tmp12 = c26;
                     num = doy;
                     num2 = dow;
                     tmp13 = sum;
@@ -1551,7 +1480,7 @@ let fn = function t() {
         if (!tmp23) {
           tmp23 = num10 > 7;
         }
-        tmp12 = tmp19;
+        tmp12 = c26;
         num = 4;
         num2 = 1;
         tmp13 = num10;
@@ -1559,7 +1488,7 @@ let fn = function t() {
         tmp15 = GG;
         if (tmp23) {
           flag = true;
-          tmp12 = tmp19;
+          tmp12 = c26;
           num = 4;
           num2 = 1;
           tmp13 = num10;
@@ -1621,7 +1550,6 @@ let fn = function t() {
       }
       if (num23 < 7) {
         do {
-          let tmp42 = num23;
           if (null == _d._a[num23]) {
             let num26 = 0;
             if (2 === num23) {
@@ -1648,7 +1576,7 @@ let fn = function t() {
       }
       if (tmp45) {
         _d._nextDay = true;
-        _d._a[tmp44] = 0;
+        _d._a[c29] = 0;
       }
       _d._d = _d._useUTC ? createUTCDate : createDate.apply(null, items2);
       _d = _d._d;
@@ -1662,7 +1590,7 @@ let fn = function t() {
         _d2.setUTCMinutes(_d3.getUTCMinutes() - _d._tzm);
       }
       if (_d._nextDay) {
-        _d._a[tmp44] = 24;
+        _d._a[c29] = 24;
       }
       let _w3 = _d._w;
       if (_w3) {
@@ -1681,7 +1609,6 @@ let fn = function t() {
         }
         _d._pf.weekdayMismatch = true;
       }
-      const obj6 = _d._useUTC ? createUTCDate : createDate;
     }
   }
   function configFromISO(_i) {
@@ -1724,8 +1651,6 @@ let fn = function t() {
             }
             sum2 = (match[2] || " ") + length2[num4][0];
             obj3 = length2[num4][1];
-            const tmp12 = length2;
-            const tmp15 = match[2] || " ";
           }
           str = sum2;
           if (null == sum2) {
@@ -1759,7 +1684,6 @@ let fn = function t() {
     }
   }
   function configFromRFC2822(_i) {
-    const str = _i._i;
     const str2 = _i._i.replace(/\([^)]*\)|[\n\t]/g, " ");
     const str3 = _i._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ");
     const match = regex7.exec(_i._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "").replace(/\s\s*$/, ""));
@@ -1833,6 +1757,7 @@ let fn = function t() {
     } else {
       _i._isValid = false;
     }
+    const str4 = _i._i.replace(/\([^)]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "");
   }
   function configFromStringAndFormat(_f) {
     let str7;
@@ -1883,9 +1808,6 @@ let fn = function t() {
             let tmp13 = obj1;
             let _Object = Object;
             let call = hasOwnProperty.call;
-            let tmp14 = num6;
-            let tmp15 = str6;
-            let tmp16 = num7;
             if (typeof call === "unknown" ? hasOwnProperty(str7) : call(tmp13, str7)) {
               let regExp = tmp13[str7](_f._strict, _f._locale);
             } else {
@@ -1904,8 +1826,6 @@ let fn = function t() {
                 }
                 return tmp;
               });
-              let tmp17 = new.target;
-              let tmp18 = new.target;
               regExp = new RegExp(str9.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"));
             }
             let tmp20 = str6.match(regExp) || [];
@@ -1928,7 +1848,6 @@ let fn = function t() {
               substr1 = str6.slice(str6.indexOf(first) + first.length);
               sum = num6 + first.length;
             }
-            let tmp24 = obj;
             if (obj[str7]) {
               let _pf = _f._pf;
               if (first) {
@@ -1955,11 +1874,6 @@ let fn = function t() {
               if (tmp28) {
                 break;
               } else if (tmp28) {
-                let tmp31 = dependencyMap2;
-                let tmp32 = dependencyMap2;
-                let tmp33 = first;
-                let tmp34 = _f;
-                let tmp35 = str7;
                 let tmp36 = dependencyMap2[str7](first, _f._a, _f, str7);
               }
             } else {
@@ -1985,7 +1899,6 @@ let fn = function t() {
           const _Object2 = Object;
           const call2 = hasOwnProperty2.call;
           typeof call2 === "unknown" ? hasOwnProperty2(str7) : call2(dependencyMap2, str7);
-          const tmp29 = dependencyMap2;
         }
         if (null == _f._pf) {
           const obj3 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
@@ -2018,7 +1931,7 @@ let fn = function t() {
           tmp39 = true === _f._pf.bigHour;
         }
         if (tmp39) {
-          tmp39 = _f._a[tmp38] > 0;
+          tmp39 = _f._a[c29] > 0;
         }
         if (tmp39) {
           if (null == _f._pf) {
@@ -2049,7 +1962,7 @@ let fn = function t() {
         ({ _meridiem: _f._pf.meridiem, _locale } = _f);
         const _meridiem = _f._meridiem;
         if (null == _meridiem) {
-          _f._a[tmp38] = tmp40;
+          _f._a[c29] = tmp40;
           configFromArray(_f);
           checkOverflow(_f);
         } else if (null != _locale.meridiemHour) {
@@ -2098,39 +2011,33 @@ let fn = function t() {
       let tmp5 = _i;
       if (typeof _i === "string") {
         const _locale2 = _l._locale;
-        let preparseResult = _locale2.preparse(_i);
+        const preparseResult = _locale2.preparse(_i);
         _l._i = preparseResult;
         tmp5 = preparseResult;
       }
       let tmp7 = tmp5 instanceof Moment;
       if (!tmp7) {
         tmp7 = null != tmp5 && null != tmp5._isAMomentObject;
-        const tmp8 = null != tmp5 && null != tmp5._isAMomentObject;
       }
       if (tmp7) {
         checkOverflow(tmp5);
-        obj = Object.create(tmp6.prototype);
+        obj = Object.create(Moment.prototype);
         copyConfig(obj, tmp5);
         let num17 = NaN;
         if (null != tmp5._d) {
           const _d = tmp5._d;
           num17 = _d.getTime();
         }
-        preparseResult = new Date(num17);
-        obj._d = preparseResult;
+        const date = new Date(num17);
+        obj._d = date;
         if (!obj.isValid()) {
           const _Date7 = Date;
-          preparseResult = new.target;
-          preparseResult = new.target;
-          preparseResult = new Date(NaN);
-          obj._d = preparseResult;
+          const date1 = new Date(NaN);
+          obj._d = date1;
         }
-        preparseResult = c7;
         tmp91 = obj;
         if (false === c7) {
-          c7 = true;
-          preparseResult = year;
-          preparseResult = year.updateOffset(obj);
+          year.updateOffset(obj);
           c7 = false;
           tmp91 = obj;
         }
@@ -2153,26 +2060,22 @@ let fn = function t() {
                   }
                   _l._pf.invalidFormat = true;
                   const _Date6 = Date;
-                  const date = new Date(NaN);
-                  _l._d = date;
+                  const date2 = new Date(NaN);
+                  _l._d = date2;
                 } else {
                   let num12 = 0;
                   let tmp82;
                   if (0 < _l._f.length) {
                     do {
-                      let tmp67 = copyConfig;
                       obj1 = {};
                       let tmp68 = copyConfig(obj1, _l);
-                      let tmp69 = num12;
                       let tmp70 = tmp80;
                       let tmp71 = tmp81;
                       if (null != _l._useUTC) {
                         obj1._useUTC = _l._useUTC;
                       }
                       obj1._f = _l._f[num12];
-                      let tmp72 = configFromStringAndFormat;
                       let tmp73 = configFromStringAndFormat(obj1);
-                      let tmp74 = isValid;
                       let tmp75 = tmp70;
                       let tmp76 = tmp71;
                       if (isValid(obj1)) {
@@ -2219,7 +2122,6 @@ let fn = function t() {
                     tmp82 = tmp83;
                   }
                   s(_l, tmp82);
-                  const tmp84 = s;
                 }
               } else if (_f) {
                 configFromStringAndFormat(_l);
@@ -2227,40 +2129,36 @@ let fn = function t() {
                 _i = _l._i;
                 if (undefined === _i) {
                   const _Date5 = Date;
-                  const date1 = new Date(year.now());
-                  _l._d = date1;
+                  const date3 = new Date(year.now());
+                  _l._d = date3;
                 } else {
                   const _Date8 = Date;
-                  preparseResult = _i instanceof Date;
-                  if (preparseResult) {
-                    if (preparseResult) {
+                  if (_i instanceof Date) {
+                    if (tmp113) {
                       const _Date4 = Date;
-                      const date2 = new Date(_i.valueOf());
-                      _l._d = date2;
+                      const date4 = new Date(_i.valueOf());
+                      _l._d = date4;
                     } else if (typeof _i === "string") {
                       const match = regex6.exec(_l._i);
                       if (null === match) {
                         configFromISO(_l);
                         if (false === _l._isValid) {
                           delete tmp2[tmp3];
-                          preparseResult = configFromRFC2822;
-                          preparseResult = configFromRFC2822(_l);
+                          configFromRFC2822(_l);
                           if (false === _l._isValid) {
                             delete tmp2[tmp3];
-                            preparseResult = year;
-                            preparseResult = year.createFromInputFallback(_l);
+                            const fromInputFallback = year.createFromInputFallback(_l);
                           }
                         }
                       } else {
                         const _Date3 = Date;
-                        const date3 = new Date(+match[1]);
-                        _l._d = date3;
+                        const date5 = new Date(+match[1]);
+                        _l._d = date5;
                       }
                     } else {
                       const _Array2 = Array;
-                      preparseResult = _i instanceof Array;
-                      if (preparseResult) {
-                        if (preparseResult) {
+                      if (_i instanceof Array) {
+                        if (tmp114) {
                           const substr = _i.slice(0);
                           items = [];
                           let num8 = 0;
@@ -2282,15 +2180,14 @@ let fn = function t() {
                               const keys = Object.keys();
                               if (keys !== undefined) {
                                 let tmp35 = tmp33;
-                                while (keys[preparseResult] !== undefined) {
-                                  preparseResult = str8;
+                                while (keys[tmp] !== undefined) {
                                   let _Object7 = Object;
                                   let call7 = hasOwnProperty.call;
                                   let tmp36 = typeof call7 === "unknown" ? hasOwnProperty(str8) : call7(_i2, str8);
                                   if (tmp36) {
                                     let tmp37;
                                     if (typeof str8 === "string") {
-                                      let tmp38 = obj[str8] || preparseResult[str8.toLowerCase(str8)];
+                                      let tmp38 = obj[str8] || tmp116[str8.toLowerCase(str8)];
                                       tmp37 = tmp38;
                                     }
                                     tmp36 = tmp37;
@@ -2314,7 +2211,6 @@ let fn = function t() {
                               const items2 = [];
                               for (let num4 = 0; num4 < items1.length; num4 = num4 + 1) {
                                 let tmp39 = items1[num4];
-                                let tmp40 = num4;
                                 let parsed = tmp39;
                                 if (tmp39) {
                                   let _parseInt = parseInt;
@@ -2328,10 +2224,10 @@ let fn = function t() {
                           } else if (typeof _i === "number") {
                             if (typeof _i === "number") {
                               const _Date2 = Date;
-                              const date4 = new Date(_i);
-                              _l._d = date4;
+                              const date6 = new Date(_i);
+                              _l._d = date6;
                             } else {
-                              const fromInputFallback = year.createFromInputFallback(_l);
+                              const fromInputFallback1 = year.createFromInputFallback(_l);
                             }
                           } else {
                             const _Object6 = Object;
@@ -2385,19 +2281,18 @@ let fn = function t() {
           const tmp11 = typeof call === "unknown" ? str2() : call(tmp5);
         }
       }
-      tmp6 = Moment;
     }
-    preparseResult = createLocalOrUTC(NaN, undefined, undefined, undefined, true).utc();
-    preparseResult = s;
-    if (null == preparseResult._pf) {
+    const utcResult = createLocalOrUTC(NaN, undefined, undefined, undefined, true).utc();
+    if (null == utcResult._pf) {
       const obj5 = { empty: false, unusedTokens: null, unusedInput: null, overflow: -2, charsLeftOver: 0, nullInput: false, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
       obj5[1] = [];
       obj5[2] = [];
       obj5[10] = [];
-      preparseResult._pf = obj5;
+      utcResult._pf = obj5;
     }
-    preparseResult = preparseResult(preparseResult._pf, { nullInput: true });
-    tmp91 = preparseResult;
+    s(utcResult._pf, { nullInput: true });
+    tmp91 = utcResult;
+    const obj8 = createLocalOrUTC(NaN, undefined, undefined, undefined, true);
   }
   function createLocalOrUTC(_d, _f, arg2, arg3, _isUTC) {
     let tmp2 = true !== arg2;
@@ -2421,7 +2316,6 @@ let fn = function t() {
           if (keys !== undefined) {
             flag2 = true;
             while (keys[tmp] !== undefined) {
-              let tmp41 = tmp12;
               flag2 = false;
               if (_d.hasOwnProperty(tmp12)) {
                 break;
@@ -2447,7 +2341,7 @@ let fn = function t() {
           const tmp15 = typeof call2 === "unknown" ? str2() : call2(_d);
         }
       }
-      obj = { _isAMomentObject: true, _isUTC, _useUTC: _isUTC, _l: arg2, _i: _d, _f, _strict: tmp3 };
+      obj = { _isAMomentObject: true, _isUTC, _useUTC: _isUTC, _l: tmp4, _i: _d, _f, _strict: tmp3 };
       const tmp23 = prepareConfig(obj);
       checkOverflow(tmp23);
       obj = Object.create(Moment.prototype);
@@ -2465,7 +2359,6 @@ let fn = function t() {
         obj._d = date1;
       }
       if (false === c7) {
-        c7 = true;
         year.updateOffset(obj);
         c7 = false;
       }
@@ -2481,6 +2374,7 @@ let fn = function t() {
       str = "[object Object]";
       const tmp7 = typeof call === "unknown" ? str() : call(_d);
     }
+    tmp4 = arg2;
   }
   function createLocal(_d, _f) {
     return createLocalOrUTC(_d, _f, arg2, arg3, false);
@@ -2512,7 +2406,6 @@ let fn = function t() {
         do {
           obj = first1[num2];
           let isValidResult = obj.isValid();
-          let tmp11 = num2;
           let tmp12 = first2;
           if (isValidResult) {
             let tmp13 = first1[num2];
@@ -2534,7 +2427,7 @@ let fn = function t() {
   class Duration {
     constructor(arg0) {
       obj = {};
-      obj = {};
+      date = {};
       keys = Object.keys();
       if (keys !== undefined) {
         tmp4 = tmp2;
@@ -2558,23 +2451,23 @@ let fn = function t() {
           if (!tmp5) {
             continue;
           } else {
-            obj[tmp4] = arg0[str];
+            date[tmp4] = arg0[str];
             tmp2 = tmp4;
             continue;
           }
           continue;
         }
       }
-      tmp8 = obj.year || 0;
-      tmp9 = obj.quarter || 0;
-      tmp10 = obj.month || 0;
-      tmp11 = obj.week || 0;
-      tmp12 = obj.day || 0;
-      tmp13 = obj.hour || 0;
-      tmp14 = obj.minute || 0;
-      tmp15 = obj.second || 0;
-      tmp16 = obj.millisecond || 0;
-      for (const key10031 in obj) {
+      tmp8 = date.year || 0;
+      tmp9 = date.quarter || 0;
+      tmp10 = date.month || 0;
+      tmp11 = date.week || 0;
+      tmp12 = date.day || 0;
+      tmp13 = date.hour || 0;
+      tmp14 = date.minute || 0;
+      tmp15 = date.second || 0;
+      tmp16 = date.millisecond || 0;
+      for (const key10031 in date) {
         tmp31 = key10031;
         tmp32 = f73815;
         call2 = f73815.call;
@@ -2586,7 +2479,7 @@ let fn = function t() {
         }
         flag = false;
         if (-1 === tmp32Result) {
-        } else if (null == obj[key10031]) {
+        } else if (null == date[key10031]) {
           continue;
         } else {
           _isNaN = isNaN;
@@ -2617,7 +2510,7 @@ let fn = function t() {
           tmp18 = num;
           tmp19 = flag2;
           flag3 = flag2;
-          if (!obj[closure_81[num]]) {
+          if (!date[closure_81[num]]) {
             sum = num + 1;
             flag2 = flag3;
             num = sum;
@@ -2631,9 +2524,9 @@ let fn = function t() {
               break;
             } else {
               _parseFloat = parseFloat;
-              tmp21 = +obj[arr[num]];
+              tmp21 = +date[arr[num]];
               isFiniteResult = 0 !== tmp21;
-              parsed = parseFloat(obj[arr[num]]);
+              parsed = parseFloat(date[arr[num]]);
               if (0 !== tmp21) {
                 _isFinite = isFinite;
                 isFiniteResult = isFinite(tmp21);
@@ -2701,13 +2594,13 @@ let fn = function t() {
       }
     }
   }
-  function cloneWithOffset(_d, add) {
+  function cloneWithOffset(localOrUTC, add) {
+    _d = localOrUTC;
     if (add._isUTC) {
       const cloneResult = add.clone();
       let tmp4 = _d instanceof Moment;
       if (!tmp4) {
         tmp4 = null != _d && null != _d._isAMomentObject;
-        const tmp6 = null != _d && null != _d._isAMomentObject;
       }
       if (!tmp4) {
         const _Date = Date;
@@ -2737,7 +2630,7 @@ let fn = function t() {
     let tmp = Duration;
     if (self instanceof Duration) {
       obj = { ms: null, d: null, M: null };
-      ({ _milliseconds: obj15[0], _days: obj15[1], _months: obj15[2] } = self);
+      ({ _milliseconds: obj14[0], _days: obj14[1], _months: obj14[2] } = self);
     } else if (typeof self === "number") {
       if (typeof self === "number") {
         obj = {};
@@ -2937,47 +2830,43 @@ let fn = function t() {
               obj1 = createLocalOrUTC(self.to, undefined, undefined, undefined, false);
               if (add.isValid()) {
                 if (obj1.isValid()) {
-                  let addResult1 = cloneWithOffset(obj1, add);
+                  let date = cloneWithOffset(obj1, add);
                   const obj3 = { milliseconds: 0, months: 0 };
-                  if (add.isBefore(addResult1)) {
-                    const diff = addResult1.month() - add.month();
-                    const monthResult = addResult1.month();
-                    obj3.months = diff + 12 * (addResult1.year() - add.year());
-                    const yearResult = addResult1.year();
+                  if (add.isBefore(date)) {
+                    const diff = date.month() - add.month();
+                    const monthResult = date.month();
+                    obj3.months = diff + 12 * (date.year() - add.year());
+                    const yearResult = date.year();
                     const cloneResult = add.clone();
-                    if (addResult.isAfter(addResult1)) {
+                    if (addResult.isAfter(date)) {
                       obj3.months = obj3.months - 1;
                     }
                     addResult = add.clone().add(obj3.months, "M");
-                    const tmp21 = +addResult1;
+                    const tmp21 = +date;
                     add = add.clone().add;
-                    addResult1 = add(obj3.months, "M");
-                    obj3.milliseconds = tmp21 - +addResult1;
-                    let tmp17 = obj3;
+                    date = add(obj3.months, "M");
+                    obj3.milliseconds = tmp21 - +date;
                     const cloneResult1 = add.clone();
                   } else {
-                    const diff1 = add.month() - addResult1.month();
+                    const diff1 = add.month() - date.month();
                     const monthResult1 = add.month();
-                    obj3.months = diff1 + 12 * (add.year() - addResult1.year());
+                    obj3.months = diff1 + 12 * (add.year() - date.year());
                     const yearResult1 = add.year();
-                    const cloneResult2 = addResult1.clone();
-                    if (addResult2.isAfter(add)) {
+                    const cloneResult2 = date.clone();
+                    if (addResult1.isAfter(add)) {
                       obj3.months = obj3.months - 1;
                     }
-                    addResult2 = addResult1.clone().add(obj3.months, "M");
+                    addResult1 = date.clone().add(obj3.months, "M");
                     const tmp16 = +add;
-                    obj3.milliseconds = tmp16 - +addResult1.clone().add(obj3.months, "M");
+                    obj3.milliseconds = tmp16 - +date.clone().add(obj3.months, "M");
                     obj3.milliseconds = -obj3.milliseconds;
                     obj3.months = -obj3.months;
-                    tmp17 = obj3;
-                    const cloneResult3 = addResult1.clone();
+                    const cloneResult3 = date.clone();
                   }
                 }
               }
-              ({ milliseconds: obj11.ms, months: obj11.M } = { milliseconds: 0, months: 0 });
+              ({ milliseconds: obj10.ms, months: obj10.M } = { milliseconds: 0, months: 0 });
               obj = {};
-              const obj4 = { milliseconds: 0, months: 0 };
-              const obj5 = {};
             }
           }
         }
@@ -3006,7 +2895,7 @@ let fn = function t() {
       }
     }
   }
-  function addSubtract(self, duration, arg2, arg3) {
+  function addSubtract(self, duration, closure_0, arg3) {
     ({ _milliseconds, _days } = duration);
     if (_days < 0) {
       const _Math2 = Math;
@@ -3035,8 +2924,7 @@ let fn = function t() {
           const _HermesInternal = HermesInternal;
           num3 = _d["get" + str + "Month"]();
         }
-        setMonth(self, num3 + result1 * arg2);
-        const tmp11 = setMonth;
+        setMonth(self, num3 + result1 * closure_0);
       }
       if (result) {
         let num4 = NaN;
@@ -3049,12 +2937,11 @@ let fn = function t() {
           const _HermesInternal2 = HermesInternal;
           num4 = _d2["get" + str4 + "Date"]();
         }
-        set$1(self, "Date", num4 + result * arg2);
-        const tmp14 = set$1;
+        set$1(self, "Date", num4 + result * closure_0);
       }
       if (_milliseconds) {
         ({ _d: _d3, _d: _d4 } = self);
-        _d3.setTime(_d4.valueOf() + _milliseconds * arg2);
+        _d3.setTime(_d4.valueOf() + _milliseconds * closure_0);
       }
       if (tmp9) {
         if (!result) {
@@ -3065,33 +2952,32 @@ let fn = function t() {
       tmp9 = null == arg3 || arg3;
     }
   }
-  function getSetWeekYearHelper(diff2, arg1, isoWeekdayResult, dow, doy) {
+  function getSetWeekYearHelper(GG, arg1, isoWeekdayResult, dow, doy) {
     const self = this;
-    if (null == diff2) {
+    if (null == GG) {
       year = weekOfYear(self, dow, doy).year;
     } else {
       let tmp = arg1;
-      const tmp17 = weeksInYear(diff2, dow, doy);
+      const tmp17 = weeksInYear(GG, dow, doy);
       if (arg1 > tmp17) {
         tmp = tmp17;
       }
       const call = setWeekAll.call;
       if (typeof call === "unknown") {
-        const tmp10 = dayOfYearFromWeeks(diff2, tmp, isoWeekdayResult, dow, doy);
+        const tmp10 = dayOfYearFromWeeks(GG, tmp, isoWeekdayResult, dow, doy);
         obj = createUTCDate(tmp10.year, 0, tmp10.dayOfYear);
         self.year(obj.getUTCFullYear());
         self.month(obj.getUTCMonth());
         self.date(obj.getUTCDate());
         year = self;
       } else {
-        year = call(self, diff2, tmp, isoWeekdayResult, dow, doy);
+        year = call(self, GG, tmp, isoWeekdayResult, dow, doy);
       }
-      const tmp3 = setWeekAll;
     }
     return year;
   }
-  function setWeekAll(year, arg1, isoWeekdayResult, dow, doy) {
-    const tmp = dayOfYearFromWeeks(year, arg1, isoWeekdayResult, dow, doy);
+  function setWeekAll(GG, arg1, isoWeekdayResult, dow, doy) {
+    const tmp = dayOfYearFromWeeks(GG, arg1, isoWeekdayResult, dow, doy);
     obj = createUTCDate(tmp.year, 0, tmp.dayOfYear);
     this.year(obj.getUTCFullYear());
     this.month(obj.getUTCMonth());
@@ -3116,10 +3002,7 @@ let fn = function t() {
         items = [];
         let num3 = 0;
         do {
-          let tmp7 = getLocale;
           let tmp8 = getLocale();
-          let tmp9 = createLocalOrUTC;
-          let num4 = 0;
           let flag = true;
           obj = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
           let utcResult1 = obj.utc();
@@ -3176,18 +3059,15 @@ let fn = function t() {
     }
     if (null != tmp3) {
       const result = (tmp3 + num) % 7;
-      const tmp9Result = tmp9();
+      const tmp9Result = getLocale();
       const obj3 = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
       return tmp9Result[weekdays](createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("day", result), str2);
     } else {
       items = [];
       let num4 = 0;
       do {
-        let tmp11 = getLocale;
         let sum = num4 + num;
         let tmp12 = getLocale();
-        let tmp13 = createLocalOrUTC;
-        let num5 = 0;
         let flag2 = true;
         obj = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
         let utcResult1 = obj.utc();
@@ -3196,7 +3076,6 @@ let fn = function t() {
       } while (num4 < 7);
       return items;
     }
-    tmp9 = getLocale;
   }
   function substituteTimeAgo(arg0, arg1, arg2, arg3, relativeTime) {
     let num = arg1;
@@ -3221,11 +3100,6 @@ let fn = function t() {
             if (typeof call === "unknown") {
               let callResult = call(tmp3, num, ObjectResult);
             } else {
-              let tmp5 = call;
-              let tmp6 = self;
-              let tmp7 = tmp3;
-              let tmp8 = num;
-              let tmp9 = ObjectResult;
               callResult = call(self, tmp3, tmp2, ObjectResult);
             }
             if (callResult) {
@@ -3253,7 +3127,6 @@ let fn = function t() {
     fn2 = (obj) => {
       items = [];
       for (const key10005 in arg0) {
-        let tmp3 = key10005;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -3272,12 +3145,10 @@ let fn = function t() {
       return items;
     };
   }
-  let obj = {};
-  obj = {};
   const re16 = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
   const re17 = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
   closure_18 = {};
-  obj = {};
+  let obj = {};
   let tmp = /\d\d?/;
   const re21 = tmp;
   const re22 = /Z|[+-]\d\d:?\d\d/gi;
@@ -3301,19 +3172,11 @@ let fn = function t() {
     }
     return text;
   };
-  closure_0 = "Y";
-  closure_1 = 0;
-  year = fn3;
-  s = fn3;
   obj.Y = fn3;
   let items1 = ["YY", 2];
   const fn4 = function() {
     return this.year() % 100;
   };
-  closure_0 = 0;
-  closure_1 = items1;
-  year = fn4;
-  s = fn4;
   obj[items1[0]] = function() {
     const self = this;
     const apply = s.apply;
@@ -3333,7 +3196,6 @@ let fn = function t() {
       str = str2;
     }
     const str3 = Math.pow(10, Math.max(0, diff));
-    const tmp = s;
     return str + Math.pow(10, Math.max(0, diff)).toString().substr(1) + text;
   };
   let items2 = ["YYYY", 4];
@@ -3365,7 +3227,6 @@ let fn = function t() {
       str = str2;
     }
     const str3 = Math.pow(10, Math.max(0, diff));
-    const tmp = s;
     return str + Math.pow(10, Math.max(0, diff)).toString().substr(1) + text;
   };
   let items3 = ["YYYYY", 5];
@@ -3397,7 +3258,6 @@ let fn = function t() {
       str = str2;
     }
     const str3 = Math.pow(10, Math.max(0, diff));
-    const tmp = s;
     return str + Math.pow(10, Math.max(0, diff)).toString().substr(1) + text;
   };
   let items4 = ["YYYYYY", 6, true];
@@ -3430,7 +3290,6 @@ let fn = function t() {
       str = str2;
     }
     const str3 = Math.pow(10, Math.max(0, diff));
-    const tmp = s;
     return str + Math.pow(10, Math.max(0, diff)).toString().substr(1) + text;
   };
   const formatted = "year".toLowerCase();
@@ -3639,7 +3498,6 @@ let fn = function t() {
         str3 = "[object Function]";
         let tmp14 = typeof call3 === "unknown" ? str3() : call3(tmp12);
       }
-      let tmp11 = /\d{4}/;
     } else {
       let _Object3 = Object;
       let str2 = Object.prototype.toString;
@@ -3647,7 +3505,6 @@ let fn = function t() {
       str2 = "[object Function]";
       let tmp9 = typeof call2 === "unknown" ? str2() : call2(tmp);
     }
-    let tmp7 = /\d\d/;
   } else {
     let _Object2 = Object;
     let str = Object.prototype.toString;

@@ -19,8 +19,6 @@ arg5.onCLS = (arg0) => {
     closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).LayoutShiftManager);
     function handleEntries(arg0) {
       while (tmp !== undefined) {
-        let tmp3 = closure_2;
-        let tmp4 = closure_2;
         let _processEntryResult = closure_2._processEntry(tmp2);
         continue;
       }
@@ -28,14 +26,15 @@ arg5.onCLS = (arg0) => {
         ({ _sessionValue: tmp7.value, _sessionEntries: tmp7.entries } = closure_2);
         bindReporterResult();
       }
+      tmp = arg0[Symbol.iterator]();
     }
     const obj4 = callback(obj[4]);
-    let tmp4 = metric;
+    const tmp4 = metric;
     const observeResult = callback(obj[6]).observe("layout-shift", handleEntries);
     closure_4 = observeResult;
     if (observeResult) {
       const tmpResult = tmp(tmp2[7]);
-      const bindReporterResult = tmpResult.bindReporter(callback, metric, closure_1_2, tmp4.reportAllChanges);
+      const bindReporterResult = tmpResult.bindReporter(callback, metric, items, tmp4.reportAllChanges);
       callback = bindReporterResult;
       visibilityWatcher.onHidden(() => {
         handleEntries(observeResult.takeRecords());
@@ -49,5 +48,6 @@ arg5.onCLS = (arg0) => {
         }
       }
     }
+    const obj5 = callback(obj[6]);
   }));
 };

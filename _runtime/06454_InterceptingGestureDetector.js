@@ -1,18 +1,16 @@
 // _runtime/06454_InterceptingGestureDetector.js
 import noopDefault from "00019_noop.js";
-import closure_3 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ useCallback: c4, useEffect: c5, useMemo: closure_6, useState: error } = noop);
 noopDefault;
 
 export const InterceptingGestureDetector = function InterceptingGestureDetector(gesture) {
   gesture = gesture.gesture;
-  let first;
-  dependencyMap = undefined;
   let first1;
   let callback;
   closure_5 = undefined;
@@ -24,7 +22,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   let obj = gesture(6395);
   obj.useEnsureGestureHandlerRootView();
   const tmp6 = first1(callback3(() => new Set()), 2);
-  first = tmp6[0];
+  const first = tmp6[0];
   dependencyMap = tmp6[1];
   let items = [first];
   let prop;
@@ -74,10 +72,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   let tmp8Result = tmp8(() => ({
     mode: first1,
     setMode(arg0) {
-      if (arg0 !== closure_1_0(closure_1_2[5]).InterceptingDetectorMode.REANIMATED) {
+      if (arg0 !== gesture(closure_1_2[5]).InterceptingDetectorMode.REANIMATED) {
         callback(arg0);
       }
-      error = new Error(closure_1_0(closure_1_2[9]).tagMessage("InterceptingGestureDetector can only handle either Reanimated or Animated events."));
+      error = new Error(gesture(closure_1_2[9]).tagMessage("InterceptingGestureDetector can only handle either Reanimated or Animated events."));
       throw error;
     },
     register: closure_5,
@@ -104,7 +102,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   closure_5(() => {
     let prop;
     if (gesture != null) {
-      const config = tmp.config;
+      const config = gesture.config;
       if (config != null) {
         prop = config.dispatchesAnimatedEvents;
       }
@@ -113,8 +111,8 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       store.setMode(gesture(6455).InterceptingDetectorMode.ANIMATED);
     } else {
       let prop1;
-      if (tmp != null) {
-        const config2 = tmp.config;
+      if (gesture != null) {
+        const config2 = gesture.config;
         if (config2 != null) {
           prop1 = config2.shouldUseReanimatedDetector;
         }
@@ -138,8 +136,8 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
           tmp.detectorCallbacks[closure_0](arg0);
           const detectorCallbacks = tmp.detectorCallbacks;
         }
-        const item = closure_1_1.forEach((arg0) => {
-          if (typeof arg0.methods[closure_0] === "function") {
+        const item = first.forEach((item, index) => {
+          if (typeof item.methods[closure_0] === "function") {
             tmp(closure_0);
           }
         });
@@ -162,8 +160,8 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       if (tmp2) {
         items.push(tmp.detectorCallbacks[arg0]);
       }
-      const item = items.forEach((arg0) => {
-        if (arg0.methods[closure_0]) {
+      const item = items.forEach((item, index) => {
+        if (item.methods[closure_0]) {
           items.push(tmp);
         }
       });
@@ -184,10 +182,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     const items6 = [gesture];
     const tmp8Result1 = tmp8(() => {
       if (gesture) {
-        if (obj.isComposedGesture(tmp)) {
-          let handlerTags = tmp.handlerTags;
+        if (obj.isComposedGesture(gesture)) {
+          let handlerTags = gesture.handlerTags;
         } else {
-          handlerTags = [tmp.handlerTag];
+          handlerTags = [gesture.handlerTag];
         }
         obj = gesture(6444);
       } else {
@@ -241,8 +239,5 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     error = new Error(tmp(6382).tagMessage("Gesture expects to run on the UI thread, but failed to create the Reanimated NativeDetector."));
     throw error;
   }
-  const tmp20 = closure_5;
-  const tmp4 = callback3;
-  const tmp5 = first1;
-  tmp9 = callback2(() => Array.from(first).map((viewTag) => ({ viewTag: viewTag.viewTag, handlerTags: viewTag.handlerTags })), items);
+  tmp9 = callback2(() => Array.from(first).map((item, index) => ({ viewTag: item.viewTag, handlerTags: item.handlerTags })), items);
 };

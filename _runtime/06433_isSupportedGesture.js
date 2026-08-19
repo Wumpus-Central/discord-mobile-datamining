@@ -1,21 +1,21 @@
 // _runtime/06433_isSupportedGesture.js
+import ComposedGestureName from "06436_ComposedGestureName.js";
 import isGestureEnabled from "06445_isGestureEnabled.js";
-import closure_2 from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
-import { context } from "06449_context.js";
 
-require = arg1;
+require = fn;
 function isSupportedGesture(gestures) {
   if (obj.isComposedGesture(gestures)) {
     gestures = gestures.gestures;
     return gestures.some(isSupportedGesture);
   } else {
     const type = gestures.type;
-    if (tmp(6436).SingleGestureName.Tap !== type) {
-      if (tmp(6436).SingleGestureName.LongPress !== type) {
-        if (tmp(6436).SingleGestureName.Fling !== type) {
-          if (tmp(6436).SingleGestureName.Native !== type) {
-            if (tmp(6436).SingleGestureName.Hover !== type) {
+    if (ComposedGestureName.SingleGestureName.Tap !== type) {
+      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
+        if (ComposedGestureName.SingleGestureName.Fling !== type) {
+          if (ComposedGestureName.SingleGestureName.Native !== type) {
+            if (ComposedGestureName.SingleGestureName.Hover !== type) {
               return false;
             }
           }
@@ -33,7 +33,7 @@ let closure_11 = { code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id
 
 export const useJSResponderHandler = function useJSResponderHandler(gesture) {
   const _require = gesture;
-  let tmp = callback2(_context.JSResponderContext);
+  let tmp = callback2(require("06449_context.js").JSResponderContext);
   dependencyMap = tmp;
   const tmp2 = callback(callback6(0), 2);
   callback = tmp2[1];
@@ -96,13 +96,13 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
       if (tmpResult.isComposedGesture(some)) {
         const gestures = some.gestures;
         some = gestures.some;
-        let flag = some(closure_1_9);
+        let flag = some(isSupportedGesture);
       } else {
         const type = some.type;
-        if (tmp(6436).SingleGestureName.Tap !== type) {
-          if (tmp(6436).SingleGestureName.LongPress !== type) {
-            if (tmp(6436).SingleGestureName.Fling !== type) {
-              if (tmp(6436).SingleGestureName.Native !== type) {
+        if (gesture(6436).SingleGestureName.Tap !== type) {
+          if (gesture(6436).SingleGestureName.LongPress !== type) {
+            if (gesture(6436).SingleGestureName.Fling !== type) {
+              if (gesture(6436).SingleGestureName.Native !== type) {
                 flag = false;
               }
             }
@@ -110,8 +110,9 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
         }
         flag = true;
       }
-      tmpResult = tmp(6445);
+      tmpResult = gesture(6445);
     }
+    const obj = gesture(6445);
   }, items1);
   callback3 = tmp7;
   const items2 = [tmp, tmp7];

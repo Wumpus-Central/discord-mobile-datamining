@@ -2,8 +2,7 @@
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const Platform = get_ActivityIndicator.Platform;
-let obj = { ios: null, android: null };
-obj = { expo: null, nonExpo: null };
+let obj = { expo: null, nonExpo: null };
 const items = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
 let arraySpreadResult = HermesBuiltin.arraySpread(["1. Have rebuilt your app (with for instance 'npx expo run:ios')", "2. Are not using Expo Go (Expo Go is unsupported). See README for more info: ", "https://github.com/henninghall/react-native-date-picker"], 2);
 items[arraySpreadResult] = "";

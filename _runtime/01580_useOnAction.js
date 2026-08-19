@@ -1,5 +1,5 @@
 // _runtime/01580_useOnAction.js
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 const require = arg1;
 
@@ -12,27 +12,19 @@ export const useOnAction = function useOnAction(router) {
   const beforeRemoveListeners = router.beforeRemoveListeners;
   const routerConfigOptions = router.routerConfigOptions;
   const emitter = router.emitter;
-  let onAction;
-  let onRouteFocus;
-  let addListener;
-  let onDispatchAction;
-  let flushUpdates;
-  let context1;
-  closure_14 = undefined;
-  let callback;
   const context = setState.useContext(router(getState[1]).NavigationBuilderContext);
-  onAction = context.onAction;
-  onRouteFocus = context.onRouteFocus;
-  addListener = context.addListener;
-  onDispatchAction = context.onDispatchAction;
-  flushUpdates = context.flushUpdates;
-  context1 = setState.useContext(router(getState[2]).DeprecatedNavigationInChildContext);
+  const onAction = context.onAction;
+  const onRouteFocus = context.onRouteFocus;
+  const addListener = context.addListener;
+  const onDispatchAction = context.onDispatchAction;
+  const flushUpdates = context.flushUpdates;
+  const context1 = setState.useContext(router(getState[2]).DeprecatedNavigationInChildContext);
   closure_14 = setState.useRef(routerConfigOptions);
   const insertionEffect = setState.useInsertionEffect(() => {
     closure_14.current = routerConfigOptions;
   });
   const items = [actionListeners, beforeRemoveListeners, emitter, flushUpdates, getState, context1, key, onAction, onDispatchAction, onRouteFocus, router, setState];
-  callback = setState.useCallback((target) => {
+  const callback = setState.useCallback((target) => {
     let set = arg1;
     if (arg1 === undefined) {
       const _Set = Set;
@@ -59,7 +51,7 @@ export const useOnAction = function useOnAction(router) {
         }
         let rehydratedState = tmp12;
         if (tmp13) {
-          rehydratedState = obj2.getRehydratedState(tmp12, tmp9.current);
+          rehydratedState = router.getRehydratedState(tmp12, ref.current);
         }
         if (null !== rehydratedState) {
           if (tmp6 !== rehydratedState) {
@@ -79,7 +71,7 @@ export const useOnAction = function useOnAction(router) {
             onDispatchAction(target, true);
           }
           if (undefined !== onRouteFocus) {
-            let result = obj2.shouldActionChangeFocus(target);
+            let result = router.shouldActionChangeFocus(target);
             if (result) {
               result = undefined !== key;
             }
@@ -89,7 +81,6 @@ export const useOnAction = function useOnAction(router) {
           }
           return true;
         }
-        tmp9 = ref;
       }
       if (undefined !== onAction) {
         if (onAction(target, set)) {

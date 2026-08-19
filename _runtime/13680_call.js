@@ -12,9 +12,9 @@ if (!module_13681) {
     return () => {
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
       } else {
-        applyArgumentsResult = apply(tmp2, arguments);
+        applyArgumentsResult = apply(closure_0, arguments);
       }
       return applyArgumentsResult;
     };

@@ -4,10 +4,6 @@ const dependencyMap = arg6;
 arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   let fn = beforeBreadcrumb;
   closure_0 = beforeBreadcrumb;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
   if (typeof fn === "function") {
     fn = () => {
       const items = [...arguments];
@@ -41,7 +37,7 @@ arg5.safeTracesSampler = function safeTracesSampler(tracesSampler) {
         HermesBuiltin.arraySpread(items, 0);
         return HermesBuiltin.apply(items1, undefined);
       } catch (tmp8) {
-        const debug = tracesSampler(closure_1_1[0]).debug;
+        const debug = tracesSampler(dependencyMap[0]).debug;
         debug.error("The tracesSampler callback threw an error", tmp8);
         return tmp;
       }

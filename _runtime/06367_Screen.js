@@ -1,10 +1,10 @@
 // _runtime/06367_Screen.js
-import closure_2 from "metro/00032__slicedToArray.js";
-import closure_3 from "00019_noop.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, content: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
@@ -55,10 +55,10 @@ export const Screen = function Screen(aria_hidden) {
     obj = { route: null, navigation: null, children: null };
     obj[0] = route;
     obj[1] = navigation;
-    const items2 = [tmp13.header, ];
+    const items2 = [container.header, ];
     let tmp17 = null;
     if (headerTransparent) {
-      const items3 = [tmp13.absolute, ];
+      const items3 = [container.absolute, ];
       obj1 = { minHeight: null };
       obj1[0] = tmp10;
       items3[1] = obj1;
@@ -73,9 +73,9 @@ export const Screen = function Screen(aria_hidden) {
       callback(nativeEvent.nativeEvent.layout.height);
     };
     obj3[3] = aria_hidden.header;
-    obj2[1] = closure_5(closure_4, obj3);
-    obj[2] = closure_5(closure_4, obj2);
-    tmp15Result = tmp15(tmp(tmp2[10]).NavigationProvider, obj);
+    obj2[1] = callback(closure_4, obj3);
+    obj[2] = callback(closure_4, obj2);
+    tmp15Result = callback(tmp(tmp2[10]).NavigationProvider, obj);
   }
   const items4 = [tmp15Result, ];
   const obj4 = { style: container.content, children: null };
@@ -89,9 +89,9 @@ export const Screen = function Screen(aria_hidden) {
       num = 0;
     }
   }
-  obj5[1] = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
-  obj4[1] = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
-  items4[1] = closure_5(closure_4, obj4);
+  obj5[1] = callback(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
+  obj4[1] = callback(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
+  items4[1] = callback(closure_4, obj4);
   obj[3] = items4;
-  return closure_6(modal(headerStatusBarHeight[9]).Background, obj);
+  return callback2(modal(headerStatusBarHeight[9]).Background, obj);
 };

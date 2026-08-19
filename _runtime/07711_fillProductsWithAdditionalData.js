@@ -1,8 +1,8 @@
 // _runtime/07711_fillProductsWithAdditionalData.js
 import asyncGeneratorStepDefault from "00005_asyncGeneratorStep.js";
 
-let RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
-RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {
+require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
+const RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -52,31 +52,30 @@ RNIapAmazonModule = asyncGeneratorStepDefault((arg0) => {
               c3 = 1;
               c4 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj6.getUser();
+              obj2[0] = closure_0.getUser();
               return obj2;
             } else {
               c4 = 3;
             }
-            obj6 = closure_0;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
           table = table[arg1.userMarketplaceAmazon];
-          const item = closure_0.forEach((originalPrice) => {
+          const item = closure_0.forEach((item, index) => {
             if (closure_1) {
-              let str = originalPrice.originalPrice;
-              originalPrice.currency = closure_1;
+              let str = item.originalPrice;
+              item.currency = closure_1;
               let str2 = str;
               if (str == null) {
                 str2 = "0.0";
               }
-              originalPrice.price = str2;
+              item.price = str2;
               if (str == null) {
                 str = "0.0";
               }
-              originalPrice.localizedPrice = str;
+              item.localizedPrice = str;
             }
           });
         }

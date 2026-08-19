@@ -11,11 +11,11 @@ if (getOwnPropertySymbols) {
       const _Object = Object;
       const ObjectResult = Object(arg0);
       _require = ObjectResult;
-      items = _arrayFilter(getOwnPropertySymbols(ObjectResult), (arg0) => {
-        const call = closure_1_2.call;
-        return typeof call === "unknown" ? closure_1_2(arg0) : call(closure_0, arg0);
+      items = arrayFilter(getOwnPropertySymbols(ObjectResult), (ownPropertySymbols) => {
+        const call = propertyIsEnumerable.call;
+        return typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols) : call(closure_0, ownPropertySymbols);
       });
-      const tmp5 = _arrayFilter;
+      const tmp5 = arrayFilter;
     }
     return items;
   };

@@ -3,7 +3,7 @@ import noopDefault from "00019_noop.js";
 import { useMemo } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopDefault;
 
 export default function _default(children) {
@@ -13,7 +13,6 @@ export default function _default(children) {
   }
   sharedValue = undefined;
   gestureHandler = undefined;
-  let gestureHandler1;
   sharedValue = sharedValue(gestureHandler[3]).useSharedValue(sharedValue(gestureHandler[4]).GESTURE_SOURCE.UNDETERMINED);
   const obj = sharedValue(gestureHandler[3]);
   const bottomSheetInternal = sharedValue(gestureHandler[2]).useBottomSheetInternal();
@@ -23,7 +22,7 @@ export default function _default(children) {
   const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
   gestureHandler = sharedValue(gestureHandler[2]).useGestureHandler(sharedValue(gestureHandler[4]).GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
   const obj3 = sharedValue(gestureHandler[2]);
-  gestureHandler1 = sharedValue(gestureHandler[2]).useGestureHandler(sharedValue(gestureHandler[4]).GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const gestureHandler1 = sharedValue(gestureHandler[2]).useGestureHandler(sharedValue(gestureHandler[4]).GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
   const items = [gestureHandler, gestureHandler1, sharedValue];
   const value = gestureHandler1(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
   return jsx(sharedValue(gestureHandler[5]).BottomSheetGestureHandlersContext.Provider, { value, children: children.children });

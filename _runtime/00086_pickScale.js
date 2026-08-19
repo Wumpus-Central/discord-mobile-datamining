@@ -1,11 +1,12 @@
 // _runtime/00086_pickScale.js
-const module = arg2;
+import PixelRatioDefault from "00087_PixelRatio.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
 arg5.pickScale = function pickScale(scales, _default) {
   let value = _default;
   if (_default == null) {
-    value = module(87).get();
-    const obj = module(87);
+    value = PixelRatioDefault.get();
   }
   let num = 0;
   if (0 < scales.length) {

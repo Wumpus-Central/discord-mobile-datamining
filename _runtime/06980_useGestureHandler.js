@@ -1,7 +1,5 @@
 // _runtime/06980_useGestureHandler.js
 import { cancelAnimation } from "01654_cancelAnimation.js";
-import { LegacyBaseButton } from "06377_LegacyBaseButton.js";
-import { GESTURE_SOURCE } from "06953_GESTURE_SOURCE.js";
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
@@ -17,7 +15,7 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
   closure_5 = onEnd;
   closure_6 = onFinalize;
   let obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
-  obj1 = _cancelAnimation;
+  obj1 = cancelAnimation;
   class R {
     constructor(arg0) {
       closure_1.value = closure_0(closure_1[1]).State.BEGAN;
@@ -26,7 +24,7 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
       return;
     }
   }
-  obj = { state, State: _LegacyBaseButton.State, gestureSource, source, onStart };
+  obj = { state, State: require("06377_LegacyBaseButton.js").State, gestureSource, source, onStart };
   R.__closure = obj;
   R.__workletHash = 16113572067379;
   R.__initData = closure_2;
@@ -48,8 +46,8 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
   U.__workletHash = 9050442757159;
   U.__initData = closure_3;
   const items1 = [state, gestureSource, source, onChange];
-  obj[1] = _cancelAnimation.useWorkletCallback(U, items1);
-  const obj4 = _cancelAnimation;
+  obj[1] = require("01654_cancelAnimation.js").useWorkletCallback(U, items1);
+  const obj4 = cancelAnimation;
   class C {
     constructor(arg0) {
       if (closure_2.value === closure_0) {
@@ -65,13 +63,13 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
       return;
     }
   }
-  obj = { gestureSource, source, state, GESTURE_SOURCE: _GESTURE_SOURCE.GESTURE_SOURCE, onEnd };
+  obj = { gestureSource, source, state, GESTURE_SOURCE: require("06953_GESTURE_SOURCE.js").GESTURE_SOURCE, onEnd };
   C.__closure = obj;
   C.__workletHash = 10682034812271;
   C.__initData = closure_4;
   const items2 = [state, gestureSource, source, onEnd];
-  obj[2] = _cancelAnimation.useWorkletCallback(C, items2);
-  const obj5 = _cancelAnimation;
+  obj[2] = require("01654_cancelAnimation.js").useWorkletCallback(C, items2);
+  const obj5 = cancelAnimation;
   class T {
     constructor(arg0) {
       if (closure_2.value === closure_0) {
@@ -87,11 +85,11 @@ arg5.useGestureHandler = (source, state, gestureSource, onStart, onChange, onEnd
       return;
     }
   }
-  obj1 = { gestureSource, source, state, GESTURE_SOURCE: _GESTURE_SOURCE.GESTURE_SOURCE, onFinalize };
+  obj1 = { gestureSource, source, state, GESTURE_SOURCE: require("06953_GESTURE_SOURCE.js").GESTURE_SOURCE, onFinalize };
   T.__closure = obj1;
   T.__workletHash = 9696716573416;
   T.__initData = closure_5;
   const items3 = [state, gestureSource, source, onFinalize];
-  obj[3] = _cancelAnimation.useWorkletCallback(T, items3);
+  obj[3] = require("01654_cancelAnimation.js").useWorkletCallback(T, items3);
   return obj;
 };

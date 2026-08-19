@@ -4,9 +4,9 @@ import _inheritsDefault from "00098__inherits.js";
 import _wrapNativeSuperDefault from "metro/00158__wrapNativeSuper.js";
 import parseErrorStack from "00190_parseErrorStack.js";
 import ExceptionsManager from "00193_ExceptionsManager.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 let SyntheticError = global;
@@ -90,7 +90,6 @@ function reportException(stack) {
   obj[6] = arg1;
   obj[7] = obj;
   const defaultResult = parseErrorStack.default(stack);
-  const tmp = require;
   tmp10 = null != stack.cause && typeof stack.cause === "object";
   if (arg2) {
     const _console = console;
@@ -106,16 +105,30 @@ function reportException(stack) {
           result = RN$hasHandledFatalException();
         }
         if (!result) {
-          const RN$notifyOfFatalException = tmp17.RN$notifyOfFatalException;
+          const RN$notifyOfFatalException = SyntheticError.RN$notifyOfFatalException;
           if (RN$notifyOfFatalException != null) {
             const result1 = RN$notifyOfFatalException();
           }
         }
-        tmp17 = SyntheticError;
       }
       _default.reportException(tmp14);
     }
   }
+  tmp14 = (function preprocessException(arg0) {
+    if (callback) {
+      if (!c9) {
+        c9 = true;
+        try {
+          c9 = false;
+          return callback(arg0);
+        } catch (tmp3) {
+          c9 = false;
+          throw tmp3;
+        }
+      }
+    }
+    return arg0;
+  })(obj);
 }
 function reactConsoleErrorHandler() {
   const items = [...arguments];
@@ -136,10 +149,10 @@ function reactConsoleErrorHandler() {
         }
         if (!stack) {
           SyntheticError = replacer.default;
-          const mapped = items.map((str) => {
-            let tmp = str;
-            if (typeof str !== "string") {
-              tmp = callback(str);
+          const mapped = items.map((item, index) => {
+            let tmp = item;
+            if (typeof item !== "string") {
+              tmp = callback(item);
             }
             return tmp;
           });
@@ -154,6 +167,7 @@ function reactConsoleErrorHandler() {
           }
         }
       }
+      obj = SyntheticError;
     }
   }
 }

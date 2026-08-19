@@ -1,7 +1,7 @@
 // _runtime/00268_MutationObserver.js
 import _createClassDefault from "metro/00042__createClass.js";
 import notifyMutationObserversAll from "00269_notifyMutationObservers.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
 const MutationObserver = importDefault;
@@ -93,8 +93,7 @@ const items = [
                   } else {
                     const self = this;
                     const result = this._getOrCreateMutationObserverId();
-                    let obj = notifyMutationObserversAll;
-                    obj = { mutationObserverId: null, target: null, subtree: null };
+                    const obj = { mutationObserverId: null, target: null, subtree: null };
                     obj[0] = result;
                     obj[1] = arg0;
                     let subtree;
@@ -122,10 +121,8 @@ const items = [
       const _mutationObserverId = this._mutationObserverId;
       if (null != _mutationObserverId) {
         notifyMutationObserversAll.unobserveAll(_mutationObserverId);
-        const obj = notifyMutationObserversAll;
         notifyMutationObserversAll.unregisterObserver(_mutationObserverId);
         tmp._mutationObserverId = null;
-        const obj2 = notifyMutationObserversAll;
       }
     }
   },
@@ -138,7 +135,6 @@ const items = [
         const registerObserverResult = notifyMutationObserversAll.registerObserver(self, self._callback);
         self._mutationObserverId = registerObserverResult;
         _mutationObserverId = registerObserverResult;
-        const obj = notifyMutationObserversAll;
       }
       return _mutationObserverId;
     }

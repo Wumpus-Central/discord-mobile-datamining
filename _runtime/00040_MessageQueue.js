@@ -2,7 +2,8 @@
 import _createClassDefault from "metro/00042__createClass.js";
 import isEnabled from "00046_isEnabled.js";
 import _mod47 from "metro/00047__.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import replacer from "00048_replacer.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 const MessageQueue = global;
 require = arg1;
@@ -115,8 +116,8 @@ let items = [
   },
   {
     key: "callNativeSyncHook",
-    value: function callNativeSyncHook(closure_0, closure_1, substr, arg3, arg4) {
-      this.processCallbacks(closure_0, closure_1, substr, arg3, arg4);
+    value: function callNativeSyncHook(closure_0, closure_1, substr, items, items2) {
+      this.processCallbacks(closure_0, closure_1, substr, items, items2);
       return MessageQueue.nativeCallSyncHook(closure_0, closure_1, substr);
     }
   },
@@ -130,10 +131,10 @@ let items = [
       const self = this;
       if (tmp) {
         if (arg3) {
-          arr.push(self._callID << 1);
+          arr = arr.push(self._callID << 1);
         }
         if (arg4) {
-          arr.push(self._callID << 1 | 1);
+          arr = arr.push(self._callID << 1 | 1);
         }
         const result = self._successCallbacks.set(self._callID, arg4);
         const result1 = self._failureCallbacks.set(self._callID, arg3);
@@ -145,9 +146,9 @@ let items = [
   },
   {
     key: "enqueueNativeCall",
-    value: function enqueueNativeCall(closure_0, closure_1, closure_02, arg3, arg4) {
+    value: function enqueueNativeCall(closure_0, closure_1, closure_02, items, items2) {
       const self = this;
-      this.processCallbacks(closure_0, closure_1, closure_02, arg3, arg4);
+      this.processCallbacks(closure_0, closure_1, closure_02, items, items2);
       const first = this._queue[0];
       first.push(closure_0);
       let arr1 = this._queue[1];
@@ -157,7 +158,7 @@ let items = [
       let obj = MessageQueue;
       if (MessageQueue.nativeFlushQueueImmediate) {
         if (timestamp - self._lastFlush >= 5) {
-          const items = [[], [], [], self._callID];
+          items = [[], [], [], self._callID];
           self._queue = items;
           self._lastFlush = timestamp;
           const result = obj.nativeFlushQueueImmediate(self._queue);
@@ -187,12 +188,12 @@ let items = [
   },
   {
     key: "__guard",
-    value: function __guard(arg0) {
+    value: function __guard(fn) {
       if (this.__shouldPauseOnThrow()) {
-        arg0();
+        fn();
       } else {
         try {
-          arg0();
+          fn();
         } catch (tmp2) {
           _mod47.default.reportFatalError(tmp2);
           const _default = _mod47.default;
@@ -220,6 +221,7 @@ let items = [
           const result = self._reactNativeMicrotasksCallback();
         }
         isEnabled.endEvent();
+        const tmp4Result = isEnabled;
       } catch (tmp10) {
         tmp3(tmp[2]).endEvent();
         throw tmp10;
@@ -235,13 +237,13 @@ let items = [
       const beginEvent = isEnabled.beginEvent;
       if (this.__spy) {
         const _HermesInternal2 = HermesInternal;
-        beginEvent("" + closure_1 + "." + closure_2 + "(" + tmp4(48).default(closure_0) + ")");
-        let tmp11 = tmp4;
-        const tmp4Result = tmp4(48);
+        beginEvent("" + closure_1 + "." + closure_2 + "(" + replacer.default(closure_0) + ")");
+        let tmp11 = require;
+        const tmp4Result = replacer;
       } else {
         const _HermesInternal = HermesInternal;
         beginEvent("" + closure_1 + "." + closure_2 + "(...)");
-        tmp11 = tmp4;
+        tmp11 = require;
       }
       try {
         if (self.__spy) {
@@ -271,6 +273,7 @@ let items = [
         }
         callableModule[closure_2].apply(callableModule, closure_0);
         tmp11(46).endEvent();
+        const tmp11Result1 = tmp11(46);
       } catch (tmp35) {
         tmp2(tmp[2]).endEvent();
         throw tmp35;

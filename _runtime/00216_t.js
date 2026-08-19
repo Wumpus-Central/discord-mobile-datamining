@@ -8,28 +8,28 @@ const fn = function t(arg0) {
       closure_0 = arg0;
       this.map = {};
       if (arg0 instanceof Headers) {
-        item = arg0.forEach(function(arg0, arg1) {
-          this.append(arg1, arg0);
+        item = arg0.forEach(function(item, index) {
+          this.append(index, item);
         }, self);
       } else {
         tmp = globalThis;
         _Array = Array;
         if (Array.isArray(arg0)) {
-          item1 = arg0.forEach(function(arg0) {
-            if (2 != arg0.length) {
+          item1 = arg0.forEach(function(item, index) {
+            if (2 != item.length) {
               const _TypeError = TypeError;
-              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
               throw typeError;
             } else {
               const self = this;
-              this.append(arg0[0], arg0[1]);
+              this.append(item[0], item[1]);
             }
           }, self);
         } else if (arg0) {
           _Object = Object;
           ownPropertyNames = Object.getOwnPropertyNames(arg0);
-          item2 = ownPropertyNames.forEach(function(arg0) {
-            this.append(arg0, headers[arg0]);
+          item2 = ownPropertyNames.forEach(function(item, index) {
+            this.append(item, headers[item]);
           }, self);
         }
       }
@@ -185,8 +185,8 @@ const fn = function t(arg0) {
     keys() {
       items = [];
       closure_0 = items;
-      item = this.forEach((arg0, arg1) => {
-        items.push(arg1);
+      item = this.forEach((item, index) => {
+        items.push(index);
       });
       closure_0 = items;
       obj = {
@@ -206,8 +206,8 @@ const fn = function t(arg0) {
     values() {
       items = [];
       closure_0 = items;
-      item = this.forEach((arg0) => {
-        items.push(arg0);
+      item = this.forEach((item, index) => {
+        items.push(item);
       });
       closure_0 = items;
       obj = {
@@ -227,8 +227,8 @@ const fn = function t(arg0) {
     entries() {
       items = [];
       closure_0 = items;
-      item = this.forEach((arg0, arg1) => {
-        items = [arg1, arg0];
+      item = this.forEach((item, index) => {
+        items = [index, item];
         items.push(items);
       });
       closure_0 = items;
@@ -302,8 +302,8 @@ const fn = function t(arg0) {
               obj = Object.create(Headers.prototype);
               obj.map = {};
               if (headers instanceof Headers) {
-                item = headers.forEach(function(arg0, arg1) {
-                  this.append(arg1, arg0);
+                item = headers.forEach(function(item, index) {
+                  this.append(index, item);
                 }, obj);
                 self.headers = obj;
               } else {
@@ -313,20 +313,20 @@ const fn = function t(arg0) {
                   if (headers) {
                     _Object = Object;
                     ownPropertyNames = Object.getOwnPropertyNames(headers);
-                    item1 = ownPropertyNames.forEach(function(arg0) {
-                      this.append(arg0, headers[arg0]);
+                    item1 = ownPropertyNames.forEach(function(item, index) {
+                      this.append(item, headers[item]);
                     }, obj);
                   }
                 }
               }
-              item2 = headers.forEach(function(arg0) {
-                if (2 != arg0.length) {
+              item2 = headers.forEach(function(item, index) {
+                if (2 != item.length) {
                   const _TypeError = TypeError;
-                  const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                  const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
                   throw typeError;
                 } else {
                   const self = this;
-                  this.append(arg0[0], arg0[1]);
+                  this.append(item[0], item[1]);
                 }
               }, obj);
             }
@@ -431,8 +431,8 @@ const fn = function t(arg0) {
           headers = headers1;
           obj1.map = {};
           if (headers1 instanceof Headers) {
-            item3 = headers1.forEach(function(arg0, arg1) {
-              this.append(arg1, arg0);
+            item3 = headers1.forEach(function(item, index) {
+              this.append(index, item);
             }, obj1);
             self.headers = obj1;
           } else {
@@ -442,20 +442,20 @@ const fn = function t(arg0) {
               if (headers1) {
                 _Object2 = Object;
                 ownPropertyNames1 = Object.getOwnPropertyNames(headers1);
-                item4 = ownPropertyNames1.forEach(function(arg0) {
-                  this.append(arg0, headers[arg0]);
+                item4 = ownPropertyNames1.forEach(function(item, index) {
+                  this.append(item, headers[item]);
                 }, obj1);
               }
             }
           }
-          item5 = headers1.forEach(function(arg0) {
-            if (2 != arg0.length) {
+          item5 = headers1.forEach(function(item, index) {
+            if (2 != item.length) {
               const _TypeError = TypeError;
-              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+              const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
               throw typeError;
             } else {
               const self = this;
-              this.append(arg0[0], arg0[1]);
+              this.append(item[0], item[1]);
             }
           }, obj1);
         }
@@ -480,10 +480,11 @@ const fn = function t(arg0) {
   }
   function decode(str) {
     const formData = new FormData();
-    let parts = str.trim().split("&");
-    const item = parts.forEach((str) => {
-      if (str) {
-        const parts = str.split("=");
+    str = str.trim();
+    let parts = str.split("&");
+    const item = parts.forEach((item, index) => {
+      if (item) {
+        const parts = item.split("=");
         const replaced = parts.shift().replace(/\+/g, " ");
         const str2 = parts.shift();
         const _decodeURIComponent = decodeURIComponent;
@@ -532,28 +533,28 @@ const fn = function t(arg0) {
             obj = Object.create(Headers.prototype);
             obj.map = {};
             if (headers instanceof Headers) {
-              item = headers.forEach(function(arg0, arg1) {
-                this.append(arg1, arg0);
+              item = headers.forEach(function(item, index) {
+                this.append(index, item);
               }, obj);
             } else {
               tmp9 = globalThis;
               _Array = Array;
               if (Array.isArray(headers)) {
-                item1 = headers.forEach(function(arg0) {
-                  if (2 != arg0.length) {
+                item1 = headers.forEach(function(item, index) {
+                  if (2 != item.length) {
                     const _TypeError = TypeError;
-                    const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                    const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
                     throw typeError;
                   } else {
                     const self = this;
-                    this.append(arg0[0], arg0[1]);
+                    this.append(item[0], item[1]);
                   }
                 }, obj);
               } else if (headers) {
                 _Object = Object;
                 ownPropertyNames = Object.getOwnPropertyNames(headers);
-                item2 = ownPropertyNames.forEach(function(arg0) {
-                  this.append(arg0, headers[arg0]);
+                item2 = ownPropertyNames.forEach(function(item, index) {
+                  this.append(item, headers[item]);
                 }, obj);
               }
             }
@@ -597,28 +598,28 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
-            this.append(arg1, arg0);
+          item = arg0.forEach(function(item, index) {
+            this.append(index, item);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
-              if (2 != arg0.length) {
+            item1 = arg0.forEach(function(item, index) {
+              if (2 != item.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
                 throw typeError;
               } else {
                 const self = this;
-                this.append(arg0[0], arg0[1]);
+                this.append(item[0], item[1]);
               }
             }, self);
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
-              this.append(arg0, headers[arg0]);
+            item2 = ownPropertyNames.forEach(function(item, index) {
+              this.append(item, headers[item]);
             }, self);
           }
         }
@@ -774,8 +775,8 @@ const fn = function t(arg0) {
       keys() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items.push(arg1);
+        item = this.forEach((item, index) => {
+          items.push(index);
         });
         closure_0 = items;
         obj = {
@@ -795,8 +796,8 @@ const fn = function t(arg0) {
       values() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0) => {
-          items.push(arg0);
+        item = this.forEach((item, index) => {
+          items.push(item);
         });
         closure_0 = items;
         obj = {
@@ -816,8 +817,8 @@ const fn = function t(arg0) {
       entries() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items = [arg1, arg0];
+        item = this.forEach((item, index) => {
+          items = [index, item];
           items.push(items);
         });
         closure_0 = items;
@@ -837,11 +838,9 @@ const fn = function t(arg0) {
       }
     }
     _globalThis = typeof self !== "undefined";
-    let tmp = typeof self !== "undefined";
   }
   if (!_globalThis) {
     _globalThis = undefined !== closure_0 && closure_0;
-    let tmp2 = undefined !== closure_0 && closure_0;
   }
   if (!_globalThis) {
     _globalThis = {};
@@ -855,28 +854,28 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
-            this.append(arg1, arg0);
+          item = arg0.forEach(function(item, index) {
+            this.append(index, item);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
-              if (2 != arg0.length) {
+            item1 = arg0.forEach(function(item, index) {
+              if (2 != item.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
                 throw typeError;
               } else {
                 const self = this;
-                this.append(arg0[0], arg0[1]);
+                this.append(item[0], item[1]);
               }
             }, self);
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
-              this.append(arg0, headers[arg0]);
+            item2 = ownPropertyNames.forEach(function(item, index) {
+              this.append(item, headers[item]);
             }, self);
           }
         }
@@ -1032,8 +1031,8 @@ const fn = function t(arg0) {
       keys() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items.push(arg1);
+        item = this.forEach((item, index) => {
+          items.push(index);
         });
         closure_0 = items;
         obj = {
@@ -1053,8 +1052,8 @@ const fn = function t(arg0) {
       values() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0) => {
-          items.push(arg0);
+        item = this.forEach((item, index) => {
+          items.push(item);
         });
         closure_0 = items;
         obj = {
@@ -1074,8 +1073,8 @@ const fn = function t(arg0) {
       entries() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items = [arg1, arg0];
+        item = this.forEach((item, index) => {
+          items = [index, item];
           items.push(items);
         });
         closure_0 = items;
@@ -1122,28 +1121,28 @@ const fn = function t(arg0) {
         closure_0 = arg0;
         this.map = {};
         if (arg0 instanceof Headers) {
-          item = arg0.forEach(function(arg0, arg1) {
-            this.append(arg1, arg0);
+          item = arg0.forEach(function(item, index) {
+            this.append(index, item);
           }, self);
         } else {
           tmp = globalThis;
           _Array = Array;
           if (Array.isArray(arg0)) {
-            item1 = arg0.forEach(function(arg0) {
-              if (2 != arg0.length) {
+            item1 = arg0.forEach(function(item, index) {
+              if (2 != item.length) {
                 const _TypeError = TypeError;
-                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+                const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
                 throw typeError;
               } else {
                 const self = this;
-                this.append(arg0[0], arg0[1]);
+                this.append(item[0], item[1]);
               }
             }, self);
           } else if (arg0) {
             _Object = Object;
             ownPropertyNames = Object.getOwnPropertyNames(arg0);
-            item2 = ownPropertyNames.forEach(function(arg0) {
-              this.append(arg0, headers[arg0]);
+            item2 = ownPropertyNames.forEach(function(item, index) {
+              this.append(item, headers[item]);
             }, self);
           }
         }
@@ -1299,8 +1298,8 @@ const fn = function t(arg0) {
       keys() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items.push(arg1);
+        item = this.forEach((item, index) => {
+          items.push(index);
         });
         closure_0 = items;
         obj = {
@@ -1320,8 +1319,8 @@ const fn = function t(arg0) {
       values() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0) => {
-          items.push(arg0);
+        item = this.forEach((item, index) => {
+          items.push(item);
         });
         closure_0 = items;
         obj = {
@@ -1341,8 +1340,8 @@ const fn = function t(arg0) {
       entries() {
         items = [];
         closure_0 = items;
-        item = this.forEach((arg0, arg1) => {
-          items = [arg1, arg0];
+        item = this.forEach((item, index) => {
+          items = [index, item];
           items.push(items);
         });
         closure_0 = items;
@@ -1402,7 +1401,7 @@ const fn = function t(arg0) {
                     }
                   }
                   if (closure_6) {
-                    if (tmp44) {
+                    if (closure_4) {
                       let isPrototypeOfResult = _bodyInit;
                       if (_bodyInit) {
                         const _DataView = DataView;
@@ -1429,7 +1428,7 @@ const fn = function t(arg0) {
                       }
                     }
                   }
-                  if (tmp7) {
+                  if (closure_6) {
                     const _ArrayBuffer = ArrayBuffer;
                     if (_bodyInit.slice) {
                       buffer = _bodyInit.slice(0);
@@ -1449,8 +1448,6 @@ const fn = function t(arg0) {
                   const tmp13 = typeof call === "unknown" ? toString() : call(_bodyInit);
                   self._bodyText = tmp13;
                   tmp = tmp13;
-                  tmp44 = closure_4;
-                  tmp7 = closure_6;
                 }
               } else {
                 self._noBody = true;
@@ -1630,38 +1627,37 @@ const fn = function t(arg0) {
   }
   Body = Response.prototype;
   Body.clone = function() {
-    let obj = { status: this.status, statusText: this.statusText, headers: null, url: null };
     const headers = this.headers;
-    obj = Object.create(Headers.prototype);
+    let obj = Object.create(Headers.prototype);
     obj.map = {};
     if (headers instanceof Headers) {
-      const item = headers.forEach(function(arg0, arg1) {
-        this.append(arg1, arg0);
+      const item = headers.forEach(function(item, index) {
+        this.append(index, item);
       }, obj);
     } else {
       const _Array = Array;
       if (Array.isArray(headers)) {
-        const item1 = headers.forEach(function(arg0) {
-          if (2 != arg0.length) {
+        const item1 = headers.forEach(function(item, index) {
+          if (2 != item.length) {
             const _TypeError = TypeError;
-            const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + arg0.length);
+            const typeError = new TypeError("Headers constructor: expected name/value pair to be length 2, found" + item.length);
             throw typeError;
           } else {
             const self = this;
-            this.append(arg0[0], arg0[1]);
+            this.append(item[0], item[1]);
           }
         }, obj);
       } else if (headers) {
         const _Object = Object;
         const ownPropertyNames = Object.getOwnPropertyNames(headers);
-        const item2 = ownPropertyNames.forEach(function(arg0) {
-          this.append(arg0, headers[arg0]);
+        const item2 = ownPropertyNames.forEach(function(item, index) {
+          this.append(item, headers[item]);
         }, obj);
       }
     }
     obj[2] = obj;
     obj[3] = this.url;
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(Response.prototype);
     Response(this._bodyInit, obj);
     return obj;
   };

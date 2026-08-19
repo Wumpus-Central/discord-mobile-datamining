@@ -54,7 +54,6 @@ function _createClass(DateToSystemTimezoneSetter, items) {
   for (let num = 0; num < items.length; num = num + 1) {
     let tmp2 = items[num];
     let flag = tmp2.enumerable;
-    let tmp3 = num;
     if (!flag) {
       flag = false;
     }
@@ -97,7 +96,6 @@ class Setter {
     }
   }
 }
-_createSuperInternal = Setter;
 let obj = {
   key: "validate",
   value: function validate(arg0, arg1) {
@@ -144,7 +142,6 @@ store = ValueSetter;
 obj = { value: ValueSetter, writable: true, configurable: true };
 ValueSetter.prototype = Object.create(Setter.prototype, { constructor: obj });
 store(ValueSetter, Setter);
-_createSuperInternal = ValueSetter;
 store = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
@@ -177,30 +174,6 @@ store = (function _isNativeReflectConstruct() {
   }
   return false;
 })();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _createSuperInternal(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
 obj = {
   key: "validate",
   value: function validate(arg0, arg1) {
@@ -294,7 +267,6 @@ class DateToSystemTimezoneSetter {
 store = DateToSystemTimezoneSetter;
 DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, { constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true } });
 store(DateToSystemTimezoneSetter, Setter);
-_createSuperInternal = DateToSystemTimezoneSetter;
 store = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;

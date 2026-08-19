@@ -4,9 +4,7 @@ import stringProcessor from "../12262_stringProcessor.js";
 import _mod12266 from "12266__.js";
 import _mod12267 from "12267__.js";
 import _mod12268 from "12268__.js";
-import closure_3 from "../00005_asyncGeneratorStep.js";
-import { initializeContext } from "../12261_initializeContext.js";
-import { 12199__ } from "12199__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
 let self = this;
 let self2 = this;
@@ -33,13 +31,11 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -52,7 +48,6 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -75,14 +70,14 @@ if (self2) {
         obj[2] = null;
         const util = _mod12199.util;
         const merged = Object.assign(util.normalizeParams(undefined));
-        let zodTuple = new tmp.ZodTuple(obj);
+        let zodTuple = new exports.ZodTuple(obj);
       } else {
         zodTuple = undefined;
         if (!tmp3) {
           zodTuple = input.input;
         }
         if (zodTuple == null) {
-          zodTuple = closure_6._array(tmp.ZodArray, closure_6._unknown(tmp.ZodUnknown), undefined);
+          zodTuple = closure_6._array(exports.ZodArray, closure_6._unknown(exports.ZodUnknown), undefined);
         }
       }
       obj = { type: "function", input: zodTuple, output: null };
@@ -91,7 +86,7 @@ if (self2) {
         output = input.output;
       }
       if (output == null) {
-        output = closure_6._unknown(tmp.ZodUnknown);
+        output = closure_6._unknown(exports.ZodUnknown);
       }
       obj[2] = output;
       const zodFunction = new exports.ZodFunction(obj);
@@ -101,14 +96,14 @@ if (self2) {
     function string(closure_0) {
       return closure_6._string(exports.ZodString, closure_0);
     }
-    function number(enc) {
-      return closure_6._number(exports.ZodNumber, enc);
+    function number(message) {
+      return closure_6._number(exports.ZodNumber, message);
     }
-    function int(enc) {
-      return closure_6._int(exports.ZodNumberFormat, enc);
+    function int(message) {
+      return closure_6._int(exports.ZodNumberFormat, message);
     }
-    function boolean(enc) {
-      return closure_6._boolean(exports.ZodBoolean, enc);
+    function boolean(message) {
+      return closure_6._boolean(exports.ZodBoolean, message);
     }
     function _null(arg0) {
       return closure_6._null(exports.ZodNull, arg0);
@@ -116,11 +111,11 @@ if (self2) {
     function unknown() {
       return closure_6._unknown(exports.ZodUnknown);
     }
-    function never(enc) {
-      return closure_6._never(exports.ZodNever, enc);
+    function never(message) {
+      return closure_6._never(exports.ZodNever, message);
     }
-    function array(closure_0, enc) {
-      return closure_6._array(exports.ZodArray, closure_0, enc);
+    function array(closure_0, message) {
+      return closure_6._array(exports.ZodArray, closure_0, message);
     }
     function union(roles, added) {
       const util = _mod12199.util;
@@ -128,41 +123,41 @@ if (self2) {
       const zodUnion = new exports.ZodUnion({ type: "union", options: roles });
       return zodUnion;
     }
-    function intersection(arr, items1) {
-      const zodIntersection = new exports.ZodIntersection({ type: "intersection", left: arr, right: items1 });
+    function intersection(arr, items2) {
+      const zodIntersection = new exports.ZodIntersection({ type: "intersection", left: arr, right: items2 });
       return zodIntersection;
     }
-    function tuple(mapped2, arg1, enc) {
-      let tmp2 = arg1;
-      if (arg1 instanceof closure_6.$ZodType) {
-        tmp2 = enc;
+    function tuple(mapped2, message, message) {
+      let tmp2 = message;
+      if (message instanceof closure_6.$ZodType) {
+        tmp2 = message;
       }
       let tmp3 = null;
-      if (arg1 instanceof closure_6.$ZodType) {
-        tmp3 = arg1;
+      if (message instanceof closure_6.$ZodType) {
+        tmp3 = message;
       }
       const util = _mod12199.util;
       const merged = Object.assign(util.normalizeParams(tmp2));
       const zodTuple = new exports.ZodTuple({ type: "tuple", items: mapped2, rest: tmp3 });
       return zodTuple;
     }
-    function record(keyType, valueType, enc) {
+    function record(keyType, valueType, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType, valueType });
       return zodRecord;
     }
-    function _enum(arr, enc) {
+    function _enum(arr, message) {
       let fromEntriesResult = arr;
       if (Array.isArray(arr)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
-          const items = [arg0, arg0];
+        fromEntriesResult = Object.fromEntries(arr.map((item, index) => {
+          const items = [item, item];
           return items;
         }));
       }
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodEnum = new exports.ZodEnum({ type: "enum", entries: fromEntriesResult });
       return zodEnum;
     }
@@ -188,10 +183,10 @@ if (self2) {
       Object.defineProperty(obj, "defaultValue", {
         get: () => {
           if (typeof callback === "function") {
-            let shallowCloneResult = tmp();
+            let shallowCloneResult = callback();
           } else {
             const util = callback(closure_1_2[1]).util;
-            shallowCloneResult = util.shallowClone(tmp);
+            shallowCloneResult = util.shallowClone(callback);
           }
           return shallowCloneResult;
         },
@@ -206,10 +201,10 @@ if (self2) {
       Object.defineProperty(obj, "defaultValue", {
         get: () => {
           if (typeof callback === "function") {
-            let shallowCloneResult = tmp();
+            let shallowCloneResult = callback();
           } else {
             const util = callback(closure_1_2[1]).util;
-            shallowCloneResult = util.shallowClone(tmp);
+            shallowCloneResult = util.shallowClone(callback);
           }
           return shallowCloneResult;
         },
@@ -218,9 +213,9 @@ if (self2) {
       const zodPrefault = new exports.ZodPrefault(obj);
       return zodPrefault;
     }
-    function nonoptional(innerType, enc) {
+    function nonoptional(innerType, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodNonOptional = new exports.ZodNonOptional({ type: "nonoptional", innerType });
       return zodNonOptional;
     }
@@ -246,9 +241,9 @@ if (self2) {
       const zodLazy = new exports.ZodLazy({ type: "lazy", getter });
       return zodLazy;
     }
-    function refine(fn, enc) {
-      let obj = enc;
-      if (enc === undefined) {
+    function refine(fn, message) {
+      let obj = message;
+      if (message === undefined) {
         obj = {};
       }
       return closure_6._refine(exports.ZodCustom, fn, obj);
@@ -329,79 +324,79 @@ if (self2) {
     exports.meta = undefined;
     exports.stringbool = undefined;
     exports.string = string;
-    exports.email = function email(enc) {
-      return closure_6._email(exports.ZodEmail, enc);
+    exports.email = function email(message) {
+      return closure_6._email(exports.ZodEmail, message);
     };
-    exports.guid = function guid(enc) {
-      return closure_6._guid(exports.ZodGUID, enc);
+    exports.guid = function guid(message) {
+      return closure_6._guid(exports.ZodGUID, message);
     };
-    exports.uuid = function uuid(enc) {
-      return closure_6._uuid(exports.ZodUUID, enc);
+    exports.uuid = function uuid(message) {
+      return closure_6._uuid(exports.ZodUUID, message);
     };
-    exports.uuidv4 = function uuidv4(enc) {
-      return closure_6._uuidv4(exports.ZodUUID, enc);
+    exports.uuidv4 = function uuidv4(message) {
+      return closure_6._uuidv4(exports.ZodUUID, message);
     };
-    exports.uuidv6 = function uuidv6(enc) {
-      return closure_6._uuidv6(exports.ZodUUID, enc);
+    exports.uuidv6 = function uuidv6(message) {
+      return closure_6._uuidv6(exports.ZodUUID, message);
     };
-    exports.uuidv7 = function uuidv7(enc) {
-      return closure_6._uuidv7(exports.ZodUUID, enc);
+    exports.uuidv7 = function uuidv7(message) {
+      return closure_6._uuidv7(exports.ZodUUID, message);
     };
-    exports.url = function url(enc) {
-      return closure_6._url(exports.ZodURL, enc);
+    exports.url = function url(message) {
+      return closure_6._url(exports.ZodURL, message);
     };
-    exports.httpUrl = function httpUrl(enc) {
+    exports.httpUrl = function httpUrl(message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       return closure_6._url(exports.ZodURL, { protocol: /^https?$/, hostname: closure_6.regexes.domain });
     };
-    exports.emoji = function emoji(enc) {
-      return closure_6._emoji(exports.ZodEmoji, enc);
+    exports.emoji = function emoji(message) {
+      return closure_6._emoji(exports.ZodEmoji, message);
     };
-    exports.nanoid = function nanoid(enc) {
-      return closure_6._nanoid(exports.ZodNanoID, enc);
+    exports.nanoid = function nanoid(message) {
+      return closure_6._nanoid(exports.ZodNanoID, message);
     };
-    exports.cuid = function cuid(enc) {
-      return closure_6._cuid(exports.ZodCUID, enc);
+    exports.cuid = function cuid(message) {
+      return closure_6._cuid(exports.ZodCUID, message);
     };
-    exports.cuid2 = function cuid2(enc) {
-      return closure_6._cuid2(exports.ZodCUID2, enc);
+    exports.cuid2 = function cuid2(message) {
+      return closure_6._cuid2(exports.ZodCUID2, message);
     };
-    exports.ulid = function ulid(enc) {
-      return closure_6._ulid(exports.ZodULID, enc);
+    exports.ulid = function ulid(message) {
+      return closure_6._ulid(exports.ZodULID, message);
     };
-    exports.xid = function xid(enc) {
-      return closure_6._xid(exports.ZodXID, enc);
+    exports.xid = function xid(message) {
+      return closure_6._xid(exports.ZodXID, message);
     };
-    exports.ksuid = function ksuid(enc) {
-      return closure_6._ksuid(exports.ZodKSUID, enc);
+    exports.ksuid = function ksuid(message) {
+      return closure_6._ksuid(exports.ZodKSUID, message);
     };
-    exports.ipv4 = function ipv4(enc) {
-      return closure_6._ipv4(exports.ZodIPv4, enc);
+    exports.ipv4 = function ipv4(message) {
+      return closure_6._ipv4(exports.ZodIPv4, message);
     };
     exports.mac = function mac(delimiter) {
       return closure_6._mac(exports.ZodMAC, delimiter);
     };
-    exports.ipv6 = function ipv6(enc) {
-      return closure_6._ipv6(exports.ZodIPv6, enc);
+    exports.ipv6 = function ipv6(message) {
+      return closure_6._ipv6(exports.ZodIPv6, message);
     };
-    exports.cidrv4 = function cidrv4(enc) {
-      return closure_6._cidrv4(exports.ZodCIDRv4, enc);
+    exports.cidrv4 = function cidrv4(message) {
+      return closure_6._cidrv4(exports.ZodCIDRv4, message);
     };
-    exports.cidrv6 = function cidrv6(enc) {
-      return closure_6._cidrv6(exports.ZodCIDRv6, enc);
+    exports.cidrv6 = function cidrv6(message) {
+      return closure_6._cidrv6(exports.ZodCIDRv6, message);
     };
-    exports.base64 = function base64(enc) {
-      return closure_6._base64(exports.ZodBase64, enc);
+    exports.base64 = function base64(message) {
+      return closure_6._base64(exports.ZodBase64, message);
     };
-    exports.base64url = function base64url(enc) {
-      return closure_6._base64url(exports.ZodBase64URL, enc);
+    exports.base64url = function base64url(message) {
+      return closure_6._base64url(exports.ZodBase64URL, message);
     };
-    exports.e164 = function e164(enc) {
-      return closure_6._e164(exports.ZodE164, enc);
+    exports.e164 = function e164(message) {
+      return closure_6._e164(exports.ZodE164, message);
     };
-    exports.jwt = function jwt(enc) {
-      return closure_6._jwt(exports.ZodJWT, enc);
+    exports.jwt = function jwt(message) {
+      return closure_6._jwt(exports.ZodJWT, message);
     };
     exports.stringFormat = function stringFormat(combined, hex, enc) {
       let obj = enc;
@@ -426,7 +421,7 @@ if (self2) {
       }
       const combined = "" + arg0 + "_" + str;
       if (closure_6.regexes[combined]) {
-        return obj._stringFormat(exports.ZodCustomStringFormat, combined, tmp2, enc);
+        return closure_6._stringFormat(exports.ZodCustomStringFormat, combined, tmp2, enc);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
@@ -436,30 +431,30 @@ if (self2) {
     };
     exports.number = number;
     exports.int = int;
-    exports.float32 = function float32(enc) {
-      return closure_6._float32(exports.ZodNumberFormat, enc);
+    exports.float32 = function float32(message) {
+      return closure_6._float32(exports.ZodNumberFormat, message);
     };
-    exports.float64 = function float64(enc) {
-      return closure_6._float64(exports.ZodNumberFormat, enc);
+    exports.float64 = function float64(message) {
+      return closure_6._float64(exports.ZodNumberFormat, message);
     };
-    exports.int32 = function int32(enc) {
-      return closure_6._int32(exports.ZodNumberFormat, enc);
+    exports.int32 = function int32(message) {
+      return closure_6._int32(exports.ZodNumberFormat, message);
     };
-    exports.uint32 = function uint32(enc) {
-      return closure_6._uint32(exports.ZodNumberFormat, enc);
+    exports.uint32 = function uint32(message) {
+      return closure_6._uint32(exports.ZodNumberFormat, message);
     };
     exports.boolean = boolean;
-    exports.bigint = function bigint(enc) {
-      return closure_6._bigint(exports.ZodBigInt, enc);
+    exports.bigint = function bigint(message) {
+      return closure_6._bigint(exports.ZodBigInt, message);
     };
-    exports.int64 = function int64(enc) {
-      return closure_6._int64(exports.ZodBigIntFormat, enc);
+    exports.int64 = function int64(message) {
+      return closure_6._int64(exports.ZodBigIntFormat, message);
     };
-    exports.uint64 = function uint64(enc) {
-      return closure_6._uint64(exports.ZodBigIntFormat, enc);
+    exports.uint64 = function uint64(message) {
+      return closure_6._uint64(exports.ZodBigIntFormat, message);
     };
-    exports.symbol = function symbol(enc) {
-      return closure_6._symbol(exports.ZodSymbol, enc);
+    exports.symbol = function symbol(message) {
+      return closure_6._symbol(exports.ZodSymbol, message);
     };
     exports.undefined = function _undefined(arg0) {
       return closure_6._undefined(exports.ZodUndefined, arg0);
@@ -473,8 +468,8 @@ if (self2) {
     exports.void = function _void(arg0) {
       return closure_6._void(exports.ZodVoid, arg0);
     };
-    exports.date = function date(enc) {
-      return closure_6._date(exports.ZodDate, enc);
+    exports.date = function date(message) {
+      return closure_6._date(exports.ZodDate, message);
     };
     exports.array = array;
     exports.keyof = function keyof(_zod) {
@@ -482,8 +477,8 @@ if (self2) {
       let fromEntriesResult = keys;
       if (Array.isArray(keys)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(keys.map((arg0) => {
-          const items = [arg0, arg0];
+        fromEntriesResult = Object.fromEntries(keys.map((item, index) => {
+          const items = [item, item];
           return items;
         }));
       }
@@ -492,91 +487,91 @@ if (self2) {
       const zodEnum = new exports.ZodEnum({ type: "enum", entries: fromEntriesResult });
       return zodEnum;
     };
-    exports.object = function object(arg0, enc) {
+    exports.object = function object(arg0, message) {
       let obj = arg0;
       if (arg0 == null) {
         obj = {};
       }
       obj = { type: "object", shape: obj };
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodObject = new exports.ZodObject(obj);
       return zodObject;
     };
-    exports.strictObject = function strictObject(shape, enc) {
+    exports.strictObject = function strictObject(shape, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._never(exports.ZodNever, undefined) });
       return zodObject;
     };
-    exports.looseObject = function looseObject(shape, enc) {
+    exports.looseObject = function looseObject(shape, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodObject = new exports.ZodObject({ type: "object", shape, catchall: closure_6._unknown(exports.ZodUnknown) });
       return zodObject;
     };
     exports.union = union;
-    exports.xor = function xor(options, enc) {
+    exports.xor = function xor(options, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodXor = new exports.ZodXor({ type: "union", options, inclusive: false });
       return zodXor;
     };
-    exports.discriminatedUnion = function discriminatedUnion(discriminator, options, enc) {
+    exports.discriminatedUnion = function discriminatedUnion(discriminator, options, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodDiscriminatedUnion = new exports.ZodDiscriminatedUnion({ type: "union", options, discriminator });
       return zodDiscriminatedUnion;
     };
     exports.intersection = intersection;
     exports.tuple = tuple;
     exports.record = record;
-    exports.partialRecord = function partialRecord(z11, objectResult, enc) {
+    exports.partialRecord = function partialRecord(z11, objectResult, message) {
       const cloneResult = closure_6.clone(z11);
       cloneResult._zod.values = undefined;
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType: cloneResult, valueType: objectResult });
       return zodRecord;
     };
-    exports.looseRecord = function looseRecord(stringResult1, anyResult, enc) {
+    exports.looseRecord = function looseRecord(stringResult1, anyResult, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodRecord = new exports.ZodRecord({ type: "record", keyType: stringResult1, valueType: anyResult, mode: "loose" });
       return zodRecord;
     };
-    exports.map = function map(keyType, valueType, enc) {
+    exports.map = function map(keyType, valueType, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodMap = new exports.ZodMap({ type: "map", keyType, valueType });
       return zodMap;
     };
-    exports.set = function set(valueType, enc) {
+    exports.set = function set(valueType, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodSet = new exports.ZodSet({ type: "set", valueType });
       return zodSet;
     };
     exports.enum = _enum;
-    exports.nativeEnum = function nativeEnum(entries, enc) {
+    exports.nativeEnum = function nativeEnum(entries, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodEnum = new exports.ZodEnum({ type: "enum", entries });
       return zodEnum;
     };
-    exports.literal = function literal(arg0, enc) {
+    exports.literal = function literal(arg0, message) {
       let tmp = arg0;
       if (!Array.isArray(arg0)) {
         const items = [arg0];
         tmp = items;
       }
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodLiteral = new exports.ZodLiteral({ type: "literal", values: tmp });
       return zodLiteral;
     };
-    exports.file = function file(arr2) {
-      return closure_6._file(exports.ZodFile, arr2);
+    exports.file = function file(dependencyMap) {
+      return closure_6._file(exports.ZodFile, dependencyMap);
     };
     exports.transform = transform;
     exports.optional = optional;
@@ -597,8 +592,8 @@ if (self2) {
       return zodSuccess;
     };
     exports.catch = _catch;
-    exports.nan = function nan(enc) {
-      return closure_6._nan(exports.ZodNaN, enc);
+    exports.nan = function nan(message) {
+      return closure_6._nan(exports.ZodNaN, message);
     };
     exports.pipe = pipe;
     exports.codec = function codec(arg0, out, decode) {
@@ -606,9 +601,9 @@ if (self2) {
       return zodCodec;
     };
     exports.readonly = readonly;
-    exports.templateLiteral = function templateLiteral(parts, enc) {
+    exports.templateLiteral = function templateLiteral(parts, message) {
       const util = _mod12199.util;
-      const merged = Object.assign(util.normalizeParams(enc));
+      const merged = Object.assign(util.normalizeParams(message));
       const zodTemplateLiteral = new exports.ZodTemplateLiteral({ type: "template_literal", parts });
       return zodTemplateLiteral;
     };
@@ -625,31 +620,31 @@ if (self2) {
       ZodCheck._zod.check = check;
       return ZodCheck;
     };
-    exports.custom = function custom(arg0, enc) {
+    exports.custom = function custom(arg0, message) {
       let fn = arg0;
       if (arg0 == null) {
         fn = () => true;
       }
-      return closure_6._custom(exports.ZodCustom, fn, enc);
+      return closure_6._custom(exports.ZodCustom, fn, message);
     };
     exports.refine = refine;
     exports.superRefine = superRefine;
-    exports.instanceof = function _instanceof(Class, enc) {
+    exports.instanceof = function _instanceof(Class, message) {
       const _require = Class;
-      let obj = enc;
-      if (enc === undefined) {
+      let obj = message;
+      if (message === undefined) {
         obj = {};
       }
       let zodCustom;
       obj = {
         type: "custom",
         check: "custom",
-        fn(D, __getInternalProperties, arg2, arg3) {
+        fn(D, keys, length, length, resizeMode, get) {
           return D instanceof closure_0;
         },
         abort: true
       };
-      const util = _12199__.util;
+      const util = require("12199__.js").util;
       const merged = Object.assign(util.normalizeParams(obj));
       zodCustom = new zodCustom.ZodCustom(obj);
       zodCustom._zod.bag.Class = Class;
@@ -679,12 +674,12 @@ if (self2) {
         getter: () => {
           const items = [closure_1_6._string(zodLazy.ZodString, callback), closure_1_6._number(zodLazy.ZodNumber, undefined), closure_1_6._boolean(zodLazy.ZodBoolean, undefined), closure_1_6._null(zodLazy.ZodNull, undefined), closure_1_6._array(zodLazy.ZodArray, zodLazy, undefined), ];
           let obj = { type: "record", keyType: closure_1_6._string(zodLazy.ZodString, undefined), valueType: zodLazy };
-          const util = callback(closure_1_2[1]).util;
+          const util = callback(dependencyMap[1]).util;
           const merged = Object.assign(util.normalizeParams(undefined));
           const zodRecord = new zodLazy.ZodRecord(obj);
           items[5] = zodRecord;
           obj = { type: "union", options: items };
-          const util2 = callback(closure_1_2[1]).util;
+          const util2 = callback(dependencyMap[1]).util;
           const merged1 = Object.assign(util2.normalizeParams(undefined));
           const zodUnion = new zodLazy.ZodUnion(obj);
           return zodUnion;
@@ -709,30 +704,28 @@ if (self2) {
       closure_1 = def;
       const $ZodType = closure_6.$ZodType;
       $ZodType.init(_standard, def);
-      let obj = { jsonSchema: null };
-      obj = { input: _initializeContext.createStandardJSONSchemaMethod(_standard, "input"), output: _initializeContext.createStandardJSONSchemaMethod(_standard, "output") };
+      let obj = { input: require("../12261_initializeContext.js").createStandardJSONSchemaMethod(_standard, "input"), output: require("../12261_initializeContext.js").createStandardJSONSchemaMethod(_standard, "output") };
       obj[0] = obj;
       let merged = Object.assign(_standard["~standard"], obj);
-      _standard.toJSONSchema = _initializeContext.createToJSONSchemaMethod(_standard, {});
+      _standard.toJSONSchema = require("../12261_initializeContext.js").createToJSONSchemaMethod(_standard, {});
       _standard.def = def;
       _standard.type = def.type;
       obj = { value: def };
       Object.defineProperty(_standard, "_def", obj);
       _standard.check = () => {
         const items = [...arguments];
-        const util = lib(closure_1_2[1]).util;
+        const util = lib(dependencyMap[1]).util;
         let checks = def.checks;
         if (checks == null) {
           checks = [];
         }
         const items1 = [
           ...checks,
-          ...items.map((fn) => {
-            let tmp = fn;
-            if (typeof fn === "function") {
-              let obj = { _zod: null };
-              obj = { check: null, def: null, onattach: null };
-              obj[0] = fn;
+          ...items.map((item, index) => {
+            let tmp = item;
+            if (typeof item === "function") {
+              const obj = { check: null, def: null, onattach: null };
+              obj[0] = item;
               obj[1] = { check: "custom" };
               obj[2] = [];
               obj[0] = obj;
@@ -752,8 +745,7 @@ if (self2) {
       };
       _standard.parse = (arg0, arg1) => closure_1_10.parse(lib, arg0, arg1, { callee: lib.parse });
       _standard.safeParse = (arg0, arg1) => closure_1_10.safeParse(closure_0, arg0, arg1);
-      _require = undefined;
-      _require = callback((arg0, arg1) => {
+      asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -807,7 +799,7 @@ if (self2) {
         }
         return applyArgumentsResult;
       };
-      _require = callback((arg0, arg1) => {
+      asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -862,7 +854,7 @@ if (self2) {
       _standard.spa = _standard.safeParseAsync;
       _standard.encode = (arg0, arg1) => closure_1_10.encode(closure_0, arg0, arg1);
       _standard.decode = (arg0, arg1) => closure_1_10.decode(closure_0, arg0, arg1);
-      _require = callback((arg0, arg1) => {
+      asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -914,7 +906,7 @@ if (self2) {
         }
         return applyArgumentsResult;
       };
-      _require = callback((arg0, arg1) => {
+      asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -968,7 +960,7 @@ if (self2) {
       };
       _standard.safeEncode = (arg0, arg1) => closure_1_10.safeEncode(closure_0, arg0, arg1);
       _standard.safeDecode = (arg0, arg1) => closure_1_10.safeDecode(closure_0, arg0, arg1);
-      _require = callback((arg0, arg1) => {
+      asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -1020,7 +1012,7 @@ if (self2) {
         }
         return applyArgumentsResult;
       };
-      _require = callback((arg0, arg1) => {
+      _require = asyncGeneratorStep((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
         c2 = 0;
@@ -1072,9 +1064,9 @@ if (self2) {
         }
         return applyArgumentsResult;
       };
-      _standard.refine = (fn, enc) => {
-        let obj = enc;
-        if (enc === undefined) {
+      _standard.refine = (fn, message) => {
+        let obj = message;
+        if (message === undefined) {
           obj = {};
         }
         return lib.check(closure_1_6._refine(def.ZodCustom, fn, obj));
@@ -1100,16 +1092,16 @@ if (self2) {
         const zodOptional = new def.ZodOptional(obj);
         return zodOptional;
       };
-      _standard.nonoptional = (enc) => {
-        const util = lib(closure_1_2[1]).util;
-        const merged = Object.assign(util.normalizeParams(enc));
+      _standard.nonoptional = (message) => {
+        const util = lib(dependencyMap[1]).util;
+        const merged = Object.assign(util.normalizeParams(message));
         const zodNonOptional = new def.ZodNonOptional({ type: "nonoptional", innerType: lib });
         return zodNonOptional;
       };
       _standard.array = () => closure_1_6._array(def.ZodArray, closure_0, undefined);
       _standard.or = (arg0) => {
         const items = [lib, arg0];
-        const util = lib(closure_1_2[1]).util;
+        const util = lib(dependencyMap[1]).util;
         const merged = Object.assign(util.normalizeParams(undefined));
         const zodUnion = new def.ZodUnion({ type: "union", options: items });
         return zodUnion;
@@ -1131,10 +1123,10 @@ if (self2) {
         Object.defineProperty(obj, "defaultValue", {
           get: () => {
             if (typeof callback === "function") {
-              let shallowCloneResult = tmp();
+              let shallowCloneResult = callback();
             } else {
               const util = callback(closure_1_2[1]).util;
-              shallowCloneResult = util.shallowClone(tmp);
+              shallowCloneResult = util.shallowClone(callback);
             }
             return shallowCloneResult;
           },
@@ -1149,10 +1141,10 @@ if (self2) {
         Object.defineProperty(obj, "defaultValue", {
           get: () => {
             if (typeof callback === "function") {
-              let shallowCloneResult = tmp();
+              let shallowCloneResult = callback();
             } else {
               const util = callback(closure_1_2[1]).util;
-              shallowCloneResult = util.shallowClone(tmp);
+              shallowCloneResult = util.shallowClone(callback);
             }
             return shallowCloneResult;
           },
@@ -1211,7 +1203,7 @@ if (self2) {
       };
       _standard.isOptional = () => lib.safeParse(undefined).success;
       _standard.isNullable = () => lib.safeParse(null).success;
-      _standard.apply = (arg0) => arg0(closure_0);
+      _standard.apply = (fn) => fn(closure_0);
       return _standard;
     });
     exports._ZodString = fnResult.$constructor("_ZodString", (_zod) => {
@@ -1220,7 +1212,7 @@ if (self2) {
       $ZodString.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.stringProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (arg0, format) => closure_1_7.stringProcessor(closure_0, arg0, format, arg2);
       const bag = _zod._zod.bag;
       let format = bag.format;
       if (format == null) {
@@ -1287,29 +1279,29 @@ if (self2) {
       $ZodString.init(arg0, arg1);
       const _ZodString = exports._ZodString;
       _ZodString.init(arg0, arg1);
-      arg0.email = (enc) => closure_0.check(closure_1_6._email(closure_1_1.ZodEmail, enc));
-      arg0.url = (enc) => closure_0.check(closure_1_6._url(closure_1_1.ZodURL, enc));
-      arg0.jwt = (enc) => closure_0.check(closure_1_6._jwt(closure_1_1.ZodJWT, enc));
-      arg0.emoji = (enc) => closure_0.check(closure_1_6._emoji(closure_1_1.ZodEmoji, enc));
-      arg0.guid = (enc) => closure_0.check(closure_1_6._guid(closure_1_1.ZodGUID, enc));
-      arg0.uuid = (enc) => closure_0.check(closure_1_6._uuid(closure_1_1.ZodUUID, enc));
-      arg0.uuidv4 = (enc) => closure_0.check(closure_1_6._uuidv4(closure_1_1.ZodUUID, enc));
-      arg0.uuidv6 = (enc) => closure_0.check(closure_1_6._uuidv6(closure_1_1.ZodUUID, enc));
-      arg0.uuidv7 = (enc) => closure_0.check(closure_1_6._uuidv7(closure_1_1.ZodUUID, enc));
-      arg0.nanoid = (enc) => closure_0.check(closure_1_6._nanoid(closure_1_1.ZodNanoID, enc));
-      arg0.guid = (enc) => closure_0.check(closure_1_6._guid(closure_1_1.ZodGUID, enc));
-      arg0.cuid = (enc) => closure_0.check(closure_1_6._cuid(closure_1_1.ZodCUID, enc));
-      arg0.cuid2 = (enc) => closure_0.check(closure_1_6._cuid2(closure_1_1.ZodCUID2, enc));
-      arg0.ulid = (enc) => closure_0.check(closure_1_6._ulid(closure_1_1.ZodULID, enc));
-      arg0.base64 = (enc) => closure_0.check(closure_1_6._base64(closure_1_1.ZodBase64, enc));
-      arg0.base64url = (enc) => closure_0.check(closure_1_6._base64url(closure_1_1.ZodBase64URL, enc));
-      arg0.xid = (enc) => closure_0.check(closure_1_6._xid(closure_1_1.ZodXID, enc));
-      arg0.ksuid = (enc) => closure_0.check(closure_1_6._ksuid(closure_1_1.ZodKSUID, enc));
-      arg0.ipv4 = (enc) => closure_0.check(closure_1_6._ipv4(closure_1_1.ZodIPv4, enc));
-      arg0.ipv6 = (enc) => closure_0.check(closure_1_6._ipv6(closure_1_1.ZodIPv6, enc));
-      arg0.cidrv4 = (enc) => closure_0.check(closure_1_6._cidrv4(closure_1_1.ZodCIDRv4, enc));
-      arg0.cidrv6 = (enc) => closure_0.check(closure_1_6._cidrv6(closure_1_1.ZodCIDRv6, enc));
-      arg0.e164 = (enc) => closure_0.check(closure_1_6._e164(closure_1_1.ZodE164, enc));
+      arg0.email = (message) => closure_0.check(closure_1_6._email(exports.ZodEmail, message));
+      arg0.url = (message) => closure_0.check(closure_1_6._url(exports.ZodURL, message));
+      arg0.jwt = (message) => closure_0.check(closure_1_6._jwt(exports.ZodJWT, message));
+      arg0.emoji = (message) => closure_0.check(closure_1_6._emoji(exports.ZodEmoji, message));
+      arg0.guid = (message) => closure_0.check(closure_1_6._guid(exports.ZodGUID, message));
+      arg0.uuid = (message) => closure_0.check(closure_1_6._uuid(exports.ZodUUID, message));
+      arg0.uuidv4 = (message) => closure_0.check(closure_1_6._uuidv4(exports.ZodUUID, message));
+      arg0.uuidv6 = (message) => closure_0.check(closure_1_6._uuidv6(exports.ZodUUID, message));
+      arg0.uuidv7 = (message) => closure_0.check(closure_1_6._uuidv7(exports.ZodUUID, message));
+      arg0.nanoid = (message) => closure_0.check(closure_1_6._nanoid(exports.ZodNanoID, message));
+      arg0.guid = (message) => closure_0.check(closure_1_6._guid(exports.ZodGUID, message));
+      arg0.cuid = (message) => closure_0.check(closure_1_6._cuid(exports.ZodCUID, message));
+      arg0.cuid2 = (message) => closure_0.check(closure_1_6._cuid2(exports.ZodCUID2, message));
+      arg0.ulid = (message) => closure_0.check(closure_1_6._ulid(exports.ZodULID, message));
+      arg0.base64 = (message) => closure_0.check(closure_1_6._base64(exports.ZodBase64, message));
+      arg0.base64url = (message) => closure_0.check(closure_1_6._base64url(exports.ZodBase64URL, message));
+      arg0.xid = (message) => closure_0.check(closure_1_6._xid(exports.ZodXID, message));
+      arg0.ksuid = (message) => closure_0.check(closure_1_6._ksuid(exports.ZodKSUID, message));
+      arg0.ipv4 = (message) => closure_0.check(closure_1_6._ipv4(exports.ZodIPv4, message));
+      arg0.ipv6 = (message) => closure_0.check(closure_1_6._ipv6(exports.ZodIPv6, message));
+      arg0.cidrv4 = (message) => closure_0.check(closure_1_6._cidrv4(exports.ZodCIDRv4, message));
+      arg0.cidrv6 = (message) => closure_0.check(closure_1_6._cidrv6(exports.ZodCIDRv6, message));
+      arg0.e164 = (message) => closure_0.check(closure_1_6._e164(exports.ZodE164, message));
       arg0.datetime = (arg0) => closure_0.check(closure_1_9.datetime(arg0));
       arg0.date = (arg0) => closure_0.check(closure_1_9.date(arg0));
       arg0.time = (arg0) => closure_0.check(closure_1_9.time(arg0));
@@ -1453,15 +1445,15 @@ if (self2) {
       $ZodNumber.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.numberProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (target) => closure_1_7.numberProcessor(closure_0, target, arg1, arg2);
       _zod.gt = (arg0, arg1) => _zod.check(closure_1_8.gt(arg0, arg1));
       _zod.gte = (arg0, arg1) => _zod.check(closure_1_8.gte(arg0, arg1));
       _zod.min = (arg0, arg1) => _zod.check(closure_1_8.gte(arg0, arg1));
       _zod.lt = (arg0, arg1) => _zod.check(closure_1_8.lt(arg0, arg1));
       _zod.lte = (arg0, arg1) => _zod.check(closure_1_8.lte(arg0, arg1));
       _zod.max = (arg0, arg1) => _zod.check(closure_1_8.lte(arg0, arg1));
-      _zod.int = (enc) => _zod.check(closure_1_6._int(closure_1_1.ZodNumberFormat, enc));
-      _zod.safe = (enc) => _zod.check(closure_1_6._int(closure_1_1.ZodNumberFormat, enc));
+      _zod.int = (message) => _zod.check(closure_1_6._int(exports.ZodNumberFormat, message));
+      _zod.safe = (message) => _zod.check(closure_1_6._int(exports.ZodNumberFormat, message));
       _zod.positive = (arg0) => _zod.check(closure_1_8.gt(0, arg0));
       _zod.nonnegative = (arg0) => _zod.check(closure_1_8.gte(0, arg0));
       _zod.negative = (arg0) => _zod.check(closure_1_8.lt(0, arg0));
@@ -1540,7 +1532,7 @@ if (self2) {
       $ZodBigInt.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.bigintProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.bigintProcessor(closure_0, unrepresentable, arg1, arg2);
       _zod.gte = (arg0, arg1) => _zod.check(closure_1_8.gte(arg0, arg1));
       _zod.min = (arg0, arg1) => _zod.check(closure_1_8.gte(arg0, arg1));
       _zod.gt = (arg0, arg1) => _zod.check(closure_1_8.gt(arg0, arg1));
@@ -1583,7 +1575,7 @@ if (self2) {
       $ZodSymbol.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.symbolProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.symbolProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     exports.ZodUndefined = fnResult.$constructor("ZodUndefined", (_zod) => {
       closure_0 = _zod;
@@ -1591,7 +1583,7 @@ if (self2) {
       $ZodUndefined.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.undefinedProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.undefinedProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     exports.ZodNull = fnResult.$constructor("ZodNull", (_zod) => {
       closure_0 = _zod;
@@ -1599,7 +1591,7 @@ if (self2) {
       $ZodNull.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.nullProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (target) => closure_1_7.nullProcessor(closure_0, target, arg1, arg2);
     });
     exports.ZodAny = fnResult.$constructor("ZodAny", (_zod) => {
       closure_0 = _zod;
@@ -1631,7 +1623,7 @@ if (self2) {
       $ZodVoid.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.voidProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.voidProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     exports.ZodDate = fnResult.$constructor("ZodDate", (_zod) => {
       closure_0 = _zod;
@@ -1639,7 +1631,7 @@ if (self2) {
       $ZodDate.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.dateProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.dateProcessor(closure_0, unrepresentable, arg1, arg2);
       _zod.min = (arg0, arg1) => _zod.check(closure_1_8.gte(arg0, arg1));
       _zod.max = (arg0, arg1) => _zod.check(closure_1_8.lte(arg0, arg1));
       const bag = _zod._zod.bag;
@@ -1662,7 +1654,7 @@ if (self2) {
       $ZodArray.init(_zod, element);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, element);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.arrayProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (arg0, arg1, path) => closure_1_7.arrayProcessor(closure_0, arg0, arg1, path);
       _zod.element = element.element;
       _zod.min = (minItems) => _zod.check(closure_1_8.minLength(minItems, arg1));
       _zod.nonempty = (arg0) => _zod.check(closure_1_8.minLength(1, arg0));
@@ -1677,20 +1669,20 @@ if (self2) {
       $ZodObjectJIT.init(_zod, arg1);
       const ZodType = _exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.objectProcessor(closure_0, arg0, arg1, arg2);
-      let util = _12199__.util;
+      _zod._zod.processJSONSchema = (io, properties, path) => closure_1_7.objectProcessor(closure_0, io, properties, path);
+      let util = require("12199__.js").util;
       util.defineLazy(_zod, "shape", () => closure_1.shape);
       _zod.keyof = () => {
         const keys = Object.keys(_zod._zod.def.shape);
         let fromEntriesResult = keys;
         if (Array.isArray(keys)) {
           const _Object = Object;
-          fromEntriesResult = Object.fromEntries(keys.map((arg0) => {
-            const items = [arg0, arg0];
+          fromEntriesResult = Object.fromEntries(keys.map((item, index) => {
+            const items = [item, item];
             return items;
           }));
         }
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         const merged = Object.assign(util.normalizeParams(undefined));
         const zodEnum = new closure_1.ZodEnum({ type: "enum", entries: fromEntriesResult });
         return zodEnum;
@@ -1726,33 +1718,33 @@ if (self2) {
         return _zod.clone(obj);
       };
       _zod.extend = (arg0) => {
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.extend(_zod, arg0);
       };
       _zod.safeExtend = (arg0) => {
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.safeExtend(_zod, arg0);
       };
       _zod.merge = (arg0) => {
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.merge(_zod, arg0);
       };
       _zod.pick = (arg0) => {
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.pick(_zod, arg0);
       };
       _zod.omit = (closure_3) => {
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.omit(_zod, closure_3);
       };
       _zod.partial = () => {
         const items = [...arguments];
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.partial(closure_1.ZodOptional, _zod, items[0]);
       };
       _zod.required = () => {
         const items = [...arguments];
-        const util = _zod(closure_1_2[1]).util;
+        const util = _zod(dependencyMap[1]).util;
         return util.required(closure_1.ZodNonOptional, _zod, items[0]);
       };
     });
@@ -1786,7 +1778,7 @@ if (self2) {
       $ZodIntersection.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.intersectionProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (arg0, arg1, path) => closure_1_7.intersectionProcessor(closure_0, arg0, arg1, path);
     });
     exports.ZodTuple = fnResult.$constructor("ZodTuple", (_zod) => {
       closure_0 = _zod;
@@ -1794,7 +1786,7 @@ if (self2) {
       $ZodTuple.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.tupleProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (target, items, path) => closure_1_7.tupleProcessor(closure_0, target, items, path);
       _zod.rest = (rest) => {
         const obj = {};
         const merged = Object.assign(_zod._zod.def);
@@ -1808,7 +1800,7 @@ if (self2) {
       $ZodRecord.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.recordProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (target, patternProperties, path) => closure_1_7.recordProcessor(closure_0, target, patternProperties, path);
       ({ keyType: _zod.keyType, valueType: _zod.valueType } = arg1);
     });
     exports.ZodMap = fnResult.$constructor("ZodMap", (_zod) => {
@@ -1817,13 +1809,13 @@ if (self2) {
       $ZodMap.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.mapProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.mapProcessor(closure_0, unrepresentable, arg1, arg2);
       ({ keyType: _zod.keyType, valueType: _zod.valueType } = arg1);
       _zod.min = () => {
         const items = [...HermesBuiltin.copyRestArgs()];
         return _zod.check(closure_1_6._minSize.apply(items));
       };
-      _zod.nonempty = (enc) => _zod.check(closure_1_6._minSize(1, enc));
+      _zod.nonempty = (message) => _zod.check(closure_1_6._minSize(1, message));
       _zod.max = () => {
         const items = [...HermesBuiltin.copyRestArgs()];
         return _zod.check(closure_1_6._maxSize.apply(items));
@@ -1839,12 +1831,12 @@ if (self2) {
       $ZodSet.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.setProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.setProcessor(closure_0, unrepresentable, arg1, arg2);
       _zod.min = () => {
         const items = [...HermesBuiltin.copyRestArgs()];
         return _zod.check(closure_1_6._minSize.apply(items));
       };
-      _zod.nonempty = (enc) => _zod.check(closure_1_6._minSize(1, enc));
+      _zod.nonempty = (message) => _zod.check(closure_1_6._minSize(1, message));
       _zod.max = () => {
         const items = [...HermesBuiltin.copyRestArgs()];
         return _zod.check(closure_1_6._maxSize.apply(items));
@@ -1865,29 +1857,19 @@ if (self2) {
       _zod.enum = arg1.entries;
       _zod.options = Object.values(arg1.entries);
       const set = new Set(Object.keys(arg1.entries));
-      _zod.extract = (arg0, enc) => {
+      _zod.extract = (arg0, message) => {
         let obj = {};
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp2 = nextResult;
-          let tmp3 = set;
           if (set.has(nextResult)) {
-            let tmp10 = nextResult;
-            let tmp11 = closure_1;
             obj[tmp2] = closure_1.entries[tmp2];
             continue;
           } else {
-            let tmp4 = globalThis;
             let _Error = Error;
-            let tmp5 = nextResult;
             let _HermesInternal = HermesInternal;
-            let str = " not found in enum";
-            let str2 = "Key ";
-            let tmp6 = new.target;
-            let tmp7 = new.target;
             error = new Error("Key " + tmp2 + " not found in enum");
-            let tmp9 = error;
             throw error;
           }
         }
@@ -1895,34 +1877,25 @@ if (self2) {
         const merged = Object.assign(closure_1);
         obj.checks = [];
         const util = _zod(set[1]).util;
-        const merged1 = Object.assign(util.normalizeParams(enc));
+        const merged1 = Object.assign(util.normalizeParams(message));
         obj.entries = obj;
         const zodEnum = new closure_1.ZodEnum(obj);
         return zodEnum;
       };
-      _zod.exclude = (arg0, enc) => {
+      _zod.exclude = (arg0, message) => {
         let obj = {};
         const merged = Object.assign(closure_1.entries);
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp6 = set;
           let tmp5 = nextResult;
           if (set.has(nextResult)) {
-            let tmp13 = nextResult;
             delete tmp[tmp2];
             continue;
           } else {
-            let tmp7 = globalThis;
             let _Error = Error;
-            let tmp8 = nextResult;
             let _HermesInternal = HermesInternal;
-            let str = " not found in enum";
-            let str2 = "Key ";
-            let tmp9 = new.target;
-            let tmp10 = new.target;
             error = new Error("Key " + tmp5 + " not found in enum");
-            let tmp12 = error;
             throw error;
           }
         }
@@ -1930,7 +1903,7 @@ if (self2) {
         const merged1 = Object.assign(closure_1);
         obj.checks = [];
         const util = _zod(set[1]).util;
-        const merged2 = Object.assign(util.normalizeParams(enc));
+        const merged2 = Object.assign(util.normalizeParams(message));
         obj.entries = obj;
         const zodEnum = new closure_1.ZodEnum(obj);
         return zodEnum;
@@ -1943,7 +1916,7 @@ if (self2) {
       $ZodLiteral.init(_zod, arg1);
       const ZodType = _exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.literalProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.literalProcessor(closure_0, unrepresentable, arg1, arg2);
       _zod.values = new Set(arg1.values);
       Object.defineProperty(_zod, "value", {
         get() {
@@ -1964,15 +1937,16 @@ if (self2) {
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
       _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.fileProcessor(closure_0, arg0, arg1, arg2);
-      _zod.min = (minimum, enc) => _zod.check(closure_1_6._minSize(minimum, enc));
-      _zod.max = (maximum, enc) => _zod.check(closure_1_6._maxSize(maximum, enc));
-      _zod.mime = (mime, enc) => {
-        let tmp3 = mime;
-        if (!Array.isArray(mime)) {
-          const items = [mime];
+      _zod.min = (minimum, message) => _zod.check(closure_1_6._minSize(minimum, message));
+      _zod.max = (maximum, message) => _zod.check(closure_1_6._maxSize(maximum, message));
+      _zod.mime = (items, message) => {
+        let tmp3 = items;
+        if (!Array.isArray(items)) {
+          items = [];
+          items[0] = items;
           tmp3 = items;
         }
-        return _zod.check(closure_1_6._mime(tmp3, enc));
+        return _zod.check(closure_1_6._mime(tmp3, message));
       };
     });
     exports.ZodTransform = fnResult.$constructor("ZodTransform", (_zod) => {
@@ -1982,7 +1956,7 @@ if (self2) {
       $ZodTransform.init(_zod, arg1);
       const ZodType = _exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.transformProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.transformProcessor(closure_0, unrepresentable, arg1, arg2);
       _zod._zod.parse = (arg0, direction) => {
         let iter = arg0;
         const constructor = arg0;
@@ -1990,33 +1964,33 @@ if (self2) {
           const ZodEncodeError = new closure_1_6.$ZodEncodeError(constructor.constructor.name);
           throw ZodEncodeError;
         } else {
-          iter.addIssue = (str) => {
-            if (typeof str === "string") {
+          iter.addIssue = (fatal) => {
+            if (typeof fatal === "string") {
               const issues = lib.issues;
-              const util2 = lib(closure_2_2[1]).util;
-              issues.push(util2.issue(str, lib.value, closure_1_1));
+              const util2 = lib(dependencyMap[1]).util;
+              issues.push(util2.issue(fatal, lib.value, closure_1_1));
             } else {
-              if (str.fatal) {
-                str.continue = false;
+              if (fatal.fatal) {
+                fatal.continue = false;
               }
-              if (str.code == null) {
-                str.code = "custom";
+              if (fatal.code == null) {
+                fatal.code = "custom";
               }
-              if (str.input == null) {
-                str.input = lib.value;
+              if (fatal.input == null) {
+                fatal.input = lib.value;
               }
-              if (str.inst == null) {
-                str.inst = lib;
+              if (fatal.inst == null) {
+                fatal.inst = lib;
               }
               const issues1 = lib.issues;
-              const util = lib(closure_2_2[1]).util;
-              issues1.push(util.issue(str));
+              const util = lib(dependencyMap[1]).util;
+              issues1.push(util.issue(fatal));
             }
           };
           const transformResult = closure_1.transform(iter.value, iter);
           if (transformResult instanceof Promise) {
-            iter = transformResult.then((value) => {
-              closure_0.value = value;
+            iter = transformResult.then((result) => {
+              closure_0.value = result;
               return closure_0;
             });
           } else {
@@ -2032,7 +2006,7 @@ if (self2) {
       $ZodOptional.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.optionalProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.optionalProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodExactOptional = fnResult.$constructor("ZodExactOptional", (_zod) => {
@@ -2041,7 +2015,7 @@ if (self2) {
       $ZodExactOptional.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.optionalProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.optionalProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodNullable = fnResult.$constructor("ZodNullable", (_zod) => {
@@ -2050,7 +2024,7 @@ if (self2) {
       $ZodNullable.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.nullableProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (target) => closure_1_7.nullableProcessor(closure_0, target, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodDefault = fnResult.$constructor("ZodDefault", (_zod) => {
@@ -2059,7 +2033,7 @@ if (self2) {
       $ZodDefault.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.defaultProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.defaultProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
       _zod.removeDefault = _zod.unwrap;
     });
@@ -2069,7 +2043,7 @@ if (self2) {
       $ZodPrefault.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.prefaultProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.prefaultProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodNonOptional = fnResult.$constructor("ZodNonOptional", (_zod) => {
@@ -2078,7 +2052,7 @@ if (self2) {
       $ZodNonOptional.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.nonoptionalProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.nonoptionalProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodSuccess = fnResult.$constructor("ZodSuccess", (_zod) => {
@@ -2096,7 +2070,7 @@ if (self2) {
       $ZodCatch.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.catchProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.catchProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
       _zod.removeCatch = _zod.unwrap;
     });
@@ -2106,7 +2080,7 @@ if (self2) {
       $ZodNaN.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.nanProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.nanProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     exports.ZodPipe = fnResult.$constructor("ZodPipe", (_zod) => {
       closure_0 = _zod;
@@ -2114,7 +2088,7 @@ if (self2) {
       $ZodPipe.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.pipeProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (io) => closure_1_7.pipeProcessor(closure_0, io, arg1, arg2);
       ({ in: _zod.in, out: _zod.out } = arg1);
     });
     exports.ZodCodec = fnResult.$constructor("ZodCodec", (arg0, arg1) => {
@@ -2129,7 +2103,7 @@ if (self2) {
       $ZodReadonly.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.readonlyProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.readonlyProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodTemplateLiteral = fnResult.$constructor("ZodTemplateLiteral", (_zod) => {
@@ -2146,7 +2120,7 @@ if (self2) {
       $ZodLazy.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.lazyProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.lazyProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => {
         const def = _zod._zod.def;
         return def.getter();
@@ -2157,7 +2131,7 @@ if (self2) {
       closure_6.$ZodPromise.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.promiseProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (seen) => closure_1_7.promiseProcessor(closure_0, seen, arg1, arg2);
       _zod.unwrap = () => _zod._zod.def.innerType;
     });
     exports.ZodFunction = fnResult.$constructor("ZodFunction", (_zod) => {
@@ -2166,7 +2140,7 @@ if (self2) {
       $ZodFunction.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.functionProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.functionProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     exports.ZodCustom = fnResult.$constructor("ZodCustom", (_zod) => {
       closure_0 = _zod;
@@ -2174,7 +2148,7 @@ if (self2) {
       $ZodCustom.init(_zod, arg1);
       const ZodType = exports.ZodType;
       ZodType.init(_zod, arg1);
-      _zod._zod.processJSONSchema = (arg0, arg1, arg2) => closure_1_7.customProcessor(closure_0, arg0, arg1, arg2);
+      _zod._zod.processJSONSchema = (unrepresentable) => closure_1_7.customProcessor(closure_0, unrepresentable, arg1, arg2);
     });
     ({ describe: exports.describe, meta: exports.meta } = fnResult);
     exports.stringbool = () => {

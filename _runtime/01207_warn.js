@@ -1,5 +1,5 @@
 // _runtime/01207_warn.js
-import closure_0 from "00019_noop.js";
+import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import isHermesEnabled from "01002_isHermesEnabled.js";
 import { debug } from "00817_registerSpanErrorInstrumentation.js";

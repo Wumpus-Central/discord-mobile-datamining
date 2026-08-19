@@ -1,5 +1,6 @@
 // _runtime/00050_processColor.js
 import normalizeColor from "00051_normalizeColor.js";
+import PlatformColor from "00052_PlatformColor.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -10,7 +11,7 @@ arg5.default = function processColor(arg0) {
     const defaultResult = normalizeColor.default(arg0);
     if (null != defaultResult) {
       if (typeof defaultResult === "object") {
-        const processColorObjectResult = tmp(52).processColorObject(defaultResult);
+        const processColorObjectResult = PlatformColor.processColorObject(defaultResult);
         if (null != processColorObjectResult) {
           return processColorObjectResult;
         }
@@ -21,7 +22,5 @@ arg5.default = function processColor(arg0) {
       }
       return tmp4;
     }
-    const obj = normalizeColor;
-    tmp = require;
   }
 };

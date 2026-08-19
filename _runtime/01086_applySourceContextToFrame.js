@@ -8,7 +8,6 @@ export const applySourceContextToFrame = function applySourceContextToFrame(file
     if (filename.lineno) {
       if (arg1.length) {
         registerSpanErrorInstrumentation.addContextToFrame(arg1, filename, arg3);
-        const obj = registerSpanErrorInstrumentation;
       }
     }
   }
@@ -19,19 +18,14 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
   if (arg0 === undefined) {
     obj = {};
   }
-  let num;
-  num = 7;
-  if (null != obj.frameContextLines) {
-    num = obj.frameContextLines;
-  }
   obj = {
     name: "ContextLines",
     processEvent(exception) {
-      const _document = num(closure_1_1[0]).GLOBAL_OBJ.document;
-      let _location = num(closure_1_1[0]).GLOBAL_OBJ.location;
+      const _document = num(dependencyMap[0]).GLOBAL_OBJ.document;
+      let _location = num(dependencyMap[0]).GLOBAL_OBJ.location;
       if (_location) {
-        _location = tmp(tmp2[0]).stripUrlQueryAndFragment(tmp(tmp2[0]).GLOBAL_OBJ.location.href);
-        const tmpResult = tmp(tmp2[0]);
+        _location = tmp(dependencyMap[0]).stripUrlQueryAndFragment(tmp(dependencyMap[0]).GLOBAL_OBJ.location.href);
+        const tmpResult = tmp(dependencyMap[0]);
       }
       if (_document) {
         if (_location) {
@@ -48,24 +42,24 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
             if (_document.documentElement.innerHTML) {
               const items = ["<!DOCTYPE html>", "<html>"];
               items[HermesBuiltin.arraySpread(str.split("\n"), 2)] = "</html>";
-              const item = values.forEach((stacktrace) => {
-                stacktrace = stacktrace.stacktrace;
+              const item = values.forEach((item, index) => {
+                const stacktrace = item.stacktrace;
                 let frames;
                 if (stacktrace != null) {
                   frames = stacktrace.frames;
                 }
                 if (frames) {
                   const frames1 = stacktrace.frames;
-                  stacktrace.frames = frames1.map((filename) => {
-                    if (filename.filename === closure_1) {
-                      if (filename.lineno) {
-                        if (arr.length) {
-                          closure_1_0(closure_1_1[0]).addContextToFrame(arr, filename, tmp);
-                          const obj = closure_1_0(closure_1_1[0]);
+                  stacktrace.frames = frames1.map((item, index) => {
+                    if (item.filename === closure_1) {
+                      if (item.lineno) {
+                        if (length.length) {
+                          closure_1_0(_location[0]).addContextToFrame(length, item, tmp);
+                          const obj = closure_1_0(_location[0]);
                         }
                       }
                     }
-                    return filename;
+                    return item;
                   });
                 }
               });

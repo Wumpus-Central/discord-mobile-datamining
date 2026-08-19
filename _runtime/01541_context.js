@@ -4,7 +4,7 @@ import NavigationContext from "01544_NavigationContext.js";
 import importAllResult from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let context = importAllResult.createContext(undefined);
 
 export const NavigationRouteContext = context;
@@ -22,8 +22,7 @@ export const NavigationProvider = function NavigationProvider(route) {
   if (!tmp5) {
     tmp6 = context1 === route.key;
   }
-  let obj = { value: route, children: null };
-  obj = { value: navigation, children: jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children }) };
-  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children }) });
-  return <context.Provider value={navigation}>{jsx(tmp(1542).IsFocusedContext.Provider, { value: tmp6, children })}</context.Provider>;
+  const obj = { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) };
+  obj[1] = jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) });
+  return <context.Provider value={navigation}>{jsx(context12.IsFocusedContext.Provider, { value: tmp6, children })}</context.Provider>;
 };

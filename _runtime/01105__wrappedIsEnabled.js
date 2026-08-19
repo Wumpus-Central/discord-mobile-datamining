@@ -9,15 +9,15 @@ function _wrappedIsEnabled(arg0) {
     const applyResult = callback.apply(this, items);
     if (typeof first === "string") {
       if (typeof applyResult === "boolean") {
-        const result = callback(closure_1_1[0])._INTERNAL_insertFlagToScope(first, applyResult);
-        const obj = callback(closure_1_1[0]);
-        const result1 = callback(closure_1_1[0])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
-        const obj2 = callback(closure_1_1[0]);
+        const result = callback(dependencyMap[0])._INTERNAL_insertFlagToScope(first, applyResult);
+        const obj = callback(dependencyMap[0]);
+        const result1 = callback(dependencyMap[0])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
+        const obj2 = callback(dependencyMap[0]);
       }
       return applyResult;
     }
-    if (callback(closure_1_1[1]).DEBUG_BUILD) {
-      const debug = callback(closure_1_1[0]).debug;
+    if (callback(dependencyMap[1]).DEBUG_BUILD) {
+      const debug = callback(dependencyMap[0]).debug;
       const _HermesInternal = HermesInternal;
       debug.error("[Feature Flags] UnleashClient.isEnabled does not match expected signature. arg0: " + first + " (" + typeof first + "), result: " + applyResult + " (" + typeof applyResult + ")");
     }
@@ -30,7 +30,7 @@ export const unleashIntegration = registerSpanErrorInstrumentation.defineIntegra
   return {
     name: "Unleash",
     setupOnce() {
-      featureFlagClientClass(closure_1_1[0]).fill(featureFlagClientClass.prototype, "isEnabled", closure_1_2);
+      featureFlagClientClass(dependencyMap[0]).fill(featureFlagClientClass.prototype, "isEnabled", _wrappedIsEnabled);
     },
     processEvent(contexts) {
       return featureFlagClientClass(table[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);

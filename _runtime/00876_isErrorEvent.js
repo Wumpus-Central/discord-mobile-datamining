@@ -1,11 +1,9 @@
 // _runtime/00876_isErrorEvent.js
-import closure_2 from "metro/00032__slicedToArray.js";
+import "_slicedToArray";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
-import closure_3 from "metro/00041__classCallCheck.js";
+import "_classCallCheck";
 import _createClass from "metro/00042__createClass.js";
 
-let closure_0 = require;
-let closure_1 = dependencyMap;
 function isErrorEvent(type) {
   return undefined === type.type;
 }
@@ -24,9 +22,9 @@ function estimateMetricSizeInBytes(name) {
     c0 = 0;
     const _Object = Object;
     const values = Object.values(attributes);
-    const item = values.forEach((str) => {
-      if (Array.isArray(str)) {
-        let first = str[0];
+    const item = values.forEach((item, index) => {
+      if (Array.isArray(item)) {
+        let first = item[0];
         if (typeof first === "string") {
           first = first.length;
           let num4 = 2 * first;
@@ -40,24 +38,26 @@ function estimateMetricSizeInBytes(name) {
             num4 = num7;
           }
         }
-        closure_0 = closure_0 + str.length * num4;
-        const tmp4 = closure_0;
-      } else if (obj.isPrimitive(str)) {
-        if (typeof str === "string") {
-          let num2 = 2 * str.length;
-        } else {
-          num2 = 8;
-          if (typeof str !== "number") {
-            let num6 = 0;
-            if (typeof str === "boolean") {
-              num6 = 4;
-            }
-            num2 = num6;
-          }
-        }
-        closure_0 = tmp3 + num2;
+        closure_0 = closure_0 + item.length * num4;
       } else {
-        closure_0 = tmp3 + 100;
+        if (obj.isPrimitive(item)) {
+          if (typeof item === "string") {
+            let num2 = 2 * item.length;
+          } else {
+            num2 = 8;
+            if (typeof item !== "number") {
+              let num6 = 0;
+              if (typeof item === "boolean") {
+                num6 = 4;
+              }
+              num2 = num6;
+            }
+          }
+          closure_0 = tmp3 + num2;
+        } else {
+          closure_0 = tmp3 + 100;
+        }
+        obj = v0(closure_1_1[13]);
       }
     });
     num3 = c0;
@@ -76,9 +76,9 @@ function estimateLogSizeInBytes(message) {
     c0 = 0;
     const _Object = Object;
     const values = Object.values(attributes);
-    const item = values.forEach((str) => {
-      if (Array.isArray(str)) {
-        let first = str[0];
+    const item = values.forEach((item, index) => {
+      if (Array.isArray(item)) {
+        let first = item[0];
         if (typeof first === "string") {
           first = first.length;
           let num4 = 2 * first;
@@ -92,24 +92,26 @@ function estimateLogSizeInBytes(message) {
             num4 = num7;
           }
         }
-        closure_0 = closure_0 + str.length * num4;
-        const tmp4 = closure_0;
-      } else if (obj.isPrimitive(str)) {
-        if (typeof str === "string") {
-          let num2 = 2 * str.length;
-        } else {
-          num2 = 8;
-          if (typeof str !== "number") {
-            let num6 = 0;
-            if (typeof str === "boolean") {
-              num6 = 4;
-            }
-            num2 = num6;
-          }
-        }
-        closure_0 = tmp3 + num2;
+        closure_0 = closure_0 + item.length * num4;
       } else {
-        closure_0 = tmp3 + 100;
+        if (obj.isPrimitive(item)) {
+          if (typeof item === "string") {
+            let num2 = 2 * item.length;
+          } else {
+            num2 = 8;
+            if (typeof item !== "number") {
+              let num6 = 0;
+              if (typeof item === "boolean") {
+                num6 = 4;
+              }
+              num2 = num6;
+            }
+          }
+          closure_0 = tmp3 + num2;
+        } else {
+          closure_0 = tmp3 + 100;
+        }
+        obj = v0(closure_1_1[13]);
       }
     });
     num3 = c0;
@@ -121,10 +123,10 @@ const Client = "Not capturing exception because it's already been captured.";
 let c5 = "Discarded session because of missing or non-string release";
 let closure_6 = Symbol.for("SentryInternalError");
 let closure_7 = Symbol.for("SentryDoNotSendEventError");
-closure_0 = undefined;
-closure_1 = undefined;
-closure_2 = undefined;
-closure_3 = undefined;
+let closure_0;
+let closure_1;
+let _slicedToArray;
+let _classCallCheck;
 class Client {
   constructor(arg0) {
     self = this;
@@ -264,8 +266,7 @@ class Client {
 let obj = {
   key: "captureException",
   value: function captureException(arg0, arg1, arg2) {
-    let self = this;
-    self = this;
+    const self = this;
     const dependencyMap = arg0;
     closure_2 = arg2;
     obj = obj(830);
@@ -282,7 +283,7 @@ let obj = {
       const merged = Object.assign(arg1);
       self._process(() => {
         const eventFromExceptionResult = self.eventFromException(closure_1, obj);
-        return self.eventFromException(closure_1, obj).then((arg0) => closure_3._captureEvent(arg0, closure_0, closure_2)).then((arg0) => arg0);
+        return self.eventFromException(closure_1, obj).then((result) => closure_3._captureEvent(result, closure_0, closure_2)).then((result) => result);
       }, "error");
       return obj.event_id;
     }
@@ -294,8 +295,7 @@ let items = [
   {
     key: "captureMessage",
     value: function captureMessage(arg0, arg1, arg2, arg3) {
-      let self = this;
-      self = this;
+      const self = this;
       const dependencyMap = arg3;
       const obj = { event_id: callback(830).uuid4() };
       const merged = Object.assign(arg2);
@@ -318,15 +318,14 @@ let items = [
       if (isPrimitiveResult) {
         str = "unknown";
       }
-      self._process(() => eventFromMessageResult.then((arg0) => closure_3._captureEvent(arg0, closure_2, closure_1)), str);
+      self._process(() => eventFromMessageResult.then((result) => closure_3._captureEvent(result, closure_2, closure_1)), str);
       return obj.event_id;
     }
   },
   {
     key: "captureEvent",
     value: function captureEvent(sdkProcessingMetadata, originalException) {
-      let self = this;
-      self = this;
+      const self = this;
       const dependencyMap = sdkProcessingMetadata;
       closure_2 = arg2;
       let obj = callback(830);
@@ -337,13 +336,13 @@ let items = [
       }
       if (originalException) {
         if (tmpResult.checkOrSetAlreadyCaught(originalException.originalException)) {
-          if (tmp(823).DEBUG_BUILD) {
-            const debug = tmp(824).debug;
+          if (callback(823).DEBUG_BUILD) {
+            const debug = callback(824).debug;
             debug.log(Client);
           }
           return uuid4Result;
         }
-        tmpResult = tmp(830);
+        tmpResult = callback(830);
       }
       obj = { event_id: uuid4Result };
       const merged = Object.assign(originalException);
@@ -422,7 +421,7 @@ let items = [
 
 ];
 obj = { key: "flush", value: null };
-closure_3 = asyncGeneratorStep(function(arg0) {
+_classCallCheck = asyncGeneratorStep(function(arg0) {
   const self = this;
   closure_1 = arg0;
   c3 = 0;
@@ -446,7 +445,7 @@ closure_3 = asyncGeneratorStep(function(arg0) {
 });
 obj[1] = function flush(arg0) {
   const self = this;
-  const apply = closure_3.apply;
+  const apply = _classCallCheck.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -456,7 +455,7 @@ obj[1] = function flush(arg0) {
 };
 items[8] = obj;
 obj = { key: "close", value: null };
-closure_2 = asyncGeneratorStep(function(arg0) {
+_slicedToArray = asyncGeneratorStep(function(arg0) {
   const self = this;
   closure_1 = arg0;
   c4 = 0;
@@ -472,7 +471,7 @@ closure_2 = asyncGeneratorStep(function(arg0) {
 });
 obj[1] = function close(arg0) {
   const self = this;
-  const apply = closure_2.apply;
+  const apply = _slicedToArray.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -501,8 +500,8 @@ items[12] = {
     let _isEnabledResult = this._isEnabled();
     if (!_isEnabledResult) {
       const integrations = self._options.integrations;
-      _isEnabledResult = integrations.some((name) => {
-        name = name.name;
+      _isEnabledResult = integrations.some((item, index) => {
+        const name = item.name;
         return name.startsWith("Spotlight");
       });
     }
@@ -526,13 +525,13 @@ items[14] = {
       const result = callback(887).afterSetupIntegrations(this, items);
       const tmpResult = callback(887);
     }
+    const obj = callback(887);
   }
 };
 items[15] = {
   key: "sendEvent",
   value: function sendEvent(arg0) {
-    let self = this;
-    self = this;
+    const self = this;
     const callback = arg0;
     let obj = arg1;
     if (arg1 === undefined) {
@@ -541,17 +540,14 @@ items[15] = {
     self.emit("beforeSendEvent", arg0, obj);
     let eventEnvelope = callback(self[16]).createEventEnvelope(arg0, self._dsn, self._options._metadata, self._options.tunnel);
     for (const item10025 of tmp3) {
-      let tmp4 = callback;
-      let tmp5 = self;
       let obj3 = callback(self[17]);
-      let tmp6 = eventEnvelope;
       let obj4 = callback(self[17]);
       eventEnvelope = obj3.addItemToEnvelope(eventEnvelope, obj4.createAttachmentEnvelopeItem(item10025));
       continue;
     }
     const obj2 = callback(self[16]);
     const tmp3 = obj.attachments || [];
-    self.sendEnvelope(eventEnvelope).then((arg0) => self.emit("afterSendEvent", closure_0, arg0));
+    self.sendEnvelope(eventEnvelope).then((result) => self.emit("afterSendEvent", closure_0, result));
   }
 };
 items[16] = {
@@ -589,6 +585,7 @@ items[16] = {
     }
     self.emit("beforeSendSession", attrs);
     self.sendEnvelope(callback(863).createSessionEnvelope(attrs, self._dsn, self._options._metadata, self._options.tunnel));
+    const obj = callback(863);
   }
 };
 items[17] = {
@@ -603,7 +600,7 @@ items[17] = {
       const _HermesInternal = HermesInternal;
       const combined = "" + arg0 + ":" + arg1;
       if (callback(823).DEBUG_BUILD) {
-        const debug = tmp5(824).debug;
+        const debug = callback(824).debug;
         let str3 = "";
         if (num > 1) {
           const _HermesInternal2 = HermesInternal;
@@ -617,7 +614,6 @@ items[17] = {
         num3 = 0;
       }
       self._outcomes[combined] = num3 + num;
-      tmp5 = callback;
     }
   }
 };
@@ -645,7 +641,7 @@ items[19] = {
   value: function emit(arg0) {
     closure_0 = [...arguments].slice();
     if (this._hooks[arg0]) {
-      const item = arr.forEach((arg0) => arg0(...closure_0));
+      const item = arr.forEach((item, index) => item(...closure_0));
     }
   }
 };
@@ -787,7 +783,6 @@ items[22] = {
         }
         if (false === handled) {
           flag = true;
-          let tmp6 = iter;
           iter.return();
           flag2 = true;
           break;
@@ -807,8 +802,8 @@ items[22] = {
       tmp8 = tmp7;
     }
     if (tmp8) {
-      let obj = callback(845);
-      obj = flag;
+      callback(845);
+      let obj = flag;
       if (flag) {
         obj = { status: "crashed" };
       }
@@ -923,8 +918,7 @@ items[24] = {
 items[25] = {
   key: "_prepareEvent",
   value: function _prepareEvent(type, integrations, arg2, setLastEventId) {
-    let self = this;
-    self = this;
+    const self = this;
     const dependencyMap = integrations;
     const callback = arg2;
     const options = this.getOptions();
@@ -950,21 +944,21 @@ items[25] = {
       setLastEventId.setLastEventId(event_id);
     }
     let obj = callback(870);
-    return callback(870).prepareEvent(options, type, integrations, arg2, self, setLastEventId).then((contexts) => {
-      if (null === contexts) {
-        return contexts;
+    return callback(870).prepareEvent(options, type, integrations, arg2, self, setLastEventId).then((result) => {
+      if (null === result) {
+        return result;
       } else {
-        self.emit("postprocessEvent", contexts, integrations);
+        self.emit("postprocessEvent", result, integrations);
         let obj = { trace: null };
         obj[0] = callback(integrations[20]).getTraceContextFromScope(callback);
-        const merged = Object.assign(contexts.contexts);
-        contexts.contexts = obj;
+        const merged = Object.assign(result.contexts);
+        result.contexts = obj;
         const obj2 = callback(integrations[20]);
         obj = { dynamicSamplingContext: null };
         obj[0] = callback(integrations[21]).getDynamicSamplingContextFromScope(self, callback);
-        const merged1 = Object.assign(contexts.sdkProcessingMetadata);
-        contexts.sdkProcessingMetadata = obj;
-        return contexts;
+        const merged1 = Object.assign(result.sdkProcessingMetadata);
+        result.sdkProcessingMetadata = obj;
+        return result;
       }
     });
   }
@@ -987,33 +981,33 @@ items[26] = {
       const obj3 = callback(848);
     }
     if (tmp9) {
-      let debug = tmp7(824).debug;
-      const tmp7Result = tmp7(888);
+      let debug = callback(824).debug;
+      const tmp7Result = callback(888);
       const _HermesInternal = HermesInternal;
-      debug.log("Captured error event `" + tmp7(888).getPossibleEventMessages(type)[0] || "<unknown>" + "`");
-      const tmp10 = tmp7(888).getPossibleEventMessages(type)[0] || "<unknown>";
+      debug.log("Captured error event `" + callback(888).getPossibleEventMessages(type)[0] || "<unknown>" + "`");
+      const tmp10 = callback(888).getPossibleEventMessages(type)[0] || "<unknown>";
     }
     tmp9 = callback(823).DEBUG_BUILD && undefined === type.type;
-    return this._processEvent(type, obj, currentScope, isolationScope).then((event_id) => event_id.event_id, (obj) => {
+    return this._processEvent(type, obj, currentScope, isolationScope).then((result) => result.event_id, (message) => {
       if (callback(table[7]).DEBUG_BUILD) {
-        let tmp4 = obj && typeof obj === "object";
+        let tmp4 = message && typeof message === "object";
         if (tmp4) {
-          tmp4 = closure_7 in obj;
+          tmp4 = closure_7 in message;
         }
         if (tmp4) {
-          const debug2 = tmp(tmp2[8]).debug;
-          debug2.log(obj.message);
+          const debug2 = callback(table[8]).debug;
+          debug2.log(message.message);
         } else {
-          let tmp6 = obj && typeof obj === "object";
+          let tmp6 = message && typeof message === "object";
           if (tmp6) {
-            tmp6 = closure_6 in obj;
+            tmp6 = closure_6 in message;
           }
-          const debug = tmp(tmp2[8]).debug;
+          const debug = callback(table[8]).debug;
           const warn = debug.warn;
           if (tmp6) {
-            warn(obj.message);
+            warn(message.message);
           } else {
-            warn(obj);
+            warn(message);
           }
         }
       }
@@ -1023,8 +1017,7 @@ items[26] = {
 items[27] = {
   key: "_processEvent",
   value: function _processEvent(type) {
-    let self = this;
-    self = this;
+    const self = this;
     const dependencyMap = type;
     closure_2 = arg1;
     closure_3 = arg2;
@@ -1061,24 +1054,23 @@ items[27] = {
       str2 = str;
     }
     const _prepareEventResult = self._prepareEvent(type, arg1, arg2, arg3);
-    let tmp3 = type.type || "error";
-    let nextPromise = self._prepareEvent(type, arg1, arg2, arg3).then((sdkProcessingMetadata) => {
-      if (null === sdkProcessingMetadata) {
+    let nextPromise = self._prepareEvent(type, arg1, arg2, arg3).then((result) => {
+      if (null === result) {
         self.recordDroppedEvent("event_processor", closure_0);
         let obj = { message: "An event processor returned `null`, will not send event." };
         obj[closure_7] = true;
         throw obj;
       } else {
         if (data.data) {
-          if (true === tmp16.data.__sentry__) {
-            return sdkProcessingMetadata;
+          if (true === data.data.__sentry__) {
+            return result;
           }
         }
-        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
+        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, closure_2) {
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (callback2(sdkProcessingMetadata)) {
             if (beforeSend) {
-              return beforeSend(sdkProcessingMetadata, arg3);
+              return beforeSend(sdkProcessingMetadata, closure_2);
             }
           }
           let tmp = sdkProcessingMetadata;
@@ -1091,7 +1083,7 @@ items[27] = {
                 length = ignoreSpans.length;
               }
               if (length) {
-                let tmp4Result = tmp4(tmp6[28]);
+                let tmp4Result = callback(combined[28]);
                 if (tmp4Result.shouldIgnoreSpan(result, ignoreSpans)) {
                   return null;
                 }
@@ -1100,13 +1092,13 @@ items[27] = {
               if (beforeSendSpan) {
                 const beforeSendSpanResult = beforeSendSpan(result);
                 if (beforeSendSpanResult) {
-                  tmp4Result = tmp4(tmp6[30]);
-                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, tmp4(tmp6[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
-                  const tmp4Result1 = tmp4(tmp6[27]);
+                  tmp4Result = callback(combined[30]);
+                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, callback(combined[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
+                  const tmp4Result1 = callback(combined[27]);
                 } else {
-                  tmp4(tmp6[29]).showSpanDropWarning();
+                  callback(combined[29]).showSpanDropWarning();
                   mergeResult = sdkProcessingMetadata;
-                  const tmp4Result2 = tmp4(tmp6[29]);
+                  const tmp4Result2 = callback(combined[29]);
                 }
               }
               let tmp2 = mergeResult;
@@ -1114,46 +1106,29 @@ items[27] = {
                 const items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
-                  let tmp19 = item10054;
                   let length1;
                   if (ignoreSpans != null) {
                     length1 = ignoreSpans.length;
                   }
                   if (length1) {
-                    let tmp21 = callback;
-                    let tmp22 = callback;
-                    let tmp23 = combined;
-                    let tmp24 = combined;
                     let obj6 = callback(combined[28]);
-                    let tmp25 = item10054;
-                    if (obj6.shouldIgnoreSpan(tmp19, ignoreSpans)) {
-                      let tmp40 = tmp21;
-                      let tmp41 = tmp23;
-                      let tmp22Result = tmp22(tmp24[28]);
-                      let tmp42 = item10054;
-                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, tmp19);
+                    if (obj6.shouldIgnoreSpan(item10054, ignoreSpans)) {
+                      let tmp22Result = callback(combined[28]);
+                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, item10054);
                       continue;
                     }
                   }
                   if (beforeSendSpan) {
-                    let tmp28 = item10054;
-                    let beforeSendSpanResult1 = beforeSendSpan(tmp19);
+                    let beforeSendSpanResult1 = beforeSendSpan(item10054);
                     if (beforeSendSpanResult1) {
-                      let tmp38 = beforeSendSpanResult1;
                       let arr = items.push(tmp30);
                     } else {
-                      let tmp31 = callback;
-                      let tmp32 = callback;
-                      let tmp33 = combined;
-                      let tmp34 = combined;
                       let obj7 = callback(combined[29]);
                       let showSpanDropWarningResult1 = obj7.showSpanDropWarning();
-                      let tmp36 = item10054;
-                      arr = items.push(tmp19);
+                      arr = items.push(item10054);
                     }
                   } else {
-                    let tmp26 = item10054;
-                    let arr1 = items.push(tmp19);
+                    let arr1 = items.push(item10054);
                   }
                 }
                 const diff = mergeResult.spans.length - items.length;
@@ -1174,28 +1149,27 @@ items[27] = {
                 obj.spanCountBeforeProcessing = tmp2.spans.length;
                 tmp2.sdkProcessingMetadata = obj;
               }
-              return beforeSendTransaction(tmp2, arg3);
+              return beforeSendTransaction(tmp2, closure_2);
             }
           }
           return tmp;
-        })(self, options, sdkProcessingMetadata, data);
+        })(self, options, result, data);
         closure_0 = closure_8;
-        let combined;
         const _HermesInternal = HermesInternal;
-        combined = "" + closure_8 + " must return `null` or a valid event.";
+        const combined = "" + closure_8 + " must return `null` or a valid event.";
         obj = str2(type[13]);
         if (obj.isThenable(promise)) {
-          let nextPromise = promise.then((arg0) => {
+          let nextPromise = promise.then((result) => {
             let obj = callback(combined[13]);
-            if (!obj.isPlainObject(arg0)) {
-              if (null !== arg0) {
+            if (!obj.isPlainObject(result)) {
+              if (null !== result) {
                 obj = { message: null };
                 obj[0] = combined;
                 obj[closure_1_6] = true;
                 throw obj;
               }
             }
-            return arg0;
+            return result;
           }, (arg0) => {
             const obj = { message: "" + closure_0 + " rejected with " + arg0 };
             obj[closure_1_6] = true;
@@ -1217,23 +1191,23 @@ items[27] = {
         return nextPromise;
       }
     });
-    return self._prepareEvent(type, arg1, arg2, arg3).then((sdkProcessingMetadata) => {
-      if (null === sdkProcessingMetadata) {
+    return self._prepareEvent(type, arg1, arg2, arg3).then((result) => {
+      if (null === result) {
         self.recordDroppedEvent("event_processor", closure_0);
         let obj = { message: "An event processor returned `null`, will not send event." };
         obj[closure_7] = true;
         throw obj;
       } else {
         if (data.data) {
-          if (true === tmp16.data.__sentry__) {
-            return sdkProcessingMetadata;
+          if (true === data.data.__sentry__) {
+            return result;
           }
         }
-        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
+        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, closure_2) {
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (callback2(sdkProcessingMetadata)) {
             if (beforeSend) {
-              return beforeSend(sdkProcessingMetadata, arg3);
+              return beforeSend(sdkProcessingMetadata, closure_2);
             }
           }
           let tmp = sdkProcessingMetadata;
@@ -1246,7 +1220,7 @@ items[27] = {
                 length = ignoreSpans.length;
               }
               if (length) {
-                let tmp4Result = tmp4(tmp6[28]);
+                let tmp4Result = callback(combined[28]);
                 if (tmp4Result.shouldIgnoreSpan(result, ignoreSpans)) {
                   return null;
                 }
@@ -1255,13 +1229,13 @@ items[27] = {
               if (beforeSendSpan) {
                 const beforeSendSpanResult = beforeSendSpan(result);
                 if (beforeSendSpanResult) {
-                  tmp4Result = tmp4(tmp6[30]);
-                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, tmp4(tmp6[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
-                  const tmp4Result1 = tmp4(tmp6[27]);
+                  tmp4Result = callback(combined[30]);
+                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, callback(combined[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
+                  const tmp4Result1 = callback(combined[27]);
                 } else {
-                  tmp4(tmp6[29]).showSpanDropWarning();
+                  callback(combined[29]).showSpanDropWarning();
                   mergeResult = sdkProcessingMetadata;
-                  const tmp4Result2 = tmp4(tmp6[29]);
+                  const tmp4Result2 = callback(combined[29]);
                 }
               }
               let tmp2 = mergeResult;
@@ -1269,46 +1243,29 @@ items[27] = {
                 const items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
-                  let tmp19 = item10054;
                   let length1;
                   if (ignoreSpans != null) {
                     length1 = ignoreSpans.length;
                   }
                   if (length1) {
-                    let tmp21 = callback;
-                    let tmp22 = callback;
-                    let tmp23 = combined;
-                    let tmp24 = combined;
                     let obj6 = callback(combined[28]);
-                    let tmp25 = item10054;
-                    if (obj6.shouldIgnoreSpan(tmp19, ignoreSpans)) {
-                      let tmp40 = tmp21;
-                      let tmp41 = tmp23;
-                      let tmp22Result = tmp22(tmp24[28]);
-                      let tmp42 = item10054;
-                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, tmp19);
+                    if (obj6.shouldIgnoreSpan(item10054, ignoreSpans)) {
+                      let tmp22Result = callback(combined[28]);
+                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, item10054);
                       continue;
                     }
                   }
                   if (beforeSendSpan) {
-                    let tmp28 = item10054;
-                    let beforeSendSpanResult1 = beforeSendSpan(tmp19);
+                    let beforeSendSpanResult1 = beforeSendSpan(item10054);
                     if (beforeSendSpanResult1) {
-                      let tmp38 = beforeSendSpanResult1;
                       let arr = items.push(tmp30);
                     } else {
-                      let tmp31 = callback;
-                      let tmp32 = callback;
-                      let tmp33 = combined;
-                      let tmp34 = combined;
                       let obj7 = callback(combined[29]);
                       let showSpanDropWarningResult1 = obj7.showSpanDropWarning();
-                      let tmp36 = item10054;
-                      arr = items.push(tmp19);
+                      arr = items.push(item10054);
                     }
                   } else {
-                    let tmp26 = item10054;
-                    let arr1 = items.push(tmp19);
+                    let arr1 = items.push(item10054);
                   }
                 }
                 const diff = mergeResult.spans.length - items.length;
@@ -1329,28 +1286,27 @@ items[27] = {
                 obj.spanCountBeforeProcessing = tmp2.spans.length;
                 tmp2.sdkProcessingMetadata = obj;
               }
-              return beforeSendTransaction(tmp2, arg3);
+              return beforeSendTransaction(tmp2, closure_2);
             }
           }
           return tmp;
-        })(self, options, sdkProcessingMetadata, data);
+        })(self, options, result, data);
         closure_0 = closure_8;
-        let combined;
         const _HermesInternal = HermesInternal;
-        combined = "" + closure_8 + " must return `null` or a valid event.";
+        const combined = "" + closure_8 + " must return `null` or a valid event.";
         obj = str2(type[13]);
         if (obj.isThenable(promise)) {
-          let nextPromise = promise.then((arg0) => {
+          let nextPromise = promise.then((result) => {
             let obj = callback(combined[13]);
-            if (!obj.isPlainObject(arg0)) {
-              if (null !== arg0) {
+            if (!obj.isPlainObject(result)) {
+              if (null !== result) {
                 obj = { message: null };
                 obj[0] = combined;
                 obj[closure_1_6] = true;
                 throw obj;
               }
             }
-            return arg0;
+            return result;
           }, (arg0) => {
             const obj = { message: "" + closure_0 + " rejected with " + arg0 };
             obj[closure_1_6] = true;
@@ -1371,12 +1327,11 @@ items[27] = {
         }
         return nextPromise;
       }
-    }).then((sdkProcessingMetadata) => {
-      if (null === sdkProcessingMetadata) {
+    }).then((result) => {
+      if (null === result) {
         self.recordDroppedEvent("before_send", str2);
         if (closure_6) {
           self.recordDroppedEvent("before_send", "span", 1 + type.spans || [].length);
-          const arr = type.spans || [];
         }
         const _HermesInternal = HermesInternal;
         let obj = { message: null };
@@ -1393,10 +1348,10 @@ items[27] = {
           tmp3 = session;
         }
         if (tmp3) {
-          const result = self._updateSessionFromEvent(session, sdkProcessingMetadata);
+          result = self._updateSessionFromEvent(session, result);
         }
         if (closure_6) {
-          sdkProcessingMetadata = sdkProcessingMetadata.sdkProcessingMetadata;
+          const sdkProcessingMetadata = result.sdkProcessingMetadata;
           let num;
           if (sdkProcessingMetadata != null) {
             num = sdkProcessingMetadata.spanCountBeforeProcessing;
@@ -1405,27 +1360,27 @@ items[27] = {
             num = 0;
           }
           let num3 = 0;
-          if (sdkProcessingMetadata.spans) {
-            num3 = sdkProcessingMetadata.spans.length;
+          if (result.spans) {
+            num3 = result.spans.length;
           }
           const diff = num - num3;
           if (diff > 0) {
             self.recordDroppedEvent("before_send", "span", diff);
           }
         }
-        const transaction_info = sdkProcessingMetadata.transaction_info;
+        const transaction_info = result.transaction_info;
         if (closure_6) {
           if (transaction_info) {
-            if (sdkProcessingMetadata.transaction !== type.transaction) {
+            if (result.transaction !== type.transaction) {
               obj = {};
               const merged = Object.assign(transaction_info);
               obj.source = "custom";
-              sdkProcessingMetadata.transaction_info = obj;
+              result.transaction_info = obj;
             }
           }
         }
-        self.sendEvent(sdkProcessingMetadata, closure_2);
-        return sdkProcessingMetadata;
+        self.sendEvent(result, closure_2);
+        return result;
       }
     }).then(null, (obj) => {
       let tmp = obj && typeof obj === "object";
@@ -1461,9 +1416,9 @@ items[28] = {
     closure_0 = arg1;
     this._numProcessing = this._numProcessing + 1;
     const _promiseBuffer = this._promiseBuffer;
-    _promiseBuffer.add(arg0).then((arg0) => {
+    _promiseBuffer.add(arg0).then((result) => {
       self._numProcessing = self._numProcessing - 1;
-      return arg0;
+      return result;
     }, (arg0) => {
       self._numProcessing = self._numProcessing - 1;
       if (arg0 === callback(self[4]).SENTRY_BUFFER_FULL_ERROR) {
@@ -1478,8 +1433,8 @@ items[29] = {
   value: function _clearOutcomes() {
     this._outcomes = {};
     const entries = Object.entries(this._outcomes);
-    return entries.map((arg0) => {
-      [str, tmp] = arg0;
+    return entries.map((item, index) => {
+      [str, tmp] = item;
       const tmp2 = callback(str.split(":"), 2);
       return { reason: tmp2[0], category: tmp2[1], quantity: tmp };
     });
@@ -1489,31 +1444,31 @@ items[30] = {
   key: "_flushOutcomes",
   value: function _flushOutcomes() {
     if (callback(823).DEBUG_BUILD) {
-      const debug = tmp(824).debug;
+      const debug = callback(824).debug;
       debug.log("Flushing outcomes...");
     }
     const self = this;
     const _clearOutcomesResult = this._clearOutcomes();
     if (0 !== _clearOutcomesResult.length) {
-      const DEBUG_BUILD = tmp(823).DEBUG_BUILD;
+      const DEBUG_BUILD = callback(823).DEBUG_BUILD;
       if (self._dsn) {
         if (DEBUG_BUILD) {
-          const debug4 = tmp(824).debug;
+          const debug4 = callback(824).debug;
           debug4.log("Sending outcomes:", _clearOutcomesResult);
         }
-        let tmpResult = tmp(889);
+        let tmpResult = callback(889);
         let tunnel = self._options.tunnel;
         if (tunnel) {
-          tmpResult = tmp(837);
+          tmpResult = callback(837);
           tunnel = tmpResult.dsnToString(self._dsn);
         }
         self.sendEnvelope(tmpResult.createClientReportEnvelope(_clearOutcomesResult, tunnel));
       } else if (DEBUG_BUILD) {
-        const debug3 = tmp(824).debug;
+        const debug3 = callback(824).debug;
         debug3.log("No dsn provided, will not send outcomes");
       }
-    } else if (tmp(823).DEBUG_BUILD) {
-      const debug2 = tmp(824).debug;
+    } else if (callback(823).DEBUG_BUILD) {
+      const debug2 = callback(824).debug;
       debug2.log("No outcomes to send");
     }
   }

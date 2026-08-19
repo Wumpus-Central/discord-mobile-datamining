@@ -17,7 +17,6 @@ arg5.handleResponseError = function handleResponseError(setStatus, error) {
     obj = { mechanism: null };
     obj[0] = { handled: false, type: "auto.ai.anthropic.anthropic_error" };
     captureCheckIn.captureException(error.error, obj);
-    const tmp2 = require;
     const tmp2Result = captureCheckIn;
   }
 };
@@ -65,7 +64,6 @@ arg5.setMessagesAttribute = function setMessagesAttribute(setAttributes, message
     obj[_mod958.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = buildMethodPath.getTruncatedJsonString(messagesFromParamsResult);
     obj[_mod958.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = length;
     setAttributes.setAttributes(obj);
-    const obj2 = buildMethodPath;
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {

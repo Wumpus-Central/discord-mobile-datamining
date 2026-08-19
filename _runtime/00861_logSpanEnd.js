@@ -1,12 +1,14 @@
 // _runtime/00861_logSpanEnd.js
+import spanToJSON from "00819_spanToJSON.js";
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
+import consoleSandbox from "00824_consoleSandbox.js";
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.logSpanEnd = function logSpanEnd(spanContext) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    let tmpResult = tmp(819);
+    let tmpResult = spanToJSON;
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
@@ -19,20 +21,20 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
       str2 = op;
     }
     const spanId = spanContext.spanContext().spanId;
-    tmpResult = tmp(819);
+    tmpResult = spanToJSON;
     let str3 = "";
     if (tmpResult.getRootSpan(spanContext) === spanContext) {
       str3 = "root ";
     }
     const _HermesInternal = HermesInternal;
     const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const debug = tmp(824).debug;
+    const debug = consoleSandbox.debug;
     debug.log(combined);
   }
 };
 arg5.logSpanStart = function logSpanStart(spanContext) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    let tmpResult = tmp(819);
+    let tmpResult = spanToJSON;
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
@@ -45,9 +47,9 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
       str2 = op;
     }
     const parent_span_id = spanToJSONResult.parent_span_id;
-    tmpResult = tmp(819);
+    tmpResult = spanToJSON;
     const spanIsSampledResult = tmpResult.spanIsSampled(spanContext);
-    const rootSpan = tmp(819).getRootSpan(spanContext);
+    const rootSpan = spanToJSON.getRootSpan(spanContext);
     let str3 = "unsampled";
     if (spanIsSampledResult) {
       str3 = "sampled";
@@ -69,8 +71,8 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
       items.push("parent ID: " + parent_span_id);
     }
     if (rootSpan !== spanContext) {
-      const tmpResult2 = tmp(819);
-      ({ op: op2, description: description2 } = tmp(819).spanToJSON(rootSpan));
+      const tmpResult2 = spanToJSON;
+      ({ op: op2, description: description2 } = spanToJSON.spanToJSON(rootSpan));
       const _HermesInternal6 = HermesInternal;
       items.push("root ID: " + rootSpan.spanContext().spanId);
       if (op2) {
@@ -81,11 +83,11 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
         const _HermesInternal8 = HermesInternal;
         items.push("root description: " + description2);
       }
-      const spanToJSONResult1 = tmp(819).spanToJSON(rootSpan);
+      const spanToJSONResult1 = spanToJSON.spanToJSON(rootSpan);
     }
-    const debug = tmp(824).debug;
+    const debug = consoleSandbox.debug;
     const _HermesInternal9 = HermesInternal;
     debug.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult1 = tmp(819);
+    const tmpResult1 = spanToJSON;
   }
 };

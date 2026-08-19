@@ -1,5 +1,7 @@
 // _runtime/00517_unsafeStringify.js
-const module = arg2;
+import validateDefault from "00518_validate.js";
+
+importDefault = arg2;
 const dependencyMap = arg6;
 function unsafeStringify(array, arg1) {
   let num = arg1;
@@ -12,8 +14,8 @@ const items = [];
 let num = 0;
 do {
   let str = num + 256;
-  str = require("module_16");
-  let arr = items.push(require("module_1"));
+  str = require("../discord_app/utils/checkEnv.tsx");
+  let arr = items.push(require("../discord_app/modules/debug/logAppStart.tsx"));
   num = num + 1;
 } while (num < 256);
 arg5.default = function stringify(array) {
@@ -22,7 +24,7 @@ arg5.default = function stringify(array) {
     num = 0;
   }
   const tmp = unsafeStringify(array, num);
-  if (module(518)(tmp)) {
+  if (validateDefault(tmp)) {
     return tmp;
   } else {
     const _TypeError = TypeError;

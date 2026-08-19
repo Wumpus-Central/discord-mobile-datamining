@@ -175,7 +175,7 @@ class RBTree {
       tmp39 = null;
       obj9 = obj1;
       tmp40 = null;
-      if (null !== require("module_1")) {
+      if (null !== require("../discord_app/modules/debug/logAppStart.tsx")) {
         do {
           get_childResult = obj8.get_child(num);
           _comparatorResult = self._comparator(global, get_childResult.data);

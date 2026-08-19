@@ -1,24 +1,24 @@
 // _runtime/04060_r.js
 let fn = () => {
-  let fn = function r(arg0, _exports2, firstResult2) {
-    let _exports = arg0;
+  let fn = function r(closure_0, _exports2, closure_23) {
+    let _exports = dependencyMap;
     closure_1 = _exports2;
-    closure_2 = firstResult2;
+    closure_2 = closure_23;
     let tmp = typeof fn === "function";
     if (typeof fn === "function") {
       tmp = fn;
     }
     closure_3 = tmp;
     let num = 0;
-    if (0 < firstResult2.length) {
-      _exports = firstResult2[num];
+    if (0 < closure_23.length) {
+      _exports = closure_23[num];
       _exports2 = _exports2[_exports];
       while (!_exports2) {
-        if (arg0[_exports]) {
+        if (dependencyMap[_exports]) {
           let obj = { exports: null };
           obj[0] = {};
           _exports2[_exports] = obj;
-          let first = arg0[_exports][0];
+          let first = dependencyMap[_exports][0];
           let call = first.call;
           let _exports3 = obj.exports;
           fn = (arg0) => {
@@ -27,11 +27,11 @@ let fn = () => {
             if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
-            } else if (tmp[tmp2]) {
+            } else if (closure_1_0[tmp2]) {
               let obj = { exports: null };
               obj[0] = {};
               tmp3[tmp2] = obj;
-              let first = tmp[tmp2][0];
+              let first = closure_1_0[tmp2][0];
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
@@ -40,11 +40,11 @@ let fn = () => {
                 if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
-                } else if (tmp[tmp2]) {
+                } else if (closure_1_0[tmp2]) {
                   let obj = { exports: null };
                   obj[0] = {};
                   tmp3[tmp2] = obj;
-                  let first = tmp[tmp2][0];
+                  let first = closure_1_0[tmp2][0];
                   let call = first.call;
                   let _exports = obj.exports;
                   let fn = (arg0) => {
@@ -53,18 +53,18 @@ let fn = () => {
                     if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                       tmp3 = tmp3[tmp2];
                       let _exports3 = tmp3.exports;
-                    } else if (tmp[tmp2]) {
+                    } else if (closure_1_0[tmp2]) {
                       let obj = { exports: null };
                       obj[0] = {};
                       tmp3[tmp2] = obj;
-                      let first = tmp[tmp2][0];
+                      let first = closure_1_0[tmp2][0];
                       let call = first.call;
                       let _exports = obj.exports;
                       let fn = () => { ... };
                       let _exports2 = obj.exports;
                       let firstResult = closure_1_2;
                       if (typeof call !== "unknown") {
-                        call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                        call(_exports, fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
                       }
                     } else {
                       let tmp4 = typeof closure_2_0 === "function";
@@ -83,12 +83,12 @@ let fn = () => {
                       }
                       return tmp5Result;
                     }
-                    firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    firstResult = first(fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
                   };
                   let _exports2 = obj.exports;
                   let firstResult = closure_1_2;
                   if (typeof call !== "unknown") {
-                    call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    call(_exports, fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
                   }
                 } else {
                   let tmp4 = typeof closure_2_0 === "function";
@@ -107,12 +107,12 @@ let fn = () => {
                   }
                   return tmp5Result;
                 }
-                firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                firstResult = first(fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
               let firstResult = closure_1_2;
               if (typeof call !== "unknown") {
-                call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                call(_exports, fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
               }
             } else {
               let tmp4 = typeof closure_2_0 === "function";
@@ -131,32 +131,15 @@ let fn = () => {
               }
               return tmp5Result;
             }
-            firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+            firstResult = first(fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
           };
           _exports2 = obj.exports;
           let firstResult = _exports;
           if (typeof call === "unknown") {
-            let tmp12 = _exports3;
-            let tmp13 = fn;
-            let tmp14 = obj;
-            let tmp15 = _exports2;
-            let tmp16 = firstResult;
-            let tmp17 = arg0;
-            let tmp18 = _exports2;
-            let tmp19 = firstResult2;
-            firstResult = first(fn, obj, _exports2, firstResult, arg0, _exports2, firstResult2);
+            firstResult = first(fn, obj, _exports2, firstResult, dependencyMap, _exports2, closure_23);
             break;
           } else {
-            let tmp20 = first;
-            let tmp21 = _exports3;
-            let tmp22 = fn;
-            let tmp23 = obj;
-            let tmp24 = _exports2;
-            let tmp25 = firstResult;
-            let tmp26 = arg0;
-            let tmp27 = _exports2;
-            let tmp28 = firstResult2;
-            let callResult = call(_exports3, fn, obj, _exports2, firstResult, arg0, _exports2, firstResult2);
+            let callResult = call(_exports3, fn, obj, _exports2, firstResult, dependencyMap, _exports2, closure_23);
             break;
           }
           break;
@@ -170,15 +153,8 @@ let fn = () => {
           } else if (tmp) {
             fn = tmp(_exports, true);
           } else {
-            let tmp4 = globalThis;
             let _Error = Error;
-            let str = "Cannot find module '";
-            let tmp5 = new.target;
-            let str2 = "'";
-            let tmp6 = new.target;
             error = new Error("Cannot find module '" + _exports + "'");
-            let tmp8 = error;
-            let str3 = "MODULE_NOT_FOUND";
             error.code = "MODULE_NOT_FOUND";
             throw error;
           }
@@ -193,7 +169,7 @@ let fn = () => {
         if (table[arg0]) {
           const obj = { exports: null };
           obj[0] = {};
-          tmp[arg0] = obj;
+          table2[arg0] = obj;
           const first = tmp2[arg0][0];
           const call = first.call;
           _exports = obj.exports;
@@ -203,11 +179,11 @@ let fn = () => {
             if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
-            } else if (tmp[tmp2]) {
+            } else if (closure_1_0[tmp2]) {
               let obj = { exports: null };
               obj[0] = {};
               tmp3[tmp2] = obj;
-              let first = tmp[tmp2][0];
+              let first = closure_1_0[tmp2][0];
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
@@ -216,18 +192,18 @@ let fn = () => {
                 if (closure_1_1[closure_1_0[closure_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
-                } else if (tmp[tmp2]) {
+                } else if (closure_1_0[tmp2]) {
                   let obj = { exports: null };
                   obj[0] = {};
                   tmp3[tmp2] = obj;
-                  let first = tmp[tmp2][0];
+                  let first = closure_1_0[tmp2][0];
                   let call = first.call;
                   let _exports = obj.exports;
                   let fn = () => { ... };
                   let _exports2 = obj.exports;
                   let firstResult = closure_1_2;
                   if (typeof call !== "unknown") {
-                    call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    call(_exports, fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
                   }
                 } else {
                   let tmp4 = typeof closure_2_0 === "function";
@@ -246,12 +222,12 @@ let fn = () => {
                   }
                   return tmp5Result;
                 }
-                firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                firstResult = first(fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
               let firstResult = closure_1_2;
               if (typeof call !== "unknown") {
-                call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                call(_exports, fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
               }
             } else {
               let tmp4 = typeof closure_2_0 === "function";
@@ -270,13 +246,13 @@ let fn = () => {
               }
               return tmp5Result;
             }
-            firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+            firstResult = first(fn, obj, _exports2, closure_1_0, closure_1_0, tmp3, firstResult);
           };
           _exports2 = obj.exports;
           if (typeof call === "unknown") {
-            first(fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
+            first(fn, obj, _exports2, tmp12, tmp2, table2, closure_2);
           } else {
-            call(_exports, fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
+            call(_exports, fn, obj, _exports2, tmp12, tmp2, table2, closure_2);
           }
         } else {
           let tmp3 = typeof fn === "function";
@@ -301,7 +277,7 @@ let fn = () => {
       return table2[arg0].exports;
     };
   };
-  let obj = { 1: null, 2: items, 3: items1, 4: items2, 5: items3, 6: items4, 7: items5, 8: items6, 9: items7, 10: items8, 11: items9, 12: items10, 13: items11, 14: items12, 15: items13, 16: items14, 17: items15, 18: items16, 19: items17, 20: items18, 21: items19, 22: items20, 23: items21, 24: items22, 25: items23, 26: items24, 27: items25, 28: items26, 29: items27, 30: items28, 31: items29, 32: items30, 33: items31, 34: items32, 35: items33, 36: items34, 37: items35, 38: items36, 39: items37, 40: items38, 41: items39, 42: items40, 43: items41, 44: items42, 45: items43, 46: items44, 47: items45, 48: items46, 49: items47, 50: items48, 51: items49, 52: items50, 53: items51, 54: items52, 55: items53, 56: items54, 57: items55, 58: items56, 59: items57, 60: items58, 61: items59, 62: items60, 63: items61, 64: items62, 65: items63, 66: items64, 67: items65, 68: items66, 69: items67, 70: items68, 71: items69, 72: items70, 73: items71, 74: items72, 75: items73, 76: items74, 77: items75, 78: items76, 79: items77, 80: items78, 81: items79, 82: items80, 83: items81, 84: items82, 85: items83, 86: items84, 87: items85, 88: items86, 89: items87, 90: items88, 91: items89, 92: items90, 93: items91, 94: items92, 95: items93, 96: items94, 97: items95, 98: items96, 99: items97, 100: items98, 101: items, 102: items, 103: items, 104: items, 105: items, 106: items, 107: items, 108: items, 109: items, 110: items, 111: items, 112: items, 113: items, 114: items, 115: items, 116: items, 117: items, 118: items, 119: items, 120: items, 121: items, 122: items, 123: items, 124: items, 125: items, 126: items, 127: items, 128: items, 129: items, 130: items, 131: items, 132: items, 133: items, 134: items, 135: items, 136: items, 137: items, 138: items, 139: items, 140: items, 141: items, 142: items, 143: items, 144: items, 145: items, 146: items, 147: items, 148: items, 149: items, 150: items, 151: items, 152: items, 153: items, 154: items, 155: items, 156: items, 157: items, 158: items, 159: items, 160: items, 161: items, 162: items, 163: items, 164: items, 165: items, 166: items, 167: items, 168: items, 169: items, 170: items, 171: items, 172: items, 173: items, 174: items, 175: items, 176: items, 177: items, 178: items, 179: items, 180: items, 181: items, 182: items, 183: items, 184: items, 185: items, 186: items, 187: items, 188: items, 189: items, 190: items, 191: items, 192: items, 193: items, 194: items, 195: items, 196: items, 197: items, 198: items, 199: items, 200: items, 201: items, 202: items, 203: items, 204: items, 205: items, 206: items, 207: items, 208: items, 209: items, 210: items, 211: items, 212: items, 213: items, 214: items, 215: items, 216: items, 217: items, 218: items, 219: items, 220: items, 221: items, 222: items, 223: items, 224: items, 225: items, 226: items, 227: items, 228: items, 229: items, 230: items, 231: items, 232: items, 233: items, 234: items, 235: items, 236: items, 237: items, 238: items, 239: items, 240: items, 241: items, 242: items, 243: items, 244: items, 245: items, 246: items, 247: items, 248: items };
+  let obj = { 1: null, 2: items, 3: items1, 4: items2, 5: items3, 6: items4, 7: items5, 8: items6, 9: items7, 10: items8, 11: items9, 12: items10, 13: items11, 14: items12, 15: items13, 16: items14, 17: items15, 18: items16, 19: items17, 20: items18, 21: items19, 22: items20, 23: items21, 24: items22, 25: items23, 26: items24, 27: items25, 28: items26, 29: items27, 30: items28, 31: items29, 32: items30, 33: items31, 34: items32, 35: items33, 36: items34, 37: items35, 38: items36, 39: items37, 40: items38, 41: items39, 42: items40, 43: items41, 44: items42, 45: items43, 46: items44, 47: items45, 48: items46, 49: items47, 50: items48, 51: items49, 52: items50, 53: items51, 54: items52, 55: items53, 56: items54, 57: items55, 58: items56, 59: items57, 60: items58, 61: items59, 62: items60, 63: items61, 64: items62, 65: items63, 66: items64, 67: items65, 68: items66, 69: items67, 70: items68, 71: items69, 72: items70, 73: items71, 74: items72, 75: items73, 76: items74, 77: items75, 78: items76, 79: items77, 80: items78, 81: items79, 82: items80, 83: items81, 84: items82, 85: items83, 86: items84, 87: items85, 88: items86, 89: items87, 90: items88, 91: items89, 92: items90, 93: items91, 94: items92, 95: items93, 96: items94, 97: items95, 98: items96, 99: items97, 100: items98, 101: items99, 102: items100, 103: items101, 104: items102, 105: items103, 106: items104, 107: items105, 108: items106, 109: items107, 110: items108, 111: items109, 112: items110, 113: items111, 114: items112, 115: items113, 116: items114, 117: items115, 118: items116, 119: items117, 120: items118, 121: items119, 122: items120, 123: items121, 124: items122, 125: items123, 126: items124, 127: items125, 128: items126, 129: items127, 130: items128, 131: items129, 132: items130, 133: items131, 134: items132, 135: items133, 136: items134, 137: items135, 138: items136, 139: items137, 140: items138, 141: items139, 142: items140, 143: items141, 144: items142, 145: items143, 146: items144, 147: items145, 148: items146, 149: items147, 150: items148, 151: items149, 152: items150, 153: items151, 154: items152, 155: items153, 156: items154, 157: items155, 158: items156, 159: items157, 160: items158, 161: items159, 162: items160, 163: items161, 164: items162, 165: items163, 166: items164, 167: items165, 168: items166, 169: items167, 170: items168, 171: items169, 172: items170, 173: items171, 174: items172, 175: items173, 176: items174, 177: items175, 178: items176, 179: items177, 180: items178, 181: items179, 182: items180, 183: items181, 184: items182, 185: items183, 186: items184, 187: items185, 188: items186, 189: items187, 190: items188, 191: items189, 192: items190, 193: items191, 194: items192, 195: items193, 196: items194, 197: items195, 198: items196, 199: items197, 200: items198, 201: items199, 202: items200, 203: items201, 204: items202, 205: items203, 206: items204, 207: items205, 208: items206, 209: items207, 210: items208, 211: items209, 212: items210, 213: items211, 214: items212, 215: items213, 216: items214, 217: items215, 218: items216, 219: items217, 220: items218, 221: items219, 222: items220, 223: items221, 224: items222, 225: items223, 226: items224, 227: items225, 228: items226, 229: items227, 230: items228, 231: items229, 232: items230, 233: items231, 234: items232, 235: items233, 236: items234, 237: items235, 238: items236, 239: items237, 240: items238, 241: items239, 242: items240, 243: items241, 244: items242, 245: items243, 246: items244, 247: items245, 248: items246 };
   items = [
     (arg0, arg1, arg2) => {
       function loadScript(forceScriptReload) {
@@ -332,21 +308,21 @@ let fn = () => {
           const attr1 = element.setAttribute("crossorigin", "".concat(forceScriptReload.crossorigin));
         }
         const keys = Object.keys(tmp4);
-        const item = keys.forEach((arg0) => {
-          const combined = "data-".concat(arg0);
-          const attr = element.setAttribute(combined, "".concat(table[arg0]));
+        const item = keys.forEach((item, index) => {
+          const combined = "data-".concat(item);
+          const attr = element.setAttribute(combined, "".concat(table[item]));
         });
         const promise = new Promise((arg0, arg1) => {
           closure_0 = arg0;
           element = arg1;
-          const listener = element.addEventListener("load", () => {
+          const listener = element.addEventListener("load", (event) => {
             lib(closure_1);
           });
-          const listener1 = element.addEventListener("error", () => {
+          const listener1 = element.addEventListener("error", (event) => {
             error = new Error("".concat(lib.src, " failed to load."));
             callback(error);
           });
-          const listener2 = element.addEventListener("abort", () => {
+          const listener2 = element.addEventListener("abort", (event) => {
             error = new Error("".concat(lib.src, " has aborted."));
             callback(error);
           });
@@ -500,7 +476,6 @@ let fn = () => {
         let isMatch = callback(userAgent);
         if (isMatch) {
           isMatch = /\bGSA\b/.test(userAgent);
-          const obj = /\bGSA\b/;
         }
         return isMatch;
       };
@@ -551,7 +526,6 @@ let fn = () => {
           let isMatch = callback2(userAgent);
           if (!isMatch) {
             isMatch = /.+AppleWebKit(?!.*Safari)/i.test(userAgent);
-            const obj = /.+AppleWebKit(?!.*Safari)/i;
           }
           tmp2 = isMatch;
         }
@@ -696,7 +670,6 @@ let fn = () => {
           let isMatch = callback(userAgent2);
           if (isMatch) {
             isMatch = /Version\/[\d.]+/i.test(userAgent2);
-            const obj = /Version\/[\d.]+/i;
           }
           if (isMatch) {
             userAgent = userAgent2;
@@ -741,7 +714,6 @@ let fn = () => {
           }
           if (isMatch1) {
             isMatch1 = /samsung/i.test(userAgent);
-            const obj2 = /samsung/i;
           }
           tmp2 = isMatch1;
         }
@@ -1067,13 +1039,13 @@ let fn = () => {
             length = arguments.length;
           } while (num < length);
         }
-        let item = items.forEach((obj) => {
-          closure_0 = obj;
-          if (typeof obj === "object") {
+        let item = items.forEach((item, index) => {
+          closure_0 = item;
+          if (typeof item === "object") {
             const _Object = Object;
-            const keys = Object.keys(obj);
-            const item = keys.forEach((arg0) => {
-              obj[arg0] = obj[arg0];
+            const keys = Object.keys(item);
+            item = keys.forEach((item, index) => {
+              item[item] = item[item];
             });
           }
         });
@@ -1092,7 +1064,6 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.setAttributes = function setAttributes(removeAttribute, obj) {
         for (const key10005 in arg1) {
-          let tmp4 = key10005;
           if (!arg1.hasOwnProperty(key10005)) {
             continue;
           } else {
@@ -1129,11 +1100,11 @@ let fn = () => {
   ];
   items36 = [
     (arg0, arg1, arg2) => {
-      arg2.deferred = function deferred(items) {
-        closure_0 = items;
+      arg2.deferred = function deferred(arg0) {
+        closure_0 = arg0;
         return () => {
           let length;
-          items = [];
+          const items = [];
           let num = 0;
           if (0 < arguments.length) {
             do {
@@ -1184,12 +1155,12 @@ let fn = () => {
   ];
   items38 = [
     (arg0, arg1, arg2) => {
-      arg2.promiseOrCallback = function promiseOrCallback(closure_0, onceResult) {
+      arg2.promiseOrCallback = function promiseOrCallback(promise, onceResult) {
         closure_0 = onceResult;
         if (onceResult) {
-          closure_0.then((arg0) => onceResult(null, arg0)).catch((arg0) => onceResult(arg0));
+          promise.then((result) => onceResult(null, result)).catch((error) => onceResult(error));
         } else {
-          return closure_0;
+          return promise;
         }
       };
     },
@@ -1229,15 +1200,15 @@ let fn = () => {
         closure_1 = obj.ignoreMethods || [];
         closure_2 = true === obj.transformPrivateMethods;
         const ownPropertyNames = Object.getOwnPropertyNames(arg0.prototype);
-        const found = ownPropertyNames.filter((str) => {
-          let tmp = "constructor" !== str;
+        const found = ownPropertyNames.filter((item, index) => {
+          let tmp = "constructor" !== item;
           if (tmp) {
-            tmp = typeof ctor.prototype[str] === "function";
+            tmp = typeof ctor.prototype[item] === "function";
           }
           let tmp4 = closure_2;
-          const index = closure_1.indexOf(str);
+          index = closure_1.indexOf(item);
           if (!tmp4) {
-            tmp4 = "_" !== str.charAt(0);
+            tmp4 = "_" !== item.charAt(0);
           }
           if (tmp) {
             tmp = tmp4;
@@ -1247,9 +1218,9 @@ let fn = () => {
           }
           return tmp;
         });
-        const item = found.forEach((arg0) => {
-          ctor = ctor.prototype[arg0];
-          ctor.prototype[arg0] = function() {
+        const item = found.forEach((item, index) => {
+          ctor = ctor.prototype[item];
+          ctor.prototype[item] = function() {
             let length;
             const items = [];
             let num = 0;
@@ -1304,9 +1275,9 @@ let fn = () => {
             const attr1 = element.setAttribute("crossorigin", "".concat(forceScriptReload.crossorigin));
           }
           const keys = Object.keys(tmp4);
-          const item = keys.forEach((arg0) => {
-            const combined = "data-".concat(arg0);
-            const attr = element.setAttribute(combined, "".concat(table[arg0]));
+          const item = keys.forEach((item, index) => {
+            const combined = "data-".concat(item);
+            const attr = element.setAttribute(combined, "".concat(table[item]));
           });
           const promise = new Promise((arg0, arg1) => {
             closure_0 = arg0;
@@ -1319,9 +1290,9 @@ let fn = () => {
           table[json] = promise;
           return promise;
         }
-        function loadAXOScript(arg0, arg1) {
-          let flag = arg1;
-          if (undefined === arg1) {
+        function loadAXOScript(f119584, Promise) {
+          let flag = Promise;
+          if (undefined === Promise) {
             flag = true;
           }
           let amd = typeof define === "function";
@@ -1345,9 +1316,8 @@ let fn = () => {
               amd1 = typeof window.requirejs.config === "function";
             }
             if (amd1) {
-              obj = { paths: null };
               obj = {};
-              obj[fastlane] = arg0;
+              obj[fastlane] = f119584;
               obj[0] = obj;
               globalThis.requirejs.config(obj);
             }
@@ -1362,7 +1332,7 @@ let fn = () => {
             return promise;
           } else {
             obj = { id: "axo-id", src: null, forceScriptReload: true };
-            obj[1] = arg0;
+            obj[1] = f119584;
             return loadScript$1(obj);
           }
         }
@@ -1400,7 +1370,7 @@ let fn = () => {
           }
         };
         const fastlane = "fastlane";
-        obj = { AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" }, AXO_ASSET_PATH: "connect-boba", LOCALE_PATH: "".concat("connect-boba", "/locales/"), CDNX_PROD: "https://www.paypalobjects.com" };
+        { AXO_ASSET_NAME: { minified: "axo.min", unminified: "axo" }, AXO_ASSET_PATH: "connect-boba", LOCALE_PATH: "".concat("connect-boba", "/locales/"), CDNX_PROD: "https://www.paypalobjects.com" };
         const BT = "BT";
         const PPCP = "PPCP";
         obj = { client: "client", hostedFields: "hosted-fields" };
@@ -1427,15 +1397,11 @@ let fn = () => {
         obj1.hostedFields = obj5;
         arg0.constants = obj;
         arg0.loadAxo = function loadAxo(arg0) {
-          let self = arg0;
-          self = this;
-          const f119587 = function() {
-            c0 = this;
+          const self = this;
+          const f119587 = () => {
             const f120553 = () => { ... };
             closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
             obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
-            c0 = 0;
-            c0 = 1;
             c0 = 2;
             if (typeof Symbol === "function") {
               let _Symbol = Symbol;
@@ -1443,8 +1409,8 @@ let fn = () => {
             }
             return obj;
           };
-          return new Promise((arg0, arg1) => {
-            closure_0 = arg0;
+          return new Promise((fn) => {
+            closure_0 = fn;
             closure_1 = arg1;
             function fulfilled() { ... }
             let iter = fulfilled;
@@ -1454,7 +1420,7 @@ let fn = () => {
             const iter2 = iter.next();
             const value = iter2.value;
             if (iter2.done) {
-              arg0(value);
+              fn(value);
             } else {
               closure_0 = value;
               let tmp = value;
@@ -1492,10 +1458,7 @@ let fn = () => {
           let tmp = Object.assign || ((arg0) => {
             for (let num = 1; num < length; num = num + 1) {
               let tmp = arguments[num];
-              let tmp2 = tmp;
-              let tmp3 = num;
               for (const key10012 in tmp) {
-                let tmp5 = key10012;
                 let _Object = Object;
                 let call = hasOwnProperty.call;
                 if (typeof call === "unknown") {
@@ -1530,18 +1493,18 @@ let fn = () => {
         items = [];
         if (validInputType.isValidInputType(arg0)) {
           if (0 === arg0.length) {
-            return arr.map((arg0) => {
-              let tmp = table[arg0];
+            return arr.map((item, index) => {
+              let tmp = table[item];
               if (!tmp) {
-                tmp = items[arg0];
+                tmp = items[item];
               }
               return closure_5.clone(tmp);
             });
           } else {
-            const item = arr.forEach((arg0) => {
-              let tmp = closure_1_6[arg0];
+            const item = arr.forEach((item, index) => {
+              let tmp = closure_1_6[item];
               if (!tmp) {
-                tmp = items[arg0];
+                tmp = items[item];
               }
               const result = closure_1_2.addMatchingCardsToResults(closure_0, tmp, items);
             });
@@ -1633,20 +1596,20 @@ let fn = () => {
     { "./lib/add-matching-cards-to-results": 43, "./lib/card-types": 44, "./lib/clone": 45, "./lib/find-best-match": 46, "./lib/is-valid-input-type": 47 }
   ];
   items42 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.addMatchingCardsToResults = undefined;
-      closure_0 = arg0("./clone");
-      closure_1 = arg0("./matches");
-      arg2.addMatchingCardsToResults = function addMatchingCardsToResults(closure_0, patterns, items) {
+      closure_0 = fn("./clone");
+      closure_1 = fn("./matches");
+      arg2.addMatchingCardsToResults = function addMatchingCardsToResults(closure_0, items, items2) {
         let num = 0;
-        if (0 < patterns.patterns.length) {
-          while (!closure_1.matches(closure_0, patterns.patterns[num])) {
+        if (0 < items.patterns.length) {
+          while (!closure_1.matches(closure_0, items.patterns[num])) {
             num = num + 1;
           }
-          const cloneResult = closure_0.clone(patterns);
+          const cloneResult = closure_0.clone(items);
           const _Array = Array;
           const _String = String;
-          if (Array.isArray(patterns.patterns[num])) {
+          if (Array.isArray(items.patterns[num])) {
             let length = _String(tmp[0]).length;
           } else {
             length = _String(tmp).length;
@@ -1654,7 +1617,7 @@ let fn = () => {
           if (closure_0.length >= length) {
             cloneResult.matchStrength = length;
           }
-          items.push(cloneResult);
+          items2.push(cloneResult);
         }
       };
     },
@@ -1691,17 +1654,17 @@ let fn = () => {
   items45 = [
     (arg0, arg1, arg2) => {
       arg2.findBestMatch = function findBestMatch(arr) {
-        const length = arr.filter((matchStrength) => matchStrength.matchStrength).length;
+        const length = arr.filter((item, index) => item.matchStrength).length;
         let reduced = null;
         if (tmp) {
-          reduced = arr.reduce((arg0, matchStrength) => {
-            let tmp = arg0;
-            let tmp2 = matchStrength;
-            if (arg0) {
+          reduced = arr.reduce((acc, item, index) => {
+            let tmp = acc;
+            let tmp2 = item;
+            if (acc) {
               const _Number = Number;
               const _Number2 = Number;
-              if (NumberResult < Number(matchStrength.matchStrength)) {
-                tmp = matchStrength;
+              if (NumberResult < Number(item.matchStrength)) {
+                tmp = item;
               }
               tmp2 = tmp;
               NumberResult = Number(tmp.matchStrength);
@@ -1757,9 +1720,9 @@ let fn = () => {
     {}
   ];
   items48 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.Framebus = undefined;
-      let Framebus = arg0("./lib");
+      let Framebus = fn("./lib");
       let _Promise = typeof window !== "undefined";
       if (typeof window !== "undefined") {
         let _window = window;
@@ -1768,8 +1731,8 @@ let fn = () => {
       class Framebus {
         constructor(arg0) {
           obj = {};
-          obj = arg0;
-          if (undefined === arg0) {
+          obj = fn;
+          if (undefined === fn) {
             obj = {};
           }
           obj.origin = obj.origin || "*";
@@ -1787,14 +1750,14 @@ let fn = () => {
           return;
         }
         static setPromise(arg0) {
-          Framebus.Promise = arg0;
+          Framebus.Promise = fn;
           return;
         }
         static target(arg0) {
-          obj = arg0;
+          obj = fn;
           obj = Object.create(Framebus.prototype);
           obj1 = {};
-          if (undefined === arg0) {
+          if (undefined === fn) {
             obj = {};
           }
           obj1.origin = obj.origin || "*";
@@ -1813,22 +1776,22 @@ let fn = () => {
         }
         addTargetFrame(arg0) {
           if (this.limitBroadcastToFramesArray) {
-            tmp2 = arg0;
+            tmp2 = fn;
             targetFrames = tmp.targetFrames;
-            arr = targetFrames.push(arg0);
+            arr = targetFrames.push(fn);
           }
           return;
         }
         include(arg0) {
-          tmp = null != arg0;
+          tmp = null != fn;
           if (tmp) {
-            tmp2 = null != arg0.Window;
+            tmp2 = null != fn.Window;
             if (tmp2) {
-              flag = arg0.constructor === arg0.Window;
+              flag = fn.constructor === fn.Window;
               if (flag) {
                 tmp3 = Framebus;
                 childWindows = Framebus.childWindows;
-                arr = childWindows.push(arg0);
+                arr = childWindows.push(fn);
                 flag = true;
               }
               tmp2 = flag;
@@ -1838,7 +1801,7 @@ let fn = () => {
           return tmp;
         }
         target(arg0) {
-          return Framebus.target(arg0);
+          return Framebus.target(fn);
         }
         emit(arg0, arg1, arg2) {
           self = this;
@@ -1846,9 +1809,9 @@ let fn = () => {
             flag4 = false;
             return false;
           } else {
-            tmp = arg0;
+            tmp = fn;
             origin = self.origin;
-            namespaceEventResult = self.namespaceEvent(arg0);
+            namespaceEventResult = self.namespaceEvent(fn);
             obj = origin;
             if (origin.isntString(namespaceEventResult)) {
               flag3 = false;
@@ -1895,7 +1858,7 @@ let fn = () => {
           }
         }
         emitAsPromise(arg0, arg1) {
-          closure_0 = arg0;
+          closure_0 = fn;
           closure_1 = arg1;
           self = this;
           promise = new closure_0.Promise(() => { ... });
@@ -1908,9 +1871,9 @@ let fn = () => {
             flag2 = false;
             return false;
           } else {
-            tmp = arg0;
+            tmp = fn;
             origin = self.origin;
-            namespaceEventResult = self.namespaceEvent(arg0);
+            namespaceEventResult = self.namespaceEvent(fn);
             tmp3 = closure_0;
             result = closure_0.subscriptionArgsInvalid(namespaceEventResult, arg1, origin);
             flag = !result;
@@ -1969,8 +1932,8 @@ let fn = () => {
                 } while (num < self.listeners.length);
               }
             }
-            tmp6 = arg0;
-            namespaceEventResult = self.namespaceEvent(arg0);
+            tmp6 = fn;
+            namespaceEventResult = self.namespaceEvent(fn);
             origin = self.origin;
             tmp8 = Framebus;
             if (Framebus.subscriptionArgsInvalid(namespaceEventResult, tmp2, origin)) {
@@ -2024,8 +1987,8 @@ let fn = () => {
           verifyDomain = this.verifyDomain;
           checkOriginResult = !verifyDomain;
           if (verifyDomain) {
-            tmp2 = arg0;
-            checkOriginResult = self.checkOrigin(arg0);
+            tmp2 = fn;
+            checkOriginResult = self.checkOrigin(fn);
           }
           return checkOriginResult;
         }
@@ -2041,7 +2004,7 @@ let fn = () => {
         }
         hasMatchingTargetFrame(arg0) {
           self = this;
-          closure_0 = arg0;
+          closure_0 = fn;
           if (this.limitBroadcastToFramesArray) {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
@@ -2069,26 +2032,26 @@ let fn = () => {
               host = url.host;
             }
           }
-          tmp = `${url.protocol}//${host}` === arg0;
+          tmp = `${url.protocol}//${host}` === fn;
           if (!tmp) {
             self = this;
             verifyDomain = this.verifyDomain;
             verifyDomainResult = !verifyDomain;
             if (verifyDomain) {
-              verifyDomainResult = self.verifyDomain(arg0);
+              verifyDomainResult = self.verifyDomain(fn);
             }
             tmp = verifyDomainResult;
           }
           return tmp;
         }
         namespaceEvent(arg0) {
-          combined1 = arg0;
+          combined1 = fn;
           if (this.channel) {
             str = "";
             concat = "".concat;
             str2 = ":";
             combined = "".concat(tmp.channel, ":");
-            combined1 = combined.concat(arg0);
+            combined1 = combined.concat(fn);
           }
           return combined1;
         }
@@ -2107,10 +2070,10 @@ let fn = () => {
     { "./framebus": 49, "./lib": 57 }
   ];
   items50 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.attach = undefined;
       arg2.detach = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       c1 = false;
       arg2.attach = function attach() {
         let tmp = c1;
@@ -2132,16 +2095,15 @@ let fn = () => {
     { "./": 57 }
   ];
   items51 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.broadcastToChildWindows = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.broadcastToChildWindows = function broadcastToChildWindows(data, origin, source) {
         let diff = closure_0.childWindows.length - 1;
         if (0 <= diff) {
           do {
             let obj = closure_0;
             let tmp2 = closure_0.childWindows[diff];
-            let tmp3 = diff;
             if (tmp2.closed) {
               let childWindows = obj.childWindows;
               let spliceResult = childWindows.splice(diff, 1);
@@ -2159,9 +2121,9 @@ let fn = () => {
     { "./": 57 }
   ];
   items52 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.broadcast = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       function broadcast(packagePayloadResult, arg1) {
         let num = 0;
         ({ origin, frame } = arg1);
@@ -2181,13 +2143,10 @@ let fn = () => {
           let tmp10 = tmp9;
           if (frame.frames[num]) {
             do {
-              let tmp11 = broadcast;
               obj = { origin: null, frame: null };
               obj[0] = origin;
-              let tmp12 = tmp10;
               obj[1] = tmp10;
               let tmp13 = broadcast(packagePayloadResult, obj);
-              let tmp14 = num;
               let sum = num + 1;
               num = sum;
               tmp10 = frame.frames[sum];
@@ -2212,13 +2171,13 @@ let fn = () => {
     {}
   ];
   items54 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.dispatch = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.dispatch = function dispatch(arg0, arg1, arg2, arg3, arg4) {
         let length;
         if (closure_0.subscribers[arg0]) {
-          if (tmp.subscribers[arg0][arg1]) {
+          if (closure_0.subscribers[arg0][arg1]) {
             const items = [];
             if (arg2) {
               items.push(arg2);
@@ -2227,9 +2186,8 @@ let fn = () => {
               items.push(arg3);
             }
             let num = 0;
-            if (0 < tmp.subscribers[arg0][arg1].length) {
+            if (0 < closure_0.subscribers[arg0][arg1].length) {
               do {
-                let tmp7 = closure_0;
                 let obj = closure_0.subscribers[arg0][arg1][num];
                 let applyResult = obj.apply(arg4, items);
                 num = num + 1;
@@ -2263,7 +2221,7 @@ let fn = () => {
     {}
   ];
   items56 = [
-    function(arg0, arg1, arg2) {
+    function(fn) {
       const self = this;
       let self2 = this;
       if (this) {
@@ -2277,13 +2235,11 @@ let fn = () => {
         if (!fn) {
           fn = (obj, arg1) => {
             for (const key10007 in arg0) {
-              let tmp5 = key10007;
               let tmp6 = "default" === key10007;
               if (tmp6) {
                 if (tmp6) {
                   continue;
                 } else {
-                  let tmp3 = self2;
                   let tmp4 = self2(arg1, arg0, key10007);
                   continue;
                 }
@@ -2296,26 +2252,25 @@ let fn = () => {
                 } else {
                   hasOwnPropertyResult = call(arg1, key10007);
                 }
-                let tmp2 = hasOwnPropertyResult;
               }
             }
           };
         }
         const _Object2 = Object;
-        fn(arg0("./attach"), arg2);
-        fn(arg0("./broadcast-to-child-windows"), arg2);
-        fn(arg0("./broadcast"), arg2);
-        fn(arg0("./constants"), arg2);
-        fn(arg0("./dispatch"), arg2);
-        fn(arg0("./has-opener"), arg2);
-        fn(arg0("./is-not-string"), arg2);
-        fn(arg0("./message"), arg2);
-        fn(arg0("./package-payload"), arg2);
-        fn(arg0("./send-message"), arg2);
-        fn(arg0("./subscribe-replier"), arg2);
-        fn(arg0("./subscription-args-invalid"), arg2);
-        fn(arg0("./types"), arg2);
-        fn(arg0("./unpack-payload"), arg2);
+        fn(fn("./attach"), arg2);
+        fn(fn("./broadcast-to-child-windows"), arg2);
+        fn(fn("./broadcast"), arg2);
+        fn(fn("./constants"), arg2);
+        fn(fn("./dispatch"), arg2);
+        fn(fn("./has-opener"), arg2);
+        fn(fn("./is-not-string"), arg2);
+        fn(fn("./message"), arg2);
+        fn(fn("./package-payload"), arg2);
+        fn(fn("./send-message"), arg2);
+        fn(fn("./subscribe-replier"), arg2);
+        fn(fn("./subscription-args-invalid"), arg2);
+        fn(fn("./types"), arg2);
+        fn(fn("./unpack-payload"), arg2);
       } else {
         let _Object = Object;
       }
@@ -2331,17 +2286,17 @@ let fn = () => {
     {}
   ];
   items58 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.onMessage = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.onMessage = function onMessage(data) {
         if (!closure_0.isntString(data.data)) {
-          const unpackPayloadResult = obj.unpackPayload(data);
+          const unpackPayloadResult = closure_0.unpackPayload(data);
           if (unpackPayloadResult) {
             ({ eventData, reply } = unpackPayloadResult);
-            obj.dispatch("*", unpackPayloadResult.event, eventData, reply, data);
-            obj.dispatch(data.origin, unpackPayloadResult.event, eventData, reply, data);
-            const result = obj.broadcastToChildWindows(data.data, unpackPayloadResult.origin, data.source);
+            closure_0.dispatch("*", unpackPayloadResult.event, eventData, reply, data);
+            closure_0.dispatch(data.origin, unpackPayloadResult.event, eventData, reply, data);
+            const result = closure_0.broadcastToChildWindows(data.data, unpackPayloadResult.origin, data.source);
           }
         }
       };
@@ -2349,9 +2304,9 @@ let fn = () => {
     { "./": 57 }
   ];
   items59 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.packagePayload = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.packagePayload = function packagePayload(namespaceEventResult, closure_0, eventData, fn) {
         const obj = { event: namespaceEventResult, origin: closure_0 };
         if (typeof fn === "function") {
@@ -2383,7 +2338,7 @@ let fn = () => {
     {}
   ];
   items61 = [
-    function(arg0, arg1, arg2) {
+    function(fn) {
       fn = this;
       if (this) {
         fn = this.__importDefault;
@@ -2401,8 +2356,8 @@ let fn = () => {
         };
       }
       arg2.subscribeReplier = undefined;
-      closure_0 = arg0("../framebus");
-      closure_1 = fn(arg0("@braintree/uuid"));
+      closure_0 = fn("../framebus");
+      closure_1 = fn(fn("@braintree/uuid"));
       arg2.subscribeReplier = function subscribeReplier(fn, origin) {
         let Framebus = fn;
         closure_1 = origin;
@@ -2421,9 +2376,9 @@ let fn = () => {
     { "../framebus": 49, "@braintree/uuid": 66 }
   ];
   items62 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.subscriptionArgsInvalid = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.subscriptionArgsInvalid = function subscriptionArgsInvalid(namespaceEventResult, fn, origin) {
         let isntStringResult = closure_0.isntString(namespaceEventResult);
         if (!isntStringResult) {
@@ -2444,9 +2399,9 @@ let fn = () => {
     {}
   ];
   items64 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.unpackPayload = undefined;
-      closure_0 = arg0("./");
+      closure_0 = fn("./");
       arg2.unpackPayload = function unpackPayload(data) {
         data = data.data;
         if (data.slice(0, closure_0.prefix.length) !== closure_0.prefix) {
@@ -2463,9 +2418,8 @@ let fn = () => {
                 if (closure_1) {
                   const packagePayloadResult = closure_1_0.packagePayload(reply, closure_0, eventData);
                   if (packagePayloadResult) {
-                    closure_1.postMessage(packagePayloadResult, tmp4);
+                    closure_1.postMessage(packagePayloadResult, closure_0);
                   }
-                  tmp4 = closure_0;
                 }
               };
             }
@@ -2494,7 +2448,7 @@ let fn = () => {
     {}
   ];
   items66 = [
-    (arg0, arg1, arg2) => {
+    (fn) => {
       arg2.isKitKatWebview = undefined;
       arg2.isAndroidChrome = undefined;
       arg2.isSamsungBrowser = undefined;
@@ -2509,11 +2463,11 @@ let fn = () => {
         const _window = window;
         userAgent = window.navigator.userAgent;
       }
-      closure_1 = arg0("@braintree/browser-detection/is-android");
-      closure_2 = arg0("@braintree/browser-detection/is-chrome-os");
-      closure_3 = arg0("@braintree/browser-detection/is-chrome");
-      arg2.isIos = arg0("@braintree/browser-detection/is-ios");
-      arg2.isIE9 = arg0("@braintree/browser-detection/is-ie9");
+      closure_1 = fn("@braintree/browser-detection/is-android");
+      closure_2 = fn("@braintree/browser-detection/is-chrome-os");
+      closure_3 = fn("@braintree/browser-detection/is-chrome");
+      arg2.isIos = fn("@braintree/browser-detection/is-ios");
+      arg2.isIE9 = fn("@braintree/browser-detection/is-ie9");
       const re4 = /Version\/\d\.\d* Chrome\/\d*\.0\.0\.0/;
       arg2.isKitKatWebview = function isKitKatWebview(arg0) {
         let tmp = arg0;
@@ -2778,8 +2732,7 @@ let fn = () => {
   items86 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "AMEX_NONCE_REQUIRED" };
-      obj = { type: globalResult.types.NETWORK, code: "AMEX_NETWORK_ERROR" };
+      const obj = { type: globalResult.types.NETWORK, code: "AMEX_NETWORK_ERROR" };
       module.exports = { AMEX_NONCE_REQUIRED: obj, AMEX_NETWORK_ERROR: obj };
     },
     { "../lib/braintree-error": 143 }
@@ -2793,10 +2746,9 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "American Express", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "American Express" })).then((client) => {
-            closure_0.client = client;
+          return closure_1.verify({ name: "American Express", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "American Express" })).then((result) => {
+            closure_0.client = result;
             return new closure_0(closure_0);
           });
         }),
@@ -2917,9 +2869,7 @@ let fn = () => {
   items89 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "APPLE_PAY_NOT_ENABLED", message: "Apple Pay is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "APPLE_PAY_VALIDATION_URL_REQUIRED", message: "performValidation must be called with a validationURL." };
-      obj = { type: globalResult.types.NETWORK, code: "APPLE_PAY_MERCHANT_VALIDATION_NETWORK", message: "A network error occurred when validating the Apple Pay merchant." };
+      const obj = { type: globalResult.types.NETWORK, code: "APPLE_PAY_MERCHANT_VALIDATION_NETWORK", message: "A network error occurred when validating the Apple Pay merchant." };
       module.exports = { APPLE_PAY_NOT_ENABLED: obj, APPLE_PAY_VALIDATION_URL_REQUIRED: obj, APPLE_PAY_MERCHANT_VALIDATION_NETWORK: obj, APPLE_PAY_MERCHANT_VALIDATION_FAILED: { type: globalResult.types.MERCHANT, code: "APPLE_PAY_MERCHANT_VALIDATION_FAILED", message: "Make sure you have registered your domain name in the Braintree Control Panel." }, APPLE_PAY_PAYMENT_TOKEN_REQUIRED: { type: globalResult.types.MERCHANT, code: "APPLE_PAY_PAYMENT_TOKEN_REQUIRED", message: "tokenize must be called with a payment token." }, APPLE_PAY_TOKENIZATION: { type: globalResult.types.NETWORK, code: "APPLE_PAY_TOKENIZATION", message: "A network error occurred when processing the Apple Pay payment." } };
     },
     { "../lib/braintree-error": 143 }
@@ -2936,13 +2886,13 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_3.verify({ name: "Apple Pay", client: client.client, authorization: client.authorization }).then(() => {
+          return closure_3.verify({ name: "Apple Pay", client: client.client, authorization: client.authorization }).then((result) => {
             let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_4.create(client.authorization), name: "Apple Pay" };
             obj = closure_1_5.create(obj);
-            const nextPromise = obj.then((getConfiguration) => {
-              if (getConfiguration.getConfiguration().gatewayConfiguration.applePayWeb) {
-                closure_1.sendEvent(getConfiguration, "applepay.initialized");
-                let rejectResult = getConfiguration;
+            const nextPromise = obj.then((result) => {
+              if (result.getConfiguration().gatewayConfiguration.applePayWeb) {
+                closure_1.sendEvent(result, "applepay.initialized");
+                let rejectResult = result;
               } else {
                 const tmp6 = new closure_2(constants.APPLE_PAY_NOT_ENABLED);
                 rejectResult = Promise.reject(tmp6);
@@ -2954,8 +2904,8 @@ let fn = () => {
             let nextPromise1 = tmp;
             client = tmp;
             if (!client.useDeferredClient) {
-              nextPromise1 = nextPromise.then((_client) => {
-                closure_0._client = _client;
+              nextPromise1 = nextPromise.then((result) => {
+                closure_0._client = result;
                 return closure_0;
               });
             }
@@ -2980,13 +2930,13 @@ let fn = () => {
           gatewayConfiguration = obj.gatewayConfiguration;
           if (gatewayConfiguration) {
             items = ["assetsUrl", "clientApiUrl", "configUrl"];
-            item = items.forEach((arg0) => {
-              if (arg0 in gatewayConfiguration) {
-                if (!closure_1_3(tmp[arg0])) {
+            item = items.forEach((item, index) => {
+              if (item in gatewayConfiguration) {
+                if (!closure_1_3(tmp[item])) {
                   const obj = { type: null, code: null, message: null };
                   obj[0] = closure_1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.type;
                   obj[1] = closure_1_13.CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN.code;
-                  obj[2] = `${arg0} property is on an invalid domain.`;
+                  obj[2] = `${item} property is on an invalid domain.`;
                   const tmp8 = new closure_1_4(obj);
                   throw tmp8;
                 }
@@ -3050,27 +3000,26 @@ let fn = () => {
               tmp4 = getConfiguration;
               tmp5 = tmp3;
               promise = getConfiguration(tmp3, global.sessionId);
-              nextPromise = promise.then((arg0) => {
+              nextPromise = promise.then((result) => {
                 if (authorization.debug) {
-                  arg0.isDebug = true;
+                  result.isDebug = true;
                 }
-                arg0.authorization = authorization.authorization;
-                const obj = Object.create(closure_1_23.prototype);
-                new closure_1_23(arg0);
-                return obj;
+                result.authorization = authorization.authorization;
+                new Client(result);
+                return Object.create(Client.prototype);
               });
               tmp6 = closure_22;
               closure_22[global.authorization] = nextPromise;
               tmp7 = closure_12;
               str = "custom.client.load.initialized";
               sendEventResult1 = closure_12.sendEvent(nextPromise, "custom.client.load.initialized");
-              nextPromise1 = nextPromise.then((arg0) => {
+              nextPromise1 = nextPromise.then((result) => {
                 closure_1_12.sendEvent(closure_1, "custom.client.load.succeeded");
-                return arg0;
+                return result;
               });
-              return nextPromise1.catch((arg0) => {
+              return nextPromise1.catch((error) => {
                 delete tmp2[tmp];
-                return Promise.reject(arg0);
+                return Promise.reject(error);
               });
             } catch (err) {
               tmp9 = globalThis;
@@ -3112,8 +3061,8 @@ let fn = () => {
           if (str4) {
             str5 = "&";
             parts = str4.split("&");
-            item = parts.forEach((str) => {
-              const parts = str.split("=");
+            item = parts.forEach((item, index) => {
+              const parts = item.split("=");
               let tmp = "customer_id" === parts[0];
               if (tmp) {
                 tmp = parts.length > 1;
@@ -3179,7 +3128,7 @@ let fn = () => {
                 const tmp12 = new closure_1_4(obj);
                 throw tmp12;
               } else {
-                _clientApiBaseUrl = closure_1_15[obj1._configuration.gatewayConfiguration.environment];
+                _clientApiBaseUrl = GRAPHQL_URLS[obj1._configuration.gatewayConfiguration.environment];
                 tmp.endpoint = "";
                 obj.method = "post";
                 obj1 = { clientSdkMetadata: null };
@@ -3188,15 +3137,14 @@ let fn = () => {
                 obj2[1] = obj1._configuration.analyticsMetadata.source;
                 obj2[2] = obj1._configuration.analyticsMetadata.integration;
                 obj2[3] = obj1._configuration.analyticsMetadata.sessionId;
-                obj2[4] = closure_1_14;
+                obj2[4] = VERSION;
                 obj1[0] = obj2;
-                obj.data = closure_1_11(obj1, tmp.data);
+                obj.data = assign(obj1, tmp.data);
                 const _configuration = obj1._configuration;
                 const obj3 = { Authorization: null, "Braintree-Version": null };
                 obj3[0] = `Bearer ${_configuration.authorizationFingerprint || _configuration.authorization}`;
                 obj3[1] = endpoint;
                 obj.headers = obj3;
-                const tmp4 = _configuration.authorizationFingerprint || _configuration.authorization;
               }
               obj.url = _clientApiBaseUrl + tmp.endpoint;
               obj.sendAnalyticsEvent = function sendAnalyticsEvent() { ... };
@@ -3208,18 +3156,18 @@ let fn = () => {
             tmp2 = closure_9;
             tmp3 = closure_10;
             closure_1 = closure_9(closure_10(module));
-            nextPromise = promise.then((_httpStatus) => {
-              callback(null, _httpStatus, _httpStatus._httpStatus);
+            nextPromise = promise.then((result) => {
+              callback(null, result, result._httpStatus);
             });
-            catchPromise = nextPromise.catch((details) => {
-              let httpStatus = details;
-              if (details) {
-                httpStatus = details.details;
+            catchPromise = nextPromise.catch((error) => {
+              let httpStatus = error;
+              if (error) {
+                httpStatus = error.details;
               }
               if (httpStatus) {
-                httpStatus = details.details.httpStatus;
+                httpStatus = error.details.httpStatus;
               }
-              callback(details, null, httpStatus);
+              callback(error, null, httpStatus);
             });
           }
           return tmp;
@@ -3273,9 +3221,7 @@ let fn = () => {
   items93 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN" };
-      obj = { type: globalResult.types.MERCHANT, code: "CLIENT_OPTION_REQUIRED" };
-      obj = { type: globalResult.types.MERCHANT, code: "CLIENT_OPTION_INVALID" };
+      const obj = { type: globalResult.types.MERCHANT, code: "CLIENT_OPTION_INVALID" };
       module.exports = { CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN: obj, CLIENT_OPTION_REQUIRED: obj, CLIENT_OPTION_INVALID: obj, CLIENT_MISSING_GATEWAY_CONFIGURATION: { type: globalResult.types.INTERNAL, code: "CLIENT_MISSING_GATEWAY_CONFIGURATION", message: "Missing gatewayConfiguration." }, CLIENT_INVALID_AUTHORIZATION: { type: globalResult.types.MERCHANT, code: "CLIENT_INVALID_AUTHORIZATION", message: "Authorization is invalid. Make sure your client token or tokenization key is valid." }, CLIENT_GATEWAY_NETWORK: { type: globalResult.types.NETWORK, code: "CLIENT_GATEWAY_NETWORK", message: "Cannot contact the gateway at this time." }, CLIENT_REQUEST_TIMEOUT: { type: globalResult.types.NETWORK, code: "CLIENT_REQUEST_TIMEOUT", message: "Request timed out waiting for a reply." }, CLIENT_REQUEST_ERROR: { type: globalResult.types.NETWORK, code: "CLIENT_REQUEST_ERROR", message: "There was a problem with your request." }, CLIENT_GRAPHQL_REQUEST_ERROR: { type: globalResult.types.NETWORK, code: "CLIENT_GRAPHQL_REQUEST_ERROR", message: "There was a problem with your request." }, CLIENT_RATE_LIMITED: { type: globalResult.types.MERCHANT, code: "CLIENT_RATE_LIMITED", message: "You are being rate-limited; please try again in a few minutes." }, CLIENT_AUTHORIZATION_INSUFFICIENT: { type: globalResult.types.MERCHANT, code: "CLIENT_AUTHORIZATION_INSUFFICIENT", message: "The authorization used has insufficient privileges." }, CLIENT_AUTHORIZATION_INVALID: { type: globalResult.types.MERCHANT, code: "CLIENT_AUTHORIZATION_INVALID", message: "Either the client token has expired and a new one should be generated or the tokenization key has been deactivated or deleted." } };
     },
     { "../lib/braintree-error": 143 }
@@ -3311,7 +3257,7 @@ let fn = () => {
             obj = { url: closure_0.configUrl, method: "GET", data: attrs };
             if (attrs.authorizationFingerprint) {
               if (tmp3.graphQL) {
-                if (closure_1_7(tmp3.graphQL.date, closure_1_8)) {
+                if (closure_1_7(tmp3.graphQL.date, BRAINTREE_VERSION)) {
                   obj = { graphQL: null };
                   obj1 = { url: null, features: null };
                   obj1[0] = tmp3.graphQL.url;
@@ -3331,7 +3277,6 @@ let fn = () => {
                   } else {
                     CLIENT_GATEWAY_NETWORK = closure_1_4.CLIENT_GATEWAY_NETWORK;
                   }
-                  obj = { type: null, code: null, message: null, details: null };
                   ({ type: obj2[0], code: obj2[1], message: obj2[2] } = CLIENT_GATEWAY_NETWORK);
                   obj = { originalError: null };
                   obj[0] = arg0;
@@ -3355,7 +3300,7 @@ let fn = () => {
             if (attrs.tokenizationKey) {
               const obj2 = { graphQL: null };
               const obj3 = { url: null, features: null };
-              obj3[0] = closure_1_6[tmp3.environment];
+              obj3[0] = GRAPHQL_URLS[tmp3.environment];
               obj3[1] = ["configuration"];
               obj2[0] = obj3;
               const tmp9 = new closure_1_5(obj2);
@@ -3424,15 +3369,15 @@ let fn = () => {
         if (obj2) {
           requestObject.onreadystatechange = () => {
             if (4 === requestObject.readyState) {
-              if (0 === tmp4.status) {
+              if (0 === requestObject.status) {
                 if (closure_10) {
                   delete tmp2[tmp];
                   requestObject(closure_0, closure_1, closure_2);
                 }
               }
-              let data = closure_1_3(tmp4.responseText);
+              let data = closure_1_3(requestObject.responseText);
               closure_4 = obj2.adaptResponseBody(data);
-              const determineStatusResult = obj2.determineStatus(tmp4.status, data);
+              const determineStatusResult = obj2.determineStatus(requestObject.status, data);
               closure_3 = determineStatusResult;
               if (determineStatusResult < 400) {
                 if (closure_3 >= 200) {
@@ -3483,7 +3428,6 @@ let fn = () => {
                 num5 = 500;
               }
               callback(str3, null, num5);
-              const tmp23 = callback;
             }
           };
           let queryifyResult1 = queryifyResult;
@@ -3586,7 +3530,7 @@ let fn = () => {
               obj = { url: null, features: null };
               obj[0] = _graphQL._graphQL._config.url;
               const supportedFeatures = clientConfiguration.supportedFeatures;
-              obj[1] = supportedFeatures.map((str) => str.toLowerCase());
+              obj[1] = supportedFeatures.map((item, index) => item.toLowerCase());
               obj.graphQL = obj;
             }
             if (clientConfiguration.braintreeApi) {
@@ -3596,10 +3540,10 @@ let fn = () => {
               obj.applePayWeb = clientConfiguration.applePayWeb;
               const supportedCardBrands = clientConfiguration.applePayWeb.supportedCardBrands;
               let callback = closure_3;
-              obj.applePayWeb.supportedNetworks = supportedCardBrands.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_0.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_0[key10009]);
+              obj.applePayWeb.supportedNetworks = supportedCardBrands.reduce((acc, item, index) => {
+                let combined = acc;
+                if (closure_0.hasOwnProperty(item)) {
+                  combined = acc.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
@@ -3619,14 +3563,14 @@ let fn = () => {
             }
             if (clientConfiguration.creditCard) {
               const challenges = clientConfiguration.creditCard.challenges;
-              obj.challenges = challenges.map((str) => str.toLowerCase());
+              obj.challenges = challenges.map((item, index) => item.toLowerCase());
               const obj2 = { supportedCardTypes: null };
               const supportedCardBrands1 = clientConfiguration.creditCard.supportedCardBrands;
               callback = closure_2;
-              obj2[0] = supportedCardBrands1.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_0.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_0[key10009]);
+              obj2[0] = supportedCardBrands1.reduce((acc, item, index) => {
+                let combined = acc;
+                if (closure_0.hasOwnProperty(item)) {
+                  combined = acc.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
@@ -3648,15 +3592,14 @@ let fn = () => {
               obj4[4] = clientConfiguration.googlePay.paypalClientId;
               const supportedCardBrands2 = clientConfiguration.googlePay.supportedCardBrands;
               callback = closure_5;
-              obj4[5] = supportedCardBrands2.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_0.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_0[key10009]);
+              obj4[5] = supportedCardBrands2.reduce((acc, item, index) => {
+                let combined = acc;
+                if (closure_0.hasOwnProperty(item)) {
+                  combined = acc.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
               obj.androidPay = obj4;
-              const str3 = clientConfiguration.googlePay.environment;
             }
             if (clientConfiguration.venmo) {
               const obj5 = { merchantId: null, accessToken: null, environment: null, enrichedCustomerDataEnabled: null };
@@ -3665,7 +3608,6 @@ let fn = () => {
               obj5[2] = clientConfiguration.venmo.environment.toLowerCase();
               obj5[3] = clientConfiguration.venmo.enrichedCustomerDataEnabled;
               obj.payWithVenmo = obj5;
-              const str4 = clientConfiguration.venmo.environment;
             }
             if (clientConfiguration.paypal) {
               obj.paypalEnabled = true;
@@ -3674,7 +3616,6 @@ let fn = () => {
               obj.paypal.environment = obj.paypal.environment.toLowerCase();
               const paypal = obj.paypal;
               delete tmp2[tmp];
-              const str5 = obj.paypal.environment;
             } else {
               obj.paypalEnabled = false;
             }
@@ -3690,10 +3631,10 @@ let fn = () => {
               obj7[2] = clientConfiguration.visaCheckout.externalClientId;
               const supportedCardBrands3 = clientConfiguration.visaCheckout.supportedCardBrands;
               callback = closure_4;
-              obj7[3] = supportedCardBrands3.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_0.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_0[key10009]);
+              obj7[3] = supportedCardBrands3.reduce((acc, item, index) => {
+                let combined = acc;
+                if (closure_0.hasOwnProperty(item)) {
+                  combined = acc.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
@@ -3704,10 +3645,10 @@ let fn = () => {
               obj8[0] = clientConfiguration.masterpass.merchantCheckoutId;
               const supportedCardBrands4 = clientConfiguration.masterpass.supportedCardBrands;
               callback = closure_6;
-              obj8[1] = supportedCardBrands4.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_0.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_0[key10009]);
+              obj8[1] = supportedCardBrands4.reduce((acc, item, index) => {
+                let combined = acc;
+                if (closure_0.hasOwnProperty(item)) {
+                  combined = acc.concat(closure_0[item]);
                 }
                 return combined;
               }, []);
@@ -3723,7 +3664,6 @@ let fn = () => {
               obj.usBankAccount = obj9;
               tmp10 = obj;
             }
-            const str = clientConfiguration.environment;
           }
           return tmp10;
         }
@@ -3732,7 +3672,7 @@ let fn = () => {
     },
     { "../../../../lib/assign": 140, "./error": 102 }
   ];
-  items = [
+  items99 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./error");
       closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
@@ -3746,22 +3686,21 @@ let fn = () => {
             let str2 = "";
             if (details.last4) {
               str2 = details.last4.substr(2, 4);
-              const str3 = details.last4;
             }
             const binData = details.binData;
             if (binData) {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
-              const item = items.forEach((arg0) => {
-                if (binData[arg0]) {
-                  tmp[arg0] = closure_1_2[tmp[arg0]];
+              const item = items.forEach((item, index) => {
+                if (binData[item]) {
+                  binData[item] = closure_1_2[binData[item]];
                 } else {
-                  tmp[arg0] = "Unknown";
+                  binData[item] = "Unknown";
                 }
               });
               const items1 = ["issuingBank", "countryOfIssuance", "productId"];
-              const item1 = items1.forEach((arg0) => {
-                if (!binData[arg0]) {
-                  tmp[arg0] = "Unknown";
+              const item1 = items1.forEach((item, index) => {
+                if (!binData[item]) {
+                  tmp[item] = "Unknown";
                 }
               });
             }
@@ -3794,7 +3733,6 @@ let fn = () => {
               obj.creditCards[0].authenticationInsight = obj1;
               tmp5 = obj;
             }
-            const tmp4 = details.last4 || "";
           }
           return tmp5;
         }
@@ -3803,7 +3741,7 @@ let fn = () => {
     },
     { "./error": 102 }
   ];
-  items = [
+  items100 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./error");
       closure_1 = { AMERICAN_EXPRESS: "American Express", DINERS: "Discover", DISCOVER: "Discover", ELO: "Elo", HIPER: "Hiper", HIPERCARD: "Hipercard", INTERNATIONAL_MAESTRO: "Maestro", JCB: "JCB", MASTERCARD: "MasterCard", UK_MAESTRO: "Maestro", UNION_PAY: "UnionPay", VISA: "Visa" };
@@ -3817,22 +3755,21 @@ let fn = () => {
             let str2 = "";
             if (creditCard.last4) {
               str2 = creditCard.last4.substr(2, 4);
-              const str3 = creditCard.last4;
             }
             const binData = creditCard.binData;
             if (binData) {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
-              const item = items.forEach((arg0) => {
-                if (binData[arg0]) {
-                  tmp[arg0] = closure_1_2[tmp[arg0]];
+              const item = items.forEach((item, index) => {
+                if (binData[item]) {
+                  binData[item] = closure_1_2[binData[item]];
                 } else {
-                  tmp[arg0] = "Unknown";
+                  binData[item] = "Unknown";
                 }
               });
               const items1 = ["issuingBank", "countryOfIssuance", "productId"];
-              const item1 = items1.forEach((arg0) => {
-                if (!binData[arg0]) {
-                  tmp[arg0] = "Unknown";
+              const item1 = items1.forEach((item, index) => {
+                if (!binData[item]) {
+                  tmp[item] = "Unknown";
                 }
               });
             }
@@ -3865,7 +3802,6 @@ let fn = () => {
               obj.creditCards[0].authenticationInsight = obj1;
               tmp5 = obj;
             }
-            const tmp4 = creditCard.last4 || "";
           }
           return tmp5;
         }
@@ -3874,21 +3810,21 @@ let fn = () => {
     },
     { "./error": 102 }
   ];
-  items = [
+  items101 = [
     (arg0, arg1, arg2) => {
       function addFieldError(arr, message, arr2) {
         const first = arr[0];
         if (1 !== arr.length) {
-          const item = arr2.forEach((field) => {
-            if (field.field === first1) {
-              closure_0 = field;
+          const item = arr2.forEach((item, index) => {
+            if (item.field === first1) {
+              closure_0 = item;
             }
           });
           if (!obj) {
             obj = { field: null, fieldErrors: null };
             obj[0] = first;
             obj[1] = [];
-            arr2.push(obj);
+            arr = arr2.push(obj);
           }
           obj(arr.slice(1), message, obj.fieldErrors);
         } else {
@@ -3896,28 +3832,27 @@ let fn = () => {
           obj[0] = tmp;
           obj[1] = first;
           obj[2] = message.message;
-          arr2.push(obj);
+          arr = arr2.push(obj);
         }
       }
       module.exports = function errorResponseAdapter(errors) {
         let message = errors;
-        const tmp = errors.errors && message.errors[0] && message.errors[0].extensions && message.errors[0].extensions.errorClass;
+        let tmp = errors.errors && message.errors[0] && message.errors[0].extensions && message.errors[0].extensions.errorClass;
         if ("VALIDATION" === tmp) {
           errors = message.errors;
           const items = [];
-          let item = errors.forEach((extensions) => {
+          let item = errors.forEach((item, index) => {
             if (tmp) {
-              const inputPath = extensions.extensions.inputPath;
+              const inputPath = item.extensions.inputPath;
               const substr = inputPath.slice(1);
               let arr2 = obj;
               obj = undefined;
-              let first1;
               const first = substr[0];
-              first1 = first;
+              let first1 = first;
               if (1 !== substr.length) {
-                const item = arr2.forEach((field) => {
-                  if (field.field === first1) {
-                    closure_0 = field;
+                item = arr2.forEach((item, index) => {
+                  if (item.field === first1) {
+                    closure_0 = item;
                   }
                 });
                 if (!obj) {
@@ -3929,12 +3864,11 @@ let fn = () => {
                 const substr1 = substr.slice(1);
                 const fieldErrors = obj.fieldErrors;
                 obj = undefined;
-                first1 = undefined;
                 first1 = substr1[0];
                 if (1 !== substr1.length) {
-                  const item1 = fieldErrors.forEach((field) => {
-                    if (field.field === first1) {
-                      closure_0 = field;
+                  const item1 = fieldErrors.forEach((item, index) => {
+                    if (item.field === first1) {
+                      closure_0 = item;
                     }
                   });
                   if (!obj) {
@@ -3943,26 +3877,26 @@ let fn = () => {
                     obj[1] = [];
                     fieldErrors.push(obj);
                   }
-                  items(substr1.slice(1), extensions, obj.fieldErrors);
+                  items(substr1.slice(1), item, obj.fieldErrors);
                 } else {
                   obj1 = { code: null, field: null, message: null };
                   obj1[0] = tmp10;
                   obj1[1] = first1;
-                  obj1[2] = extensions.message;
+                  obj1[2] = item.message;
                   fieldErrors.push(obj1);
                 }
               } else {
                 obj = { code: null, field: null, message: null };
                 obj[0] = tmp2;
                 obj[1] = first;
-                obj[2] = extensions.message;
+                obj[2] = item.message;
                 arr2 = arr2.push(obj);
               }
             }
+            tmp = item.extensions && item.extensions.inputPath;
           });
           if (0 === items.length) {
-            let obj = { error: null };
-            obj = { message: null };
+            let obj = { message: null };
             message = message.errors[0].message;
             obj[0] = message;
             obj[0] = obj;
@@ -3993,7 +3927,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items102 = [
     (arg0, arg1, arg2) => {
       module.exports = function configuration() {
         return { query: "query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     fastlane {       enabled     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }", operationName: "ClientConfiguration" };
@@ -4001,7 +3935,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items103 = [
     (arg0, arg1, arg2) => {
       const assign = global("../../../../lib/assign").assign;
       module.exports = function creditCardForFastlaneTokenization(authenticationInsight) {
@@ -4137,7 +4071,7 @@ let fn = () => {
     },
     { "../../../../lib/assign": 140 }
   ];
-  items = [
+  items104 = [
     (arg0, arg1, arg2) => {
       const assign = global("../../../../lib/assign").assign;
       module.exports = function creditCardTokenization(authenticationInsight) {
@@ -4245,7 +4179,7 @@ let fn = () => {
     },
     { "../../../../lib/assign": 140 }
   ];
-  items = [
+  items105 = [
     (arg0, arg1, arg2) => {
       class GraphQL {
         constructor(arg0) {
@@ -4299,7 +4233,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items106 = [
     (arg0, arg1, arg2) => {
       class GraphQLRequest {
         constructor(arg0) {
@@ -4329,20 +4263,20 @@ let fn = () => {
           obj = {};
           closure_1 = obj;
           keys = Object.keys(_data);
-          item = keys.forEach((arg0) => {
-            let tmp = closure_1_2(arg0);
-            if (typeof table[arg0] === "object") {
+          item = keys.forEach((item, index) => {
+            let tmp = closure_1_2(item);
+            if (typeof table[item] === "object") {
               table = tmp6;
               obj = {};
               let _Object = Object;
               let keys = Object.keys(tmp6);
-              let item = keys.forEach(() => { ... });
+              item = keys.forEach(() => { ... });
               obj[tmp] = obj;
-            } else if (typeof tmp2[arg0] === "number") {
+            } else if (typeof tmp2[item] === "number") {
               let _String = String;
-              obj[tmp] = String(tmp2[arg0]);
+              obj[tmp] = String(tmp2[item]);
             } else {
-              obj[tmp] = tmp2[arg0];
+              obj[tmp] = tmp2[item];
             }
           });
           obj = { clientSdkMetadata: this._clientSdkMetadata };
@@ -4453,7 +4387,7 @@ let fn = () => {
     },
     { "../../../lib/assign": 140, "../../../lib/is-fastlane-checkout": 171, "../../../lib/snake-case-to-camel-case": 179, "../../constants": 93, "./adapters/configuration": 99, "./adapters/credit-card-tokenization": 101, "./adapters/credit-card-tokenization-fastlane": 100, "./generators/configuration": 103, "./generators/credit-card-for-fastlane-tokenization": 104, "./generators/credit-card-tokenization": 105 }
   ];
-  items = [
+  items107 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../../lib/once");
       closure_1 = global("./ajax-driver");
@@ -4474,12 +4408,13 @@ let fn = () => {
         }
         method.timeout = num;
         method.data = method.data || {};
-        closure_1.request(method, closure_0(prototype));
+        closure_1.request(method, callback(prototype));
+        const tmpResult = callback(prototype);
       };
     },
     { "../../lib/once": 176, "./ajax-driver": 97 }
   ];
-  items = [
+  items108 = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => {
         try {
@@ -4491,7 +4426,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items109 = [
     (arg0, arg1, arg2) => {
       module.exports = (str, str2) => {
         if (typeof str !== "string") {
@@ -4518,7 +4453,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items110 = [
     (arg0, arg1, arg2) => {
       let _XMLHttpRequest = typeof window !== "undefined";
       if (typeof window !== "undefined") {
@@ -4545,17 +4480,15 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items111 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "DATA_COLLECTOR_KOUNT_NOT_ENABLED", message: "Kount is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "DATA_COLLECTOR_KOUNT_ERROR" };
-      obj = { type: globalResult.types.MERCHANT, code: "DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS", message: "Data Collector must be created with Kount and/or PayPal." };
+      const obj = { type: globalResult.types.MERCHANT, code: "DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS", message: "Data Collector must be created with Kount and/or PayPal." };
       module.exports = { DATA_COLLECTOR_KOUNT_NOT_ENABLED: obj, DATA_COLLECTOR_KOUNT_ERROR: obj, DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS: obj };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items112 = [
     (arg0, arg1, arg2) => {
       class Fraudnet {
         constructor() {
@@ -4594,11 +4527,11 @@ let fn = () => {
           self._parameterBlock = appendChildResult;
           obj1 = { src: FRAUDNET_URL };
           promise = loadScript(obj1);
-          nextPromise = promise.then((_thirdPartyBlock) => {
-            sessionId._thirdPartyBlock = _thirdPartyBlock;
+          nextPromise = promise.then((result) => {
+            sessionId._thirdPartyBlock = result;
             return sessionId;
           });
-          return nextPromise.catch(() => null);
+          return nextPromise.catch((error) => null);
         }
         teardown() {
           element = document.querySelector("iframe[title=\"ppfniframe\"]");
@@ -4667,7 +4600,7 @@ let fn = () => {
     },
     { "../lib/assets": 139, "../lib/constants": 145 }
   ];
-  items = [
+  items113 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./kount");
       closure_1 = global("./fraudnet");
@@ -4683,12 +4616,12 @@ let fn = () => {
         create: globalResult(function create(client) {
           closure_0 = client;
           closure_2 = { _instances: [] };
-          return closure_3.verify({ name: "Data Collector", client: client.client, authorization: client.authorization }).then(() => {
+          return closure_3.verify({ name: "Data Collector", client: client.client, authorization: client.authorization }).then((result) => {
             obj._instantiatedWithAClient = !client.useDeferredClient;
             obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_5.create(client.authorization), name: "Data Collector" };
             obj = closure_1_4.create(obj);
-            const nextPromise = obj.then((getConfiguration) => {
-              const configuration = getConfiguration.getConfiguration();
+            const nextPromise = obj.then((result) => {
+              const configuration = result.getConfiguration();
               if (true === closure_0.kount) {
                 if (configuration.gatewayConfiguration.kount) {
                   try {
@@ -4708,13 +4641,13 @@ let fn = () => {
                     return Promise.reject(tmp15);
                   }
                 }
-                return Promise.resolve(getConfiguration);
+                return Promise.resolve(result);
               }
               deviceData = {};
             });
             const tmp = obj;
-            obj._createPromise = obj.then((getConfiguration) => {
-              const configuration = getConfiguration.getConfiguration();
+            obj._createPromise = obj.then((result) => {
+              const configuration = result.getConfiguration();
               if (true === closure_0.kount) {
                 if (configuration.gatewayConfiguration.kount) {
                   try {
@@ -4734,20 +4667,20 @@ let fn = () => {
                     return Promise.reject(tmp15);
                   }
                 }
-                return Promise.resolve(getConfiguration);
+                return Promise.resolve(result);
               }
               deviceData = {};
-            }).then((getConfiguration) => {
-              const configuration = getConfiguration.getConfiguration();
+            }).then((result) => {
+              const configuration = result.getConfiguration();
               let correlationId = closure_0.riskCorrelationId;
               if (!correlationId) {
-                correlationId = tmp3.clientMetadataId;
+                correlationId = closure_0.clientMetadataId;
               }
               if (!correlationId) {
-                correlationId = tmp3.correlationId;
+                correlationId = closure_0.correlationId;
               }
               return closure_1_1.setup({ sessionId: correlationId, clientSessionId: configuration.analyticsMetadata.sessionId, environment: configuration.gatewayConfiguration.environment }).then(() => { ... });
-            }).then(() => {
+            }).then((result) => {
               let rejectResult = closure_2;
               if (0 === closure_2._instances.length) {
                 const tmp10 = new closure_1_2(closure_1_9.DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS);
@@ -4759,14 +4692,12 @@ let fn = () => {
               }
               return rejectResult;
             });
-            client = obj;
             obj.teardown = closure_1_8(function teardown() {
               return closure_0._createPromise.then(() => { ... });
             });
             client = obj;
             obj.getDeviceData = closure_1_8(function getDeviceData(arg0) {
               let obj = arg0;
-              obj = arg0;
               if (!arg0) {
                 obj = {};
               }
@@ -4784,7 +4715,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "../lib/methods": 175, "./errors": 112, "./fraudnet": 113, "./kount": 115, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items114 = [
     (arg0, arg1, arg2) => {
       class Kount {
         constructor(arg0) {
@@ -4891,8 +4822,8 @@ let fn = () => {
           if (null == arg0) {
             obj = {};
           }
-          obj = Object.create(obj2.prototype);
-          const cachedDeviceData = obj2.getCachedDeviceData(obj.merchantId);
+          obj = Object.create(Kount.prototype);
+          const cachedDeviceData = Kount.getCachedDeviceData(obj.merchantId);
           if (cachedDeviceData) {
             obj.deviceData = cachedDeviceData;
             obj._isCached = true;
@@ -4902,7 +4833,7 @@ let fn = () => {
             random.startCollectors();
             obj._deviceSessionId = obj._generateDeviceSessionId();
             obj.deviceData = obj._getDeviceData();
-            obj2.setCachedDeviceData(obj.merchantId, obj.deviceData);
+            Kount.setCachedDeviceData(obj.merchantId, obj.deviceData);
             obj._iframe = obj._setupIFrame();
           }
           return obj;
@@ -4914,17 +4845,13 @@ let fn = () => {
     },
     { "../lib/camel-case-to-snake-case": 144, "./vendor/sjcl": 116 }
   ];
-  items = [
+  items115 = [
     (arg0, arg1, arg2) => {
       function t(arg0, arg1, arg2) {
         if (4 !== arg1.length) {
           const invalid = new obj.exception.invalid("invalid aes block size");
           throw invalid;
         } else {
-          let num = 1;
-          if (arg2) {
-            num = 3;
-          }
           let num3 = 3;
           if (arg2) {
             num3 = 1;
@@ -4963,8 +4890,6 @@ let fn = () => {
           }
           let num13 = 0;
           do {
-            let tmp21 = num13;
-            let tmp25 = tmp16;
             let tmp26 = num13;
             let tmp20 = num12;
             let tmp22 = tmp13;
@@ -4997,9 +4922,6 @@ let fn = () => {
         [tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = u;
         let num = 0;
         do {
-          let tmp10 = tmp9;
-          let tmp14 = tmp5;
-          let tmp18 = num;
           tmp11 = tmp8;
           tmp12 = tmp7;
           tmp13 = tmp6;
@@ -5082,8 +5004,7 @@ let fn = () => {
         const aes = new obj.cipher.aes(g.b);
         g.C = aes;
       }
-      obj = { cipher: {}, hash: {}, keyexchange: {}, mode: {}, misc: {}, codec: {}, exception: obj };
-      obj = {
+      let obj = {
         corrupt(arg0) {
 
         },
@@ -5122,8 +5043,6 @@ let fn = () => {
           do {
             let tmp8 = substr[sum - 1];
             let tmp9 = 0 == sum % length;
-            let tmp10 = num3;
-            let tmp11 = sum;
             if (!tmp9) {
               let tmp12 = tmp5;
               if (tmp5) {
@@ -5152,8 +5071,6 @@ let fn = () => {
         }
         let num4 = 0;
         while (diff1) {
-          let tmp18 = num4;
-          let tmp19 = diff1;
           let diff = diff1;
           if (!(3 & num4)) {
             diff = diff1 - 4;
@@ -5228,7 +5145,6 @@ let fn = () => {
             let arr4 = tmp2[num4];
             tmp2[num4] = arr4.slice(0);
             num4 = num4 + 1;
-            let num7 = 5;
           } while (num4 < 5);
         }
       };
@@ -5267,7 +5183,6 @@ let fn = () => {
               } else {
                 const bitArray2 = obj.bitArray;
                 combined = bitArray2.M(arg1, partial, tmp | 0, arr.slice(0, arr.length - 1));
-                const tmp4 = tmp | 0;
               }
               return combined;
             }
@@ -5408,9 +5323,7 @@ let fn = () => {
           let num = 0;
           if (0 < bitLengthResult / 8) {
             do {
-              let tmp3 = str;
               let tmp4 = tmp2;
-              let tmp5 = num;
               if (!(3 & num)) {
                 tmp4 = toBitsResult[num / 4];
               }
@@ -5433,7 +5346,6 @@ let fn = () => {
           if (0 < unescapeResult.length) {
             do {
               let tmp = num << 8 | unescapeResult.charCodeAt(num2);
-              let tmp2 = num2;
               let num5 = tmp;
               if (!(3 & ~num2)) {
                 let arr = items.push(tmp);
@@ -5530,7 +5442,7 @@ let fn = () => {
           const sum = h + bitArray2.bitLength(toBitsResult);
           this.h = sum;
           if (9007199254740991 < sum) {
-            const invalid = new tmp2.exception.invalid("Cannot hash more than 2^53 - 1 bits");
+            const invalid = new obj.exception.invalid("Cannot hash more than 2^53 - 1 bits");
             throw invalid;
           } else {
             const _Uint32Array2 = Uint32Array;
@@ -5542,7 +5454,6 @@ let fn = () => {
               let num7 = 0;
               if (diff <= sum) {
                 do {
-                  let tmp12 = u;
                   let sum1 = num6 + 1;
                   let tmp14 = u(self, uint32Array.subarray(16 * num6, 16 * sum1));
                   diff = diff + 512;
@@ -5555,7 +5466,6 @@ let fn = () => {
               let diff1 = 512 + h - (512 + h & 511);
               if (diff1 <= sum) {
                 do {
-                  let tmp4 = u;
                   let tmp5 = u(self, combined.splice(0, 16));
                   diff1 = diff1 + 512;
                 } while (diff1 <= sum);
@@ -5563,7 +5473,6 @@ let fn = () => {
             }
             return self;
           }
-          tmp2 = obj;
         },
         finalize() {
           let length;
@@ -5586,7 +5495,6 @@ let fn = () => {
           combined.push(self.h | 0);
           if (combined.length) {
             do {
-              let tmp7 = u;
               let tmp8 = u(self, combined.splice(0, 16));
               length = combined.length;
             } while (length);
@@ -5602,12 +5510,9 @@ let fn = () => {
           let num = 2;
           let num2 = 0;
           do {
-            let tmp = num;
-            let tmp2 = num2;
             let num3 = 2;
             let flag = true;
             if (4 <= num) {
-              let tmp3 = num3;
               flag = false;
               while (0 !== num % num3) {
                 let sum = num3 + 1;
@@ -5764,9 +5669,7 @@ let fn = () => {
             }
             const items1 = [];
             for (let num13 = 0; num13 < arg0; num13 = num13 + 4) {
-              let tmp33 = num13;
               if (0 === (num13 + 1) % self.O) {
-                let tmp34 = y;
                 let tmp35 = y(self);
               }
               self.g[0] = self.g[0] + 1 | 0;
@@ -5783,7 +5686,6 @@ let fn = () => {
               }
               C = self.C;
               let encryptResult = C.encrypt(self.g);
-              let tmp38 = items1;
               let arr2 = items1.push(encryptResult[0], encryptResult[1], encryptResult[2], encryptResult[3]);
             }
             y(self);
@@ -5839,7 +5741,6 @@ let fn = () => {
             self.c[num].update(items);
             let num4 = 0;
             let tmp9 = num16;
-            const obj5 = self.c[num];
           } else if ("object" === tmp5) {
             const _Object = Object;
             const call = toString.call;
@@ -5874,7 +5775,6 @@ let fn = () => {
                 if (!num6) {
                   while (true) {
                     let num7 = tmp13;
-                    let tmp11 = num8;
                     if (typeof _performance[num8] !== "number") {
                       num7 = 1;
                     }
@@ -5907,7 +5807,6 @@ let fn = () => {
                 if (0 < arr1.length) {
                   do {
                     let tmp17 = arr1[num13];
-                    let tmp18 = num13;
                     let sum2 = num14;
                     let tmp20 = num14;
                     if (0 < tmp17) {
@@ -5933,7 +5832,6 @@ let fn = () => {
               self.c[num].update(items2.concat(arr1));
               tmp9 = num11;
               num4 = num3;
-              const obj4 = self.c[num];
             }
           } else {
             num4 = 1;
@@ -5955,8 +5853,6 @@ let fn = () => {
               self.c[num].update(_performance);
               num4 = 0;
               tmp9 = length;
-              const obj2 = self.c[num];
-              const obj3 = self.c[num];
             }
           }
           if (num4) {
@@ -5973,7 +5869,6 @@ let fn = () => {
                 const items4 = [];
                 const bound = Math.max(self.j, self.f);
                 for (const key10119 in seeded) {
-                  let tmp40 = key10119;
                   if (!seeded.hasOwnProperty(key10119)) {
                     continue;
                   } else {
@@ -5991,11 +5886,9 @@ let fn = () => {
                   } while (num17 < length2);
                 }
               }
-              let progress = obj.random.B.progress;
               const items5 = [];
-              progress = self.getProgress();
+              const progress = self.getProgress();
               for (const key10138 in progress) {
-                let tmp41 = key10138;
                 if (!progress.hasOwnProperty(key10138)) {
                   continue;
                 } else {
@@ -6059,49 +5952,45 @@ let fn = () => {
           const self = this;
           if (!this.s) {
             obj = { loadTimeCollector: null, mouseCollector: null, keyboardCollector: null, accelerometerCollector: null, touchCollector: null };
-            let V = self.V;
             obj[0] = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
-            V = self.W;
             obj[1] = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
-            V = self.U;
             obj[2] = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
-            V = self.R;
             obj[3] = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
-            V = self.X;
+            const V = self.X;
             obj[4] = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             self.a = obj;
@@ -6173,7 +6062,6 @@ let fn = () => {
           let length;
           const items = [];
           for (const key10008 in obj) {
-            let tmp6 = key10008;
             let hasOwnPropertyResult = obj.hasOwnProperty(key10008);
             if (hasOwnPropertyResult) {
               hasOwnPropertyResult = obj[key10008] === arg1;
@@ -6189,7 +6077,6 @@ let fn = () => {
           let num = 0;
           if (0 < items.length) {
             do {
-              let tmp5 = items[num];
               delete tmp2[tmp];
               num = num + 1;
               length = items.length;
@@ -6387,16 +6274,15 @@ let fn = () => {
     },
     { crypto: "r" }
   ];
-  items = [
+  items116 = [
     (arg0, arg1, arg2) => {
-      let obj = { FASTLANE_SDK_LOAD_ERROR: null };
-      obj = { type: global("../lib/braintree-error").types.MERCHANT, code: "FASTLANE_SDK_LOAD_ERROR" };
+      const obj = { type: global("../lib/braintree-error").types.MERCHANT, code: "FASTLANE_SDK_LOAD_ERROR" };
       obj[0] = obj;
       module.exports = obj;
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items117 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/braintree-error");
       closure_1 = global("./errors");
@@ -6412,20 +6298,20 @@ let fn = () => {
           flag = false;
         }
         const promise = loadFastlane(assign({ platform: "BT", btSdkVersion: version, minified: flag }, arg0));
-        return loadFastlane(assign({ platform: "BT", btSdkVersion: version, minified: flag }, arg0)).then((metadata) => {
+        return loadFastlane(assign({ platform: "BT", btSdkVersion: version, minified: flag }, arg0)).then((result) => {
           const platformOptions = { platform: "BT", authorization: closure_0.authorization, client: closure_0.client, deviceData: closure_0.deviceData };
           delete tmp2[tmp];
           delete tmp2[tmp];
           delete tmp2[tmp];
           delete tmp2[tmp];
           delete tmp2[tmp];
-          return fastlane.create(closure_1_3({ platformOptions }, closure_0, metadata.metadata));
-        }).catch((message) => Promise.reject(new closure_0({ type: constants.FASTLANE_SDK_LOAD_ERROR.type, code: constants.FASTLANE_SDK_LOAD_ERROR.code, message: message.message })));
+          return fastlane.create(assign({ platformOptions }, closure_0, result.metadata));
+        }).catch((error) => Promise.reject(new closure_0({ type: constants.FASTLANE_SDK_LOAD_ERROR.type, code: constants.FASTLANE_SDK_LOAD_ERROR.code, message: error.message })));
       });
     },
     { "../lib/assets": 139, "../lib/assign": 140, "../lib/braintree-error": 143, "./errors": 117, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items118 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("./fastlane");
@@ -6436,26 +6322,23 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "fastlane", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization }).then(() => closure_1_3.create({ authorization: client.authorization, client: client.client, assetsUrl: closure_1_2.create(client.authorization), name: "fastlane" })).then((client) => closure_1_1(closure_1_4({ client, deviceData: client.deviceData }, client)));
+          return closure_0.verify({ name: "fastlane", client: client.client, authorization: client.authorization }).then((result) => closure_1_3.create({ authorization: client.authorization, client: client.client, assetsUrl: closure_1_2.create(client.authorization), name: "fastlane" })).then((result) => closure_1_1(assign({ client: result, deviceData: client.deviceData }, client)));
         }),
         VERSION: "3.112.1"
       };
     },
     { "../lib/assign": 140, "../lib/basic-component-verification": 141, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./fastlane": 118, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items119 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "GOOGLE_PAYMENT_NOT_ENABLED", message: "Google Pay is not enabled for this merchant." };
-      obj = { code: "GOOGLE_PAYMENT_GATEWAY_ERROR", message: "There was an error when tokenizing the Google Pay payment method.", type: globalResult.types.UNKNOWN };
-      obj = { code: "GOOGLE_PAYMENT_UNSUPPORTED_VERSION", type: globalResult.types.MERCHANT };
+      const obj = { code: "GOOGLE_PAYMENT_UNSUPPORTED_VERSION", type: globalResult.types.MERCHANT };
       module.exports = { GOOGLE_PAYMENT_NOT_ENABLED: obj, GOOGLE_PAYMENT_GATEWAY_ERROR: obj, GOOGLE_PAYMENT_UNSUPPORTED_VERSION: obj };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items120 = [
     (arg0, arg1, arg2) => {
       class GooglePayment {
         constructor(arg0) {
@@ -6573,7 +6456,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/assign": 140, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/find": 156, "../lib/generate-google-pay-configuration": 168, "../lib/methods": 175, "./errors": 120, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items121 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./google-payment");
       closure_1 = global("../lib/braintree-error");
@@ -6585,13 +6468,13 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_4.verify({ name: "Google Pay", client: client.client, authorization: client.authorization }).then(() => {
+          return closure_4.verify({ name: "Google Pay", client: client.client, authorization: client.authorization }).then((result) => {
             let obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Google Pay" };
             obj = closure_1_3.create(obj);
-            const nextPromise = obj.then((client) => {
-              let rejectResult = client;
-              closure_0.client = client;
-              if (!client.getConfiguration().gatewayConfiguration.androidPay) {
+            const nextPromise = obj.then((result) => {
+              let rejectResult = result;
+              closure_0.client = result;
+              if (!result.getConfiguration().gatewayConfiguration.androidPay) {
                 const tmp7 = new closure_1_1(closure_1_5.GOOGLE_PAYMENT_NOT_ENABLED);
                 rejectResult = Promise.reject(tmp7);
               }
@@ -6602,8 +6485,8 @@ let fn = () => {
             let nextPromise1 = tmp;
             client = tmp;
             if (!client.useDeferredClient) {
-              nextPromise1 = nextPromise.then((_client) => {
-                closure_0._client = _client;
+              nextPromise1 = nextPromise.then((result) => {
+                closure_0._client = result;
                 return closure_0;
               });
             }
@@ -6615,7 +6498,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./errors": 120, "./google-payment": 121, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items122 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../../lib/braintree-error");
       closure_1 = global("../shared/errors");
@@ -6630,7 +6513,7 @@ let fn = () => {
               obj[2] = `Value "${str}" is not allowed for "${key10009}" attribute.`;
               let tmp7 = new closure_0(obj);
             }
-          } else if ("string" === tmp[key10009]) {
+          } else if ("string" === allowedAttributes[key10009]) {
             let tmp13 = typeof str === "string";
             if (typeof str !== "string") {
               tmp13 = typeof str === "number";
@@ -6638,7 +6521,7 @@ let fn = () => {
             let flag = tmp13;
           } else {
             flag = false;
-            if ("boolean" === tmp[key10009]) {
+            if ("boolean" === allowedAttributes[key10009]) {
               const _String = String;
               let tmp12 = "true" === String(str);
               if (!tmp12) {
@@ -6660,7 +6543,7 @@ let fn = () => {
     },
     { "../../lib/braintree-error": 143, "../shared/constants": 131, "../shared/errors": 132 }
   ];
-  items = [
+  items123 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../shared/constants");
       closure_1 = global("../../lib/use-min");
@@ -6671,7 +6554,7 @@ let fn = () => {
     },
     { "../../lib/use-min": 181, "../shared/constants": 131 }
   ];
-  items = [
+  items124 = [
     (arg0, arg1, arg2) => {
       const navigationDirections = global("../shared/constants").navigationDirections;
       closure_1 = global("../shared/browser-detection");
@@ -6680,23 +6563,19 @@ let fn = () => {
       closure_4 = ["INPUT", "SELECT", "TEXTAREA"];
       closure_5 = ["hidden", "button", "reset", "submit", "checkbox", "radio", "file"];
       module.exports = {
-        removeExtraFocusElements(first, fn) {
-          closure_0 = fn;
+        removeExtraFocusElements(elements, arg1) {
+          closure_0 = arg1;
           const call = slice.call;
-          const elements = first.elements;
+          elements = elements.elements;
           const arr = typeof call === "unknown" ? slice() : call(elements);
           let num = 0;
           let tmp = null;
           if (0 < arr.length) {
             while (true) {
               let tmp2 = arr[num];
-              let tmp3 = closure_1;
-              let tmp4 = num;
               if (closure_1.hasSoftwareKeyboard()) {
-                let tmp6 = closure_4;
                 let tmp7 = closure_4.indexOf(tmp2.tagName) > -1;
                 if (tmp7) {
-                  let tmp8 = closure_5;
                   tmp7 = closure_5.indexOf(tmp2.type) < 0;
                 }
                 let tmp5 = tmp7;
@@ -6723,13 +6602,9 @@ let fn = () => {
           if (0 < reversed.length) {
             while (true) {
               let tmp11 = reversed[num2];
-              let tmp12 = closure_1;
-              let tmp13 = num2;
               if (closure_1.hasSoftwareKeyboard()) {
-                let tmp15 = closure_4;
                 let tmp16 = closure_4.indexOf(tmp11.tagName) > -1;
                 if (tmp16) {
-                  let tmp17 = closure_5;
                   tmp16 = closure_5.indexOf(tmp11.type) < 0;
                 }
                 let tmp14 = tmp16;
@@ -6750,13 +6625,13 @@ let fn = () => {
             }
           }
           items[1] = tmp10;
-          const item = items.forEach((getAttribute) => {
-            let matchFocusElementResult = getAttribute;
-            if (getAttribute) {
-              matchFocusElementResult = closure_1_2.matchFocusElement(getAttribute.getAttribute("id"));
+          const item = items.forEach((item, index) => {
+            let matchFocusElementResult = item;
+            if (item) {
+              matchFocusElementResult = closure_1_2.matchFocusElement(item.getAttribute("id"));
             }
             if (matchFocusElementResult) {
-              callback(getAttribute.getAttribute("id"));
+              callback(item.getAttribute("id"));
             }
           });
         },
@@ -6799,7 +6674,7 @@ let fn = () => {
     },
     { "../shared/browser-detection": 130, "../shared/constants": 131, "../shared/find-parent-tags": 133, "../shared/focus-intercept": 134 }
   ];
-  items = [
+  items125 = [
     (arg0, arg1, arg2) => {
       let allowedStyles = global("../shared/constants").allowedStyles;
       module.exports = function getStylesFromClass(str) {
@@ -6816,9 +6691,9 @@ let fn = () => {
         element.style.top = "-99999px !important";
         body.appendChild(element);
         allowedStyles = window.getComputedStyle(element);
-        const item = allowedStyles.forEach((arg0) => {
-          if (table[arg0]) {
-            obj[arg0] = tmp;
+        const item = allowedStyles.forEach((item, index) => {
+          if (table[item]) {
+            obj[item] = tmp;
           }
         });
         body2.removeChild(element);
@@ -6827,7 +6702,7 @@ let fn = () => {
     },
     { "../shared/constants": 131 }
   ];
-  items = [
+  items126 = [
     (arg0, arg1, arg2) => {
       class HostedFields {
         constructor(arg0) {
@@ -7460,7 +7335,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/assign": 140, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/create-assets-url": 148, "../../lib/create-deferred-client": 150, "../../lib/destructor": 152, "../../lib/errors": 154, "../../lib/find-root-node": 155, "../../lib/is-verified-domain": 173, "../../lib/methods": 175, "../../lib/shadow": 178, "../shared/browser-detection": 130, "../shared/constants": 131, "../shared/errors": 132, "../shared/find-parent-tags": 133, "../shared/focus-intercept": 134, "../shared/get-card-types": 135, "./attribute-validation-error": 123, "./compose-url": 124, "./focus-change": 125, "./get-styles-from-class": 126, "./inject-frame": 128, "@braintree/event-emitter": 30, "@braintree/iframer": 32, "@braintree/uuid": 36, "@braintree/wrap-promise": 40, framebus: 50 }
   ];
-  items = [
+  items127 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../shared/focus-intercept");
       const navigationDirections = global("../shared/constants").navigationDirections;
@@ -7481,7 +7356,7 @@ let fn = () => {
     },
     { "../shared/constants": 131, "../shared/focus-intercept": 134 }
   ];
-  items = [
+  items128 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./external/hosted-fields");
       closure_1 = global("../lib/basic-component-verification");
@@ -7493,7 +7368,7 @@ let fn = () => {
         supportsInputFormatting: globalResult,
         create: global("@braintree/wrap-promise")(function create(authorization) {
           closure_0 = authorization;
-          return closure_1.verify({ name: "Hosted Fields", authorization: authorization.authorization, client: authorization.client }).then(() => {
+          return closure_1.verify({ name: "Hosted Fields", authorization: authorization.authorization, client: authorization.client }).then((result) => {
             closure_0 = new closure_0(closure_0);
             const tmp = new closure_0(closure_0);
             return new Promise((arg0, arg1) => {
@@ -7509,7 +7384,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "./external/hosted-fields": 127, "./shared/errors": 132, "@braintree/wrap-promise": 40, "restricted-input/supports-input-formatting": 85 }
   ];
-  items = [
+  items129 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("@braintree/browser-detection/is-android");
       const globalResult1 = global("@braintree/browser-detection/is-chrome-os");
@@ -7542,28 +7417,25 @@ let fn = () => {
     },
     { "@braintree/browser-detection/is-android": 20, "@braintree/browser-detection/is-chrome": 22, "@braintree/browser-detection/is-chrome-os": 21, "@braintree/browser-detection/is-firefox": 23, "@braintree/browser-detection/is-ios": 27, "@braintree/browser-detection/is-ios-webview": 25 }
   ];
-  items = [
+  items130 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/enumerate");
-      obj = { VERSION: "3.112.1", maxExpirationYearAge: 19, externalEvents: { FOCUS: "focus", BLUR: "blur", EMPTY: "empty", NOT_EMPTY: "notEmpty", VALIDITY_CHANGE: "validityChange", CARD_TYPE_CHANGE: "cardTypeChange" }, defaultMaxLengths: { number: 19, postalCode: 8, expirationDate: 7, expirationMonth: 2, expirationYear: 4, cvv: 3 }, externalClasses: { FOCUSED: "braintree-hosted-fields-focused", INVALID: "braintree-hosted-fields-invalid", VALID: "braintree-hosted-fields-valid" }, navigationDirections: { BACK: "before", FORWARD: "after" }, defaultIFrameStyle: { border: "none", width: "100%", height: "100%", float: "left" }, tokenizationErrorCodes: obj, allowedStyles: ["-moz-appearance", "-moz-box-shadow", "-moz-osx-font-smoothing", "-moz-tap-highlight-color", "-moz-transition", "-webkit-appearance", "-webkit-box-shadow", "-webkit-font-smoothing", "-webkit-tap-highlight-color", "-webkit-transition", "appearance", "box-shadow", "color", "direction", "font", "font-family", "font-size", "font-size-adjust", "font-stretch", "font-style", "font-variant", "font-variant-alternates", "font-variant-caps", "font-variant-east-asian", "font-variant-ligatures", "font-variant-numeric", "font-weight", "letter-spacing", "line-height", "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "opacity", "outline", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left", "text-align", "text-shadow", "transition"], allowedFields: { cardholderName: { name: "cardholder-name", label: "Cardholder Name" }, number: { name: "credit-card-number", label: "Credit Card Number" }, cvv: { name: "cvv", label: "CVV" }, expirationDate: { name: "expiration", label: "Expiration Date" }, expirationMonth: { name: "expiration-month", label: "Expiration Month" }, expirationYear: { name: "expiration-year", label: "Expiration Year" }, postalCode: { name: "postal-code", label: "Postal Code" } }, allowedAttributes: { "aria-invalid": "boolean", "aria-required": "boolean", disabled: "boolean", placeholder: "string" }, allowedBillingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], allowedShippingAddressFields: ["company", "countryCodeNumeric", "countryCodeAlpha2", "countryCodeAlpha3", "countryName", "extendedAddress", "locality", "region", "firstName", "lastName", "postalCode", "streetAddress"], autocompleteMappings: { "cardholder-name": "cc-name", "credit-card-number": "cc-number", expiration: "cc-exp", "expiration-month": "cc-exp-month", "expiration-year": "cc-exp-year", cvv: "cc-csc", "postal-code": "billing postal-code" } };
-      obj = { 81724: null, 81736: null };
+      const obj = { 81724: null, 81736: null };
       ({ HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE: obj2[81724], HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED: obj2[81736] } = global("./errors"));
       obj.events = globalResult(["ADD_CLASS", "AUTOFILL_DATA_AVAILABLE", "BIN_AVAILABLE", "CARD_FORM_ENTRY_HAS_BEGUN", "CLEAR_FIELD", "CONFIGURATION", "FRAME_READY", "INPUT_EVENT", "READY_FOR_CLIENT", "REMOVE_ATTRIBUTE", "REMOVE_CLASS", "REMOVE_FOCUS_INTERCEPTS", "SET_ATTRIBUTE", "SET_MESSAGE", "SET_MONTH_OPTIONS", "TOKENIZATION_REQUEST", "TRIGGER_FOCUS_CHANGE", "TRIGGER_INPUT_FOCUS", "VALIDATE_STRICT"], "hosted-fields:");
       module.exports = obj;
     },
     { "../../lib/enumerate": 153, "./errors": 132 }
   ];
-  items = [
+  items131 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.UNKNOWN, code: "HOSTED_FIELDS_TIMEOUT", message: "Hosted Fields timed out when attempting to set up." };
-      obj = { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_INVALID_FIELD_KEY" };
-      obj = { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR", message: "Selector does not reference a valid DOM node." };
+      const obj = { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_INVALID_FIELD_SELECTOR", message: "Selector does not reference a valid DOM node." };
       module.exports = { HOSTED_FIELDS_TIMEOUT: obj, HOSTED_FIELDS_INVALID_FIELD_KEY: obj, HOSTED_FIELDS_INVALID_FIELD_SELECTOR: obj, HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME", message: "Element already contains a Braintree iframe." }, HOSTED_FIELDS_FIELD_INVALID: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_FIELD_INVALID" }, HOSTED_FIELDS_FIELD_NOT_PRESENT: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_FIELD_NOT_PRESENT" }, HOSTED_FIELDS_TOKENIZATION_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "HOSTED_FIELDS_TOKENIZATION_NETWORK_ERROR", message: "A tokenization network error occurred." }, HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE: { type: globalResult.types.CUSTOMER, code: "HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE", message: "This credit card already exists in the merchant's vault." }, HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED: { type: globalResult.types.CUSTOMER, code: "HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED", message: "CVV verification failed during tokenization." }, HOSTED_FIELDS_FAILED_TOKENIZATION: { type: globalResult.types.CUSTOMER, code: "HOSTED_FIELDS_FAILED_TOKENIZATION", message: "The supplied card data failed tokenization." }, HOSTED_FIELDS_FIELDS_EMPTY: { type: globalResult.types.CUSTOMER, code: "HOSTED_FIELDS_FIELDS_EMPTY", message: "All fields are empty. Cannot tokenize empty card fields." }, HOSTED_FIELDS_FIELDS_INVALID: { type: globalResult.types.CUSTOMER, code: "HOSTED_FIELDS_FIELDS_INVALID", message: "Some payment input fields are invalid. Cannot tokenize invalid card fields." }, HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_ATTRIBUTE_NOT_SUPPORTED" }, HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED" }, HOSTED_FIELDS_FIELD_PROPERTY_INVALID: { type: globalResult.types.MERCHANT, code: "HOSTED_FIELDS_FIELD_PROPERTY_INVALID" } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items132 = [
     (arg0, arg1, arg2) => {
       module.exports = function findParentTags(parentNode) {
         parentNode = parentNode.parentNode;
@@ -7571,7 +7443,6 @@ let fn = () => {
         if (null != parentNode) {
           do {
             let tmp = null != parentNode.tagName;
-            let tmp2 = parentNode;
             if (tmp) {
               let str = parentNode.tagName;
               tmp = str.toLowerCase() === arg1;
@@ -7587,7 +7458,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items133 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./browser-detection");
       const globalResult = global("./constants");
@@ -7614,8 +7485,8 @@ let fn = () => {
           const attr5 = element.setAttribute("style", JSON.stringify({ border: "none !important", display: "block !important", height: "1px !important", left: "-1px !important", opacity: "0 !important", position: "absolute !important", top: "-1px !important", width: "1px !important" }).replace(/[{}"]/g, "").replace(/,/g, ";"));
           const classList = element.classList;
           classList.add("focus-intercept");
-          const listener = element.addEventListener("focus", (arg0) => {
-            lib(arg0);
+          const listener = element.addEventListener("focus", (event) => {
+            lib(event);
             if (!lib.hasSoftwareKeyboard()) {
               element.blur();
             }
@@ -7633,17 +7504,17 @@ let fn = () => {
             const call = slice.call;
             arr = typeof call === "unknown" ? slice() : call(elements);
           }
-          const item = arr.forEach((nodeType) => {
-            let matchFocusElementResult = nodeType;
-            if (nodeType) {
-              matchFocusElementResult = 1 === nodeType.nodeType;
+          const item = arr.forEach((item, index) => {
+            let matchFocusElementResult = item;
+            if (item) {
+              matchFocusElementResult = 1 === item.nodeType;
             }
             if (matchFocusElementResult) {
-              matchFocusElementResult = closure_3.matchFocusElement(nodeType.getAttribute("id"));
+              matchFocusElementResult = closure_3.matchFocusElement(item.getAttribute("id"));
             }
             if (matchFocusElementResult) {
-              const parentNode = nodeType.parentNode;
-              parentNode.removeChild(nodeType);
+              const parentNode = item.parentNode;
+              parentNode.removeChild(item);
             }
           });
         },
@@ -7676,14 +7547,14 @@ let fn = () => {
     },
     { "./browser-detection": 130, "./constants": 131 }
   ];
-  items = [
+  items134 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("credit-card-type");
       module.exports = (arg0) => {
         const arr = callback(arg0);
-        const item = arr.forEach((type) => {
-          if ("mastercard" === type.type) {
-            type.type = "master-card";
+        const item = arr.forEach((item, index) => {
+          if ("mastercard" === item.type) {
+            item.type = "master-card";
           }
         });
         return arr;
@@ -7691,7 +7562,7 @@ let fn = () => {
     },
     { "credit-card-type": 42 }
   ];
-  items = [
+  items135 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("./american-express");
       const globalResult1 = global("./apple-pay");
@@ -7716,7 +7587,7 @@ let fn = () => {
     },
     { "./american-express": 88, "./apple-pay": 91, "./client": 96, "./data-collector": 114, "./fastlane": 119, "./google-payment": 122, "./hosted-fields": 129, "./local-payment": 185, "./masterpass": 188, "./payment-request": 193, "./paypal": 200, "./paypal-checkout": 197, "./preferred-payment-methods": 203, "./sepa": 207, "./three-d-secure": 219, "./unionpay": 223, "./us-bank-account": 229, "./vault-manager": 232, "./venmo": 237, "./visa-checkout": 247 }
   ];
-  items = [
+  items136 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./create-authorization-data");
       closure_1 = global("./json-clone");
@@ -7732,7 +7603,6 @@ let fn = () => {
           const tmp2 = callback2(_configuration.analyticsMetadata);
           obj.braintreeLibraryVersion = constants.BRAINTREE_LIBRARY_VERSION;
           for (const key10017 in obj._meta) {
-            let tmp3 = key10017;
             let _meta = obj._meta;
             if (!_meta.hasOwnProperty(key10017)) {
               continue;
@@ -7775,7 +7645,7 @@ let fn = () => {
     },
     { "./constants": 145, "./create-authorization-data": 149, "./json-clone": 174 }
   ];
-  items = [
+  items137 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./constants");
       closure_1 = global("./add-metadata");
@@ -7785,15 +7655,15 @@ let fn = () => {
           closure_1 = arg2;
           closure_2 = Date.now();
           const resolved = Promise.resolve(arg0);
-          return resolved.then((getConfiguration) => {
+          return resolved.then((result) => {
             const sum = constants.ANALYTICS_PREFIX + constants;
             let obj = { events: [], tracking: [] };
-            const addEventMetadataResult = closure_1.addEventMetadata(getConfiguration, obj);
+            const addEventMetadataResult = closure_1.addEventMetadata(result, obj);
             addEventMetadataResult.event_name = sum;
             addEventMetadataResult.t = closure_2;
             obj = { level: "info", event: sum, payload: null };
             let str = "sandbox";
-            if ("production" === getConfiguration.getConfiguration().gatewayConfiguration.environment) {
+            if ("production" === result.getConfiguration().gatewayConfiguration.environment) {
               str = "production";
             }
             obj[2] = { env: str, timestamp: closure_2 };
@@ -7802,10 +7672,10 @@ let fn = () => {
             const items1 = [addEventMetadataResult];
             obj.tracking = items1;
             obj = { url: constants.ANALYTICS_URL, method: "post", data: obj, timeout: constants.ANALYTICS_REQUEST_TIMEOUT_MS };
-            return getConfiguration._request(obj, closure_1);
-          }).catch((arg0) => {
+            return result._request(obj, closure_1);
+          }).catch((error) => {
             if (closure_1) {
-              tmp(arg0);
+              tmp(error);
             }
           });
         }
@@ -7813,22 +7683,19 @@ let fn = () => {
     },
     { "./add-metadata": 137, "./constants": 145 }
   ];
-  items = [
+  items138 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("@braintree/asset-loader/load-script");
       module.exports = { loadScript: global("@braintree/asset-loader/load-script"), loadFastlane: global("@paypal/accelerated-checkout-loader").loadAxo };
     },
     { "@braintree/asset-loader/load-script": 2, "@paypal/accelerated-checkout-loader": 41 }
   ];
-  items = [
+  items139 = [
     (arg0, arg1, arg2) => {
       function assignPolyfill(arg0) {
         for (let num = 1; num < arguments.length; num = num + 1) {
           let obj = arguments[num];
-          let tmp = obj;
-          let tmp2 = num;
           for (const key10011 in obj) {
-            let tmp3 = key10011;
             if (!obj.hasOwnProperty(key10011)) {
               continue;
             } else {
@@ -7849,7 +7716,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items140 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./braintree-error");
       closure_1 = global("./errors");
@@ -7891,7 +7758,7 @@ let fn = () => {
     },
     { "./braintree-error": 143, "./errors": 154 }
   ];
-  items = [
+  items141 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./once");
       module.exports = (arg0, arg1) => {
@@ -7911,10 +7778,8 @@ let fn = () => {
         if (0 !== length) {
           for (let num2 = 0; num2 < length; num2 = num2 + 1) {
             let arr = arg0[num2];
-            let tmp5 = num2;
             if (0 === arr.length) {
               let arrResult = arr();
-              let tmp8 = length;
               let diff = length - 1;
               length = diff;
               if (0 === diff) {
@@ -7931,7 +7796,7 @@ let fn = () => {
     },
     { "./once": 176 }
   ];
-  items = [
+  items142 = [
     (arg0, arg1, arg2) => {
       class BraintreeError {
         constructor(arg0) {
@@ -7997,47 +7862,41 @@ let fn = () => {
     },
     { "./enumerate": 153 }
   ];
-  items = [
+  items143 = [
     (arg0, arg1, arg2) => {
       module.exports = function camelCaseToSnakeCase(arr) {
         closure_0 = arr;
         if (null === arr) {
           let reduced = null;
-          reduced = null;
         } else {
           const _Array = Array;
           if (Array.isArray(arr)) {
             const items = [];
-            reduced = items;
-            const item = arr.forEach((arr) => {
-              closure_0 = arr;
+            const item = arr.forEach((item, index) => {
+              closure_0 = item;
               let reduced;
-              if (null === arr) {
-                reduced = null;
+              if (null === item) {
                 reduced = null;
               } else {
                 const _Array = Array;
-                if (Array.isArray(arr)) {
+                if (Array.isArray(item)) {
                   items = [];
-                  reduced = items;
-                  const item = arr.forEach((arr) => {
-                    closure_0 = arr;
+                  item = item.forEach((item, index) => {
+                    closure_0 = item;
                     let reduced;
-                    if (null === arr) {
-                      reduced = null;
+                    if (null === item) {
                       reduced = null;
                     } else {
                       const _Array = Array;
-                      if (Array.isArray(arr)) {
+                      if (Array.isArray(item)) {
                         items = [];
-                        reduced = items;
-                        const item = arr.forEach(() => { ... });
+                        item = item.forEach(() => { ... });
                         reduced = items;
                       } else {
-                        reduced = arr;
-                        if (typeof arr === "object") {
+                        reduced = item;
+                        if (typeof item === "object") {
                           const _Object = Object;
-                          const keys = Object.keys(arr);
+                          const keys = Object.keys(item);
                           reduced = keys.reduce(() => { ... }, {});
                         }
                       }
@@ -8046,20 +7905,20 @@ let fn = () => {
                   });
                   reduced = items;
                 } else {
-                  reduced = arr;
-                  if (typeof arr === "object") {
+                  reduced = item;
+                  if (typeof item === "object") {
                     const _Object = Object;
-                    const keys = Object.keys(arr);
-                    reduced = keys.reduce((arg0, str) => {
-                      str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
-                      let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                      if (typeof arr[str] === "object") {
-                        arr = tmp2[str];
+                    const keys = Object.keys(item);
+                    reduced = keys.reduce((acc, item, index) => {
+                      let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
+                      let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
+                      if (typeof arr[item] === "object") {
+                        arr = tmp2[item];
                         items = undefined;
                         if (null === arr) {
                           items = null;
                           let reduced = null;
-                          arg0[formatted] = reduced;
+                          acc[formatted] = reduced;
                         } else {
                           let _Array = Array;
                           if (!Array.isArray(arr)) {
@@ -8073,11 +7932,11 @@ let fn = () => {
                           }
                         }
                         items = [];
-                        let item = arr.forEach(() => { ... });
+                        item = arr.forEach(() => { ... });
                         reduced = items;
                       } else {
-                        arg0[formatted] = tmp2[str];
-                        return arg0;
+                        acc[formatted] = tmp2[item];
+                        return acc;
                       }
                     }, {});
                   }
@@ -8091,16 +7950,16 @@ let fn = () => {
             if (typeof arr === "object") {
               const _Object = Object;
               const keys = Object.keys(arr);
-              reduced = keys.reduce((arg0, str) => {
-                str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
-                let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                if (typeof arr[str] === "object") {
-                  arr = tmp2[str];
+              reduced = keys.reduce((acc, item, index) => {
+                let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
+                let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
+                if (typeof arr[item] === "object") {
+                  arr = tmp2[item];
                   items = undefined;
                   if (null === arr) {
                     items = null;
                     let reduced = null;
-                    arg0[formatted] = reduced;
+                    acc[formatted] = reduced;
                   } else {
                     let _Array = Array;
                     if (!Array.isArray(arr)) {
@@ -8108,16 +7967,16 @@ let fn = () => {
                       if (typeof arr === "object") {
                         let _Object = Object;
                         let keys = Object.keys(arr);
-                        reduced = keys.reduce((arg0, str) => {
-                          str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
-                          let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                          if (typeof arr[str] === "object") {
-                            arr = tmp2[str];
+                        reduced = keys.reduce((acc, item, index) => {
+                          let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
+                          let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
+                          if (typeof arr[item] === "object") {
+                            arr = tmp2[item];
                             items = undefined;
                             if (null === arr) {
                               items = null;
                               let reduced = null;
-                              arg0[formatted] = reduced;
+                              acc[formatted] = reduced;
                             } else {
                               let _Array = Array;
                               if (!Array.isArray(arr)) {
@@ -8131,11 +7990,11 @@ let fn = () => {
                               }
                             }
                             items = [];
-                            let item = arr.forEach(() => { ... });
+                            item = arr.forEach(() => { ... });
                             reduced = items;
                           } else {
-                            arg0[formatted] = tmp2[str];
-                            return arg0;
+                            acc[formatted] = tmp2[item];
+                            return acc;
                           }
                         }, {});
                       }
@@ -8143,24 +8002,22 @@ let fn = () => {
                     }
                   }
                   items = [];
-                  let item = arr.forEach((arr) => {
-                    closure_0 = arr;
+                  item = arr.forEach((item, index) => {
+                    closure_0 = item;
                     let reduced;
-                    if (null === arr) {
-                      reduced = null;
+                    if (null === item) {
                       reduced = null;
                     } else {
                       const _Array = Array;
-                      if (Array.isArray(arr)) {
+                      if (Array.isArray(item)) {
                         items = [];
-                        reduced = items;
-                        const item = arr.forEach(() => { ... });
+                        item = item.forEach(() => { ... });
                         reduced = items;
                       } else {
-                        reduced = arr;
-                        if (typeof arr === "object") {
+                        reduced = item;
+                        if (typeof item === "object") {
                           const _Object = Object;
-                          const keys = Object.keys(arr);
+                          const keys = Object.keys(item);
                           reduced = keys.reduce(() => { ... }, {});
                         }
                       }
@@ -8169,8 +8026,8 @@ let fn = () => {
                   });
                   reduced = items;
                 } else {
-                  arg0[formatted] = tmp2[str];
-                  return arg0;
+                  acc[formatted] = tmp2[item];
+                  return acc;
                 }
               }, {});
             }
@@ -8181,21 +8038,21 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items144 = [
     (arg0, arg1, arg2) => {
       module.exports = { ANALYTICS_PREFIX: "web.", ANALYTICS_REQUEST_TIMEOUT_MS: 2000, ANALYTICS_URL: "https://www.paypal.com/xoplatform/logger/api/logger", ASSETS_URLS: { production: "https://assets.braintreegateway.com", sandbox: "https://assets.braintreegateway.com" }, CLIENT_API_URLS: { production: "https://api.braintreegateway.com:443", sandbox: "https://api.sandbox.braintreegateway.com:443" }, FRAUDNET_SOURCE: "BRAINTREE_SIGNIN", FRAUDNET_FNCLS: "fnparams-dede7cc5-15fd-4c75-a9f4-36c430ee3a99", FRAUDNET_URL: "https://c.paypal.com/da/r/fb.js", BUS_CONFIGURATION_REQUEST_EVENT: "BUS_CONFIGURATION_REQUEST", GRAPHQL_URLS: { production: "https://payments.braintree-api.com/graphql", sandbox: "https://payments.sandbox.braintree-api.com/graphql" }, INTEGRATION_TIMEOUT_MS: 60000, VERSION: "3.112.1", INTEGRATION: "custom", SOURCE: "client", PLATFORM: "web", BRAINTREE_LIBRARY_VERSION: "braintree/web/3.112.1" };
     },
     {}
   ];
-  items = [
+  items145 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./braintree-error");
       closure_1 = global("./errors");
       module.exports = (arg0, arr) => {
         closure_0 = arg0;
-        const item = arr.forEach((arg0) => {
-          closure_0 = arg0;
-          closure_0[arg0] = () => {
+        const item = arr.forEach((item, index) => {
+          closure_0 = item;
+          closure_0[item] = () => {
             throw new closure_0({ type: closure_1_1.METHOD_CALLED_AFTER_TEARDOWN.type, code: closure_1_1.METHOD_CALLED_AFTER_TEARDOWN.code, message: `${closure_0} cannot be called after teardown.` });
           };
         });
@@ -8203,7 +8060,7 @@ let fn = () => {
     },
     { "./braintree-error": 143, "./errors": 154 }
   ];
-  items = [
+  items146 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./braintree-error");
       module.exports = function convertToBraintreeError(arg0, arg1) {
@@ -8221,7 +8078,7 @@ let fn = () => {
     },
     { "./braintree-error": 143 }
   ];
-  items = [
+  items147 = [
     (arg0, arg1, arg2) => {
       const ASSETS_URLS = global("./constants").ASSETS_URLS;
       module.exports = {
@@ -8232,22 +8089,22 @@ let fn = () => {
     },
     { "./constants": 145 }
   ];
-  items = [
+  items148 = [
     (arg0, arg1, arg2) => {
       const atob = global("../lib/vendor/polyfill").atob;
       const CLIENT_API_URLS = global("../lib/constants").CLIENT_API_URLS;
-      module.exports = function createAuthorizationData(closure_0) {
+      module.exports = function createAuthorizationData(tokenizationKey) {
         const obj = { attrs: {}, configUrl: "" };
-        if (obj2.test(closure_0)) {
-          const parts = closure_0.split("_");
+        if (obj2.test(tokenizationKey)) {
+          const parts = tokenizationKey.split("_");
           const first = parts[0];
           const substr = parts.slice(2);
           obj.environment = first;
-          obj.attrs.tokenizationKey = closure_0;
+          obj.attrs.tokenizationKey = tokenizationKey;
           obj.configUrl = `${CLIENT_API_URLS[tmp4]}/merchants/${obj3.join("_")}/client_api/v1/configuration`;
         } else {
           const _JSON = JSON;
-          const parsed = JSON.parse(atob(closure_0));
+          const parsed = JSON.parse(atob(tokenizationKey));
           ({ environment: obj.environment, authorizationFingerprint: obj.attrs.authorizationFingerprint, configUrl: obj.configUrl, graphQL: obj.graphQL } = parsed);
         }
         return obj;
@@ -8255,7 +8112,7 @@ let fn = () => {
     },
     { "../lib/constants": 145, "../lib/vendor/polyfill": 182 }
   ];
-  items = [
+  items149 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./braintree-error");
       closure_1 = global("./assets");
@@ -8278,13 +8135,12 @@ let fn = () => {
               let obj = { src: null };
               obj[0] = `${client.assetsUrl}/web/${c3}/js/client.min.js`;
               const script = closure_1.loadScript(obj);
-              resolved = script.catch((originalError) => {
-                obj = { type: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.type, code: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.code, message: constants.CLIENT_SCRIPT_FAILED_TO_LOAD.message, details: obj };
-                obj = { originalError };
+              resolved = script.catch((error) => {
+                const obj = { originalError: error };
                 return Promise.reject(new closure_0(obj));
               });
             }
-            resolved1 = resolved.then(() => {
+            resolved1 = resolved.then((result) => {
               if (window.braintree.client.VERSION !== closure_1_3) {
                 let obj = { type: null, code: null, message: null };
                 obj[0] = closure_1_2.INCOMPATIBLE_VERSIONS.type;
@@ -8309,7 +8165,7 @@ let fn = () => {
     },
     { "./assets": 139, "./braintree-error": 143, "./errors": 154 }
   ];
-  items = [
+  items150 = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => {
         closure_0 = arg0;
@@ -8323,7 +8179,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items151 = [
     (arg0, arg1, arg2) => {
       class Destructor {
         constructor() {
@@ -8364,33 +8220,26 @@ let fn = () => {
     },
     { "./batch-execute-functions": 142 }
   ];
-  items = [
+  items152 = [
     (arg0, arg1, arg2) => {
       module.exports = function enumerate(arr) {
-        let str = arg1;
-        str = "";
-        if (null != arg1) {
-          str = arg1;
-        }
-        return arr.reduce((arg0, arg1) => {
-          arg0[arg1] = str + arg1;
-          return arg0;
+        return arr.reduce((acc, item, index) => {
+          acc[item] = str + item;
+          return acc;
         }, {});
       };
     },
     {}
   ];
-  items = [
+  items153 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("./braintree-error");
-      let obj = { type: globalResult.types.INTERNAL, code: "INVALID_USE_OF_INTERNAL_FUNCTION" };
-      obj = { type: globalResult.types.MERCHANT, code: "INSTANTIATION_OPTION_REQUIRED" };
-      obj = { type: globalResult.types.MERCHANT, code: "INCOMPATIBLE_VERSIONS" };
+      const obj = { type: globalResult.types.MERCHANT, code: "INCOMPATIBLE_VERSIONS" };
       module.exports = { INVALID_USE_OF_INTERNAL_FUNCTION: obj, INSTANTIATION_OPTION_REQUIRED: obj, INCOMPATIBLE_VERSIONS: obj, CLIENT_SCRIPT_FAILED_TO_LOAD: { type: globalResult.types.NETWORK, code: "CLIENT_SCRIPT_FAILED_TO_LOAD", message: "Braintree client script could not be loaded." }, METHOD_CALLED_AFTER_TEARDOWN: { type: globalResult.types.MERCHANT, code: "METHOD_CALLED_AFTER_TEARDOWN" } };
     },
     { "./braintree-error": 143 }
   ];
-  items = [
+  items154 = [
     (arg0, arg1, arg2) => {
       module.exports = function findRootNode(parentNode) {
         let parentNode2;
@@ -8409,14 +8258,13 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items155 = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0, key10009) => {
         let num = 0;
         if (0 < arg0.length) {
           while (true) {
             let obj = arg0[num];
-            let tmp = num;
             if (obj.hasOwnProperty(key10009)) {
               if (arg0[num][key10009] === arg2) {
                 break;
@@ -8431,7 +8279,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items156 = [
     (arg0, arg1, arg2) => {
       function noop() {
 
@@ -8441,10 +8289,10 @@ let fn = () => {
           closure_0 = global;
           if (global) {
             tmp6 = closure_13;
-            item = closure_13.forEach((key10009) => {
-              if (!name.hasOwnProperty(key10009)) {
+            item = closure_13.forEach((item, index) => {
+              if (!name.hasOwnProperty(item)) {
                 const _Error = Error;
-                error = new Error("A valid frame " + key10009 + " must be provided");
+                error = new Error("A valid frame " + item + " must be provided");
                 throw error;
               }
             });
@@ -8517,7 +8365,7 @@ let fn = () => {
         }
         _setBusEvents() {
           _bus = this._bus;
-          fn = function(arg0, arg1) {
+          fn = function(arg0, fn) {
             const self = this;
             if (this._onCompleteCallback) {
               const call = _onCompleteCallback.call;
@@ -8531,14 +8379,14 @@ let fn = () => {
             const _frame = self._frame;
             _frame.close();
             self._onCompleteCallback = null;
-            if (arg1) {
-              arg1();
+            if (fn) {
+              fn();
             }
           };
           onResult = _bus.on(closure_4.DISPATCH_FRAME_REPORT, fn.bind(this));
           _bus2 = this._bus;
-          fn2 = function(arg0) {
-            arg0(this.state);
+          fn2 = function(fn) {
+            fn(this.state);
           };
           onResult1 = _bus2.on(closure_12, fn2.bind(this));
           return;
@@ -8707,7 +8555,7 @@ let fn = () => {
     },
     { "../../braintree-error": 143, "../../constants": 145, "../shared/browser-detection": 164, "../shared/constants": 165, "../shared/errors": 166, "../shared/events": 167, "./../../assign": 140, "./strategies/modal": 159, "./strategies/popup": 162, "./strategies/popup-bridge": 160, "@braintree/iframer": 32, "@braintree/uuid": 36, framebus: 50 }
   ];
-  items = [
+  items157 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./frame-service");
       module.exports = {
@@ -8722,7 +8570,7 @@ let fn = () => {
     },
     { "./frame-service": 157 }
   ];
-  items = [
+  items158 = [
     (arg0, arg1, arg2) => {
       function noop() {
 
@@ -8824,7 +8672,7 @@ let fn = () => {
     },
     { "../../../assign": 140, "../../shared/browser-detection": 164, "@braintree/iframer": 32 }
   ];
-  items = [
+  items159 = [
     (arg0, arg1, arg2) => {
       function noop() {
 
@@ -8848,6 +8696,7 @@ let fn = () => {
               }
             }
             callback(new callback(self.FRAME_SERVICE_FRAME_CLOSED));
+            const tmp5 = new callback(self.FRAME_SERVICE_FRAME_CLOSED);
           };
           return;
         }
@@ -8880,7 +8729,7 @@ let fn = () => {
     },
     { "../../../braintree-error": 143, "../../shared/errors": 166 }
   ];
-  items = [
+  items160 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../../../shared/constants");
       closure_1 = global("./position");
@@ -8907,7 +8756,7 @@ let fn = () => {
     },
     { "../../../shared/constants": 165, "./position": 163 }
   ];
-  items = [
+  items161 = [
     (arg0, arg1, arg2) => {
       class Popup {
         constructor(arg0) {
@@ -8957,10 +8806,10 @@ let fn = () => {
     },
     { "./compose-options": 161 }
   ];
-  items = [
+  items162 = [
     (arg0, arg1, arg2) => {
       module.exports = {
-        top(DEFAULT_POPUP_HEIGHT) {
+        top(closure_1_2) {
           let clientHeight = window.outerHeight;
           if (!clientHeight) {
             const _document = document;
@@ -8973,9 +8822,9 @@ let fn = () => {
             const _window = window;
             screenY = window.screenY;
           }
-          return (clientHeight - DEFAULT_POPUP_HEIGHT) / 2 + screenY;
+          return (clientHeight - closure_1_2) / 2 + screenY;
         },
-        left(DEFAULT_POPUP_WIDTH) {
+        left(right) {
           let clientWidth = window.outerWidth;
           if (!clientWidth) {
             const _document = document;
@@ -8988,7 +8837,7 @@ let fn = () => {
             const _window = window;
             screenX = window.screenX;
           }
-          return (clientWidth - DEFAULT_POPUP_WIDTH) / 2 + screenX;
+          return (clientWidth - right) / 2 + screenX;
         },
         center(arg0, arg1, arg2) {
           return (arg0 - arg1) / 2 + arg2;
@@ -8997,34 +8846,33 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items163 = [
     (arg0, arg1, arg2) => {
       module.exports = { isIos: global("@braintree/browser-detection/is-ios"), isIosWKWebview: global("@braintree/browser-detection/is-ios-wkwebview"), supportsPopups: global("@braintree/browser-detection/supports-popups") };
     },
     { "@braintree/browser-detection/is-ios": 27, "@braintree/browser-detection/is-ios-wkwebview": 26, "@braintree/browser-detection/supports-popups": 29 }
   ];
-  items = [
+  items164 = [
     (arg0, arg1, arg2) => {
       module.exports = { DISPATCH_FRAME_NAME: "dispatch", DISPATCH_FRAME_CLASS: "braintree-dispatch-frame", POPUP_BASE_OPTIONS: "resizable,scrollbars", DEFAULT_POPUP_WIDTH: 450, DEFAULT_POPUP_HEIGHT: 535, POPUP_POLL_INTERVAL: 100, POPUP_CLOSE_TIMEOUT: 100 };
     },
     {}
   ];
-  items = [
+  items165 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../braintree-error");
-      let obj = { type: globalResult.types.INTERNAL, code: "FRAME_SERVICE_FRAME_CLOSED", message: "Frame closed before tokenization could occur." };
-      obj = { type: globalResult.types.INTERNAL, code: "FRAME_SERVICE_FRAME_OPEN_FAILED", message: "Frame failed to open." };
+      const obj = { type: globalResult.types.INTERNAL, code: "FRAME_SERVICE_FRAME_OPEN_FAILED", message: "Frame failed to open." };
       module.exports = { FRAME_SERVICE_FRAME_CLOSED: obj, FRAME_SERVICE_FRAME_OPEN_FAILED: obj };
     },
     { "../../braintree-error": 143 }
   ];
-  items = [
+  items166 = [
     (arg0, arg1, arg2) => {
       module.exports = global("../../enumerate")(["DISPATCH_FRAME_READY", "DISPATCH_FRAME_REPORT"], "frameService:");
     },
     { "../../enumerate": 153 }
   ];
-  items = [
+  items167 = [
     (arg0, arg1, arg2) => {
       const assign = global("./assign").assign;
       module.exports = (gatewayConfiguration, apiVersion, merchantId) => {
@@ -9036,11 +8884,10 @@ let fn = () => {
         if (2 === apiVersion) {
           let obj = { apiVersion: 2, apiVersionMinor: 0, environment: null, allowedPaymentMethods: null };
           obj[2] = str;
-          obj = { type: "CARD", parameters: null, tokenizationSpecification: null };
           obj = { allowedAuthMethods: null, allowedCardNetworks: null };
           obj[0] = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
           const supportedNetworks = androidPay.supportedNetworks;
-          obj[1] = supportedNetworks.map((str) => str.toUpperCase());
+          obj[1] = supportedNetworks.map((item, index) => item.toUpperCase());
           obj[1] = obj;
           obj1 = { type: "PAYMENT_GATEWAY", parameters: null };
           const obj2 = { "braintree:authorizationFingerprint": null };
@@ -9080,15 +8927,12 @@ let fn = () => {
             const _JSON2 = JSON;
             ({ source: obj17[0], integration: obj17[1], sessionId: obj17[2], platform: obj17[4] } = gatewayConfiguration.analyticsMetadata);
             obj13[4] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
-            obj11[1] = tmp3({}, obj13, obj12);
+            obj11[1] = assign({}, obj13, obj12);
             obj6[2] = obj11;
             const prop = obj.allowedPaymentMethods;
             prop.push(obj6);
             tmp = obj;
-            const obj14 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
           }
-          const obj4 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
-          tmp3 = assign;
         } else {
           const obj15 = { environment: null, allowedPaymentMethods: null, paymentMethodTokenizationParameters: null, cardRequirements: null };
           obj15[0] = str;
@@ -9105,7 +8949,7 @@ let fn = () => {
           obj15[2] = obj16;
           const obj20 = { allowedCardNetworks: null };
           const supportedNetworks1 = androidPay.supportedNetworks;
-          obj20[0] = supportedNetworks1.map((str) => str.toUpperCase());
+          obj20[0] = supportedNetworks1.map((item, index) => item.toUpperCase());
           obj15[3] = obj20;
           if ("TOKENIZATION_KEY" === gatewayConfiguration.authorizationType) {
             obj15.paymentMethodTokenizationParameters.parameters["braintree:clientKey"] = gatewayConfiguration.authorization;
@@ -9118,14 +8962,13 @@ let fn = () => {
             obj15.apiVersion = apiVersion;
             tmp = obj15;
           }
-          const obj19 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
         }
         return tmp;
       };
     },
     { "./assign": 140 }
   ];
-  items = [
+  items168 = [
     (arg0, arg1, arg2) => {
       module.exports = function inIframe(arg0) {
         let _window = arg0;
@@ -9141,7 +8984,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items169 = [
     (arg0, arg1, arg2) => {
       module.exports = function isDateStringBeforeOrOn(str, str2) {
         const parts = str.split("-");
@@ -9152,7 +8995,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items170 = [
     (arg0, arg1, arg2) => {
       module.exports = (fastlane) => {
         if (fastlane) {
@@ -9166,7 +9009,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items171 = [
     (arg0, arg1, arg2) => {
       module.exports = {
         isHTTPS(arg0) {
@@ -9181,7 +9024,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items172 = [
     (arg0, arg1, arg2) => {
       closure_1 = { "paypal.com": 1, "braintreepayments.com": 1, "braintreegateway.com": 1, "braintree-api.com": 1 };
       module.exports = function isVerifiedDomain(str) {
@@ -9196,30 +9039,29 @@ let fn = () => {
           const parts = element.hostname.split(".");
           const substr = parts.slice(-2);
           hasOwnPropertyResult = closure_1.hasOwnProperty(substr.join("."));
-          const str2 = element.hostname;
         }
         return hasOwnPropertyResult;
       };
     },
     {}
   ];
-  items = [
+  items173 = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => JSON.parse(JSON.stringify(arg0));
     },
     {}
   ];
-  items = [
+  items174 = [
     (arg0, arg1, arg2) => {
       module.exports = (arg0) => {
         closure_0 = arg0;
         const keys = Object.keys(arg0);
-        return keys.filter((arg0) => typeof table[arg0] === "function");
+        return keys.filter((item, index) => typeof table[item] === "function");
       };
     },
     {}
   ];
-  items = [
+  items175 = [
     (arg0, arg1, arg2) => {
       module.exports = function once(arg0) {
         closure_0 = arg0;
@@ -9233,28 +9075,24 @@ let fn = () => {
             } else {
               apply(null, arguments);
             }
-            const tmp = closure_0;
           }
         };
       };
     },
     {}
   ];
-  items = [
+  items176 = [
     (arg0, arg1, arg2) => {
       function stringify(obj) {
         const items = [];
         for (const key10012 in arg0) {
-          let tmp8 = key10012;
           if (!arg0.hasOwnProperty(key10012)) {
             continue;
           } else {
             let tmp = arg0[key10012];
-            let tmp2 = key10012;
             if (!arg1) {
               if (typeof tmp === "object") {
-                let tmp6 = stringify;
-                let arr = items.push(stringify(tmp, tmp8));
+                let arr = items.push(stringify(tmp, key10012));
                 continue;
               } else {
                 let _encodeURIComponent = encodeURIComponent;
@@ -9275,7 +9113,6 @@ let fn = () => {
                     } else {
                       str = call(arg0);
                     }
-                    let tmp5 = text1;
                   }
                   let text1 = `${arg1}[]`;
                 }
@@ -9302,10 +9139,10 @@ let fn = () => {
           if (obj.test(href)) {
             const str3 = str.split("?")[1] || "";
             let parts = str.split("?")[1] || "".replace(/#.*$/, "").split("&");
-            let reduced = parts.reduce((arg0, str) => {
-              const parts = str.split("=");
-              arg0[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
-              return arg0;
+            let reduced = parts.reduce((acc, item, index) => {
+              const parts = item.split("=");
+              acc[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+              return acc;
             }, {});
             const str5 = str.split("?")[1] || "".replace(/#.*$/, "");
           } else {
@@ -9326,7 +9163,6 @@ let fn = () => {
             if (keys !== undefined) {
               flag = false;
               while (keys[tmp] !== undefined) {
-                let tmp8 = tmp5;
                 flag = true;
                 if (body.hasOwnProperty(tmp5)) {
                   break;
@@ -9362,7 +9198,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items177 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("@braintree/uuid");
       closure_1 = global("./find-root-node");
@@ -9370,7 +9206,6 @@ let fn = () => {
         element = callback2(element).querySelector("style");
         const tmp3 = callback2(element);
         const obj = callback2(element);
-        const tmp = callback2;
         let host = null;
         if ("[object ShadowRoot]" === str.toString()) {
           host = tmp3.host;
@@ -9417,7 +9252,7 @@ let fn = () => {
     },
     { "./find-root-node": 155, "@braintree/uuid": 36 }
   ];
-  items = [
+  items178 = [
     (arg0, arg1, arg2) => {
       module.exports = (arr) => {
         let replaced = arr;
@@ -9430,7 +9265,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items179 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./querystring");
       module.exports = {
@@ -9441,7 +9276,7 @@ let fn = () => {
     },
     { "./querystring": 177 }
   ];
-  items = [
+  items180 = [
     (arg0, arg1, arg2) => {
       module.exports = function useMin(arg0) {
         let str = ".min";
@@ -9453,7 +9288,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items181 = [
     (arg0, arg1, arg2) => {
       function atobPolyfill(str) {
         let sum4;
@@ -9478,7 +9313,6 @@ let fn = () => {
             let tmp14 = 3 & index1;
             let _String = String;
             let tmp15 = 63 & "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(str.charAt(sum2));
-            let tmp17 = str;
             let str3 = "";
             let fromCharCodeResult = String.fromCharCode(tmp6 << 2 | tmp9 & 3);
             if (tmp13) {
@@ -9518,13 +9352,13 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items182 = [
     (arg0, arg1, arg2) => {
       module.exports = { REQUIRED_OPTIONS_FOR_START_PAYMENT: ["givenName", "surname", "currencyCode", "paymentType", "amount", "fallback"], REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE: ["givenName", "surname", "currencyCode", "onPaymentStart", "paymentType", "amount", "address", "billingAddress", "birthDate", "email", "locale", "customerServiceInstructions", "correlationId", "phone", "phoneCountryCode", "lineItems"], REQUIRED_OPTIONS_FOR_ADDRESS: ["streetAddress", "locality", "postalCode", "countryCode"], REQUIRED_OPTIONS_FOR_LINE_ITEMS: ["category", "name", "quantity", "unitAmount", "unitTaxAmount"], REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE: ["givenName", "surname", "currencyCode", "paymentType", "amount"], REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0: ["authCode"], REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST: ["authCode", "consumerReference", "aliasLabel"], REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT: ["consumerReference", "aliasKey"] };
     },
     {}
   ];
-  items = [
+  items183 = [
     (arg0, arg1, arg2) => {
       class LocalPayment {
         constructor(arg0) {
@@ -10077,7 +9911,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/assign": 140, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/convert-to-braintree-error": 147, "../../lib/frame-service/external": 158, "../../lib/methods": 175, "../../lib/querystring": 177, "../../lib/use-min": 181, "../shared/errors": 186, "./constants": 183, "@braintree/extended-promise": 31, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items184 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/analytics");
       closure_1 = global("../lib/basic-component-verification");
@@ -10091,38 +9925,37 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          let obj = { name: "Local Payment", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Local Payment" })).then((client) => {
-            obj.client = client;
-            if (true !== client.getConfiguration().gatewayConfiguration.paypalEnabled) {
+          return closure_1.verify({ name: "Local Payment", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Local Payment" })).then((result) => {
+            tokenizer.client = result;
+            if (true !== result.getConfiguration().gatewayConfiguration.paypalEnabled) {
               const tmp12 = new closure_1_5(closure_1_6.LOCAL_PAYMENT_NOT_ENABLED);
               let rejectResult = Promise.reject(tmp12);
             } else {
-              client.sendEvent(client, "local-payment.initialized");
-              obj = new closure_1_4(tmp);
+              client.sendEvent(result, "local-payment.initialized");
+              tokenizer = new closure_1_4(tmp);
               if (tmp.redirectUrl) {
                 const _window = window;
-                const tmp5 = closure_1_7(window.location.href);
+                const tmp5 = parse(window.location.href);
                 if (tmp5.token) {
-                  const tokenizeResult = obj.tokenize(tmp5);
-                  let catchPromise = obj.tokenize(tmp5).then((tokenizePayload) => {
-                    obj.tokenizePayload = tokenizePayload;
-                    return obj;
-                  }).catch((arg0) => {
-                    console.log("Error while tokenizing: ", arg0);
-                    return obj;
+                  const tokenizeResult = tokenizer.tokenize(tmp5);
+                  let catchPromise = tokenizer.tokenize(tmp5).then((result) => {
+                    tokenizer.tokenizePayload = result;
+                    return tokenizer;
+                  }).catch((error) => {
+                    console.log("Error while tokenizing: ", error);
+                    return tokenizer;
                   });
-                  const nextPromise = obj.tokenize(tmp5).then((tokenizePayload) => {
-                    obj.tokenizePayload = tokenizePayload;
-                    return obj;
+                  const nextPromise = tokenizer.tokenize(tmp5).then((result) => {
+                    tokenizer.tokenizePayload = result;
+                    return tokenizer;
                   });
                 } else {
-                  catchPromise = obj;
+                  catchPromise = tokenizer;
                 }
                 rejectResult = catchPromise;
               } else {
-                rejectResult = obj._initialize();
+                rejectResult = tokenizer._initialize();
               }
             }
             return rejectResult;
@@ -10133,17 +9966,15 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "../lib/querystring": 177, "./external/local-payment": 184, "./shared/errors": 186, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items185 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "LOCAL_PAYMENT_NOT_ENABLED", message: "LocalPayment is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "LOCAL_PAYMENT_ALREADY_IN_PROGRESS", message: "LocalPayment payment is already in progress." };
-      obj = { type: globalResult.types.CUSTOMER, code: "LOCAL_PAYMENT_CANCELED", message: "Customer canceled the LocalPayment before authorizing." };
+      const obj = { type: globalResult.types.CUSTOMER, code: "LOCAL_PAYMENT_CANCELED", message: "Customer canceled the LocalPayment before authorizing." };
       module.exports = { LOCAL_PAYMENT_NOT_ENABLED: obj, LOCAL_PAYMENT_ALREADY_IN_PROGRESS: obj, LOCAL_PAYMENT_CANCELED: obj, LOCAL_PAYMENT_WINDOW_CLOSED: { type: globalResult.types.CUSTOMER, code: "LOCAL_PAYMENT_WINDOW_CLOSED", message: "Customer closed LocalPayment window before authorizing." }, LOCAL_PAYMENT_WINDOW_OPEN_FAILED: { type: globalResult.types.MERCHANT, code: "LOCAL_PAYMENT_WINDOW_OPEN_FAILED", message: "LocalPayment window failed to open; make sure startPayment was called in response to a user action." }, LOCAL_PAYMENT_START_PAYMENT_FAILED: { type: globalResult.types.NETWORK, code: "LOCAL_PAYMENT_START_PAYMENT_FAILED", message: "LocalPayment startPayment failed." }, LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION: { type: globalResult.types.MERCHANT, code: "LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION", message: "Missing required option for startPayment." }, LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED: { type: globalResult.types.UNKNOWN, code: "LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED", message: "LocalPayment startPayment deferred payment failed." }, LOCAL_PAYMENT_TOKENIZATION_FAILED: { type: globalResult.types.NETWORK, code: "LOCAL_PAYMENT_TOKENIZATION_FAILED", message: "Could not tokenize user's local payment method." }, LOCAL_PAYMENT_INVALID_PAYMENT_OPTION: { type: globalResult.types.MERCHANT, code: "LOCAL_PAYMENT_INVALID_PAYMENT_OPTION", message: "Local payment options are invalid." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items186 = [
     (arg0, arg1, arg2) => {
       class Masterpass {
         constructor(arg0) {
@@ -10311,7 +10142,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/convert-to-braintree-error": 147, "../../lib/frame-service/external": 158, "../../lib/methods": 175, "../shared/constants": 190, "../shared/errors": 191, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items187 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/braintree-error");
       closure_1 = global("../lib/basic-component-verification");
@@ -10323,9 +10154,8 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          let obj = { name: "Masterpass", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization });
-          const nextPromise = closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization }).then(() => {
+          const nextPromise = closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization }).then((result) => {
             if (!popupBridge) {
               popupBridge = closure_2.supportsPopups();
             }
@@ -10337,7 +10167,7 @@ let fn = () => {
             }
             return resolveResult;
           });
-          return closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization }).then(() => {
+          return closure_1.verify({ name: "Masterpass", client: client.client, authorization: client.authorization }).then((result) => {
             if (!popupBridge) {
               popupBridge = closure_2.supportsPopups();
             }
@@ -10348,8 +10178,8 @@ let fn = () => {
               resolveResult = _Promise.reject(tmp6);
             }
             return resolveResult;
-          }).then(() => closure_1_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_5.create(client.authorization), name: "Masterpass" })).then((client) => {
-            client.client = client;
+          }).then((result) => closure_1_4.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_5.create(client.authorization), name: "Masterpass" })).then((result) => {
+            client.client = result;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.masterpass) {
               const obj = new closure_1_3(tmp);
@@ -10372,29 +10202,27 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./external/masterpass": 187, "./shared/browser-detection": 189, "./shared/errors": 191, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items188 = [
     (arg0, arg1, arg2) => {
       module.exports = { supportsPopups: global("@braintree/browser-detection/supports-popups") };
     },
     { "@braintree/browser-detection/supports-popups": 29 }
   ];
-  items = [
+  items189 = [
     (arg0, arg1, arg2) => {
       module.exports = { LANDING_FRAME_NAME: "braintreemasterpasslanding", POPUP_WIDTH: 450, POPUP_HEIGHT: 660, MASTERPASS_VERSION: "v6", REQUIRED_OPTIONS_FOR_TOKENIZE: ["subtotal", "currencyCode"] };
     },
     {}
   ];
-  items = [
+  items190 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.CUSTOMER, code: "MASTERPASS_BROWSER_NOT_SUPPORTED", message: "Browser is not supported." };
-      obj = { type: globalResult.types.MERCHANT, code: "MASTERPASS_NOT_ENABLED", message: "Masterpass is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION", message: "Missing required option for tokenize." };
+      const obj = { type: globalResult.types.MERCHANT, code: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION", message: "Missing required option for tokenize." };
       module.exports = { MASTERPASS_BROWSER_NOT_SUPPORTED: obj, MASTERPASS_NOT_ENABLED: obj, MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION: obj, MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS: { type: globalResult.types.MERCHANT, code: "MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS", message: "Masterpass tokenization is already in progress." }, MASTERPASS_ACCOUNT_TOKENIZATION_FAILED: { type: globalResult.types.NETWORK, code: "MASTERPASS_ACCOUNT_TOKENIZATION_FAILED", message: "Could not tokenize user's Masterpass account." }, MASTERPASS_POPUP_OPEN_FAILED: { type: globalResult.types.MERCHANT, code: "MASTERPASS_POPUP_OPEN_FAILED", message: "Masterpass popup failed to open. Make sure to tokenize in response to a user action, such as a click." }, MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS: { type: globalResult.types.MERCHANT, code: "MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS", message: "Masterpass popup failed to return all required parameters needed to continue tokenization." }, MASTERPASS_POPUP_CLOSED: { type: globalResult.types.CUSTOMER, code: "MASTERPASS_POPUP_CLOSED", message: "Customer closed Masterpass popup before authorizing." }, MASTERPASS_INVALID_PAYMENT_OPTION: { type: globalResult.types.MERCHANT, code: "MASTERPASS_INVALID_PAYMENT_OPTION", message: "Masterpass payment options are invalid." }, MASTERPASS_FLOW_FAILED: { type: globalResult.types.NETWORK, code: "MASTERPASS_FLOW_FAILED", message: "Could not initialize Masterpass flow." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items191 = [
     (arg0, arg1, arg2) => {
       class PaymentRequestComponent {
         constructor(arg0) {
@@ -10731,7 +10559,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/assign": 140, "../../lib/braintree-error": 143, "../../lib/convert-methods-to-error": 146, "../../lib/generate-google-pay-configuration": 168, "../../lib/methods": 175, "../../lib/use-min": 181, "../shared/constants": 194, "@braintree/event-emitter": 30, "@braintree/iframer": 32, "@braintree/uuid": 36, "@braintree/wrap-promise": 40, framebus: 50 }
   ];
-  items = [
+  items192 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./external/payment-request");
       closure_1 = global("../lib/basic-component-verification");
@@ -10740,10 +10568,9 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "Payment Request", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Payment Request" })).then((client) => {
-            closure_0.client = client;
+          return closure_1.verify({ name: "Payment Request", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Payment Request" })).then((result) => {
+            closure_0.client = result;
             return new closure_0(closure_0).initialize();
           });
         }),
@@ -10752,7 +10579,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./external/payment-request": 192, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items193 = [
     (arg0, arg1, arg2) => {
       const obj = {};
       const globalResult = global("../../lib/enumerate");
@@ -10763,27 +10590,23 @@ let fn = () => {
     },
     { "../../lib/enumerate": 153, "./errors": 195 }
   ];
-  items = [
+  items194 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS", message: "There are no supported payment methods associated with this account." };
-      obj = { type: globalResult.types.CUSTOMER, code: "PAYMENT_REQUEST_CANCELED", message: "Payment request was canceled." };
-      obj = { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED", message: "Something went wrong when configuring the payment request." };
+      const obj = { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED", message: "Something went wrong when configuring the payment request." };
       module.exports = { PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS: obj, PAYMENT_REQUEST_CANCELED: obj, PAYMENT_REQUEST_INITIALIZATION_MISCONFIGURED: obj, PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED: { type: globalResult.types.UNKNOWN, code: "PAYMENT_REQUEST_CAN_MAKE_PAYMENT_FAILED", message: "Something went wrong when calling `canMakePayment`" }, PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED: { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_CAN_MAKE_PAYMENT_NOT_ALLOWED", message: "Something went wrong when calling `canMakePayment`. Most likely, `canMakePayment` was called multiple times with different supportedMethods configurations." }, PAYMENT_REQUEST_UNSUPPORTED_PAYMENT_METHOD: { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_UNSUPPORTED_PAYMENT_METHOD" }, PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE: { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE", message: "Something went wrong when tokenizing the Google Pay card." }, PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR: { type: globalResult.types.UNKNOWN, code: "PAYMENT_REQUEST_GOOGLE_PAYMENT_PARSING_ERROR", message: "Something went wrong when tokenizing the Google Pay card." }, PAYMENT_REQUEST_NOT_COMPLETED: { code: "PAYMENT_REQUEST_NOT_COMPLETED", message: "Payment request could not be completed." }, PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_MUST_INCLUDE_TYPE: { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_MUST_INCLUDE_TYPE", message: "createSupportedPaymentMethodsConfiguration must include a type parameter." }, PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED: { type: globalResult.types.MERCHANT, code: "PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED", message: "createSupportedPaymentMethodsConfiguration type parameter must be valid or enabled." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items195 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "PAYPAL_NOT_ENABLED", message: "PayPal is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "PAYPAL_SANDBOX_ACCOUNT_NOT_LINKED", message: "A linked PayPal Sandbox account is required to use PayPal Checkout in Sandbox. See https://developer.paypal.com/braintree/docs/guides/paypal/testing-go-live#linked-paypal-testing for details on linking your PayPal sandbox with Braintree." };
-      obj = { type: globalResult.types.NETWORK, code: "PAYPAL_ACCOUNT_TOKENIZATION_FAILED", message: "Could not tokenize user's PayPal account." };
+      const obj = { type: globalResult.types.NETWORK, code: "PAYPAL_ACCOUNT_TOKENIZATION_FAILED", message: "Could not tokenize user's PayPal account." };
       module.exports = { PAYPAL_NOT_ENABLED: obj, PAYPAL_SANDBOX_ACCOUNT_NOT_LINKED: obj, PAYPAL_ACCOUNT_TOKENIZATION_FAILED: obj, PAYPAL_FLOW_FAILED: { type: globalResult.types.NETWORK, code: "PAYPAL_FLOW_FAILED", message: "Could not initialize PayPal flow." }, PAYPAL_FLOW_OPTION_REQUIRED: { type: globalResult.types.MERCHANT, code: "PAYPAL_FLOW_OPTION_REQUIRED", message: "PayPal flow property is invalid or missing." }, PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED: { type: globalResult.types.MERCHANT, code: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED" }, PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED: { type: globalResult.types.NETWORK, code: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED", message: "Something went wrong when setting up the checkout workflow." }, PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED: { type: globalResult.types.MERCHANT, code: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED", message: "PayPal popup failed to open, make sure to initiate the vault checkout in response to a user action." }, PAYPAL_START_VAULT_INITIATED_CHECKOUT_CANCELED: { type: globalResult.types.CUSTOMER, code: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_CANCELED", message: "Customer closed PayPal popup before authorizing." }, PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS: { type: globalResult.types.MERCHANT, code: "PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS", message: "Vault initiated checkout already in progress." }, PAYPAL_INVALID_PAYMENT_OPTION: { type: globalResult.types.MERCHANT, code: "PAYPAL_INVALID_PAYMENT_OPTION", message: "PayPal payment options are invalid." }, PAYPAL_MISSING_REQUIRED_OPTION: { type: globalResult.types.MERCHANT, code: "PAYPAL_MISSING_REQUIRED_OPTION", message: "Missing required option." } };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items196 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("./paypal-checkout");
@@ -10791,7 +10614,7 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_0.verify({ name: "PayPal Checkout", client: client.client, authorization: client.authorization }).then(() => new closure_1_1(closure_0)._initialize(closure_0));
+          return closure_0.verify({ name: "PayPal Checkout", client: client.client, authorization: client.authorization }).then((result) => new closure_1_1(closure_0)._initialize(closure_0));
         }),
         isSupported() {
           return true;
@@ -10801,7 +10624,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "./paypal-checkout": 198, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items197 = [
     (arg0, arg1, arg2) => {
       class PayPalCheckout {
         constructor(arg0) {
@@ -11454,7 +11277,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/assign": 140, "../lib/braintree-error": 143, "../lib/camel-case-to-snake-case": 144, "../lib/constants": 145, "../lib/convert-methods-to-error": 146, "../lib/convert-to-braintree-error": 147, "../lib/create-assets-url": 148, "../lib/create-authorization-data": 149, "../lib/create-deferred-client": 150, "../lib/frame-service/external": 158, "../lib/methods": 175, "../lib/querystring": 177, "../lib/use-min": 181, "../paypal/shared/constants": 201, "./errors": 196, "@braintree/extended-promise": 31, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items198 = [
     (arg0, arg1, arg2) => {
       class PayPal {
         constructor(arg0) {
@@ -11498,13 +11321,13 @@ let fn = () => {
               _Promise2 = Promise;
               tmp11 = new.target;
               tmp12 = new.target;
-              promise = new Promise((arg0, arg1) => {
+              promise = new Promise((arg0, fn) => {
                 if (self._authorizationInProgress) {
                   closure_1_8.sendEvent(_client, "paypal.tokenization.error.already-opened");
                   const tmp22 = new closure_1(closure_1_11.PAYPAL_TOKENIZATION_REQUEST_ACTIVE);
-                  arg1(tmp22);
+                  fn(tmp22);
                 } else {
-                  obj._authorizationInProgress = true;
+                  self._authorizationInProgress = true;
                   const _window = window;
                   if (!window.popupBridge) {
                     closure_1_8.sendEvent(_client, "paypal.tokenization.opened");
@@ -11515,17 +11338,17 @@ let fn = () => {
                   if (true === offerCredit.offerPayLater) {
                     closure_1_8.sendEvent(_client, "paypal.paylater.offered");
                   }
-                  obj._navigateFrameToAuth(offerCredit).catch(arg1);
-                  const _frameService = obj._frameService;
-                  _frameService.open({}, obj._createFrameServiceCallback(offerCredit, arg0, arg1));
-                  const _navigateFrameToAuthResult = obj._navigateFrameToAuth(offerCredit);
+                  self._navigateFrameToAuth(offerCredit).catch(fn);
+                  const _frameService = self._frameService;
+                  _frameService.open({}, self._createFrameServiceCallback(offerCredit, arg0, fn));
+                  const _navigateFrameToAuthResult = self._navigateFrameToAuth(offerCredit);
                 }
               });
               tmp13 = promise;
               handler = promise;
               if (tmp) {
-                nextPromise = promise.then((arg0) => {
-                  callback(null, arg0);
+                nextPromise = promise.then((result) => {
+                  callback(null, result);
                 });
                 catchPromise = nextPromise.catch(tmp);
                 _frameService2 = self._frameService;
@@ -11563,7 +11386,6 @@ let fn = () => {
             }
             if (path) {
               path = "/cancel" === path.path.substring(0, 7);
-              const str = path.path;
             }
             self._authorizationInProgress = false;
             if (!arg0) {
@@ -11577,6 +11399,7 @@ let fn = () => {
             }
             closure_1_8.sendEvent(_client, "paypal.tokenization.closed-popupbridge.by-user");
             callback(new closure_1(closure_1_11.PAYPAL_POPUP_CLOSED));
+            const tmp6 = new closure_1(closure_1_11.PAYPAL_POPUP_CLOSED);
           }) : ((code) => {
             let obj = self;
             self._authorizationInProgress = false;
@@ -11620,15 +11443,15 @@ let fn = () => {
           }
           obj = { endpoint: "payment_methods/paypal_accounts", method: "post", data: self._formatTokenizeData(global, module) };
           requestResult = _client.request(obj);
-          nextPromise = requestResult.then((arg0) => {
-            const result = self._formatTokenizePayload(arg0);
+          nextPromise = requestResult.then((result) => {
+            result = self._formatTokenizePayload(result);
             const sendEvent = closure_1_8.sendEvent;
             if (window.popupBridge) {
-              sendEvent(tmp4, "paypal.tokenization.success-popupbridge");
-              let tmp6 = tmp4;
+              sendEvent(_client, "paypal.tokenization.success-popupbridge");
+              let tmp6 = _client;
             } else {
-              sendEvent(tmp4, "paypal.tokenization.success");
-              tmp6 = tmp4;
+              sendEvent(_client, "paypal.tokenization.success");
+              tmp6 = _client;
             }
             if (result.creditFinancingOffered) {
               closure_1_8.sendEvent(tmp6, "paypal.credit.accepted");
@@ -11637,16 +11460,16 @@ let fn = () => {
             _frameService.close();
             return result;
           });
-          return nextPromise.catch((arg0) => {
+          return nextPromise.catch((error) => {
             const sendEvent = closure_1_8.sendEvent;
             if (window.popupBridge) {
-              sendEvent(tmp2, "paypal.tokenization.failed-popupbridge");
+              sendEvent(_client, "paypal.tokenization.failed-popupbridge");
             } else {
-              sendEvent(tmp2, "paypal.tokenization.failed");
+              sendEvent(_client, "paypal.tokenization.failed");
             }
             const _frameService = self._frameService;
             _frameService.close();
-            return Promise.reject(closure_1_2(arg0, { type: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type, code: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code, message: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message }));
+            return Promise.reject(closure_1_2(error, { type: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type, code: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code, message: closure_1_11.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message }));
           });
         }
         _formatTokenizePayload(arg0) {
@@ -11700,11 +11523,11 @@ let fn = () => {
           _client = this._client;
           obj = { endpoint: `paypal_hermes/${closure_6.FLOW_ENDPOINTS[global.flow]}`, method: "post", data: this._formatPaymentResourceData(global) };
           requestResult = _client.request(obj);
-          nextPromise = requestResult.then((paymentResource) => {
+          nextPromise = requestResult.then((result) => {
             if ("checkout" === flow.flow) {
-              let approvalUrl = paymentResource.paymentResource.redirectUrl;
+              let approvalUrl = result.paymentResource.redirectUrl;
             } else {
-              approvalUrl = paymentResource.agreementSetup.approvalUrl;
+              approvalUrl = result.agreementSetup.approvalUrl;
             }
             let queryifyResult = approvalUrl;
             if ("commit" === flow.useraction) {
@@ -11716,7 +11539,7 @@ let fn = () => {
             const _frameService = self._frameService;
             _frameService.redirect(queryifyResult);
           });
-          return nextPromise.catch((details) => {
+          return nextPromise.catch((error) => {
             const _frameService = self._frameService;
             _frameService.close();
             self._authorizationInProgress = false;
@@ -11726,7 +11549,7 @@ let fn = () => {
               obj[1] = closure_1_11.PAYPAL_INVALID_PAYMENT_OPTION.code;
               obj[2] = closure_1_11.PAYPAL_INVALID_PAYMENT_OPTION.message;
               obj = { originalError: null };
-              obj[0] = details;
+              obj[0] = error;
               obj[3] = obj;
               const tmp17 = new self(obj);
               let rejectResult = Promise.reject(tmp17);
@@ -11735,7 +11558,7 @@ let fn = () => {
               obj[0] = closure_1_11.PAYPAL_FLOW_FAILED.type;
               obj[1] = closure_1_11.PAYPAL_FLOW_FAILED.code;
               obj[2] = closure_1_11.PAYPAL_FLOW_FAILED.message;
-              rejectResult = Promise.reject(_client(details, obj));
+              rejectResult = Promise.reject(_client(error, obj));
             }
             return rejectResult;
           });
@@ -11831,7 +11654,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/convert-to-braintree-error": 147, "../../lib/deferred": 151, "../../lib/frame-service/external": 158, "../../lib/methods": 175, "../../lib/once": 176, "../../lib/querystring": 177, "../../lib/use-min": 181, "../shared/constants": 201, "../shared/errors": 202, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items199 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/analytics");
       closure_1 = global("../lib/basic-component-verification");
@@ -11843,16 +11666,15 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          let obj = { name: "PayPal", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "PayPal" })).then((client) => {
-            client.client = client;
-            if (true !== client.getConfiguration().gatewayConfiguration.paypalEnabled) {
+          return closure_1.verify({ name: "PayPal", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "PayPal" })).then((result) => {
+            client.client = result;
+            if (true !== result.getConfiguration().gatewayConfiguration.paypalEnabled) {
               const tmp15 = new closure_1_4(closure_1_5.PAYPAL_NOT_ENABLED);
               let rejectResult = Promise.reject(tmp15);
             } else {
-              client.sendEvent(tmp.client, "paypal.initialized");
-              const obj = new closure_1_6(tmp);
+              client.sendEvent(client.client, "paypal.initialized");
+              const obj = new closure_1_6(client);
               rejectResult = obj._initialize();
             }
             return rejectResult;
@@ -11866,23 +11688,21 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./external/paypal": 199, "./shared/errors": 202, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items200 = [
     (arg0, arg1, arg2) => {
       module.exports = { LANDING_FRAME_NAME: "braintreepaypallanding", FLOW_ENDPOINTS: { checkout: "create_payment_resource", vault: "setup_billing_agreement" }, REQUIRED_OPTIONS: ["paymentId", "currency"] };
     },
     {}
   ];
-  items = [
+  items201 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "PAYPAL_NOT_ENABLED", message: "PayPal is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "PAYPAL_TOKENIZATION_REQUEST_ACTIVE", message: "Another tokenization request is active." };
-      obj = { type: globalResult.types.NETWORK, code: "PAYPAL_ACCOUNT_TOKENIZATION_FAILED", message: "Could not tokenize user's PayPal account." };
+      const obj = { type: globalResult.types.NETWORK, code: "PAYPAL_ACCOUNT_TOKENIZATION_FAILED", message: "Could not tokenize user's PayPal account." };
       module.exports = { PAYPAL_NOT_ENABLED: obj, PAYPAL_TOKENIZATION_REQUEST_ACTIVE: obj, PAYPAL_ACCOUNT_TOKENIZATION_FAILED: obj, PAYPAL_FLOW_FAILED: { type: globalResult.types.NETWORK, code: "PAYPAL_FLOW_FAILED", message: "Could not initialize PayPal flow." }, PAYPAL_FLOW_OPTION_REQUIRED: { type: globalResult.types.MERCHANT, code: "PAYPAL_FLOW_OPTION_REQUIRED", message: "PayPal flow property is invalid or missing." }, PAYPAL_POPUP_OPEN_FAILED: { type: globalResult.types.MERCHANT, code: "PAYPAL_POPUP_OPEN_FAILED", message: "PayPal popup failed to open, make sure to tokenize in response to a user action." }, PAYPAL_POPUP_CLOSED: { type: globalResult.types.CUSTOMER, code: "PAYPAL_POPUP_CLOSED", message: "Customer closed PayPal popup before authorizing." }, PAYPAL_INVALID_PAYMENT_OPTION: { type: globalResult.types.MERCHANT, code: "PAYPAL_INVALID_PAYMENT_OPTION", message: "PayPal payment options are invalid." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items202 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("./preferred-payment-methods");
@@ -11890,14 +11710,14 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_0.verify({ name: "PreferredPaymentMethods", client: client.client, authorization: client.authorization }).then(() => new closure_1_1().initialize(closure_0));
+          return closure_0.verify({ name: "PreferredPaymentMethods", client: client.client, authorization: client.authorization }).then((result) => new closure_1_1().initialize(closure_0));
         }),
         VERSION: "3.112.1"
       };
     },
     { "../lib/basic-component-verification": 141, "./preferred-payment-methods": 204, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items203 = [
     (arg0, arg1, arg2) => {
       class PreferredPaymentMethods {
         constructor() {
@@ -11926,7 +11746,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items204 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../../lib/braintree-error");
       closure_1 = global("../shared/errors");
@@ -11942,19 +11762,18 @@ let fn = () => {
         createMandate(_client, locale) {
           closure_0 = locale;
           obj = { sepa_debit: obj, locale: locale.locale, cancel_url: locale.cancelUrl, return_url: locale.returnUrl, merchant_account_id: locale.merchantAccountId };
-          obj = { account_holder_name: locale.accountHolderName, billing_address: obj, iban: locale.iban, merchant_or_partner_customer_id: locale.customerId, mandate_type: locale.mandateType };
           obj = { country_code: locale.countryCode };
           if (locale.billingAddress) {
-            const item = BILLING_ADDRESS_OPTIONS.forEach((arg0) => {
-              const tmp = closure_1_6(arg0);
+            const item = BILLING_ADDRESS_OPTIONS.forEach((item, index) => {
+              const tmp = closure_1_6(item);
               if (tmp in locale.billingAddress) {
-                obj.sepa_debit.billing_address[arg0] = tmp2.billingAddress[tmp];
+                obj.sepa_debit.billing_address[item] = tmp2.billingAddress[tmp];
               }
             });
           }
           const requestResult = _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data: obj });
-          return _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data: obj }).then((message) => {
-            const sepaDebitAccount = message.message.body.sepaDebitAccount;
+          return _client.request({ api: "clientApi", method: "post", endpoint: "sepa_debit", data: obj }).then((result) => {
+            const sepaDebitAccount = result.message.body.sepaDebitAccount;
             if (sepaDebitAccount) {
               obj = { approvalUrl: null, last4: null, bankReferenceToken: null };
               ({ approvalUrl: obj[0], last4: obj[1], bankReferenceToken: obj[2] } = sepaDebitAccount);
@@ -11963,7 +11782,7 @@ let fn = () => {
               const tmp5 = new closure_0(obj.SEPA_CREATE_MANDATE_FAILED);
               throw tmp5;
             }
-          }).catch(() => {
+          }).catch((error) => {
             throw new closure_0(obj.SEPA_CREATE_MANDATE_FAILED);
           });
         },
@@ -11994,20 +11813,19 @@ let fn = () => {
         },
         handleApproval(_client, last_4) {
           closure_0 = last_4;
-          obj = { sepa_debit_account: obj, merchant_account_id: last_4.merchantAccountId };
-          obj = { last_4: last_4.last4, merchant_or_partner_customer_id: last_4.customerId, bank_reference_token: last_4.bankReferenceToken, mandate_type: last_4.mandateType };
+          const obj = { last_4: last_4.last4, merchant_or_partner_customer_id: last_4.customerId, bank_reference_token: last_4.bankReferenceToken, mandate_type: last_4.mandateType };
           const requestResult = _client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
-          return _client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((nonce) => {
-            if (nonce.nonce) {
+          return _client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((result) => {
+            if (result.nonce) {
               const obj = { nonce: null, ibanLastFour: null, customerId: null, mandateType: null };
-              obj[0] = nonce.nonce;
+              obj[0] = result.nonce;
               ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
               return obj;
             } else {
               const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
               throw tmp5;
             }
-          }).catch(() => {
+          }).catch((error) => {
             throw new closure_0(constants.SEPA_TRANSACTION_FAILED);
           });
         },
@@ -12017,59 +11835,56 @@ let fn = () => {
           window.location.href = approvalUrl;
         },
         handleApprovalForFullPageRedirect(client, closure_0) {
-          closure_0 = client;
-          closure_1 = closure_0;
-          let obj = { api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` };
+          const cart_id = client;
+          closure_1 = cart_id;
           let requestResult = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` });
-          const nextPromise = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((sepaDebitMandateDetail) => {
-            sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
+          const nextPromise = client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((result) => {
+            const sepaDebitMandateDetail = result.sepaDebitMandateDetail;
             closure_1_3.sendEvent(client, "sepa.redirect.mandate.approved");
             let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            closure_1_7(closure_1, obj);
+            assign(closure_1, obj);
             client = closure_1;
-            obj = { sepa_debit_account: obj, merchant_account_id: closure_1.merchantAccountId };
             obj = { last_4: closure_1.last4, merchant_or_partner_customer_id: closure_1.customerId, bank_reference_token: closure_1.bankReferenceToken, mandate_type: closure_1.mandateType };
             const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
-            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((nonce) => {
-              if (nonce.nonce) {
+            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((result) => {
+              if (result.nonce) {
                 const obj = { nonce: null, ibanLastFour: null, customerId: null, mandateType: null };
-                obj[0] = nonce.nonce;
+                obj[0] = result.nonce;
                 ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
                 return obj;
               } else {
                 const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
                 throw tmp5;
               }
-            }).catch(() => {
+            }).catch((error) => {
               throw new closure_0(constants.SEPA_TRANSACTION_FAILED);
             });
           });
-          return client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((sepaDebitMandateDetail) => {
-            sepaDebitMandateDetail = sepaDebitMandateDetail.sepaDebitMandateDetail;
+          return client.request({ api: "clientApi", method: "get", endpoint: `sepa_debit/${closure_0.cart_id}` }).then((result) => {
+            const sepaDebitMandateDetail = result.sepaDebitMandateDetail;
             closure_1_3.sendEvent(client, "sepa.redirect.mandate.approved");
             let obj = { last4: sepaDebitMandateDetail.last4, customerId: sepaDebitMandateDetail.merchantOrPartnerCustomerId, mandateType: sepaDebitMandateDetail.mandateType, bankReferenceToken: sepaDebitMandateDetail.bankReferenceToken };
-            closure_1_7(closure_1, obj);
+            assign(closure_1, obj);
             client = closure_1;
-            obj = { sepa_debit_account: obj, merchant_account_id: closure_1.merchantAccountId };
             obj = { last_4: closure_1.last4, merchant_or_partner_customer_id: closure_1.customerId, bank_reference_token: closure_1.bankReferenceToken, mandate_type: closure_1.mandateType };
             const requestResult = client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj });
-            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((nonce) => {
-              if (nonce.nonce) {
+            return client.request({ api: "clientApi", method: "post", endpoint: "payment_methods/sepa_debit_accounts", data: obj }).then((result) => {
+              if (result.nonce) {
                 const obj = { nonce: null, ibanLastFour: null, customerId: null, mandateType: null };
-                obj[0] = nonce.nonce;
+                obj[0] = result.nonce;
                 ({ last4: obj[1], customerId: obj[2], mandateType: obj[3] } = closure_0);
                 return obj;
               } else {
                 const tmp5 = new closure_0(closure_1_1.SEPA_TRANSACTION_FAILED);
                 throw tmp5;
               }
-            }).catch(() => {
+            }).catch((error) => {
               throw new closure_0(constants.SEPA_TRANSACTION_FAILED);
             });
-          }).then((arg0) => {
+          }).then((result) => {
             closure_1_3.sendEvent(closure_0, "sepa.redirect.tokenization.success");
-            return arg0;
-          }).catch(() => {
+            return result;
+          }).catch((error) => {
             closure_1_3.sendEvent(closure_0, "sepa.redirect.handle-approval.failed");
             throw new closure_0(closure_1.SEPA_TRANSACTION_FAILED);
           });
@@ -12078,7 +11893,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/assign": 140, "../../lib/braintree-error": 143, "../../lib/frame-service/external": 158, "../../lib/snake-case-to-camel-case": 179, "../../lib/use-min": 181, "../shared/constants": 208, "../shared/errors": 209 }
   ];
-  items = [
+  items205 = [
     (arg0, arg1, arg2) => {
       class SEPA {
         constructor(arg0) {
@@ -12163,7 +11978,7 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/assign": 140, "../../lib/braintree-error": 143, "../shared/constants": 208, "../shared/errors": 209, "../shared/has-missing-option": 210, "./mandate": 205, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items206 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/analytics");
       closure_1 = global("./external/sepa");
@@ -12178,37 +11993,37 @@ let fn = () => {
         create: global("@braintree/wrap-promise")(function create(arg0) {
           closure_0 = arg0;
           closure_1 = parse(window.location.href);
-          const obj = { name: "SEPA", client: closure_0.client, authorization: closure_0.authorization };
           const verifyResult = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization });
-          let nextPromise = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" }));
-          return closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then(() => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" })).then((client) => {
-            closure_0.client = client;
-            closure_0.sendEvent(client, "sepa.client.initialized");
+          let nextPromise = closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then((result) => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" }));
+          return closure_4.verify({ name: "SEPA", client: closure_0.client, authorization: closure_0.authorization }).then((result) => closure_1_3.create({ authorization: closure_0.authorization, client: closure_0.client, debug: closure_0.debug, assetsUrl: closure_1_2.create(closure_0.authorization), name: "SEPA" })).then((result) => {
+            closure_0.client = result;
+            closure_0.sendEvent(result, "sepa.client.initialized");
             return new closure_1(closure_0);
-          }).then((closure_0) => {
+          }).then((result) => {
+            closure_0 = result;
             if (success.success) {
-              if ("true" === tmp.success) {
-                if (tmp.cart_id) {
-                  closure_0 = closure_1_6(closure_0, tmp);
-                  const result = closure_1_7.handleApprovalForFullPageRedirect(closure_0.client, closure_0);
-                  let catchPromise = result.then((tokenizePayload) => {
-                    closure_0.tokenizePayload = tokenizePayload;
+              if ("true" === success.success) {
+                if (success.cart_id) {
+                  closure_0 = assign(closure_0, success);
+                  result = closure_1_7.handleApprovalForFullPageRedirect(closure_0.client, closure_0);
+                  let catchPromise = result.then((result) => {
+                    closure_0.tokenizePayload = result;
                     return closure_0;
-                  }).catch((arg0) => {
-                    console.error("Problem while finishing tokenizing: ", arg0);
+                  }).catch((error) => {
+                    console.error("Problem while finishing tokenizing: ", error);
                   });
-                  const nextPromise = result.then((tokenizePayload) => {
-                    closure_0.tokenizePayload = tokenizePayload;
+                  const nextPromise = result.then((result) => {
+                    closure_0.tokenizePayload = result;
                     return closure_0;
                   });
                 }
                 return catchPromise;
               }
             }
-            catchPromise = closure_0;
+            catchPromise = result;
             if (success.cancel) {
               closure_0.sendEvent(closure_0.client, "sepa.redirect.customer-canceled.failed");
-              catchPromise = closure_0;
+              catchPromise = result;
             }
           });
         }),
@@ -12217,23 +12032,21 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/assign": 140, "../lib/basic-component-verification": 141, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "../lib/querystring": 177, "./external/mandate": 205, "./external/sepa": 206, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items207 = [
     (arg0, arg1, arg2) => {
       module.exports = { REQUIRED_OPTIONS: ["iban", "merchantAccountId", "mandateType", "customerId", "accountHolderName", "countryCode"], BILLING_ADDRESS_OPTIONS: ["address_line_1", "address_line_2", "admin_area_1", "admin_area_2", "postal_code"], MANDATE_TYPE_ENUM: ["ONE_OFF", "RECURRENT"] };
     },
     {}
   ];
-  items = [
+  items208 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "SEPA_CREATE_MANDATE_FAILED", message: "SEPA create mandate failed.", details: "create-mandate" };
-      obj = { type: globalResult.types.CUSTOMER, code: "SEPA_CUSTOMER_CANCELED", message: "User canceled SEPA authorization", details: "customer-canceled" };
-      obj = { type: globalResult.types.MERCHANT, code: "SEPA_INVALID_MANDATE_TYPE", message: "SEPA mandate type is invalid" };
+      const obj = { type: globalResult.types.MERCHANT, code: "SEPA_INVALID_MANDATE_TYPE", message: "SEPA mandate type is invalid" };
       module.exports = { SEPA_CREATE_MANDATE_FAILED: obj, SEPA_CUSTOMER_CANCELED: obj, SEPA_INVALID_MANDATE_TYPE: obj, SEPA_TOKENIZATION_FAILED: { type: globalResult.types.UNKNOWN, code: "SEPA_TOKENIZATION_FAILED", message: "SEPA encountered a problem", details: "open-popup" }, SEPA_TOKENIZE_MISSING_REQUIRED_OPTION: { type: globalResult.types.MERCHANT, code: "SEPA_TOKENIZE_MISSING_REQUIRED_OPTION", message: "Missing required option for tokenize." }, SEPA_TRANSACTION_FAILED: { type: globalResult.types.UNKNOWN, code: "SEPA_TRANSACTION_FAILED", message: "SEPA transaction failed", details: "handle-approval" } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items209 = [
     (arg0, arg1, arg2) => {
       module.exports = function hasMissingOption(arg0, arg1) {
         let items = arg1;
@@ -12252,7 +12065,7 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items210 = [
     (arg0, arg1, arg2) => {
       class BaseFramework {
         constructor(arg0) {
@@ -12652,7 +12465,7 @@ let fn = () => {
     },
     { "../../../lib/analytics": 138, "../../../lib/assign": 140, "../../../lib/braintree-error": 143, "../../../lib/constants": 145, "../../../lib/is-verified-domain": 173, "../../../lib/use-min": 181, "../../shared/constants": 220, "../../shared/errors": 221, "../../shared/events": 222, "@braintree/event-emitter": 30, "@braintree/extended-promise": 31, "@braintree/iframer": 32, "@braintree/uuid": 36, framebus: 50 }
   ];
-  items = [
+  items211 = [
     (arg0, arg1, arg2) => {
       class Bootstrap3ModalFramework {
         constructor(arg0) {
@@ -12688,7 +12501,7 @@ let fn = () => {
     },
     { "./songbird": 217 }
   ];
-  items = [
+  items212 = [
     (arg0, arg1, arg2) => {
       class CardinalModalFramework {
         constructor(arg0) {
@@ -12732,7 +12545,7 @@ let fn = () => {
     },
     { "./songbird": 217 }
   ];
-  items = [
+  items213 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("./legacy");
       const globalResult1 = global("./cardinal-modal");
@@ -12741,7 +12554,7 @@ let fn = () => {
     },
     { "./bootstrap3-modal": 212, "./cardinal-modal": 213, "./inline-iframe": 215, "./legacy": 216 }
   ];
-  items = [
+  items214 = [
     (arg0, arg1, arg2) => {
       class InlineIframeFramework {
         constructor(arg0) {
@@ -12854,7 +12667,7 @@ let fn = () => {
     },
     { "../../../lib/braintree-error": 143, "../../../lib/enumerate": 153, "../../shared/errors": 221, "./songbird": 217 }
   ];
-  items = [
+  items215 = [
     (arg0, arg1, arg2) => {
       class LegacyFramework {
         constructor(arg0) {
@@ -12941,7 +12754,7 @@ let fn = () => {
     },
     { "../../../lib/deferred": 151, "./base": 211 }
   ];
-  items = [
+  items216 = [
     (arg0, arg1, arg2) => {
       class SongbirdFramework {
         constructor(arg0) {
@@ -13331,7 +13144,7 @@ let fn = () => {
     },
     { "../../../lib/analytics": 138, "../../../lib/assets": 139, "../../../lib/assign": 140, "../../../lib/braintree-error": 143, "../../../lib/constants": 145, "../../../lib/convert-to-braintree-error": 147, "../../../lib/deferred": 151, "../../../lib/enumerate": 153, "../../shared/constants": 220, "../../shared/errors": 221, "./base": 211, "@braintree/extended-promise": 31 }
   ];
-  items = [
+  items217 = [
     (arg0, arg1, arg2) => {
       class ThreeDSecure {
         constructor(arg0) {
@@ -13393,7 +13206,7 @@ let fn = () => {
     },
     { "../../lib/convert-methods-to-error": 146, "../../lib/methods": 175, "./frameworks": 214, "@braintree/event-emitter": 30, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items218 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./external/three-d-secure");
       const isHTTPS = global("../lib/is-https").isHTTPS;
@@ -13415,10 +13228,7 @@ let fn = () => {
             if ("1" !== StringResult) {
               if ("2" !== StringResult) {
                 if ("2-cardinal-modal" !== StringResult) {
-                  if ("2-bootstrap3-modal" === StringResult) {
-                    let str3 = "bootstrap3-modal";
-                  } else {
-                    str3 = "inline-iframe";
+                  if ("2-bootstrap3-modal" !== StringResult) {
                     if ("2-inline-iframe" !== StringResult) {
                       let obj = { code: null, type: null, message: null };
                       obj[0] = constants.THREEDS_UNRECOGNIZED_VERSION.code;
@@ -13431,15 +13241,15 @@ let fn = () => {
                 }
                 obj = { name: "3D Secure", client: null, authorization: null };
                 ({ client: obj2[1], authorization: obj2[2] } = version);
-                return closure_2.verify(obj).then(() => {
+                return closure_2.verify(obj).then((result) => {
                   let obj = closure_1_4.create(version.authorization);
                   obj = { authorization: version.authorization, client: version.client, debug: version.debug, assetsUrl: obj, name: "3D Secure" };
                   obj = closure_1_3.create(obj);
-                  const nextPromise = obj.then((getConfiguration) => {
-                    let rejectResult = getConfiguration;
-                    const configuration = getConfiguration.getConfiguration();
+                  const nextPromise = obj.then((result) => {
+                    let rejectResult = result;
+                    const configuration = result.getConfiguration();
                     const gatewayConfiguration = configuration.gatewayConfiguration;
-                    closure_0.client = getConfiguration;
+                    closure_0.client = result;
                     let THREEDS_NOT_ENABLED;
                     if (!gatewayConfiguration.threeDSecureEnabled) {
                       THREEDS_NOT_ENABLED = closure_1_7.THREEDS_NOT_ENABLED;
@@ -13449,7 +13259,7 @@ let fn = () => {
                     }
                     let tmp7 = "production" === gatewayConfiguration.environment;
                     if (tmp7) {
-                      tmp7 = !closure_1_1();
+                      tmp7 = !str3();
                     }
                     if (tmp7) {
                       THREEDS_NOT_ENABLED = closure_1_7.THREEDS_HTTPS_REQUIRED;
@@ -13457,17 +13267,16 @@ let fn = () => {
                     let tmp10 = "legacy" === closure_1;
                     if (!tmp10) {
                       tmp10 = gatewayConfiguration.threeDSecure && gatewayConfiguration.threeDSecure.cardinalAuthenticationJWT;
-                      const tmp11 = gatewayConfiguration.threeDSecure && gatewayConfiguration.threeDSecure.cardinalAuthenticationJWT;
                     }
                     if (!tmp10) {
-                      closure_1_6.sendEvent(tmp3.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
+                      closure_1_6.sendEvent(closure_0.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
                       THREEDS_NOT_ENABLED = closure_1_7.THREEDS_NOT_ENABLED_FOR_V2;
                     }
                     if (THREEDS_NOT_ENABLED) {
                       const tmp22 = new closure_1_5(THREEDS_NOT_ENABLED);
                       rejectResult = Promise.reject(tmp22);
                     } else {
-                      closure_1_6.sendEvent(tmp3.client, "three-d-secure.initialized");
+                      closure_1_6.sendEvent(closure_0.client, "three-d-secure.initialized");
                     }
                     return rejectResult;
                   });
@@ -13475,12 +13284,11 @@ let fn = () => {
                   let nextPromise1 = tmp2;
                   version = tmp2;
                   if (version.client) {
-                    nextPromise1 = nextPromise.then(() => closure_0);
+                    nextPromise1 = nextPromise.then((result) => closure_0);
                   }
                   return nextPromise1;
                 });
               }
-              str3 = "cardinal-modal";
             }
           }
           obj = { code: constants.THREEDS_UNSUPPORTED_VERSION.code, type: constants.THREEDS_UNSUPPORTED_VERSION.type, message: constants.THREEDS_UNSUPPORTED_VERSION.message };
@@ -13491,29 +13299,27 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "../lib/is-https": 172, "./external/three-d-secure": 218, "./shared/errors": 221, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items219 = [
     (arg0, arg1, arg2) => {
       module.exports = { LANDING_FRAME_NAME: "braintreethreedsecurelanding", CARDINAL_SCRIPT_SOURCE: { production: "https://songbird.cardinalcommerce.com/edge/v1/songbird.js", sandbox: "https://songbirdstag.cardinalcommerce.com/edge/v1/songbird.js" } };
     },
     {}
   ];
-  items = [
+  items220 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "THREEDS_NOT_ENABLED", message: "3D Secure is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "THREEDS_CAN_NOT_USE_TOKENIZATION_KEY", message: "3D Secure can not use a tokenization key for authorization." };
-      obj = { type: globalResult.types.MERCHANT, code: "THREEDS_HTTPS_REQUIRED", message: "3D Secure requires HTTPS." };
+      const obj = { type: globalResult.types.MERCHANT, code: "THREEDS_HTTPS_REQUIRED", message: "3D Secure requires HTTPS." };
       module.exports = { THREEDS_NOT_ENABLED: obj, THREEDS_CAN_NOT_USE_TOKENIZATION_KEY: obj, THREEDS_HTTPS_REQUIRED: obj, THREEDS_NOT_ENABLED_FOR_V2: { type: globalResult.types.MERCHANT, code: "THREEDS_NOT_ENABLED_FOR_V2", message: "3D Secure version 2 is not enabled for this merchant. Contact Braintree Support for assistance at https://help.braintreepayments.com/" }, THREEDS_UNRECOGNIZED_VERSION: { type: globalResult.types.MERCHANT, code: "THREEDS_UNRECOGNIZED_VERSION" }, THREEDS_CARDINAL_SDK_SETUP_FAILED: { type: globalResult.types.UNKNOWN, code: "THREEDS_CARDINAL_SDK_SETUP_FAILED", message: "Something went wrong setting up Cardinal's Songbird.js library." }, THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED: { type: globalResult.types.NETWORK, code: "THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED", message: "Cardinal's Songbird.js library could not be loaded." }, THREEDS_CARDINAL_SDK_SETUP_TIMEDOUT: { type: globalResult.types.UNKNOWN, code: "THREEDS_CARDINAL_SDK_SETUP_TIMEDOUT", message: "Cardinal's Songbird.js took too long to setup." }, THREEDS_CARDINAL_SDK_RESPONSE_TIMEDOUT: { type: globalResult.types.UNKNOWN, code: "THREEDS_CARDINAL_SDK_RESPONSE_TIMEDOUT", message: "Cardinal's API took too long to respond." }, THREEDS_CARDINAL_SDK_BAD_CONFIG: { type: globalResult.types.MERCHANT, code: "THREEDS_CARDINAL_SDK_BAD_CONFIG", message: "JWT or other required field missing. Please check your setup configuration." }, THREEDS_CARDINAL_SDK_BAD_JWT: { type: globalResult.types.MERCHANT, code: "THREEDS_CARDINAL_SDK_BAD_JWT", message: "Cardinal JWT missing or malformed. Please check your setup configuration." }, THREEDS_CARDINAL_SDK_ERROR: { type: globalResult.types.UNKNOWN, code: "THREEDS_CARDINAL_SDK_ERROR", message: "A general error has occurred with Cardinal. See description for more information." }, THREEDS_CARDINAL_SDK_CANCELED: { type: globalResult.types.CUSTOMER, code: "THREEDS_CARDINAL_SDK_CANCELED", message: "Canceled by user." }, THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT: { type: globalResult.types.MERCHANT, code: "THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT", message: "3D Secure verfication canceled by merchant." }, THREEDS_AUTHENTICATION_IN_PROGRESS: { type: globalResult.types.MERCHANT, code: "THREEDS_AUTHENTICATION_IN_PROGRESS", message: "Cannot call verifyCard while existing authentication is in progress." }, THREEDS_MISSING_VERIFY_CARD_OPTION: { type: globalResult.types.MERCHANT, code: "THREEDS_MISSING_VERIFY_CARD_OPTION" }, THREEDS_JWT_AUTHENTICATION_FAILED: { type: globalResult.types.UNKNOWN, code: "THREEDS_JWT_AUTHENTICATION_FAILED", message: "Something went wrong authenticating the JWT from Cardinal" }, THREEDS_LOOKUP_TOKENIZED_CARD_NOT_FOUND_ERROR: { type: globalResult.types.MERCHANT, code: "THREEDS_LOOKUP_TOKENIZED_CARD_NOT_FOUND_ERROR", message: "Either the payment method nonce passed to `verifyCard` does not exist, or it was already consumed" }, THREEDS_LOOKUP_VALIDATION_ERROR: { type: globalResult.types.CUSTOMER, code: "THREEDS_LOOKUP_VALIDATION_ERROR", message: "The data passed in `verifyCard` did not pass validation checks. See details for more info" }, THREEDS_LOOKUP_ERROR: { type: globalResult.types.UNKNOWN, code: "THREEDS_LOOKUP_ERROR", message: "Something went wrong during the 3D Secure lookup" }, THREEDS_INLINE_IFRAME_DETAILS_INCORRECT: { type: globalResult.types.UNKNOWN, code: "THREEDS_INLINE_IFRAME_DETAILS_INCORRECT", message: "Something went wrong when attempting to add the authentication iframe to the page." }, THREEDS_NO_VERIFICATION_PAYLOAD: { type: globalResult.types.MERCHANT, code: "THREEDS_NO_VERIFICATION_PAYLOAD", message: "No verification payload available." }, THREEDS_TERM_URL_REQUIRES_BRAINTREE_DOMAIN: { type: globalResult.types.INTERNAL, code: "THREEDS_TERM_URL_REQUIRES_BRAINTREE_DOMAIN", message: "Term Url must be on a Braintree domain." }, THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED: { type: globalResult.types.INTERNAL, code: "THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED", message: "Method not implemented for this framework." }, THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID: { type: globalResult.types.MERCHANT, code: "THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID", message: "Requested Exemption Type is invalid." }, THREEDS_UNSUPPORTED_VERSION: { type: globalResult.types.MERCHANT, code: "THREEDS_UNSUPPORTED_VERSION", message: "3D Secure `1` is deprecated and no longer supported. See available versions at https://braintree.github.io/braintree-web/current/module-braintree-web_three-d-secure.html#.create" } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items221 = [
     (arg0, arg1, arg2) => {
       module.exports = global("../../lib/enumerate")(["AUTHENTICATION_COMPLETE"], "threedsecure:");
     },
     { "../../lib/enumerate": 153 }
   ];
-  items = [
+  items222 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./shared/unionpay");
       closure_1 = global("../lib/basic-component-verification");
@@ -13525,19 +13331,19 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "UnionPay", client: client.client, authorization: client.authorization };
           const verifyResult = closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization });
-          return closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization }).then(() => closure_1_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_4.create(client.authorization), name: "UnionPay" })).then((getConfiguration) => {
-            const configuration = getConfiguration.getConfiguration();
-            closure_0.client = getConfiguration;
+          return closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization }).then((result) => closure_1_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_4.create(client.authorization), name: "UnionPay" })).then((result) => {
+            const configuration = result.getConfiguration();
+            client.client = result;
             if (configuration.gatewayConfiguration.unionPay) {
               if (true === configuration.gatewayConfiguration.unionPay.enabled) {
-                closure_1_5.sendEvent(tmp2.client, "unionpay.initialized");
-                let rejectResult = new closure_0(tmp2);
+                closure_1_5.sendEvent(client.client, "unionpay.initialized");
+                let rejectResult = new client(client);
               }
               return rejectResult;
             }
             rejectResult = Promise.reject(new closure_1_2(closure_1_6.UNIONPAY_NOT_ENABLED));
+            const tmp3 = new closure_1_2(closure_1_6.UNIONPAY_NOT_ENABLED);
           });
         }),
         VERSION: "3.112.1"
@@ -13545,23 +13351,21 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./shared/errors": 225, "./shared/unionpay": 226, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items223 = [
     (arg0, arg1, arg2) => {
       module.exports = { events: global("../../lib/enumerate")(["HOSTED_FIELDS_FETCH_CAPABILITIES", "HOSTED_FIELDS_ENROLL", "HOSTED_FIELDS_TOKENIZE"], "union-pay:"), HOSTED_FIELDS_FRAME_NAME: "braintreeunionpayhostedfields" };
     },
     { "../../lib/enumerate": 153 }
   ];
-  items = [
+  items224 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "UNIONPAY_NOT_ENABLED", message: "UnionPay is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID", message: "Found an invalid Hosted Fields instance. Please use a valid Hosted Fields instance." };
-      obj = { type: globalResult.types.MERCHANT, code: "UNIONPAY_HOSTED_FIELDS_INSTANCE_REQUIRED", message: "Could not find the Hosted Fields instance." };
+      const obj = { type: globalResult.types.MERCHANT, code: "UNIONPAY_HOSTED_FIELDS_INSTANCE_REQUIRED", message: "Could not find the Hosted Fields instance." };
       module.exports = { UNIONPAY_NOT_ENABLED: obj, UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID: obj, UNIONPAY_HOSTED_FIELDS_INSTANCE_REQUIRED: obj, UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED: { type: globalResult.types.MERCHANT, code: "UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED", message: "A card or a Hosted Fields instance is required. Please supply a card or a Hosted Fields instance." }, UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES: { type: globalResult.types.MERCHANT, code: "UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES", message: "Please supply either a card or a Hosted Fields instance, not both." }, UNIONPAY_EXPIRATION_DATE_INCOMPLETE: { type: globalResult.types.MERCHANT, code: "UNIONPAY_EXPIRATION_DATE_INCOMPLETE", message: "You must supply expiration month and year or neither." }, UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID: { type: globalResult.types.CUSTOMER, code: "UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID", message: "Enrollment failed due to user input error." }, UNIONPAY_ENROLLMENT_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "UNIONPAY_ENROLLMENT_NETWORK_ERROR", message: "Could not enroll UnionPay card." }, UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR", message: "Could not fetch card capabilities." }, UNIONPAY_TOKENIZATION_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "UNIONPAY_TOKENIZATION_NETWORK_ERROR", message: "A tokenization network error occurred." }, UNIONPAY_MISSING_MOBILE_PHONE_DATA: { type: globalResult.types.MERCHANT, code: "UNIONPAY_MISSING_MOBILE_PHONE_DATA", message: "A `mobile` with `countryCode` and `number` is required." }, UNIONPAY_FAILED_TOKENIZATION: { type: globalResult.types.CUSTOMER, code: "UNIONPAY_FAILED_TOKENIZATION", message: "The supplied card data failed tokenization." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items225 = [
     (arg0, arg1, arg2) => {
       class UnionPay {
         constructor(arg0) {
@@ -13847,23 +13651,21 @@ let fn = () => {
     },
     { "../../lib/analytics": 138, "../../lib/braintree-error": 143, "../../lib/constants": 145, "../../lib/convert-methods-to-error": 146, "../../lib/is-verified-domain": 173, "../../lib/methods": 175, "../../lib/use-min": 181, "./constants": 224, "./errors": 225, "@braintree/iframer": 32, "@braintree/uuid": 36, "@braintree/wrap-promise": 40, framebus: 50 }
   ];
-  items = [
+  items226 = [
     (arg0, arg1, arg2) => {
       module.exports = { PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js" };
     },
     {}
   ];
-  items = [
+  items227 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "US_BANK_ACCOUNT_OPTION_REQUIRED" };
-      obj = { type: globalResult.types.MERCHANT, code: "US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS" };
-      obj = { type: globalResult.types.NETWORK, code: "US_BANK_ACCOUNT_LOGIN_LOAD_FAILED", message: "Bank login flow failed to load." };
+      const obj = { type: globalResult.types.NETWORK, code: "US_BANK_ACCOUNT_LOGIN_LOAD_FAILED", message: "Bank login flow failed to load." };
       module.exports = { US_BANK_ACCOUNT_OPTION_REQUIRED: obj, US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS: obj, US_BANK_ACCOUNT_LOGIN_LOAD_FAILED: obj, US_BANK_ACCOUNT_LOGIN_CLOSED: { type: globalResult.types.CUSTOMER, code: "US_BANK_ACCOUNT_LOGIN_CLOSED", message: "Customer closed bank login flow before authorizing." }, US_BANK_ACCOUNT_LOGIN_REQUEST_ACTIVE: { type: globalResult.types.MERCHANT, code: "US_BANK_ACCOUNT_LOGIN_REQUEST_ACTIVE", message: "Another bank login tokenization request is active." }, US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR", message: "A tokenization network error occurred." }, US_BANK_ACCOUNT_FAILED_TOKENIZATION: { type: globalResult.types.CUSTOMER, code: "US_BANK_ACCOUNT_FAILED_TOKENIZATION", message: "The supplied data failed tokenization." }, US_BANK_ACCOUNT_NOT_ENABLED: { type: globalResult.types.MERCHANT, code: "US_BANK_ACCOUNT_NOT_ENABLED", message: "US bank account is not enabled." }, US_BANK_ACCOUNT_BANK_LOGIN_NOT_ENABLED: { type: globalResult.types.MERCHANT, code: "US_BANK_ACCOUNT_BANK_LOGIN_NOT_ENABLED", message: "Bank login is not enabled." } };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items228 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("../lib/braintree-error");
@@ -13874,10 +13676,9 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "US Bank Account", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "US Bank Account" })).then((client) => {
-            client.client = client;
+          return closure_0.verify({ name: "US Bank Account", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "US Bank Account" })).then((result) => {
+            client.client = result;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.usBankAccount) {
               let rejectResult = new closure_1_5(tmp);
@@ -13893,7 +13694,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./errors": 228, "./us-bank-account": 230, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items229 = [
     (arg0, arg1, arg2) => {
       class USBankAccount {
         constructor(arg0) {
@@ -14116,17 +13917,15 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/errors": 154, "../lib/methods": 175, "../lib/once": 176, "./constants": 227, "./errors": 228, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items230 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN", message: "A client token with a customer id must be used to delete a payment method nonce." };
-      obj = { type: globalResult.types.MERCHANT, code: "VAULT_MANAGER_PAYMENT_METHOD_NONCE_NOT_FOUND" };
-      obj = { type: globalResult.types.UNKNOWN, code: "VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR" };
+      const obj = { type: globalResult.types.UNKNOWN, code: "VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR" };
       module.exports = { VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN: obj, VAULT_MANAGER_PAYMENT_METHOD_NONCE_NOT_FOUND: obj, VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR: obj };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items231 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("../lib/create-deferred-client");
@@ -14135,9 +13934,8 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_0.verify({ name: "Vault Manager", client: client.client, authorization: client.authorization }).then(() => {
-            let obj = { createPromise: null };
-            obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Vault Manager" };
+          return closure_0.verify({ name: "Vault Manager", client: client.client, authorization: client.authorization }).then((result) => {
+            const obj = { authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_2.create(client.authorization), name: "Vault Manager" };
             obj[0] = closure_1_1.create(obj);
             return new closure_1_3(obj);
           });
@@ -14147,7 +13945,7 @@ let fn = () => {
     },
     { "../lib/basic-component-verification": 141, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./vault-manager": 233, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items232 = [
     (arg0, arg1, arg2) => {
       class VaultManager {
         constructor(arg0) {
@@ -14165,9 +13963,9 @@ let fn = () => {
           }
           c0 = num;
           _createPromise = this._createPromise;
-          nextPromise = _createPromise.then((request) => {
+          nextPromise = _createPromise.then((result) => {
             const data = { defaultFirst: num };
-            return request.request({ endpoint: "payment_methods", method: "get", data });
+            return result.request({ endpoint: "payment_methods", method: "get", data });
           });
           fn = function(paymentMethods) {
             num.sendEvent(this._createPromise, "vault-manager.fetch-payment-methods.succeeded");
@@ -14179,20 +13977,18 @@ let fn = () => {
         deletePaymentMethod(arg0) {
           closure_0 = global;
           _createPromise = this._createPromise;
-          return _createPromise.then((getConfiguration) => {
-            closure_0 = getConfiguration;
-            if ("CLIENT_TOKEN" === getConfiguration.getConfiguration().authorizationType) {
-              let obj = { api: "graphQLApi", data: null };
-              obj = { query: "mutation DeletePaymentMethodFromSingleUseToken($input: DeletePaymentMethodFromSingleUseTokenInput!) {  deletePaymentMethodFromSingleUseToken(input: $input) {    clientMutationId  }}", variables: null, operationName: "DeletePaymentMethodFromSingleUseToken" };
-              obj = { input: null };
+          return _createPromise.then((result) => {
+            closure_0 = result;
+            if ("CLIENT_TOKEN" === result.getConfiguration().authorizationType) {
+              let obj = { input: null };
               obj1 = { singleUseTokenId: null };
               obj1[0] = closure_0;
               obj[0] = obj1;
               obj[1] = obj;
               obj[1] = obj;
-              const requestResult = getConfiguration.request(obj);
-              let catchPromise = getConfiguration.request(obj).then(() => { ... }).catch(() => { ... });
-              const nextPromise = getConfiguration.request(obj).then(() => { ... });
+              const requestResult = result.request(obj);
+              let catchPromise = result.request(obj).then(() => { ... }).catch(() => { ... });
+              const nextPromise = result.request(obj).then(() => { ... });
             } else {
               const tmp6 = new closure_1_1(closure_1_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN);
               catchPromise = Promise.reject(tmp6);
@@ -14224,7 +14020,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/methods": 175, "./errors": 231, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items233 = [
     function(arg0, arg1, arg2) {
       fn = this;
       if (this) {
@@ -14249,7 +14045,7 @@ let fn = () => {
     },
     { "./venmo-desktop": 236 }
   ];
-  items = [
+  items234 = [
     (arg0, arg1, arg2) => {
       arg2.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = undefined;
       arg2.CREATE_PAYMENT_CONTEXT_QUERY = undefined;
@@ -14266,22 +14062,19 @@ let fn = () => {
     },
     {}
   ];
-  items = [
-    function(arg0, arg1, arg2) {
+  items235 = [
+    function(fn) {
       let self = this;
       fn = this;
       if (this) {
         fn = self.__assign;
       }
       if (!fn) {
-        fn = function() {
+        fn = function(framebus) {
           let tmp = Object.assign || ((arg0) => {
             for (let num = 1; num < length; num = num + 1) {
               let tmp = arguments[num];
-              let tmp2 = tmp;
-              let tmp3 = num;
               for (const key10012 in tmp) {
-                let tmp5 = key10012;
                 let _Object = Object;
                 let call = hasOwnProperty.call;
                 if (typeof call === "unknown") {
@@ -14327,19 +14120,19 @@ let fn = () => {
           return tmp;
         };
       }
-      closure_1 = fn2(arg0("framebus"));
-      closure_2 = fn2(arg0("@braintree/iframer"));
-      closure_3 = fn2(arg0("@braintree/uuid"));
-      closure_4 = arg0("../shared/events");
-      closure_5 = arg0("./queries");
+      closure_1 = fn2(fn("framebus"));
+      closure_2 = fn2(fn("@braintree/iframer"));
+      closure_3 = fn2(fn("@braintree/uuid"));
+      closure_4 = fn("../shared/events");
+      closure_5 = fn("./queries");
       class VenmoDesktop {
         constructor(arg0) {
-          obj = { isHidden: true, env: arg0.environment, id: closure_3.default(), profileId: arg0.profileId, displayName: arg0.displayName, paymentMethodUsage: arg0.paymentMethodUsage, shouldUseLegacyQRCodeMutation: !obj.paymentMethodUsage };
-          obj = { channel: obj.id, verifyDomain: arg0.verifyDomain, targetFrames: [] };
-          text = `${arg0.url}#${obj.env}_${obj.id}`;
+          obj = { isHidden: true, env: fn.environment, id: closure_3.default(), profileId: fn.profileId, displayName: fn.displayName, paymentMethodUsage: fn.paymentMethodUsage, shouldUseLegacyQRCodeMutation: !obj.paymentMethodUsage };
+          obj = { channel: obj.id, verifyDomain: fn.verifyDomain, targetFrames: [] };
+          text = `${fn.url}#${obj.env}_${obj.id}`;
           _default = new closure_1.default(obj);
           obj.bus = _default;
-          ({ apiRequest: obj.apiRequest, sendEvent: obj.sendEvent, Promise: obj.Promise } = arg0);
+          ({ apiRequest: obj.apiRequest, sendEvent: obj.sendEvent, Promise: obj.Promise } = fn);
           obj.alertBox = document.createElement("div");
           alertBox = obj.alertBox;
           attr = alertBox.setAttribute("data-venmo-desktop-id", obj.id);
@@ -14427,19 +14220,19 @@ let fn = () => {
           iframe = this.iframe;
           focusResult = iframe.focus();
           startPollingResult = this.startPolling();
-          nextPromise = promise.then((arg0) => {
+          nextPromise = promise.then((result) => {
             delete tmp2[tmp];
             delete tmp2[tmp];
-            return arg0;
+            return result;
           });
-          return nextPromise.catch((arg0) => {
+          return nextPromise.catch((error) => {
             delete tmp[tmp2];
             delete tmp[tmp2];
-            return self.Promise.reject(arg0);
+            return self.Promise.reject(error);
           });
         }
         triggerCompleted(arg0) {
-          closure_0 = arg0;
+          closure_0 = fn;
           self = this;
           if (!this.isHidden) {
             tmp = globalThis;
@@ -14457,8 +14250,8 @@ let fn = () => {
         triggerRejected(arg0) {
           self = this;
           if (this.launchDesktopPromiseRejectFunction) {
-            tmp = arg0;
-            result = self.launchDesktopPromiseRejectFunction(arg0);
+            tmp = fn;
+            result = self.launchDesktopPromiseRejectFunction(fn);
           }
           return;
         }
@@ -14473,25 +14266,25 @@ let fn = () => {
         displayError(arg0) {
           self = this;
           if (!this.isHidden) {
-            tmp = arg0;
+            tmp = fn;
             bus = self.bus;
             tmp2 = closure_4;
             obj = { message: null };
-            obj[0] = arg0;
+            obj[0] = fn;
             emitResult = bus.emit(closure_4.VENMO_DESKTOP_DISPLAY_ERROR, obj);
-            setAlertResult = self.setAlert(arg0);
+            setAlertResult = self.setAlert(fn);
           }
           return;
         }
         displayQRCode(arg0, arg1) {
           self = this;
           if (!this.isHidden) {
-            tmp = arg0;
+            tmp = fn;
             tmp2 = arg1;
             bus = self.bus;
             tmp3 = closure_4;
             obj = { id: null, merchantId: null };
-            obj[0] = arg0;
+            obj[0] = fn;
             obj[1] = arg1;
             emitResult = bus.emit(closure_4.VENMO_DESKTOP_DISPLAY_QR_CODE, obj);
             str = "To scan the QR code, open your Venmo app";
@@ -14524,39 +14317,38 @@ let fn = () => {
         startPolling() {
           self = this;
           venmoDesktopPaymentContext = this.createVenmoDesktopPaymentContext();
-          nextPromise = venmoDesktopPaymentContext.then((expiresAt) => {
-            const time = new Date(expiresAt.expiresAt).getTime();
-            const date = new Date(expiresAt.expiresAt);
-            const diff = time - new Date(expiresAt.createdAt).getTime();
+          nextPromise = venmoDesktopPaymentContext.then((result) => {
+            const time = new Date(result.expiresAt).getTime();
+            const date = new Date(result.expiresAt);
+            const diff = time - new Date(result.createdAt).getTime();
             const sum = Date.now() + diff;
-            self.displayQRCode(expiresAt.id, expiresAt.merchantId);
-            return self.pollForStatusChange(expiresAt.status, sum);
+            self.displayQRCode(result.id, result.merchantId);
+            return self.pollForStatusChange(result.status, sum);
           });
-          nextPromise1 = nextPromise.then((userName) => {
-            if (userName) {
+          nextPromise1 = nextPromise.then((result) => {
+            if (result) {
               const obj = { paymentMethodNonce: null, username: null, payerInfo: null, id: null };
-              obj[0] = userName.paymentMethodId;
-              obj[1] = `@${userName.userName || "".replace("@", "")}`;
-              obj[2] = userName.payerInfo;
+              obj[0] = result.paymentMethodId;
+              obj[1] = `@${result.userName || "".replace("@", "")}`;
+              obj[2] = result.payerInfo;
               let str4 = self.venmoContextId;
               if (!str4) {
                 str4 = "";
               }
               obj[3] = str4;
               self.triggerCompleted(obj);
-              const str = userName.userName || "";
             }
           });
-          return nextPromise1.catch((allowUIToHandleError) => {
-            if (!allowUIToHandleError.allowUIToHandleError) {
+          return nextPromise1.catch((error) => {
+            if (!error.allowUIToHandleError) {
               self.sendEvent("venmo.tokenize.desktop.unhandled-error");
-              self.triggerRejected(allowUIToHandleError);
+              self.triggerRejected(error);
             }
           });
         }
         pollForStatusChange(arg0, arg1) {
           self = this;
-          closure_0 = arg0;
+          closure_0 = fn;
           closure_1 = arg1;
           self = this;
           if (this.venmoContextId) {
@@ -14565,18 +14357,18 @@ let fn = () => {
             if (Date.now() > arg1) {
               str = "EXPIRED";
               result = self.updateVenmoDesktopPaymentContext("EXPIRED");
-              nextPromise = result.then(() => {
+              nextPromise = result.then((result) => {
                 self.displayError("Something went wrong");
                 self.sendEvent("venmo.tokenize.desktop.status-change.sdk-timeout");
                 return self.Promise.reject({ allowUIToHandleError: true, reason: "TIMEOUT" });
               });
             } else {
               result1 = self.lookupVenmoDesktopPaymentContext();
-              nextPromise = result1.then((status) => {
+              nextPromise = result1.then((result) => {
                 let obj = self;
                 if (self.venmoContextId) {
-                  if (status) {
-                    status = status.status;
+                  if (result) {
+                    const status = result.status;
                     if (status !== status) {
                       obj.sendEvent(`venmo.tokenize.desktop.status-change.${status.toLowerCase()}`);
                       if ("CREATED" !== status) {
@@ -14587,7 +14379,7 @@ let fn = () => {
                                 obj.authorizing();
                               } else if ("APPROVED" === tmp13) {
                                 obj.authorize();
-                                return obj.Promise.resolve(status);
+                                return obj.Promise.resolve(result);
                               }
                             }
                           }
@@ -14636,21 +14428,21 @@ let fn = () => {
         }
         setAlert(arg0) {
           str = "none";
-          if (arg0) {
+          if (fn) {
             str = "block";
           }
           this.alertBox.style.display = str;
-          this.alertBox.textContent = arg0;
+          this.alertBox.textContent = fn;
           return;
         }
         createPaymentContextFromGraphqlLegacyQRCodeMutation(arg0) {
-          obj = { environment: this.env, intent: arg0 };
+          obj = { environment: this.env, intent: fn };
           apiRequestResult = this.apiRequest(closure_5.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
-          return apiRequestResult.then((createVenmoQRCodePaymentContext) => createVenmoQRCodePaymentContext.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext);
+          return apiRequestResult.then((result) => result.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext);
         }
         createPaymentContextFromGraphQL(arg0) {
           self = this;
-          obj = { intent: arg0, paymentMethodUsage: this.paymentMethodUsage, customerClient: "DESKTOP" };
+          obj = { intent: fn, paymentMethodUsage: this.paymentMethodUsage, customerClient: "DESKTOP" };
           if (this.profileId) {
             obj.merchantProfileId = self.profileId;
           }
@@ -14658,7 +14450,7 @@ let fn = () => {
             obj.displayName = self.displayName;
           }
           apiRequestResult = self.apiRequest(closure_5.CREATE_PAYMENT_CONTEXT_QUERY, { input: obj });
-          return apiRequestResult.then((createVenmoPaymentContext) => createVenmoPaymentContext.createVenmoPaymentContext.venmoPaymentContext);
+          return apiRequestResult.then((result) => result.createVenmoPaymentContext.venmoPaymentContext);
         }
         createVenmoDesktopPaymentContext() {
           self = this;
@@ -14670,9 +14462,9 @@ let fn = () => {
             str = "PAY_FROM_APP";
             paymentContextFromGraphqlLegacyQRCodeMutation = self.createPaymentContextFromGraphQL("PAY_FROM_APP");
           }
-          return paymentContextFromGraphqlLegacyQRCodeMutation.then((id) => {
-            self.venmoContextId = id.id;
-            return { id: id.id, status: id.status, merchantId: self.profileId || id.merchantId, createdAt: id.createdAt, expiresAt: id.expiresAt };
+          return paymentContextFromGraphqlLegacyQRCodeMutation.then((result) => {
+            self.venmoContextId = result.id;
+            return { id: result.id, status: result.status, merchantId: self.profileId || result.merchantId, createdAt: result.createdAt, expiresAt: result.expiresAt };
           });
         }
         updateVenmoDesktopPaymentContext(arg0, arg1) {
@@ -14682,16 +14474,16 @@ let fn = () => {
           }
           self = this;
           if (this.venmoContextId) {
-            tmp = arg0;
+            tmp = fn;
             obj = { input: null };
             tmp2 = f105050;
             obj1 = { id: null, status: null };
             obj1[0] = self.venmoContextId;
-            obj1[1] = arg0;
+            obj1[1] = fn;
             obj[0] = f105050(obj1, obj);
             tmp3 = closure_5;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj);
-            return apiRequestResult.then(() => {
+            return apiRequestResult.then((result) => {
 
             });
           } else {
@@ -14706,7 +14498,7 @@ let fn = () => {
             obj = { id: null };
             obj[0] = self.venmoContextId;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY : tmp.VENMO_PAYMENT_CONTEXT_STATUS_QUERY, obj);
-            return apiRequestResult.then((node) => node.node);
+            return apiRequestResult.then((result) => result.node);
           } else {
             _Promise = self.Promise;
             return _Promise.resolve();
@@ -14717,7 +14509,7 @@ let fn = () => {
     },
     { "../shared/events": 241, "./queries": 235, "@braintree/iframer": 32, "@braintree/uuid": 36, framebus: 50 }
   ];
-  items = [
+  items236 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/analytics");
       closure_1 = global("../lib/basic-component-verification");
@@ -14731,7 +14523,7 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          return closure_1.verify({ name: "Venmo", client: client.client, authorization: client.authorization }).then(() => {
+          return closure_1.verify({ name: "Venmo", client: client.client, authorization: client.authorization }).then((result) => {
             if (client.profileId) {
               if (typeof tmp.profileId !== "string") {
                 const tmp17 = new closure_1_5(closure_1_4.VENMO_INVALID_PROFILE_ID);
@@ -14747,10 +14539,10 @@ let fn = () => {
             }
             let obj = { authorization: tmp.authorization, client: tmp.client, debug: tmp.debug, assetsUrl: closure_1_3.create(tmp.authorization), name: "Venmo" };
             obj = closure_1_2.create(obj);
-            const nextPromise = obj.then((client) => {
-              let rejectResult = client;
-              closure_0.client = client;
-              if (!client.getConfiguration().gatewayConfiguration.payWithVenmo) {
+            const nextPromise = obj.then((result) => {
+              let rejectResult = result;
+              closure_0.client = result;
+              if (!result.getConfiguration().gatewayConfiguration.payWithVenmo) {
                 const tmp7 = new closure_1_5(closure_1_4.VENMO_NOT_ENABLED);
                 rejectResult = Promise.reject(tmp7);
               }
@@ -14759,7 +14551,8 @@ let fn = () => {
             client.createPromise = nextPromise;
             client = new closure_1_6(client);
             client.sendEvent(nextPromise, "venmo.initialized");
-            rejectResult = nextPromise.then(() => closure_0);
+            rejectResult = nextPromise.then((result) => closure_0);
+            const tmp2 = new closure_1_6(client);
           });
         }),
         isBrowserSupported(arg0) {
@@ -14770,7 +14563,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./shared/errors": 240, "./shared/supports-venmo": 243, "./venmo": 245, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items237 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("@braintree/browser-detection/is-android");
       const globalResult1 = global("@braintree/browser-detection/is-chrome");
@@ -14785,7 +14578,6 @@ let fn = () => {
             const _window = window;
             const formatted = window.navigator.userAgent.toLowerCase();
             tmp = formatted.indexOf("wv") > -1;
-            const str = window.navigator.userAgent;
           }
           return tmp;
         },
@@ -14835,23 +14627,21 @@ let fn = () => {
     },
     { "@braintree/browser-detection/is-android": 20, "@braintree/browser-detection/is-chrome": 22, "@braintree/browser-detection/is-ios": 27, "@braintree/browser-detection/is-ios-safari": 24, "@braintree/browser-detection/is-ios-webview": 25, "@braintree/browser-detection/is-samsung": 28 }
   ];
-  items = [
+  items238 = [
     (arg0, arg1, arg2) => {
       module.exports = { DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500, DEFAULT_PROCESS_RESULTS_DELAY: 1000, VENMO_APP_OR_MOBILE_AUTH_URL: "https://venmo.com/go/checkout", VENMO_MOBILE_APP_AUTH_ONLY_URL: "https://venmo.com/braintree/checkout", VENMO_WEB_LOGIN_URL: "https://account.venmo.com/go/web" };
     },
     {}
   ];
-  items = [
+  items239 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "VENMO_NOT_ENABLED", message: "Venmo is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "VENMO_TOKENIZATION_REQUEST_ACTIVE", message: "Another tokenization request is active." };
-      obj = { type: globalResult.types.MERCHANT, code: "VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE", message: "No tokenization in progress." };
+      const obj = { type: globalResult.types.MERCHANT, code: "VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE", message: "No tokenization in progress." };
       module.exports = { VENMO_NOT_ENABLED: obj, VENMO_TOKENIZATION_REQUEST_ACTIVE: obj, VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE: obj, VENMO_APP_FAILED: { type: globalResult.types.UNKNOWN, code: "VENMO_APP_FAILED", message: "Venmo app encountered a problem." }, VENMO_APP_CANCELED: { type: globalResult.types.CUSTOMER, code: "VENMO_APP_CANCELED", message: "Venmo app authorization was canceled." }, VENMO_CANCELED: { type: globalResult.types.CUSTOMER, code: "VENMO_CANCELED", message: "User canceled Venmo authorization, or Venmo app is not available." }, VENMO_CUSTOMER_CANCELED: { type: globalResult.types.CUSTOMER, code: "VENMO_CUSTOMER_CANCELED", message: "User canceled Venmo authorization." }, VENMO_NETWORK_ERROR: { type: globalResult.types.NETWORK, code: "VENMO_NETWORK_ERROR", message: "Something went wrong making the request" }, VENMO_DESKTOP_CANCELED: { type: globalResult.types.CUSTOMER, code: "VENMO_DESKTOP_CANCELED", message: "User canceled Venmo authorization by closing the Venmo Desktop modal." }, VENMO_TOKENIZATION_CANCELED_BY_MERCHANT: { type: globalResult.types.MERCHANT, code: "VENMO_TOKENIZATION_CANCELED_BY_MERCHANT", message: "The Venmo tokenization was canceled by the merchant." }, VENMO_DESKTOP_UNKNOWN_ERROR: { type: globalResult.types.UNKNOWN, code: "VENMO_DESKTOP_UNKNOWN_ERROR", message: "Something went wrong with the Venmo Desktop flow." }, VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED: { type: globalResult.types.NETWORK, code: "VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED", message: "Something went wrong creating the Venmo Payment Context." }, VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR: { type: globalResult.types.UNKNOWN, code: "VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR", message: "Something went wrong during mobile polling." }, VENMO_MOBILE_POLLING_TOKENIZATION_EXPIRED: { type: globalResult.types.CUSTOMER, code: "VENMO_MOBILE_POLLING_TOKENIZATION_EXPIRED", message: "The Venmo authorization request is expired." }, VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED: { type: globalResult.types.CUSTOMER, code: "VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED", message: "The Venmo authorization was canceled" }, VENMO_MOBILE_POLLING_TOKENIZATION_TIMEOUT: { type: globalResult.types.CUSTOMER, code: "VENMO_MOBILE_POLLING_TOKENIZATION_TIMEOUT", message: "Customer took too long to authorize Venmo payment." }, VENMO_MOBILE_POLLING_TOKENIZATION_FAILED: { type: globalResult.types.UNKNOWN, code: "VENMO_MOBILE_POLLING_TOKENIZATION_FAILED", message: "The Venmo authorization failed." }, VENMO_INVALID_PROFILE_ID: { type: globalResult.types.MERCHANT, code: "VENMO_INVALID_PROFILE_ID", message: "Venmo profile ID is invalid." }, VENMO_INVALID_DEEP_LINK_RETURN_URL: { type: globalResult.types.MERCHANT, code: "VENMO_INVALID_DEEP_LINK_RETURN_URL", message: "Venmo deep link return URL is invalid." }, VENMO_TOKENIZATION_FAILED: { type: globalResult.types.UNKNOWN, code: "VENMO_TOKENIZATION_FAILED", message: "Venmo encountered a problem" }, VENMO_ECD_DISABLED: { type: globalResult.types.MERCHANT, code: "ECD_DISABLED", message: "Cannot collect customer data when ECD is disabled. Enable this feature in the Control Panel to collect this data." } };
     },
     { "../../lib/braintree-error": 143 }
   ];
-  items = [
+  items240 = [
     (arg0, arg1, arg2) => {
       arg2.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = undefined;
       arg2.VENMO_DESKTOP_AUTHORIZE = undefined;
@@ -14876,21 +14666,21 @@ let fn = () => {
     },
     {}
   ];
-  items = [
+  items241 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./constants");
       module.exports = function getVenmoUrl(useAllowDesktopWebLogin) {
         if (useAllowDesktopWebLogin.useAllowDesktopWebLogin) {
           let VENMO_WEB_LOGIN_URL = constants.VENMO_WEB_LOGIN_URL;
         } else {
-          VENMO_WEB_LOGIN_URL = useAllowDesktopWebLogin.mobileWebFallBack ? tmp.VENMO_APP_OR_MOBILE_AUTH_URL : tmp.VENMO_MOBILE_APP_AUTH_ONLY_URL;
+          VENMO_WEB_LOGIN_URL = useAllowDesktopWebLogin.mobileWebFallBack ? constants.VENMO_APP_OR_MOBILE_AUTH_URL : constants.VENMO_MOBILE_APP_AUTH_ONLY_URL;
         }
         return VENMO_WEB_LOGIN_URL;
       };
     },
     { "./constants": 239 }
   ];
-  items = [
+  items242 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("./browser-detection");
       closure_1 = global("../../lib/in-iframe");
@@ -14960,7 +14750,7 @@ let fn = () => {
     },
     { "../../lib/in-iframe": 169, "./browser-detection": 238 }
   ];
-  items = [
+  items243 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../../lib/frame-service/external");
       closure_1 = global("../../lib/use-min");
@@ -15009,7 +14799,7 @@ let fn = () => {
             const items5 = [`#${c11} {`, "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 400;", "font-size: 16px;", "line-height: 20px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 16px;", "width: 400px;", "}"];
             const combined = items.concat(items1, items2, items3, items4, items5);
             element1.innerHTML = combined.join("\n");
-            element2.id = tmp;
+            element2.id = c5;
             element3.id = c7;
             element4.id = c12;
             element4.innerHTML = "<svg width=\"198\" height=\"58\" viewBox=\"0 0 198 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z\" fill=\"white\"/>\n</svg>";
@@ -15031,8 +14821,8 @@ let fn = () => {
             element2.appendChild(element3);
             const _document10 = document;
             body.appendChild(element2);
-            const listener = element2.addEventListener("click", (stopPropagation) => {
-              stopPropagation.stopPropagation();
+            const listener = element2.addEventListener("click", (event) => {
+              event.stopPropagation();
             });
           }
           frameServiceInstance = frameServiceInstance.frameServiceInstance;
@@ -15040,11 +14830,11 @@ let fn = () => {
           const tmp32 = new closure_2();
           closure_4 = tmp32;
           const element9 = document.getElementById(c9);
-          const listener1 = element9.addEventListener("click", () => {
+          const listener1 = element9.addEventListener("click", (event) => {
             frameServiceInstance.focus();
           });
           const element10 = document.getElementById(c8);
-          const listener2 = element10.addEventListener("click", () => {
+          const listener2 = element10.addEventListener("click", (event) => {
             frameServiceInstance.close();
             callback2();
             const classList = document.getElementById("venmo-desktop-web-backdrop").classList;
@@ -15055,14 +14845,14 @@ let fn = () => {
               closure_4.reject(arg0);
             } else {
               const promise = callback(1);
-              callback(1).then((arg0) => {
-                closure_4.resolve(arg0);
-              }).catch((arg0) => {
-                closure_0 = arg0;
+              callback(1).then((result) => {
+                closure_4.resolve(result);
+              }).catch((error) => {
+                closure_0 = error;
                 callback().then(() => { ... });
               });
-              const nextPromise = callback(1).then((arg0) => {
-                closure_4.resolve(arg0);
+              const nextPromise = callback(1).then((result) => {
+                closure_4.resolve(result);
               });
             }
             frameServiceInstance.close();
@@ -15078,11 +14868,11 @@ let fn = () => {
           const tmp = new closure_2();
           closure_4 = tmp;
           const element = document.getElementById(c9);
-          const listener = element.addEventListener("click", () => {
+          const listener = element.addEventListener("click", (event) => {
             frameServiceInstance.focus();
           });
           const element1 = document.getElementById(c8);
-          const listener1 = element1.addEventListener("click", () => {
+          const listener1 = element1.addEventListener("click", (event) => {
             frameServiceInstance.close();
             callback2();
             const classList = document.getElementById("venmo-desktop-web-backdrop").classList;
@@ -15093,14 +14883,14 @@ let fn = () => {
               closure_4.reject(arg0);
             } else {
               const promise = callback(1);
-              callback(1).then((arg0) => {
-                closure_4.resolve(arg0);
-              }).catch((arg0) => {
-                closure_0 = arg0;
+              callback(1).then((result) => {
+                closure_4.resolve(result);
+              }).catch((error) => {
+                closure_0 = error;
                 callback().then(() => { ... });
               });
-              const nextPromise = callback(1).then((arg0) => {
-                closure_4.resolve(arg0);
+              const nextPromise = callback(1).then((result) => {
+                closure_4.resolve(result);
               });
             }
             frameServiceInstance.close();
@@ -15135,7 +14925,7 @@ let fn = () => {
     },
     { "../../lib/braintree-error": 143, "../../lib/frame-service/external": 158, "../../lib/use-min": 181, "../shared/errors": 240, "@braintree/extended-promise": 31 }
   ];
-  items = [
+  items244 = [
     (arg0, arg1, arg2) => {
       class Venmo {
         constructor(arg0) {
@@ -15635,17 +15425,15 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/in-iframe": 169, "../lib/is-verified-domain": 173, "../lib/methods": 175, "../lib/querystring": 177, "../lib/snake-case-to-camel-case": 179, "../lib/url-params": 180, "./external/": 234, "./external/queries": 235, "./shared/browser-detection": 238, "./shared/constants": 239, "./shared/errors": 240, "./shared/get-venmo-url": 242, "./shared/supports-venmo": 243, "./shared/web-login-backdrop": 244, "@braintree/extended-promise": 31, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  items245 = [
     (arg0, arg1, arg2) => {
       const globalResult = global("../lib/braintree-error");
-      let obj = { type: globalResult.types.MERCHANT, code: "VISA_CHECKOUT_NOT_ENABLED", message: "Visa Checkout is not enabled for this merchant." };
-      obj = { type: globalResult.types.MERCHANT, code: "VISA_CHECKOUT_INIT_OPTIONS_REQUIRED", message: "initOptions requires an object." };
-      obj = { type: globalResult.types.MERCHANT, code: "VISA_CHECKOUT_PAYMENT_REQUIRED", message: "tokenize requires callid, encKey, and encPaymentData." };
+      const obj = { type: globalResult.types.MERCHANT, code: "VISA_CHECKOUT_PAYMENT_REQUIRED", message: "tokenize requires callid, encKey, and encPaymentData." };
       module.exports = { VISA_CHECKOUT_NOT_ENABLED: obj, VISA_CHECKOUT_INIT_OPTIONS_REQUIRED: obj, VISA_CHECKOUT_PAYMENT_REQUIRED: obj, VISA_CHECKOUT_TOKENIZATION: { type: globalResult.types.NETWORK, code: "VISA_CHECKOUT_TOKENIZATION", message: "A network error occurred when processing the Visa Checkout payment." } };
     },
     { "../lib/braintree-error": 143 }
   ];
-  items = [
+  items246 = [
     (arg0, arg1, arg2) => {
       closure_0 = global("../lib/basic-component-verification");
       closure_1 = global("../lib/braintree-error");
@@ -15657,10 +15445,9 @@ let fn = () => {
       module.exports = {
         create: global("@braintree/wrap-promise")(function create(client) {
           closure_0 = client;
-          const obj = { name: "Visa Checkout", client: client.client, authorization: client.authorization };
           const verifyResult = closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization });
-          return closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization }).then(() => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Visa Checkout" })).then((client) => {
-            client.client = client;
+          return closure_0.verify({ name: "Visa Checkout", client: client.client, authorization: client.authorization }).then((result) => closure_1_2.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_1_3.create(client.authorization), name: "Visa Checkout" })).then((result) => {
+            client.client = result;
             client = client.client;
             if (client.getConfiguration().gatewayConfiguration.visaCheckout) {
               closure_1_5.sendEvent(tmp.client, "visacheckout.initialized");
@@ -15677,7 +15464,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/basic-component-verification": 141, "../lib/braintree-error": 143, "../lib/create-assets-url": 148, "../lib/create-deferred-client": 150, "./errors": 246, "./visa-checkout": 248, "@braintree/wrap-promise": 40 }
   ];
-  items = [
+  const items247 = [
     (arg0, arg1, arg2) => {
       class VisaCheckout {
         constructor(arg0) {
@@ -15757,7 +15544,7 @@ let fn = () => {
     },
     { "../lib/analytics": 138, "../lib/braintree-error": 143, "../lib/convert-methods-to-error": 146, "../lib/json-clone": 174, "../lib/methods": 175, "./errors": 246, "@braintree/wrap-promise": 40 }
   ];
-  obj[248] = items;
+  obj[248] = items247;
   return fn(obj, {}, [136])(136);
 };
 if (typeof exports === "object") {

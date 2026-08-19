@@ -1,6 +1,6 @@
 // _runtime/07713_PurchaseError.js
 import _createClassDefault from "metro/00042__createClass.js";
-import closure_0 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 
 class PurchaseError {
   constructor(arg0, arg1, arg2, arg3, arg4, arg5) {

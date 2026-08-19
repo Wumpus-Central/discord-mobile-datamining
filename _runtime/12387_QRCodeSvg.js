@@ -8,10 +8,7 @@ if (!fn) {
   fn = (arg0) => {
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = arguments[num];
-      let tmp2 = tmp;
-      let tmp3 = num;
       for (const key10012 in tmp) {
-        let tmp5 = key10012;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -55,7 +52,6 @@ const forwardRefResult = noop.forwardRef((obj, ref) => {
   obj = {};
   ({ bgColor, bgD, fgD, fgColor } = obj);
   for (const key10013 in arg0) {
-    let tmp4 = key10013;
     if (items.indexOf(key10013) >= 0) {
       continue;
     } else {

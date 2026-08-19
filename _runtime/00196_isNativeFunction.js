@@ -2,8 +2,8 @@
 arg5.isNativeFunction = function isNativeFunction(fn) {
   let tmp = typeof fn === "function";
   if (typeof fn === "function") {
-    let str = fn.toString();
-    str = "[native code]";
+    fn.toString();
+    const str = "[native code]";
     tmp = str.indexOf("[native code]") > -1;
   }
   return tmp;

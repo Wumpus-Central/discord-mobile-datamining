@@ -1,5 +1,5 @@
 // _runtime/01591_NavigationContent.js
-import closure_0 from "00019_noop.js";
+import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 function NavigationContent(render) {
@@ -22,7 +22,7 @@ export const useComponent = function useComponent(current) {
       const obj = { render: null, children: null };
       obj[0] = current;
       obj[1] = tmp;
-      return closure_1_1(closure_1_2, obj);
+      return <NavigationContent render={null}>{null}</NavigationContent>;
     }
   }).current;
 };

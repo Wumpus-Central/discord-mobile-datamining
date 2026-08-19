@@ -1,6 +1,6 @@
 // _runtime/13933_useReanimatedHeaderHeight.js
 import noopDefault from "13929_noop.js";
-import closure_2 from "00019_noop.js";
+import noop from "00019_noop.js";
 
 
 export default function useReanimatedHeaderHeight() {

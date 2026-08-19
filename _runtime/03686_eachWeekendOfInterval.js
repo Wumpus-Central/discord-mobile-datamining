@@ -47,11 +47,9 @@ export default function eachWeekendOfInterval(arg0) {
     do {
       let sum = num + 1;
       let tmp3 = defaultResult1[num];
-      let tmp4 = isWeekend;
       tmp5 = sum;
       if (isWeekend.default(tmp3)) {
         let arr = items.push(tmp3);
-        let tmp7 = isSunday;
         let sum1 = sum;
         if (isSunday.default(tmp3)) {
           sum1 = sum + 5;

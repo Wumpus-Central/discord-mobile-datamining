@@ -8,16 +8,12 @@ let c3 = 0;
 const Infinity = Infinity;
 let c5 = 0;
 function updateEstimate(arr) {
-  const item = arr.forEach((interactionId) => {
-    if (interactionId.interactionId) {
+  const item = arr.forEach((item, index) => {
+    if (item.interactionId) {
       const _Math = Math;
-      closure_4 = Math.min(closure_4, interactionId.interactionId);
+      closure_4 = Math.min(closure_4, item.interactionId);
       const _Math2 = Math;
-      bound = Math.max(bound, interactionId.interactionId);
-      let num = 0;
-      if (bound) {
-        num = (bound - closure_4) / 7 + 1;
-      }
+      bound = Math.max(bound, item.interactionId);
     }
   });
 }
@@ -33,6 +29,6 @@ arg5.getInteractionCount = () => {
 arg5.initInteractionCountPolyfill = () => {
   if (!tmp) {
     closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
-    const obj = observe;
   }
+  tmp = "interactionCount" in performance || closure_2;
 };

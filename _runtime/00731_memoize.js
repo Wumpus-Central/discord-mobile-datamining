@@ -8,8 +8,8 @@ function memoize(fn, fn2) {
   if (typeof fn === "function") {
     function memoized() {
       const self = this;
-      if (closure_1) {
-        let applyResult = obj(...arguments);
+      if (callback) {
+        let applyResult = callback(...arguments);
       } else {
         applyResult = arguments[0];
       }
@@ -18,15 +18,13 @@ function memoize(fn, fn2) {
         return cache.get(applyResult);
       } else {
         const applyResult1 = callback(...arguments);
-        tmp4.cache = cache.set(applyResult, applyResult1) || cache;
+        memoized.cache = cache.set(applyResult, applyResult1) || cache;
         return applyResult1;
       }
-      obj = closure_1;
-      tmp4 = memoized;
     }
     let Cache = memoized.Cache;
     if (!Cache) {
-      Cache = _MapCache;
+      Cache = MapCache;
     }
     let cache = new Cache();
     memoized.cache = cache;

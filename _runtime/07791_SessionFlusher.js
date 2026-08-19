@@ -1,5 +1,5 @@
 // _runtime/07791_SessionFlusher.js
-import closure_2 from "metro/00041__classCallCheck.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const SessionFlusher = require;
@@ -77,7 +77,8 @@ const items = [
   {
     key: "_incrementSessionStatusCount",
     value: function _incrementSessionStatusCount(status, date) {
-      const setSecondsResult = new Date(date).setSeconds(0, 0);
+      date = new Date(date);
+      const setSecondsResult = date.setSeconds(0, 0);
       const _pendingAggregates = this._pendingAggregates;
       let value = _pendingAggregates.get(setSecondsResult);
       if (!value) {
@@ -99,7 +100,6 @@ const items = [
         value.crashed = (value.crashed || 0) + 1;
         return value.crashed;
       }
-      date = new Date(date);
     }
   }
 ];

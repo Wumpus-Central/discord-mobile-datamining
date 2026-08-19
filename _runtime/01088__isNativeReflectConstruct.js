@@ -1,14 +1,14 @@
 // _runtime/01088__isNativeReflectConstruct.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import addClsInstrumentationHandler from "01033_addClsInstrumentationHandler.js";
-import closure_2 from "00005_asyncGeneratorStep.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
-import closure_5 from "00098__inherits.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import c3 from "metro/00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "00095__getPrototypeOf.js";
+import _inherits from "00098__inherits.js";
 import _wrapNativeSuper from "metro/00158__wrapNativeSuper.js";
-import closure_6 from "metro/00032__slicedToArray.js";
-import closure_7 from "metro/00041__classCallCheck.js";
-import closure_8 from "metro/00042__createClass.js";
+import _slicedToArray from "metro/00032__slicedToArray.js";
+import _classCallCheck from "metro/00041__classCallCheck.js";
+import _createClass from "metro/00042__createClass.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function _isNativeReflectConstruct() {
@@ -128,19 +128,11 @@ function stringifyRule(styleSheet) {
             let tmp = style[num];
             let propertyPriority = style.getPropertyPriority(tmp);
             let propertyValue = style.getPropertyValue(tmp);
-            let tmp4 = num;
-            let tmp5 = str;
             let str3 = "";
             if (propertyPriority) {
               str3 = " !important";
             }
             let _HermesInternal = HermesInternal;
-            let str4 = "";
-            let tmp6 = tmp;
-            let str5 = ":";
-            let tmp7 = propertyValue;
-            let tmp8 = str3;
-            let str6 = ";";
             str = str + "" + tmp + ":" + propertyValue + str3 + ";";
             num = num + 1;
             str2 = str;
@@ -180,7 +172,6 @@ function shouldMaskInput(arg0) {
   }
   if (!tmp) {
     tmp = "INPUT" === tagName && !type && maskInputOptions.text;
-    const tmp3 = "INPUT" === tagName && !type && maskInputOptions.text;
   }
   return Boolean(tmp);
 }
@@ -344,11 +335,9 @@ function absoluteToStylesheet(arg0, arg1) {
             while (iter !== undefined) {
               let tmp8 = nextResult;
               if ("." !== nextResult) {
-                let tmp9 = nextResult;
                 if (".." === tmp8) {
                   let arr = parts.pop();
                 } else {
-                  let tmp10 = nextResult;
                   let arr1 = parts.push(tmp8);
                 }
               }
@@ -390,11 +379,12 @@ function getHref(createElement, str) {
   const attr = value.setAttribute("href", str2);
   return value.href;
 }
-function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
+function transformAttribute(createElement, arg1, closure_0, str, arr, fn, size) {
   let sum3;
   if (str) {
-    if ("src" !== arg2) {
-      if ("xlink:href" === arg2) {
+    str = "src";
+    if ("src" !== closure_0) {
+      if ("xlink:href" === closure_0) {
         if ("#" !== str[0]) {
           let tmp48 = str;
           if (str) {
@@ -404,7 +394,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
               let value = weakMap.get(createElement);
               if (!value) {
                 const element = <a />;
-                const result = obj11.set(createElement, element);
+                const result = weakMap.set(createElement, element);
                 value = element;
               }
               if (!str) {
@@ -418,13 +408,12 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 }
               }
               tmp48 = href5;
-              obj11 = weakMap;
             }
           }
           return tmp48;
         }
       }
-      if ("background" === arg2) {
+      if ("background" === closure_0) {
         let tmp44 = str;
         if (str) {
           let str31 = "";
@@ -433,7 +422,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
             value = weakMap.get(createElement);
             if (!value) {
               const element1 = <a />;
-              const result1 = obj9.set(createElement, element1);
+              const result1 = weakMap.set(createElement, element1);
               value = element1;
             }
             if (!str) {
@@ -447,12 +436,11 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
               }
             }
             tmp44 = href4;
-            obj9 = weakMap;
           }
         }
         return tmp44;
       }
-      if ("srcset" === arg2) {
+      if ("srcset" === closure_0) {
         let joined = str;
         if ("" !== str.trim()) {
           const match = regex2.exec(str.substring(0));
@@ -463,9 +451,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
           let items = [];
           if (num2 < str.length) {
             do {
-              let tmp18 = regex;
               let match1 = regex.exec(str.substring(num2));
-              let tmp20 = num2;
               let sum = num2;
               let str23 = "";
               if (match1) {
@@ -473,56 +459,49 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 sum = num2 + first.length;
                 str23 = first;
               }
-              let tmp22 = str23;
               if ("," === str23.slice(-1)) {
                 let str28 = str23.substring(0, str23.length - 1);
                 let tmp35 = str28;
                 if (str28) {
                   tmp35 = str28;
                   if ("" !== str28.trim()) {
-                    let obj7 = weakMap;
                     let value1 = weakMap.get(createElement);
                     if (!value1) {
                       let element2 = <a />;
-                      let result2 = obj7.set(createElement, element2);
+                      let result2 = weakMap.set(createElement, element2);
                       value1 = element2;
                     }
-                    let str29 = "";
                     if (!str28) {
                       let attr2 = value1.setAttribute("href", ``);
                       let href3 = value1.href;
                     } else {
                       href3 = str28;
                       if (!str28.startsWith("blob:")) {
-                        str29 = str28;
                         href3 = str28;
                       }
                     }
                     tmp35 = href3;
                   }
                 }
-                let arr = items.push(tmp35);
+                arr = items.push(tmp35);
                 let sum2 = sum;
               } else {
                 let tmp23 = str23;
                 if (str23) {
                   tmp23 = str23;
                   if ("" !== str23.trim()) {
-                    obj5 = weakMap;
                     let value2 = weakMap.get(createElement);
                     if (!value2) {
                       let element3 = <a />;
-                      let result3 = obj5.set(createElement, element3);
+                      let result3 = weakMap.set(createElement, element3);
                       value2 = element3;
                     }
-                    let str24 = "";
                     if (!str23) {
                       let attr3 = value2.setAttribute("href", ``);
                       let href2 = value2.href;
                     } else {
                       href2 = str23;
                       if (!str23.startsWith("blob:")) {
-                        str24 = str23;
                         href2 = str23;
                       }
                     }
@@ -533,9 +512,6 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 let flag = false;
                 let str25 = "";
                 let charAtResult = str.charAt(sum1);
-                let tmp29 = sum1;
-                let tmp30 = flag;
-                let tmp31 = str25;
                 while ("" !== charAtResult) {
                   if (flag) {
                     let flag2 = flag;
@@ -561,9 +537,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 let arr1 = items.push(str27.trim());
                 sum2 = sum1;
               }
-              let tmp40 = regex2;
               let match2 = regex2.exec(str.substring(sum2));
-              let tmp42 = sum2;
               sum3 = sum2;
               if (match2) {
                 sum3 = sum2 + match2[0].length;
@@ -574,7 +548,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
           joined = items.join(", ");
         }
         return joined;
-      } else if ("style" === arg2) {
+      } else if ("style" === closure_0) {
         let value3 = weakMap.get(createElement);
         if (!value3) {
           const element4 = <a />;
@@ -629,11 +603,9 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                   while (iter !== undefined) {
                     let tmp8 = nextResult;
                     if ("." !== nextResult) {
-                      let tmp9 = nextResult;
                       if (".." === tmp8) {
                         let arr = parts.pop();
                       } else {
-                        let tmp10 = nextResult;
                         let arr1 = parts.push(tmp8);
                       }
                     }
@@ -665,24 +637,16 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                   const iter = parts[Symbol.iterator]();
                   const str3 = iter.next();
                   while (iter !== undefined) {
-                    let tmp7 = str3;
                     let trimmed = str3.trim();
                     let arr2 = trimmed;
                     if (trimmed) {
-                      let tmp9 = trimmed;
                       let index = arr2.indexOf(":");
                       if (-1 !== index) {
-                        let tmp15 = trimmed;
-                        let tmp16 = index;
                         let str4 = arr2.slice(0, tmp11);
                         if (!size.has(str4.trim())) {
-                          let tmp17 = items;
-                          let tmp18 = trimmed;
                           let arr = items.push(arr2);
                         }
                       } else {
-                        let tmp12 = items;
-                        let tmp13 = trimmed;
                         arr = items.push(arr2);
                       }
                     }
@@ -710,7 +674,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         return tmp16;
       } else {
         if ("object" === arg1) {
-          if ("data" === arg2) {
+          if ("data" === closure_0) {
             let tmp5 = str;
             if (str) {
               let str9 = "";
@@ -719,7 +683,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 let value4 = weakMap.get(createElement);
                 if (!value4) {
                   const element5 = <a />;
-                  const result5 = obj.set(createElement, element5);
+                  const result5 = weakMap.set(createElement, element5);
                   value4 = element5;
                 }
                 if (!str) {
@@ -733,7 +697,6 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                   }
                 }
                 tmp5 = href;
-                obj = weakMap;
               }
             }
             let tmp4 = tmp5;
@@ -742,7 +705,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         }
         tmp4 = str;
         if (typeof fn === "function") {
-          tmp4 = fn(arg2, str, arg4);
+          tmp4 = fn(closure_0, str, arr);
         }
       }
     }
@@ -754,7 +717,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         let value5 = weakMap.get(createElement);
         if (!value5) {
           const element6 = <a />;
-          const result6 = obj14.set(createElement, element6);
+          const result6 = weakMap.set(createElement, element6);
           value5 = element6;
         }
         if (!str) {
@@ -768,7 +731,6 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
           }
         }
         tmp52 = href6;
-        obj14 = weakMap;
       }
     }
     return tmp52;
@@ -786,7 +748,7 @@ function ignoreAttribute(arg0, arg1, arg2) {
   }
   return tmp;
 }
-function distanceToMatch(nodeType) {
+function distanceToMatch(nodeType, fn) {
   let num = arg2;
   if (arg2 === undefined) {
     num = Infinity;
@@ -802,8 +764,8 @@ function distanceToMatch(nodeType) {
       num4 = -1;
       if (num2 <= num) {
         let tmp2 = num2;
-        if (!arg1(nodeType)) {
-          tmp2 = distanceToMatch(nodeType.parentNode, arg1, num, num2 + 1);
+        if (!fn(nodeType)) {
+          tmp2 = distanceToMatch(nodeType.parentNode, fn, num, num2 + 1);
         }
         num4 = tmp2;
       }
@@ -812,18 +774,18 @@ function distanceToMatch(nodeType) {
   }
   return num3;
 }
-function createMatchPredicate(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+function createMatchPredicate(closure_12, closure_14) {
+  closure_0 = closure_12;
+  closure_1 = closure_14;
   return (parentNode) => {
     if (null === parentNode) {
       return false;
     } else {
       try {
         if (c0) {
-          if (typeof tmp === "string") {
+          if (typeof c0 === "string") {
             const _HermesInternal = HermesInternal;
-            if (parentNode.matches("." + tmp)) {
+            if (parentNode.matches("." + c0)) {
               return true;
             }
           } else if ((function elementClassMatchesRegex(classList, test) {
@@ -836,7 +798,7 @@ function createMatchPredicate(arg0, arg1) {
               return true;
             }
             return false;
-          })(parentNode, tmp)) {
+          })(parentNode, c0)) {
             return true;
           }
         }
@@ -851,7 +813,7 @@ function createMatchPredicate(arg0, arg1) {
     }
   };
 }
-function needMaskingText(nodeType) {
+function needMaskingText(nodeType, closure_11, closure_13, closure_12, closure_14, arg5) {
   try {
     let parentElement = nodeType;
     if (nodeType.nodeType !== nodeType.ELEMENT_NODE) {
@@ -867,30 +829,30 @@ function needMaskingText(nodeType) {
         }
       }
       if (arg5) {
-        let tmp9Result = tmp9(obj, tmp11(arg3, arg4));
+        let tmp9Result = distanceToMatch(obj, createMatchPredicate(closure_12, closure_14));
         let tmp9Result2 = tmp9Result;
         if (tmp9Result < 0) {
           return true;
         } else {
           let num7 = Infinity;
-          let tmp11Result = tmp11(arg1, arg2);
+          let tmp11Result = createMatchPredicate(closure_11, closure_13);
           if (tmp9Result2 >= 0) {
             num7 = tmp9Result2;
           }
-          tmp9Result = tmp9(parentElement, tmp11Result, num7);
+          tmp9Result = distanceToMatch(parentElement, tmp11Result, num7);
         }
       } else {
-        const tmp9Result1 = tmp9(obj, tmp11(arg1, arg2));
+        const tmp9Result1 = distanceToMatch(obj, createMatchPredicate(closure_11, closure_13));
         tmp9Result = tmp9Result1;
         if (tmp9Result1 < 0) {
           return false;
         } else {
           let num5 = Infinity;
-          tmp11Result = tmp11(arg3, arg4);
+          tmp11Result = createMatchPredicate(closure_12, closure_14);
           if (tmp9Result >= 0) {
             num5 = tmp9Result;
           }
-          tmp9Result2 = tmp9(obj, tmp11Result, num5);
+          tmp9Result2 = distanceToMatch(obj, tmp11Result, num5);
         }
       }
       if (tmp9Result >= 0) {
@@ -929,10 +891,6 @@ function serializeNode(nodeType, newlyAddedElement) {
   }
   if (mirror.hasNode(doc)) {
     const id = mirror.getId(doc);
-    let tmp4;
-    if (1 !== id) {
-      tmp4 = id;
-    }
   }
   nodeType = nodeType.nodeType;
   if (nodeType.DOCUMENT_NODE === nodeType) {
@@ -1007,7 +965,6 @@ function serializeNode(nodeType, newlyAddedElement) {
             let diff = tmp10 - 1;
             if (+matches.classList.length) {
               while (!blockClass.test(matches.classList[diff])) {
-                let tmp5 = diff;
                 let tmp6 = +diff;
                 diff = tmp6 - 1;
               }
@@ -1038,26 +995,17 @@ function serializeNode(nodeType, newlyAddedElement) {
       for (let num = 0; num < length; num = num + 1) {
         let iter = attributes.attributes[num];
         let name = iter.name;
-        let tmp9 = num;
         if (name) {
-          let tmp10 = callback13;
           name = !callback13(tmp8, iter.name, iter.value);
         }
         if (name) {
-          let tmp11 = callback12;
-          let tmp12 = callback4;
-          let tmp13 = doc;
-          let tmp14 = tmp8;
-          let tmp15 = attributes;
-          let tmp16 = maskAttributeFn;
-          let tmp17 = ignoreCSSAttributes;
           obj[iter.name] = callback12(doc, tmp8, callback4(iter.name), iter.value, attributes, maskAttributeFn, ignoreCSSAttributes);
         }
       }
       if ("link" === tmp8) {
         if (inlineStylesheet) {
           const _Array = Array;
-          const found = Array.from(doc.styleSheets).find((href) => href.href === attributes.href);
+          const found = Array.from(doc.styleSheets).find((item, index) => item.href === attributes.href);
           let tmp21 = null;
           if (found) {
             tmp21 = callback(found);
@@ -1117,26 +1065,12 @@ function serializeNode(nodeType, newlyAddedElement) {
                             let _Math2 = Math;
                             let bound1 = Math.min(50, getContext.height - num4);
                             if (typeof call === "unknown") {
-                              let tmp8 = context;
-                              let tmp9 = num3;
-                              let tmp10 = num4;
-                              let tmp11 = bound;
-                              let tmp12 = bound1;
                               let callResult = tmp5(tmp3, tmp4, bound, bound1);
                             } else {
-                              let tmp17 = tmp5;
-                              let tmp18 = context;
-                              let tmp19 = num3;
-                              let tmp20 = num4;
-                              let tmp21 = bound;
-                              let tmp22 = bound1;
                               callResult = call(context, tmp3, tmp4, bound, bound1);
                             }
-                            let tmp14 = new.target;
-                            let tmp15 = new.target;
                             let uint32Array = new Uint32Array(callResult.data.buffer);
-                            let tmp16 = uint32Array;
-                            if (uint32Array.some((arg0) => 0 !== arg0)) {
+                            if (uint32Array.some((item, index) => 0 !== item)) {
                               break;
                             } else {
                               num4 = num4 + 50;
@@ -1181,18 +1115,18 @@ function serializeNode(nodeType, newlyAddedElement) {
                 str13 = "<unknown-src>";
               }
               const crossOrigin = attributes.crossOrigin;
-              function recordInlineImage() {
+              function recordInlineImage(event) {
                 const removed = attributes2.removeEventListener("load", recordInlineImage);
                 try {
-                  element1.width = obj2.naturalWidth;
-                  element1.height = obj2.naturalHeight;
-                  closure_38.drawImage(obj2, 0, 0);
+                  element1.width = attributes2.naturalWidth;
+                  element1.height = attributes2.naturalHeight;
+                  closure_38.drawImage(attributes2, 0, 0);
                   obj.rr_dataURL = element1.toDataURL(dataURLOptions.type, dataURLOptions.quality);
-                  if ("anonymous" === obj2.crossOrigin) {
+                  if ("anonymous" === attributes2.crossOrigin) {
                     if (crossOrigin) {
                       obj.crossOrigin = tmp15;
                     } else {
-                      obj2.removeAttribute("crossorigin");
+                      attributes2.removeAttribute("crossorigin");
                     }
                   }
                 } catch (tmp11) {
@@ -1266,8 +1200,7 @@ function serializeNode(nodeType, newlyAddedElement) {
             obj[1] = tmp8;
             obj[2] = tmp44;
             obj[3] = [];
-            const tmp52 = callback10(attributes);
-            obj[4] = tmp52;
+            obj[4] = callback10(attributes);
             obj[5] = tmp7;
             obj[6] = tmp6;
             obj[7] = flag;
@@ -1299,6 +1232,7 @@ function serializeNode(nodeType, newlyAddedElement) {
       if (checked) {
         obj.checked = checked;
       }
+      length = attributes.attributes.length;
     })(nodeType, obj2);
   } else if (nodeType.TEXT_NODE === nodeType) {
     obj3 = { doc: null, maskAllText: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, maskTextFn: null, maskInputOptions: null, maskInputFn: null, rootId: null };
@@ -1370,12 +1304,10 @@ function serializeNode(nodeType, newlyAddedElement) {
         }
         if (tmp4) {
           tmp4 = maskInputOptions.textarea || tmp16;
-          const tmp22 = maskInputOptions.textarea || tmp16;
         }
         if (!tmp4) {
           if ("OPTION" === tagName) {
             if (str) {
-              obj = { isMasked: null, element: null, value: null, maskInputFn: null };
               obj = { type: null, tagName: null, maskInputOptions: null };
               obj[1] = tagName;
               obj[2] = maskInputOptions;
@@ -1673,7 +1605,6 @@ function serializeNodeWithId(shadowRoot, doc) {
           if (tmp8.type === obj.Text) {
             if (!tmp8.isStyle) {
               num4 = -2;
-              const str2 = tmp8.textContent;
             }
           }
         }
@@ -1762,12 +1693,10 @@ function serializeNodeWithId(shadowRoot, doc) {
         if (!parentNode) {
           break;
         } else {
-          let tmp26 = isShadowRoot;
           parentNode = isShadowRoot(shadowRoot.parentNode);
           break;
         }
         if (parentNode) {
-          let tmp27 = onSerialize;
           parentNode = onSerialize(shadowRoot.parentNode);
         }
         if (parentNode) {
@@ -1777,14 +1706,13 @@ function serializeNodeWithId(shadowRoot, doc) {
         let tmp28 = obj;
         let needBlock = merged.type !== obj.Element;
         if (!needBlock) {
-          let str5 = "iframe";
           needBlock = "iframe" !== merged.tagName;
         }
         if (!needBlock) {
           needBlock = merged.needBlock;
         }
         if (!needBlock) {
-          let tmp29 = (function onceIframeLoaded(contentWindow, arg1, arg2) {
+          let tmp29 = (function onceIframeLoaded(contentWindow, arg1, iframeLoadTimeout) {
             closure_0 = arg1;
             contentWindow = contentWindow.contentWindow;
             if (contentWindow) {
@@ -1807,8 +1735,8 @@ function serializeNodeWithId(shadowRoot, doc) {
                       callback();
                       c1 = true;
                     }
-                  }, arg2);
-                  const listener1 = contentWindow.addEventListener("load", () => {
+                  }, iframeLoadTimeout);
+                  const listener1 = contentWindow.addEventListener("load", (event) => {
                     closure_1_35(closure_2);
                     c1 = true;
                     callback();
@@ -1819,7 +1747,7 @@ function serializeNodeWithId(shadowRoot, doc) {
               }
             }
           })(shadowRoot, () => {
-            const tmp2 = closure_1_36(closure_0);
+            const tmp2 = getIframeContentDocument(closure_0);
             if (tmp2) {
               if (onIframeLoad) {
                 obj = { doc: null, mirror: null, blockClass: null, blockSelector: null, unblockSelector: null, maskAllText: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, skipChild: false, inlineStylesheet: null, maskInputOptions: null, maskAttributeFn: null, maskTextFn: null, maskInputFn: null, slimDOMOptions: null, dataURLOptions: null, inlineImages: null, recordCanvas: null, preserveWhiteSpace: null, onSerialize: null, onIframeLoad: null, iframeLoadTimeout: null, onStylesheetLoad: null, stylesheetLoadTimeout: null, keepIframeSrcFn: null, ignoreCSSAttributes: null };
@@ -1844,48 +1772,46 @@ function serializeNodeWithId(shadowRoot, doc) {
                 obj[19] = closure_19;
                 obj[20] = c28;
                 obj[21] = onSerialize;
-                obj[22] = tmp3;
+                obj[22] = onIframeLoad;
                 obj[23] = num2;
                 obj[24] = onStylesheetLoad;
                 obj[25] = num;
                 obj[26] = fn;
                 obj[27] = ignoreCSSAttributes;
-                const tmp30 = closure_1_58(tmp2, obj);
+                const tmp30 = serializeNodeWithId(tmp2, obj);
                 if (tmp30) {
-                  tmp3(closure_0, tmp30);
+                  onIframeLoad(closure_0, tmp30);
                 }
               }
             }
           }, num2);
         }
         if (merged.type === tmp28.Element) {
-          let str6 = "img";
           if ("img" === merged.tagName) {
             if (!shadowRoot.complete) {
               if (merged.needBlock) {
                 closure_30 = shadowRoot;
                 function updateImageDimensions(href) {
                   if (shadowRoot.isConnected) {
-                    if (!obj.complete) {
+                    if (!shadowRoot.complete) {
                       if (onBlockedImageLoad) {
                         try {
-                          const boundingClientRect = obj.getBoundingClientRect();
+                          const boundingClientRect = shadowRoot.getBoundingClientRect();
                           let tmp4 = boundingClientRect.width > 0;
                           if (tmp4) {
                             tmp4 = tmp3.height > 0;
                           }
                           if (tmp4) {
-                            tmp(obj, merged, boundingClientRect);
+                            tmp(shadowRoot, merged, boundingClientRect);
                           }
                         } catch (err) {
                         }
                       }
                     }
                   }
-                  const removed = obj.removeEventListener("load", updateImageDimensions);
+                  const removed = shadowRoot.removeEventListener("load", updateImageDimensions);
                 }
                 if (shadowRoot.isConnected) {
-                  let str7 = "load";
                   let listener = shadowRoot.addEventListener("load", updateImageDimensions);
                 }
               }
@@ -1894,21 +1820,16 @@ function serializeNodeWithId(shadowRoot, doc) {
         }
         let tmp31 = merged.type === tmp28.Element;
         if (tmp31) {
-          let str8 = "link";
           tmp31 = "link" === merged.tagName;
         }
         if (tmp31) {
           tmp31 = typeof merged.attributes.rel === "string";
         }
         if (tmp31) {
-          let str9 = "stylesheet";
           let tmp32 = "stylesheet" === merged.attributes.rel;
           if (!tmp32) {
-            let str10 = "preload";
             let tmp33 = "preload" === merged.attributes.rel && typeof merged.attributes.href === "string";
             if (tmp33) {
-              let tmp34 = updateImageDimensions;
-              let str11 = "css";
               tmp33 = "css" === updateImageDimensions(merged.attributes.href);
             }
             tmp32 = tmp33;
@@ -1916,7 +1837,7 @@ function serializeNodeWithId(shadowRoot, doc) {
           tmp31 = tmp32;
         }
         if (tmp31) {
-          let tmp35 = (function onceStylesheetLoaded(sheet, arg1, arg2) {
+          let tmp35 = (function onceStylesheetLoaded(sheet, arg1, stylesheetLoadTimeout) {
             closure_0 = arg1;
             c1 = false;
             try {
@@ -1926,8 +1847,8 @@ function serializeNodeWithId(shadowRoot, doc) {
                     callback();
                     c1 = true;
                   }
-                }, arg2);
-                const listener = sheet.addEventListener("load", () => {
+                }, stylesheetLoadTimeout);
+                const listener = sheet.addEventListener("load", (event) => {
                   closure_1_35(closure_2);
                   c1 = true;
                   callback();
@@ -1962,20 +1883,18 @@ function serializeNodeWithId(shadowRoot, doc) {
               obj[21] = onSerialize;
               obj[22] = onIframeLoad;
               obj[23] = num2;
-              obj[24] = tmp;
+              obj[24] = onStylesheetLoad;
               obj[25] = num;
               obj[26] = fn;
               obj[27] = ignoreCSSAttributes;
-              const tmp30 = closure_1_58(closure_0, obj);
+              const tmp30 = serializeNodeWithId(closure_0, obj);
               if (tmp30) {
-                tmp(tmp3, tmp30);
+                onStylesheetLoad(closure_0, tmp30);
               }
-              tmp3 = closure_0;
             }
           }, num);
         }
         if (merged.type === tmp28.Element) {
-          let str12 = "needBlock";
           delete tmp[tmp2];
         }
         return merged;
@@ -1998,13 +1917,13 @@ function on(arg0, arg1) {
   const listener = _document.addEventListener(arg0, arg1, obj);
   return () => document.removeEventListener(selectionchange, fn, obj);
 }
-function patch(arg0, arg1, arg2) {
+function patch(arg0, arg1, fn) {
   closure_0 = arg0;
   closure_1 = arg1;
   try {
     if (arg1 in arg0) {
       closure_2 = tmp2;
-      const tmp4 = arg2(arg0[arg1]);
+      const tmp4 = fn(arg0[arg1]);
       if (typeof tmp4 === "function") {
         let prototype = tmp5.prototype;
         if (!prototype) {
@@ -2138,9 +2057,9 @@ function isBlocked(nodeType) {
         } else {
           try {
             if (c0) {
-              if (typeof tmp === "string") {
+              if (typeof c0 === "string") {
                 const _HermesInternal = HermesInternal;
-                if (parentNode.matches("." + tmp)) {
+                if (parentNode.matches("." + c0)) {
                   return true;
                 }
               } else if ((function elementClassMatchesRegex(classList, test) {
@@ -2153,7 +2072,7 @@ function isBlocked(nodeType) {
                   return true;
                 }
                 return false;
-              })(parentNode, tmp)) {
+              })(parentNode, c0)) {
                 return true;
               }
             }
@@ -2212,9 +2131,9 @@ function isBlocked(nodeType) {
                   } else {
                     try {
                       if (c0) {
-                        if (typeof tmp === "string") {
+                        if (typeof c0 === "string") {
                           const _HermesInternal = HermesInternal;
-                          if (parentNode.matches("." + tmp)) {
+                          if (parentNode.matches("." + c0)) {
                             return true;
                           }
                         } else if ((function elementClassMatchesRegex(classList, test) {
@@ -2227,7 +2146,7 @@ function isBlocked(nodeType) {
                             return true;
                           }
                           return false;
-                        })(parentNode, tmp)) {
+                        })(parentNode, c0)) {
                           return true;
                         }
                       }
@@ -2268,7 +2187,6 @@ function isBlocked(nodeType) {
             num12 = num13;
           }
           tmp10 = num2 > -1 && num12 < 0 || num2 < num12;
-          const tmp14 = num2 > -1 && num12 < 0 || num2 < num12;
         }
         return tmp10;
       } else {
@@ -2423,8 +2341,7 @@ function isParentRemoved(arr, parentNode, getId) {
     if (parentNode) {
       while (true) {
         let id = getId.getId(parentNode);
-        let tmp3 = parentNode;
-        if (arr.some((id) => id.id === closure_0)) {
+        if (arr.some((item, index) => item.id === closure_0)) {
           obj = { v: true };
           let parentNode2 = parentNode;
         } else {
@@ -2531,15 +2448,15 @@ function initMutationObserver(doc, doc) {
   fn = (arg0) => {
     let onMutation = fn.onMutation;
     if (onMutation) {
-      onMutation = false === obj.onMutation(arg0);
+      onMutation = false === fn.onMutation(arg0);
     }
     if (!onMutation) {
-      const processMutations = obj.processMutations;
-      processMutations.bind(obj)(arg0);
+      const processMutations = fn.processMutations;
+      processMutations.bind(fn)(arg0);
     }
   };
   if (closure_79) {
-    fn = (Pause, arg1) => {
+    fn = (event, arg1) => {
       items = [...arguments];
       try {
         const items1 = [];
@@ -2562,7 +2479,7 @@ function initMutationObserver(doc, doc) {
   return __rrMutationObserver;
 }
 function initMouseInteractionObserver(doc) {
-  ({ mouseInteractionCb: fn, doc: dependencyMap, mirror: closure_2, blockClass: closure_3, blockSelector: closure_4, unblockSelector: closure_5, sampling } = doc);
+  ({ mouseInteractionCb: fn, doc: dependencyMap, mirror: asyncGeneratorStep, blockClass: closure_3, blockSelector: _getPrototypeOf, unblockSelector: _inherits, sampling } = doc);
   let mouseInteraction;
   closure_7 = undefined;
   c8 = undefined;
@@ -2579,52 +2496,51 @@ function initMouseInteractionObserver(doc) {
       c8 = null;
       const _Object = Object;
       const keys = Object.keys(obj3);
-      const found = keys.filter((str) => {
-        let isNaNResult = Number.isNaN(Number(str));
+      const found = keys.filter((item, index) => {
+        let isNaNResult = Number.isNaN(Number(item));
         if (isNaNResult) {
-          isNaNResult = !str.endsWith("_Departed");
+          isNaNResult = !item.endsWith("_Departed");
         }
         if (isNaNResult) {
-          isNaNResult = false !== mouseInteraction[str];
+          isNaNResult = false !== mouseInteraction[item];
         }
         return isNaNResult;
       });
-      let item = found.forEach((str) => {
-        str = str.toLowerCase();
+      let item = found.forEach((item, index) => {
+        const str = item.toLowerCase();
         let replaced = str;
-        replaced = str;
         if (window.PointerEvent) {
-          if (closure_1_75.MouseDown !== closure_1_75[str]) {
-            if (tmp2.MouseUp !== tmp3) {
-              if (tmp2.TouchStart !== tmp3) {
+          if (obj3.MouseDown !== obj3[item]) {
+            if (obj3.MouseUp !== tmp3) {
+              if (obj3.TouchStart !== tmp3) {
                 replaced = str;
               }
             }
           }
           replaced = str.replace("mouse", "pointer");
         }
-        fn = (pointerType) => {
-          const tmp = closure_2_88(pointerType);
-          if (!closure_2_65(tmp, obj, closure_1_4, closure_1_5, true)) {
-            if ("pointerType" in pointerType) {
-              pointerType = pointerType.pointerType;
+        fn = (event) => {
+          const tmp = getEventTarget(event);
+          if (!isBlocked(tmp, obj, closure_1_4, closure_1_5, true)) {
+            if ("pointerType" in event) {
+              const pointerType = event.pointerType;
               if ("mouse" === pointerType) {
-                let Mouse = closure_2_76.Mouse;
+                let Mouse = obj4.Mouse;
               } else if ("touch" === pointerType) {
-                Mouse = closure_2_76.Touch;
+                Mouse = obj4.Touch;
               } else {
                 Mouse = null;
                 if ("pen" === pointerType) {
-                  Mouse = closure_2_76.Pen;
+                  Mouse = obj4.Pen;
                 }
               }
-              if (Mouse === closure_2_76.Touch) {
+              if (Mouse === obj4.Touch) {
                 let str2 = "TouchStart";
                 let Touch = Mouse;
-                if (closure_2_75[tmp2] !== closure_2_75.MouseDown) {
+                if (obj3[tmp2] !== obj3.MouseDown) {
                   str2 = tmp2;
                   Touch = Mouse;
-                  if (tmp11[tmp2] === tmp11.MouseUp) {
+                  if (obj3[tmp2] === obj3.MouseUp) {
                     str2 = "TouchEnd";
                     Touch = Mouse;
                   }
@@ -2638,8 +2554,8 @@ function initMouseInteractionObserver(doc) {
               const _Boolean = Boolean;
               str2 = tmp2;
               Touch = null;
-              if (Boolean(pointerType.changedTouches)) {
-                Touch = closure_2_76.Touch;
+              if (Boolean(event.changedTouches)) {
+                Touch = obj4.Touch;
                 str2 = tmp2;
               }
             }
@@ -2647,12 +2563,12 @@ function initMouseInteractionObserver(doc) {
               c8 = Touch;
               let startsWithResult = str2.startsWith("Touch");
               if (startsWithResult) {
-                startsWithResult = Touch === closure_2_76.Touch;
+                startsWithResult = Touch === obj4.Touch;
               }
               if (!startsWithResult) {
                 let startsWithResult1 = str2.startsWith("Mouse");
                 if (startsWithResult1) {
-                  startsWithResult1 = Touch === closure_2_76.Mouse;
+                  startsWithResult1 = Touch === obj4.Mouse;
                 }
                 startsWithResult = startsWithResult1;
               }
@@ -2662,25 +2578,25 @@ function initMouseInteractionObserver(doc) {
               }
             } else {
               tmp14 = Touch;
-              if (closure_2_75[tmp2] === closure_2_75.Click) {
+              if (obj3[tmp2] === obj3.Click) {
                 tmp14 = c8;
                 c8 = null;
               }
             }
             const _Boolean2 = Boolean;
-            let first = pointerType;
-            if (Boolean(pointerType.changedTouches)) {
-              first = pointerType.changedTouches[0];
+            let first = event;
+            if (Boolean(event.changedTouches)) {
+              first = event.changedTouches[0];
             }
             if (first) {
               fn = replaced;
               const id = _document.getId(tmp);
               ({ clientX, clientY } = first);
-              if (typeof closure_2_86 !== "function") {
+              if (typeof callbackWrapper !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               if (closure_2_79) {
-                fn = (Pause, arg1) => {
+                fn = (event, arg1) => {
                   items = [...arguments];
                   try {
                     const items1 = [];
@@ -2699,7 +2615,7 @@ function initMouseInteractionObserver(doc) {
                 };
               }
               obj = { type: null, id: null, x: null, y: null };
-              obj[0] = closure_2_75[str2];
+              obj[0] = obj3[str2];
               obj[1] = id;
               obj[2] = clientX;
               obj[3] = clientY;
@@ -2714,23 +2630,21 @@ function initMouseInteractionObserver(doc) {
             }
           }
         };
-        let _document = fn;
-        _document = undefined;
+        let _document;
         if (fn === undefined) {
           _document = document;
         }
-        obj = { capture: true, passive: true };
-        const listener = _document.addEventListener(replaced, fn, obj);
+        const listener = _document.addEventListener(replaced, fn, { capture: true, passive: true });
         arr = arr.push(() => document.removeEventListener(selectionchange, fn, obj));
       });
       if (typeof callbackWrapper !== "function") {
         HermesBuiltin.throwTypeError();
       }
       fn = () => {
-        const item = arr.forEach((arg0) => arg0());
+        const item = arr.forEach((item, index) => item());
       };
       if (closure_79) {
-        fn = (Pause, arg1) => {
+        fn = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -2756,22 +2670,22 @@ function initMouseInteractionObserver(doc) {
 function initScrollObserver(doc) {
   ({ scrollCb: scroll, doc } = doc);
   let fn2 = doc;
-  ({ mirror: doc, blockClass: obj, blockSelector: c4, unblockSelector: closure_5, sampling } = doc);
+  ({ mirror: doc, blockClass: obj, blockSelector: c4, unblockSelector: _inherits, sampling } = doc);
   if (typeof callbackWrapper !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let fn = (arg0) => {
-    const tmp = closure_1_88(arg0);
+    const tmp = getEventTarget(arg0);
     if (tmp) {
-      if (!closure_1_65(tmp, obj, c4, closure_5, true)) {
+      if (!isBlocked(tmp, obj, c4, closure_5, true)) {
         const id = doc.getId(tmp);
         if (tmp === fn2) {
-          if (tmp9.defaultView) {
+          if (fn2.defaultView) {
             obj = { id: null, x: null, y: null };
             obj[0] = id;
-            ({ left: obj2[1], top: obj2[2] } = closure_1_63(tmp9.defaultView));
+            ({ left: obj2[1], top: obj2[2] } = getWindowScroll(fn2.defaultView));
             scroll(obj);
-            const tmp13 = closure_1_63(tmp9.defaultView);
+            const tmp13 = getWindowScroll(fn2.defaultView);
           }
         }
         obj = { id: null, x: null, y: null };
@@ -2783,7 +2697,7 @@ function initScrollObserver(doc) {
   };
   scroll = fn;
   if (closure_79) {
-    fn = (Pause, arg1) => {
+    fn = (event, arg1) => {
       items = [...arguments];
       try {
         const items1 = [];
@@ -2830,7 +2744,6 @@ function initScrollObserver(doc) {
         }
         if (!tmp5) {
           c3 = closure_1_72(() => {
-            num = 0;
             if (false !== closure_1_2.leading) {
               const _Date = Date;
               num = Date.now();
@@ -2853,7 +2766,7 @@ function initScrollObserver(doc) {
   };
   scroll = fn2;
   if (closure_79) {
-    fn2 = (Pause, arg1) => {
+    fn2 = (event, arg1) => {
       items = [...arguments];
       try {
         const items1 = [];
@@ -2881,16 +2794,13 @@ function initScrollObserver(doc) {
 }
 function initInputObserver(sampling) {
   ({ inputCb: fn, doc } = sampling);
-  ({ mirror: closure_2, blockClass: closure_3, blockSelector: closure_4, unblockSelector: closure_5, ignoreClass: closure_6, ignoreSelector: closure_7, maskInputOptions: closure_8, maskInputFn: _isNativeReflectConstruct, userTriggeredOnInput: sentryReplaySession, maskTextClass: c11, unmaskTextClass: c12, maskTextSelector: c13, unmaskTextSelector: c14 } = sampling);
-  let mapped;
-  let defaultView;
+  ({ mirror: asyncGeneratorStep, blockClass: closure_3, blockSelector: _getPrototypeOf, unblockSelector: _inherits, ignoreClass: _slicedToArray, ignoreSelector: _classCallCheck, maskInputOptions: _createClass, maskInputFn: _isNativeReflectConstruct, userTriggeredOnInput: sentryReplaySession, maskTextClass: c11, unmaskTextClass: c12, maskTextSelector: c13, unmaskTextSelector: c14 } = sampling);
   function eventHandler(isTrusted) {
-    const tmp = closure_1_88(isTrusted);
+    const tmp = getEventTarget(isTrusted);
     fn = tmp;
     let formatted = tmp;
     if (tmp) {
       formatted = tmp.tagName.toUpperCase();
-      const str = tmp.tagName;
     }
     let iter = tmp;
     if ("OPTION" === formatted) {
@@ -2901,7 +2811,7 @@ function initInputObserver(sampling) {
     if (iter) {
       if (formatted) {
         if (closure_1_92.indexOf(formatted) >= 0) {
-          if (!closure_1_65(iter, checked, closure_4, closure_5, true)) {
+          if (!isBlocked(iter, checked, closure_4, closure_5, true)) {
             const classList = iter.classList;
             if (!classList.contains(closure_6)) {
               if (!closure_7) {
@@ -2920,11 +2830,11 @@ function initInputObserver(sampling) {
                     if (tmp3) {
                       str11 = "SELECT";
                     }
-                    let tmp10 = tmp8[str11.toLowerCase(str11)];
+                    let tmp10 = text[str11.toLowerCase(str11)];
                     if (!tmp10) {
                       let tmp11 = str5;
                       if (str5) {
-                        tmp11 = tmp8[str5];
+                        tmp11 = text[str5];
                       }
                       tmp10 = tmp11;
                     }
@@ -2932,10 +2842,9 @@ function initInputObserver(sampling) {
                       tmp10 = "password" === str5;
                     }
                     if (!tmp10) {
-                      tmp10 = "INPUT" === str11 && !str5 && tmp8.text;
-                      const tmp12 = "INPUT" === str11 && !str5 && tmp8.text;
+                      tmp10 = "INPUT" === str11 && !str5 && text.text;
                     }
-                    const tmp19 = closure_1_56(iter, closure_11, closure_13, closure_12, closure_14, Boolean(tmp10));
+                    const tmp19 = needMaskingText(iter, closure_11, closure_13, closure_12, closure_14, Boolean(tmp10));
                     closure_4 = tmp19;
                     let tmp20 = "radio" !== str5;
                     if (tmp20) {
@@ -2952,8 +2861,8 @@ function initInputObserver(sampling) {
                     let repeatResult = str10;
                     if (tmp19) {
                       let tmp21Result = str10;
-                      if (tmp21) {
-                        tmp21Result = tmp21(str10, iter);
+                      if (callback) {
+                        tmp21Result = callback(str10, iter);
                       }
                       let repeat = "*".repeat;
                       repeatResult = "*".repeat(tmp21Result.length);
@@ -2968,14 +2877,14 @@ function initInputObserver(sampling) {
                       obj[0] = repeatResult;
                       obj[1] = flag2;
                     }
-                    let value = closure_1_93.get(iter);
+                    let value = weakMap1.get(iter);
                     if (value) {
                       const name = iter.name;
                       if (tmp34) {
                         const _HermesInternal = HermesInternal;
                         const elements = formatted.querySelectorAll("input[type=\"radio\"][name=\"" + name + "\"]");
-                        const item = elements.forEach((getAttribute) => {
-                          if (getAttribute !== fn) {
+                        const item = elements.forEach((item, index) => {
+                          if (item !== fn) {
                             if ("INPUT" === formatted) {
                               if ("radio" !== tmp18) {
                                 if (!str4) {
@@ -2984,8 +2893,8 @@ function initInputObserver(sampling) {
                                 let repeatResult = str4;
                                 if (tmp16) {
                                   let tmpResult = str4;
-                                  if (tmp) {
-                                    tmpResult = tmp(str4, getAttribute);
+                                  if (closure_1_9) {
+                                    tmpResult = closure_1_9(str4, item);
                                   }
                                   const repeat = "*".repeat;
                                   repeatResult = "*".repeat(tmpResult.length);
@@ -2999,14 +2908,14 @@ function initInputObserver(sampling) {
                                   obj[0] = repeatResult;
                                   obj[1] = !checked;
                                 }
-                                const value = closure_1_93.get(getAttribute);
-                                const result = closure_1_93.set(getAttribute, obj);
-                                const id = str5.getId(getAttribute);
+                                const value = closure_1_93.get(item);
+                                const result = closure_1_93.set(item, obj);
+                                const id = str5.getId(item);
                                 if (typeof closure_1_86 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 if (closure_1_79) {
-                                  fn = (Pause, arg1) => {
+                                  fn = (event, arg1) => {
                                     items = [...arguments];
                                     try {
                                       const items1 = [];
@@ -3028,23 +2937,23 @@ function initInputObserver(sampling) {
                                 const merged = Object.assign(obj);
                                 obj.id = id;
                                 fn(obj);
-                                obj3 = closure_1_93;
                               }
-                              str4 = getAttribute.getAttribute("value") || "";
+                              str4 = item.getAttribute("value") || "";
                             }
-                            str4 = getAttribute.value;
+                            str4 = item.value;
+                            tmp18 = str5;
                           }
                         });
                       }
                       tmp34 = "radio" === str5 && name && flag2;
                     }
-                    let result = closure_1_93.set(iter, obj);
+                    let result = weakMap1.set(iter, obj);
                     let id = str5.getId(iter);
-                    if (typeof closure_1_86 !== "function") {
+                    if (typeof callbackWrapper !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     if (closure_1_79) {
-                      fn = (Pause, arg1) => {
+                      fn = (event, arg1) => {
                         items = [...arguments];
                         try {
                           const items1 = [];
@@ -3066,7 +2975,6 @@ function initInputObserver(sampling) {
                     let merged = Object.assign(obj);
                     obj.id = id;
                     fn(obj);
-                    obj3 = closure_1_93;
                   }
                   str10 = iter.getAttribute("value") || "";
                 }
@@ -3078,14 +2986,14 @@ function initInputObserver(sampling) {
       }
     }
   }
-  mapped = "last" === sampling.sampling.input ? ["change"] : ["input", "change"].map((arg0) => {
+  const mapped = "last" === sampling.sampling.input ? ["change"] : ["input", "change"].map((item, index) => {
     fn = eventHandler;
-    if (typeof closure_1_86 !== "function") {
+    if (typeof callbackWrapper !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = fn;
     if (closure_1_79) {
-      fn = (Pause, arg1) => {
+      fn = (event, arg1) => {
         items = [...arguments];
         try {
           const items1 = [];
@@ -3104,15 +3012,15 @@ function initInputObserver(sampling) {
       };
     }
     let _document = fn;
-    closure_0 = arg0;
+    closure_0 = item;
     if (fn === undefined) {
       _document = document;
     }
     obj = { capture: true, passive: true };
-    const listener = _document.addEventListener(arg0, fn, obj);
+    const listener = _document.addEventListener(item, fn, obj);
     return () => document.removeEventListener(selectionchange, fn, obj);
   });
-  defaultView = doc.defaultView;
+  const defaultView = doc.defaultView;
   if (defaultView) {
     let _Object = defaultView.Object;
     let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(defaultView.HTMLInputElement.prototype, "value");
@@ -3135,8 +3043,8 @@ function initInputObserver(sampling) {
     if (set) {
       const push = mapped.push;
       const items7 = [];
-      HermesBuiltin.arraySpread(items1.map((arg0) => {
-        [tmp, tmp2] = arg0;
+      HermesBuiltin.arraySpread(items1.map((item, index) => {
+        [tmp, tmp2] = item;
         obj = {
           set() {
             fn = closure_15;
@@ -3144,7 +3052,7 @@ function initInputObserver(sampling) {
               HermesBuiltin.throwTypeError();
             }
             if (closure_1_79) {
-              fn = (Pause, arg1) => {
+              fn = (event, arg1) => {
                 items = [...arguments];
                 try {
                   const items1 = [];
@@ -3170,26 +3078,24 @@ function initInputObserver(sampling) {
         if (defaultView === undefined) {
           _window = window;
         }
-        let ownPropertyDescriptor;
         let _Object = _window.Object;
-        ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
+        let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
         let _Object2 = _window.Object;
         obj = {
           set(arg0) {
-            let self = this;
-            self = this;
+            const self = this;
             closure_0 = arg0;
             closure_1_72(() => {
               const call = set.call;
               if (typeof call === "unknown") {
-                const result = set(tmp2);
+                const result = set(closure_0);
               } else {
-                call(self, tmp2);
+                call(self, closure_0);
               }
             }, 0);
             let set = closure_3;
             if (closure_3) {
-              set = tmp2.set;
+              set = closure_3.set;
             }
             if (set) {
               let call = set2.call;
@@ -3209,7 +3115,6 @@ function initInputObserver(sampling) {
           }
           closure_0 = tmp;
           closure_1 = tmp2;
-          ownPropertyDescriptor = undefined;
           const _Object = window.Object;
           ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
           const _Object2 = window.Object;
@@ -3221,7 +3126,6 @@ function initInputObserver(sampling) {
             }
             closure_0 = tmp;
             closure_1 = tmp2;
-            ownPropertyDescriptor = undefined;
             const _Object = window.Object;
             ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
             const _Object2 = window.Object;
@@ -3233,7 +3137,6 @@ function initInputObserver(sampling) {
               }
               closure_0 = tmp;
               closure_1 = tmp2;
-              ownPropertyDescriptor = undefined;
               const _Object = window.Object;
               ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
               const _Object2 = window.Object;
@@ -3249,10 +3152,10 @@ function initInputObserver(sampling) {
       HermesBuiltin.throwTypeError();
     }
     fn = () => {
-      const item = mapped.forEach((arg0) => arg0());
+      const item = mapped.forEach((item, index) => item());
     };
     if (closure_79) {
-      fn = (Pause, arg1) => {
+      fn = (event, arg1) => {
         items = [...arguments];
         try {
           const items1 = [];
@@ -3273,10 +3176,9 @@ function initInputObserver(sampling) {
     return fn;
   } else {
     return () => {
-      const item = mapped.forEach((arg0) => arg0());
+      const item = mapped.forEach((item, index) => item());
     };
   }
-  const arr = "last" === sampling.sampling.input ? ["change"] : ["input", "change"];
 }
 function getNestedCSSRulePositions(parentRule) {
   const items = [];
@@ -3358,9 +3260,9 @@ function initAdoptedStyleSheetObserver(doc, doc) {
           obj[3] = function set(adoptedStyleSheets) {
             if (ownPropertyDescriptor.set == null) {
               if (null !== id) {
-                if (-1 !== tmp2) {
+                if (-1 !== id) {
                   try {
-                    fn2.adoptStyleSheets(adoptedStyleSheets, tmp2);
+                    fn2.adoptStyleSheets(adoptedStyleSheets, id);
                   } catch (err) {
                   }
                 }
@@ -3379,7 +3281,7 @@ function initAdoptedStyleSheetObserver(doc, doc) {
             Object.defineProperty(closure_1, "adoptedStyleSheets", { configurable: ownPropertyDescriptor.configurable, enumerable: ownPropertyDescriptor.enumerable, get: ownPropertyDescriptor.get, set: ownPropertyDescriptor.set });
           };
           if (closure_79) {
-            fn2 = (Pause, arg1) => {
+            fn2 = (event, arg1) => {
               items = [...arguments];
               try {
                 const items1 = [];
@@ -3438,15 +3340,15 @@ function initObservers(doc) {
         }
         let fn = (arg0) => {
           const callback = Date.now() - c2;
-          callback(obj.map((timeOffset) => {
-            timeOffset.timeOffset = timeOffset.timeOffset - closure_0;
-            return timeOffset;
+          callback(obj.map((item, index) => {
+            item.timeOffset = item.timeOffset - closure_0;
+            return item;
           }), arg0);
           c2 = null;
         };
         fn4 = fn;
         if (closure_79) {
-          fn = (Pause, arg1) => {
+          fn = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -3468,7 +3370,6 @@ function initObservers(doc) {
         fn3 = num;
         doc = {};
         obj = null;
-        c4 = 0;
         c4 = function() {
           items = [...arguments];
           let self;
@@ -3490,7 +3391,6 @@ function initObservers(doc) {
               }
               if (!tmp5) {
                 c3 = closure_1_72(() => {
-                  num = 0;
                   if (false !== closure_1_2.leading) {
                     const _Date = Date;
                     num = Date.now();
@@ -3531,11 +3431,12 @@ function initObservers(doc) {
             }
             tmp5(Drag);
           }
-          Drag = changedTouches instanceof globalThis.MouseEvent ? tmp6.MouseMove : tmp6.TouchMove;
+          Drag = changedTouches instanceof globalThis.MouseEvent ? closure_1_74.MouseMove : closure_1_74.TouchMove;
+          const tmp = closure_1_88(changedTouches);
         };
         fn4 = fn2;
         if (closure_79) {
-          fn2 = (Pause, arg1) => {
+          fn2 = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -3582,7 +3483,6 @@ function initObservers(doc) {
               }
               if (!tmp5) {
                 c3 = closure_1_72(() => {
-                  num = 0;
                   if (false !== closure_1_2.leading) {
                     const _Date = Date;
                     num = Date.now();
@@ -3605,7 +3505,7 @@ function initObservers(doc) {
         };
         fn4 = fn3;
         if (closure_79) {
-          fn3 = (Pause, arg1) => {
+          fn3 = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -3628,7 +3528,6 @@ function initObservers(doc) {
         if (doc === undefined) {
           _document = document;
         }
-        doc = _document;
         obj = { capture: true, passive: true };
         const listener = _document.addEventListener("mousemove", fn3, obj);
         items = [() => document.removeEventListener(selectionchange, fn, obj), , ];
@@ -3638,7 +3537,6 @@ function initObservers(doc) {
         if (doc === undefined) {
           _document2 = document;
         }
-        doc = _document2;
         obj = { capture: true, passive: true };
         const listener1 = _document2.addEventListener("touchmove", fn3, obj);
         items[1] = () => document.removeEventListener(selectionchange, fn, obj);
@@ -3654,10 +3552,10 @@ function initObservers(doc) {
           HermesBuiltin.throwTypeError();
         }
         fn4 = () => {
-          const item = items.forEach((arg0) => arg0());
+          const item = items.forEach((item, index) => item());
         };
         if (closure_79) {
-          fn4 = (Pause, arg1) => {
+          fn4 = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -3684,9 +3582,8 @@ function initObservers(doc) {
     obj[0] = defaultView;
     closure_4 = (function initViewportResizeObserver(viewportResizeCb, win) {
       let resize = viewportResizeCb.viewportResizeCb;
-      let _document = win.win;
       let fn2 = -1;
-      _document = -1;
+      let _document = -1;
       if (typeof closure_86 !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -3742,7 +3639,7 @@ function initObservers(doc) {
       };
       resize = fn;
       if (closure_79) {
-        fn = (Pause, arg1) => {
+        fn = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -3789,7 +3686,6 @@ function initObservers(doc) {
             }
             if (!tmp5) {
               c3 = closure_1_72(() => {
-                num = 0;
                 if (false !== closure_1_2.leading) {
                   const _Date = Date;
                   num = Date.now();
@@ -3812,7 +3708,7 @@ function initObservers(doc) {
       };
       resize = fn2;
       if (closure_79) {
-        fn2 = (Pause, arg1) => {
+        fn2 = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -3867,7 +3763,7 @@ function initObservers(doc) {
           }
         };
         if (closure_1_79) {
-          fn = (Pause, arg1) => {
+          fn = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -3910,7 +3806,6 @@ function initObservers(doc) {
               }
               if (!tmp5) {
                 c3 = closure_1_72(() => {
-                  num = 0;
                   if (false !== closure_1_2.leading) {
                     const _Date = Date;
                     num = Date.now();
@@ -3934,7 +3829,7 @@ function initObservers(doc) {
       };
       fn2 = fn;
       if (closure_79) {
-        fn = (Pause, arg1) => {
+        fn = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -3960,7 +3855,6 @@ function initObservers(doc) {
       if (doc === undefined) {
         _document = document;
       }
-      doc = _document;
       obj = { capture: true, passive: true };
       obj2 = obj;
       const listener = _document.addEventListener("play", fnResult, obj);
@@ -3973,7 +3867,6 @@ function initObservers(doc) {
       if (doc === undefined) {
         _document2 = document;
       }
-      doc = _document2;
       obj = { capture: true, passive: true };
       obj2 = obj;
       const listener1 = _document2.addEventListener("pause", fnResult1, obj);
@@ -3986,7 +3879,6 @@ function initObservers(doc) {
       if (doc === undefined) {
         _document3 = document;
       }
-      doc = _document3;
       obj = { capture: true, passive: true };
       obj2 = obj;
       const listener2 = _document3.addEventListener("seeked", fnResult2, obj);
@@ -3999,12 +3891,11 @@ function initObservers(doc) {
       if (doc === undefined) {
         _document4 = document;
       }
-      doc = _document4;
       obj1 = { capture: true, passive: true };
       obj2 = obj1;
       const listener3 = _document4.addEventListener("volumechange", fnResult3, obj1);
       items[3] = () => document.removeEventListener(selectionchange, fn, obj);
-      fnResult4 = fn(tmp2.RateChange);
+      fnResult4 = fn(Play.RateChange);
       doc = undefined;
       fn2 = "ratechange";
       if (doc === undefined) {
@@ -4017,10 +3908,10 @@ function initObservers(doc) {
         HermesBuiltin.throwTypeError();
       }
       fn2 = () => {
-        const item = items.forEach((arg0) => arg0());
+        const item = items.forEach((item, index) => item());
       };
       if (closure_79) {
-        fn2 = (Pause, arg1) => {
+        fn2 = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -4112,7 +4003,7 @@ function initObservers(doc) {
             };
             fn5 = fn;
             if (closure_79) {
-              fn = (Pause, arg1) => {
+              fn = (event, arg1) => {
                 items = [...arguments];
                 try {
                   const items1 = [];
@@ -4178,7 +4069,7 @@ function initObservers(doc) {
             };
             fn5 = fn2;
             if (closure_79) {
-              fn2 = (Pause, arg1) => {
+              fn2 = (event, arg1) => {
                 items = [...arguments];
                 try {
                   const items1 = [];
@@ -4202,7 +4093,7 @@ function initObservers(doc) {
             win.CSSStyleSheet.prototype.deleteRule = proxy1;
             if (win.CSSStyleSheet.prototype.replace) {
               replace = win.CSSStyleSheet.prototype.replace;
-              if (typeof tmp2 !== "function") {
+              if (typeof closure_86 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let fn3 = (apply, ownerNode) => {
@@ -4242,7 +4133,7 @@ function initObservers(doc) {
               };
               fn5 = fn3;
               if (closure_79) {
-                fn3 = (Pause, arg1) => {
+                fn3 = (event, arg1) => {
                   items = [...arguments];
                   try {
                     const items1 = [];
@@ -4267,7 +4158,7 @@ function initObservers(doc) {
             }
             if (win.CSSStyleSheet.prototype.replaceSync) {
               replaceSync = win.CSSStyleSheet.prototype.replaceSync;
-              if (typeof tmp2 !== "function") {
+              if (typeof closure_86 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let fn4 = (apply, ownerNode) => {
@@ -4307,7 +4198,7 @@ function initObservers(doc) {
               };
               fn5 = fn4;
               if (closure_79) {
-                fn4 = (Pause, arg1) => {
+                fn4 = (event, arg1) => {
                   items = [...arguments];
                   try {
                     const items1 = [];
@@ -4403,19 +4294,19 @@ function initObservers(doc) {
             closure_9 = {};
             const _Object = Object;
             let entries = Object.entries(obj2);
-            let item = entries.forEach((arg0) => {
-              [tmp, tmp2] = arg0;
+            let item = entries.forEach((item, index) => {
+              [tmp, tmp2] = item;
               table[tmp] = { insertRule: tmp2.prototype.insertRule, deleteRule: tmp2.prototype.deleteRule };
               if (typeof closure_1_86 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let fn = (apply, parentStyleSheet) => {
-                let num = closure_1_6(arg2, 2)[1];
+                let num = replaceSync(arg2, 2)[1];
                 parentStyleSheet = parentStyleSheet.parentStyleSheet;
                 const styleMirror = closure_2.styleMirror;
                 if (parentStyleSheet) {
                   if (parentStyleSheet.ownerNode) {
-                    id = closure_1.getId(parentStyleSheet.ownerNode);
+                    id = store.getId(parentStyleSheet.ownerNode);
                   } else {
                     const id1 = styleMirror.getId(parentStyleSheet);
                   }
@@ -4451,14 +4342,14 @@ function initObservers(doc) {
                     obj[2] = items1;
                     fn2(obj);
                     const arraySpreadResult = HermesBuiltin.arraySpread(closure_1_95(parentStyleSheet), 0);
-                    const tmp8 = fn2;
                   }
                   return apply.apply(parentStyleSheet, arg2);
                 }
+                const tmp = replaceSync(arg2, 2);
               };
               let fn2 = fn;
               if (closure_1_79) {
-                fn = (Pause, arg1) => {
+                fn = (event, arg1) => {
                   items = [...arguments];
                   try {
                     const items1 = [];
@@ -4487,7 +4378,7 @@ function initObservers(doc) {
                 const styleMirror = closure_2.styleMirror;
                 if (parentStyleSheet) {
                   if (parentStyleSheet.ownerNode) {
-                    id = closure_1.getId(parentStyleSheet.ownerNode);
+                    id = store.getId(parentStyleSheet.ownerNode);
                   } else {
                     const id1 = styleMirror.getId(parentStyleSheet);
                   }
@@ -4523,7 +4414,7 @@ function initObservers(doc) {
                 }
               };
               if (closure_1_79) {
-                fn2 = (Pause, arg1) => {
+                fn2 = (event, arg1) => {
                   items = [...arguments];
                   try {
                     const items1 = [];
@@ -4552,20 +4443,20 @@ function initObservers(doc) {
               win.CSSStyleSheet.prototype.insertRule = insertRule;
               win.CSSStyleSheet.prototype.deleteRule = deleteRule;
               if (replace) {
-                tmp.CSSStyleSheet.prototype.replace = tmp2;
+                win.CSSStyleSheet.prototype.replace = tmp2;
               }
               if (replaceSync) {
-                tmp.CSSStyleSheet.prototype.replaceSync = tmp3;
+                win.CSSStyleSheet.prototype.replaceSync = tmp3;
               }
               const entries = Object.entries(obj2);
-              const item = entries.forEach((arg0) => {
-                [tmp, tmp2] = arg0;
+              const item = entries.forEach((item, index) => {
+                [tmp, tmp2] = item;
                 tmp2.prototype.insertRule = dependencyMap[tmp].insertRule;
                 tmp2.prototype.deleteRule = dependencyMap[tmp].deleteRule;
               });
             };
             if (closure_79) {
-              fn5 = (Pause, arg1) => {
+              fn5 = (event, arg1) => {
                 items = [...arguments];
                 try {
                   const items1 = [];
@@ -4596,9 +4487,8 @@ function initObservers(doc) {
       closure_9 = (function initStyleDeclarationObserver(doc, win) {
         ({ styleDeclarationCb: fn3, mirror: closure_1, ignoreCSSAttributes: closure_2, stylesheetManager: closure_3 } = doc);
         win = win.win;
-        let setProperty;
         let removeProperty;
-        setProperty = win.CSSStyleDeclaration.prototype.setProperty;
+        const setProperty = win.CSSStyleDeclaration.prototype.setProperty;
         if (typeof closure_86 !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -4616,7 +4506,7 @@ function initObservers(doc) {
             const styleMirror = closure_3.styleMirror;
             if (parentStyleSheet) {
               if (parentStyleSheet.ownerNode) {
-                id = obj2.getId(parentStyleSheet.ownerNode);
+                id = store.getId(parentStyleSheet.ownerNode);
               } else {
                 const id1 = styleMirror.getId(parentStyleSheet);
               }
@@ -4650,12 +4540,12 @@ function initObservers(doc) {
               }
               return apply.apply(parentRule, arg2);
             }
-            obj2 = closure_1;
           }
+          const tmp = removeProperty(arg2, 3);
         };
         fn3 = fn;
         if (closure_79) {
-          fn = (Pause, arg1) => {
+          fn = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -4694,7 +4584,7 @@ function initObservers(doc) {
             const styleMirror = closure_3.styleMirror;
             if (parentStyleSheet) {
               if (parentStyleSheet.ownerNode) {
-                id = obj2.getId(parentStyleSheet.ownerNode);
+                id = store.getId(parentStyleSheet.ownerNode);
               } else {
                 const id1 = styleMirror.getId(parentStyleSheet);
               }
@@ -4726,12 +4616,11 @@ function initObservers(doc) {
               }
               return apply.apply(parentRule, arg2);
             }
-            obj2 = closure_1;
           }
         };
         fn3 = fn2;
         if (closure_79) {
-          fn2 = (Pause, arg1) => {
+          fn2 = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -4760,7 +4649,7 @@ function initObservers(doc) {
           win.CSSStyleDeclaration.prototype.removeProperty = removeProperty;
         };
         if (closure_79) {
-          fn3 = (Pause, arg1) => {
+          fn3 = (event, arg1) => {
             items = [...arguments];
             try {
               const items1 = [];
@@ -4783,11 +4672,10 @@ function initObservers(doc) {
       if (doc.collectFonts) {
         closure_10 = (function initFontObserver(doc) {
           ({ fontCb: fn, doc } = doc);
-          let defaultView;
           items = undefined;
           weakMap = undefined;
           let FontFace;
-          defaultView = doc.defaultView;
+          const defaultView = doc.defaultView;
           if (defaultView) {
             items = [];
             const _WeakMap = WeakMap;
@@ -4826,7 +4714,7 @@ function initObservers(doc) {
                   }
                 };
                 if (closure_2_79) {
-                  fn = (Pause, arg1) => {
+                  fn = (event, arg1) => {
                     items = [...arguments];
                     try {
                       const items1 = [];
@@ -4851,10 +4739,10 @@ function initObservers(doc) {
               HermesBuiltin.throwTypeError();
             }
             fn = () => {
-              const item = items.forEach((arg0) => arg0());
+              const item = items.forEach((item, index) => item());
             };
             if (closure_79) {
-              fn = (Pause, arg1) => {
+              fn = (event, arg1) => {
                 items = [...arguments];
                 try {
                   const items1 = [];
@@ -4898,29 +4786,16 @@ function initObservers(doc) {
               do {
                 let rangeAt = selection.getRangeAt(num);
                 ({ startContainer, endContainer } = rangeAt);
-                let tmp7 = document;
                 let tmp8 = obj;
-                let tmp9 = closure_4;
-                let tmp10 = startContainer;
-                let tmp11 = document;
-                let tmp12 = obj;
-                let tmp13 = closure_4;
                 let flag = true;
                 ({ startOffset, endOffset } = rangeAt);
-                let tmp6 = closure_1_65;
                 let tmp6Result = closure_1_65(startContainer, document, obj, closure_4, true);
-                let tmp15 = num;
                 if (!tmp6Result) {
-                  let tmp16 = endContainer;
-                  let tmp17 = tmp7;
-                  let tmp18 = tmp8;
-                  let tmp19 = tmp9;
                   let flag2 = true;
-                  tmp6Result = tmp6(endContainer, tmp7, tmp8, tmp9, true);
+                  tmp6Result = closure_1_65(endContainer, document, tmp8, closure_4, true);
                 }
                 if (!tmp6Result) {
                   obj = { start: null, startOffset: null, end: null, endOffset: null };
-                  let tmp20 = fn;
                   obj[0] = fn.getId(startContainer);
                   obj[1] = startOffset;
                   obj[2] = fn.getId(endContainer);
@@ -4943,7 +4818,7 @@ function initObservers(doc) {
       };
       selectionchange = fn;
       if (closure_79) {
-        fn = (Pause, arg1) => {
+        fn = (event, arg1) => {
           items = [...arguments];
           try {
             const items1 = [];
@@ -5003,7 +4878,7 @@ function initObservers(doc) {
       continue;
     }
     return callbackWrapper(() => {
-      const item = closure_1_87.forEach((reset) => reset.reset());
+      const item = closure_1_87.forEach((item, index) => item.reset());
       if (closure_0 != null) {
         closure_0.disconnect();
       }
@@ -5019,7 +4894,7 @@ function initObservers(doc) {
       callback10();
       callback11();
       callback12();
-      const item1 = items.forEach((arg0) => arg0());
+      const item1 = items.forEach((item, index) => item());
     });
   } else {
     return () => {
@@ -5032,13 +4907,10 @@ function record() {
   if (arg0 === undefined) {
     obj = {};
   }
-  let emit;
   c1 = undefined;
   c2 = undefined;
-  let str;
   let blockSelector;
   let unblockSelector;
-  let str2;
   let ignoreSelector;
   closure_8 = undefined;
   let str3;
@@ -5081,9 +4953,9 @@ function record() {
   c46 = undefined;
   c47 = undefined;
   c48 = undefined;
-  emit = obj.emit;
+  const emit = obj.emit;
   ({ checkoutEveryNms: c1, checkoutEveryNth: c2, blockClass } = obj);
-  str = "rr-block";
+  let str = "rr-block";
   if (undefined !== blockClass) {
     str = blockClass;
   }
@@ -5100,10 +4972,6 @@ function record() {
   }
   unblockSelector = tmp2;
   const ignoreClass = obj.ignoreClass;
-  str2 = "rr-ignore";
-  if (undefined !== ignoreClass) {
-    str2 = ignoreClass;
-  }
   ignoreSelector = obj.ignoreSelector;
   let tmp3 = null;
   if (undefined !== ignoreSelector) {
@@ -5285,20 +5153,17 @@ function record() {
         items = [];
       }
       for (const item10007 of items) {
-        obj = item10007;
         if (item10007.eventProcessor) {
-          let tmp2 = item10007;
-          let tmp3 = eventProcessorResult;
-          eventProcessorResult = obj.eventProcessor(eventProcessorResult);
+          eventProcessorResult = item10007.eventProcessor(eventProcessorResult);
         }
         continue;
       }
-      let tmp5 = c17;
-      if (c17) {
+      let tmp5 = _undefined;
+      if (_undefined) {
         tmp5 = !c31;
       }
       if (tmp5) {
-        eventProcessorResult = c17(eventProcessorResult);
+        eventProcessorResult = _undefined(eventProcessorResult);
       }
       return eventProcessorResult;
     };
@@ -5311,17 +5176,17 @@ function record() {
       }
       let tmp2 = !isFrozenResult;
       if (isFrozenResult) {
-        tmp2 = type.type === closure_1_73.FullSnapshot;
+        tmp2 = type.type === obj1.FullSnapshot;
       }
       if (!tmp2) {
-        let tmp5 = type.type === closure_1_73.IncrementalSnapshot;
+        let tmp5 = type.type === obj1.IncrementalSnapshot;
         if (tmp5) {
-          tmp5 = type.data.source === closure_1_74.Mutation;
+          tmp5 = type.data.source === obj2.Mutation;
         }
         tmp2 = tmp5;
       }
       if (!tmp2) {
-        const item = closure_1_87.forEach((unfreeze) => unfreeze.unfreeze());
+        const item = closure_1_87.forEach((item, index) => item.unfreeze());
       }
       if (closure_30) {
         if (emit != null) {
@@ -5336,7 +5201,7 @@ function record() {
         const _window2 = window;
         parent.postMessage(obj, "*");
       }
-      if (type.type === closure_1_73.FullSnapshot) {
+      if (type.type === obj1.FullSnapshot) {
         const _undefined = type;
         c35 = 0;
       } else if (type.type === tmp15.IncrementalSnapshot) {
@@ -5351,7 +5216,7 @@ function record() {
           tmp20 = _undefined;
         }
         if (tmp20) {
-          tmp20 = type.timestamp - _undefined.timestamp > tmp19;
+          tmp20 = type.timestamp - _undefined.timestamp > c1;
         }
         if (!tmp18) {
           tmp18 = tmp20;
@@ -5359,25 +5224,21 @@ function record() {
         if (tmp18) {
           takeFullSnapshot2(true);
         }
-        tmp19 = c1;
       }
     }
     wrappedMutationEmit = function wrappedMutationEmit(arg0) {
-      obj = { type: closure_73.IncrementalSnapshot, data: null };
       obj = { source: closure_74.Mutation };
       const merged = Object.assign(arg0);
       obj[1] = obj;
       le(obj);
     };
     wrappedScrollEmit = function wrappedScrollEmit(arg0) {
-      obj = { type: closure_73.IncrementalSnapshot, data: null };
       obj = { source: closure_74.Scroll };
       const merged = Object.assign(arg0);
       obj[1] = obj;
       le(obj);
     };
     wrappedCanvasMutationEmit = function wrappedCanvasMutationEmit(arg0) {
-      obj = { type: closure_73.IncrementalSnapshot, data: null };
       obj = { source: closure_74.CanvasMutation };
       const merged = Object.assign(arg0);
       obj[1] = obj;
@@ -5386,7 +5247,6 @@ function record() {
     obj = { mutationCb: null, adoptedStyleSheetCb: null };
     obj[0] = wrappedMutationEmit;
     obj[1] = function adoptedStyleSheetCb(arg0) {
-      obj = { type: closure_73.IncrementalSnapshot, data: null };
       obj = { source: closure_74.AdoptedStyleSheet };
       const merged = Object.assign(arg0);
       obj[1] = obj;
@@ -5405,10 +5265,7 @@ function record() {
       for (const item10140 of plugins) {
         obj5 = item10140;
         if (item10140.getMirror) {
-          let tmp50 = item10140;
           obj1 = { nodeMirror: null, crossOriginIframeMirror: null, crossOriginIframeStyleMirror: null };
-          let tmp51 = navigation;
-          let tmp52 = navigation;
           obj1[0] = navigation;
           ({ crossOriginIframeMirror: obj7[1], crossOriginIframeStyleMirror: obj7[2] } = tmp44);
           let mirror = obj5.getMirror(obj1);
@@ -5422,7 +5279,6 @@ function record() {
       let _window4 = window;
       obj2[1] = window;
       obj2[2] = function mutationCb(arg0) {
-        obj = { type: closure_73.IncrementalSnapshot, data: null };
         obj = { source: closure_74.CanvasMutation };
         const merged = Object.assign(arg0);
         obj[1] = obj;
@@ -5483,7 +5339,7 @@ function record() {
         obj4[23] = tmp57;
         obj4[24] = ignoreCSSAttributes;
         obj3[2] = obj4;
-        obj3[3] = tmp59;
+        obj3[3] = navigation;
         let tmp66 = new closure_102(obj3);
         closure_44 = tmp66;
         takeFullSnapshot2 = function takeFullSnapshot2(arg0) {
@@ -5542,7 +5398,7 @@ function record() {
             obj2 = navigation;
             navigation.reset();
             closure_44.init();
-            const item = closure_1_87.forEach((lock) => lock.lock());
+            const item = closure_1_87.forEach((item, index) => item.lock());
             const _document9 = document;
             obj = { mirror: null, blockClass: null, blockSelector: null, unblockSelector: null, maskAllText: null, maskTextClass: null, unmaskTextClass: null, maskTextSelector: null, unmaskTextSelector: null, inlineStylesheet: null, maskAllInputs: null, maskAttributeFn: null, maskInputFn: null, maskTextFn: null, slimDOM: null, dataURLOptions: null, recordCanvas: null, inlineImages: null, onSerialize: null, onIframeLoad: null, onStylesheetLoad: null, onBlockedImageLoad: null, keepIframeSrcFn: null, ignoreCSSAttributes: null };
             obj4 = closure_1_108;
@@ -5567,7 +5423,7 @@ function record() {
             obj[18] = function onSerialize(nodeName) {
               let meta = "IFRAME" === nodeName.nodeName;
               if (meta) {
-                meta = obj.getMeta(nodeName);
+                meta = closure_1_108.getMeta(nodeName);
               }
               if (Boolean(meta)) {
                 closure_41.addIframe(nodeName);
@@ -5583,7 +5439,7 @@ function record() {
                 getAttribute = "stylesheet" === nodeName.getAttribute("rel");
               }
               if (getAttribute) {
-                getAttribute = obj.getMeta(nodeName);
+                getAttribute = closure_1_108.getMeta(nodeName);
               }
               if (Boolean(getAttribute)) {
                 closure_40.trackLinkElement(nodeName);
@@ -5608,8 +5464,6 @@ function record() {
               closure_40.attachLinkElement(nodeName, attributes);
             };
             obj[21] = function onBlockedImageLoad(arg0, id, width) {
-              obj = { adds: [], removes: [], texts: [], attributes: null };
-              obj = { id: id.id, attributes: null };
               obj = { style: { width: "" + width.width + "px", height: "" + width.height + "px" } };
               obj[1] = obj;
               const items = [obj];
@@ -5620,7 +5474,7 @@ function record() {
               obj2 = { type: closure_1_73.IncrementalSnapshot, data: null };
               const merged = Object.assign(obj);
               obj2[1] = { source: closure_1_74.Mutation };
-              closure_1_103(obj2);
+              le(obj2);
             };
             obj[22] = fn;
             obj[23] = ignoreCSSAttributes;
@@ -5725,17 +5579,17 @@ function record() {
                 ignoreCSSAttributes = new Set([]);
               }
               obj1[29] = ignoreCSSAttributes;
-              const tmp41Result = tmp41(_document9, obj1);
+              const tmp41Result = serializeNodeWithId(_document9, obj1);
               if (tmp41Result) {
                 obj4 = { type: null, data: null };
-                obj4[0] = tmp2.FullSnapshot;
+                obj4[0] = closure_1_73.FullSnapshot;
                 obj5 = { node: null, initialOffset: null };
                 obj5[0] = tmp41Result;
                 const _window4 = window;
-                obj5[1] = closure_1_63(window);
+                obj5[1] = getWindowScroll(window);
                 obj4[1] = obj5;
                 le(obj4);
-                const item1 = arr.forEach((unlock) => unlock.unlock());
+                const item1 = closure_1_87.forEach((item, index) => item.unlock());
                 const _document10 = document;
                 if (adoptedStyleSheets) {
                   const _document11 = document;
@@ -5754,20 +5608,13 @@ function record() {
             const obj6 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaDescKeywords: null, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaAuthorship: true, headMetaVerification: true };
             obj6[4] = "all" === tmp40;
             obj3 = obj6;
-            arr = closure_1_87;
-            const tmp = le;
-            tmp2 = closure_1_73;
-            const tmp33 = undefined !== maskAllText && maskAllText;
-            const tmp37 = undefined === inlineStylesheet || inlineStylesheet;
             tmp38 = undefined !== inlineImages && inlineImages;
             tmp39 = undefined !== recordCanvas && recordCanvas;
-            tmp41 = closure_1_58;
           }
         };
       } else {
       }
       tmp66 = new closure_101();
-      tmp59 = navigation;
     }
     obj5 = { mirror: null, mutationCb: null, stylesheetManager: null, recordCrossOriginIframes: null, wrappedEmit: null };
     obj5[0] = navigation;
@@ -5778,6 +5625,7 @@ function record() {
     tmp44 = new closure_100(obj5);
   }
   obj = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaVerification: true, headMetaAuthorship: tmp29, headMetaDescKeywords: tmp29 };
+  tmp25 = undefined !== mousemoveWait && undefined === sampling.mousemove;
 }
 function addBreadcrumbEvent(triggerUserActivity, category) {
   closure_0 = triggerUserActivity;
@@ -5796,24 +5644,25 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
         num = 0;
       }
       obj[1] = 1000 * num;
-      obj = { tag: "breadcrumb", payload: obj(_null[8]).normalize(_null, 10, 1000) };
+      obj = { tag: "breadcrumb", payload: null };
+      const normalizer = obj(_null[8]);
+      obj[1] = normalizer.normalize(_null, 10, 1000);
       obj[2] = obj;
       obj.throttledAddEvent(obj);
       return "console" === _null.category;
     });
   }
 }
-function getClickTargetNode(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = obj;
+function getClickTargetNode(target) {
+  let tmp = typeof target === "object";
+  if (typeof target === "object") {
+    tmp = target;
   }
   if (tmp) {
-    tmp = "target" in obj;
+    tmp = "target" in target;
   }
-  let target = obj;
   if (tmp) {
-    target = obj.target;
+    target = target.target;
   }
   let tmp2 = target;
   if (target) {
@@ -5825,17 +5674,16 @@ function getClickTargetNode(obj) {
   }
   return tmp2;
 }
-function getTargetNode(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = obj;
+function getTargetNode(target) {
+  let tmp = typeof target === "object";
+  if (typeof target === "object") {
+    tmp = target;
   }
   if (tmp) {
-    tmp = "target" in obj;
+    tmp = "target" in target;
   }
-  let target = obj;
   if (tmp) {
-    target = obj.target;
+    target = target.target;
   }
   return target;
 }
@@ -5851,7 +5699,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
       if (set.has(source)) {
         registerMutation.registerMutation(data.timestamp);
       }
-      if (source === obj2.Scroll) {
+      if (tmp3 === obj2.Scroll) {
         registerMutation.registerScroll(data.timestamp);
       }
       if ((function isIncrementalMouseInteraction(data) {
@@ -5868,6 +5716,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
           registerMutation.registerClick(node);
         }
       }
+      tmp3 = source;
     }
   } catch (err) {
   }
@@ -5877,12 +5726,12 @@ function getBaseDomBreadcrumb(arg0, message) {
   const id = mirror.getId(arg0);
   let node = id;
   if (id) {
-    const mirror2 = tmp.mirror;
+    const mirror2 = record.mirror;
     node = mirror2.getNode(id);
   }
   let meta = node;
   if (node) {
-    const mirror3 = tmp.mirror;
+    const mirror3 = record.mirror;
     meta = mirror3.getMeta(node);
   }
   let tmp5 = null;
@@ -5900,33 +5749,31 @@ function getBaseDomBreadcrumb(arg0, message) {
     obj[0] = id;
     obj[1] = tmp5.tagName;
     const _Array = Array;
-    const mapped = Array.from(tmp5.childNodes).map((type) => type.type === RN.Text && type.textContent);
+    const mapped = Array.from(tmp5.childNodes).map((item, index) => item.type === RN.Text && item.textContent);
     const _Boolean = Boolean;
     const found = mapped.filter(Boolean);
-    const mapped1 = found.map((str) => str.trim());
+    const mapped1 = found.map((item, index) => item.trim());
     obj[2] = mapped1.join("");
     const attributes = tmp5.attributes;
-    data_sentry_component = attributes["data-sentry-component"];
-    data_sentry_element = !data_sentry_component;
-    if (!data_sentry_component) {
-      data_sentry_element = attributes["data-sentry-element"];
+    const prop = attributes["data-sentry-component"];
+    let prop1 = !prop;
+    if (!prop) {
+      prop1 = attributes["data-sentry-element"];
     }
-    if (data_sentry_element) {
+    if (prop1) {
       attributes["data-sentry-component"] = attributes["data-sentry-element"];
     }
     obj1 = {};
     for (const key10049 in attributes) {
-      let tmp10 = key10049;
-      let tmp11 = set2;
       if (!set2.has(key10049)) {
         continue;
       } else {
-        let tmp9 = "data-testid" !== key10049;
-        if (tmp9) {
-          tmp9 = "data-test-id" !== key10049;
+        let tmp11 = "data-testid" !== key10049;
+        if (tmp11) {
+          tmp11 = "data-test-id" !== key10049;
         }
         let str5 = key10049;
-        if (!tmp9) {
+        if (!tmp11) {
           str5 = "testId";
         }
         obj1[str5] = attributes[key10049];
@@ -5964,13 +5811,12 @@ function getLargestContentfulPaint(arg0) {
   ({ value, rating } = arg0);
   obj = registerSpanErrorInstrumentation;
   const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  obj = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
   obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
   if (tmp3) {
-    mapped = tmp3.map((arg0) => {
+    mapped = tmp3.map((item, index) => {
       mirror = mirror.mirror;
-      return mirror.getId(arg0);
+      return mirror.getId(item);
     });
   }
   obj[3] = mapped;
@@ -5984,34 +5830,22 @@ function getCumulativeLayoutShift(rating) {
   const items = [];
   const items1 = [];
   for (const item10012 of tmp) {
-    let iter = item10012;
-    let tmp2 = isLayoutShift;
     if (isLayoutShift(item10012)) {
       let items2 = [];
-      let tmp3 = item10012;
-      let sources = iter.sources;
-      let tmp4 = sources;
-      let tmp5 = sources;
+      let sources = item10012.sources;
       for (const item10023 of sources) {
-        let tmp6 = item10023;
         if (item10023.node) {
-          let tmp7 = item10023;
-          let arr = items1.push(tmp6.node);
-          let tmp9 = record;
+          let arr = items1.push(item10023.node);
           let mirror = record.mirror;
-          let id = mirror.getId(tmp6.node);
+          let id = mirror.getId(item10023.node);
           if (id) {
-            let tmp12 = items2;
-            let tmp13 = id;
             arr = items2.push(tmp11);
           }
         }
         continue;
       }
       obj = { value: null, nodeIds: null };
-      let tmp15 = item10012;
-      obj[0] = iter.value;
-      let tmp16 = items2;
+      obj[0] = item10012.value;
       let tmp17;
       if (items2.length) {
         tmp17 = items2;
@@ -6036,13 +5870,12 @@ function getInteractionToNextPaint(arg0) {
   ({ value, rating } = arg0);
   obj = registerSpanErrorInstrumentation;
   const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  obj = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
   obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
   if (tmp3) {
-    mapped = tmp3.map((arg0) => {
+    mapped = tmp3.map((item, index) => {
       mirror = mirror.mirror;
-      return mirror.getId(arg0);
+      return mirror.getId(item);
     });
   }
   obj[3] = mapped;
@@ -6053,13 +5886,12 @@ function getWebVital(rating, name, items1, items) {
   const value = rating.value;
   obj = registerSpanErrorInstrumentation;
   const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
-  obj = { type: "web-vital", name, start: result, end: result, data: null };
   obj = { value, size: value, rating: rating.rating, nodeIds: null, attributions: null };
   let mapped;
   if (items1) {
-    mapped = items1.map((arg0) => {
+    mapped = items1.map((item, index) => {
       mirror = mirror.mirror;
-      return mirror.getId(arg0);
+      return mirror.getId(item);
     });
   }
   obj[3] = mapped;
@@ -6090,12 +5922,12 @@ function clearSession(arg0) {
   })();
   arg0.session = undefined;
 }
-function saveSession(arg0) {
+function saveSession(session) {
   if (hasSessionStorage()) {
     try {
       const sessionStorage = registerSpanErrorInstrumentation.GLOBAL_OBJ.sessionStorage;
       const _JSON = JSON;
-      const result = sessionStorage.setItem(sentryReplaySession, JSON.stringify(arg0));
+      const result = sessionStorage.setItem(sentryReplaySession, JSON.stringify(session));
     } catch (err) {
     }
   }
@@ -6110,13 +5942,13 @@ function makeSession(id) {
   obj = { id, started: tmp4, lastActivity: tmp5, segmentId: tmp6, sampled: id.sampled, previousSessionId: id.previousSessionId, dirty: tmp7 };
   return obj;
 }
-function createSession(allowBuffering, arg1) {
+function createSession(allowBuffering, session) {
   ({ sessionSampleRate, stickySession } = allowBuffering);
   if (stickySession === undefined) {
     stickySession = false;
   }
-  obj = arg1;
-  if (arg1 === undefined) {
+  obj = session;
+  if (session === undefined) {
     obj = {};
   }
   let tmp = undefined !== sessionSampleRate;
@@ -6127,14 +5959,12 @@ function createSession(allowBuffering, arg1) {
   let str = "session";
   if (!tmp) {
     str = allowBuffering.allowBuffering && "buffer";
-    const tmp3 = allowBuffering.allowBuffering && "buffer";
   }
   obj = { sampled: str, previousSessionId: obj.previousSessionId };
   const timestamp = Date.now();
   let id = obj.id;
   if (!id) {
     id = registerSpanErrorInstrumentation.uuid4();
-    obj3 = registerSpanErrorInstrumentation;
   }
   obj = { id, started: tmp7, lastActivity: tmp8, segmentId: tmp9, sampled: obj.sampled, previousSessionId: obj.previousSessionId, dirty: tmp10 };
   if (stickySession) {
@@ -6161,7 +5991,6 @@ function isSessionExpired(started) {
   }
   if (!tmp9) {
     tmp9 = 0 !== maxReplayDuration && started + maxReplayDuration <= tmp3;
-    const tmp10 = 0 !== maxReplayDuration && started + maxReplayDuration <= tmp3;
   }
   if (!tmp9) {
     const lastActivity = started.lastActivity;
@@ -6176,7 +6005,6 @@ function isSessionExpired(started) {
     }
     if (!tmp16) {
       tmp16 = 0 !== sessionIdleExpire && lastActivity + sessionIdleExpire <= targetTime;
-      const tmp17 = 0 !== sessionIdleExpire && lastActivity + sessionIdleExpire <= targetTime;
     }
     tmp9 = tmp16;
   }
@@ -6241,7 +6069,7 @@ function loadOrCreateSession(arg0, stickySession) {
   }
   return tmp5;
 }
-function addEventSync(eventBuffer, timestamp) {
+function addEventSync(eventBuffer, timestamp, c1) {
   let flag = false;
   if (eventBuffer.eventBuffer) {
     flag = false;
@@ -6274,12 +6102,12 @@ function addEventSync(eventBuffer, timestamp) {
   }
   let flag3 = flag;
   if (flag3) {
-    _addEvent(eventBuffer, timestamp, arg2);
+    _addEvent(eventBuffer, timestamp, c1);
     flag3 = true;
   }
   return flag3;
 }
-function _addEvent(eventBuffer, timestamp, arg2) {
+function _addEvent(eventBuffer, timestamp, c1) {
   const self = this;
   const apply = _addEvent3.apply;
   if (typeof apply === "unknown") {
@@ -6291,7 +6119,7 @@ function _addEvent(eventBuffer, timestamp, arg2) {
 }
 function _addEvent3() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -6364,7 +6192,7 @@ function _addEvent3() {
                     }
                     return null;
                   }
-                })(tmp50, obj10.getOptions().beforeAddRecordingEvent);
+                })(tmp50, lib.getOptions().beforeAddRecordingEvent);
                 if (tmp41) {
                   c7 = 2;
                   c8 = 1;
@@ -6473,20 +6301,19 @@ function resetReplayIdOnDynamicSamplingContext() {
   if (currentScope.getPropagationContext().dsc) {
     delete tmp4[tmp3];
   }
-  let tmp5Result = tmp5(817);
+  let tmp5Result = registerSpanErrorInstrumentation;
   const activeSpan = tmp5Result.getActiveSpan();
   if (activeSpan) {
-    tmp5Result = tmp5(817);
+    tmp5Result = registerSpanErrorInstrumentation;
     const dynamicSamplingContextFromSpan = tmp5Result.getDynamicSamplingContextFromSpan(activeSpan);
     delete tmp2[tmp];
   }
 }
 function createPerformanceSpans(arg0, arr) {
   closure_0 = arg0;
-  return arr.map((op) => {
-    const start = op.start;
-    obj = { type: closure_1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
-    obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
+  return arr.map((item, index) => {
+    const start = item.start;
+    obj = { op: item.type, description: item.name, startTimestamp: start, endTimestamp: item.end, data: item.data };
     let throttledAddEventResult = closure_0.throttledAddEvent(obj);
     if (typeof throttledAddEventResult === "string") {
       throttledAddEventResult = Promise.resolve(null);
@@ -6507,17 +6334,16 @@ function addNetworkBreadcrumb(isEnabled, name) {
       isSentryRequestUrlResult = !isEnabled.getOptions()._experiments.traceInternals;
     }
     if (isSentryRequestUrlResult) {
-      obj = _registerSpanErrorInstrumentation;
-      isSentryRequestUrlResult = obj.isSentryRequestUrl(name.name, _registerSpanErrorInstrumentation.getClient());
-      obj2 = _registerSpanErrorInstrumentation;
+      obj = registerSpanErrorInstrumentation;
+      isSentryRequestUrlResult = obj.isSentryRequestUrl(name.name, require("00817_registerSpanErrorInstrumentation.js").getClient());
+      obj2 = registerSpanErrorInstrumentation;
     }
     if (!isSentryRequestUrlResult) {
       isEnabled.addUpdate(() => {
         const items = [closure_1];
-        const mapped = items.map((op) => {
-          const start = op.start;
-          obj = { type: closure_1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
-          obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
+        const mapped = items.map((item, index) => {
+          const start = item.start;
+          obj = { op: item.type, description: item.name, startTimestamp: start, endTimestamp: item.end, data: item.data };
           let throttledAddEventResult = closure_0.throttledAddEvent(obj);
           if (typeof throttledAddEventResult === "string") {
             throttledAddEventResult = Promise.resolve(null);
@@ -6529,29 +6355,29 @@ function addNetworkBreadcrumb(isEnabled, name) {
     }
   }
 }
-function getBodySize(fetchRequestArgBody) {
-  if (fetchRequestArgBody) {
+function getBodySize(size) {
+  if (size) {
     const _TextEncoder = TextEncoder;
-    const textEncoder = new TextEncoder();
+    const encoder = new TextEncoder();
     try {
-      if (typeof fetchRequestArgBody === "string") {
-        return textEncoder.encode(fetchRequestArgBody).length;
+      if (typeof size === "string") {
+        return encoder.encode(size).length;
       } else {
         const _URLSearchParams = URLSearchParams;
-        if (fetchRequestArgBody instanceof URLSearchParams) {
-          return textEncoder.encode(fetchRequestArgBody.toString()).length;
+        if (size instanceof URLSearchParams) {
+          return encoder.encode(size.toString()).length;
         } else {
           const _FormData = FormData;
-          if (fetchRequestArgBody instanceof FormData) {
-            return textEncoder.encode(addClsInstrumentationHandler.serializeFormData(fetchRequestArgBody)).length;
+          if (size instanceof FormData) {
+            return encoder.encode(addClsInstrumentationHandler.serializeFormData(size)).length;
           } else {
             const _Blob = Blob;
-            if (fetchRequestArgBody instanceof Blob) {
-              return fetchRequestArgBody.size;
+            if (size instanceof Blob) {
+              return size.size;
             } else {
               const _ArrayBuffer = ArrayBuffer;
-              if (fetchRequestArgBody instanceof ArrayBuffer) {
-                return fetchRequestArgBody.byteLength;
+              if (size instanceof ArrayBuffer) {
+                return size.byteLength;
               }
             }
           }
@@ -6627,7 +6453,7 @@ function buildNetworkRequestOrResponse(arg0, arg1, body) {
               return tmp3;
             })(body);
             if (tmp6) {
-              const substr = body.slice(0, tmp5);
+              const substr = body.slice(0, closure_12);
               obj = { body: null, warnings: null };
               if (tmp7) {
                 obj[0] = substr;
@@ -6653,7 +6479,6 @@ function buildNetworkRequestOrResponse(arg0, arg1, body) {
               } catch (err) {
               }
             }
-            tmp5 = closure_12;
             tmp6 = body.length > closure_12;
           }
         }
@@ -6683,9 +6508,9 @@ function urlMatches(str) {
   let substr = str;
   if (!str.startsWith("http://")) {
     substr = str;
-    if (!str.startsWith("https://")) {
+    if (!"https://".startsWith("https://")) {
       substr = str;
-      if (!str.startsWith(tmp(817).GLOBAL_OBJ.location.origin)) {
+      if (!str.startsWith(registerSpanErrorInstrumentation.GLOBAL_OBJ.location.origin)) {
         const _URL = URL;
         const uRL = new URL(str, baseURI);
         const _URL2 = URL;
@@ -6708,7 +6533,7 @@ function urlMatches(str) {
 }
 function _captureFetchBreadcrumbToReplay() {
   let self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -6760,7 +6585,7 @@ function _captureFetchBreadcrumbToReplay() {
 }
 function _prepareFetchData2() {
   let self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -6821,7 +6646,7 @@ function _prepareFetchData2() {
               ({ request_body_size, response_body_size } = data);
               let tmp15 = closure_1_157(url, tmp30.networkDetailAllowUrls);
               if (tmp15) {
-                tmp15 = !tmp14(url, tmp30.networkDetailDenyUrls);
+                tmp15 = !closure_1_157(url, tmp30.networkDetailDenyUrls);
               }
               if (tmp15) {
                 let tmp17 = (function _getRequestInfo(networkRequestHeaders, input, request_body_size) {
@@ -6842,31 +6667,29 @@ function _prepareFetchData2() {
                           let headers1 = headers;
                           headers = {};
                           prop = headers;
-                          const item = prop.forEach((arg0) => {
-                            if (headers1.get(arg0)) {
-                              prop[arg0] = headers1.get(arg0);
+                          const item = prop.forEach((item, index) => {
+                            if (headers1.get(item)) {
+                              prop[item] = headers1.get(item);
                             }
                           });
-                          obj1 = headers;
                         } else {
                           const _Array2 = Array;
                           if (Array.isArray(headers)) {
-                            obj1 = {};
                           } else {
                             headers1 = headers;
                             const _Object2 = Object;
                             const entries = Object.entries(headers);
-                            obj1 = entries.reduce((arg0, arg1) => {
-                              [str, tmp] = arg1;
+                            obj1 = entries.reduce((acc, item, index) => {
+                              [str, tmp] = item;
                               const formatted = str.toLowerCase();
                               let hasItem = networkResponseHeaders.includes(formatted);
                               if (hasItem) {
                                 hasItem = request_headers[str];
                               }
                               if (hasItem) {
-                                arg0[formatted] = tmp;
+                                acc[formatted] = tmp;
                               }
-                              return arg0;
+                              return acc;
                             }, {});
                           }
                         }
@@ -6879,38 +6702,32 @@ function _prepareFetchData2() {
                         if (headers1 instanceof Headers) {
                           headers1 = {};
                           prop = headers1;
-                          const item1 = prop.forEach((arg0) => {
-                            if (headers1.get(arg0)) {
-                              prop[arg0] = headers1.get(arg0);
+                          const item1 = prop.forEach((item, index) => {
+                            if (headers1.get(item)) {
+                              prop[item] = headers1.get(item);
                             }
                           });
-                          obj3 = headers1;
                         } else {
                           const _Array = Array;
                           if (Array.isArray(headers1)) {
-                            obj3 = {};
                           } else {
                             const _Object = Object;
                             const entries1 = Object.entries(headers1);
-                            obj3 = entries1.reduce((arg0, arg1) => {
-                              [str, tmp] = arg1;
+                            obj3 = entries1.reduce((acc, item, index) => {
+                              [str, tmp] = item;
                               const formatted = str.toLowerCase();
                               let hasItem = networkResponseHeaders.includes(formatted);
                               if (hasItem) {
                                 hasItem = request_headers[str];
                               }
                               if (hasItem) {
-                                arg0[formatted] = tmp;
+                                acc[formatted] = tmp;
                               }
-                              return arg0;
+                              return acc;
                             }, {});
                           }
                         }
-                      } else {
-                        obj4 = {};
                       }
-                    } else {
-                      obj4 = {};
                     }
                   } else {
                     obj = {};
@@ -6930,7 +6747,7 @@ function _prepareFetchData2() {
                                 if (typeof body === "string") {
                                   const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj[0] = substr;
@@ -6956,7 +6773,6 @@ function _prepareFetchData2() {
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_12;
                                   tmp6 = body.length > closure_12;
                                 }
                               }
@@ -6978,7 +6794,7 @@ function _prepareFetchData2() {
                                 if (typeof body === "string") {
                                   const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj[0] = substr;
@@ -7004,7 +6820,6 @@ function _prepareFetchData2() {
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_12;
                                   tmp6 = body.length > closure_12;
                                 }
                               }
@@ -7079,8 +6894,6 @@ function _prepareFetchData2() {
               })(tmp15, url, endTimestamp.response, response_body_size);
               c4 = 1;
               c5 = 1;
-              tmp14 = closure_1_157;
-              const tmp28 = startTimestamp;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -7123,7 +6936,7 @@ function _prepareFetchData2() {
 }
 function _getResponseInfo2() {
   let self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2, arg3) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -7242,23 +7055,20 @@ function _getResponseInfo2() {
               responseBodySize = responseBodySize.responseBodySize;
               try {
                 let length;
-                if (closure_8 != null) {
-                  length = closure_8.length;
+                if (length != null) {
+                  length = length.length;
                 }
-                let tmp10 = responseBodySize;
                 if (length) {
-                  tmp10 = responseBodySize;
                   if (undefined === responseBodySize) {
-                    tmp10 = callback(closure_8);
+                    const tmp10 = callback(length);
                   }
                 }
                 if (tmp5) {
                   let tmp18;
                   if (tmp4) {
-                    tmp18 = closure_8;
+                    tmp18 = length;
                   }
                   let tmp16Result = callback3(tmp6, tmp12, tmp18);
-                  const tmp16 = callback3;
                 } else {
                   tmp16Result = callback2(tmp12);
                 }
@@ -7295,7 +7105,7 @@ function _getResponseInfo2() {
 }
 function _parseFetchResponseBody2() {
   let self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -7423,16 +7233,16 @@ function _parseFetchResponseBody2() {
 function getAllHeaders(arg0, arr) {
   closure_0 = arg0;
   obj = {};
-  const item = arr.forEach((arg0) => {
-    if (headers1.get(arg0)) {
-      prop[arg0] = headers1.get(arg0);
+  const item = arr.forEach((item, index) => {
+    if (headers1.get(item)) {
+      prop[item] = headers1.get(item);
     }
   });
   return obj;
 }
 function _getResponseText2() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
@@ -7452,7 +7262,7 @@ function _getResponseText2() {
 }
 function _captureXhrBreadcrumbToReplay() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = asyncGeneratorStep((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -7501,7 +7311,7 @@ function _captureXhrBreadcrumbToReplay() {
                   endTimestamp = timestamp;
                 }
                 const xhr = closure_1.xhr;
-                const data = closure_0.data;
+                data = data.data;
                 ({ url, method, status_code } = data);
                 let num = 0;
                 if (undefined !== status_code) {
@@ -7511,24 +7321,24 @@ function _captureXhrBreadcrumbToReplay() {
                 if (url) {
                   if (xhr) {
                     if (callback(url, closure_2.networkDetailAllowUrls)) {
-                      if (!tmp4(url, closure_2.networkDetailDenyUrls)) {
+                      if (!callback(url, closure_2.networkDetailDenyUrls)) {
                         let tmp7 = xhr[request_headers(undefined, networkResponseHeaders[9]).SENTRY_XHR_DATA_KEY];
                         if (tmp7) {
                           request_headers = tmp7.request_headers;
                           networkResponseHeaders = closure_2.networkRequestHeaders;
                           const _Object = Object;
                           const entries = Object.entries(request_headers);
-                          let reduced = entries.reduce((arg0, arg1) => {
-                            [str, tmp] = arg1;
+                          let reduced = entries.reduce((acc, item, index) => {
+                            [str, tmp] = item;
                             const formatted = str.toLowerCase();
                             let hasItem = networkResponseHeaders.includes(formatted);
                             if (hasItem) {
                               hasItem = request_headers[str];
                             }
                             if (hasItem) {
-                              arg0[formatted] = tmp;
+                              acc[formatted] = tmp;
                             }
-                            return arg0;
+                            return acc;
                           }, {});
                         } else {
                           reduced = {};
@@ -7539,17 +7349,17 @@ function _captureXhrBreadcrumbToReplay() {
                         networkResponseHeaders = closure_2.networkResponseHeaders;
                         const _Object2 = Object;
                         const entries1 = Object.entries(result);
-                        const reduced1 = entries1.reduce((arg0, arg1) => {
-                          [str, tmp] = arg1;
+                        const reduced1 = entries1.reduce((acc, item, index) => {
+                          [str, tmp] = item;
                           const formatted = str.toLowerCase();
                           let hasItem = networkResponseHeaders.includes(formatted);
                           if (hasItem) {
                             hasItem = request_headers[str];
                           }
                           if (hasItem) {
-                            arg0[formatted] = tmp;
+                            acc[formatted] = tmp;
                           }
-                          return arg0;
+                          return acc;
                         }, {});
                         if (closure_2.networkCaptureBodies) {
                           tmp5Result = tmp5(tmp6[9]);
@@ -7584,7 +7394,6 @@ function _captureXhrBreadcrumbToReplay() {
                         } else {
                           items = [undefined];
                         }
-                        const tmp11 = v0;
                         const tmp12 = v0(bodyString, 2);
                         [tmp16, tmp17] = v0(items, 2);
                         if (request_body_size) {
@@ -7598,7 +7407,7 @@ function _captureXhrBreadcrumbToReplay() {
                                   if (typeof body === "string") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                     if (tmp6) {
-                                      const substr = body.slice(0, tmp5);
+                                      const substr = body.slice(0, closure_12);
                                       obj = { body: null, warnings: null };
                                       if (tmp7) {
                                         obj[0] = substr;
@@ -7624,7 +7433,6 @@ function _captureXhrBreadcrumbToReplay() {
                                       } catch (err) {
                                       }
                                     }
-                                    tmp5 = closure_12;
                                     tmp6 = body.length > closure_12;
                                   }
                                 }
@@ -7646,7 +7454,7 @@ function _captureXhrBreadcrumbToReplay() {
                                   if (typeof body === "string") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                     if (tmp6) {
-                                      const substr = body.slice(0, tmp5);
+                                      const substr = body.slice(0, closure_12);
                                       obj = { body: null, warnings: null };
                                       if (tmp7) {
                                         obj[0] = substr;
@@ -7672,7 +7480,6 @@ function _captureXhrBreadcrumbToReplay() {
                                       } catch (err) {
                                       }
                                     }
-                                    tmp5 = closure_12;
                                     tmp6 = body.length > closure_12;
                                   }
                                 }
@@ -7700,7 +7507,7 @@ function _captureXhrBreadcrumbToReplay() {
                                   if (typeof body === "string") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                     if (tmp6) {
-                                      const substr = body.slice(0, tmp5);
+                                      const substr = body.slice(0, closure_12);
                                       obj = { body: null, warnings: null };
                                       if (tmp7) {
                                         obj[0] = substr;
@@ -7726,7 +7533,6 @@ function _captureXhrBreadcrumbToReplay() {
                                       } catch (err) {
                                       }
                                     }
-                                    tmp5 = closure_12;
                                     tmp6 = body.length > closure_12;
                                   }
                                 }
@@ -7748,7 +7554,7 @@ function _captureXhrBreadcrumbToReplay() {
                                   if (typeof body === "string") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(body);
                                     if (tmp6) {
-                                      const substr = body.slice(0, tmp5);
+                                      const substr = body.slice(0, closure_12);
                                       obj = { body: null, warnings: null };
                                       if (tmp7) {
                                         obj[0] = substr;
@@ -7774,7 +7580,6 @@ function _captureXhrBreadcrumbToReplay() {
                                       } catch (err) {
                                       }
                                     }
-                                    tmp5 = closure_12;
                                     tmp6 = body.length > closure_12;
                                   }
                                 }
@@ -7843,7 +7648,6 @@ function _captureXhrBreadcrumbToReplay() {
                         const tmp11Result = v0(items, 2);
                       }
                     }
-                    tmp4 = callback;
                   }
                   const obj12 = { startTimestamp: null, endTimestamp: null, url: null, method: null, statusCode: null, request: null, response: null };
                   obj12[0] = startTimestamp;
@@ -7934,7 +7738,7 @@ function enrichXhrBreadcrumb(data, xhr) {
               }
             }
           }
-          return closure_152(json);
+          return callback(json);
         } catch (err) {
         }
       })(xhr.response, xhr.responseType);
@@ -8005,7 +7809,7 @@ function handleNetworkBreadcrumbs(getOptions) {
                     fetchRequestArgBody = callback(table[9]).getFetchRequestArgBody(input);
                     obj = callback(table[9]);
                   }
-                  const tmpResult = closure_152(fetchRequestArgBody);
+                  const tmpResult = callback(fetchRequestArgBody);
                   let tmp6;
                   if (response) {
                     const headers = response.headers;
@@ -8055,7 +7859,7 @@ function handleNetworkBreadcrumbs(getOptions) {
 }
 function _addMemoryEntry() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c1 = 0;
@@ -8138,27 +7942,22 @@ function _addMemoryEntry() {
 function getHandleRecordingEmit(arg0) {
   closure_0 = arg0;
   c1 = false;
-  return (arg0, arg1) => {
-    closure_0 = arg0;
+  return (data) => {
+    closure_0 = data;
     if (closure_0.checkAndHandleExpiredSession()) {
-      let tmp4 = arg1;
-      if (!arg1) {
-        tmp4 = !c1;
-      }
-      c1 = tmp4;
       c1 = true;
       if (obj.clickDetector) {
-        closure_1_118(obj.clickDetector, arg0);
+        updateClickDetectorForRecordingEvent(obj.clickDetector, data);
       }
       obj.addUpdate(() => {
         obj = recordingMode;
         if (tmp) {
           obj.setInitialState();
         }
-        if (closure_2_146(obj, recordingMode, c1)) {
-          if (tmp4) {
+        if (addEventSync(obj, recordingMode, c1)) {
+          if (c1) {
             const session = obj.session;
-            if (tmp4) {
+            if (c1) {
               if (obj.session) {
                 if (0 === obj.session.segmentId) {
                   const options = obj.getOptions();
@@ -8181,7 +7980,7 @@ function getHandleRecordingEmit(arg0) {
                   obj[11] = options.networkResponseHeaders.length > 0;
                   obj1[1] = obj;
                   obj[2] = obj1;
-                  tmp3(obj, obj, false);
+                  addEventSync(obj, obj, false);
                 }
               }
             }
@@ -8200,7 +7999,7 @@ function getHandleRecordingEmit(arg0) {
                       }
                       session.started = earliestTimestamp;
                       if (obj.getOptions().stickySession) {
-                        closure_2_141(session);
+                        saveSession(session);
                       }
                     }
                   }
@@ -8224,7 +8023,6 @@ function getHandleRecordingEmit(arg0) {
           return true;
         }
         tmp = "buffer" === recordingMode.recordingMode && c1;
-        tmp3 = closure_2_146;
       });
     } else if (closure_1_130) {
       closure_1_133.warn("Received replay event after session expired.");
@@ -8233,7 +8031,7 @@ function getHandleRecordingEmit(arg0) {
 }
 function _prepareReplayEvent() {
   const self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
@@ -8387,7 +8185,7 @@ function _prepareReplayEvent() {
 }
 function _sendReplayRequest() {
   let self = this;
-  let tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     closure_6 = 0;
@@ -8427,7 +8225,6 @@ function _sendReplayRequest() {
               c3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              let tmp = callback;
               ({ recordingData: c0, replayId: c1, segmentId: c2, eventContext: c3, timestamp: c4, session: c5 } = callback);
               c6 = undefined;
               c7 = undefined;
@@ -8458,13 +8255,9 @@ function _sendReplayRequest() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              tmp = dependencyMap;
-              tmp = c2;
               obj2 = { recordingData: null, headers: null };
-              tmp = closure_0;
               obj2[0] = closure_0;
               obj3 = { segment_id: null };
-              tmp = closure_1_2;
               obj3[0] = closure_1_2;
               obj2[1] = obj3;
               closure_6 = (function prepareRecordingData(recordingData) {
@@ -8475,8 +8268,8 @@ function _sendReplayRequest() {
                   let combined1 = "" + combined + recordingData;
                 } else {
                   const _TextEncoder = TextEncoder;
-                  const textEncoder = new TextEncoder();
-                  const encodeResult = textEncoder.encode(combined);
+                  const encoder = new TextEncoder();
+                  const encodeResult = encoder.encode(combined);
                   const _Uint8Array = Uint8Array;
                   const uint8Array = new Uint8Array(encodeResult.length + recordingData.length);
                   combined1 = uint8Array;
@@ -8485,19 +8278,11 @@ function _sendReplayRequest() {
                 }
                 return combined1;
               })(obj2);
-              tmp = closure_1_3;
               urls = closure_1_3.urls;
-              tmp = closure_1_3;
               errorIds = closure_1_3.errorIds;
-              tmp = closure_1_3;
               traceIds = closure_1_3.traceIds;
-              tmp = closure_1_3;
               initialTimestamp = closure_1_3.initialTimestamp;
-              tmp = callback;
-              tmp = dependencyMap;
               const client = callback(817).getClient();
-              tmp = callback;
-              tmp = dependencyMap;
               const obj18 = callback(817);
               const currentScope = callback(817).getCurrentScope();
               transport = undefined;
@@ -8560,9 +8345,7 @@ function _sendReplayRequest() {
               obj8[0] = arg1;
               return obj8;
             } else {
-              tmp = dependencyMap;
               closure_16 = arg1;
-              tmp = closure_16;
               if (closure_16) {
                 delete tmp7[tmp3];
                 closure_18 = (function createReplayEnvelope(closure_16, c6, c14, tunnel) {
@@ -8571,14 +8354,14 @@ function _sendReplayRequest() {
                   const items = [{ type: "replay_event" }, closure_16];
                   const items1 = [items, ];
                   const eventEnvelopeHeaders = obj2.createEventEnvelopeHeaders(closure_16, _undefined(_undefined2[8]).getSdkMetadataForEnvelopeHeader(closure_16), tunnel, c14);
-                  if (typeof c6 === "string") {
+                  if (typeof length === "string") {
                     const _TextEncoder = TextEncoder;
-                    const textEncoder = new TextEncoder();
-                    let length = textEncoder.encode(c6).length;
+                    const encoder = new TextEncoder();
+                    length = encoder.encode(length).length;
                   } else {
-                    length = c6.length;
+                    length = length.length;
                   }
-                  const items2 = [{ type: "replay_recording", length }, c6];
+                  const items2 = [{ type: "replay_recording", length }, length];
                   items1[1] = items2;
                   return obj.createEnvelope(eventEnvelopeHeaders, items1);
                 })(closure_16, c6, c14, c11.getOptions().tunnel);
@@ -8623,9 +8406,6 @@ function _sendReplayRequest() {
               closure_17 = arg1;
               c4 = 0;
               if (typeof closure_17.statusCode === "number") {
-                if (closure_17.statusCode >= 200) {
-                  tmp = closure_17;
-                }
                 const tmp33 = new closure_172(closure_17.statusCode);
                 throw tmp33;
               }
@@ -8681,7 +8461,7 @@ function sendReplay(arg0) {
 }
 function _sendReplay() {
   let self = this;
-  const tmp = callback((arg0) => {
+  const tmp = asyncGeneratorStep((arg0) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c6 = 0;
@@ -8968,7 +8748,7 @@ let closure_23 = (() => {
         idNodeMap.delete(this.getId(childNodes));
         if (childNodes.childNodes) {
           childNodes = childNodes.childNodes;
-          const item = childNodes.forEach((arg0) => self.removeNodeFromMap(arg0));
+          const item = childNodes.forEach((item, index) => self.removeNodeFromMap(item));
         }
       }
     },
@@ -9021,7 +8801,7 @@ let closure_23 = (() => {
       }
     }
   ];
-  return callback2(Mirror, items);
+  return _createClass(Mirror, items);
 })();
 const __rrweb_original__ = "__rrweb_original__";
 let closure_32 = {};
@@ -9160,7 +8940,7 @@ let closure_68 = (() => {
       }
     }
   ];
-  return callback2(StyleSheetMirror, items);
+  return _createClass(StyleSheetMirror, items);
 })();
 let closure_70 = {};
 let obj1 = {};
@@ -9293,8 +9073,6 @@ let closure_80 = (() => {
           let tmp3 = iter;
           if (0 < arg0) {
             do {
-              let tmp4 = num;
-              let tmp5 = iter;
               let next;
               if (iter != null) {
                 next = iter.next;
@@ -9380,7 +9158,7 @@ let closure_80 = (() => {
       }
     }
   ];
-  return callback2(DoubleLinkedList, items);
+  return _createClass(DoubleLinkedList, items);
 })();
 function moveKey(arg0, arg1) {
 
@@ -9417,20 +9195,17 @@ let closure_82 = (() => {
           if (!tmp.locked) {
             items = [];
             const _Set = Set;
-            const set = new Set();
             const arr2 = new closure_1_80();
             function getNextId(value) {
               let id;
               let tmp = value;
               do {
-                let tmp2 = tmp;
                 let nextSibling = tmp;
                 if (tmp) {
                   nextSibling = tmp.nextSibling;
                 }
                 id = nextSibling;
                 if (nextSibling) {
-                  let tmp4 = items;
                   let mirror = items.mirror;
                   id = mirror.getId(nextSibling);
                 }
@@ -9477,14 +9252,12 @@ let closure_82 = (() => {
                     HermesBuiltin.throwTypeError();
                   }
                   do {
-                    let tmp14 = tmp13;
                     let nextSibling = tmp13;
                     if (tmp13) {
                       nextSibling = tmp13.nextSibling;
                     }
                     id1 = nextSibling;
                     if (nextSibling) {
-                      let tmp16 = items;
                       let mirror2 = items.mirror;
                       id1 = mirror2.getId(nextSibling);
                     }
@@ -9516,7 +9289,6 @@ let closure_82 = (() => {
             }
             if (tmp.mapRemoves.length) {
               do {
-                let tmp13 = items;
                 tmp = items;
                 let mirror = items.mirror;
                 let mapRemoves = items.mapRemoves;
@@ -9529,58 +9301,38 @@ let closure_82 = (() => {
             const nextResult = iter.next();
             while (iter !== undefined) {
               let tmp20 = nextResult;
-              let tmp21 = closure_1_83;
-              let tmp22 = items;
               let tmp23 = items;
               let tmp24 = closure_1_83(items.removes, nextResult, items.mirror);
               if (tmp24) {
-                let tmp25 = tmp22;
                 let movedSet2 = tmp23.movedSet;
-                let tmp26 = nextResult;
                 tmp24 = !movedSet2.has(tmp20.parentNode);
               }
               if (!tmp24) {
-                let tmp27 = nextResult;
                 let pushAddResult = pushAdd(tmp20);
               }
               continue;
             }
             const addedSet = items.addedSet;
             for (const item10064 of addedSet) {
-              let tmp33 = item10064;
-              let tmp35 = items;
               let tmp36 = items;
-              let tmp34 = closure_1_84;
               if (!closure_1_84(items.droppedSet, item10064)) {
-                let tmp37 = closure_1_83;
-                let tmp38 = tmp35;
-                let tmp39 = item10064;
-                if (!closure_1_83(tmp36.removes, tmp33, tmp36.mirror)) {
-                  let tmp40 = item10064;
-                  let pushAddResult1 = pushAdd(tmp33);
+                if (!closure_1_83(tmp36.removes, item10064, tmp36.mirror)) {
+                  let pushAddResult1 = pushAdd(item10064);
                 }
                 continue;
               }
-              let tmp42 = tmp35;
-              let tmp43 = item10064;
-              if (tmp34(tmp36.movedSet, tmp33)) {
-                let tmp47 = item10064;
-                let pushAddResult2 = pushAdd(tmp33);
+              if (closure_1_84(tmp36.movedSet, item10064)) {
+                let pushAddResult2 = pushAdd(item10064);
               } else {
-                let tmp44 = tmp35;
                 let droppedSet = tmp36.droppedSet;
-                let tmp45 = item10064;
-                let addResult = droppedSet.add(tmp33);
+                let addResult = droppedSet.add(item10064);
               }
             }
             let previous = null;
             if (arr2.length) {
               while (true) {
-                let tmp50 = previous;
                 let tmp51 = null;
                 if (previous) {
-                  let tmp52 = items;
-                  let tmp53 = items;
                   let mirror2 = items.mirror;
                   let id = mirror2.getId(previous.value.parentNode);
                   let tmp55 = -1 !== id && -1 !== getNextId(previous.value);
@@ -9596,10 +9348,8 @@ let closure_82 = (() => {
                   if (iter3) {
                     while (true) {
                       previous = iter3.previous;
-                      let tmp56 = iter3;
                       if (iter3) {
                         let mirror3 = items.mirror;
-                        let tmp57 = items;
                         let tmp58 = items;
                         let id1 = mirror3.getId(iter3.value.parentNode);
                         if (-1 !== getNextId(iter3.value)) {
@@ -9610,7 +9360,6 @@ let closure_82 = (() => {
                             let value = iter3.value;
                             if (value.parentNode) {
                               if (value.parentNode.nodeType === globalThis.Node.DOCUMENT_FRAGMENT_NODE) {
-                                let tmp60 = tmp57;
                                 let mirror4 = tmp58.mirror;
                                 iter2 = iter3;
                                 if (-1 !== mirror4.getId(value.parentNode.host)) {
@@ -9648,39 +9397,38 @@ let closure_82 = (() => {
             }
             obj = { texts: null, attributes: null, removes: null, adds: null };
             const texts = items.texts;
-            const mapped = texts.map((node) => {
+            const mapped = texts.map((item, index) => {
               const mirror = items.mirror;
-              return { id: mirror.getId(node.node), value: node.value };
+              return { id: mirror.getId(item.node), value: item.value };
             });
-            const found = mapped.filter((id) => !set.has(id.id));
-            obj[0] = found.filter((id) => {
+            const found = mapped.filter((item, index) => !set.has(item.id));
+            obj[0] = found.filter((item, index) => {
               const mirror = items.mirror;
-              return mirror.has(id.id);
+              return mirror.has(item.id);
             });
             let attributes = items.attributes;
-            const mapped1 = attributes.map((attributes) => {
-              attributes = attributes.attributes;
+            const mapped1 = attributes.map((item, index) => {
+              const attributes = item.attributes;
               if (typeof attributes.style === "string") {
                 const _JSON = JSON;
-                const json = JSON.stringify(attributes.styleDiff);
+                const json = JSON.stringify(item.styleDiff);
                 const _JSON2 = JSON;
                 let tmp = json.length < attributes.style.length;
                 if (tmp) {
-                  tmp = json + JSON.stringify(attributes._unchangedStyles).split("var(").length === attributes.style.split("var(").length;
-                  const str = json + JSON.stringify(attributes._unchangedStyles);
-                  const str3 = attributes.style;
+                  tmp = json + JSON.stringify(item._unchangedStyles).split("var(").length === attributes.style.split("var(").length;
+                  const str = json + JSON.stringify(item._unchangedStyles);
                 }
                 if (tmp) {
-                  attributes.style = attributes.styleDiff;
+                  attributes.style = item.styleDiff;
                 }
               }
               const mirror = items.mirror;
-              return { id: mirror.getId(attributes.node), attributes };
+              return { id: mirror.getId(item.node), attributes };
             });
-            const found1 = mapped1.filter((id) => !set.has(id.id));
-            obj[1] = found1.filter((id) => {
+            const found1 = mapped1.filter((item, index) => !set.has(item.id));
+            obj[1] = found1.filter((item, index) => {
               const mirror = items.mirror;
-              return mirror.has(id.id);
+              return mirror.has(item.id);
             });
             obj[2] = items.removes;
             obj[3] = items;
@@ -9703,6 +9451,7 @@ let closure_82 = (() => {
               obj2.movedMap = {};
               obj2.mutationCb(obj);
             }
+            const set = new Set();
             tmp65 = obj.texts.length || obj.attributes.length || obj.removes.length || obj.adds.length;
           }
         }
@@ -9783,7 +9532,6 @@ let closure_82 = (() => {
                 }
                 if (tmp10) {
                   tmp10 = "password" === target.oldValue || "".toLowerCase();
-                  const str8 = target.oldValue || "";
                 }
                 if (tmp10) {
                   const attr1 = target.setAttribute("data-rr-is-password", "true");
@@ -9818,27 +9566,18 @@ let closure_82 = (() => {
                       let propertyPriority = style2.getPropertyPriority(nextResult);
                       let style3 = element.style;
                       if (propertyValue === style3.getPropertyValue(nextResult)) {
-                        let tmp31 = propertyPriority;
                         let style4 = element.style;
-                        let tmp32 = nextResult;
                         if (propertyPriority === style4.getPropertyPriority(tmp27)) {
-                          let tmp33 = nextResult;
-                          let tmp34 = propertyValue;
                           let items = [tmp29, ];
-                          let tmp35 = propertyPriority;
                           items[1] = propertyPriority;
                           tmp7._unchangedStyles[tmp27] = items;
                           continue;
                         }
                       }
-                      let tmp36 = nextResult;
-                      let tmp37 = propertyPriority;
                       if ("" === propertyPriority) {
                         let items1 = propertyValue;
                       } else {
-                        let tmp38 = propertyValue;
                         items1 = [tmp29, ];
-                        let tmp39 = propertyPriority;
                         items1[1] = propertyPriority;
                       }
                       tmp7.styleDiff[tmp27] = items1;
@@ -9847,10 +9586,8 @@ let closure_82 = (() => {
                     const arr2 = Array.from(element.style);
                     for (const item10147 of arr2) {
                       let style5 = target.style;
-                      let tmp43 = item10147;
                       if ("" === style5.getPropertyValue(item10147)) {
-                        let tmp44 = item10147;
-                        tmp7.styleDiff[tmp43] = false;
+                        tmp7.styleDiff[item10147] = false;
                       }
                       continue;
                     }
@@ -9862,12 +9599,12 @@ let closure_82 = (() => {
           } else if ("childList" === type) {
             if (!closure_1_65(target.target, obj.blockClass, obj.blockSelector, obj.unblockSelector, true)) {
               const addedNodes = target.addedNodes;
-              let item = addedNodes.forEach((arg0) => target.genAdds(arg0, target.target));
+              let item = addedNodes.forEach((item, index) => target.genAdds(item, target.target));
               const removedNodes = target.removedNodes;
-              let item1 = removedNodes.forEach((childNodes) => {
+              let item1 = removedNodes.forEach((item, index) => {
                 let arr = target;
                 const mirror = target.mirror;
-                const id = mirror.getId(childNodes);
+                const id = mirror.getId(item);
                 target = movedSet2.target;
                 let host;
                 if (target != null) {
@@ -9888,23 +9625,23 @@ let closure_82 = (() => {
                 let tmp7 = closure_2_65(tmp3.target, arr.blockClass, arr.blockSelector, arr.unblockSelector, false);
                 if (!tmp7) {
                   const mirror3 = arr.mirror;
-                  tmp7 = -2 === mirror3.getId(childNodes);
+                  tmp7 = -2 === mirror3.getId(item);
                 }
                 if (!tmp7) {
                   const mirror4 = arr.mirror;
-                  tmp7 = -1 === mirror4.getId(childNodes);
+                  tmp7 = -1 === mirror4.getId(item);
                 }
                 if (!tmp7) {
                   ({ addedSet, addedSet: addedSet2 } = arr);
-                  if (addedSet.has(childNodes)) {
+                  if (addedSet.has(item)) {
                     movedSet2 = addedSet2;
-                    addedSet2.delete(childNodes);
-                    childNodes = childNodes.childNodes;
+                    addedSet2.delete(item);
+                    let childNodes = item.childNodes;
                     if (childNodes != null) {
-                      let item = childNodes.forEach(() => { ... });
+                      item = childNodes.forEach(() => { ... });
                     }
                     const droppedSet = arr.droppedSet;
-                    droppedSet.add(childNodes);
+                    droppedSet.add(item);
                   } else {
                     let hasItem = addedSet2.has(tmp3.target);
                     if (hasItem) {
@@ -9978,7 +9715,7 @@ let closure_82 = (() => {
                     }
                     if (!hasItem) {
                       const movedSet = arr.movedSet;
-                      if (!movedSet.has(childNodes)) {
+                      if (!movedSet.has(item)) {
                         const removes = arr.removes;
                         obj = { parentId: null, id: null, isShadow: null };
                         obj[0] = id1;
@@ -9996,7 +9733,6 @@ let closure_82 = (() => {
                         if (!BooleanResult) {
                           obj[2] = !tmp26;
                           arr = removes.push(obj);
-                          const tmp29 = !tmp26;
                         } else {
                           const target5 = tmp3.target;
                           const _Object = Object;
@@ -10005,6 +9741,7 @@ let closure_82 = (() => {
                           str3 = "[object ShadowRoot]";
                           const tmp27 = typeof call === "unknown" ? str3() : call(target5);
                         }
+                        tmp26 = !BooleanResult;
                       } else {
                         if (typeof closure_2_81 !== "function") {
                           HermesBuiltin.throwTypeError();
@@ -10013,14 +9750,14 @@ let closure_82 = (() => {
                       }
                     }
                     movedSet2 = arr.movedSet;
-                    movedSet2.delete(childNodes);
-                    const childNodes1 = childNodes.childNodes;
+                    movedSet2.delete(item);
+                    const childNodes1 = item.childNodes;
                     if (childNodes1 != null) {
                       const item1 = childNodes1.forEach(() => { ... });
                     }
                   }
                   const mapRemoves = arr.mapRemoves;
-                  arr = mapRemoves.push(childNodes);
+                  arr = mapRemoves.push(item);
                 }
               });
             }
@@ -10074,7 +9811,7 @@ let closure_82 = (() => {
               if (!closure_1_65(childNodes, tmp.blockClass, tmp.blockSelector, tmp.unblockSelector, false)) {
                 if (childNodes.childNodes) {
                   childNodes = childNodes.childNodes;
-                  const item = childNodes.forEach((arg0) => childNodes.genAdds(arg0));
+                  const item = childNodes.forEach((item, index) => childNodes.genAdds(item));
                 }
                 let shadowRoot;
                 if (childNodes != null) {
@@ -10082,10 +9819,10 @@ let closure_82 = (() => {
                 }
                 if (Boolean(shadowRoot)) {
                   const childNodes1 = childNodes.shadowRoot.childNodes;
-                  const item1 = childNodes1.forEach((arg0) => {
+                  const item1 = childNodes1.forEach((item, index) => {
                     const processedNodeManager = childNodes.processedNodeManager;
-                    processedNodeManager.add(arg0, childNodes);
-                    childNodes.genAdds(arg0, childNodes);
+                    processedNodeManager.add(item, childNodes);
+                    childNodes.genAdds(item, childNodes);
                   });
                 }
               }
@@ -10103,8 +9840,8 @@ let closure_82 = (() => {
         const self = this;
         closure_0 = arg0;
         const items = ["mutationCb", "blockClass", "blockSelector", "unblockSelector", "maskAllText", "maskTextClass", "unmaskTextClass", "maskTextSelector", "unmaskTextSelector", "inlineStylesheet", "maskInputOptions", "maskAttributeFn", "maskTextFn", "maskInputFn", "keepIframeSrcFn", "recordCanvas", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager", "ignoreCSSAttributes"];
-        const item = items.forEach((arg0) => {
-          self[arg0] = table[arg0];
+        const item = items.forEach((item, index) => {
+          self[item] = table[item];
         });
       }
     },
@@ -10158,11 +9895,11 @@ let closure_82 = (() => {
       }
     }
   ];
-  return callback2(MutationBuffer, items);
+  return _createClass(MutationBuffer, items);
 })();
 function callbackWrapper(arg0) {
   closure_0 = arg0;
-  return closure_79 ? ((Pause, arg1) => {
+  return closure_79 ? ((event, arg1) => {
     items = [...arguments];
     try {
       const items1 = [];
@@ -10224,21 +9961,21 @@ let closure_98 = (() => {
         const self = this;
         const idToRemoteIdMap = this.getIdToRemoteIdMap(closure_1);
         const remoteIdToIdMap = this.getRemoteIdToIdMap(closure_1);
-        return arr.map((arg0) => self.getId(closure_1, arg0, closure_2, closure_0));
+        return arr.map((item, index) => self.getId(closure_1, item, closure_2, closure_0));
       }
     },
     {
       key: "getRemoteId",
-      value: function getRemoteId(closure_1, num, closure_0) {
+      value: function getRemoteId(closure_1, item, closure_0) {
         let remoteIdToIdMap = closure_0;
         if (!closure_0) {
           const self = this;
           remoteIdToIdMap = this.getRemoteIdToIdMap(closure_1);
         }
-        if (typeof num !== "number") {
-          return num;
+        if (typeof item !== "number") {
+          return item;
         } else {
-          return remoteIdToIdMap.get(num) || -1;
+          return remoteIdToIdMap.get(item) || -1;
         }
       }
     },
@@ -10247,7 +9984,7 @@ let closure_98 = (() => {
       value: function getRemoteIds(closure_1, arr) {
         const self = this;
         const remoteIdToIdMap = this.getRemoteIdToIdMap(closure_1);
-        return arr.map((arg0) => self.getRemoteId(closure_1, arg0, closure_0));
+        return arr.map((item, index) => self.getRemoteId(closure_1, item, closure_0));
       }
     },
     {
@@ -10300,7 +10037,7 @@ let closure_98 = (() => {
       }
     }
   ];
-  return callback2(CrossOriginIframeMirror, items);
+  return _createClass(CrossOriginIframeMirror, items);
 })();
 let closure_99 = (() => {
   class IframeManagerNoop {
@@ -10333,7 +10070,7 @@ let closure_99 = (() => {
       }
     }
   ];
-  return callback2(IframeManagerNoop, items);
+  return _createClass(IframeManagerNoop, items);
 })();
 let closure_100 = (() => {
   class IframeManager {
@@ -10384,7 +10121,6 @@ let closure_100 = (() => {
       key: "attachIframe",
       value: function attachIframe(contentWindow, node) {
         const self = this;
-        obj = { adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
         obj = { parentId: mirror.getId(contentWindow), nextId: null, node };
         ({ mirror, mutationCb } = this);
         const items = [obj];
@@ -10441,8 +10177,7 @@ let closure_100 = (() => {
     {
       key: "transformCrossOriginEvent",
       value: function transformCrossOriginEvent(value, event) {
-        let self = this;
-        self = this;
+        const self = this;
         closure_0 = value;
         const type = event.type;
         if (FullSnapshot.FullSnapshot === type) {
@@ -10457,7 +10192,7 @@ let closure_100 = (() => {
           self.patchRootIdOnNode(event.data.node, id);
           obj = { timestamp: null, type: null, data: null };
           obj[0] = event.timestamp;
-          obj[1] = tmp.IncrementalSnapshot;
+          obj[1] = FullSnapshot.IncrementalSnapshot;
           obj = { source: null, adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
           obj[0] = closure_74.Mutation;
           obj = { parentId: null, nextId: null, node: null };
@@ -10472,70 +10207,70 @@ let closure_100 = (() => {
           obj[2] = obj;
           return obj;
         } else {
-          if (tmp.Meta !== type) {
-            if (tmp.Load !== type) {
-              if (tmp.DomContentLoaded !== type) {
-                if (tmp.Plugin === type) {
+          if (FullSnapshot.Meta !== type) {
+            if (FullSnapshot.Load !== type) {
+              if (FullSnapshot.DomContentLoaded !== type) {
+                if (FullSnapshot.Plugin === type) {
                   return event;
-                } else if (tmp.Custom === type) {
+                } else if (FullSnapshot.Custom === type) {
                   self.replaceIds(event.data.payload, value, ["id", "parentId", "previousId", "nextId"]);
                   return event;
                 } else {
-                  if (tmp.IncrementalSnapshot === type) {
+                  if (FullSnapshot.IncrementalSnapshot === type) {
                     const source = event.data.source;
                     if (closure_74.Mutation === source) {
                       const adds = event.data.adds;
-                      const item = adds.forEach((node) => {
-                        self.replaceIds(node, closure_0, ["parentId", "nextId", "previousId"]);
-                        self.replaceIdOnNode(node.node, closure_0);
+                      const item = adds.forEach((item, index) => {
+                        self.replaceIds(item, closure_0, ["parentId", "nextId", "previousId"]);
+                        self.replaceIdOnNode(item.node, closure_0);
                         const crossOriginIframeRootIdMap = self.crossOriginIframeRootIdMap;
                         value = crossOriginIframeRootIdMap.get(closure_0);
                         if (value) {
-                          self.patchRootIdOnNode(node.node, value);
+                          self.patchRootIdOnNode(item.node, value);
                         }
                       });
                       const removes = event.data.removes;
-                      const item1 = removes.forEach((data) => {
-                        self.replaceIds(data, closure_0, ["parentId", "id"]);
+                      const item1 = removes.forEach((item, index) => {
+                        self.replaceIds(item, closure_0, ["parentId", "id"]);
                       });
                       const attributes = event.data.attributes;
-                      const item2 = attributes.forEach((data) => {
-                        self.replaceIds(data, closure_0, ["id"]);
+                      const item2 = attributes.forEach((item, index) => {
+                        self.replaceIds(item, closure_0, ["id"]);
                       });
                       const texts = event.data.texts;
-                      const item3 = texts.forEach((data) => {
-                        self.replaceIds(data, closure_0, ["id"]);
+                      const item3 = texts.forEach((item, index) => {
+                        self.replaceIds(item, closure_0, ["id"]);
                       });
                       return event;
                     } else {
-                      if (tmp22.Drag !== source) {
-                        if (tmp22.TouchMove !== source) {
-                          if (tmp22.MouseMove !== source) {
-                            if (tmp22.ViewportResize === source) {
+                      if (closure_74.Drag !== source) {
+                        if (closure_74.TouchMove !== source) {
+                          if (closure_74.MouseMove !== source) {
+                            if (closure_74.ViewportResize === source) {
                               return false;
                             } else {
-                              if (tmp22.MediaInteraction !== source) {
-                                if (tmp22.MouseInteraction !== source) {
-                                  if (tmp22.Scroll !== source) {
-                                    if (tmp22.CanvasMutation !== source) {
-                                      if (tmp22.Input !== source) {
-                                        if (tmp22.StyleSheetRule !== source) {
-                                          if (tmp22.StyleDeclaration !== source) {
-                                            if (tmp22.Font === source) {
+                              if (closure_74.MediaInteraction !== source) {
+                                if (closure_74.MouseInteraction !== source) {
+                                  if (closure_74.Scroll !== source) {
+                                    if (closure_74.CanvasMutation !== source) {
+                                      if (closure_74.Input !== source) {
+                                        if (closure_74.StyleSheetRule !== source) {
+                                          if (closure_74.StyleDeclaration !== source) {
+                                            if (closure_74.Font === source) {
                                               return event;
-                                            } else if (tmp22.Selection === source) {
+                                            } else if (closure_74.Selection === source) {
                                               const ranges = event.data.ranges;
-                                              const item4 = ranges.forEach((data) => {
-                                                self.replaceIds(data, closure_0, ["start", "end"]);
+                                              const item4 = ranges.forEach((item, index) => {
+                                                self.replaceIds(item, closure_0, ["start", "end"]);
                                               });
                                               return event;
-                                            } else if (tmp22.AdoptedStyleSheet === source) {
+                                            } else if (closure_74.AdoptedStyleSheet === source) {
                                               self.replaceIds(event.data, value, ["id"]);
                                               self.replaceStyleIds(event.data, value, ["styleIds"]);
                                               const styles = event.data.styles;
                                               if (styles != null) {
-                                                const item5 = styles.forEach((data) => {
-                                                  self.replaceStyleIds(data, closure_0, ["styleId"]);
+                                                const item5 = styles.forEach((item, index) => {
+                                                  self.replaceStyleIds(item, closure_0, ["styleId"]);
                                                 });
                                               }
                                               return event;
@@ -10557,8 +10292,8 @@ let closure_100 = (() => {
                         }
                       }
                       const positions = event.data.positions;
-                      const item6 = positions.forEach((data) => {
-                        self.replaceIds(data, closure_0, ["id"]);
+                      const item6 = positions.forEach((item, index) => {
+                        self.replaceIds(item, closure_0, ["id"]);
                       });
                       return event;
                     }
@@ -10582,13 +10317,10 @@ let closure_100 = (() => {
           let _Array = Array;
           let isArray = Array.isArray(arg1[nextResult]);
           if (!isArray) {
-            let tmp4 = nextResult;
             isArray = typeof arg1[tmp2] === "number";
           }
           if (isArray) {
             let _Array2 = Array;
-            let tmp5 = nextResult;
-            let tmp6 = nextResult;
             if (Array.isArray(arg1[tmp2])) {
               arg1[tmp2] = getIds.getIds(arg2, arg1[tmp2]);
             } else {
@@ -10619,8 +10351,8 @@ let closure_100 = (() => {
         this.replaceIds(node, closure_0, ["id", "rootId"]);
         if ("childNodes" in node) {
           const childNodes = node.childNodes;
-          const item = childNodes.forEach((node) => {
-            self.replaceIdOnNode(node, closure_0);
+          const item = childNodes.forEach((item, index) => {
+            self.replaceIdOnNode(item, closure_0);
           });
         }
       }
@@ -10634,14 +10366,14 @@ let closure_100 = (() => {
         }
         if ("childNodes" in node) {
           const childNodes = node.childNodes;
-          const item = childNodes.forEach((node) => {
-            self.patchRootIdOnNode(node, closure_0);
+          const item = childNodes.forEach((item, index) => {
+            self.patchRootIdOnNode(item, closure_0);
           });
         }
       }
     }
   ];
-  return callback2(IframeManager, items);
+  return _createClass(IframeManager, items);
 })();
 let closure_101 = (() => {
   class ShadowDomManagerNoop {
@@ -10676,7 +10408,7 @@ let closure_101 = (() => {
       }
     }
   ];
-  return callback2(ShadowDomManagerNoop, items);
+  return _createClass(ShadowDomManagerNoop, items);
 })();
 let closure_102 = (() => {
   class ShadowDomManager {
@@ -10701,8 +10433,7 @@ let closure_102 = (() => {
     {
       key: "addShadowRoot",
       value: function addShadowRoot(doc, doc2) {
-        let self = this;
-        self = this;
+        const self = this;
         closure_1 = doc;
         const call = toString.call;
         if ("[object ShadowRoot]" === (typeof call === "unknown" ? toString() : call(doc))) {
@@ -10728,16 +10459,17 @@ let closure_102 = (() => {
             callback2(() => {
               let adoptedStyleSheets = doc.adoptedStyleSheets;
               if (adoptedStyleSheets) {
-                adoptedStyleSheets = tmp.adoptedStyleSheets.length > 0;
+                adoptedStyleSheets = doc.adoptedStyleSheets.length > 0;
               }
               if (adoptedStyleSheets) {
                 const stylesheetManager = self.bypassOptions.stylesheetManager;
                 const mirror = self.mirror;
-                stylesheetManager.adoptStyleSheets(tmp.adoptedStyleSheets, mirror.getId(tmp.host));
+                stylesheetManager.adoptStyleSheets(doc.adoptedStyleSheets, mirror.getId(doc.host));
               }
               self.restoreHandlers.push(closure_1_96({ mirror: self.mirror, stylesheetManager: self.bypassOptions.stylesheetManager }, doc));
+              const restoreHandlers = self.restoreHandlers;
             }, 0);
-            const restoreHandlers = self.restoreHandlers;
+            let restoreHandlers = self.restoreHandlers;
             const restoreHandlers1 = self.restoreHandlers;
           }
         }
@@ -10772,15 +10504,15 @@ let closure_102 = (() => {
           closure_0 = arg0;
           return function(arg0) {
             self = this;
-            const call = closure_0.call;
+            const call = callback.call;
             let shadowRoot = self.shadowRoot;
             if (shadowRoot) {
               shadowRoot = closure_2_69(self);
             }
             if (shadowRoot) {
-              closure_1_1.addShadowRoot(self.shadowRoot, closure_0);
+              closure_1_1.addShadowRoot(self.shadowRoot, callback);
             }
-            return typeof call === "unknown" ? closure_0(arg0) : call(self, arg0);
+            return typeof call === "unknown" ? callback(arg0) : call(self, arg0);
           };
         }));
       }
@@ -10788,9 +10520,9 @@ let closure_102 = (() => {
     {
       key: "reset",
       value: function reset() {
-        const item = this.restoreHandlers.forEach((arg0) => {
+        const item = this.restoreHandlers.forEach((item, index) => {
           try {
-            arg0();
+            item();
           } catch (err) {
           }
         });
@@ -10802,7 +10534,7 @@ let closure_102 = (() => {
       }
     }
   ];
-  return callback2(ShadowDomManager, items);
+  return _createClass(ShadowDomManager, items);
 })();
 if (typeof Uint8Array === "undefined") {
   let items = [];
