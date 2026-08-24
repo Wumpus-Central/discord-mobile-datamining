@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 16, height: 16, scales: [1, 2, 3], hash: "2b87933d8084823c9896755fb55aa5f1", name: "ic_spotify_white_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "98f362bfbfa9b6f14fb4a7feec2a0587", name: "FacebookNeutralIcon", type: "png" });

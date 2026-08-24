@@ -1,4 +1,4 @@
 // === Module 4138: ? ===
 
 // Module 4138
-arg5.Fit = { Fill: 0, [0]: "Fill", Contain: 1, [1]: "Contain", Cover: 2, [2]: "Cover", FitWidth: 3, [3]: "FitWidth", FitHeight: 4, [4]: "FitHeight", None: 5, [5]: "None", ScaleDown: 6, [6]: "ScaleDown", Layout: 7, [7]: "Layout" };
+arg5.RiveErrorType = { Unknown: 0, [0]: "Unknown", FileNotFound: 1, [1]: "FileNotFound", MalformedFile: 2, [2]: "MalformedFile", IncorrectArtboardName: 3, [3]: "IncorrectArtboardName", IncorrectStateMachineName: 4, [4]: "IncorrectStateMachineName", ViewModelInstanceNotFound: 6, [6]: "ViewModelInstanceNotFound", IncorrectStateMachineInputName: 8, [8]: "IncorrectStateMachineInputName" };

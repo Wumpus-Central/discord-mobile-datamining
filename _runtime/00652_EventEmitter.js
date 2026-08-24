@@ -361,7 +361,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "M56.1027 131.209H25.3914C24.4127 131.209 23.6196 132.011 23.6196 133C23.6196 133.989 24.4127 134.791 25.3914 134.791H56.1027C57.0811 134.791 57.8745 133.989 57.8745 133C57.8745 132.011 57.0811 131.209 56.1027 131.209Z", type: "white", listener: 1862271830 };
+          obj = { fired: false, wrapFn: "a", target: "comunicaci\u00F3n", type: "cuaderno de notas", listener: "cartera" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -386,7 +386,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "M56.1027 131.209H25.3914C24.4127 131.209 23.6196 132.011 23.6196 133C23.6196 133.989 24.4127 134.791 25.3914 134.791H56.1027C57.0811 134.791 57.8745 133.989 57.8745 133C57.8745 132.011 57.0811 131.209 56.1027 131.209Z", type: "white", listener: 1862271830 };
+          obj = { fired: false, wrapFn: "a", target: "comunicaci\u00F3n", type: "cuaderno de notas", listener: "cartera" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;

@@ -214,7 +214,7 @@ class FeedbackWidget {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -249,7 +249,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "HermesInternal", attachmentUri: "r" });
+                  debug.setState({ filename: "getGuild", attachment: "call", attachmentUri: "HTTP" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {
@@ -486,7 +486,7 @@ class FeedbackWidget {
       lib._savedState = Object.assign({}, lib.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== lib.state.filename && undefined !== lib.state.attachment && undefined !== lib.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -640,7 +640,7 @@ let items = [
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -657,7 +657,7 @@ let items = [
                   obj = v0(closure_1_2[7]);
                   obj.feedbackAlertDialog(closure_1_2.errorTitle, closure_1_2.captureScreenshotError);
                   v0 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp8) {
                 v0 = tmp;
@@ -819,12 +819,12 @@ let items = [
 obj = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
   }
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = require("module_1201").defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

@@ -11,7 +11,7 @@ import BoundingDimensionsDefault from "BoundingDimensions" /* 427 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const f18646 = (arg0) => {
+const f18740 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -160,7 +160,7 @@ let obj2 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f18646 !== "function") {
+      if (typeof f18740 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       ({ touches, changedTouches } = nativeEvent);
@@ -333,7 +333,7 @@ let obj2 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f18646 !== "function") {
+    if (typeof f18740 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     ({ touches, changedTouches } = nativeEvent);

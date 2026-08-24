@@ -1,7 +1,7 @@
 // === Module 3788: _typeof ===
 
 // Module 3788 (_typeof)
-import Parser2 from "Parser" /* 3778 */;
+import Parser2 from "Parser" /* 3781 */;
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneMonthParser, Parser) {
+function _setPrototypeOf(QuarterParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneMonthParser, Parser) {
-      StandAloneMonthParser.__proto__ = Parser;
-      return StandAloneMonthParser;
+    _setPrototypeOf = function _setPrototypeOf(QuarterParser, Parser) {
+      QuarterParser.__proto__ = Parser;
+      return QuarterParser;
     };
   }
-  return _setPrototypeOf(StandAloneMonthParser, Parser);
+  return _setPrototypeOf(QuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -58,7 +58,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class StandAloneMonthParser {
+class QuarterParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -94,10 +94,10 @@ class StandAloneMonthParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 120, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 110;
-          applyResult.priority = 110;
+          num3 = 120;
+          applyResult.priority = 120;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -108,7 +108,7 @@ class StandAloneMonthParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["Y", "R", "q", "Q", "M", "w", "I", "D", "i", "e", "c", "t", "T"];
+          items1 = ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -132,7 +132,7 @@ class StandAloneMonthParser {
     }
   }
 }
-closure_1 = StandAloneMonthParser;
+closure_1 = QuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -144,12 +144,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: StandAloneMonthParser, writable: true, configurable: true };
-StandAloneMonthParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: QuarterParser, writable: true, configurable: true };
+QuarterParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(StandAloneMonthParser, Parser);
+  _setPrototypeOf(QuarterParser, Parser);
 }
-_createSuperInternal = StandAloneMonthParser;
+_createSuperInternal = QuarterParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,22 +210,20 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    function valueCallback(arg0) {
-      return arg0 - 1;
+    if ("Q" !== arg1) {
+      if ("QQ" !== arg1) {
+        if ("Qo" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
+        } else if ("QQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else if ("QQQQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else {
+          return ordinalNumber.quarter(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        }
+      }
     }
-    if ("L" === arg1) {
-      return _createSuperInternal(3780).mapValue(_createSuperInternal(3780).parseNumericPattern(_createSuperInternal(3781).numericPatterns.month, arg0), valueCallback);
-    } else if ("LL" === arg1) {
-      return _createSuperInternal(3780).mapValue(_createSuperInternal(3780).parseNDigits(2, arg0), valueCallback);
-    } else if ("Lo" === arg1) {
-      return _createSuperInternal(3780).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
-    } else if ("LLL" === arg1) {
-      return ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
-    } else if ("LLLLL" === arg1) {
-      return ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
-    } else {
-      return ordinalNumber.month(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
-    }
+    return _createSuperInternal(table[0]).parseNDigits(arg1.length, arg0);
   }
 };
 let items = [
@@ -233,9 +231,9 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
+      let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 11;
+        tmp = arg1 <= 4;
       }
       return tmp;
     }
@@ -243,7 +241,7 @@ let items = [
   {
     key: "set",
     value: function set(setUTCMonth) {
-      setUTCMonth.setUTCMonth(arg2, 1);
+      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
       setUTCMonth.setUTCHours(0, 0, 0, 0);
       return setUTCMonth;
     }
@@ -268,4 +266,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { StandAloneMonthParser };
+export { QuarterParser };

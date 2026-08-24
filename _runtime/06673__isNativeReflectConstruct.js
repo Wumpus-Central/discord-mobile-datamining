@@ -1,20 +1,14 @@
 // === Module 6673: _isNativeReflectConstruct ===
 
 // Module 6673 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import extractFontDefault from "extractFont" /* 6593 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6595 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 6670 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6674 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6646 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const TextPath = arg1;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,102 +28,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
-noopAll;
-class TextPath {
+class FeTurbulence {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_5(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(closure_0);
-    tmp3 = closure_6;
+    tmp = closure_2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = closure_1_1(closure_1_2[8])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const merged = Object.assign(matrix, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(matrix, true)));
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(matrix);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(TextPath, _isNativeReflectConstructDefault);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      ({ children, href } = props);
-      if (undefined === href) {
-        href = props.xlinkHref;
-      }
-      const startOffset = props.startOffset;
-      let num = 0;
-      if (undefined !== startOffset) {
-        num = startOffset;
-      }
-      ({ method, spacing, side, alignmentBaseline, midLine } = props);
-      let match = href;
-      if (href) {
-        match = href.match(TextPath(6587).idPattern);
-      }
-      let tmp5 = match;
-      if (match) {
-        tmp5 = match[1];
-      }
-      if (tmp5) {
-        obj1 = TextPath(6586);
-        const withoutXYResult = obj1.withoutXY(self, tmp);
-        const _Object = Object;
-        let obj = { children: null };
-        obj[0] = children;
-        obj = { href: null, startOffset: null, method: null, spacing: null, side: null, alignmentBaseline: null, midLine: null };
-        obj[0] = tmp5;
-        obj[1] = num;
-        obj[2] = method;
-        obj[3] = spacing;
-        obj[4] = side;
-        obj[5] = alignmentBaseline;
-        obj[6] = midLine;
-        const merged = Object.assign(withoutXYResult, extractFontDefault(obj, true), obj);
-        withoutXYResult.ref = self.refMethod;
-        obj1 = {};
-        const merged1 = Object.assign(withoutXYResult);
-        return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-      } else {
-        const _console = console;
-        console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-        obj = { ref: null, children: null };
-        obj[0] = self.refMethod;
-        obj[1] = children;
-        return jsx(_isNativeReflectConstructDefault2, { ref: null, children: null });
-      }
-      tmp = callback(props, closure_3);
-    }
+_inheritsDefault(FeTurbulence, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeTurbulence(6623).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

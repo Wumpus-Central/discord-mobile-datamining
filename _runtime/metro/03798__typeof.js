@@ -1,18 +1,16 @@
 // === Module 3798: _typeof ===
 
 // Module 3798 (_typeof)
-import Parser2 from "Parser" /* 3778 */;
-import setUTCDay from "setUTCDay" /* 3796 */;
+import Parser2 from "Parser" /* 3781 */;
+import setUTCDay from "setUTCDay" /* 3799 */;
 
-let _createSuperInternal = require;
-let closure_1 = dependencyMap;
-function _typeof(arg0) {
+let _createSuperInternal = function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
+      function _typeof(arg0) {
         return typeof arg0;
-      };
+      }
     }
     return _typeof(arg0);
   }
@@ -30,16 +28,16 @@ function _typeof(arg0) {
     }
     str = typeof arg0;
   };
-}
-function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
+};
+function _setPrototypeOf(DayParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
-      StandAloneLocalDayParser.__proto__ = Parser;
-      return StandAloneLocalDayParser;
+    _setPrototypeOf = function _setPrototypeOf(DayParser, Parser) {
+      DayParser.__proto__ = Parser;
+      return DayParser;
     };
   }
-  return _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  return _setPrototypeOf(DayParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -64,10 +62,10 @@ if (!setUTCDay) {
 } else {
   tmp3 = setUTCDay;
 }
-setUTCDay = tmp3;
+let closure_1 = tmp3;
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class StandAloneLocalDayParser {
+class DayParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -117,7 +115,7 @@ class StandAloneLocalDayParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"];
+          items1 = ["D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -141,7 +139,7 @@ class StandAloneLocalDayParser {
     }
   }
 }
-closure_1 = StandAloneLocalDayParser;
+closure_1 = DayParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -153,12 +151,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-obj = { value: StandAloneLocalDayParser, writable: true, configurable: true };
-StandAloneLocalDayParser.prototype = Object.create(prototype, { constructor: obj });
+obj = { value: DayParser, writable: true, configurable: true };
+DayParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  _setPrototypeOf(DayParser, Parser);
 }
-_createSuperInternal = StandAloneLocalDayParser;
+_createSuperInternal = DayParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,7 +208,7 @@ _createSuperInternal = function _createSuperInternal() {
     }
   } else {
     tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
+    if ("object" !== _createSuperInternal(constructResult)) {
       tmp8 = constructResult;
     }
   }
@@ -218,27 +216,21 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    _createSuperInternal = arg3;
-    function valueCallback(arg0) {
-      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
-    }
-    if ("c" !== arg1) {
-      if ("cc" !== arg1) {
-        if ("co" === arg1) {
-          return _createSuperInternal(3780).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
-        } else if ("ccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("ccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("cccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+  value: function parse(arg0, arg1, day) {
+    if ("E" !== arg1) {
+      if ("EE" !== arg1) {
+        if ("EEE" !== arg1) {
+          if ("EEEEE" === arg1) {
+            return day.day(arg0, { width: "narrow", context: "formatting" });
+          } else if ("EEEEEE" === arg1) {
+            return day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+          } else {
+            return day.day(arg0, { width: "wide", context: "formatting" }) || day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
+          }
         }
       }
     }
-    return _createSuperInternal(3780).mapValue(_createSuperInternal(3780).parseNDigits(arg1.length, arg0), valueCallback);
+    return day.day(arg0, { width: "abbreviated", context: "formatting" }) || day.day(arg0, { width: "short", context: "formatting" }) || day.day(arg0, { width: "narrow", context: "formatting" });
   }
 };
 let items = [
@@ -256,7 +248,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2, arg3) {
-      const defaultResult = setUTCDay.default(arg0, arg2, arg3);
+      const defaultResult = closure_1.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
     }
@@ -281,4 +273,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { StandAloneLocalDayParser };
+export { DayParser };

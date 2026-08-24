@@ -1,12 +1,10 @@
 // === Module 13729: ? ===
 
 // Module 13729
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13676 */;
-import _mod13710 from "module_13710" /* 13710 */;
-import defineProperty from "defineProperty" /* 13727 */;
+import assign from "assign" /* 13795 */;
+import module_13730 from "module_13730" /* 13730 */;
 
-
-export default getOwnPropertyDescriptor ? ((arg0, arg1, arg2) => defineProperty.f(arg0, arg1, _mod13710(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj[3] = Object.assign !== assign;
+obj = { assign };
+module_13730(obj, obj);

@@ -145,7 +145,7 @@ export default forwardRef((bottomOffset) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -716,7 +716,7 @@ export default forwardRef((bottomOffset) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -759,7 +759,7 @@ export default forwardRef((bottomOffset) => {
           fn.__initData = closure_1_22;
           closure_1_0(table[3]).runOnUI(fn)();
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c3 = tmp;

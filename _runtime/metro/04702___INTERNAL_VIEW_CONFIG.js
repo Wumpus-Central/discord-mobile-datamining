@@ -2,10 +2,14 @@
 
 // Module 4702 (__INTERNAL_VIEW_CONFIG)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
-const obj = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+let obj = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
+obj = { iosPreventReattachmentOfDismissedScreens: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
+obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSScreenFooter", () => obj);
+export default setRuntimeConfigProvider.get("RNSScreenStack", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;
