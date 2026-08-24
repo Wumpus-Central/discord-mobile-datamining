@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
-import registerAssetDefault from "../../../../../_runtime/09465_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09502_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
       obj[1] = intl2.string(setMode(1236).t.brPQ5U);
       obj[2] = callback;
       obj[3] = activityName;
-      obj[1] = jsx(setMode(4745).Button, { icon: null, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
+      obj[1] = jsx(setMode(4750).Button, { icon: null, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true });
       let tmp3 = <View icon={null} accessibilityLabel={null} onPress={null} text={null} size="sm" variant="secondary-overlay" maxFontSizeMultiplier={1} shrink />;
     }
     return tmp3;
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
   const intl = setMode(1236).intl;
   obj[1] = intl.string(setMode(1236).t.brPQ5U);
   obj[2] = callback;
-  tmp3 = jsx(setMode(8035).IconButton, { icon: registerAssetDefault, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
+  tmp3 = jsx(setMode(8074).IconButton, { icon: registerAssetDefault, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
 });
 const result = require("set").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
 

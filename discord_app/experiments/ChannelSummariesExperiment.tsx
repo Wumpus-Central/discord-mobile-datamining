@@ -5,7 +5,6 @@ import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
 import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
 import closure_3 from "../stores/GuildStore.tsx";
 import ME from "../Constants.tsx";
-import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 function canSeeChannelSummaries(channel, flag, arg2) {
   if (flag === undefined) {
@@ -134,7 +133,7 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let id;
     if (lib != null) {
       id = lib.id;

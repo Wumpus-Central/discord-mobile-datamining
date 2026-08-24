@@ -6,7 +6,6 @@ import useNewUserDismissibleContent from "NewUserDismissibleContentRegistry.tsx"
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
 import closure_5 from "../../stores/SelectedGuildStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 class UNSAFE_isDismissibleContentDismissed {
@@ -137,7 +136,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -234,7 +233,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -290,7 +289,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
             obj = callback(obj1[6]);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp26) {
           c6 = tmp;
@@ -330,7 +329,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -370,7 +369,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
             obj = callback(1379);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c6 = tmp;
@@ -409,7 +408,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -452,7 +451,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
             obj = callback(1379);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c7 = tmp;
@@ -480,7 +479,7 @@ export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissible
     obj = {};
   }
   const items = [closure_4, closure_5];
-  return _initialize.useStateFromStores(items, () => closure_1_6(closure_0, obj));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6(closure_0, obj));
 };
 export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(DONUT_MOBILE_NUX, arg1) {
   const self = this;

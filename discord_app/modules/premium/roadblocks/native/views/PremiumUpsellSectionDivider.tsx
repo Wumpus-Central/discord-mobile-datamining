@@ -2,7 +2,7 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import keys from "../../../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04756_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04761_LinearGradient.js";
 import LockIcon2 from "../../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -84,10 +84,10 @@ export default function PremiumUpsellSectionDivider(arg0) {
     lock = lock.lock;
     obj3[1] = lock;
     obj2[4] = tmp3(LockIcon, obj3);
-    obj2 = tmp3(tmp4(4756), obj2);
+    obj2 = tmp3(tmp4(4761), obj2);
     obj1[1] = obj2;
     tmp3(tmp2, obj1);
-    const tmp4Result = tmp4(4756);
+    const tmp4Result = tmp4(4761);
   }
 };
 export const PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT = 28;

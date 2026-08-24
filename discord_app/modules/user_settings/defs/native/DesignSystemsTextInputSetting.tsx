@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
   getComponent() {
-    return Sample.default;
+    return Sample /* Sample */.default;
   }
 };
 const route = createToggle.createRoute(obj);

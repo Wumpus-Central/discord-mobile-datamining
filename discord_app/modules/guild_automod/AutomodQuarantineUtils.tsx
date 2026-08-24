@@ -9,7 +9,6 @@ import closure_8 from "../../stores/SelectedGuildStore.tsx";
 import ME from "../../Constants.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { ProfileCustomizationSubsection as closure_12 } from "../user_settings/UserSettingsConstants.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 ({ Permissions: c9, UserSettingsSections: c10 } = ME);
@@ -19,7 +18,7 @@ export const useCurrentUserHasAutomodQuarantinedProfile = function useCurrentUse
   const _require = arg0;
   const items = [closure_4, closure_5];
   const items1 = [arg0];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     if (null == callback) {
       return false;
     } else {
@@ -32,12 +31,12 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
   const _require = id;
   let items = [closure_4, closure_5, closure_8, closure_6];
   let items1 = [id];
-  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
     let guildId = id;
     if (id == null) {
       guildId = closure_1_8.getGuildId();
     }
-    let obj = { nick: "r", bio: "accessibilityRole" };
+    let obj = { nick: "Array", bio: "ct" };
     let guild = closure_1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

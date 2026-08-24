@@ -17,8 +17,6 @@ import closure_11 from "../../../../../stores/UserStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
 
 require = arg1;
 function getSelectedGuildChannel() {
@@ -643,7 +641,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
   items = [tmp.content, { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom }];
   obj = { size: ThemesDefault.space.PX_16 };
   items1 = [
-    callback(_Button.Spacer, obj),
+    callback(require("../../../../../design/void/native.tsx").Spacer, obj),
     closure_25.map((title) => {
       let obj = { children: null };
       obj = {
@@ -688,7 +686,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
       }, label.label);
     })
   };
-  items1[2] = callback(_TableRowGroupTitle.TableRowGroup, obj);
+  items1[2] = callback(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
   obj[2] = items1;
   return callback2(ScrollView, obj);
 };

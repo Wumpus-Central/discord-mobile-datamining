@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS,
   getComponent() {
-    return FamilyCenterParentalControlsSettings.default;
+    return FamilyCenterParentalControlsSettings /* FamilyCenterParentalControlsSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

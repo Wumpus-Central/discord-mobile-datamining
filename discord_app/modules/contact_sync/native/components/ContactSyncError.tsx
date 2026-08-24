@@ -1,10 +1,8 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncError.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
@@ -22,7 +20,7 @@ export default function ContactSyncError(error) {
     tmp2 = "" !== error;
   }
   _require = tmp2;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const fn = function l() {
     let obj = callback(closure_1_2[4]);
     let num = 0;
@@ -32,12 +30,12 @@ export default function ContactSyncError(error) {
     obj = { height: obj.withTiming(num) };
     return obj;
   };
-  obj = { withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
+  obj = { withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
   fn.__closure = obj;
   fn.__workletHash = 14558247431913;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: jsx(_Text.Text, obj1) };
+  obj = { style: items, children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1) };
   items = [tmp.container, error.style, animatedStyle];
-  return jsx(_modDef4115.View, { style: items, children: jsx(_Text.Text, obj1) });
+  return jsx(_modDef4119.View, { style: items, children: jsx(require("../../../../design/components/Text/native/Text.tsx").Text, obj1) });
 };

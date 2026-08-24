@@ -34,10 +34,10 @@ class CustomActivityLinkRecord {
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
-    let tmpResult = tmp(7247);
+    let tmpResult = tmp(7285);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12414).CustomLinkType.QUICK) {
-    tmpResult = tmp(12411);
+  } else if (self.type === tmp(12466).CustomLinkType.QUICK) {
+    tmpResult = tmp(12463);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

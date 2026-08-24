@@ -1,7 +1,7 @@
 // discord_app/records/LibraryApplicationRecord.tsx
 import hasFlagAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import toJSDefault from "../lib/Record.tsx";
-import tDefault from "../../_runtime/03975_t.js";
+import tDefault from "../../_runtime/03978_t.js";
 import closure_3 from "../modules/applications/ApplicationStore.tsx";
 import closure_4 from "EntitlementRecord.tsx";
 import ME from "../Constants.tsx";

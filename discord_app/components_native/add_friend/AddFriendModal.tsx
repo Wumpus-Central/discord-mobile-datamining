@@ -10,7 +10,6 @@ import { ContactPermissions } from "../../modules/contact_sync/native/ContactSyn
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../modules/rebrand/native/TextStyles.tsx";
-import { NavigationStack } from "../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 function AddFriendModalScene(onSkip) {
@@ -141,5 +140,5 @@ export default function AddFriendModal(arg0) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback2(_NavigationStack.Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  return callback2(require("../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

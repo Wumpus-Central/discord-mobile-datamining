@@ -61,7 +61,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   } else {
     const obj4 = { style: null };
     obj4[0] = tmp.imageSkeleton;
-    tmp12Result = tmp12(tmp2(12278).ImageSkeleton, obj4);
+    tmp12Result = tmp12(tmp2(12330).ImageSkeleton, obj4);
   }
   const obj5 = { children: null };
   items3[1] = tmp12Result;

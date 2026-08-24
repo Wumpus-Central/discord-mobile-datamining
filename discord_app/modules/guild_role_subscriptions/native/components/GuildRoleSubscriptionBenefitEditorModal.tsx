@@ -16,7 +16,6 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 function DeleteButton(onDelete) {
@@ -63,7 +62,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -169,7 +168,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  const tmp4 = first(13358)();
+  const tmp4 = first(13416)();
   const tmp5 = callback(closure_9.useNameState(), 2);
   first = tmp5[0];
   dependencyMap = tmp6;
@@ -204,12 +203,12 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   }
   if (!tmp13) {
     if (benefitType.benefitType === _handleSave.CHANNEL) {
-      const intl2 = _getSystemLocale.intl;
-      let stringResult = intl2.string(_getSystemLocale.t.Odqwp9);
+      const intl2 = require("../../../../intl/index.native.tsx").intl;
+      let stringResult = intl2.string(require("../../../../intl/index.native.tsx").t.Odqwp9);
       let tmp20 = _require;
     } else {
-      const intl = _getSystemLocale.intl;
-      stringResult = intl.string(_getSystemLocale.t["0rVUnI"]);
+      const intl = require("../../../../intl/index.native.tsx").intl;
+      stringResult = intl.string(require("../../../../intl/index.native.tsx").t["0rVUnI"]);
       tmp20 = _require;
     }
     if (benefitType.benefitType === _handleSave.CHANNEL) {
@@ -232,9 +231,9 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       obj[1] = benefitType.guildId;
       obj[2] = function handleChannelSelected(id) {
         callback3(id.id);
-        dependencyMap(benefitType(4984).computeChannelName(id, first4, first3));
+        dependencyMap(benefitType(4989).computeChannelName(id, first4, first3));
       };
-      let tmp25 = callback2(tmp2(16975), obj);
+      let tmp25 = callback2(tmp2(17068), obj);
       let tmp26 = callback2;
     } else {
       obj = { style: null, showTopContainer: false, multiline: false, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
@@ -245,7 +244,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       obj[5] = intl9.string(tmp20(1236).t["kV54/Y"]);
       obj[6] = tmp6;
       obj[8] = tmp20(1297).ClearButtonVisibility.WITH_CONTENT;
-      tmp25 = callback2(tmp20(8083).FormInput, obj);
+      tmp25 = callback2(tmp20(8122).FormInput, obj);
       tmp26 = callback2;
     }
     obj = { style: null, children: null };
@@ -265,7 +264,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       return applyArgumentsResult;
     };
     obj1[4] = benefitType.listingId;
-    const items = [tmp26(tmp2(16977), obj1), ];
+    const items = [tmp26(tmp2(17070), obj1), ];
     let obj2 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp.scrollContainer, ];
     const obj3 = { paddingBottom: null };
@@ -275,10 +274,10 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp4.header;
     obj4[1] = stringResult1;
-    const items2 = [tmp26(tmp2(8913), obj4), tmp25, , , , , ];
+    const items2 = [tmp26(tmp2(8950), obj4), tmp25, , , , , ];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp4.header;
-    let tmp2Result = tmp2(8913);
+    let tmp2Result = tmp2(8950);
     const intl7 = tmp20(1236).intl;
     obj5[1] = intl7.string(tmp20(1236).t.sMOuuS);
     items2[2] = tmp26(tmp2Result, obj5);
@@ -292,10 +291,10 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       callback(emojiId.emojiId);
       callback2(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(16978), obj6);
+    items2[3] = tmp26(tmp2(17071), obj6);
     const obj8 = { style: null, children: null };
     obj8[0] = tmp4.header;
-    tmp2Result = tmp2(8913);
+    tmp2Result = tmp2(8950);
     const intl8 = tmp20(1236).intl;
     obj8[1] = intl8.string(tmp20(1236).t["74JctW"]);
     items2[4] = tmp26(tmp2Result, obj8);
@@ -305,7 +304,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     obj9[5] = first3;
     obj9[6] = tmp9[1];
     obj9[7] = stringResult2;
-    items2[5] = tmp26(tmp20(8083).FormInput, obj9);
+    items2[5] = tmp26(tmp20(8122).FormInput, obj9);
     let tmp26Result = null;
     if (null != benefitType.onDelete) {
       const obj10 = { onDelete: null };

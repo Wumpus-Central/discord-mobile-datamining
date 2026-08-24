@@ -24,7 +24,7 @@ function _promptForRegisterCredential() {
           obj[0] = credential;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,7 +126,7 @@ let closure_4 = new timestampDefault("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
-    let isAndroidResult = set.isAndroid();
+    let isAndroidResult = set /* set */.isAndroid();
     if (isAndroidResult) {
       const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
       let registerPasskey;
@@ -141,9 +141,9 @@ Object.defineProperty(obj, "hasAndroidPasskeySupport", {
 });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
-    let isAndroidResult = set.isAndroid();
+    let isAndroidResult = set /* set */.isAndroid();
     if (isAndroidResult) {
-      isAndroidResult = !isMetaQuest.isMetaQuest();
+      isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
       const tmpResult = isMetaQuest;
     }
     return isAndroidResult;
@@ -181,7 +181,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

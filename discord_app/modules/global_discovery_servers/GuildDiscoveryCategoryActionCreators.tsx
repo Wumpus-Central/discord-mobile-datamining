@@ -21,7 +21,7 @@ function _maybeFetchGuildDiscoveryCategories() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -200,7 +200,7 @@ function _saveGuildMetadata() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -323,7 +323,7 @@ function _saveGuildMetadata() {
             obj7.dispatch(obj6);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           c3 = tmp18;
@@ -428,9 +428,9 @@ export const saveGuildMetadata = function saveGuildMetadata() {
 export const addGuildCategory = function addGuildCategory(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  const HTTP = _sendRequest.HTTP;
-  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
-  const obj2 = _sendRequest;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  const obj2 = sendRequest;
   const putResult = HTTP.put(obj);
   HTTP.put(obj).then(() => {
     let obj = callback(closure_1_2[5]);
@@ -445,9 +445,9 @@ export const addGuildCategory = function addGuildCategory(arg0, arg1) {
 export const deleteGuildCategory = function deleteGuildCategory(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  const HTTP = _sendRequest.HTTP;
-  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
-  const obj2 = _sendRequest;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  const obj2 = sendRequest;
   const delResult = HTTP.del(obj);
   HTTP.del(obj).then(() => {
     let obj = callback(closure_1_2[5]);

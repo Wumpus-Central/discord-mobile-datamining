@@ -33,9 +33,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(7873);
+    let tmpResult = tmp(7912);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(8716);
+      tmpResult = tmp(8753);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -57,7 +57,7 @@ let obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(8752)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(8789)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }
@@ -69,8 +69,8 @@ obj = {
     if (null == id) {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_COMMAND;
-      const tmp7 = new prototypeDefault(obj, "No application.");
-      throw tmp7;
+      const tmp10 = new prototypeDefault(obj, "No application.");
+      throw tmp10;
     } else {
       const HTTP = sendRequest.HTTP;
       obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
@@ -78,7 +78,7 @@ obj = {
       obj = { test_mode: null };
       obj[0] = isTestModeForApplication.isTestModeForApplication(id);
       obj[1] = obj;
-      const obj4 = isTestModeForApplication;
+      const obj3 = isTestModeForApplication;
       return HTTP.post(obj).then((body) => body.body);
     }
   }

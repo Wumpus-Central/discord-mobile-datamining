@@ -16,7 +16,7 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
   dependencyMap = arg2;
   let items = [stateFromStores, closure_6, closure_5];
   const items1 = [arg0, arg1, arg2];
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (closure_2) {
       const _Set = Set;
       const id = stateFromStores.getId();
@@ -48,11 +48,11 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
       return [];
     }
   }, items1);
-  const obj = _initialize;
-  const getGamesForAppIds = _useGetGameForAppId.useGetGamesForAppIds(stateFromStoresArray);
-  let obj2 = _useGetGameForAppId;
+  const obj = initialize;
+  const getGamesForAppIds = require("../../../games/hooks/useGetGameForAppId.tsx").useGetGamesForAppIds(stateFromStoresArray);
+  let obj2 = useGetGameForAppId;
   const items2 = [closure_7];
-  stateFromStores = _initialize.useStateFromStores(items2, () => {
+  stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

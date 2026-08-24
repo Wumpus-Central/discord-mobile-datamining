@@ -1,16 +1,15 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
-import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../../../_runtime/04009_isIterable.js";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import identity from "../../../../../_runtime/00700_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;
 function setFindYourFriendsDeletionIsLoading(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_6.setState({ isLoading: closure_0 }));
+  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ isLoading: closure_0 }));
 }
 function _onFindYourFriendsDeletionPress() {
   const self = this;
@@ -26,7 +25,7 @@ function _onFindYourFriendsDeletionPress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -65,7 +64,7 @@ function _onFindYourFriendsDeletionPress() {
             const aPIError = new callback(585).APIError(callback2);
             callback = aPIError.getAnyErrorMessage();
             if (null != callback) {
-              let obj2 = callback2(4094);
+              let obj2 = callback2(4097);
               obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: null };
               obj2[1] = callback;
               obj2.open(obj2);

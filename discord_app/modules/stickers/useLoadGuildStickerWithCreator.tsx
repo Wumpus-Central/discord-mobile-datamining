@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/stickers/useLoadGui
 export default function useLoadGuildStickersWithCreator(arg0) {
   const _require = arg0;
   [tmp2, dependencyMap] = callback(React.useState("loading"), 2);
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStickersByGuildId(closure_0));
   const items1 = [arg0];

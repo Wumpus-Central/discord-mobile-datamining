@@ -1,12 +1,11 @@
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/08338_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08377_registerAsset.js";
 import closure_3 from "../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../stores/GuildRoleStore.tsx";
 import closure_5 from "../../../stores/GuildStore.tsx";
 import closure_6 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 
 require = arg1;
 ({ ChannelTypes: error, DEFAULT_ROLE_COLOR: closure_8 } = ME);
@@ -100,7 +99,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  return mapped.filter(require("../../../utils/GlobalUtils.tsx").isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {

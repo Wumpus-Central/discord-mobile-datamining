@@ -75,9 +75,9 @@ function AcceptInviteCardComponent(invite) {
   const effect = React.useEffect(() => {
     const tmp = closure_1_13(invite);
     if (tmp !== first) {
-      const result = invite(5443).DeprecatedLayoutAnimation();
+      const result = invite(5448).DeprecatedLayoutAnimation();
       dependencyMap(tmp);
-      const obj = invite(5443);
+      const obj = invite(5448);
     }
   }, items);
   if (null == invite) {
@@ -86,12 +86,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(11896), obj);
+    return callback2(first(11945), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(11899), obj);
+    return callback2(first(11948), obj);
   } else {
     return callback2(InviteResolving, {});
   }
@@ -125,7 +125,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(11904);
+    let guildSplashSource = tmp3(11953);
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);

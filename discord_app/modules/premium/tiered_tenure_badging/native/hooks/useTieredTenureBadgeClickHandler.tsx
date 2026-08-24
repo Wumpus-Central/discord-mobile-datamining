@@ -5,7 +5,6 @@ import { PremiumTypes } from "../../../PremiumConstants.tsx";
 import { DEFAULT_PREMIUM_BADGE_ID } from "../../Constants.tsx";
 import ME from "../../../../../Constants.tsx";
 import { UserProfileThemeTypes } from "../../../../user_profile/native/Constants.tsx";
-import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 
 const require = arg1;
 ({ AnalyticEvents: error, UserSettingsSections: closure_8 } = ME);
@@ -15,10 +14,10 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   const _require = id;
   closure_1 = userId;
   dependencyMap = themeType;
-  let isPremiumSubscriber = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  let isPremiumSubscriber = require("../../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
-    let tmpResult = tmp(5381);
+    let tmpResult = tmp(5386);
     tmp4 = null != tmpResult.getTieredTenureBadge(id);
   }
   tmpResult = tmp(589);

@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/SlayerStorefrontUtils.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import keysSorter from "../../../_runtime/04376_keysSorter.js";
+import keysSorter from "../../../_runtime/04380_keysSorter.js";
 import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
 import RewardRequirementType from "SocialLayerStorefrontTypes.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
@@ -15,7 +15,6 @@ import ME from "../../Constants.tsx";
 import { CollectibleShopTab } from "../collectibles/CollectiblesShopConstants.tsx";
 import { CurrencyCodes } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 
 require = arg1;
 function getPrice(price) {
@@ -450,7 +449,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
+          obj = { primaryIconAsset: "Array", primaryIconLabel: "ct" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -463,7 +462,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "ct" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;
@@ -659,9 +658,9 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
 export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
   const _require = applicationId;
   const items = [closure_7];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = _initialize;
-  const application = _useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
+  const obj = initialize;
+  const application = require("../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;
@@ -693,11 +692,11 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [closure_7];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
-  const obj = _initialize;
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
+  const obj = initialize;
   const items1 = [closure_6];
   const items2 = [arg0];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

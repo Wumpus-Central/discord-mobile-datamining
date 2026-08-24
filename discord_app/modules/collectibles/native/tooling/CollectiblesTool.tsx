@@ -9,8 +9,6 @@ import closure_8 from "../../CollectiblesPurchaseStore.tsx";
 import { useFramePreviewOverrideStore as closure_9 } from "../../profile_frames/native/tooling/FramePreviewOverrideStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 const require = arg1;
 function FramePreviewOverrideSection() {
@@ -31,28 +29,28 @@ function FramePreviewOverrideSection() {
     obj[0] = tmp.sectionHeader;
     obj = { variant: "heading-md/semibold", style: null, children: "Frame Preview Override" };
     obj[1] = tmp.sectionTitle;
-    obj[1] = callback3(_Text.Text, obj);
+    obj[1] = callback3(require("../../../../design/components/Text/native/Text.tsx").Text, obj);
     const items = [callback3(closure_6, obj), , , , ];
     obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
     obj1[1] = tmp.description;
-    items[1] = callback3(_Text.Text, obj1);
+    items[1] = callback3(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
     const obj2 = { variant: "text-xs/normal", style: null, children: null };
     const items1 = [tmp.statusText, statusError];
     obj2[1] = items1;
     obj2[2] = "Loading\u2026";
-    items[2] = callback3(_Text.Text, obj2);
+    items[2] = callback3(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
     const obj3 = { pillStyle: null, text: "Load from device", onPress: null };
     obj3[0] = tmp.secondaryButton;
     obj3[2] = function onPress() {
       callback();
     };
-    items[3] = callback3(_CollapsingText.BaseTextButton, obj3);
+    items[3] = callback3(require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj3);
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj4 = { pillStyle: null, text: "Clear override", onPress: null };
       obj4[0] = tmp.secondaryButton;
       obj4[2] = tmp4;
-      tmp13Result = callback3(_CollapsingText.BaseTextButton, obj4);
+      tmp13Result = callback3(require("../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj4);
     }
     items[4] = tmp13Result;
     obj[1] = items;

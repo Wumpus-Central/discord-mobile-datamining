@@ -3,7 +3,7 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import getLayoutStyleDefault from "getLayoutStyles.tsx";
-import _modDef16202 from "ChannelTitle.tsx";
+import _modDef16299 from "ChannelTitle.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SUBTITLE_OPACITY_NORMAL } from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
@@ -20,7 +20,7 @@ function ChannelContent(arg0) {
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
-      locked = tmp2(5287)(channel);
+      locked = tmp2(5292)(channel);
     }
     tmp9Result = locked;
   }
@@ -54,7 +54,7 @@ function ChannelContent(arg0) {
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(_modDef16202, obj3), , ];
+  const items1 = [closure_7(_modDef16299, obj3), , ];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
@@ -96,7 +96,7 @@ function ChannelContent(arg0) {
     if (isSubscriptionGated) {
       const obj9 = { locked: null, isInMainTabsExperiment: true };
       obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(15380), obj9);
+      isSubscriptionGated = tmp9(tmp2(15444), obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5[1] = items3;

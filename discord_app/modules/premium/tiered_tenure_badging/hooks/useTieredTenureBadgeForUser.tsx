@@ -1,6 +1,5 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
 import closure_2 from "../../../user_profile/UserProfileStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/premium/tiered_tenu
 export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(id) {
   const _require = id;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let userProfile = null;
     if (null != closure_0) {
       userProfile = closure_1_2.getUserProfile(tmp);

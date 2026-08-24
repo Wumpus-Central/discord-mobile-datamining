@@ -54,7 +54,7 @@ let prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(6783).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(6820).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);
@@ -82,7 +82,7 @@ let prototype = function GuildOnboardingManager() {
         if (hasFlagResult) {
           obj = { guildId: null };
           obj[0] = guildId;
-          callback(6783)(obj);
+          callback(6820)(obj);
         }
       }
     }

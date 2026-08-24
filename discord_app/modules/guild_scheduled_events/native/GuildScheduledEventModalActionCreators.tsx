@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventModalActionCreators.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
-import _modDef8783 from "../GuildScheduledEventsActionCreators.tsx";
+import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
+import _modDef8820 from "../GuildScheduledEventsActionCreators.tsx";
 import canEveryoneRoleViewEvent from "../useCanInviteForGuildEvent.tsx";
-import registerAssetDefault from "../../../../_runtime/08916_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08953_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../../stores/ChannelStore.tsx";
@@ -38,8 +38,8 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[0] = guildEvent;
     obj[1] = recurrenceId;
     obj[2] = handleClose;
-    _modDef5260.pushLazy(asyncRequireImpl(8805, dependencyMap.paths), obj, closure_13);
-    const obj4 = _modDef5260;
+    _modDef5265.pushLazy(asyncRequireImpl(8842, dependencyMap.paths), obj, closure_13);
+    const obj4 = _modDef5265;
   } else {
     obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj.hideAllActionSheets();
@@ -48,8 +48,8 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[1] = tmp;
     obj[2] = guildEvent;
     obj[3] = handleClose;
-    _modDef5260.pushLazy(asyncRequireImpl(8836, dependencyMap.paths), obj, closure_13);
-    const obj2 = _modDef5260;
+    _modDef5265.pushLazy(asyncRequireImpl(8873, dependencyMap.paths), obj, closure_13);
+    const obj2 = _modDef5265;
   }
 }
 function _transitionToEventDetailsFromInvite() {
@@ -71,7 +71,7 @@ function _transitionToEventDetailsFromInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ function _transitionToEventDetailsFromInvite() {
               const result = obj.openGuildEventDetails(obj3);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           c5 = tmp;
@@ -144,7 +144,7 @@ export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guild: closure_0 };
-  obj.openLazy(asyncRequireImpl(8889, dependencyMap.paths), closure_14, obj);
+  obj.openLazy(asyncRequireImpl(8926, dependencyMap.paths), closure_14, obj);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(closure_14);
@@ -153,7 +153,7 @@ export const openStartGuildEventModal = function openStartGuildEventModal(event,
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideAllActionSheets();
   obj = { event, recurrenceId: nextRecurrenceIdInEvent, onCloseActionSheet };
-  _modDef5260.pushLazy(asyncRequireImpl(8905, dependencyMap.paths), obj, closure_15);
+  _modDef5265.pushLazy(asyncRequireImpl(8942, dependencyMap.paths), obj, closure_15);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(eventId, guildId, recurrenceId) {
   let obj = useAlertStore;
@@ -162,7 +162,7 @@ export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActi
 };
 export const updateRsvp = function updateRsvp(arg0, arg1, arg2, arg3) {
   closure_0 = arg3;
-  _modDef8783.updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
+  _modDef8820.updateRsvp(arg0, arg1, arg2, arg3, (arg0) => {
     let tmp2 = tmp;
     if (null == arg0) {
       tmp2 = callback === closure_1_12.INTERESTED;
@@ -194,7 +194,7 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
   const _require = id;
   closure_1 = guild_id;
   dependencyMap = arg3;
-  let obj = _getExistingRsvp;
+  let obj = getExistingRsvp;
   obj = {
     eventId: id,
     recurrenceId: c1,
@@ -254,14 +254,14 @@ export const openShareEvent = function openShareEvent(event, arg1) {
       if (null != vanityURLCode) {
         if ("" !== guild.vanityURLCode) {
           if (!closure_8.can(constants2.CREATE_INSTANT_INVITE, channel)) {
-            let tmp7Result = tmp7(8918);
+            let tmp7Result = tmp7(8955);
             let obj = { guildScheduledEventId: null, stackingBehavior: "stack" };
             obj[0] = event.id;
             const result1 = tmp7Result.showVanityUrlInviteActionSheet(guild, channel, constants.GUILD_SCHEDULED_EVENT, obj);
           }
         }
       }
-      tmp7Result = tmp7(8918);
+      tmp7Result = tmp7(8955);
       obj = { createInvite: null, guildScheduledEventId: null, stackingBehavior: "stack", source: null };
       obj[0] = result;
       obj[1] = event.id;
@@ -273,10 +273,10 @@ export const openShareEvent = function openShareEvent(event, arg1) {
         tmp11 = "" !== arg1;
       }
       if (tmp11) {
-        tmp7(7167).copy(arg1);
-        const tmp7Result1 = tmp7(7167);
-        tmp7(4093).presentLinkCopied();
-        const tmp7Result2 = tmp7(4093);
+        tmp7(7205).copy(arg1);
+        const tmp7Result1 = tmp7(7205);
+        tmp7(4096).presentLinkCopied();
+        const tmp7Result2 = tmp7(4096);
       }
     }
     const obj3 = canEveryoneRoleViewEvent;

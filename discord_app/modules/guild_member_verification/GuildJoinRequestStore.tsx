@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import isActionedApplicationStatus from "GuildJoinRequestUtils.tsx";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
@@ -16,7 +16,7 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, tDefault());
       }
-      if (applicationStatus === tmp12(4200).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4204).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, tDefault());

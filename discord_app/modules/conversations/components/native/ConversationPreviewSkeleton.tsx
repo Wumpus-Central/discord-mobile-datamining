@@ -28,7 +28,7 @@ let result = require("set").fileFinishedImporting("modules/conversations/compone
 
 export default function ConversationPreviewSkeleton() {
   const _require = callback2();
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0.4);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
@@ -41,7 +41,7 @@ export default function ConversationPreviewSkeleton() {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 11432452203963;
   fn.__initData = closure_9;
-  const animatedStyle = _ReanimatedRexport.useAnimatedStyle(fn);
+  const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
   obj = {
     style: animatedStyle,
     "aria-hidden": true,
@@ -60,5 +60,5 @@ export default function ConversationPreviewSkeleton() {
     })
   };
   obj = { length: closure_5 };
-  return callback(sharedValue(4115).View, obj);
+  return callback(sharedValue(4119).View, obj);
 };

@@ -6,7 +6,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-createCacheKey = { maskStyle: { position: "relative", right: "call" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
+createCacheKey = { maskStyle: { position: "relative", right: "channel" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
 createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);

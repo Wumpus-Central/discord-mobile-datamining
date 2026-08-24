@@ -6,7 +6,6 @@ import closure_6 from "../../stores/GuildStore.tsx";
 import closure_7 from "../../stores/UserStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 import { GuildPrompts } from "../guild/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
@@ -14,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNam
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
   const items = [closure_6, closure_4, closure_7, closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_6.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

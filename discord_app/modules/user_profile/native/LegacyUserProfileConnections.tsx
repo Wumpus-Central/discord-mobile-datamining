@@ -11,7 +11,6 @@ import { MetadataFields } from "../../connections/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 class ConnectedUserAccount {
@@ -354,7 +353,7 @@ class ConnectedApplicationUserRoleAccount {
             obj = { style: obj.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "Array" };
+              obj = { style: null, user: null, size: null, guildId: "ct" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;
@@ -521,10 +520,10 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = _ManaContext.useThemeContext().theme;
-  const obj = _ManaContext;
+  const theme = require("../../../../discord_common/js/packages/design/native.tsx").useThemeContext().theme;
+  const obj = ManaContext;
   const items = [closure_6];
-  dependencyMap = _initialize.useStateFromStores(items, () => closure_6.locale);
+  dependencyMap = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_6.locale);
   return arr.map((applicationRoleConnection) => {
     obj = { children: closure_1_14(closure_1_19, obj) };
     obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };

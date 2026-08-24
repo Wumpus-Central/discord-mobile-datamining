@@ -55,9 +55,9 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[1] = tmp5;
         obj[2] = tmp6;
         const tmp3 = callback(first, 3);
-        const obj2 = tmp8(5311)(obj);
+        const obj2 = tmp8(5316)(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(5311)(obj).toHsl());
+        ({ h, s, l } = tmp8(5316)(obj).toHsl());
         if (closure_4.desaturateUserColors) {
           num2 = closure_4.saturation;
         }
@@ -65,8 +65,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[0] = h;
         obj[1] = s * num2;
         obj[2] = l;
-        const toHslResult = tmp8(5311)(obj).toHsl();
-        return tmp8(5311)(obj).toHexString();
+        const toHslResult = tmp8(5316)(obj).toHsl();
+        return tmp8(5316)(obj).toHexString();
       } else {
         return null;
       }

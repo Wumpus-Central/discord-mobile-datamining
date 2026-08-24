@@ -7,7 +7,6 @@ import closure_7 from "../../../stores/UploadAttachmentStore.tsx";
 import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
@@ -18,7 +17,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   dependencyMap = mediaAttachmentState;
   const callback = arg3;
   const React = arg4;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => upload.getUpload(closure_0, closure_1, first.Poll));
   const tmp4 = callback(React.useState(), 2);
@@ -30,7 +29,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _PollMediaUploadAttachmentStatus.PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === require("../PollTypes.tsx").PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

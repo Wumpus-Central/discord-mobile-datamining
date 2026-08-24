@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/guild_boosting/native
 
 export default function useGuildBoostPurchaseHandler(arg0) {
   let _require = arg0;
-  let obj = _MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
+  let obj = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
   _require = undefined;
   const result = obj.isMobileWebRedirectCheckoutEnabled();
   _require = callback((arg0, arg1) => {
@@ -32,7 +32,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
             obj = callback(closure_2_2[10]);
             obj.closeApplyBoostModal();
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c4 = tmp;

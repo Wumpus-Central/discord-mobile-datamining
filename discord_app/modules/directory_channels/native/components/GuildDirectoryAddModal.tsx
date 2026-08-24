@@ -5,8 +5,6 @@ import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import { GuildDirectoryCreate } from "../GuildDirectoryConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 noopAll;
@@ -34,7 +32,7 @@ export default function GuildDirectoryAddModal(arg0) {
     };
     obj2[4] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(11478), {});
+      return callback2(callback(11527), {});
     };
     obj1[closure_1_3.CREATE_OR_ADD] = obj2;
     obj1[closure_1_3.DESCRIPTION] = {
@@ -45,7 +43,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(11486), {});
+        return callback2(callback(11535), {});
       }
     };
     const obj3 = {
@@ -56,7 +54,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(11486), {});
+        return callback2(callback(11535), {});
       }
     };
     obj1[closure_1_3.TEMPLATES] = {
@@ -67,7 +65,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(11490), {});
+        return callback2(callback(11539), {});
       }
     };
     obj5 = {
@@ -78,7 +76,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(11500), {});
+        return callback2(callback(11549), {});
       }
     };
     obj1[closure_1_3.CREATE] = obj5;
@@ -87,9 +85,9 @@ export default function GuildDirectoryAddModal(arg0) {
     return obj;
   }));
   let obj = { screens, initialRouteStack: initialStack, headerBackTitle: null };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
-  return jsx(_NavigationStack.Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
 };
 export const GuildDirectoryAddModalScreen = function GuildDirectoryAddModalScreen(children) {
   const tmp = callback();

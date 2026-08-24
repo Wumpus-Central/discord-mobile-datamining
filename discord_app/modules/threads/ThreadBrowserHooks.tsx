@@ -24,7 +24,7 @@ export const useActiveThreadIds = function useActiveThreadIds(arg0) {
   const items = [closure_7, closure_9, closure_6];
   const items1 = [, ];
   ({ guild_id: arr2[0], id: arr2[1] } = arg0);
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const tmp = stateFromStoresArray(closure_1_2[12]);
     const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForParent(memo.guild_id, memo.id)).values();
     const mapped = values.map((id) => channel.getChannel(id.id));
@@ -77,7 +77,7 @@ export const useActiveGuildThreads = function useActiveGuildThreads(arg0) {
   const _require = arg0;
   const items = [closure_7, closure_9, closure_6];
   const items1 = [arg0];
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const tmp = stateFromStoresArray(closure_1_2[12]);
     const values = stateFromStoresArray(closure_1_2[12])(closure_1_9.getThreadsForGuild(callback)).values();
     const mapped = values.map((arg0) => callback(table[12]).values(arg0));
@@ -106,7 +106,7 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
   const result = channel.isModeratorReportChannel();
   const React = result;
   showResolvedFlags = showResolvedFlags(channel.id).showResolvedFlags;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_10];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ loading: closure_1_10.isLoading(user.id, closure_1, closure_2, closure_3), isInitialLoad: closure_1_10.getIsInitialLoad(user.id, closure_1, closure_2, closure_3), canLoadMore: closure_1_10.getCanLoadMore(user.id, closure_1, closure_2, closure_3), nextOffset: closure_1_10.getNextOffset(user.id, closure_1, closure_2, closure_3) }));
   ({ loading, nextOffset } = stateFromStoresObject);
@@ -148,7 +148,7 @@ export const useArchivedThreads = function useArchivedThreads(channel, LATEST_AC
     LATEST_ACTIVITY(loadMore[16]).resort(user.id);
   }, items3);
   obj = {
-    threadIds: _initialize.useStateFromStoresArray(items4, () => {
+    threadIds: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items4, () => {
       const tmp = LATEST_ACTIVITY(loadMore[12]);
       const tmpResult = LATEST_ACTIVITY(loadMore[12])(closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3));
       return LATEST_ACTIVITY(loadMore[12])(closure_1_10.getThreads(user.id, LATEST_ACTIVITY, loadMore, closure_3)).filter((arg0) => {

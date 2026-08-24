@@ -75,7 +75,7 @@ export default function GameProfileView(arg0) {
     obj2[0] = game;
     obj2[1] = websiteButtons;
     obj2[2] = trackAction;
-    obj1[1] = tmp5(tmp2(9134), obj2);
+    obj1[1] = tmp5(tmp2(9171), obj2);
     tmp5Result = tmp5(tmp7, obj1);
   }
   items2[1] = tmp5Result;
@@ -95,5 +95,5 @@ export default function GameProfileView(arg0) {
   items1[1] = closure_6(View, obj);
   obj[1] = items1;
   obj[1] = closure_6(View, obj);
-  return callback(onStoreLinksMeasured(7139).AnalyticsLocationProvider, obj);
+  return callback(onStoreLinksMeasured(7177).AnalyticsLocationProvider, obj);
 };

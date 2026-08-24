@@ -42,7 +42,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
   getComponent() {
-    return GiftingSectionTitle.default;
+    return GiftingSectionTitle /* GiftingSectionTitle */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

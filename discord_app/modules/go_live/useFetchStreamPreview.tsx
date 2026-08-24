@@ -15,23 +15,23 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   dependencyMap = arg1;
   const React = arg2;
   closure_3 = tmp;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   closure_4 = obj.useStateFromStores(items, () => channel.getChannel(closure_1));
   const items1 = [shouldFetchPreview];
-  let stateFromStores = _initialize.useStateFromStores(items1, () => {
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let canBasicChannelResult = null != closure_4;
     if (canBasicChannelResult) {
       canBasicChannelResult = shouldFetchPreview.canBasicChannel(closure_1_7.CONNECT, tmp);
     }
     return canBasicChannelResult;
   });
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const items2 = [stateFromStores];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
-  const obj3 = _initialize;
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores.getVoiceChannelId() === closure_1);
+  const obj3 = initialize;
   const items3 = [closure_3];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items3, () => {
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items3, () => {
     let isPreviewLoading = !store;
     let shouldFetchPreviewResult = isPreviewLoading;
     if (!store) {

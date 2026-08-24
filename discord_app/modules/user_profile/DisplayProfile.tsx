@@ -3,7 +3,6 @@ import set from "../../../_runtime/00002_set.js";
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 import useAvatarsWithGuilds from "../profile_customization/ProfileCustomizationUtils.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
@@ -120,7 +119,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(items.isGameWidget);
+      found = widgets.filter(items /* items */.isGameWidget);
     }
     return found;
   },
@@ -142,7 +141,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return getPremiumPlanItem.isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return require("../../utils/PremiumUtils.tsx").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -153,7 +152,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(setOrientationLockState, arg1) {
+  get: function application(type, arg1) {
     return this._userProfile.application;
   },
   set: undefined

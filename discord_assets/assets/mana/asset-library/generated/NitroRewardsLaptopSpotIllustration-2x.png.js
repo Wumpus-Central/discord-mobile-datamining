@@ -3,5 +3,5 @@ import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRewardsLaptopSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/b27f79c5fecbf1db8330f16df8b610fe684ce22accf4bd2036a96a6e0240b6c7.png";
-export const metadata = { fileBytes: 160636 };
+export default "https://cdn.discordapp.com/assets/content/6531a59a9c6baf7ad3cd7ed7ad882f0f9c8476396d9df7e60520d9bcd216e36e.png";
+export const metadata = { fileBytes: 160647 };

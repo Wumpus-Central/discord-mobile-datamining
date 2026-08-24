@@ -13,9 +13,9 @@ const result = require("set").fileFinishedImporting("modules/conversations/compo
 export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(10598).DenyIcon;
+    let EyeSlashIcon = tmp2(10637).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(8605).EyeSlashIcon;
+    EyeSlashIcon = tmp2(8642).EyeSlashIcon;
   }
   obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj), ];

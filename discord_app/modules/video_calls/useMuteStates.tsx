@@ -5,7 +5,6 @@ import closure_4 from "../../stores/MediaEngineStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
 import closure_6 from "../../stores/VoiceStateStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getMuteStates(voiceStateStore) {
@@ -66,6 +65,6 @@ const result = require("set").fileFinishedImporting("modules/video_calls/useMute
 export default function useMuteStates(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_6, closure_4, closure_5, closure_2];
-  return _initialize.useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
 };
 export { getMuteStates };

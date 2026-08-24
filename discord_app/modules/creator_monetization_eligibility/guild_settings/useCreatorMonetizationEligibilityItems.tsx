@@ -35,7 +35,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -104,7 +104,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;
@@ -138,8 +138,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(4084);
-          return tmp(callback(1993).getSubmitRequestURL());
+          const tmp = callback(4087);
+          return tmp(callback(1994).getSubmitRequestURL());
         };
       }
       obj[6] = fn;

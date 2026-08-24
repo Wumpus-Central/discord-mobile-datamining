@@ -85,8 +85,8 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     obj = rebuildDefault;
     const tmp17 = importDefault;
     const str4 = rebuildDefault.unparse(str3, stateFromStores.id, true);
-    const tmp17Result = tmp17(8464);
-    let str7 = tmp17(8464)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
+    const tmp17Result = tmp17(8503);
+    let str7 = tmp17(8503)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
@@ -198,8 +198,8 @@ function _createThread_() {
             throwTypeErrorResult = string3(KGaiEK.P0wT5S);
           }
           obj2[1] = throwTypeErrorResult;
-          obj2 = callback(4827).show(obj2);
-          const obj18 = callback(4827);
+          obj2 = callback(4832).show(obj2);
+          const obj18 = callback(4832);
         } else {
           throwTypeErrorResult = closure_6;
           const body7 = throwTypeErrorResult.body;
@@ -211,7 +211,7 @@ function _createThread_() {
             throwTypeErrorResult = id;
             throwTypeErrorResult = callback;
             throwTypeErrorResult = dependencyMap;
-            const obj15 = callback(4827);
+            const obj15 = callback(4832);
             const obj3 = { title: null, body: null };
             throwTypeErrorResult = lib;
             throwTypeErrorResult = dependencyMap;
@@ -268,7 +268,7 @@ function _createThread_() {
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                let obj13 = callback(4827);
+                let obj13 = callback(4832);
                 throwTypeErrorResult = c4;
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = lib;
@@ -385,11 +385,11 @@ function _createThread_() {
                           reason = body6.reason;
                         }
                         obj6[4] = reason;
-                        let result = lib(8467).handleUploadMessageAttachmentsErrors(obj6);
-                        const obj27 = lib(8467);
+                        let result = lib(8506).handleUploadMessageAttachmentsErrors(obj6);
+                        const obj27 = lib(8506);
                       }
                     }
-                    let obj10 = lib(7501);
+                    let obj10 = lib(7539);
                     closure_6 = obj10.createNonce();
                     let tmp89 = null != throwTypeErrorResult.body.attachments;
                     if (tmp89) {
@@ -406,10 +406,10 @@ function _createThread_() {
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = callback(12737)(lib.id, closure_6);
+                      throwTypeErrorResult = callback(12792)(lib.id, closure_6);
                     }
                   } else {
-                    let obj8 = callback(4827);
+                    let obj8 = callback(4832);
                     obj8 = { title: null, body: null };
                     const intl3 = lib(1236).intl;
                     obj8[0] = intl3.string(lib(1236).t.j2d6Km);
@@ -452,7 +452,7 @@ function _createThread_() {
         } else {
           id = body;
           c9 = 2;
-          obj4 = callback(7427);
+          obj4 = callback(7465);
           obj10 = { channelId: null, limit: null };
           obj10[0] = id.id;
           obj10[1] = closure_20;
@@ -470,7 +470,7 @@ function _createThread_() {
           throwTypeErrorResult = closure_6;
           lib2 = body;
           if (null == body.body) {
-            obj1 = callback(4827);
+            obj1 = callback(4832);
             const obj12 = { title: null, body: null };
             const intl = lib(1236).intl;
             obj12[0] = intl.string(lib(1236).t.j2d6Km);
@@ -589,7 +589,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -698,25 +698,25 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 }
                 if (null != closure_1) {
                   if (closure_1.length > 0) {
-                    const obj4 = callback(7427);
+                    const obj4 = callback(7465);
                     const id = c7.id;
                     obj = { location: null };
                     obj[0] = constants.THREAD_CREATION;
-                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7436).parse(c7, closure_0), obj);
-                    const obj5 = callback(7436);
+                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7474).parse(c7, closure_0), obj);
+                    const obj5 = callback(7474);
                   }
                   return sendStickersResult;
                 }
-                obj = callback(7427);
+                obj = callback(7465);
                 obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(c7.id, callback(7436).parse(c7, closure_0), undefined, obj);
+                sendStickersResult = obj.sendMessage(c7.id, callback(7474).parse(c7, closure_0), undefined, obj);
               })(c7, lib, closure_1, name, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }
             obj1 = parentMessageId(threadSettings[20]);
             obj1.clearAll(lib.id, closure_2_10.FirstThreadMessage);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp57) {
           c7 = tmp;
@@ -782,7 +782,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

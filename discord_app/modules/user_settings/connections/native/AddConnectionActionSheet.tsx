@@ -5,7 +5,6 @@ import items2 from "../../../user_application_identity/UserApplicationIdentityCo
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import Button from "../../../../design/void/native.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
 function AddApplicationIdentityTableRow(application) {
@@ -13,12 +12,12 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7142)(application));
-  const tmp2 = analyticsLocations(7142)(application);
-  analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7139);
-  let obj = _Button;
-  const iconSource = application.getIconSource(obj.getIconSize(_Button.IconSizes.LARGE));
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7180)(application));
+  const tmp2 = analyticsLocations(7180)(application);
+  analyticsLocations = analyticsLocations(7177)(analyticsLocations(7197).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7177);
+  let obj = Button;
+  const iconSource = application.getIconSource(obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE));
   obj = {
     start,
     end,
@@ -41,9 +40,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_TableRowInner.TableRow.Arrow, {});
+  obj[5] = closure_5(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_TableRowInner.TableRow, obj, application.id);
+  return closure_5(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, application.id);
 }
 const AnalyticsLocations = ME.AnalyticsLocations;
 let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;

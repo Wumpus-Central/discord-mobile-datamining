@@ -13,13 +13,13 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16791);
+      return callback(16884);
     },
     darker() {
-      return callback(16792);
+      return callback(16885);
     },
     light() {
-      return callback(16793);
+      return callback(16886);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16791);
+      return callback(16884);
     },
     darker() {
-      return callback(16792);
+      return callback(16885);
     },
     light() {
-      return callback(16793);
+      return callback(16886);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -43,13 +43,13 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16791);
+      return callback(16884);
     },
     darker() {
-      return callback(16792);
+      return callback(16885);
     },
     light() {
-      return callback(16793);
+      return callback(16886);
     }
   };
   obj = {};

@@ -144,8 +144,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateType.ImpersonateType.ROLES !== type) {
-      if (tmp7(1988).ImpersonateType.SERVER_SHOP !== type) {
-        if (tmp7(1988).ImpersonateType.NEW_MEMBER === type) {
+      if (tmp7(1989).ImpersonateType.SERVER_SHOP !== type) {
+        if (tmp7(1989).ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -189,7 +189,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(1988).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(1989).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -222,7 +222,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp9.type === onboardingResponses(1988).ImpersonateType.NEW_MEMBER) {
+          if (tmp9.type === onboardingResponses(1989).ImpersonateType.NEW_MEMBER) {
             onboardingResponses = tmp9.onboardingResponses;
             if (onboardingResponses == null) {
               const _Set = Set;
@@ -268,7 +268,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(1988).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(1989).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

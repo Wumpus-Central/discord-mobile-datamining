@@ -2,13 +2,12 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import setDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
 import saveProfileAndAccountRequest from "../../../actions/UserSettingsAccountActionCreators.tsx";
 import _startContactSyncForDiscoverability from "../../nuf/native/NUFActionCreators.tsx";
 import ADD_AVATAR_MODAL_KEY2 from "components/AddAvatarModalConstants.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const ADD_AVATAR_MODAL_KEY = ADD_AVATAR_MODAL_KEY2.ADD_AVATAR_MODAL_KEY;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -29,7 +28,7 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
   if (null != fn) {
     fn();
   } else {
-    obj = _modDef5260;
+    obj = _modDef5265;
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
     _startContactSyncForDiscoverability.nextOnboardingStep({ skip: false });
     const obj2 = _startContactSyncForDiscoverability;
@@ -40,14 +39,14 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   let obj = expandEventPropertiesDefault;
   obj.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.DnKHuV);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t["1EPySE"]);
-  const intl3 = _getSystemLocale.intl;
-  obj[2] = intl3.string(_getSystemLocale.t["7eZ3ji"]);
-  const intl4 = _getSystemLocale.intl;
-  obj[3] = intl4.string(_getSystemLocale.t.nhJ8OC);
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx").t.DnKHuV);
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx").t["1EPySE"]);
+  const intl3 = require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(require("../../../intl/index.native.tsx").t["7eZ3ji"]);
+  const intl4 = require("../../../intl/index.native.tsx").intl;
+  obj[3] = intl4.string(require("../../../intl/index.native.tsx").t.nhJ8OC);
   obj[4] = function onConfirm() {
     callback(closure_1_2[6]).setPendingChanges({ avatar: null });
     const obj = callback(closure_1_2[6]);
@@ -65,5 +64,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   setDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef5260.pushLazy(asyncRequireImpl(16647, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  _modDef5265.pushLazy(asyncRequireImpl(16743, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

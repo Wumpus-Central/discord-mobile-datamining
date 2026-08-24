@@ -1,14 +1,11 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../design/animation/reanimated/spring/springPresets.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
@@ -33,12 +30,12 @@ export default function ShareFooterLayout(arg0) {
   const tmp = callback2();
   const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
   _require = sum;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const fn = function f() {
     const obj = { paddingBottom: _undefined(closure_1_2[7]).withSpring(_undefined, _undefined(closure_1_2[8]).ON_PRESS_SPRING, "respect-motion-settings") };
     return obj;
   };
-  obj = { withSpring: _CONFIG_NEVER_ANIMATE.withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _SUBTLE_SPRING.ON_PRESS_SPRING };
+  obj = { withSpring: require("../../../design/animation/reanimated/spring/spring.tsx").withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: require("../../../design/animation/reanimated/spring/springPresets.tsx").ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 2871405301293;
   fn.__initData = closure_8;
@@ -63,11 +60,11 @@ export default function ShareFooterLayout(arg0) {
   if (tmp12) {
     const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     obj5[2] = warningText;
-    tmp12 = callback(_Text.Text, obj5);
+    tmp12 = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj5);
   }
   items4[1] = tmp12;
   obj3[1] = items4;
   items2[1] = closure_6(View, obj3);
   obj[1] = items2;
-  return closure_6(_modDef4115.View, obj);
+  return closure_6(_modDef4119.View, obj);
 };

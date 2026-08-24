@@ -32,14 +32,14 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
     const unreadBadge = layoutStyles.unreadBadge;
     obj = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10056).makeSizeStyle(layoutStyles.unreadBadge.size);
+    items[3] = tmp2(10095).makeSizeStyle(layoutStyles.unreadBadge.size);
     obj[0] = items;
     obj = { classic: null, size: null, badgeStyle: null };
     obj[0] = flag;
-    const tmp2Result = tmp2(10056);
+    const tmp2Result = tmp2(10095);
     const tmp9 = View;
     const _Math = Math;
-    obj[1] = tmp2(8498).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
+    obj[1] = tmp2(8537).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {

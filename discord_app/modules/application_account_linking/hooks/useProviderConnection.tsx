@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/application_account
 
 export const useProviderConnection = function useProviderConnection(provider_id) {
   let _require = provider_id;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let account = null;
@@ -20,7 +20,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   });
   const items1 = [closure_5];
   let tmp3 = null != stateFromStores;
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => fetching.isFetching());
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => fetching.isFetching());
   if (tmp3) {
     tmp3 = !stateFromStores.revoked;
   }
@@ -42,7 +42,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

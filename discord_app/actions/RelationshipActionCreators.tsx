@@ -61,7 +61,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9740);
+              let tmp18Result = tmp18(9779);
               if (!num) {
                 num = 0;
               }
@@ -76,7 +76,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
             obj1[1] = humanizeAbortCodeResult;
             const intl3 = tmp18(1236).intl;
             obj1[2] = intl3.string(tmp18(1236).t.BddRzS);
-            tmp18Result = tmp18(6911);
+            tmp18Result = tmp18(6949);
             tmp18Result.closeContextMenu();
             setDefault.show(obj1);
             const obj4 = setDefault;
@@ -122,14 +122,14 @@ obj = {
     }
     let user2;
     user2 = user.getUser(userId);
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_6.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     obj = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
     const merged = Object.assign(captchaPayload);
     obj[1] = obj;
     obj[2] = context;
-    obj[4] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
       if (closure_0 != null) {
@@ -177,9 +177,9 @@ obj = {
   },
   removeRelationship(userId, context) {
     const _require = arg2;
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
-    const obj2 = _sendRequest;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj2 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       if (closure_0 != null) {
@@ -245,11 +245,11 @@ obj = {
   ignoreUser(closure_3, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
     const _require = closure_3;
     closure_1 = channelId;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_6.IGNORE_USER(closure_3), context: obj, rejectWithError: null };
     obj = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
-    obj[2] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
       obj = channelId(closure_1_3[16]);
@@ -260,7 +260,7 @@ obj = {
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
       channelId(closure_1_3[14]).dispatch(obj);
     }).catch(() => {
-      channelId(6553).showFailedToast();
+      channelId(6584).showFailedToast();
       const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
@@ -269,11 +269,11 @@ obj = {
   unignoreUser(id, UserProfileRemediatedNotice, id2) {
     const _require = id;
     closure_1 = id2;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_6.IGNORE_USER(id), context: obj, rejectWithError: null };
     obj = { location: UserProfileRemediatedNotice };
-    obj[2] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       const result = id2(closure_1_3[16]).showUnignoreSuccessToast(id, id2);
@@ -281,7 +281,7 @@ obj = {
       const intl = id(closure_1_3[7]).intl;
       AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[7]).t.QlH5w6));
     }).catch(() => {
-      id2(6553).showFailedToast();
+      id2(6584).showFailedToast();
       const AccessibilityAnnouncer = id(1363).AccessibilityAnnouncer;
       const intl = id(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1236).t.n6Jo3E));

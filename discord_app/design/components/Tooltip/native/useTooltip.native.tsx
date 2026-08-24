@@ -5,7 +5,6 @@ import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { add } from "../../Layers/native/LayerContext.native.tsx";
 
 const require = arg1;
 let closure_7 = new timestampDefault("useTooltip.native");
@@ -131,7 +130,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const tmp = useWindowDimensionsDefault();
   closure_3 = tmp;
   closure_4 = context.useRef(tmp);
-  context = context.useContext(_add.LayerContext);
+  context = context.useContext(require("../../Layers/native/LayerContext.native.tsx").LayerContext);
   closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

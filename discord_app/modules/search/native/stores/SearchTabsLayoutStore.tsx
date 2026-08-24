@@ -9,7 +9,6 @@ import closure_6 from "SearchMemberTabStore.tsx";
 import closure_7 from "SearchPeopleTabStore.tsx";
 import closure_8 from "SearchQueryStore.tsx";
 import MessageEmbedTypes from "../../SearchConstants.tsx";
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
 require = arg1;
@@ -46,7 +45,7 @@ function computeLayoutForState(value) {
     } else {
       arr = table2[searchContext.type];
     }
-    channel = channel.getChannel(_SearchTokenTypes.getChannelIdFromSearchContext(searchContext));
+    channel = channel.getChannel(require("../../SearchUtils.tsx").getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
       flag = channel.isArchivedThread();
@@ -80,7 +79,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(11511);
+    let tmp6Result = tmp6(11560);
     autocompleteVisible = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((arg0, closure_1) => {
       if (reduced.MEMBERS === closure_1) {
@@ -122,8 +121,8 @@ function computeLayoutForState(value) {
     tmp6Result = tmp6(643);
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
-    const obj2 = _SearchTokenTypes;
-    const result1 = _shallowEqual.areArraysShallowEqual(value.visibleTabs, visibleTabs);
+    const obj2 = SearchTokenTypes;
+    const result1 = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual(value.visibleTabs, visibleTabs);
     const visibleTabCounts2 = value.visibleTabCounts;
     let tmp16 = visibleTabCounts2 === visibleTabCounts;
     if (!tmp16) {

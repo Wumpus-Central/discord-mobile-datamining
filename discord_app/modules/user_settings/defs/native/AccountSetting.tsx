@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.ACCOUNT,
   getComponent() {
-    return PasswordlessUpsell.default;
+    return PasswordlessUpsell /* PasswordlessUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

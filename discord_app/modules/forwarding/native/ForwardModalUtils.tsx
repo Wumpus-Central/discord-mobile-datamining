@@ -1,7 +1,7 @@
 // discord_app/modules/forwarding/native/ForwardModalUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
 import trackForwardStart from "../ForwardingAnalyticsUtils.tsx";
 import showSearchableDestinationListModalDefault from "../../share/native/showSearchableDestinationListModal.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -20,10 +20,10 @@ export const openForwardModal = function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   trackForwardStart.trackForwardStart(message.channel_id, message.id, source);
   const obj = trackForwardStart;
-  showSearchableDestinationListModalDefault(asyncRequireImpl(9079, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
+  showSearchableDestinationListModalDefault(asyncRequireImpl(9116, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {
-  _modDef5260.popWithKey(c5);
+  _modDef5265.popWithKey(c5);
 };
 export const showForwardFailedAlertModal = function showForwardFailedAlertModal(arg0) {
   ({ message, failedDestinations, forwardOptions } = arg0);

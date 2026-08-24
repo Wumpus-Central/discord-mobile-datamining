@@ -5,6 +5,28 @@ import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = set.fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
+export const getExtensionFromContentType = function getExtensionFromContentType(str) {
+  if (null != str) {
+    str = str.toLowerCase();
+    if (obj.test(str)) {
+      if (null != dependencyMap[str]) {
+        return tmp2;
+      } else {
+        const tmp3 = str.split("/")[1];
+        let str3 = "jpg";
+        if ("jpeg" !== tmp3) {
+          let tmp4;
+          if (null != tmp3) {
+            tmp4 = tmp3;
+          }
+          str3 = tmp4;
+        }
+        return str3;
+      }
+    }
+    obj = /^(image|video)\//;
+  }
+};
 export const decideFileExtension = function decideFileExtension(closure_1_0, closure_1_1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -39,7 +61,7 @@ export const decideFileExtension = function decideFileExtension(closure_1_0, clo
     if (null != closure_1_1) {
       const str6 = closure_1_1.toLowerCase();
       if (obj2.test(str6)) {
-        tmp9 = table[str6];
+        tmp9 = dependencyMap[str6];
         if (null == tmp9) {
           const tmp11 = str6.split("/")[1];
           let str8 = "jpg";

@@ -1,7 +1,6 @@
 // discord_app/modules/activities/useActivityUsers.tsx
 import closure_2 from "../../stores/UserStore.tsx";
 import closure_3 from "EmbeddedActivitiesStore.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useActivityUsers.tsx");
@@ -11,7 +10,7 @@ export default function useActivityUsers(arg0, arg1) {
   dependencyMap = arg1;
   let items = [closure_3, closure_2];
   const items1 = [arg1, arg0];
-  return _defaultAreStatesEqual.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
     if (null == closure_1) {
       return [];
     } else {

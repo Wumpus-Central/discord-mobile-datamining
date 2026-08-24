@@ -6,8 +6,6 @@ import { doesRegistrationHaveIdentityType as closure_6 } from "../RegistrationUI
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { Links } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { SingleCodeInput } from "../../../phone/native/CodeField.tsx";
-import { NavigatorWithCaptchaHook } from "Auth.tsx";
 
 const require = arg1;
 ({ authStateToRegisterTransitionStep: error, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
@@ -31,9 +29,9 @@ export default function VerifyPhone(phone) {
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
   callback2 = React.useRef(false);
-  context = React.useContext(_NavigatorWithCaptchaHook.TrackRegistrationContext);
+  context = React.useContext(require("Auth.tsx").TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
-  onPhoneTokenReceived(15228)(callback2(sourceState));
+  onPhoneTokenReceived(15292)(callback2(sourceState));
   const items = [context];
   const effect = React.useEffect(() => {
     if (_undefined()) {
@@ -43,7 +41,7 @@ export default function VerifyPhone(phone) {
       context(obj);
     }
   }, items);
-  onPhoneTokenReceived(4761)(() => () => {
+  onPhoneTokenReceived(4766)(() => () => {
     let tmpResult;
     if (closure_2 != null) {
       tmpResult = tmp(ref.current);
@@ -134,7 +132,7 @@ export default function VerifyPhone(phone) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -168,7 +166,7 @@ export default function VerifyPhone(phone) {
           } else {
             closure_1_6(false);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -188,7 +186,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items2);
-  onPhoneTokenReceived(8656)(callback1);
+  onPhoneTokenReceived(8693)(callback1);
   const items3 = [onBail];
   const memo = React.useMemo(() => {
     let tmp2 = null;
@@ -200,10 +198,10 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(15228);
-  obj[4] = _SingleCodeInput.CodeType.NUMERIC;
+  const tmp7 = onPhoneTokenReceived(15292);
+  obj[4] = require("../../../phone/native/CodeField.tsx").CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;
   obj[7] = tmp[0];
-  return jsx(onPhoneTokenReceived(8657), { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
+  return jsx(onPhoneTokenReceived(8694), { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
 };

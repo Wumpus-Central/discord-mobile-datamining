@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/base_components/ExpandableList.tsx
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -61,11 +61,11 @@ export default function ExpandableList(items) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  let obj2 = memo1(4115);
+  let obj2 = memo1(4119);
   sharedValue = obj2.useSharedValue(0);
-  let obj3 = memo1(4115);
+  let obj3 = memo1(4119);
   sharedValue1 = obj3.useSharedValue(0);
-  let obj4 = memo1(4115);
+  let obj4 = memo1(4119);
   class C {
     constructor() {
       if (closure_5) {
@@ -92,7 +92,7 @@ export default function ExpandableList(items) {
   const memo = obj.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = obj.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  let obj5 = memo1(4115);
+  let obj5 = memo1(4119);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -109,7 +109,7 @@ export default function ExpandableList(items) {
       return obj;
     }
   }
-  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4664).withTiming, containerHeight: derivedValue, timingStandard: memo1(4667).timingStandard };
+  obj = { collapsedListHeight: sharedValue, withTiming: memo1(4671).withTiming, containerHeight: derivedValue, timingStandard: memo1(4674).timingStandard };
   A.__closure = obj;
   A.__workletHash = 2086836441465;
   A.__initData = derivedValue;
@@ -156,7 +156,7 @@ export default function ExpandableList(items) {
   }
   items6[1] = tmp16Result;
   obj[1] = items6;
-  const items7 = [first(_modDef4115.View, obj), ];
+  const items7 = [first(_modDef4119.View, obj), ];
   if (!showsExpandCTAOverride) {
     obj3 = { children: null };
     items7[1] = showsExpandCTAOverride;
@@ -185,7 +185,7 @@ export default function ExpandableList(items) {
     obj7 = { children: null };
     const obj8 = { color: "text-brand", variant: "text-md/semibold", children: null };
     obj8[2] = stringResult1;
-    obj6[1] = tmp16(tmp9(4734).Text, obj8);
+    obj6[1] = tmp16(tmp9(4739).Text, obj8);
     obj6 = tmp16(tmp17, obj6);
     obj5[1] = obj6;
     obj5[2] = function onPress() {
@@ -200,7 +200,7 @@ export default function ExpandableList(items) {
         tmp4(obj);
       }
     };
-    obj5 = tmp16(tmp9(6291).TableRow, obj5);
+    obj5 = tmp16(tmp9(6322).TableRow, obj5);
     obj7[0] = obj5;
     tmp16Result = tmp16(tmp17, obj7);
   }

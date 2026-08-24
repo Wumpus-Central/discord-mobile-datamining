@@ -93,8 +93,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7451);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(6719).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7489);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(6756).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -103,14 +103,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10684);
+  tmpResult = tmp(10723);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7469).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7469).AdCreativeType.QUEST === type) {
+    if (tmp(7507).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7507).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;
@@ -142,14 +142,14 @@ export const useMobileQuestDock = function useMobileQuestDock() {
 export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase) {
   const _require = mobileQuestDock;
   let tmp = isMobileQuestDockRenderedBase;
-  const isChannelFocused = _getFocusedChannelId.useIsChannelFocused();
-  const obj = _getFocusedChannelId;
-  const currentNavigationRouteName = _coerceMainRoute.useCurrentNavigationRouteName();
-  const obj2 = _coerceMainRoute;
-  let tmp4 = null != _coerceMainRoute.coerceGuildsRoute({ name: currentNavigationRouteName });
-  const obj3 = _coerceMainRoute;
+  const isChannelFocused = require("../../panels/isChannelFocused.native.tsx").useIsChannelFocused();
+  const obj = getFocusedChannelId;
+  const currentNavigationRouteName = require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useCurrentNavigationRouteName();
+  const obj2 = coerceMainRoute;
+  let tmp4 = null != require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").coerceGuildsRoute({ name: currentNavigationRouteName });
+  const obj3 = coerceMainRoute;
   const items = [closure_7];
-  let stateFromStores = _initialize.useStateFromStores(items, () => {
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const type = mobileQuestDock.type;
     if (mobileQuestDock(closure_1_2[15]).AdCreativeType.QUEST === type) {
       return closure_1_7.isClaimingReward(tmp.quest.id);
@@ -158,9 +158,9 @@ export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVi
     }
     tmp = mobileQuestDock;
   });
-  const obj4 = _initialize;
+  const obj4 = initialize;
   const items1 = [closure_5];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     key = key.getKey();
     let tmp2 = key === closure_10;
     if (!tmp2) {
@@ -292,7 +292,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -359,7 +359,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp15) {
           v0 = tmp;
           throw tmp15;

@@ -121,7 +121,7 @@ export const FamilyCenterTeenQRCodeButton = function FamilyCenterTeenQRCodeButto
 };
 export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeButton() {
   function handleQrCodeScanSucess(url) {
-    let arr = callback(5260);
+    let arr = callback(5265);
     arr = arr.pop();
     let toURLSafeResult = callback(1487).toURLSafe(url);
     if (toURLSafeResult == null) {
@@ -135,8 +135,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_8)) {
-            const result = handleQrCodeScanSucess(11101).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
-            const obj4 = handleQrCodeScanSucess(11101);
+            const result = handleQrCodeScanSucess(11140).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const obj4 = handleQrCodeScanSucess(11140);
           }
           tmp4 = tmp6;
         }
@@ -145,7 +145,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     }
     return tmp4;
   }
-  let obj = handleQrCodeScanSucess(7621);
+  let obj = handleQrCodeScanSucess(7659);
   if (obj.useHasMaxConnections()) {
     return null;
   } else {

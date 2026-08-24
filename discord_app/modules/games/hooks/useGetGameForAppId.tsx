@@ -3,7 +3,6 @@ import importDefaultResult1 from "useGame.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../GameStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { importDefaultResult1 } from "useGame.tsx";
 
 require = arg1;
@@ -30,7 +29,7 @@ export default function useGetGameForAppId(applicationId) {
   return obj;
 };
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7145)(stateFromStoresArray);
+  const tmp = memo(7183)(stateFromStoresArray);
   const _require = tmp;
   const items = [tmp];
   memo = React.useMemo(() => {
@@ -38,10 +37,10 @@ export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStore
     const mapped = found.map((getCanonicalGameId) => getCanonicalGameId.getCanonicalGameId());
     return mapped.filter(lib(closure_1_2[4]).isNotNullish);
   }, items);
-  const games = _importDefaultResult1.useGames(memo);
-  const obj = _importDefaultResult1;
+  const games = require("useGame.tsx").useGames(memo);
+  const obj = importDefaultResult1;
   const items1 = [closure_4];
-  return _initialize.useStateFromStoresArray(items1, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     const mapped = memo.map((closure_0) => game.getGame(closure_0));
     return mapped.filter(lib(closure_1_2[4]).isNotNullish);
   });

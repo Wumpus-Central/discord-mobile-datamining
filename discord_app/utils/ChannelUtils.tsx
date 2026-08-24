@@ -16,7 +16,6 @@ import closure_9 from "../stores/PermissionStore.tsx";
 import closure_10 from "../stores/SelectedChannelStore.tsx";
 import closure_11 from "../stores/views/SortedVoiceStateStore.tsx";
 import ME from "../Constants.tsx";
-import { PermissionOverwriteType } from "../flow/Server.tsx";
 
 function allowChannelAccess(id, channelType, MEMBER) {
   const NONE = applyOverwritesAll.NONE;
@@ -104,7 +103,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     const obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = guildId;
-    obj[1] = _PermissionOverwriteType.PermissionOverwriteType.ROLE;
+    obj[1] = require("../flow/Server.tsx").PermissionOverwriteType.ROLE;
     obj[2] = applyOverwritesAll.NONE;
     obj[3] = addResult2;
     items.push(obj);

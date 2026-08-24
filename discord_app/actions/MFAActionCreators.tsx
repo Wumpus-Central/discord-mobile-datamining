@@ -77,11 +77,11 @@ export default {
     if (regenerate) {
       regenerateNonce = nonces.regenerateNonce;
     }
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: Endpoints.MFA_CODES_VERIFICATION, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { key: verificationKey, nonce: regenerateNonce, regenerate };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.post(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[3]);
       obj = { type: "MFA_VIEW_BACKUP_CODES", codes: body.body.backup_codes, key: closure_0 };

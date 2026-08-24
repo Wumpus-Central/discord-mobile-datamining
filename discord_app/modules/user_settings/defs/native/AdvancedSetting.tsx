@@ -4,7 +4,6 @@ import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsAdvancedScreen } from "../../advanced/native/SettingsAdvancedScreen.tsx";
 
 obj = {
   useTitle() {
@@ -18,7 +17,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.ADVANCED,
   getComponent() {
-    return SettingsAdvancedScreen.default;
+    return require("../../advanced/native/SettingsAdvancedScreen.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -3,8 +3,6 @@ import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakStat
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");
@@ -12,10 +10,10 @@ let result = require("set").fileFinishedImporting("modules/stage_channels/useTog
 export default function useToggleRequestToSpeak(id) {
   const _require = id;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => id2.getId());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id2.getId());
   const tmp4 = useAudienceRequestToSpeakStateDefault(stateFromStores, id.id);
   importDefault = tmp4;
-  const tmp5 = tmp4 === _useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === _useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const tmp5 = tmp4 === require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp4 === require("useAudienceRequestToSpeakState.tsx").RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   dependencyMap = tmp5;
   const tmp6 = first(React.useState(tmp5), 2);
   first = tmp6[0];

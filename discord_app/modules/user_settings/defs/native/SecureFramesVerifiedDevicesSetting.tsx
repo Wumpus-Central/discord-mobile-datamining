@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
-    return VerificationListItem.default;
+    return VerificationListItem /* VerificationListItem */.default;
   }
 };
 const route = createToggle.createRoute(obj);

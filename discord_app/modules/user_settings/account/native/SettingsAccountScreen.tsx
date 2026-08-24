@@ -6,7 +6,7 @@ import useSettingNavigationRoute from "../../core/native/useSettingNavigationRou
 import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
 import SegmentedControlPage from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
-import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14059 from "../../../settings/native/renderer/SettingLayout.tsx";
 import AutomatedUnderageAppealStatus from "../../../safety_hub/native/SafetyHubPage.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -18,45 +18,41 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import { WebAuthnScreens } from "../../../webauthn/WebAuthnConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { registerAsset } from "../../../../../_runtime/14079_registerAsset.js";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { registerAsset } from "../../../../../_runtime/14147_registerAsset.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 function PasswordlessUpsell() {
   const tmp = callback4();
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useNavigation();
   obj = { style: tmp.upsellPasswordless, children: null };
   obj = { border: "none", shadow: "none", children: null };
   obj1 = { style: { flexDirection: "row", gap: 8 }, children: null };
   const obj2 = { style: { width: 70, height: 70 }, children: null };
-  const obj3 = { source: _registerAsset, resizeMode: "contain", style: tmp.upsellImagePasswordless };
+  const obj3 = { source: registerAsset, resizeMode: "contain", style: tmp.upsellImagePasswordless };
   obj2[1] = callback2(preloadDefault, obj3);
   const items = [callback2(View, obj2), ];
   const obj4 = { style: { flex: 1 }, children: null };
   const obj5 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
   const obj6 = { variant: "heading-lg/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = _getSystemLocale.intl;
-  obj6[2] = intl.string(_getSystemLocale.t["+Svv46"]);
-  const items1 = [callback2(_Text.Heading, obj6), , ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj6[2] = intl.string(require("../../../../intl/index.native.tsx").t["+Svv46"]);
+  const items1 = [callback2(require("../../../../design/components/Text/native/Text.tsx").Heading, obj6), , ];
   const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj7[2] = intl2.string(_getSystemLocale.t.S0g2K9);
-  items1[1] = callback2(_Text.Text, obj7);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj7[2] = intl2.string(require("../../../../intl/index.native.tsx").t.S0g2K9);
+  items1[1] = callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj7);
   const obj8 = { style: { flexDirection: "row" }, children: null };
   const obj9 = { text: null, onPress: null, size: "sm" };
-  const intl3 = _getSystemLocale.intl;
-  obj9[0] = intl3.string(_getSystemLocale.t.piGf5c);
+  const intl3 = require("../../../../intl/index.native.tsx").intl;
+  obj9[0] = intl3.string(require("../../../../intl/index.native.tsx").t.piGf5c);
   obj9[1] = function onPress() {
     let obj = closure_1_1(closure_1_2[18]);
     obj = { navigation: callback, initialRouteName: closure_1_10.REGISTER, showNav: true };
     obj.pushLazy(callback(closure_1_2[20])(closure_1_2[19], closure_1_2.paths), obj);
   };
-  const items2 = [callback2(_Button.Button, obj9), callback2(View, {})];
+  const items2 = [callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj9), callback2(View, {})];
   obj8[1] = items2;
   items1[2] = callback3(View, obj8);
   obj5[1] = items1;
@@ -64,7 +60,7 @@ function PasswordlessUpsell() {
   items[1] = callback2(View, obj4);
   obj1[1] = items;
   obj[2] = callback3(View, obj1);
-  obj[1] = callback2(_PressableCard.Card, obj);
+  obj[1] = callback2(require("../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   return callback2(View, obj);
 }
 function AccountTwoFALabel() {
@@ -107,7 +103,7 @@ function AccountTwoFALabel() {
 }
 function AccountSecurityPage() {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(10669);
+    let obj = callback(10708);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -127,10 +123,10 @@ function AccountSecurityPage() {
     obj2[1] = items3;
     items1[2] = obj2;
     obj[0] = items1.filter(Boolean);
-    obj[1] = callback2(14103);
+    obj[1] = callback2(14171);
     return obj.createList(obj);
   }, []);
-  return callback2(_modDef13991, { node });
+  return callback2(_modDef14059, { node });
 }
 function AccountStandingPage() {
   return callback2(AutomatedUnderageAppealStatus.default, { visible: true });

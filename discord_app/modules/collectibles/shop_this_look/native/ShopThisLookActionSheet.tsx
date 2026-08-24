@@ -7,9 +7,6 @@ import { ACTION_SHEET_MAX_WIDTH } from "../../../action_sheet/native/ActionSheet
 import { UserProfileThemeTypes } from "../../../user_profile/native/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
 import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 
 const require = arg1;
@@ -23,7 +20,7 @@ function ShopThisLookCard(skuId) {
   closure_6 = undefined;
   let callback;
   let wishlistButton = callback3();
-  let obj = skuId(11998);
+  let obj = skuId(12047);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
@@ -106,7 +103,7 @@ function ShopThisLookCard(skuId) {
     obj[1] = function renderPreview() {
       return callback(type, {});
     };
-    let tmp23 = callback(onPress(9182), obj);
+    let tmp23 = callback(onPress(9219), obj);
   } else {
     tmp23 = null;
     if (null != stateFromStores) {
@@ -117,14 +114,14 @@ function ShopThisLookCard(skuId) {
         obj1[0] = stateFromStores;
         obj1[1] = size;
         obj1[2] = callback1;
-        const items7 = [callback(onPress(10367), obj1), ];
+        const items7 = [callback(onPress(10407), obj1), ];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: null, style: null };
           callback1[0] = memo1;
           wishlistButton = wishlistButton.wishlistButton;
           callback1[1] = wishlistButton;
-          tmp17Result = tmp17(tmp18(9240), callback1);
+          tmp17Result = tmp17(tmp18(9277), callback1);
         }
         items7[1] = tmp17Result;
         obj[1] = items7;
@@ -137,10 +134,10 @@ function ShopThisLookCard(skuId) {
         const obj2 = { sku: null, size: null, overlay: null, onPress: null };
         obj2[0] = stateFromStores;
         obj2[1] = size;
-        obj2[2] = skuId(9182).WishlistItemCardOverlay.LOCKED;
+        obj2[2] = skuId(9219).WishlistItemCardOverlay.LOCKED;
         obj2[3] = tmp10;
-        tmp15Result = callback(onPress(10367), obj2);
-        const tmp13 = onPress(10367);
+        tmp15Result = callback(onPress(10407), obj2);
+        const tmp13 = onPress(10407);
       }
     }
   }
@@ -169,32 +166,32 @@ export default function ShopThisLookActionSheet(arg0) {
   dependencyMap = undefined;
   ({ userId, guildId } = arg0);
   const tmp = callback3();
-  let obj = _useEquippedCollectibleSkuIds;
+  let obj = useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12317)(obj));
-  const tmp2 = analyticsLocations(12317)(obj);
-  analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12369)(obj));
+  const tmp2 = analyticsLocations(12369)(obj);
+  analyticsLocations = analyticsLocations(7177)(analyticsLocations(7197).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = React.useCallback((initialProductSkuId) => {
-    let obj = analyticsLocations(4342);
+    let obj = analyticsLocations(4346);
     obj.hideActionSheet();
-    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(7159).USER_PROFILE_OVERFLOW_MENU };
-    const result = _undefined(5300).openCollectiblesShopMobile(obj);
+    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(7197).USER_PROFILE_OVERFLOW_MENU };
+    const result = _undefined(5305).openCollectiblesShopMobile(obj);
   }, items);
   obj = { value: null, children: null };
-  const items1 = [analyticsLocations(7159).SHOP_THIS_LOOK_ACTION_SHEET];
+  const items1 = [analyticsLocations(7197).SHOP_THIS_LOOK_ACTION_SHEET];
   obj[0] = items1;
   obj1 = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(7139);
-  const intl = _getSystemLocale.intl;
-  obj1[1] = intl.string(_getSystemLocale.t.xNdRDO);
+  const tmp3 = analyticsLocations(7177);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.xNdRDO);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj3[3] = intl2.string(_getSystemLocale.t["ws+0Lr"]);
-  const items2 = [callback(_Text.Text, obj3), ];
-  const tmp4 = analyticsLocations(9450);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj3[3] = intl2.string(require("../../../../intl/index.native.tsx").t["ws+0Lr"]);
+  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3), ];
+  const tmp4 = analyticsLocations(9487);
   const items3 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items2[1] = callback(closure_5, {
     style: items3,
@@ -212,5 +209,5 @@ export default function ShopThisLookActionSheet(arg0) {
   obj2[1] = items2;
   obj1[2] = callback2(closure_5, obj2);
   obj[1] = callback(tmp4, obj1);
-  return callback(_context.AnalyticsLocationProvider, obj);
+  return callback(require("../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
 };

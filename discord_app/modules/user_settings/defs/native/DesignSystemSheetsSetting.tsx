@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_SHEETS,
   getComponent() {
-    return DemoActionSheet.default;
+    return DemoActionSheet /* DemoActionSheet */.default;
   }
 };
 const route = createToggle.createRoute(obj);

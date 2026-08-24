@@ -1,7 +1,7 @@
 // discord_app/modules/lurker_mode/native/ServerPreviewBannerControls.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import registerAssetDefault from "../../../../_runtime/06317_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/06348_registerAsset.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";

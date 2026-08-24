@@ -37,7 +37,6 @@ import closure_13 from "../../../stores/ReadStateStore.tsx";
 import closure_14 from "../../../stores/UserStore.tsx";
 import Changeset from "renderer/RowGeneratorConstants.tsx";
 import ME from "../../../Constants.tsx";
-import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
 
 require = arg1;
 function getVisibleMessages(arg0) {
@@ -118,7 +117,7 @@ function _handleTapNavBar() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -159,7 +158,7 @@ function _handleTapNavBar() {
                     const findMessageIndexResult = findMessageIndex(tmp10Result.castChannelIdAsMessageId(channel.id));
                     if (null == findMessageIndexResult) {
                       c3 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj4 = { animated: null };
                       obj4[0] = !useReducedMotion;
@@ -257,10 +256,10 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       obj[1] = tmp13;
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = tmp18(4811);
+        let tmp18Result = tmp18(4816);
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = tmp18(4811);
+          tmp18Result = tmp18(4816);
           let str5 = "file";
           if (tmp18Result.isImageFile(tmp13.filename)) {
             str5 = "image";
@@ -433,7 +432,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(10455);
+    tmp36Result = tmp36(10494);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -442,15 +441,15 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(10456);
+          tmp12Result = tmp12(10495);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7510).ReactionTypes;
+    const ReactionTypes = tmp12(7548).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-      const tmp12Result2 = tmp12(4343);
+      const result2 = tmp12(4347).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+      const tmp12Result2 = tmp12(4347);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
       obj[1] = messageId;
@@ -459,18 +458,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7511).removeReaction(obj);
+      tmp12(7549).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7511);
+            const tmp12Result4 = tmp12(7549);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-              const tmp12Result5 = tmp12(4343);
+              const result3 = tmp12(4347).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+              const tmp12Result5 = tmp12(4347);
             }
           }
         }
@@ -478,14 +477,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(8522).openMemberVerificationModal(guildId1);
+          return tmp12(8561).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = tmp12(4032);
+    tmp12Result1 = tmp12(4035);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(10456);
+    const tmp12Result7 = tmp12(10495);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -517,26 +516,26 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(5042);
+    let tmp4Result = tmp4(5047);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
-  tmp4Result = tmp4(4343);
+  tmp4Result = tmp4(4347);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(7167);
+    const tmp4Result1 = tmp4(7205);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
       const tmp9Result = DISCORD_EPOCHDefault;
     }
-    tmp4Result1.copy(tmp4(4979).getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = tmp4(4979);
+    tmp4Result1.copy(tmp4(4984).getChannelPermalink(guildId, id, result2));
+    const tmp4Result2 = tmp4(4984);
   } else {
-    const tmp4Result3 = tmp4(7167);
-    tmp4Result3.copy(tmp4(4979).getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = tmp4(4979);
+    const tmp4Result3 = tmp4(7205);
+    tmp4Result3.copy(tmp4(4984).getChannelLinkToCopy(channel, channel1));
+    const tmp4Result4 = tmp4(4984);
   }
   const obj2 = trackForumChannelSeenBatch;
   const tmp9 = importDefault;
@@ -827,7 +826,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
   closure_4 = undefined !== updateRowsEnabled && updateRowsEnabled;
   let INSTANT = jumpType.jumpType;
   if (undefined === INSTANT) {
-    INSTANT = _GuildThemeSourcePreference.JumpType.INSTANT;
+    INSTANT = require("../../../flow/Client.tsx").JumpType.INSTANT;
   }
   if (null != arg0) {
     const _setTimeout = setTimeout;

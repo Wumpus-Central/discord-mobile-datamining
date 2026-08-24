@@ -1,8 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherContext.tsx
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
-import { useDefaultAppLauncherWidth } from "hooks/useDefaultAppLauncherWidth.tsx";
 
 const require = arg1;
 let obj = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };
@@ -51,12 +49,12 @@ export const useRequiredAppLauncherContext = function useRequiredAppLauncherCont
 export const useAppLauncherContext = function useAppLauncherContext() {
   let _require = sharedValue.useRef(sharedValue1.DISMISSED);
   dependencyMap = sharedValue.useRef(undefined);
-  obj = _ReanimatedRexport;
+  obj = ReanimatedRexport;
   sharedValue = obj.useSharedValue(-1);
-  sharedValue1 = _ReanimatedRexport.useSharedValue(0);
-  const TEXT = _AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT;
-  const obj2 = _ReanimatedRexport;
-  const defaultAppLauncherWidth = _useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
+  sharedValue1 = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
+  const TEXT = require("../AppLauncherTypes.tsx").AppLauncherEntrypoint.TEXT;
+  const obj2 = ReanimatedRexport;
+  const defaultAppLauncherWidth = require("hooks/useDefaultAppLauncherWidth.tsx").useDefaultAppLauncherWidth(TEXT);
   _require = false;
   obj = {
     getApplicationCommandManager() {

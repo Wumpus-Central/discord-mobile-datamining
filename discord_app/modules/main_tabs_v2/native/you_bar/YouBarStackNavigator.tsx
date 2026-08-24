@@ -6,19 +6,18 @@ import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
 import closure_7 from "../../../../stores/SelectedGuildStore.tsx";
 import { YouBarNavigatorScreens } from "../MainTabsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/09970_createNativeStackNavigator.js";
 import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
-import { Guilds } from "../tabs/guilds/Guilds.tsx";
 
 require = arg1;
 function getGuildsComponent() {
-  return Guilds.default;
+  return require("../tabs/guilds/Guilds.tsx").default;
 }
 function getNotificationsComponent() {
   return goBack.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return ICYMINavigator.default;
+  return ICYMINavigator /* ICYMINavigator */.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

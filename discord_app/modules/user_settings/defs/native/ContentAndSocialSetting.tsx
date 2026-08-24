@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return ContentAndSocialSettings.default;
+    return ContentAndSocialSettings /* ContentAndSocialSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,7 +1,6 @@
 // discord_app/modules/calls/useCanSetVoiceChannelStatus.tsx
 import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let items = [, , ];
@@ -18,7 +17,7 @@ export default function useCanSetVoiceChannelStatus(arg0) {
   dependencyMap = arg2;
   items = [closure_3];
   items1 = [arg0, flag, arg2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     closure_1 = closure_1_3;
     return closure_1 ? closure_1_5 : closure_1_4.every((arg0) => {
       if (null == table) {

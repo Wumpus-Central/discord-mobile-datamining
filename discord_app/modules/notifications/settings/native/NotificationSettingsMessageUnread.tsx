@@ -5,30 +5,25 @@ import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockCha
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
-import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 import { getPushNotificationSelectOptions } from "../utils/notificationSettingsPresetOptionUtils.tsx";
 
 const require = arg1;
 function NotificationSettingsMessageUnread(onPress) {
   const _require = onPress;
   const tmp = callback3();
-  let obj = _getPushNotificationSelectOptions;
+  let obj = getPushNotificationSelectOptions;
   const unreadSelectOptions = obj.getUnreadSelectOptions();
   const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
   obj = { style: onPress.style, children: null };
   obj = { style: tmp.header, children: null };
   obj1 = { variant: "text-sm/semibold", color: "text-default", style: tmp.headerTitle, children: null };
-  const intl = _getSystemLocale.intl;
-  obj1[3] = intl.string(_getSystemLocale.t.Tqd1Af);
-  const items = [callback(_Text.Text, obj1), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj1[3] = intl.string(require("../../../../intl/index.native.tsx").t.Tqd1Af);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
   const obj2 = { variant: "text-xs/semibold", color: "text-default", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj2[2] = intl2.string(_getSystemLocale.t.RpQgm5);
-  items[1] = callback(_Text.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj2[2] = intl2.string(require("../../../../intl/index.native.tsx").t.RpQgm5);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj3 = { onPress: onPress.onCustomize, activeOpacity: 0.6, children: null };
@@ -43,17 +38,17 @@ function NotificationSettingsMessageUnread(onPress) {
     str = "unset";
   }
   obj6[2] = str;
-  items2[1] = callback(_Text.Text, obj6);
+  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj6);
   const obj7 = { onPress: onPress.onCustomize, children: null };
   const obj8 = { variant: "text-sm/semibold", style: tmp.cta, color: "text-brand", children: null };
   const intl3 = tmp2(1236).intl;
-  const items3 = [intl3.string(_getSystemLocale.t.yxiV9W), " "];
+  const items3 = [intl3.string(require("../../../../intl/index.native.tsx").t.yxiV9W), " "];
   obj8[3] = items3;
-  obj7[1] = callback2(_Text.Text, obj8);
-  items2[2] = callback(_PressableBase.PressableOpacity, obj7);
+  obj7[1] = callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj8);
+  items2[2] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj7);
   obj4[1] = items2;
   obj3[2] = callback2(View, obj4);
-  items1[1] = callback(_PressableBase.PressableOpacity, obj3);
+  items1[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj3);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -73,7 +68,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _updateGuildPreset.useGuildPresetSettings(style.guildId).unread,
+    setting: require("../utils/notificationSettingsGuildFlagUtils.tsx").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
@@ -86,7 +81,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _useChannelPresetSettings.useChannelPresetSettings(style.channel).unread,
+    setting: require("../utils/notficationSettingsChannelFlagUtils.tsx").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };

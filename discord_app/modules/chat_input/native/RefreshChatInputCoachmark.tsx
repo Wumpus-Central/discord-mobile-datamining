@@ -16,7 +16,7 @@ export default function RefreshChatInputCoachmark(buttonRef) {
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
   importDefault = undefined;
-  _useSelectedDismissibleContent;
+  useSelectedDismissibleContent;
   if (tmp2) {
     if (!disabled.disabled) {
       let items = [tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];

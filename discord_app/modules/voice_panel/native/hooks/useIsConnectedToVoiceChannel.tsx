@@ -3,7 +3,6 @@ import closure_2 from "../../../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../../../stores/RTCConnectionStore.tsx";
 import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 import { RTCConnectionStates } from "../../../../Constants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx");
@@ -11,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/voice_panel/native/
 export default function useIsConnectedToVoiceChannel(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4, closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channelId = closure_1_3.getChannelId();
     let tmp2 = closure_0;
     if (closure_0 == null) {

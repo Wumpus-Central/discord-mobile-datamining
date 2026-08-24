@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/shared/VoiceOrStageSummaryRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/15882_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/15979_registerAsset.js";
 import getLayoutStyleDefault from "getLayoutStyles.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -104,7 +104,7 @@ const memoResult = importAllResult.memo(function VoiceOrStageSummaryRow(arg0) {
     let obj3 = { variant: "text-sm/bold", style: null, children: null };
     obj3[1] = { marginLeft: 4 };
     obj3[2] = audienceCount;
-    items4[1] = closure_4(max(4734).Text, obj3);
+    items4[1] = closure_4(max(4739).Text, obj3);
     obj1[1] = items4;
     obj[1] = tmp5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);

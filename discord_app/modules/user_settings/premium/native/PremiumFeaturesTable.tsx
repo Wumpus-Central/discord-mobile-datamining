@@ -4,9 +4,9 @@ import Button from "../../../../design/void/native.tsx";
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
-import registerAssetDefault from "../../../../../_runtime/12908_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12909_registerAsset.js";
+import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
+import registerAssetDefault from "../../../../../_runtime/12963_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12964_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -14,7 +14,6 @@ import { HorizontalGradient } from "../../../../Constants.tsx";
 import GuildFeatures from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 function CheckIcon() {
@@ -112,15 +111,15 @@ function Row(withTopBorderRadius) {
   items3[4] = bottomBorderRadius;
   let formatToPlainStringResult;
   if (null != column1AccessibilityLabel) {
-    const intl = _getSystemLocale.intl;
-    const intl2 = _getSystemLocale.intl;
+    const intl = require("../../../../intl/index.native.tsx").intl;
+    const intl2 = require("../../../../intl/index.native.tsx").intl;
     obj1 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 1, columnName: null };
     obj1[0] = column1AccessibilityLabel;
     obj1[1] = rowNumber;
     obj1[2] = rowName;
-    obj1[4] = intl.string(_getSystemLocale.t["t9uG/o"]);
-    formatToPlainStringResult = intl2.formatToPlainString(_getSystemLocale.t.EZjXN3, obj1);
-    const stringResult = intl.string(_getSystemLocale.t["t9uG/o"]);
+    obj1[4] = intl.string(require("../../../../intl/index.native.tsx").t["t9uG/o"]);
+    formatToPlainStringResult = intl2.formatToPlainString(require("../../../../intl/index.native.tsx").t.EZjXN3, obj1);
+    const stringResult = intl.string(require("../../../../intl/index.native.tsx").t["t9uG/o"]);
   }
   obj[1] = formatToPlainStringResult;
   obj[2] = !flag3;
@@ -159,15 +158,15 @@ function Row(withTopBorderRadius) {
         obj4[0] = items4;
         let formatToPlainStringResult1;
         if (null != column2AccessibilityLabel) {
-          const intl3 = _getSystemLocale.intl;
-          const intl4 = _getSystemLocale.intl;
+          const intl3 = require("../../../../intl/index.native.tsx").intl;
+          const intl4 = require("../../../../intl/index.native.tsx").intl;
           const obj5 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 2, columnName: null };
           obj5[0] = column2AccessibilityLabel;
           obj5[1] = rowNumber;
           obj5[2] = rowName;
-          obj5[4] = intl3.string(_getSystemLocale.t.lG6a5x);
-          formatToPlainStringResult1 = intl4.formatToPlainString(_getSystemLocale.t.EZjXN3, obj5);
-          const stringResult1 = intl3.string(_getSystemLocale.t.lG6a5x);
+          obj5[4] = intl3.string(require("../../../../intl/index.native.tsx").t.lG6a5x);
+          formatToPlainStringResult1 = intl4.formatToPlainString(require("../../../../intl/index.native.tsx").t.EZjXN3, obj5);
+          const stringResult1 = intl3.string(require("../../../../intl/index.native.tsx").t.lG6a5x);
         }
         obj4[1] = formatToPlainStringResult1;
         obj4[2] = !flag3;
@@ -208,15 +207,15 @@ function Row(withTopBorderRadius) {
   items6[4] = flag2;
   let formatToPlainStringResult2;
   if (null != column2AccessibilityLabel) {
-    const intl5 = _getSystemLocale.intl;
-    const intl6 = _getSystemLocale.intl;
+    const intl5 = require("../../../../intl/index.native.tsx").intl;
+    const intl6 = require("../../../../intl/index.native.tsx").intl;
     const obj9 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 2, columnName: null };
     obj9[0] = column2AccessibilityLabel;
     obj9[1] = rowNumber;
     obj9[2] = rowName;
-    obj9[4] = intl5.string(_getSystemLocale.t.lG6a5x);
-    formatToPlainStringResult2 = intl6.formatToPlainString(_getSystemLocale.t.EZjXN3, obj9);
-    const stringResult2 = intl5.string(_getSystemLocale.t.lG6a5x);
+    obj9[4] = intl5.string(require("../../../../intl/index.native.tsx").t.lG6a5x);
+    formatToPlainStringResult2 = intl6.formatToPlainString(require("../../../../intl/index.native.tsx").t.EZjXN3, obj9);
+    const stringResult2 = intl5.string(require("../../../../intl/index.native.tsx").t.lG6a5x);
   }
   obj8[1] = formatToPlainStringResult2;
   obj8[2] = !flag3;

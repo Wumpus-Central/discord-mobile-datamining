@@ -21,7 +21,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
-    return ApplyButton.default;
+    return ApplyButton /* ApplyButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

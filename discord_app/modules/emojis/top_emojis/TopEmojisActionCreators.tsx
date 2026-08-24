@@ -2,7 +2,6 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { RouteParam } from "../../routing/RouteUtils.tsx";
 
 const Endpoints = ME.Endpoints;
@@ -10,12 +9,12 @@ const result = set.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisAct
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _RouteParam;
+  let obj = RouteParam;
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;
     dispatcherDefault.dispatch(obj);
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
     const value = HTTP.get(obj);

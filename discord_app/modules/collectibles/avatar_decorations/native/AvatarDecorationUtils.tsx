@@ -2,9 +2,8 @@
 import set from "../../../../../_runtime/00002_set.js";
 import Button from "../../../../design/void/native.tsx";
 import DECORATION_TO_AVATAR_RATIO from "../AvatarDecorationConstants.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 
 let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;
 let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
@@ -27,7 +26,7 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
       inset = 0;
     }
     obj[2] = inset + arg1;
-    obj[3] = _Button.CutoutType.RECTANGULAR;
+    obj[3] = require("../../../../design/void/native.tsx").CutoutType.RECTANGULAR;
     const nativeCutouts = memo.nativeCutouts;
     let mapped;
     if (nativeCutouts != null) {
@@ -48,5 +47,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8368, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8407, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

@@ -15,9 +15,9 @@ let closure_10 = MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN.MAX_BRAND_SAFETY_CONTEXT_ARR
 let result = set.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _getQuestDeliveryDataForPlacement;
+  let obj = getQuestDeliveryDataForPlacement;
   const result = obj.isBillableQuestContent(questContent);
-  obj1 = _getQuestDeliveryDataForPlacement;
+  obj1 = getQuestDeliveryDataForPlacement;
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();

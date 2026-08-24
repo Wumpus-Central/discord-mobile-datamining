@@ -1,7 +1,6 @@
 // discord_app/modules/main_tabs_v2/useRecipientsLabel.tsx
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/UserStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
@@ -9,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRec
 export const useRecipientsLabel = function useRecipientsLabel(channel) {
   const _require = channel;
   const items = [closure_4];
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((arg0) => user.getUser(arg0));
     const found = mapped.filter(channel(closure_1_2[4]).isNotNullish);

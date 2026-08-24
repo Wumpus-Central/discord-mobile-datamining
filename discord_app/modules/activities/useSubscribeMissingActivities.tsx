@@ -3,7 +3,6 @@ import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../presence_subscriptions/PresenceSubscriptionsStore.tsx";
 import closure_5 from "../../stores/PresenceStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_6 = [];
@@ -44,7 +43,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   first = tmp[0];
   let items1 = [closure_5];
   const items2 = [first];
-  stateFromStoresArray = _initialize.useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     let items = [];
     const item = first.forEach((author) => {
       items = author;

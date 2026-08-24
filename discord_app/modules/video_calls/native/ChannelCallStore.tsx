@@ -10,8 +10,6 @@ import { OrientationLockState } from "../../activities/Constants.tsx";
 import { ParticipantTypes } from "../../calls/CallConstants.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 
 require = arg1;
@@ -19,13 +17,13 @@ require = arg1;
 const timeout = new require("start").Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 obj = {};
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
 obj[4] = obj;
 let closure_9 = Object.freeze(obj);
 let obj2 = keys.create(() => closure_9);
-const obj1 = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+const obj1 = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
 const throttleResult = importDefaultResult.throttle(() => {
   const pipFocus = obj2.getState().pipFocus;
   pipFocus(705).batchUpdates(() => closure_1_10.setState({ pipFocus: !pipFocus }));
@@ -35,7 +33,7 @@ let result = require("set").fileFinishedImporting("modules/video_calls/native/Ch
 export const focusTimeout = timeout;
 export const setFocus = function setFocus(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_10.setState({ focus: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_10.setState({ focus: closure_0 }));
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj2.getState().focus;
@@ -68,7 +66,7 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
     dispatcherDefault.wait(() => CLOSED(closure_1_2[10]).updateChatOpen(closure_0, CLOSED === closure_1_5.OPEN));
     const obj = dispatcherDefault;
   }
-  _batchUpdates.batchUpdates(() => closure_1_10.setState({ voiceChatDrawerState: closure_1 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_10.setState({ voiceChatDrawerState: closure_1 }));
 };
 export const togglePipFocus = throttleResult;
 export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
@@ -96,12 +94,12 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = _useIsConnectedToVoiceChannel;
+  obj = useIsConnectedToVoiceChannel;
   const tmp7 = _require;
   const tmp8 = applicationId;
   const items = [tmp8];
   const items1 = [applicationId];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != applicationId) {
       let UNLOCKED2 = applicationId.getOrientationLockStateForApp(tmp);
       if (UNLOCKED2 == null) {

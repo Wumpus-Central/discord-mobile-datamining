@@ -4,7 +4,6 @@ import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { AccountEditPassword } from "../../account/native/AccountEditPassword.tsx";
 
 obj = {
   useTitle() {
@@ -17,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
   getComponent() {
-    return AccountEditPassword.default;
+    return require("../../account/native/AccountEditPassword.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);

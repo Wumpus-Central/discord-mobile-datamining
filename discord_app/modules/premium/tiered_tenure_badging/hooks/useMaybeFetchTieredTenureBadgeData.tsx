@@ -3,16 +3,15 @@ import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import { PremiumTypes } from "../../PremiumConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsPremiumSubscriber } from "../../useIsPremiumSubscriber.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");
 
 export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTenureBadgeData() {
   const items = [closure_3];
-  _require = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = _initialize;
-  importDefault = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  _require = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
+  importDefault = require("../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
   useMountLayoutEffectDefault(() => {
     let id;
     if (closure_0 != null) {

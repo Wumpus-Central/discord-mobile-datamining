@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/11473_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/11522_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -10,8 +10,6 @@ import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import ArrayResult from "../../../../../_runtime/00020_noop.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function DefaultState() {
@@ -21,13 +19,13 @@ function DefaultState() {
   obj = { style: tmp.emptyStateImage, source: registerAssetDefault };
   const items = [callback(closure_7, obj), ];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[3] = intl.format(_getSystemLocale.t.aYLd8O, {
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl.format(require("../../../../intl/index.native.tsx").t.aYLd8O, {
     protipHook(children) {
       return closure_1_12(lib(closure_1_3[12]).LegacyText, { style: lib.proTip, children }, "protip");
     }
   });
-  items[1] = callback(_Text.Text, obj);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[1] = items;
   return callback2(closure_6, obj);
 }
@@ -38,7 +36,7 @@ function EmptyState(channel) {
   let obj = channel(589);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(11474);
+  obj1 = channel(11523);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1236).intl;
   if (canCreateOrAddGuildInDirectory) {
@@ -58,8 +56,8 @@ function EmptyState(channel) {
   const obj2 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[3] = intl2.string(channel(1236).t["6HXiuE"]);
-  items1[1] = callback(channel(4734).Text, obj2);
-  items1[2] = callback(channel(4734).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = callback(channel(4739).Text, obj2);
+  items1[2] = callback(channel(4739).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj[1] = items1;
   return callback2(closure_6, obj);
 }
@@ -76,7 +74,7 @@ createCacheKey[6] = { marginBottom: 4, textAlign: "center" };
 createCacheKey[7] = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
-let closure_17 = require("module_20").fill(null);
+let closure_17 = require("../../../../../_runtime/00020_noop.js").fill(null);
 let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearch.tsx");
 
 export default function GuildDirectorySearch(channel) {

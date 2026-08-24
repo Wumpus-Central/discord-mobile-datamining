@@ -63,7 +63,7 @@ createToggle = {
       let intl3 = callback(1236).intl;
       obj[5] = intl3.string(callback(1236).t.PDTjLN);
       obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(14153)(obj);
+      callback2(14221)(obj);
       return false;
     }, []);
   },
@@ -72,7 +72,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return CodeRow.default;
+    return CodeRow /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

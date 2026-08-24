@@ -4,7 +4,6 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "PromotionsStore.tsx";
 import { PremiumTypes } from "../PremiumConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function useEligibleActiveOutboundPromotions(arg0) {
@@ -173,7 +172,7 @@ export const useBogoPromotion = function useBogoPromotion() {
 export const useIsInPromotion = function useIsInPromotion(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  return _initialize.useStateFromStores(items, () => closure_1_5.hasPromotion(closure_0));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.hasPromotion(closure_0));
 };
 export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
   const effect = React.useEffect(() => {

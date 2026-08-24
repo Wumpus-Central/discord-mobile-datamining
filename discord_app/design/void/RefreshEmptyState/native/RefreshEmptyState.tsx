@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer from "../../../shared.tsx";
 import Button from "../../../components/Button/native/Button.native.tsx";
-import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
+import _modDef8154 from "../../LegacyText/native/LegacyText.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -47,7 +47,7 @@ class EmptyState {
       items3[1] = titleStyle;
       obj1[0] = items3;
       obj1[1] = title;
-      tmp7 = jsx(require("module_8115"), obj1);
+      tmp7 = jsx(require("../../LegacyText/native/LegacyText.tsx"), obj1);
     }
     items2[1] = tmp7;
     tmp11 = jsx;
@@ -55,7 +55,7 @@ class EmptyState {
     items4 = [, ];
     items4[0] = tmp.body;
     items4[1] = bodyStyle;
-    items2[2] = jsx(require("module_8115"), { style: items4, children: body });
+    items2[2] = jsx(require("../../LegacyText/native/LegacyText.tsx"), { style: items4, children: body });
     tmp11Result = null;
     if (null != callToAction) {
       obj2 = { style: null, children: null };

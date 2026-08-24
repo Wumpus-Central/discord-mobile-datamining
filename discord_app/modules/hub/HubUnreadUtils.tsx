@@ -1,7 +1,6 @@
 // discord_app/modules/hub/HubUnreadUtils.tsx
 import closure_3 from "../directory_channels/GuildDirectoryStore.tsx";
 import closure_4 from "../../stores/ReadStateStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
@@ -10,7 +9,7 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == callback) {
       return 0;
     } else {

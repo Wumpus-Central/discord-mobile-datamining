@@ -1,7 +1,7 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategoriesBackdrop.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8986 from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
+import _modDef9023 from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesBackdrop()
     obj[0] = tmp.backdrop;
     obj1 = { style: null };
     obj1[0] = tmp.backdrop;
-    obj[1] = tmp3(_modDef8986, obj1);
+    obj[1] = tmp3(_modDef9023, obj1);
     tmp3Result = tmp3(tmp4, obj);
   }
   return tmp3Result;

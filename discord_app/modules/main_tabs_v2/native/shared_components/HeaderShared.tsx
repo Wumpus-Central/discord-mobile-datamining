@@ -5,14 +5,13 @@ import Button from "../../../../design/void/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import Background from "../../../../../_runtime/06319_Background.js";
+import Background from "../../../../../_runtime/06350_Background.js";
 import JoinCallButtonDefault from "../channel/ChannelActions.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MIN_HEADER_HEIGHT } from "MainTabsV2Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
 
 require = arg1;
 class GenericHeaderTitle {
@@ -270,11 +269,11 @@ export function getRenderBackImage(navigation) {
 }
 export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
   const _require = navigation;
-  return _set.isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
+  return require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
 };
 export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
   const _require = navigation;
-  return _set.isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
+  return require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
 };
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {

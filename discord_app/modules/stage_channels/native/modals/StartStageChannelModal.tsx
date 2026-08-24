@@ -3,14 +3,14 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef5265 from "../../../../actions/ModalActionCreators.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import StageSparkleInnerDefault from "../components/StageSparkle.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/08176_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08215_registerAsset.js";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -24,7 +24,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 
 require = arg1;
 function closeModal() {
-  _modDef5260.popWithKey(closure_11);
+  _modDef5265.popWithKey(closure_11);
 }
 function NavigationBar(guild) {
   let tmp2 = null;
@@ -70,8 +70,8 @@ class NotificationToggle {
     items[0] = require("HotspotStore").HotspotStore;
     tmp5 = jsx;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const HotspotStore = callback(7193).HotspotStore;
-      return HotspotStore.hasHotspot(callback(7193).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+      const HotspotStore = callback(7231).HotspotStore;
+      return HotspotStore.hasHotspot(callback(7231).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
     });
     obj = { DEPRECATED_style: tmp.notificationToggle, label: null, onPress: null, trailing: null };
     tmp7 = View;
@@ -159,7 +159,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -188,10 +188,10 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     c4 = 3;
                     c5 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_2(8062).editStage(closure_1_2, tmp76, tmp47);
+                    obj1[0] = closure_1_2(8101).editStage(closure_1_2, tmp76, tmp47);
                     return obj1;
                   } else {
-                    const obj5 = closure_1_2(8062);
+                    const obj5 = closure_1_2(8101);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
@@ -205,7 +205,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
             if (1 === tmp7) {
               dependencyMap = 0;
               closure_1 = closure_2;
-              aPIError = new closure_1_0(4273).APIError(closure_1);
+              aPIError = new closure_1_0(4277).APIError(closure_1);
               closure_1_9(aPIError);
               closure_1_8(false);
             } else {
@@ -219,8 +219,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     tmp8 = closure_13;
                   }
                   if (tmp8) {
-                    obj1 = closure_1_2(7196);
-                    obj1.hideHotspot(closure_1_0(7193).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                    obj1 = closure_1_2(7234);
+                    obj1.hideHotspot(closure_1_0(7231).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
                   }
                 }
               } else if (arg0 === 1) {

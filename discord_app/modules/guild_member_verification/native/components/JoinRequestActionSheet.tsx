@@ -52,8 +52,8 @@ class JoinRequestActionSheet {
     obj3 = guildId;
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
-    tmp2Result1 = require("module_4115");
-    sharedValue = require("module_0");
+    tmp2Result1 = require("../../../reanimated/ReanimatedRexport.tsx");
+    sharedValue = require("../../../../index.native.tsx");
     closure_5 = sharedValue;
     items2 = [];
     items2[0] = sharedValue;

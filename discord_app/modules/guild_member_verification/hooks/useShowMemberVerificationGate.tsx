@@ -3,7 +3,6 @@ import isValidFormResponse from "../MemberVerificationUtils.tsx";
 import closure_2 from "../../../stores/GuildMemberStore.tsx";
 import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {
@@ -44,7 +43,7 @@ export const useShowMemberVerificationGate = function useShowMemberVerificationG
   const _require = guild_id;
   let items = [closure_3, closure_4, closure_2];
   const items1 = [guild_id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const items = [closure_1_3, closure_1_4, closure_1_2];

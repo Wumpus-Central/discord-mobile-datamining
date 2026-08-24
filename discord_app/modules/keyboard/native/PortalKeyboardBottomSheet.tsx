@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/PortalKeyboardBottomSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../reanimated/ReanimatedRexport.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import TwinButtons from "../../../design/components/experimental/native.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -32,7 +32,7 @@ function PortalKeyboardBackground(arg0) {
   style[0] = style;
   style[1] = callback2().background;
   style[2] = roundingStyle;
-  return callback(_modDef4115.View, { pointerEvents, style });
+  return callback(_modDef4119.View, { pointerEvents, style });
 }
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);
@@ -357,7 +357,7 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   }
   items6[1] = tmp37;
   items6[2] = roundingViewStyle;
-  obj5.children = forceMaxHeight(animatedIndex(flag[27]).AccessibilityViewAnimated, {
+  obj5.children = forceMaxHeight(animatedIndex(flag[26]).AccessibilityViewAnimated, {
     nativeID: "portal-keyboard-sheet",
     style: items6,
     onAccessibilityEscape() {
@@ -377,11 +377,11 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   if (tmp31Result) {
     const obj7 = { animatedSheetIndex: null };
     obj7[0] = animatedIndex;
-    tmp31Result = tmp31(tmp6(tmp4[28]), obj7);
+    tmp31Result = tmp31(tmp6(tmp4[27]), obj7);
   }
   items7[1] = tmp31Result;
-  items7[2] = forceMaxHeight(animatedIndex(flag[29]).NavScrim, {});
+  items7[2] = forceMaxHeight(animatedIndex(flag[28]).NavScrim, {});
   obj3[3] = items7;
   obj2[1] = tmp33(chatInputRef(flag[10]).View, obj3);
-  return forceMaxHeight(animatedIndex(flag[26]).ThemeContextProvider, obj2);
+  return forceMaxHeight(animatedIndex(flag[13]).ThemeContextProvider, obj2);
 });

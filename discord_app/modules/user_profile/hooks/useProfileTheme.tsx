@@ -30,7 +30,7 @@ export default function useProfileTheme(arg0) {
   }
   let tmp4Result = tmp4(711);
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8345);
+  tmp4Result = tmp4(8384);
   callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
@@ -70,12 +70,12 @@ export default function useProfileTheme(arg0) {
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8422).getProfileTheme(first);
+        let profileTheme = tmp4(8461).getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8422);
+        const tmp4Result3 = tmp4(8461);
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {

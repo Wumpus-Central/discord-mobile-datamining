@@ -5,7 +5,6 @@ import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
 import closure_5 from "../../stores/GuildStore.tsx";
 import closure_6 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useCanCreateAnEvent.tsx");
@@ -15,7 +14,7 @@ export default function useCanCreateAnEvent(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_5, closure_3, closure_6];
   const items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(callback);
     if (!closure_1_6.can(closure_1_7.ADMINISTRATOR, guild)) {
       if (!closure_1_6.can(closure_1_7.CREATE_EVENTS, guild)) {

@@ -25,7 +25,7 @@ function _updateGuildRoleSubscriptionGroupListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -57,7 +57,7 @@ function _updateGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -116,7 +116,7 @@ function _createGuildRoleSubscriptionGroupListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -148,7 +148,7 @@ function _createGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -207,7 +207,7 @@ function _deleteGuildRoleSubscriptionGroupListing() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -238,7 +238,7 @@ function _deleteGuildRoleSubscriptionGroupListing() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -252,7 +252,7 @@ function _deleteGuildRoleSubscriptionGroupListing() {
           } else {
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           closure_4 = tmp19;
@@ -296,7 +296,7 @@ function _createGuildRoleSubscriptionListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -349,7 +349,7 @@ function _createGuildRoleSubscriptionListing() {
           } else if (2 === tmp8) {
             c6 = 0;
             closure_4 = closure_5;
-            const aPIError = new callback(4273).APIError(closure_4);
+            const aPIError = new callback(4277).APIError(closure_4);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -412,7 +412,7 @@ function _updateGuildRoleSubscriptionListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -465,7 +465,7 @@ function _updateGuildRoleSubscriptionListing() {
           } else if (2 === tmp8) {
             c7 = 0;
             closure_5 = closure_6;
-            const aPIError = new callback(4273).APIError(closure_5);
+            const aPIError = new callback(4277).APIError(closure_5);
             throw aPIError;
           } else if (arg0 === 1) {
             c9 = 3;
@@ -526,7 +526,7 @@ function _getGuildRoleSubscriptionGroupListingsForGuild() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -666,7 +666,7 @@ function _updateGuildRoleSubscriptionsSettings() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -698,7 +698,7 @@ function _updateGuildRoleSubscriptionsSettings() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -756,7 +756,7 @@ function _getPriceTiers() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -851,7 +851,7 @@ function _getGuildRoleSubscriptionGroupListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -904,7 +904,7 @@ function _getGuildRoleSubscriptionGroupListing() {
           } else if (2 === tmp8) {
             c6 = 0;
             closure_3 = closure_5;
-            const aPIError = new callback(4273).APIError(closure_3);
+            const aPIError = new callback(4277).APIError(closure_3);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -964,7 +964,7 @@ function _getGuildRoleSubscriptionGroupForSubscriptionPlan() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1055,7 +1055,7 @@ function _deleteGuildRoleSubscriptionListing() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1086,7 +1086,7 @@ function _deleteGuildRoleSubscriptionListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1100,7 +1100,7 @@ function _deleteGuildRoleSubscriptionListing() {
           } else {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           closure_5 = tmp19;
@@ -1144,7 +1144,7 @@ function _archiveGuildRoleSubscriptionListing() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1175,7 +1175,7 @@ function _archiveGuildRoleSubscriptionListing() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1233,7 +1233,7 @@ function _getGuildRoleSubscriptionTrials() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1324,7 +1324,7 @@ function _updateGuildRoleSubscriptionsTrial() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1356,7 +1356,7 @@ function _updateGuildRoleSubscriptionsTrial() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1416,7 +1416,7 @@ function _getGuildRoleSubscriptionTrialEligibility() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1447,7 +1447,7 @@ function _getGuildRoleSubscriptionTrialEligibility() {
           } else if (1 === tmp7) {
             c6 = 0;
             callback = closure_5;
-            const aPIError = new callback(4273).APIError(callback);
+            const aPIError = new callback(4277).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -1506,7 +1506,7 @@ function _getGuildMonetizationRestrictions() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1618,7 +1618,7 @@ function _fetchHighlightedCreatorGuildDetails() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

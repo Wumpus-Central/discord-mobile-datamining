@@ -1,5 +1,5 @@
 // discord_app/modules/share/useShareSearchResults.tsx
-import trackClose from "../quickswitcher/QuickSwitcherActionCreators.tsx";
+import getQuickSwitcherOptions from "../quickswitcher/QuickSwitcherActionCreators.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import closure_5 from "../gateway/GatewayConnectionStore.tsx";
@@ -11,7 +11,7 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
 export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
-  const query = trackClose.getQuickSwitcherOptions(arg0);
+  const query = getQuickSwitcherOptions.getQuickSwitcherOptions(arg0);
   let queryMode = query.queryMode;
   let resultTypes = ALLOWED_TYPES;
   let hasItem = null != queryMode;

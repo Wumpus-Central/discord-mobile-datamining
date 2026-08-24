@@ -4,8 +4,6 @@ import closure_4 from "../favorites/FavoriteStore.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";
 import { getComparator } from "../../stores/views/SortedVoiceStateStore.tsx";
 import closure_7 from "StageChannelParticipantStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 function transformParticipantToSortedVoiceState(user) {
@@ -18,7 +16,7 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
   const _require = arg0;
   let items = [closure_7, closure_5, closure_4];
   const items1 = [arg0];
-  return callback(_initialize.useStateFromStores(items, () => {
+  return callback(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (obj.isFavoritesGuildId(callback)) {
       const keys = closure_1_1(tmp2[7]).keys(closure_1_4.getFavoriteChannels());
       const mapped = keys.map((arg0) => channel.getChannel(arg0));
@@ -38,6 +36,6 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
       found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0)
     ];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };
 export { transformParticipantToSortedVoiceState };

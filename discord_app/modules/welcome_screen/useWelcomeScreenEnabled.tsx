@@ -5,7 +5,6 @@ import createChannelRecord from "../../records/ChannelRecord.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
 import closure_5 from "../../stores/SelectedChannelStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const isGuildTextChannelType = createChannelRecord.isGuildTextChannelType;
 const GuildFeatures = ME.GuildFeatures;
@@ -15,7 +14,7 @@ export default function useWelcomeScreenEnabled(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   const items = [closure_3, closure_4, closure_5];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_4.getGuild(closure_1);
     let hasItem;
     if (guild != null) {

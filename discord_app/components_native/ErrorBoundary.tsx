@@ -49,7 +49,7 @@ function MaybeClearBuildOverride() {
   }
   let tmp = callback(importAllResult.useState(false), 2);
   const _require = tmp[1];
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_8];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -78,7 +78,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return callback2(tmp2(4745).Button, obj);
+    return callback2(tmp2(4750).Button, obj);
   }
 }
 let c5 = importAllResult;

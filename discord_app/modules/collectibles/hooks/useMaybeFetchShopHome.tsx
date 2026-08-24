@@ -6,7 +6,6 @@ import closure_7 from "../CollectiblesCategoryStore.tsx";
 import closure_8 from "../CollectiblesShopHomeStore.tsx";
 import items from "../CollectiblesShopConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useHasExpiredShopBlocks } from "useHasExpiredShopBlocks.tsx";
 
 const require = arg1;
 ({ useEffect: c3, useCallback: c4, useMemo: c5 } = noop);
@@ -34,14 +33,14 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   closure_13 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_7];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
-  const obj2 = _initialize;
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
+  const obj2 = initialize;
   const items2 = [closure_8];
-  const tmp3 = callback(_initialize.useStateFromStoresArray(items2, () => {
+  const tmp3 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
     const items = [store.getShopBlocks(closure_0), , , , , , , ];
     let num = store.getLastSuccessfulFetch(closure_0);
     if (num == null) {
@@ -72,7 +71,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   const tmp13 = callback2(() => {
     const obj = {};
     const merged = Object.assign(dependencyMap);
-    obj.variantsReturnStyle = HOME(5355).ShopVariantsReturnStyle.VARIANTS_GROUP;
+    obj.variantsReturnStyle = HOME(5360).ShopVariantsReturnStyle.VARIANTS_GROUP;
     obj.includeBundles = true;
     obj.includeDynamicBlocks = true;
     obj.shopHomeConfig = closure_11;
@@ -81,15 +80,15 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   }, items3);
   closure_12 = tmp13;
   const items4 = [tmp3[3], tmp13];
-  const tmp14 = callback2(() => !HOME(5300).areRequestOptionsEqual(closure_7, closure_12), items4);
+  const tmp14 = callback2(() => !HOME(5305).areRequestOptionsEqual(closure_7, closure_12), items4);
   closure_13 = tmp14;
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const tmp12 = callback2;
   let flag2 = tmp9;
   if (tmp3[5] == null) {
     flag2 = false;
   }
-  hasExpiredShopBlocks = _useHasExpiredShopBlocks.useHasExpiredShopBlocks(tmp4, flag2, flag);
+  hasExpiredShopBlocks = require("useHasExpiredShopBlocks.tsx").useHasExpiredShopBlocks(tmp4, flag2, flag);
   const items5 = [tmp5, hasExpiredShopBlocks];
   const tmp12Result = tmp12(() => {
     let tmp = !hasExpiredShopBlocks;
@@ -114,8 +113,8 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
             tmp8 = closure_10;
           }
           if (tmp8) {
-            const collectiblesShopHome = HOME(5300).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
-            const obj = HOME(5300);
+            const collectiblesShopHome = HOME(5305).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
+            const obj = HOME(5305);
           }
         }
         tmp7 = null != closure_8 && Date.now() - closure_6 < closure_10;
@@ -128,7 +127,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     fetchShopHomeError: tmp8,
     shopBlocks: tmp4,
     refreshShopHome: stateFromStores1(() => {
-      const collectiblesShopHome = HOME(5300).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
+      const collectiblesShopHome = HOME(5305).fetchCollectiblesShopHome(HOME, closure_12, closure_2);
     }, items7)
   };
   return obj;

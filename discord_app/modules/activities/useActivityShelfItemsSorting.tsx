@@ -1,13 +1,12 @@
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
 import closure_3 from "../../../_runtime/00019_noop.js";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   let items = [arg0];
   return React.useMemo(() => {
@@ -50,11 +49,11 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items2(500);
-        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8718)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8755)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = v0(8718);
+        const tmp5 = v0(8755);
       }
       let tmp8 = null != label_type;
       if (tmp8) {

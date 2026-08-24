@@ -4,7 +4,6 @@ import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../_runtime/00019_noop.js";
 import closure_6 from "../a11y/AccessibilityStore.tsx";
 import keys from "../../../_runtime/00644_keys.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function hasFetchedColors(game_name) {
@@ -28,7 +27,7 @@ function _maybeFetchColors() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -62,7 +61,7 @@ function _maybeFetchColors() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c1 = tmp;
           throw tmp8;
@@ -108,7 +107,7 @@ function _fetchColors() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +162,7 @@ function _fetchColors() {
               throw arg1;
             } else if (arg0 !== 2) {
               table = arg1;
-              obj = callback(4223);
+              obj = callback(4227);
               dependencyMap = obj.getComplimentaryPaletteForColor(table[0]);
               obj1 = callback(705);
               obj1.batchUpdates(() => {
@@ -234,7 +233,7 @@ export default function useAvatarColor(arg0, arg1) {
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
@@ -314,7 +313,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;

@@ -1,7 +1,7 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import openApplyBoostModalAll from "../../../actions/native/BoostingActionCreators.tsx";
-import _modDef7336 from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
+import _modDef7374 from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -104,10 +104,10 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   obj[0] = intl.string(guildBoostSlots(1236).t.vf3ZTa);
   obj[1] = tmp2[1];
   obj[2] = openApplyBoostModalAll.closeApplyBoostModal;
-  const items3 = [callback2(_modDef7336, obj), ];
+  const items3 = [callback2(_modDef7374, obj), ];
   obj1 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  const tmp5 = _modDef7336;
-  obj1[2] = callback2(guildBoostSlots(6803).SafeAreaPaddingView, {
+  const tmp5 = _modDef7374;
+  obj1[2] = callback2(guildBoostSlots(6840).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((children) => {
       closure_0 = children;
@@ -129,5 +129,5 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   });
   items3[1] = callback2(memo, obj1);
   obj[2] = items3;
-  return callback3(guildBoostSlots(6803).SafeAreaPaddingView, obj);
+  return callback3(guildBoostSlots(6840).SafeAreaPaddingView, obj);
 };

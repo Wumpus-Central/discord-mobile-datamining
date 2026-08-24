@@ -5,7 +5,7 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/15506_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/15571_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { GuildSettingsSections } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";

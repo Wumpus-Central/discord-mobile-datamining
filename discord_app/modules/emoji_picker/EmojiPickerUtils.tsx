@@ -17,7 +17,6 @@ import set from "../emojis/EmojiConstants.tsx";
 import { ExpressionPickerViewType } from "../expression_picker/ExpressionPickerConstants.tsx";
 import { PremiumUpsellTypes } from "../premium/PremiumConstants.tsx";
 import apply from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: c9, EmojiSubCategory: c10 } = EmojiCategoryTypes);
@@ -611,7 +610,7 @@ export const useEmojiSearchResults = function useEmojiSearchResults(arg0, arg1, 
   closure_4 = tmp2;
   const items = [closure_4];
   const items1 = [arg0, arg1, arg2, tmp2, arg3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const replaced = lib.replace(/^:/, "").replace(/:$/, "");
     let result = null;
     if ("" !== replaced) {
@@ -624,7 +623,7 @@ export const useEmojiSearchResults = function useEmojiSearchResults(arg0, arg1, 
       result = closure_4.searchWithoutFetchingLatest(obj);
     }
     return result;
-  }, items1, _initialize.statesWillNeverBeEqual);
+  }, items1, require("../../../discord_common/js/packages/flux/index.tsx").statesWillNeverBeEqual);
 };
 export const useFrequentlyUsedEmojis = function useFrequentlyUsedEmojis(arg0) {
   const _require = arg0;
@@ -633,7 +632,7 @@ export const useFrequentlyUsedEmojis = function useFrequentlyUsedEmojis(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_4];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = store.getDisambiguatedEmojiContext(guildId);
     return disambiguatedEmojiContext.getFrequentlyUsedEmojisWithoutFetchingLatest();
   });
@@ -645,7 +644,7 @@ export const useFrequentlyUsedReactionEmojis = function useFrequentlyUsedReactio
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_4];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = store.getDisambiguatedEmojiContext(guildId);
     return disambiguatedEmojiContext.getFrequentlyUsedReactionEmojisWithoutFetchingLatest();
   });
@@ -657,7 +656,7 @@ export const useFavoriteEmojis = function useFavoriteEmojis(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_4];
-  return _initialize.useStateFromStoresArray(items, () => store.getDisambiguatedEmojiContext(guildId).favoriteEmojisWithoutFetchingLatest);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => store.getDisambiguatedEmojiContext(guildId).favoriteEmojisWithoutFetchingLatest);
 };
 export const useIsFavoriteEmoji = function useIsFavoriteEmoji(guildId, customEmojiFromJoinedGuild) {
   const _require = guildId;
@@ -667,7 +666,7 @@ export const useIsFavoriteEmoji = function useIsFavoriteEmoji(guildId, customEmo
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let result = null != closure_1;
     if (result) {
       const disambiguatedEmojiContext = closure_1_4.getDisambiguatedEmojiContext(closure_0);
@@ -683,7 +682,7 @@ export const useEmojiInPriorityOrder = function useEmojiInPriorityOrder(arg0) {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [closure_4];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const disambiguatedEmojiContext = closure_1_4.getDisambiguatedEmojiContext(closure_0);
     return disambiguatedEmojiContext.getEmojiInPriorityOrderWithoutFetchingLatest();
   });

@@ -6,8 +6,8 @@ import handleChanged from "../../../stores/DraftStore.tsx";
 import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
 import ApplicationCommandSectionType from "../ApplicationCommandTypes.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import registerAssetDefault2 from "../../../../_runtime/11393_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/11394_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11444_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/11445_registerAsset.js";
 import closure_4 from "../../../stores/UploadAttachmentStore.tsx";
 
 const DraftType = handleChanged.DraftType;

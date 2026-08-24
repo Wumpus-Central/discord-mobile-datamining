@@ -29,9 +29,7 @@ import { ContentDismissActionType } from "../../dismissible_content/DismissibleC
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import createICYMIStyles from "createICYMIStyles.tsx";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { context } from "ICYMIContext.tsx";
 
 require = arg1;
 function SettingsButton() {
@@ -56,11 +54,11 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(9057).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(9057);
-      callback2(9057).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(9057);
-      callback(15721).pushICYMIInfoModal({ extendedOnboarding: true });
+      callback2(9094).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(9094);
+      callback2(9094).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      const obj2 = callback2(9094);
+      callback(15790).pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
@@ -73,11 +71,11 @@ function ICYMIHeaderTextWrapper() {
       obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
-      const items = [callback2(callback(4734).Text, obj), ];
+      const items = [callback2(callback(4739).Text, obj), ];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
       const intl2 = callback(1236).intl;
       obj[3] = intl2.string(callback(1236).t.Ac2OZA);
-      items[1] = callback2(callback(4734).Text, obj);
+      items[1] = callback2(callback(4739).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
     }, [])
@@ -187,7 +185,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(8488).showForLaterModal(callback(8489).SavedMessageSortTypes.BOOKMARK);
+        callback(8527).showForLaterModal(callback(8528).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }
@@ -410,7 +408,7 @@ export const ICYMITab = function ICYMITab(route) {
   route = route.route;
   let _require;
   importDefault = undefined;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   const tmp6 = useIsWindowLargeDefault();
@@ -448,9 +446,9 @@ export const ICYMITab = function ICYMITab(route) {
   const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true }), ];
   const tmp14 = closure_16;
   const tmpResult = jsxDefault;
-  items2[1] = closure_14(_ManaContext.ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
+  items2[1] = closure_14(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
   obj3.children = items2;
   obj2[0] = tmp14(tmp11, obj3);
-  obj1[0] = closure_14(_context.ICYMIContextProvider, obj2);
+  obj1[0] = closure_14(require("ICYMIContext.tsx").ICYMIContextProvider, obj2);
   return closure_14(tmpResult, obj1);
 };

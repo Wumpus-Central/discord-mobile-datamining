@@ -10,7 +10,7 @@ export default function useIsNsfwGated(nsfw) {
   const _require = nsfw;
   nsfw = nsfw.nsfw;
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -18,9 +18,9 @@ export default function useIsNsfwGated(nsfw) {
     }
     return nsfwAllowed;
   });
-  const obj = _initialize;
+  const obj = initialize;
   const items1 = [closure_2];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_2.didAgree(nsfw.guild_id));
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_2.didAgree(nsfw.guild_id));
   let tmp3 = !stateFromStores1;
   if (nsfw) {
     if (stateFromStores1) {

@@ -779,12 +779,19 @@ prototype5["getStartTime"] = function getStartTime(arg0) {
   }
 };
 prototype5["processNativeLogs"] = function processNativeLogs(nativeLogs, closure_2) {
+  const self = this;
   const startTime = this.getStartTime(closure_2);
   const iter = nativeLogs[Symbol.iterator]();
-  const nextResult = iter.next();
+  iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
-    let label = nextResult.label;
+    if (null != self.extraProperties.time_first_native_message_render_end) {
+      continue;
+    } else {
+      let tmp3 = serialize;
+      self.extraProperties.time_first_native_message_render_end = serialize(startTime, undefined.timestamp);
+      continue;
+    }
+    continue;
   }
 };
 prototype5["serializeAppStartupMetrics"] = function serializeAppStartupMetrics() {

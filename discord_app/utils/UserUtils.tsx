@@ -4,7 +4,6 @@ import getSystemLocale from "../intl/index.native.tsx";
 import closure_2 from "../stores/StreamerModeStore.tsx";
 import closure_3 from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function nameFromUser(primary1) {
@@ -268,7 +267,7 @@ function useUserTag(user) {
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (obj.isPrivate()) {

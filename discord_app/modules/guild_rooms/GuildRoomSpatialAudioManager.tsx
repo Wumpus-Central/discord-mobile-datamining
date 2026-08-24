@@ -87,7 +87,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _computeLivingRoomWorldPoints.computeLivingRoomWorldPoints(obj);
+          _require = require("GuildRoomSpatialAudio.tsx").computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -102,7 +102,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _computeLivingRoomWorldPoints;
+          const obj3 = computeLivingRoomWorldPoints;
         }
       }
     }

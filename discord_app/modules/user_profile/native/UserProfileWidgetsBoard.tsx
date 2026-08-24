@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoard.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import isFieldEmpty from "../UserProfilePersonalWidget.tsx";
+import createDefaultFieldsSection from "../UserProfilePersonalWidget.tsx";
 import toSubmission from "../UserProfileApplicationWidgetTypes.tsx";
 import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
@@ -13,9 +13,6 @@ import closure_8 from "../../../stores/AuthenticationStore.tsx";
 import { UserProfileSections } from "../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
-import { GameProfileEmbedAction } from "../../game_profile/GameProfileAnalyticUtils.tsx";
 
 require = arg1;
 function WidgetRenderer(isFirstWidget) {
@@ -27,7 +24,7 @@ function WidgetRenderer(isFirstWidget) {
     obj[2] = cardStyle;
     obj[3] = isFirstWidget.isFirstWidget;
     let tmp3Result = callback2(UserProfileApplicationWidgetCardDefault, obj);
-  } else if (widget instanceof isFieldEmpty.UserProfilePersonalWidget) {
+  } else if (widget instanceof createDefaultFieldsSection.UserProfilePersonalWidget) {
     obj = { userId: null, widget: null, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
@@ -143,7 +140,7 @@ let closure_17 = importAllResult.memo((game) => {
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp2 = importDefault;
   const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp5Result;
   if (!disableInteraction) {
@@ -180,7 +177,7 @@ let closure_17 = importAllResult.memo((game) => {
       disabled: null == tmp5Result,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: callback2(_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+      children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
     }),
   ,
 
@@ -196,24 +193,24 @@ let closure_17 = importAllResult.memo((game) => {
     disabled: null == tmp5Result,
     accessibilityRole: "button",
     accessibilityLabel: gameName,
-    children: callback2(_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+    children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
   };
   let trimmed;
   if (game.comment != null) {
     trimmed = str.trim();
   }
-  const isNullOrEmptyResult = _isNullOrEmpty.isNullOrEmpty(trimmed);
+  const isNullOrEmptyResult = require("../../../utils/StringUtils.tsx").isNullOrEmpty(trimmed);
   let tmp8Result = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12184).QuoteIcon, obj4), ];
+    const items3 = [tmp10(tmp6(12236).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4734).Text, obj5);
+    items3[1] = tmp10(tmp6(4739).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }
@@ -232,7 +229,7 @@ let closure_18 = importAllResult.memo((game) => {
   ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp3 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp4Result;
   if (!disableInteraction) {
@@ -270,7 +267,7 @@ let closure_18 = importAllResult.memo((game) => {
       disabled: null == tmp4Result,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: callback2(_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
+      children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
     }),
     callback2(closure_16, { tags: game.tags })
   ];
@@ -287,7 +284,7 @@ let closure_19 = importAllResult.memo((game) => {
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp2 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp3Result;
   if (!disableInteraction) {

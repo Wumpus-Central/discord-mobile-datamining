@@ -1,8 +1,7 @@
 // discord_app/modules/quests/VideoQuestUIStore.tsx
 import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import identity from "../../../_runtime/00700_identity.js";
-import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
-import { DEFAULT_VIDEO_VOLUME } from "../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
+import createJSONStorage from "../../../_runtime/04246_createJSONStorage.js";
 import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 const require = arg1;
@@ -48,7 +47,7 @@ const withEqualityFnResult = identity(createJSONStorage.persist((arg0, arg1) => 
   const _require = arg0;
   closure_1 = arg1;
   return {
-    volume: _DEFAULT_VIDEO_VOLUME.DEFAULT_VIDEO_VOLUME,
+    volume: require("../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx").DEFAULT_VIDEO_VOLUME,
     muted: false,
     transcriptEnabled: false,
     captionEnabled: false,

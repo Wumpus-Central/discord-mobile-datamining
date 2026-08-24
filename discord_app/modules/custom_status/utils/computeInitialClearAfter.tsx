@@ -1,7 +1,6 @@
 // discord_app/modules/custom_status/utils/computeInitialClearAfter.tsx
 import set from "../../../../_runtime/00002_set.js";
 import StatusTypes from "../Constants.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const items = [, , ];
@@ -9,7 +8,7 @@ const items = [, , ];
 const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = _explicitContentFromProto.CustomStatusSetting;
+  const CustomStatusSetting = require("../../user_settings/UserSettings.tsx").CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {

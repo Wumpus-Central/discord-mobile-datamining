@@ -37,7 +37,7 @@ createToggle = {
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(7366).useSelectedDismissibleContent(items), 2);
+    const tmp = callback(first(7404).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];
@@ -62,7 +62,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return SettingsAccessibilityScreen.default;
+    return SettingsAccessibilityScreen /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

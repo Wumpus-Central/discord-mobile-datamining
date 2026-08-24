@@ -2,7 +2,6 @@
 import closure_2 from "../../../../stores/GuildStore.tsx";
 import closure_3 from "../../../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
@@ -10,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {

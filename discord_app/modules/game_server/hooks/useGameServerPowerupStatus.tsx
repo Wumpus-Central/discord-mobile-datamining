@@ -1,7 +1,6 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../GameServerStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
@@ -10,7 +9,7 @@ export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let entitlements;
     if (stateForGuild != null) {
@@ -18,7 +17,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(11728)(arg0);
+  const tmp2 = stateFromStores(11777)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return React.useMemo(() => {

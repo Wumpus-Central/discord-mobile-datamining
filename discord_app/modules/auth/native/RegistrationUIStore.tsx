@@ -2,15 +2,14 @@
 import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityRole" }));
+let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityLabel" }));
 const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;
 export const setRegistrationErrors = function setRegistrationErrors(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_2.setState({ errors: closure_0 });
   });
 };
@@ -43,7 +42,7 @@ export const resetRegistration = function resetRegistration() {
 };
 export const setSubmitting = function setSubmitting(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_2.setState({ errors: {}, submitting: closure_0 });
   });
 };

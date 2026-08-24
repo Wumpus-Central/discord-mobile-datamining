@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import getTimestampStringDefault from "getTimestampString.tsx";
 import collectThreadMetadata from "../app_analytics/ThreadAnalyticsUtils.tsx";
@@ -12,7 +12,6 @@ import closure_6 from "../../stores/UserGuildSettingsStore.tsx";
 import closure_7 from "JoinedThreadsStore.tsx";
 import { ThreadMemberFlags } from "ThreadConstants.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function getAccessibilityLabelFormatter() {
@@ -48,7 +47,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   if (null != result) {
     const guildId = closure_1_0.getGuildId();
     const parent_id = closure_1_0.parent_id;
-    let tmpResult = tmp(6795);
+    let tmpResult = tmp(6832);
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = closure_7.flags(closure_1_0.id);
     if (num == null) {
@@ -76,7 +75,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = closure_7.isMuted(closure_1_0.id);
-    tmpResult = tmp(6795);
+    tmpResult = tmp(6832);
     let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(closure_1_0.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
@@ -101,8 +100,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != c1.mute_config) {
-      result1 = tmp(6795).muteConfigToTimestamp(c1.mute_config);
-      const tmpResult1 = tmp(6795);
+      result1 = tmp(6832).muteConfigToTimestamp(c1.mute_config);
+      const tmpResult1 = tmp(6832);
     }
     obj.new_thread_muted_until = result1;
     expandEventPropertiesDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);
@@ -112,7 +111,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
 export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) {
   const _require = thread;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.lastMessageId(thread.id));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.lastMessageId(thread.id));
   let extractTimestampResult = null;
   if (null != stateFromStores) {
     extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(stateFromStores);

@@ -2,7 +2,6 @@
 import closure_2 from "../../../stores/PermissionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 const require = arg1;
@@ -11,12 +10,12 @@ let result = require("set").fileFinishedImporting("modules/creator_monetization/
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;
-  const result = _UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
-  const obj = _UNSAFE_isDismissibleContentDismissed;
+  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const obj = UNSAFE_isDismissibleContentDismissed;
   const tmp = _require;
   const items = [closure_2];
   let flag;
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_2.can(closure_1_3.ADMINISTRATOR, tmp);
@@ -30,16 +29,16 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   if (flag == null) {
     flag = false;
   }
-  const obj2 = _defaultAreStatesEqual;
+  const obj2 = defaultAreStatesEqual;
   let id;
   if (features != null) {
     id = features.id;
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants);
-  const guildEligibleForGuildProducts = tmp(7224).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(7262).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(7224);
+  const tmpResult = tmp(7262);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

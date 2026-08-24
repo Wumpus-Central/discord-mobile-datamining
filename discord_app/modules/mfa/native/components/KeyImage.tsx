@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import registerAssetDefault from "../../../../../_runtime/14097_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14165_registerAsset.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const Image = get_ActivityIndicator.Image;

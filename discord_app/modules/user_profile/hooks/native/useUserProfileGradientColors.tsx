@@ -3,7 +3,6 @@ import closure_2 from "../../../../../_runtime/00019_noop.js";
 import closure_3 from "../../../a11y/AccessibilityStore.tsx";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
@@ -13,10 +12,10 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
   dependencyMap = secondaryColor;
   const React = fallbackBackground;
   const items = [overlay];
-  const stateFromStores = _initialize.useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
-  let obj = _initialize;
-  let obj2 = _ManaContext;
-  const profileThemeValues = _useProfileThemeValues.useProfileThemeValues(obj2.useThemeContext().theme);
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
+  let obj = initialize;
+  let obj2 = ManaContext;
+  const profileThemeValues = require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(obj2.useThemeContext().theme);
   if (stateFromStores) {
     let prop;
     if (!tmp3) {

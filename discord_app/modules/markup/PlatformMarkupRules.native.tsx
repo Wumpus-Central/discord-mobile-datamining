@@ -3,11 +3,11 @@ import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import tDefault from "../../../_runtime/04092_t.js";
+import tDefault from "../../../_runtime/04095_t.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import getChannelDefault from "MarkupChannelMentionRule.tsx";
-import _modDef6819 from "MarkupAttachmentLinkRule.tsx";
+import regExpDefault from "MarkupAttachmentLinkRule.tsx";
 import getGameMentionData from "../game_mentions/hooks/useGameMentionData.tsx";
 
 const Image = get_ActivityIndicator.Image;
@@ -330,7 +330,7 @@ obj[8] = {
 };
 obj[9] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = _modDef6819.attachmentLink;
+    const attachmentLink = regExpDefault.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };

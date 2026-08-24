@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaI
 import Text from "../../Text/native/Text.tsx";
 import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import Background from "../../../../../_runtime/06319_Background.js";
+import Background from "../../../../../_runtime/06350_Background.js";
 import NAV_BAR_HEIGHT from "NavigatorConstants.native.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -55,7 +55,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(6318);
+  let obj = onPress(6349);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -69,7 +69,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(6319).HeaderBackButton, obj);
+  return callback(onPress(6350).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -171,7 +171,7 @@ export function getHeaderConditionalBackButton(handleBack) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -208,7 +208,7 @@ export function getHeaderConditionalBackButton(handleBack) {
                 }
               }
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp10) {
             c2 = tmp;

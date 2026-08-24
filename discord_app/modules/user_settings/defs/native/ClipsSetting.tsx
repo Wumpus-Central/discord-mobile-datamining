@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.CLIPS,
   getComponent() {
-    return ClipsSettingsScreen.default;
+    return ClipsSettingsScreen /* ClipsSettingsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

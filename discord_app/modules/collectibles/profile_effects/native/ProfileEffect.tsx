@@ -75,8 +75,8 @@ function StaticEffect(useThumbnail) {
     obj3[2] = 0 - bannerAdjustment;
     items1[1] = obj3;
     obj1[7] = items1;
-    obj[3] = tmp10(tmp4(5449), obj1);
-    const tmp4Result = tmp4(5449);
+    obj[3] = tmp10(tmp4(5454), obj1);
+    const tmp4Result = tmp4(5454);
   }
   return <closure_5 {...obj} />;
 }
@@ -139,7 +139,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = React.useRef(-memo(9212).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = React.useRef(-memo(9249).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(React.useState([]), 2);
   closure_12 = React.useRef([]);
   closure_13 = React.useRef(false);
@@ -155,7 +155,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(9215)(React.useCallback((arg0) => {
+  const tmp9Result = memo1(9252)(React.useCallback((arg0) => {
     if (ref.current) {
       if (!ref4.current) {
         tmp.current = true;

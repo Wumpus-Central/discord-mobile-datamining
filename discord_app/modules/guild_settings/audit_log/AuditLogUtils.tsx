@@ -19,7 +19,6 @@ import ME from "../../../Constants.tsx";
 import { ChannelFlags } from "../../channel/ChannelConstants.tsx";
 import { AutomodTriggerType } from "../../guild_automod/Constants.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 require = arg1;
 function getPermissionChanges(str, str2) {
@@ -566,19 +565,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [arg1(4548).TimeUnits.SECONDS]: (seconds) => {
+  [arg1(4553).TimeUnits.SECONDS]: (seconds) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.geSp4K, { seconds });
   },
-  [arg1(4548).TimeUnits.MINUTES]: (minutes) => {
+  [arg1(4553).TimeUnits.MINUTES]: (minutes) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes });
   },
-  [arg1(4548).TimeUnits.HOURS]: (hours) => {
+  [arg1(4553).TimeUnits.HOURS]: (hours) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t.xCjYxK, { hours });
   },
-  [arg1(4548).TimeUnits.DAYS]: (days) => {
+  [arg1(4553).TimeUnits.DAYS]: (days) => {
     const intl = getSystemLocale.intl;
     return intl.formatToPlainString(getSystemLocale.t["k2UNz+"], { days });
   }
@@ -823,7 +822,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1236).t.MWp6H7;
           obj16[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj19 = {};
-          obj19[__3TkD(8056).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1236).t.XYZMbL;
+          obj19[__3TkD(8095).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1236).t.XYZMbL;
           __3TkD = obj19;
           obj16[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj16[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1236).t.gb1Owj;
@@ -1241,8 +1240,8 @@ export const getSimpleAuditLogTitleFromChange = function getSimpleAuditLogTitleF
     found1 = changes.find((key) => key.key === ROLES_REMOVE);
   }
   if (null != found1) {
-    const intl = _getSystemLocale.intl;
-    let stringResult = intl.string(_getSystemLocale.t.z3wbj8);
+    const intl = require("../../../intl/index.native.tsx").intl;
+    let stringResult = intl.string(require("../../../intl/index.native.tsx").t.z3wbj8);
   } else {
     stringResult = undefined;
     if (found != null) {
@@ -1292,12 +1291,12 @@ export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLo
       const rounded = Math.round(diff / 1000 / 60);
       const obj2 = DISCORD_EPOCHDefault;
       const tmp25 = ROLES_REMOVE;
-      const timeAndUnit = ROLES_REMOVE(4548).getTimeAndUnit(rounded, items);
+      const timeAndUnit = ROLES_REMOVE(4553).getTimeAndUnit(rounded, items);
       if (null != timeAndUnit.unit) {
         if (null != timeAndUnit.time) {
           if (timeAndUnit.unit in obj) {
             ({ unit, unit: unit2 } = timeAndUnit);
-            if (unit2 === tmp25(4548).TimeUnits.SECONDS) {
+            if (unit2 === tmp25(4553).TimeUnits.SECONDS) {
               const _Math2 = Math;
               time = Math.round(diff / 1000);
             } else {
@@ -1706,7 +1705,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = dependencyMap;
             if (set2.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1236).t["PyEa+J"];
-            } else if (found(16760).GuildFeedItemTypes.FORUM_POST === newValue) {
+            } else if (found(16853).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1236).t.hCuAb1;
             } else {
               return found(1236).t["UZ+U3A"];
@@ -2531,7 +2530,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp7 = ((targetId) => store.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => found(4984).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
+                              tmp10 = ((channel) => found(4989).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2616,7 +2615,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           found = null != found && true;
           found = null;
           if (found) {
-            found = ((found) => found(4984).computeChannelName(found, closure_13, closure_12, true))(found);
+            found = ((found) => found(4989).computeChannelName(found, closure_13, closure_12, true))(found);
           }
           if (null == found) {
             found = closure_1_14;

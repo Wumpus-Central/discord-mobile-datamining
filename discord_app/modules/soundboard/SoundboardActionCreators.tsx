@@ -5,7 +5,6 @@ import closure_4 from "SoundboardStore.tsx";
 import { DEFAULT_SOUND_GUILD_ID } from "SoundboardConstants.tsx";
 import ME from "../../Constants.tsx";
 import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 function _fetchDefaultSoundsFromApi2() {
@@ -23,8 +22,8 @@ function _fetchDefaultSoundsFromApi2() {
       callback2 = dependencyMap;
       let obj3 = callback2(709);
       obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-      const obj4 = callback(5360);
-      const tmp28 = new callback2(4274)(callback2);
+      const obj4 = callback(5365);
+      const tmp28 = new callback2(4278)(callback2);
       const result = obj4.captureOrIgnoreApiError(tmp28);
       c5 = 3;
     } else if (arg0 === 1) {
@@ -79,7 +78,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(7300);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(7338);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -168,7 +167,7 @@ function _uploadSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -234,7 +233,7 @@ function _uploadSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(6824);
+            obj = callback(6862);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -276,7 +275,7 @@ function _updateSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -341,7 +340,7 @@ function _updateSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(6824);
+            obj = callback(6862);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -384,7 +383,7 @@ function _deleteSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -419,7 +418,7 @@ function _deleteSound() {
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           dependencyMap = tmp;
@@ -457,7 +456,7 @@ function _fetchSoundGuildData() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -489,7 +488,7 @@ function _fetchSoundGuildData() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const tmp25 = new callback(4274)(callback);
+            const tmp25 = new callback(4278)(callback);
             throw tmp25;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -504,7 +503,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(7301);
+              obj = lib(7339);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;
@@ -581,7 +580,7 @@ export const deleteSound = function deleteSound() {
 };
 export const addFavoriteSound = function addFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     let obj = closure_1_1(closure_1_2[13]);
     if (obj.size(soundIds.soundIds) >= closure_1_8) {
@@ -610,7 +609,7 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     soundIds = soundIds.soundIds;
     soundIds.soundIds = soundIds.filter((arg0) => arg0 !== closure_0);

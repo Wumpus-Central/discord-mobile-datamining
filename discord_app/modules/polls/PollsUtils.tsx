@@ -10,12 +10,11 @@ import closure_6 from "../../stores/PermissionStore.tsx";
 import closure_7 from "../../stores/RelationshipStore.tsx";
 import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7510).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7548).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -121,7 +120,7 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
 export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channel) {
   const _require = channel;
   const items = [closure_6];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
       tmp = obj.id !== channel(closure_1_2[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;

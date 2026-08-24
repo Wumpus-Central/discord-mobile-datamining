@@ -26,7 +26,7 @@ createToggle = {
         flag = false;
       }
       if (!flag) {
-        let obj = callback2(4827);
+        let obj = callback2(4832);
         obj = { title: null, body: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t.v740sh);
@@ -54,7 +54,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return UserSettingsWebAuthn.default;
+    return UserSettingsWebAuthn /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

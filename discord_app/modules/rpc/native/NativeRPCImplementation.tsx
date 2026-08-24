@@ -1,30 +1,33 @@
 // discord_app/modules/rpc/native/NativeRPCImplementation.tsx
-import set from "../../../../_runtime/00002_set.js";
-import _modDef8748 from "server/transports/WebViewPostMessageTransport.tsx";
-import crossPlatformCommands from "../server/commands/crossPlatformRPCCommands.tsx";
+import _modDef8785 from "server/transports/WebViewPostMessageTransport.tsx";
 import RPC_LOCAL_SCOPEDefault from "server/commands/activities.tsx";
-import _modDef13881 from "server/commands/auth.tsx";
+import _modDef13947 from "server/commands/auth.tsx";
 import itemsDefault from "server/commands/voiceSettings.tsx";
-import _modDef13884 from "server/commands/unsupported.tsx";
+import _modDef13950 from "server/commands/unsupported.tsx";
 import messageEventsValidationDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
-import voiceSettingsEventHandlers from "events/voiceSettingsEventHandlers.tsx";
-import _modDef13891 from "NativeRPCServer.tsx";
+import _modDef13958 from "NativeRPCServer.tsx";
+import importDefaultResult from "../../a11y/AccessibilityStore.tsx";
+import importDefaultResult1 from "../../user_settings/ThemeStore.tsx";
+import RPC_AUTHENTICATED_SCOPE from "../server/events/discordEnvironmentEvents.tsx";
+import importDefaultResult2 from "../../user_settings/UserSettingsProtoStore.tsx";
 
 let obj = {};
-const merged = Object.assign(crossPlatformCommands.crossPlatformCommands);
+const merged = Object.assign(require("crossPlatformCommands").crossPlatformCommands);
 const merged1 = Object.assign(RPC_LOCAL_SCOPEDefault);
-const merged2 = Object.assign(_modDef13881);
+const merged2 = Object.assign(_modDef13947);
 const merged3 = Object.assign(itemsDefault);
-const merged4 = Object.assign(_modDef13884);
+const merged4 = Object.assign(_modDef13950);
 obj = {};
 const merged5 = Object.assign(messageEventsValidationDefault);
-const merged6 = Object.assign(voiceSettingsEventHandlers.voiceSettingsEventHandlers);
-obj = { server: _modDef13891, commands: obj, events: obj, stores: [], transports: null, registerTransportsForEmbeddedPlatform: null };
-const items = [_modDef8748];
-obj[4] = items;
+const merged6 = Object.assign(RPC_AUTHENTICATED_SCOPE.createDiscordEnvironmentEvents(true));
+const merged7 = Object.assign(require("voiceSettingsEventHandlers").voiceSettingsEventHandlers);
+obj = { server: _modDef13958, commands: obj, events: obj, stores: items, transports: null, registerTransportsForEmbeddedPlatform: null };
+items = [importDefaultResult1, importDefaultResult, importDefaultResult2];
+const items1 = [_modDef8785];
+obj[4] = items1;
 obj[5] = function registerTransportsForEmbeddedPlatform() {
 
 };
-const result = set.fileFinishedImporting("modules/rpc/native/NativeRPCImplementation.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCImplementation.tsx");
 
 export default obj;

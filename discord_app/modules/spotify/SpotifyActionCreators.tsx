@@ -5,7 +5,6 @@ import setDefault from "../../utils/GameUtils.native.tsx";
 import closure_3 from "SpotifyProtocolStore.tsx";
 import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";
 import ME from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 function apiRequest(arg0, arg1, arg2, arg3) {
@@ -325,7 +324,7 @@ const result = require("set").fileFinishedImporting("modules/spotify/SpotifyActi
 export const SpotifyAPI = obj;
 export const getAccessToken = function getAccessToken(id) {
   const _require = id;
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
   obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
   return value.catch((body) => {

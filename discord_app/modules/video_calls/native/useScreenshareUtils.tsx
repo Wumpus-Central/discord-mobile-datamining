@@ -23,8 +23,8 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    let tmpResult = tmp(9860);
-    tmpResult = tmp(4531);
+    let tmpResult = tmp(9899);
+    tmpResult = tmp(4536);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   const obj = inject;
@@ -57,12 +57,12 @@ export default function useScreenshareUtils(arg0) {
   importDefault = tmp;
   dependencyMap = tmp2;
   const items = [stateFromStores1];
-  const stateFromStores = _initialize.useStateFromStores(items, () => stateFromStores1.supports(constants.VIDEO));
-  let obj = _initialize;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateFromStores1.supports(constants.VIDEO));
+  let obj = initialize;
   const showMobileGoLiveUpsell = apexExperimentDefault.useConfig({ location: "useScreenshareUtils" }).showMobileGoLiveUpsell;
   let obj2 = apexExperimentDefault;
   const items1 = [showMobileGoLiveUpsell];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => showMobileGoLiveUpsell.getCurrentUserActiveStream());
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => showMobileGoLiveUpsell.getCurrentUserActiveStream());
   const analyticsLocations = contextDefault().analyticsLocations;
   const items2 = [stateFromStores1, arg0, stateFromStores, tmp, closure_8 >= 12, showMobileGoLiveUpsell, analyticsLocations];
   return stateFromStores.useMemo(() => {
@@ -102,7 +102,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9647).showScreenshareDisabledAlert;
+          fn = callback(9686).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -114,12 +114,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10943 : 10944);
+        tmp19(tmp ? 10982 : 10983);
       } else {
         if (tmp4) {
-          let tmp20 = 10945;
+          let tmp20 = 10984;
         } else {
-          tmp20 = tmp ? 10946 : 10945;
+          tmp20 = tmp ? 10985 : 10984;
         }
         obj[4] = tmp19(tmp20);
         return obj;

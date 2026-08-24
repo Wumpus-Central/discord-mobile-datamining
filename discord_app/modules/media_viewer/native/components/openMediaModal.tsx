@@ -23,7 +23,7 @@ function _openMediaModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ function _openMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4086.initVideoStateStore;
+            initVideoStateStore = 4089.initVideoStateStore;
             !(function getMeasureInWindowFunction(c0) {
               closure_0 = c0;
               if (null != c0) {
@@ -160,7 +160,7 @@ function _openMediaModal() {
               initVideoStateStore();
             });
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c4 = tmp;

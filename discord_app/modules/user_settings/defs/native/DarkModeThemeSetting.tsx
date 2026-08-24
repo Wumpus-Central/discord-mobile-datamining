@@ -30,7 +30,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
   getComponent() {
-    return SettingsAppearanceDarkModeThemePickerScreen.default;
+    return SettingsAppearanceDarkModeThemePickerScreen /* SettingsAppearanceDarkModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -8,13 +8,6 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import closure_6 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { QrCodeIcon } from "../../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import { ShareIcon } from "../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useDerivedPendingRequests } from "../../usePendingParentRequests.tsx";
 
 const require = arg1;
@@ -213,7 +206,7 @@ export default function PendingRequestList(arg0) {
   const tmp = callback2();
   _require = tmp;
   useRefreshLinkCodeOnExpiryDefault(expiresAt, onRefreshLinkCode);
-  let obj = _useDerivedPendingRequests;
+  let obj = useDerivedPendingRequests;
   obj = {
     pendingRequests,
     linkedUsersProcessed,
@@ -267,35 +260,35 @@ export default function PendingRequestList(arg0) {
   const obj4 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
   let intl = tmp5(1236).intl;
   obj4[3] = intl.string(messagesProxyDefault["/SbB94"]);
-  items1[1] = callback(_Text.Text, obj4);
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj4);
   items1[2] = callback(c5, { style: tmp.dividerLine });
   obj2[1] = items1;
   items[1] = closure_8(c5, obj2);
   const obj6 = { style: items2, children: null };
   items2 = [, ];
   ({ card: arr3[0], row: arr3[1] } = tmp);
-  const items3 = [callback(c5, { style: tmp.inviteIconContainer, children: callback(_AccountAgeTier10LargeBadge.PlaneIllocon, { size: 32 }) }), , ];
+  const items3 = [callback(c5, { style: tmp.inviteIconContainer, children: callback(require("../../../../design/assets/native.tsx").PlaneIllocon, { size: 32 }) }), , ];
   const obj8 = { style: tmp.details, children: null };
   const obj9 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp5(1236).intl;
   obj9[2] = intl2.string(messagesProxyDefault.z9gkwZ);
-  const items4 = [callback(_Text.Text, obj9), ];
+  const items4 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj9), ];
   const obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl3 = tmp5(1236).intl;
   obj10[2] = intl3.string(messagesProxyDefault["9t4+vC"]);
-  items4[1] = callback(_Text.Text, obj10);
+  items4[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj10);
   obj8[1] = items4;
   items3[1] = closure_8(c5, obj8);
   const obj11 = { style: tmp.actions, children: null };
   const obj12 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl4 = tmp5(1236).intl;
-  obj12[1] = intl4.string(_getSystemLocale.t.Ej3B3Y);
+  obj12[1] = intl4.string(require("../../../../intl/index.native.tsx").t.Ej3B3Y);
   obj12[2] = onShare;
   const items5 = [, ];
   ({ actionButton: arr6[0], inviteShareButton: arr6[1] } = tmp);
   obj12[3] = items5;
-  obj12[4] = callback(_ShareIcon.ShareIcon, { size: "sm", color: tmp.declineIcon.color });
-  const items6 = [callback(_PressableBase.PressableOpacity, obj12), ];
+  obj12[4] = callback(require("../../../../design/components/Icon/native/redesign/generated/ShareIcon.tsx").ShareIcon, { size: "sm", color: tmp.declineIcon.color });
+  const items6 = [callback(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj12), ];
   const obj14 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl5 = tmp5(1236).intl;
   obj14[1] = intl5.string(messagesProxyDefault.z9gkwZ);
@@ -303,13 +296,13 @@ export default function PendingRequestList(arg0) {
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);
   obj14[3] = items7;
-  obj14[4] = callback(_QrCodeIcon.QrCodeIcon, { size: "sm", color: tmp.declineIcon.color });
-  items6[1] = callback(_PressableBase.PressableOpacity, obj14);
+  obj14[4] = callback(require("../../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx").QrCodeIcon, { size: "sm", color: tmp.declineIcon.color });
+  items6[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj14);
   obj11[1] = items6;
   items3[2] = closure_8(c5, obj11);
   obj6[1] = items3;
   items[2] = closure_8(c5, obj6);
   obj[1] = items;
-  return closure_8(_Stack.Stack, obj);
+  return closure_8(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj);
 };
 export { PendingRequestRow };

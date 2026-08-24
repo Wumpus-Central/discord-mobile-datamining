@@ -4,7 +4,7 @@ import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import setDefault from "../monitoring/MonitoringAgent.tsx";
 import set2 from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
+import _modDef10540 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
@@ -69,7 +69,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = _modDef10501;
+      obj = _modDef10540;
     }
   }
 };

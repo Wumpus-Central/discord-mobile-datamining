@@ -18,14 +18,14 @@ let c4 = importAllResult;
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _useFavoritesAccess.useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = require("../FavoritesHooks.tsx").useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _useFavoritesAccess;
+  const obj = useFavoritesAccess;
   const items = [closure_8];
-  const stateFromStores = _initialize.useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
-  const obj2 = _initialize;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
+  const obj2 = initialize;
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
-  _useSelectedDismissibleContent;
+  useSelectedDismissibleContent;
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(7366).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = callback(tmp(7404).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

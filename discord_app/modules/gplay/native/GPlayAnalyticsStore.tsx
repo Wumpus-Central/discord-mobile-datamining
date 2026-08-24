@@ -1,7 +1,6 @@
 // discord_app/modules/gplay/native/GPlayAnalyticsStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import keys from "../../../../_runtime/00644_keys.js";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });
 let obj = keys.create(() => closure_2);
@@ -10,7 +9,7 @@ const result = set.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsSto
 export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_3.setState((analyticsByProductId) => {
       obj = { analyticsByProductId: null };
       obj = {};
@@ -23,7 +22,7 @@ export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
 };
 export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_3.setState((analyticsByProductId) => {
       analyticsByProductId = {};
       const merged = Object.assign(analyticsByProductId.analyticsByProductId);

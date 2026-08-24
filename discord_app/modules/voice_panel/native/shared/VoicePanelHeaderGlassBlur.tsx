@@ -25,7 +25,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = callback();
-  let obj = shown(4115);
+  let obj = shown(4119);
   const fn = function k() {
     let opacity = 0;
     if (shown.get()) {
@@ -42,7 +42,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   fn.__workletHash = 3451055086565;
   fn.__initData = closure_8;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = shown(4115);
+  let obj2 = shown(4119);
   const fn2 = function p() {
     let obj = shown(closure_1_2[6]);
     let num = 0;
@@ -52,7 +52,7 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
     obj = { blurAmount: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: shown(4744).withSpring, shown };
+  obj = { withSpring: shown(4749).withSpring, shown };
   fn2.__closure = obj;
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
@@ -70,9 +70,9 @@ export default importAllResult.memo(function HeaderGlassBlur(shown) {
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
-  let tmp6Result = tmp6(7190);
+  let tmp6Result = tmp6(7228);
   const items3 = [closure_4(setDefault, { style: tmp.stroke }), ];
-  tmp6Result = tmp6(7190);
+  tmp6Result = tmp6(7228);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(1363);
   const tmp2Result = tmp2(1363);

@@ -2,7 +2,6 @@
 import closure_2 from "../../stores/GuildMemberStore.tsx";
 import closure_3 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
@@ -12,7 +11,7 @@ export default function useIsGuestOrLurker(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_3, closure_2];
   const items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

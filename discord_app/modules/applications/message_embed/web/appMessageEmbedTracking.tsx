@@ -2,7 +2,6 @@
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
-import { items } from "../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx";
 import { trackingConfigWithDefaults } from "appMessageEmbedTrackingConfig.tsx";
 
 const require = arg1;
@@ -18,10 +17,10 @@ export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   expandEventPropertiesDefault.track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
 };
 export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
-  _require = _trackingConfigWithDefaults.trackingConfigWithDefaults(id);
+  _require = require("appMessageEmbedTrackingConfig.tsx").trackingConfigWithDefaults(id);
   closure_1 = React.useRef(false);
-  let obj = _trackingConfigWithDefaults;
-  return _items.useIsVisible((arg0) => {
+  let obj = trackingConfigWithDefaults;
+  return require("../../../../../discord_common/js/shared/hooks/useIntersectionObserver.tsx").useIsVisible((arg0) => {
     const current = ref.current;
     let tmp2 = !current;
     if (!current) {

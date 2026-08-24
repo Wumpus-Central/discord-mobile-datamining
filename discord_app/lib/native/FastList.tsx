@@ -1,8 +1,8 @@
 // discord_app/lib/native/FastList.tsx
 import set2 from "../../utils/PlatformUtils.tsx";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import _mod4115 from "../../modules/reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/06952_BottomSheetModal.js";
+import _mod4119 from "../../modules/reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/06990_BottomSheetModal.js";
 import setDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -1565,7 +1565,7 @@ class FastList extends PureComponent {
     tmp.containerSize = 0;
     tmp.scrollPos = 0;
     obj2 = require("createFakeSharedValue");
-    tmp.scrollPosValue = require("module_0");
+    tmp.scrollPosValue = require("../../index.native.tsx");
     manualRef = tmp.props.manualRef;
     if (manualRef == null) {
       tmp8 = closure_6;
@@ -2136,8 +2136,8 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = _mod4115.makeMutable(tmp10);
-    const obj3 = _mod4115;
+    self.scrollPosValue = _mod4119.makeMutable(tmp10);
+    const obj3 = _mod4119;
   }
   if (result > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);

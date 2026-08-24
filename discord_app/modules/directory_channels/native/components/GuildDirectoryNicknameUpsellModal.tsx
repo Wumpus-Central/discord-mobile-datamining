@@ -9,7 +9,7 @@ import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAre
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import _modDef8575 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef8614 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -18,7 +18,6 @@ import closure_8 from "../../../../stores/GuildStore.tsx";
 import { GuildPrompts } from "../../../guild/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 require = arg1;
 function GuildDirectoryNicknameUpsell(arg0) {
@@ -127,7 +126,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(_modDef8575, obj5);
+  items2[2] = callback(_modDef8614, obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
@@ -170,7 +169,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
-  return callback(_NavigationStack.Navigator, {
+  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
     screens: useInitialValueDefault(() => {
       ({ guildId: closure_0, onHide: closure_1 } = callback);
       function handleClose() {

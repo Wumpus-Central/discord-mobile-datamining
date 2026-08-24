@@ -4,10 +4,9 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/09931_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../_runtime/09970_createNativeStackNavigator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -21,8 +20,8 @@ const result = require("set").fileFinishedImporting("modules/application_command
 export default function ContextMenuCommandNavigator() {
   const tmp = callback3();
   const _require = tmp;
-  const layoutEffect = React.useLayoutEffect(() => lib(5066).trackAppUIViewed(), []);
-  let obj = _NavigationStack;
+  const layoutEffect = React.useLayoutEffect(() => lib(5071).trackAppUIViewed(), []);
+  let obj = NavigationStack;
   importDefault = obj.useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   obj = { style: items, children: null };
@@ -57,11 +56,11 @@ export default function ContextMenuCommandNavigator() {
   obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
   ({ Navigator, Screen } = Screen);
-  const intl = _getSystemLocale.intl;
-  obj2[0] = intl.string(_getSystemLocale.t.PHjkRE);
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj2[0] = intl.string(require("../../../intl/index.native.tsx").t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16084).default;
+    return lib(16182).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -76,7 +75,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return lib(16086).default;
+        return lib(16184).default;
       }
     })
   ];

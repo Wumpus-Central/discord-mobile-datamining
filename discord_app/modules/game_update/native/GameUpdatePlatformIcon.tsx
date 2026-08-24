@@ -17,32 +17,32 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(12015).ScreenIcon, { size: null, color: null });
-  } else if (tmp(9049).PlatformType.XBOX === platform) {
+    return jsx(tmp(12064).ScreenIcon, { size: null, color: null });
+  } else if (tmp(9086).PlatformType.XBOX === platform) {
     obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(9123).XboxNeutralIcon, { size: null, color: null });
-  } else if (tmp(9049).PlatformType.PLAYSTATION === platform) {
+    return jsx(tmp(9160).XboxNeutralIcon, { size: null, color: null });
+  } else if (tmp(9086).PlatformType.PLAYSTATION === platform) {
     obj1 = { size: null, color: null };
     obj1[0] = size;
     obj1[1] = color;
-    return jsx(tmp(12017).PlaystationNeutralIcon, { size: null, color: null });
-  } else if (tmp(9049).PlatformType.NINTENDO === platform) {
+    return jsx(tmp(12066).PlaystationNeutralIcon, { size: null, color: null });
+  } else if (tmp(9086).PlatformType.NINTENDO === platform) {
     const obj2 = { size: null, color: null };
     obj2[0] = size;
     obj2[1] = color;
-    return jsx(tmp(12019).NintendoSwitchNeutralIcon, { size: null, color: null });
-  } else if (tmp(9049).PlatformType.ANDROID === platform) {
+    return jsx(tmp(12068).NintendoSwitchNeutralIcon, { size: null, color: null });
+  } else if (tmp(9086).PlatformType.ANDROID === platform) {
     const obj3 = { size: null, color: null };
     obj3[0] = size;
     obj3[1] = color;
-    return jsx(tmp(8597).MobilePhoneIcon, { size: null, color: null });
-  } else if (tmp(9049).PlatformType.IOS === platform) {
+    return jsx(tmp(6604).MobilePhoneIcon, { size: null, color: null });
+  } else if (tmp(9086).PlatformType.IOS === platform) {
     obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(12021).AppleNeutralIcon, { size: null, color: null });
+    return jsx(tmp(12070).AppleNeutralIcon, { size: null, color: null });
   } else {
     return null;
   }

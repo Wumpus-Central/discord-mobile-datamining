@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -13,7 +13,7 @@ function AppStoreOverlayFooter(arg0) {
   let token;
   ({ onInstallPress, onLayout } = arg0);
   const tmp = callback3();
-  let obj = token(4097);
+  let obj = token(4100);
   token = obj.useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   obj = { style: tmp.footer, onLayout, children: null };
@@ -29,8 +29,8 @@ function AppStoreOverlayFooter(arg0) {
   const intl = token(1236).intl;
   obj2[1] = intl.string(token(1236).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(token(4745).Button, obj2);
-  items1[1] = callback(token(6803).SafeAreaPaddingView, obj1);
+  obj1[1] = callback(token(4750).Button, obj2);
+  items1[1] = callback(token(6840).SafeAreaPaddingView, obj1);
   obj[2] = items1;
   return callback2(View, obj);
 }

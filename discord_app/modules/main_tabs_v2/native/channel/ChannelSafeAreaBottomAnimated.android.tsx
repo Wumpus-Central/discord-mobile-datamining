@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
 import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue.android.tsx";
 import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -14,7 +14,7 @@ const memoResult = importAllResult.memo(function ChannelSafeAreaBottom(channelId
   let _require;
   const tmp = useChannelSafeAreaHeightSharedValueDefault();
   _require = tmp;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const fn = function n() {
     return { height: closure_0.get() };
   };
@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo(function ChannelSafeAreaBottom(channelId
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: <closure_4 style={items} /> };
   items = [absoluteFill.absoluteFill, useChannelSafeAreaBottomStylesDefault(channelId.channelId)];
-  return jsx(_modDef4115.View, { style: animatedStyle, children: <closure_4 style={items} /> });
+  return jsx(_modDef4119.View, { style: animatedStyle, children: <closure_4 style={items} /> });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
 

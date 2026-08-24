@@ -10,11 +10,6 @@ import { RelationshipTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGameRelationshipsByType } from "../../game_relationships/GameRelationshipStoreHooks.tsx";
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -42,18 +37,18 @@ export default function UserProfileYourFriendsCard(arg0) {
   const tmp2 = stateFromStoresArray(stateFromStoresArray1.useState([]), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_6];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
   const items1 = [closure_7];
-  stateFromStoresArray1 = _initialize.useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
-  const obj2 = _initialize;
-  gameRelationshipsByType = _useGameRelationshipsByType.useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  stateFromStoresArray1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
+  const obj2 = initialize;
+  gameRelationshipsByType = require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9637).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9676).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -92,7 +87,7 @@ export default function UserProfileYourFriendsCard(arg0) {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
-        obj = { user: id, guildId: "r", size: "ct", cutout: null };
+        obj = { user: id, guildId: "r", size: false, cutout: false };
         obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {
@@ -107,15 +102,15 @@ export default function UserProfileYourFriendsCard(arg0) {
     return closure_1_10(gameRelationshipsByType, obj);
   }, items3);
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
-  const intl = _getSystemLocale.intl;
-  obj[1] = intl.string(_getSystemLocale.t.TdEu5X);
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx").t.TdEu5X);
   obj[2] = navigateToFriends;
   const items4 = [style, tmp.pressable];
   obj[3] = items4;
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[4] = intl2.string(_getSystemLocale.t.TdEu5X);
-  const items5 = [callback(_Text.Text, obj), memo, callback(_ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" })];
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[4] = intl2.string(require("../../../intl/index.native.tsx").t.TdEu5X);
+  const items5 = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj), memo, callback(require("../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx").ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_PressableBase.PressableOpacity, obj);
+  return callback2(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj);
 };

@@ -4,8 +4,6 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -30,10 +28,10 @@ export default function AppealIngestionBreadcrumbs(reasons) {
     obj[0] = tmp.container;
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj[0] = tmp.title;
-    const intl = _getSystemLocale.intl;
-    obj[3] = intl.string(_getSystemLocale.t.eQg0Ck);
+    const intl = require("../../../intl/index.native.tsx").intl;
+    obj[3] = intl.string(require("../../../intl/index.native.tsx").t.eQg0Ck);
     let items = [
-      callback(_Text.Text, obj),
+      callback(require("../../../design/components/Text/native/Text.tsx").Text, obj),
       reasons.map((children) => {
           let obj = { style: lib.breadCrumbItemContainer, children: null };
           obj = { style: lib.breadCrumbBar };

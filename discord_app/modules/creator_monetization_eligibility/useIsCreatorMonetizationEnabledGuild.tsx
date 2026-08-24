@@ -1,7 +1,6 @@
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx
 import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
@@ -9,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/creator_monetizatio
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {

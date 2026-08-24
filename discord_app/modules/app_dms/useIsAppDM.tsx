@@ -1,6 +1,5 @@
 // discord_app/modules/app_dms/useIsAppDM.tsx
 import closure_2 from "../../stores/UserStore.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.
 export default function useIsAppDM(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let tmp = null != closure_0 && obj.isDM();
     if (tmp) {
       tmp = 1 === obj.recipients.length;

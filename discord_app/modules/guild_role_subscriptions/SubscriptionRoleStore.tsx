@@ -45,7 +45,7 @@ function computeRolesForGuild(guildId) {
           if (obj2.isSubscriptionRole(nextResult)) {
             let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);
-            let tmp16Result = tmp16(4012);
+            let tmp16Result = tmp16(4015);
             if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
               let tmp20 = nextResult;
               let addResult1 = set1.add(tmp15.id);

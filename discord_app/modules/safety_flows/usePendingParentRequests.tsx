@@ -13,10 +13,10 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   const _require = arr;
   dependencyMap = stateFromStores1;
   let items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
-  let obj = _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  let obj = initialize;
   const items1 = [closure_5];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -111,7 +111,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
   c6 = undefined;
   c7 = undefined;
   callback = undefined;
-  let obj = pendingRequests(7621);
+  let obj = pendingRequests(7659);
   const hasMaxConnections = obj.useHasMaxConnections();
   [tmp4, c2] = callback(acceptLinkRequest.useState(null), 2);
   let tmp3 = callback(acceptLinkRequest.useState(null), 2);
@@ -124,7 +124,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
       callback();
     }
   };
-  const familyCenterActions = pendingRequests(11104).useFamilyCenterActions(obj);
+  const familyCenterActions = pendingRequests(11143).useFamilyCenterActions(obj);
   acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   declineLinkRequest = familyCenterActions.declineLinkRequest;
   ({ isAcceptLoading, isDeclineLoading } = familyCenterActions);
@@ -167,7 +167,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
   }, items1);
   tmp2Result = tmp2(obj2.useState(pendingRequests), 2);
   [tmp12, tmp13] = tmp2Result;
-  const obj3 = pendingRequests(11104);
+  const obj3 = pendingRequests(11143);
   [tmp15, tmp16] = callback(acceptLinkRequest.useState(pendingRequests), 2);
   const tmp2Result1 = callback(acceptLinkRequest.useState(pendingRequests), 2);
   if (linkedUsersProcessed) {

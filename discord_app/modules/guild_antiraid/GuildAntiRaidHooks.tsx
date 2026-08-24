@@ -37,7 +37,7 @@ function getFirstGuildIncidentId(guildId) {
         let tmp22 = tmp17;
         if (obj7.hasDetectedActivity(tmp18)) {
           let tmp8 = tmp20;
-          let tmp19Result = tmp19(8234);
+          let tmp19Result = tmp19(8274);
           let tmp9 = tmp17;
           if (!tmp19Result.isUnderLockdown(tmp18)) {
             let tmp11 = importAll;
@@ -59,7 +59,7 @@ function getFirstGuildIncidentId(guildId) {
           }
         } else {
           let tmp6 = tmp20;
-          tmp19Result = tmp19(8234);
+          tmp19Result = tmp19(8274);
           let tmp7 = tmp17;
         }
       }
@@ -96,7 +96,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
         let tmp20 = dependencyMap;
         let tmp17 = stateFromStores1;
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8234);
+        let obj8 = stateFromStores1(8274);
         let tmp21 = tmp15;
         if (obj8.hasDetectedActivity(tmp16)) {
           let tmp9 = importAll;
@@ -116,7 +116,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
         } else {
           let tmp6 = tmp17;
           let tmp7 = tmp19;
-          let tmp18Result = tmp18(8234);
+          let tmp18Result = tmp18(8274);
           let tmp8 = tmp15;
         }
       }
@@ -127,7 +127,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
 };
 export const useGuildIncidentsState = function useGuildIncidentsState(id) {
   const _require = id;
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   const items = [closure_5, closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(closure_0);
@@ -144,7 +144,7 @@ export const useGuildIncidentsState = function useGuildIncidentsState(id) {
     }
   });
   const items1 = [closure_9];
-  const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_9.getGuildIncident(tmp);
@@ -154,8 +154,8 @@ export const useGuildIncidentsState = function useGuildIncidentsState(id) {
   obj = { shouldShowIncidentActions: stateFromStores, incidentData: stateFromStores1, isUnderLockdown: null };
   let isUnderLockdownResult = null != stateFromStores1;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = _DATE_CONFIG.isUnderLockdown(stateFromStores1);
-    const tmpResult = _DATE_CONFIG;
+    isUnderLockdownResult = require("GuildAntiRaidUtils.tsx").isUnderLockdown(stateFromStores1);
+    const tmpResult = DATE_CONFIG;
   }
   obj[2] = isUnderLockdownResult;
   return obj;
@@ -294,7 +294,7 @@ export const useDisabledActions = function useDisabledActions(id) {
 export const useShowAntiRaidInGuildNotifSettings = function useShowAntiRaidInGuildNotifSettings(arg0) {
   const _require = arg0;
   const items = [closure_6, closure_5];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(callback);
     return callback(closure_1_3[13]).canReportRaid(guild, closure_1_6);
   });

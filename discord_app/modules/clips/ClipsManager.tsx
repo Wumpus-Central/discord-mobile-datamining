@@ -84,10 +84,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
       const id = store.getId();
-      if (tmp(4569).MediaEngineContextTypes.DEFAULT === context) {
+      if (tmp(4574).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
-      } else if (tmp(4569).MediaEngineContextTypes.STREAM === context) {
+      } else if (tmp(4574).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
             const rTCConnection = store2.getRTCConnection(streamKey);
@@ -95,7 +95,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
               self.applyStreamRecording(id, rTCConnection);
             }
           }
-          tmpResult = tmp(4531);
+          tmpResult = tmp(4536);
         }
       }
     }
@@ -104,7 +104,7 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
 prototype["handleRTCUsersUpdate"] = function handleRTCUsersUpdate(userIds) {
   const self = this;
   userIds = userIds.userIds;
-  if (userIds.context === self(4569).MediaEngineContextTypes.DEFAULT) {
+  if (userIds.context === self(4574).MediaEngineContextTypes.DEFAULT) {
     const item = userIds.forEach((id) => {
       const result = self.applyUserVoiceRecording(id);
       const result1 = self.applyUserSoundboardRecording(id);
@@ -224,7 +224,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -303,7 +303,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           obj4[1] = closure_1_13;
           obj4[2] = gpuModels;
           const obj7 = closure_1_1(698);
-          obj4[3] = closure_1_0(4833).getClipsRuntime("classifyHardwareAndTrack");
+          obj4[3] = closure_1_0(4838).getClipsRuntime("classifyHardwareAndTrack");
           obj7.track(closure_1_15.CLIPS_HARDWARE_CLASSIFICATION, obj4);
           dependencyMap = 0;
           c5 = 3;

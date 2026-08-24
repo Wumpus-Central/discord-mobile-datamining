@@ -7,7 +7,6 @@ import ME from "../../Constants.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import b64ToProto from "UserSettingsUtils.tsx";
 import MAX_FAVORITES from "UserSettingsConstants.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 
 function readFavoriteGIFs(arg0) {
   c0 = 1;
@@ -334,7 +333,7 @@ let items = [
         let tmpResult = tmp(12);
         let flag = false;
         if (tmpResult.size(state.favoriteSounds) > 0) {
-          const FavoriteSoundboardSounds = _create.FavoriteSoundboardSounds;
+          const FavoriteSoundboardSounds = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx").FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
           tmpResult = tmp(11);
           const keys = tmpResult.keys(state.favoriteSounds);

@@ -1,6 +1,6 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import tDefault from "../../../_runtime/04092_t.js";
+import tDefault from "../../../_runtime/04095_t.js";
 import AST_KEY from "MarkupTypes.tsx";
 import MarkupText from "MarkupReactRules.native.tsx";
 import MarkupTextDefault from "MarkupReactRules.native.tsx";

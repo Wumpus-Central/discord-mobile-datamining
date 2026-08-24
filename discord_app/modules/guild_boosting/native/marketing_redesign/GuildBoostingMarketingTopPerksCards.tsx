@@ -3,16 +3,13 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import registerAssetDefault from "../../../../../_runtime/13034_registerAsset.js";
-import _mod13035 from "../../../../../_runtime/metro/13035__.js";
-import registerAssetDefault2 from "../../../../../_runtime/13036_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13089_registerAsset.js";
+import _mod13090 from "../../../../../_runtime/metro/13090__.js";
+import registerAssetDefault2 from "../../../../../_runtime/13091_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { items } from "MarketingCardsScroller.tsx";
 
 require = arg1;
 noopAll;
@@ -50,7 +47,7 @@ let items = [
       return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
-      const obj = { source: _mod13035, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
+      const obj = { source: _mod13090, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
       return callback(playDefault, obj);
     }
   },
@@ -89,9 +86,9 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const _require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[3] = intl.string(_getSystemLocale.t.aGdB3E);
-  items = [callback(_Text.Heading, obj), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.aGdB3E);
+  items = [callback(require("../../../../design/components/Text/native/Text.tsx").Heading, obj), ];
   obj = {
     itemCount: items.length,
     cardWidth: 324,
@@ -114,7 +111,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       return closure_1_7(closure_1_4, obj, arg1);
     })
   };
-  items[1] = callback(_items.MarketingCardsScroller, obj);
+  items[1] = callback(require("MarketingCardsScroller.tsx").MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

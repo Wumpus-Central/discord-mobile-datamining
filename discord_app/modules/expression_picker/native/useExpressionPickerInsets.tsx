@@ -13,7 +13,7 @@ export default function useExpressionPickerInsets(hasCategories) {
   if (hasCategories.hasCategories) {
     num = EXPRESSION_FOOTER_HEIGHT;
   }
-  const sum = bottom(5441)({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false }).insets.bottom + num;
+  const sum = bottom(5446)({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false }).insets.bottom + num;
   obj[1] = sum + bottom(712).space.PX_16;
   return obj;
 };

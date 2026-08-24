@@ -495,7 +495,7 @@ class ChannelListImpl {
     obj4 = Object.create(tmp44.prototype);
     obj4.rows = importDefault;
     obj.channelNoticeSection = obj4;
-    tmp46 = require("module_38")(!("null" in obj.categories), "somehow a null got into categories");
+    tmp46 = require("../../../_runtime/metro/00038__.js")(!("null" in obj.categories), "somehow a null got into categories");
     tmp20Result = require("apply");
     obj.voiceChannelsSectionNumber = FIRST_NAMED_CATEGORY + tmp20Result.size(obj.categories);
     return obj;

@@ -40,9 +40,10 @@ export default {
     const obj = presentAddedFriendToast;
     obj.showSafetySuccess(REPORT_TO_MOD_SUCCESS, getSafetyToastTypeContent.getSafetyToastTypeContent(REPORT_TO_MOD_SUCCESS));
   },
-  showFailedToast(GENERIC_ERROR) {
+  showFailedToast(TIGGER_PAWTECT_ERROR) {
+    let GENERIC_ERROR = TIGGER_PAWTECT_ERROR;
     const obj = presentAddedFriendToast;
-    if (GENERIC_ERROR == null) {
+    if (TIGGER_PAWTECT_ERROR == null) {
       GENERIC_ERROR = SafetyToastType.GENERIC_ERROR;
     }
     obj.presentFailedToast(getSafetyToastTypeContent.getSafetyToastTypeContent(GENERIC_ERROR));

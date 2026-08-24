@@ -6,8 +6,8 @@ const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name:
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
-export const useCustomTypingIndicatorConfig = function useCustomTypingIndicatorConfig(TypingIndicatorSetting) {
-  return apexExperiment.useConfig({ location: TypingIndicatorSetting });
+export const useCustomTypingIndicatorConfig = function useCustomTypingIndicatorConfig(CustomTypingIndicatorEditScreen) {
+  return apexExperiment.useConfig({ location: CustomTypingIndicatorEditScreen });
 };
 export const getCustomTypingIndicatorConfig = function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });

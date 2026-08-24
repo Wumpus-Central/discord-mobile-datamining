@@ -2,6 +2,7 @@
 import timestampDefault from "../../../debug/Logger.tsx";
 import setDefault from "../../../../utils/Durations.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
+import reportMalformedStorageValuesDefault from "../../app/reportMalformedStorageValues.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../multi_account/MultiAccountStore.tsx";
@@ -48,7 +49,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -63,12 +64,12 @@ class KvBackgroundManager extends tmp4 {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      c0 = v0(closure_1_2[10]).channels(c0);
-                      const obj5 = v0(closure_1_2[10]);
+                      c0 = v0(closure_1_2[11]).channels(c0);
+                      const obj5 = v0(closure_1_2[11]);
                       const obj6 = c0;
-                      v0 = v0(closure_1_2[10]).messages(c0);
-                      const obj7 = v0(closure_1_2[10]);
-                      closure_2 = v0(closure_1_2[10]).channelsTemp(c0);
+                      v0 = v0(closure_1_2[11]).messages(c0);
+                      const obj7 = v0(closure_1_2[11]);
+                      closure_2 = v0(closure_1_2[11]).channelsTemp(c0);
                       if (closure_1_8.canEvictOrphans()) {
                         v0 = 1;
                         c0 = 1;
@@ -90,7 +91,7 @@ class KvBackgroundManager extends tmp4 {
                         }, "trimOrphanedChannels");
                         return obj1;
                       }
-                      const obj8 = v0(closure_1_2[10]);
+                      const obj8 = v0(closure_1_2[11]);
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
@@ -102,7 +103,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp5) {
                   c0 = tmp;
                   throw tmp5;
@@ -123,7 +124,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -154,7 +155,7 @@ class KvBackgroundManager extends tmp4 {
                           let tmp11 = new.target;
                           let tmp12 = items;
                           let flag = true;
-                          let table = new v3(closure_1_2[11]).Table(items, tmp5, v3, true);
+                          let table = new v3(closure_1_2[12]).Table(items, tmp5, v3, true);
                           let tmp13 = table;
                           let upgradeTransactionResult = table.upgradeTransaction(arg0);
                           let deleteResult = upgradeTransactionResult.delete();
@@ -173,7 +174,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp6) {
                   c0 = tmp;
@@ -195,7 +196,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -226,7 +227,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp7) {
                   c0 = tmp;
                   throw tmp7;
@@ -247,7 +248,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 while (true) {
@@ -274,11 +275,11 @@ class KvBackgroundManager extends tmp4 {
                       let _Set = Set;
                       let tmp31 = new.target;
                       let tmp32 = new.target;
-                      set = new Set(users.map((id) => callback(tmp2[12]).databaseName(id.id)));
+                      set = new Set(users.map((id) => callback(tmp2[13]).databaseName(id.id)));
                       let tmp34 = set;
                       let tmp35 = closure_1_0;
                       let tmp36 = closure_1_2;
-                      let Kv = closure_1_0(closure_1_2[11]).Kv;
+                      let Kv = closure_1_0(closure_1_2[12]).Kv;
                       c6 = 1;
                       let num12 = 1;
                       c7 = 1;
@@ -319,7 +320,7 @@ class KvBackgroundManager extends tmp4 {
                           let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
                           let tmp17 = closure_1_0;
                           let tmp18 = closure_1_2;
-                          let Database = closure_1_0(closure_1_2[11]).Database;
+                          let Database = closure_1_0(closure_1_2[12]).Database;
                           let tmp19 = closure_1;
                           let deleteResult = Database.delete(closure_1);
                           let catchPromise = deleteResult.catch(() => null);
@@ -329,7 +330,7 @@ class KvBackgroundManager extends tmp4 {
                       }
                       let num2 = 3;
                       c7 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     let tmp6 = closure_4;
@@ -356,7 +357,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -371,7 +372,7 @@ class KvBackgroundManager extends tmp4 {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      const Kv = v0(closure_1_2[11]).Kv;
+                      const Kv = v0(closure_1_2[12]).Kv;
                       c1 = 1;
                       v0 = 1;
                       obj1 = { value: null, done: false };
@@ -388,7 +389,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     v0 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   v0 = tmp;
@@ -404,7 +405,10 @@ class KvBackgroundManager extends tmp4 {
 const prototype = KvBackgroundManager.prototype;
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   const self = this;
-  let applicationActive = !tmp;
+  if ("background" === state.state) {
+    reportMalformedStorageValuesDefault("app_background");
+  }
+  let applicationActive = !tmp4;
   if ("active" !== state.state) {
     applicationActive = this.applicationActive;
   }
@@ -433,7 +437,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -464,7 +468,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
                 c4 = 1;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(7503).startBackgroundTask();
+                obj1[0] = closure_1_1(7541).startBackgroundTask();
                 return obj1;
               }
             }
@@ -482,9 +486,9 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           } else {
             dependencyMap = arg1;
             if (obj10.isIOS()) {
-              if (dependencyMap === closure_1_1(7503).backgroundTaskIdentifierInvalid) {
+              if (dependencyMap === closure_1_1(7541).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
             c3 = 1;
@@ -504,7 +508,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean3 = closure_1_0.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean3;
-          obj2 = closure_1_1(7503);
+          obj2 = closure_1_1(7541);
           obj2.endBackgroundTask(dependencyMap);
           throw c2;
         } else if (arg0 === 1) {
@@ -519,7 +523,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean = timestamp.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean;
-          obj = closure_1_1(7503);
+          obj = closure_1_1(7541);
           obj.endBackgroundTask(c2);
           const tmp12 = timestamp;
         }
@@ -531,7 +535,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           lastDeepClean2 = timestamp.lastDeepClean;
         }
         closure_1_0.lastDeepClean = lastDeepClean2;
-        obj1 = closure_1_1(7503);
+        obj1 = closure_1_1(7541);
         obj1.endBackgroundTask(c2);
         c5 = 3;
         const tmp26 = closure_1_0;
@@ -562,7 +566,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -580,7 +584,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
             closure_0 = tmp4;
             const _HermesInternal = HermesInternal;
             closure_1_11.verbose("performing cleanup (deep: " + closure_1_0 + ")");
-            const databaseResult = v0(table[10]).database();
+            const databaseResult = v0(table[11]).database();
             if (null != databaseResult) {
               v0 = 1;
               table = 1;
@@ -588,7 +592,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
               obj1[0] = v0.cleanDatabaseAsync(databaseResult, tmp17);
               return obj1;
             }
-            const obj9 = v0(table[10]);
+            const obj9 = v0(table[11]);
             tmp17 = closure_1_0;
           }
         } else if (1 === tmp4) {
@@ -628,7 +632,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
           return obj;
         } else {
           table = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
         const steps2 = v0.steps;
         v0 = 2;
@@ -659,7 +663,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

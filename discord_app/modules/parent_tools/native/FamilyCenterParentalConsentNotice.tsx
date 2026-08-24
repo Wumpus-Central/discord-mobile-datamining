@@ -18,9 +18,9 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/native
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = callback();
   const _require = tmp;
-  let obj = _useIsParentalConsentBannerActive;
+  let obj = useIsParentalConsentBannerActive;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  obj1 = _useParentalConsentWarning;
+  obj1 = useParentalConsentWarning;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
@@ -44,13 +44,13 @@ export default function FamilyCenterParentalConsentNotice() {
           const intl2 = tmp2(1236).intl;
           obj = { learnMoreHook: null };
           obj[0] = learnMoreHook;
-          let formatResult = intl2.format(tmp9(2335).S5kmfO, obj);
+          let formatResult = intl2.format(tmp9(2336).S5kmfO, obj);
         } else {
           const intl = tmp2(1236).intl;
           obj1 = { count: null, learnMoreHook: null };
           obj1[0] = daysRemaining;
           obj1[1] = learnMoreHook;
-          formatResult = intl.format(tmp9(2335)["5jm+T3"], obj1);
+          formatResult = intl.format(tmp9(2336)["5jm+T3"], obj1);
         }
         obj[1] = formatResult;
         return jsx(FamilyCenterInlineWarningNoticeDefault, { style: null, text: null });

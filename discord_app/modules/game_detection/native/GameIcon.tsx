@@ -1,10 +1,10 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/07150_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/07151_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/07152_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/07153_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07188_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07189_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/07190_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/07191_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";

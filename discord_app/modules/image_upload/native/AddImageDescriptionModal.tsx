@@ -1,7 +1,7 @@
 // discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import _modDef9930 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef9969 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -104,7 +104,7 @@ createCacheKey = { contentContainer: null, imageContainer: null, image: null, pl
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
-let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: "\u{1F9DB}\u{1F3FD}\u200D\u2642\uFE0F" };
+let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
 obj2[3] = ThemesDefault.radii.sm;
 createCacheKey[2] = obj2;
 let obj1 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
@@ -121,5 +121,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(_modDef9930, obj);
+  return callback(_modDef9969, obj);
 };

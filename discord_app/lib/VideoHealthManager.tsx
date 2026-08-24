@@ -113,7 +113,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = _sleep;
+        let obj = sleep;
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
@@ -121,7 +121,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
       }
     }
     obj = { lastBackoffTime: null, expBackoffFactor: null };
-    obj[0] = _sleep.now();
+    obj[0] = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx").now();
     obj[1] = num2;
     self.retryBackoffCache[arg0] = obj;
     const result = num2 * self.backoffTimeSec;
@@ -133,7 +133,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     self.timeoutIdCache[arg0] = setTimeout(() => {
       self.queueReenable(closure_0);
     }, result1);
-    const obj3 = _sleep;
+    const obj3 = sleep;
   }
 };
 prototype["queueReenable"] = function queueReenable(closure_0) {

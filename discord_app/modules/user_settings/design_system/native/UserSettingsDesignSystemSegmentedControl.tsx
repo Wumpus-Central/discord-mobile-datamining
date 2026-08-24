@@ -58,7 +58,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     }
     return items;
   }, items);
-  let obj = first(8799);
+  let obj = first(8836);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   obj = { children: null };
   obj = {
@@ -69,10 +69,10 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     children: null
   };
   obj1 = { spacing: 24, children: null };
-  let items1 = [callback3(first(10096).SegmentedControl, { state: segmentedControlState }), callback3(first(11785).SegmentedControlPages, { state: segmentedControlState }), ];
+  let items1 = [callback3(first(10135).SegmentedControl, { state: segmentedControlState }), callback3(first(11834).SegmentedControlPages, { state: segmentedControlState }), ];
   const obj2 = { spacing: 8, direction: "horizontal", children: null };
   const items2 = [
-    callback3(first(4745).Button, {
+    callback3(first(4750).Button, {
       text: "Add Tab",
       variant: "active",
       size: "sm",
@@ -84,7 +84,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         AccessibilityAnnouncer.announce("Tab added, " + sum + " tabs", "polite");
       }
     }),
-    callback3(first(4745).Button, {
+    callback3(first(4750).Button, {
       text: "Remove Tab",
       variant: "destructive",
       size: "sm",
@@ -98,9 +98,9 @@ export default function UserSettingsDesignSystemSegmentedControl() {
     })
   ];
   obj2[2] = items2;
-  items1[2] = callback2(first(4733).Stack, obj2);
+  items1[2] = callback2(first(4738).Stack, obj2);
   obj1[1] = items1;
-  obj[2] = callback2(first(4733).Stack, obj1);
+  obj[2] = callback2(first(4738).Stack, obj1);
   obj[0] = callback3(closure_4, obj);
   return callback3(closure_5, obj);
 };

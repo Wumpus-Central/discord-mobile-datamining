@@ -30,11 +30,11 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
     obj[1] = function onPress() {
       closure_1_0(closure_1_2[7]).transitionToGuild(closure_0, closure_2, closure_1);
     };
-    obj = { rowGenerator: null, message: null };
+    obj = { rowGenerator: null, message: null, pointerEvents: "none" };
     obj[0] = obj;
     obj[1] = stateFromStores.message;
-    obj[2] = jsx(DCDChatItemDefault, { rowGenerator: null, message: null });
-    tmp5 = jsx(PressableBase.PressableOpacity, { rowGenerator: null, message: null });
+    obj[2] = jsx(DCDChatItemDefault, { rowGenerator: null, message: null, pointerEvents: "none" });
+    tmp5 = jsx(PressableBase.PressableOpacity, { rowGenerator: null, message: null, pointerEvents: "none" });
   }
   return tmp5;
 };
@@ -45,11 +45,11 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMessage(closure_1, closure_0));
   let tmp3 = null;
   if (null != stateFromStores) {
-    obj = { rowGenerator: null, message: null, style: null };
+    obj = { rowGenerator: null, message: null, style: null, pointerEvents: "none" };
     obj[0] = obj;
     obj[1] = stateFromStores;
     obj[2] = { overflow: "visible" };
-    tmp3 = jsx(DCDChatItemDefault, { rowGenerator: null, message: null, style: null });
+    tmp3 = jsx(DCDChatItemDefault, { rowGenerator: null, message: null, style: null, pointerEvents: "none" });
   }
   return tmp3;
 };

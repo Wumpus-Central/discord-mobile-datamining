@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
   getComponent() {
-    return OverlappingSchedulesWarning.default;
+    return OverlappingSchedulesWarning /* OverlappingSchedulesWarning */.default;
   }
 };
 const route = createToggle.createRoute(obj);

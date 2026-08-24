@@ -3,7 +3,6 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import closure_2 from "../../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../../stores/RTCConnectionStore.tsx";
 import closure_4 from "../../../stores/StreamRTCConnectionStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
@@ -11,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmpt
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   const _require = stateFromStores4;
   const items = [closure_4, closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {

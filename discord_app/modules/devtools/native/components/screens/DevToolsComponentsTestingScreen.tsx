@@ -15,9 +15,6 @@ import closure_6 from "../../../../../stores/SelectedChannelStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import flattenComponents from "../../../../interaction_components/InteractionComponentUtils.tsx";
-import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { PermissionOverwriteType } from "../../../../../flow/Server.tsx";
 import { isInteractionComponent } from "../../../../interaction_components/ComponentStateContext.tsx";
 
 require = arg1;
@@ -34,11 +31,11 @@ function Select(children) {
   obj.maxValues = num;
   obj.type = type;
   obj.id = String(type);
-  obj1 = _isInteractionComponent;
+  obj1 = isInteractionComponent;
   let state = obj1.useComponentState(obj).state;
   obj = { style: { gap: 8 }, children: null };
-  const items = [callback(_Text.Text, { variant: "heading-lg/medium", children: children.title }), , , ];
-  if (obj.type === _PermissionOverwriteType.ComponentType.STRING_SELECT) {
+  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/medium", children: children.title }), , , ];
+  if (obj.type === require("../../../../../flow/Server.tsx").ComponentType.STRING_SELECT) {
     obj = {};
     const merged1 = Object.assign(obj);
     let tmp7Result = tmp7(StringSelectActionComponentDefault, obj);
@@ -65,9 +62,9 @@ function Select(children) {
     state = { variant: "text-md/normal", children: null };
     const items1 = ["Selected values: ", mapped.join(", ")];
     state[1] = items1;
-    tmp6(tmp4(4734).Text, state);
+    tmp6(tmp4(4739).Text, state);
   } else {
-    items[2] = tmp7(tmp4(4734).Text, { variant: "text-md/normal", children: "Nothing selected" });
+    items[2] = tmp7(tmp4(4739).Text, { variant: "text-md/normal", children: "Nothing selected" });
     let str3 = "off";
     if (tmp2) {
       str3 = "on";
@@ -78,9 +75,9 @@ function Select(children) {
     obj2[1] = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = tmp7(tmp4(4745).Button, obj2);
+    items[3] = tmp7(tmp4(4750).Button, obj2);
     obj[1] = items;
-    return tmp6(_PressableCard.Card, obj);
+    return tmp6(require("../../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   }
 }
 let c3 = importDefaultResult;

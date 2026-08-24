@@ -14,14 +14,14 @@ const require = arg1;
 let c3 = importAllResult;
 ({ DEFAULT_FONT_SCALE_STORE_STATE: error, useFontScaleStore: closure_8 } = DEFAULT_FONT_SCALE_STORE_STATE);
 const memoResult = importAllResult.memo(() => {
-  nativeStackNavigation(4761)(() => {
+  nativeStackNavigation(4766)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(14610).fetchUserCustomThemes();
-      const obj = lib(14610);
+      const userCustomThemes = lib(14678).fetchUserCustomThemes();
+      const obj = lib(14678);
     }
   });
   let items = [closure_6, closure_4];
-  const stateFromStoresObject = _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
     const obj = { theme: theme.theme, gradientPresetId: null };
     gradientPreset = gradientPreset.gradientPreset;
     let str;
@@ -39,8 +39,8 @@ const memoResult = importAllResult.memo(() => {
   ({ theme, gradientPresetId } = stateFromStoresObject);
   const tmp3 = callback();
   _require = tmp3;
-  let obj = _defaultAreStatesEqual;
-  nativeStackNavigation = _useNavigation.useNativeStackNavigation();
+  let obj = defaultAreStatesEqual;
+  nativeStackNavigation = require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNativeStackNavigation();
   let items1 = [nativeStackNavigation, , , , ];
   ({ fontScale: arr2[1], isClassicChatFontScaleEnabled: arr2[2], persistedFontScale: arr2[3], persistedIsClassicChatFontScaleEnabled: arr2[4] } = tmp3);
   const effect = importAllResult.useEffect(() => {
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = lib(10669);
+    let obj = lib(10708);
     obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
@@ -89,8 +89,8 @@ const memoResult = importAllResult.memo(() => {
     const obj2 = { settings: items7, subLabel: null };
     items7 = [constants.FAVORITES_GUILD_TOGGLE];
     const intl3 = lib(1236).intl;
-    const obj3 = { helpCenterLink: nativeStackNavigation(1993).getArticleURL(constants2.FAVORITES_GUILD) };
-    obj2[1] = intl3.format(nativeStackNavigation(3079).GR2KOG, obj3);
+    const obj3 = { helpCenterLink: nativeStackNavigation(1994).getArticleURL(constants2.FAVORITES_GUILD) };
+    obj2[1] = intl3.format(nativeStackNavigation(3082).GR2KOG, obj3);
     items1[6] = obj2;
     const obj4 = { label: null, settings: null };
     const intl4 = lib(1236).intl;
@@ -109,8 +109,8 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  let obj2 = _useNavigation;
-  return jsx(nativeStackNavigation(13991), { node }, "" + theme + "-" + gradientPresetId);
+  let obj2 = useNavigation;
+  return jsx(nativeStackNavigation(14059), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

@@ -5,8 +5,6 @@ import setDefault from "../../actions/AlertActionCreators.tsx";
 import closure_3 from "../../stores/SelfPresenceStore.tsx";
 import { NotificationSettingsUpdateType as closure_4 } from "NotificationConstants.tsx";
 import ME from "../../Constants.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, StatusTypes: closure_6 } = ME);
@@ -54,9 +52,9 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
 export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   const _require = quiet_mode_enabled;
   importDefault = arg1;
-  const FocusMode = _explicitContentFromProto.FocusMode;
+  const FocusMode = require("../user_settings/UserSettings.tsx").FocusMode;
   const setting = FocusMode.getSetting();
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {
     const BoolValue = quiet_mode_enabled(closure_1_2[5]).BoolValue;
     arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
@@ -70,7 +68,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
       }
     }
     arg0.focusModeExpiresAtMs = str;
-  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
   let obj = expandEventPropertiesDefault;
   obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);

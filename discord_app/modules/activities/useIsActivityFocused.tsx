@@ -2,7 +2,6 @@
 import sortKey from "../calls/ChannelRTCParticipants.tsx";
 import closure_2 from "../calls/ChannelRTCStore.tsx";
 import closure_3 from "EmbeddedActivitiesStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
@@ -10,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/activities/useIsAct
 export default function useIsActivityFocused(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const selectedParticipant = closure_1_2.getSelectedParticipant(callback);
     const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;

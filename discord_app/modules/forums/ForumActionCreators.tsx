@@ -7,7 +7,6 @@ import maybeMarkSeen from "../../utils/AnalyticsFeedItemSeenManager.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 
 require = arg1;
 function withErrorHandling(arg0, stringResult, intl2) {
@@ -41,7 +40,7 @@ function _withErrorHandling() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -168,7 +167,7 @@ export default {
     return HTTP.post(obj);
   },
   updateForumTag(id, channelId) {
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: closure_5.FORUM_TAG(channelId, id.id), body: null, rejectWithError: null };
     obj = { name: id.name, emoji_id: id.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -178,28 +177,28 @@ export default {
     obj[2] = emojiName;
     obj[3] = id.moderated;
     obj[1] = obj;
-    obj[2] = _sendRequest.rejectWithMigratedError();
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     _require = HTTP.put(obj);
     const intl = tmp(1236).intl;
-    const tmpResult = _sendRequest;
+    const tmpResult = sendRequest;
     const intl2 = tmp(1236).intl;
-    withErrorHandling(() => closure_0, intl.string(_getSystemLocale.t.T8sBLJ), intl2.string(_getSystemLocale.t.imcb5u));
+    withErrorHandling(() => closure_0, intl.string(require("../../intl/index.native.tsx").t.T8sBLJ), intl2.string(require("../../intl/index.native.tsx").t.imcb5u));
   },
   deleteForumTag(closure_0, id) {
-    const HTTP = _sendRequest.HTTP;
-    const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: _sendRequest.rejectWithMigratedError() };
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
     _require = HTTP.del(obj);
-    const intl = _getSystemLocale.intl;
-    const obj2 = _sendRequest;
-    const intl2 = _getSystemLocale.intl;
-    withErrorHandling(() => closure_0, intl.string(_getSystemLocale.t["0ZkNDU"]), intl2.string(_getSystemLocale.t.imcb5u));
+    const intl = require("../../intl/index.native.tsx").intl;
+    const obj2 = sendRequest;
+    const intl2 = require("../../intl/index.native.tsx").intl;
+    withErrorHandling(() => closure_0, intl.string(require("../../intl/index.native.tsx").t["0ZkNDU"]), intl2.string(require("../../intl/index.native.tsx").t.imcb5u));
   },
   updateForumPostTags(id, arg1) {
     closure_0 = id;
     closure_1 = arg1;
     return callback(function*() {
       closure_0 = tmp4;
-      const obj2 = v0(7512);
+      const obj2 = v0(7550);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
       const HTTP = closure_1_0(530).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
@@ -243,7 +242,7 @@ export default {
       obj1[1] = closure_1_1;
       closure_1_1(709).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7512);
+      const obj13 = closure_1_1(7550);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -261,8 +260,8 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7514).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7514);
+        closure_1_0(7552).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7552);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;

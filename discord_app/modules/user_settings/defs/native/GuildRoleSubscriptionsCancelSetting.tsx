@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS_CANCEL,
   getComponent() {
-    return GuildRoleSubscriptionCancelSettingScreen.default;
+    return GuildRoleSubscriptionCancelSettingScreen /* GuildRoleSubscriptionCancelSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

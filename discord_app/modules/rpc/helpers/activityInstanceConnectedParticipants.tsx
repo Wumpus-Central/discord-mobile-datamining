@@ -2,7 +2,6 @@
 import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import RPC_SCOPE_CONFIG from "../Constants.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 
 const require = arg1;
@@ -20,12 +19,12 @@ obj = {
         let obj = { participants: null };
         obj[0] = [];
       } else {
-        callback = callback(4011).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(4011);
-        callback2 = callback(4011).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        callback = callback(4014).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = callback(4014);
+        callback2 = callback(4014).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(4011);
+        const obj5 = callback(4014);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = closure_1_4.getUser(arg0);
           if (null != user) {
@@ -65,12 +64,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = _getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _getEmbeddedActivityLocationChannelId;
-    const embeddedActivityLocationChannelId = _getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    _require = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = getEmbeddedActivityLocationChannelId;
+    const embeddedActivityLocationChannelId = require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = _getEmbeddedActivityLocationChannelId;
+    const obj3 = getEmbeddedActivityLocationChannelId;
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
       const user = closure_1_4.getUser(arg0);
       if (null != user) {
@@ -81,7 +80,7 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
         obj.nickname = nickname;
         return obj;
       }
-    }).filter(_isDiscordFrontendDevelopment.isNotNullish);
+    }).filter(require("../../../utils/GlobalUtils.tsx").isNotNullish);
     return obj;
   }
 };

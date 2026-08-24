@@ -32,7 +32,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
             const _HermesInternal4 = HermesInternal;
             closure_17.verbose("hydrating guild (guild: " + guild_id + ", trace: " + getBasicChannel + ")");
             const _HermesInternal5 = HermesInternal;
-            const result = __tryLoadAsync.tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
+            const result = require("../modules/app_database/app/TryLoad.tsx").tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
             if (null == result) {
               set.add(guild_id);
               store.restored(guild_id);
@@ -40,7 +40,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = callback(result, 2);
-              tmp4(1976)(arr);
+              tmp4(1977)(arr);
               if (Basic !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -66,7 +66,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               const tmp4Result = tmp4(10);
             }
             obj3 = closure_17;
-            const obj4 = __tryLoadAsync;
+            const obj4 = _tryLoadAsync;
           }
           const obj = itemsDefault;
         }
@@ -583,7 +583,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       dependencyMap = c31;
-      return tmp(1974).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
+      return tmp(1975).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -595,7 +595,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {

@@ -23,7 +23,7 @@ import openAll from "../actions/RTCDebugActionCreators.tsx";
 import noop from "RTCControlSocket.tsx";
 import noopDefault from "RTCControlSocket.tsx";
 import getUnitIdDefault2 from "../modules/calls/VideoStabilizationExperiment.tsx";
-import _modDef13098 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
+import _modDef13154 from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
 import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../modules/media_engine/DeviceFrecencyStore.tsx";
 import closure_6 from "../modules/media_engine/MediaEngineStatsStore.tsx";
@@ -42,8 +42,6 @@ import { PremiumTypes } from "../modules/premium/PremiumConstants.tsx";
 import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_23 } from "../../discord_common/js/shared/utils/BrowserConstants.tsx";
 import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
 import { Integer } from "../../_runtime/00014_Integer.js";
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
-import { apexExperiment } from "../modules/media_engine/ProcessBoostExperiment.tsx";
 import { set } from "../utils/PlatformUtils.tsx";
 
 require = arg1;
@@ -641,9 +639,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(12450).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(12502).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(12450).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(12502).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -1087,7 +1085,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set2.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13083).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13139).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1106,11 +1104,11 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   tmp8Result = tmp8(500);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(12446).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(12446);
+    isAndroidResult = tmp8(12498).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(12498);
   }
   if (isAndroidResult) {
-    items.push(tmp8(12446).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(12498).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1683,14 +1681,14 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   ({ ssrc, streamParameters } = _readyData);
   this.setState(constants3.RTC_CONNECTING);
   this.port = _sfuEndpoint.port;
-  const ProcessBoostExperiment = _apexExperiment.ProcessBoostExperiment;
+  const ProcessBoostExperiment = require("../modules/media_engine/ProcessBoostExperiment.tsx").ProcessBoostExperiment;
   const config = ProcessBoostExperiment.getConfig({ location: "media_engine_connect" });
   let obj = store2;
   ({ processPriority, threadPriorityConfiguration } = config);
   const mediaEngine = store2.getMediaEngine();
   persistentCodesEnabled = persistentCodesEnabled.getPersistentCodesEnabled();
   staticAuthSessionId = staticAuthSessionId.getStaticAuthSessionId();
-  let tmp2Result = tmp2(4548);
+  let tmp2Result = tmp2(4553);
   obj = { ssrc, address: _sfuEndpoint.address, port: _sfuEndpoint.port, modes: _sfuEndpoint.modes, experiments: self._selectedExperiments, streamParameters, videoSupported: obj.supports(constants5.VIDEO), qosEnabled: obj.getQoS(), signingKeyId: null, processPriority: null, threadPriorityConfiguration: null };
   ({ context, userId } = self);
   let tmp9;
@@ -1703,10 +1701,10 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   let merged = Object.assign(self.getExtraConnectionOptions());
   const connectResult = mediaEngine.connect(context, userId, obj);
   dependencyMap = connectResult;
-  tmp2Result = tmp2(4548);
+  tmp2Result = tmp2(4553);
   self._mediaEngineConnectDuration = tmp2Result.now() - tmp2Result.now();
   const nowResult = tmp2Result.now();
-  let isWebResult = _set.isWeb();
+  let isWebResult = require("../utils/PlatformUtils.tsx").isWeb();
   if (isWebResult) {
     isWebResult = !closure_23;
   }
@@ -1763,19 +1761,19 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const result1 = connectResult.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
   }
   const result2 = connectResult.setVideoEncoderExperiments(obj.getVideoEncoderExperiments(self.context, self.getVoiceParticipantType()));
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Speaking, (arg0, _lastSentSpeakingStatus, _lastSentSSRC) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Speaking, (arg0, _lastSentSpeakingStatus, _lastSentSSRC) => {
     if (self.userId === arg0) {
       obj.sendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC);
     }
     self.emit(callback(_undefined[35]).RTCConnectionEvent.Speaking, arg0, _lastSentSpeakingStatus);
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.NativeMuteChanged, (arg0) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.NativeMuteChanged, (arg0) => {
     if (self.context === closure_1_25.DEFAULT) {
       _sfuEndpoint(_undefined[49]).nativeMuteChanged(arg0);
       const obj = _sfuEndpoint(_undefined[49]);
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Video, (userId, streamId, audioSsrc, arg3, arg4, arr) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Video, (userId, streamId, audioSsrc, arg3, arg4, arr) => {
     closure_0 = userId;
     let num = audioSsrc;
     let num2 = arg3;
@@ -1810,7 +1808,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       }
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.FirstFrame, (arg0, arg1, arg2) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.FirstFrame, (arg0, arg1, arg2) => {
     if (null != self._localMediaSinkWantsManager) {
       const _localMediaSinkWantsManager = obj._localMediaSinkWantsManager;
       const result = _localMediaSinkWantsManager.setFirstFrameReceived(arg1);
@@ -1820,14 +1818,14 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       obj.emit(callback(_undefined[35]).RTCConnectionEvent.Video, obj.guildId, obj.channelId, arg0, arg2, obj.streamServerId);
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Silence, (arg0) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Silence, (arg0) => {
     let _inputDetected = self._inputDetected;
     if (!_inputDetected) {
       _inputDetected = !arg0;
     }
     self._inputDetected = _inputDetected;
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Connected, (protocol, sdp) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Connected, (protocol, sdp) => {
     let succeedResult = self;
     const logger = self.logger;
     logger.info("RTC connected to media server: " + _sfuEndpoint.address + ":" + _sfuEndpoint.port);
@@ -1912,14 +1910,14 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const logger2 = succeedResult.logger;
     logger2.warn("Ignoring connected event from stale RTC connection.");
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, (arr) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.VideoEncoderFallback, (arr) => {
     const found = arr.filter((type) => "video" === type.type);
     const mapped = found.map((name) => name.name);
     const logger = self.logger;
     logger.info("The originally selected video encoder is not working, fallback to the other available encoders: " + mapped.join(","));
     socket.updateSession({ codecs: arr });
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.VideoDecoderFallback, (arr) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.VideoDecoderFallback, (arr) => {
     const channel = closure_1_10.getChannel(self.channelId);
     let type;
     if (channel != null) {
@@ -1927,22 +1925,22 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === closure_1_18.GUILD_STAGE_VOICE) {
       if (!tmp._videoDecoderFallbackSuppressed) {
-        const logger = tmp.logger;
-        logger.info("Suppressing video decoder fallback: stage channel");
+        const logger2 = tmp.logger;
+        logger2.info("Suppressing video decoder fallback: stage channel");
         tmp._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = arr.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger2 = tmp.logger;
+      const logger = tmp.logger;
       const _HermesInternal = HermesInternal;
-      logger2.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
+      logger.info("The originally selected video decoder is not working, fallback to the other available decoders: " + mapped.join(","));
       const obj = { codecs: null };
       obj[0] = arr;
       socket.updateSession(obj);
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, (codecStandard) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.VideoCodecError, (codecStandard) => {
     let obj = { videoCodec: codecStandard.codecStandard, errorMessage: codecStandard.message, mediaContext: self.context, mediaSessionId: _mediaSessionId, streamKey: self.getMediaStreamKey() };
     _mediaSessionId = self._mediaSessionId;
     if ("encode" === codecStandard.mode) {
@@ -1958,7 +1956,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     callback(_undefined[54]).reportAVError(obj);
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Error, (error) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Error, (error) => {
     let obj = self;
     if (socket === self._socket) {
       let preferredRegion = null;
@@ -1979,7 +1977,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       obj4 = closure_1_15;
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange, (arg0) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.ConnectionStateChange, (arg0) => {
     const logger = self.logger;
     logger.info("RTC media connection state change: " + self.state + " => " + arg0);
     if (socket === self._socket) {
@@ -2029,29 +2027,29 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
       }
     }
   });
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.SecureFramesUpdate, (_secureFramesState) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.SecureFramesUpdate, (_secureFramesState) => {
     self._secureFramesState = _secureFramesState;
     self.emit(callback(_undefined[35]).RTCConnectionEvent.SecureFramesUpdate);
   });
   const _handlePing = self._handlePing;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Ping, _handlePing.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Ping, _handlePing.bind(self));
   const _handlePingTimeout = self._handlePingTimeout;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.PingTimeout, _handlePingTimeout.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.PingTimeout, _handlePingTimeout.bind(self));
   const _handleOutboundLossRate = self._handleOutboundLossRate;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, _handleOutboundLossRate.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.OutboundLossRate, _handleOutboundLossRate.bind(self));
   const _handleLocalVideoDisabled = self._handleLocalVideoDisabled;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, _handleLocalVideoDisabled.bind(self));
-  const tmp2Result1 = _set;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.Stats, createDefault.create());
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.LocalVideoDisabled, _handleLocalVideoDisabled.bind(self));
+  const tmp2Result1 = set;
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.Stats, createDefault.create());
   const _handleRemoteStreamsReady = self._handleRemoteStreamsReady;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.RemoteStreamsReady, _handleRemoteStreamsReady.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.RemoteStreamsReady, _handleRemoteStreamsReady.bind(self));
   const handleUsersMerged = self.handleUsersMerged;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.UsersMerged, handleUsersMerged.bind(self));
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError, (_noiseCancellationError) => {
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.UsersMerged, handleUsersMerged.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.NoiseCancellationError, (_noiseCancellationError) => {
     self._noiseCancellationError = _noiseCancellationError;
   });
   const _handleMLSFailure = self._handleMLSFailure;
-  connectResult.on(_BaseConnectionEvent.BaseConnectionEvent.MLSFailure, _handleMLSFailure.bind(self));
+  connectResult.on(require("../../discord_common/js/packages/media-engine/index.tsx").BaseConnectionEvent.MLSFailure, _handleMLSFailure.bind(self));
   const result3 = connectResult.setRemoteVideoSinkWants(self._remoteVideoSinkWants);
   self._connection = connectResult;
   self._hasCodecs = false;
@@ -2160,22 +2158,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13095).VideoQuality(self._connection);
+      const videoQuality = new self(13151).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13096).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13152).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13096).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13152).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13095).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13151).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2197,7 +2195,7 @@ prototype["_handleVideoStreamId"] = function _handleVideoStreamId(arg0) {
   let self = this;
   self = this;
   ({ userId, streamId, videoSsrc, videoStreamParameters } = arg0);
-  this.emit(self(4568).RTCConnectionEvent.Video, this.guildId, this.channelId, userId, streamId, this.streamServerId);
+  this.emit(self(4573).RTCConnectionEvent.Video, this.guildId, this.channelId, userId, streamId, this.streamServerId);
   if (tmp2) {
     const logger = self.logger;
     logger.error("_handleVideoStreamId: Unable to create videoQuality.");
@@ -2415,7 +2413,7 @@ prototype["_handleClientConnect"] = function _handleClientConnect(arr) {
       const user = _connection.createUser(arg0, 0);
     }
   });
-  this.emit(self(4568).RTCConnectionEvent.ClientConnect, arr);
+  this.emit(self(4573).RTCConnectionEvent.ClientConnect, arr);
   const _videoQuality = this._videoQuality;
   if (_videoQuality != null) {
     const result = _videoQuality.updateCallUserIdsCount(self._userIds.size);
@@ -2566,6 +2564,7 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
           tmp17 = _connection.context === constants6.DEFAULT;
         }
         obj.is_camera_enabled = tmp17;
+        obj.video_supported = store2.supports(constants5.VIDEO);
         const stateHistory = self.stateHistory;
         const merged1 = Object.assign(stateHistory.getVoiceConnectionSuccessStats());
         obj3.track(constants.VOICE_CONNECTION_SUCCESS, obj);
@@ -2696,7 +2695,7 @@ prototype["_handleKeyframeInterval"] = function _handleKeyframeInterval(keyframe
 };
 prototype["_handleBandwidthEstimationExperiment"] = function _handleBandwidthEstimationExperiment(_bandwidthEstimationExperiment) {
   this._bandwidthEstimationExperiment = _bandwidthEstimationExperiment;
-  const mediaEngineExperiments = _modDef13098.getMediaEngineExperiments(_bandwidthEstimationExperiment);
+  const mediaEngineExperiments = _modDef13154.getMediaEngineExperiments(_bandwidthEstimationExperiment);
   let tmp = null !== mediaEngineExperiments;
   if (tmp) {
     tmp = 0 !== mediaEngineExperiments.length;
@@ -3102,7 +3101,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   closure_2 = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4548).now();
+  dependencyMap = _connection(4553).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, v) => {
@@ -3142,7 +3141,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   closure_2 = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4548).now();
+  dependencyMap = _connection(4553).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, arg1, arg2) => {

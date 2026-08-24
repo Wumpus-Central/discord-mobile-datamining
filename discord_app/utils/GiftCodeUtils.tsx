@@ -34,7 +34,7 @@ function _resolveGiftCode() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl8.string(v5(1236).t.roztIr);
   } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = v5(1236).intl;
-    obj = v5(4039);
+    obj = v5(4042);
     const intl7 = v5(1236).intl;
     const string = intl7.string;
     const t = v5(1236).t;
@@ -198,26 +198,26 @@ const items2 = ["discord.com/billing/promotions", "promos.discord.gg"];
 const items3 = [...items2.map((arg0) => importDefaultResult.escape(arg0))];
 const regExp1 = new RegExp("(?: |^|https?://)(?:" + items3.join("|") + ")(/|(/)?\\?code=)([a-z0-9-]+)", "gi");
 c0 = 4;
-let mapped = require("module_4").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+let mapped = require("../../discord_common/js/packages/logger/Logger.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
 const items4 = [mapped.join("-?"), , , ];
 c0 = 4;
-const fillResult = require("module_4").fill(undefined);
-const mapped1 = require("module_6").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+const fillResult = require("../../discord_common/js/packages/logger/Logger.tsx").fill(undefined);
+const mapped1 = require("../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
 items4[1] = mapped1.join("-?");
 c0 = 5;
-const fillResult1 = require("module_6").fill(undefined);
-const mapped2 = require("module_3").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
+const fillResult1 = require("../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx").fill(undefined);
+const mapped2 = require("../modules/debug/Logger.tsx").fill(undefined).map(() => "[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{" + c0 + "}");
 items4[2] = mapped2.join("-?");
 items4[3] = "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}";
 const regExp2 = new RegExp("^(WUMP-?)?(" + items4.join("|") + ")$");
 let obj = { DEFAULT: 0, [0]: "DEFAULT", CUSTOM_STYLE: 1, [1]: "CUSTOM_STYLE", CUSTOM_MESSAGE_EMOJI_SOUNDBOARD: 2, [2]: "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD" };
-const fillResult2 = require("module_3").fill(undefined);
+const fillResult2 = require("../modules/debug/Logger.tsx").fill(undefined);
 const result = require("set").fileFinishedImporting("utils/GiftCodeUtils.tsx");
 
 export const GiftExperience = obj;
 export const getGiftExperience = function getGiftExperience(arg0, arg1) {
-  if (!v5(4383).isMobile) {
-    if (!v5(4383).isTablet) {
+  if (!v5(4387).isMobile) {
+    if (!v5(4387).isTablet) {
       if (null == arg0) {
         if (!arg1) {
           let DEFAULT = obj.CUSTOM_STYLE;
@@ -230,8 +230,8 @@ export const getGiftExperience = function getGiftExperience(arg0, arg1) {
   DEFAULT = obj.DEFAULT;
 };
 export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExperience(arg0) {
-  if (!v5(4383).isMobile) {
-    if (!v5(4383).isTablet) {
+  if (!v5(4387).isMobile) {
+    if (!v5(4387).isTablet) {
       if (null != arg0) {
         let DEFAULT = obj.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD;
         let tmp5 = obj;
@@ -458,9 +458,9 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
 };
 export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   const v5 = getOrFetchSubscriptionPlan;
-  const match = v5(4486).match(getOrFetchSubscriptionPlan);
+  const match = v5(4490).match(getOrFetchSubscriptionPlan);
   obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = v5(4486);
+  const str = v5(4490);
   obj = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with(obj, () => {
     const intl = subscriptionPlan(closure_1_2[12]).intl;
@@ -605,11 +605,11 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (tmp.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(4486).match(subscriptionPlan);
+      const match = subscriptionPlan(4490).match(subscriptionPlan);
       obj = { interval: null, premiumSubscriptionType: null };
       obj[0] = constants6.MONTH;
       obj[1] = closure_13.TIER_2;
-      const str = subscriptionPlan(4486);
+      const str = subscriptionPlan(4490);
       obj1 = { interval: null, premiumSubscriptionType: null };
       obj1[0] = constants6.YEAR;
       obj1[1] = closure_13.TIER_2;

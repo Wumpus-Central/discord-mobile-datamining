@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return SystemNotificationsSubLabel.default;
+    return SystemNotificationsSubLabel /* SystemNotificationsSubLabel */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -30,14 +30,14 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
       obj = { channel };
       const result = obj.openCreateOrEditGuildEventModal(closure_0, obj);
     };
-    obj[2] = channel(8896);
+    obj[2] = channel(8933);
     ({ iconStyle: obj2[3], iconContainerStyle: obj2[4] } = tmp);
     obj[5] = isLive.isLive;
     const intl = tmp2(1236).intl;
     obj[6] = intl.string(tmp2(1236).t["60lJ0C"]);
     const intl2 = tmp2(1236).intl;
     obj[7] = intl2.string(tmp2(1236).t["EYn7/y"]);
-    tmp4 = jsx(tmp2(8083).FormCTA, { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null });
+    tmp4 = jsx(tmp2(8122).FormCTA, { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null });
   }
   return tmp4;
 };
@@ -47,7 +47,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
   ({ channel, isLive } = event);
   const tmp = callback();
   ({ name, scheduled_start_time } = event);
-  let obj = event(8839);
+  let obj = event(8876);
   let tmp4 = null;
   if (obj.useManageResourcePermissions(channel).canManageGuildEvent(event)) {
     obj = { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null };
@@ -55,7 +55,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     obj[1] = function onPress() {
       const result = event(closure_1_2[6]).openStartGuildEventModal(event, recurrenceId);
     };
-    obj[2] = recurrenceId(8896);
+    obj[2] = recurrenceId(8933);
     obj[3] = tmp.iconStyle;
     const items = [, ];
     ({ iconContainerStyle: arr[0], greenIcon: arr[1] } = tmp);
@@ -67,10 +67,10 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     obj[6] = intl.formatToPlainString(tmp2(1236).t["1vGXqM"], obj);
     const intl2 = tmp2(1236).intl;
     obj1 = { startTime: null };
-    obj1[0] = tmp2(4063).calendarFormat(recurrenceId(3975)(scheduled_start_time));
+    obj1[0] = tmp2(4066).calendarFormat(recurrenceId(3978)(scheduled_start_time));
     obj[7] = intl2.formatToPlainString(tmp2(1236).t.PTebCR, obj1);
-    tmp4 = jsx(tmp2(8083).FormCTA, { eventName: null });
-    const tmp2Result = tmp2(4063);
+    tmp4 = jsx(tmp2(8122).FormCTA, { eventName: null });
+    const tmp2Result = tmp2(4066);
   }
   return tmp4;
 };

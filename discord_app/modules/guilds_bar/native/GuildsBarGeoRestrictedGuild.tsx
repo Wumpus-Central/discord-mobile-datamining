@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import computeGuildsBarCutoutDefault from "utils/computeGuildsBarCutout.tsx";
 import GuildRowWrapperDefault from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
-import _modDef15610 from "GuildsBarGeoRestrictedBadge.tsx";
+import _modDef15676 from "GuildsBarGeoRestrictedBadge.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GUILD_ITEM_BADGE_SIZE } from "GuildsBarConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -20,7 +20,7 @@ let items = [computeGuildsBarCutoutDefault({ position: "bottom-right" })];
 const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp4 = callback();
-  let obj = restrictedGuild(15558);
+  let obj = restrictedGuild(15623);
   let animatableSourceWithFallback = null;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("GuildsBarGeoRestrictedGuild");
   const tmp5 = restrictedGuild;
@@ -52,21 +52,21 @@ const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(res
     }
   }), items);
   obj = { selected: false, unread: false, circle: !tmp3, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 1, expandedChildren: 2, children: 4 };
-  tmpResult = tmp(15558);
+  tmpResult = tmp(15623);
   obj = { style: tmp4.geoRestrictedBadge };
-  obj[9] = jsx(_modDef15610, { style: tmp4.geoRestrictedBadge });
+  obj[9] = jsx(_modDef15676, { style: tmp4.geoRestrictedBadge });
   obj[10] = jsx(GuildRowWrapperDefault, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj2 = { source: null, style: null, fadeDuration: 0 };
     obj2[0] = animatableSourceWithFallback;
     obj2[1] = tmp4.guildIcon;
-    let tmp9Result = tmp9(tmp(5449), obj2);
+    let tmp9Result = tmp9(tmp(5454), obj2);
   } else {
     const obj3 = { value: null, selected: false, animate: false, size: null };
     obj3[0] = restrictedGuild.name;
-    obj3[3] = tmp5(7188).GuildIconSizes.LARGE;
-    tmp9Result = tmp9(tmp(7188), obj3);
-    const tmpResult1 = tmp(7188);
+    obj3[3] = tmp5(7226).GuildIconSizes.LARGE;
+    tmp9Result = tmp9(tmp(7226), obj3);
+    const tmpResult1 = tmp(7226);
   }
   obj[11] = tmp9Result;
   return <tmpResult style={tmp4.geoRestrictedBadge} />;

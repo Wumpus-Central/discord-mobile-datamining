@@ -7,7 +7,7 @@ import closure_5 from "../../../stores/DeveloperOptionsStore.tsx";
 
 const require = arg1;
 function getUploadPayload(closure_0) {
-  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
+  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "ct" };
   return obj;
 }
 let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");

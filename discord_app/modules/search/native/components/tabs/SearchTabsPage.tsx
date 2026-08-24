@@ -4,13 +4,13 @@ import mapDefault from "../../../../reanimated/native/useStateFromSharedValue.ts
 import GuildNSFWDefault from "../../../../../components_native/warnings/GuildNSFW.tsx";
 import ChannelSpoilerDefault from "../../../../spoiler_channels/native/ChannelSpoiler.tsx";
 import ClearAllHistoryDefault from "pages/RecentScreen.tsx";
-import _modDef15906 from "pages/PeopleScreen.tsx";
+import _modDef16003 from "pages/PeopleScreen.tsx";
 import SearchableMembersScreenDefault from "pages/MembersScreen.tsx";
-import _modDef15912 from "pages/ChannelsScreen.tsx";
-import _modDef15913 from "pages/messages/MediaScreen.tsx";
-import _modDef15921 from "pages/messages/FilesScreen.tsx";
-import _modDef15923 from "pages/messages/LinksScreen.tsx";
-import _modDef15930 from "pages/messages/MessagesScreen.tsx";
+import _modDef16009 from "pages/ChannelsScreen.tsx";
+import _modDef16010 from "pages/messages/MediaScreen.tsx";
+import _modDef16018 from "pages/messages/FilesScreen.tsx";
+import _modDef16020 from "pages/messages/LinksScreen.tsx";
+import _modDef16027 from "pages/messages/MessagesScreen.tsx";
 import InitialPinsScreenDefault from "pages/messages/PinsScreen.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
@@ -40,9 +40,9 @@ function SearchTabsPage(selectMediaTab) {
     }
     return closure_1_6.getChannel(channelId);
   });
-  obj1 = searchContext(5267);
+  obj1 = searchContext(5272);
   const isChannelSpoilerGated = obj1.useIsChannelSpoilerGated(stateFromStores);
-  searchContext(5252);
+  searchContext(5257);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -66,7 +66,7 @@ function SearchTabsPage(selectMediaTab) {
     } else if (tmp11.PEOPLE === tab) {
       const obj2 = { searchContext: null };
       obj2[0] = searchContext;
-      return jsx(_modDef15906, { searchContext: null });
+      return jsx(_modDef16003, { searchContext: null });
     } else if (tmp11.MEMBERS === tab) {
       const obj3 = { searchContext: null };
       obj3[0] = searchContext;
@@ -74,38 +74,38 @@ function SearchTabsPage(selectMediaTab) {
     } else if (tmp11.GUILD_CHANNELS === tab) {
       const obj4 = { searchContext: null };
       obj4[0] = searchContext;
-      return jsx(_modDef15912, { searchContext: null });
+      return jsx(_modDef16009, { searchContext: null });
     } else if (tmp11.MEDIA === tab) {
       const obj5 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj5[0] = tab;
       obj5[1] = searchContext;
       obj5[2] = isFocused;
       obj5[3] = width;
-      return jsx(_modDef15913, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16010, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.FILES === tab) {
       const obj6 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj6[0] = tab;
       obj6[1] = searchContext;
       obj6[2] = isFocused;
       obj6[3] = width;
-      return jsx(_modDef15921, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16018, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.LINKS === tab) {
       const obj7 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj7[0] = tab;
       obj7[1] = searchContext;
       obj7[2] = isFocused;
       obj7[3] = width;
-      return jsx(_modDef15923, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16020, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.THREADS === tab) {
       const obj8 = { searchContext: null };
       obj8[0] = searchContext;
-      return jsx(tmp4(15924).SearchTabsThreadScreen, { searchContext: null });
+      return jsx(tmp4(16021).SearchTabsThreadScreen, { searchContext: null });
     } else if (tmp11.MESSAGES === tab) {
       const obj9 = { tab: null, searchContext: null, isFocused: null };
       obj9[0] = tab;
       obj9[1] = searchContext;
       obj9[2] = isFocused;
-      return jsx(_modDef15930, { tab: null, searchContext: null, isFocused: null });
+      return jsx(_modDef16027, { tab: null, searchContext: null, isFocused: null });
     } else if (tmp11.PINS === tab) {
       const obj10 = { tab: null, searchContext: null, isFocused: null };
       obj10[0] = tab;

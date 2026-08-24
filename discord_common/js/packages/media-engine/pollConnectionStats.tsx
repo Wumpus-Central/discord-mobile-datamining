@@ -1,7 +1,5 @@
 // discord_common/js/packages/media-engine/pollConnectionStats.tsx
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import { BaseConnectionEvent } from "index.tsx";
-import { STATS_INTERVAL } from "Stats.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");
@@ -32,7 +30,7 @@ export default function pollConnectionStats(on) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -68,7 +66,7 @@ export default function pollConnectionStats(on) {
               }
               let num5 = 3;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp5) {
             let tmp14 = closure_4;
@@ -144,9 +142,9 @@ export default function pollConnectionStats(on) {
     return applyArgumentsResult;
   }
   dependencyMap = false;
-  on.on(_BaseConnectionEvent.MediaEngineEvent.Destroy, () => {
+  on.on(require("index.tsx").MediaEngineEvent.Destroy, () => {
     c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _STATS_INTERVAL.STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, require("Stats.tsx").STATS_INTERVAL);
 };

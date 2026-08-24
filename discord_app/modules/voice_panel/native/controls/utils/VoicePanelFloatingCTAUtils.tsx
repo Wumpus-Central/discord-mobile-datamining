@@ -12,10 +12,6 @@ import { isGuildScheduledEventActive as closure_8 } from "../../../../guild_sche
 import closure_9 from "../../../../../stores/ChannelStore.tsx";
 import { GuildScheduledEventEntityTypes as closure_10 } from "../../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { XSmallIcon } from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { RowButtonWrapper } from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 require = arg1;
 function useFloatingCTAProps(stateFromStores) {
@@ -162,12 +158,12 @@ function useFloatingCTAProps(stateFromStores) {
 function getBadConnectionCTAProps(arg0) {
   const _require = arg0;
   obj = { label: null, subLabel: null, icon: null, onPress: null, trailing: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.uv1tVh);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t["gQ14+g"]);
-  obj = { IconComponent: _CircleErrorIcon.CircleErrorIcon, variant: "translucent" };
-  obj[2] = jsx(_RowButtonWrapper.RowButton.Icon, { IconComponent: _CircleErrorIcon.CircleErrorIcon, variant: "translucent" });
+  const intl = require("../../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx").t.uv1tVh);
+  const intl2 = require("../../../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../../../../intl/index.native.tsx").t["gQ14+g"]);
+  obj = { IconComponent: require("../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, variant: "translucent" };
+  obj[2] = jsx(require("../../../../../design/components/TableRow/native/RowButton.native.tsx").RowButton.Icon, { IconComponent: require("../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, variant: "translucent" });
   obj[3] = function onPress() {
     let tmp;
     if (callback != null) {
@@ -176,15 +172,15 @@ function getBadConnectionCTAProps(arg0) {
     return tmp;
   };
   obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, children: null };
-  const intl3 = _getSystemLocale.intl;
-  obj[1] = intl3.string(_getSystemLocale.t.cpT0Cq);
+  const intl3 = require("../../../../../intl/index.native.tsx").intl;
+  obj[1] = intl3.string(require("../../../../../intl/index.native.tsx").t.cpT0Cq);
   obj[3] = function onPress() {
     const result = callback(closure_1_2[30]).UNSAFE_markDismissibleContentAsDismissed(callback(closure_1_2[32]).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
     if (callback != null) {
       callback();
     }
   };
-  obj[4] = jsx(_XSmallIcon.XSmallIcon, { color: "interactive-icon-default" });
+  obj[4] = jsx(require("../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { color: "interactive-icon-default" });
   obj[4] = <Pressable accessibilityRole="button" accessibilityLabel={null} hitSlop={4} onPress={null}>{null}</Pressable>;
   return obj;
 }
@@ -205,7 +201,7 @@ function getDismissableCTAProps(arg0) {
     return getBadConnectionCTAProps();
   } else if (tmp(1377).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     obj = { icon: null, onPress: null, label: null, trailing: null };
-    obj[0] = jsx(tmp(7993).SoundboardIcon, { color: "interactive-icon-default" });
+    obj[0] = jsx(tmp(8032).SoundboardIcon, { color: "interactive-icon-default" });
     obj[1] = function onPress() {
       if (null != closure_0) {
         obj = closure_1_0(closure_1_2[33]);
@@ -217,7 +213,7 @@ function getDismissableCTAProps(arg0) {
     };
     obj = { quest: null };
     obj[0] = tmp(1236).t.XLlWUe;
-    obj[2] = tmp(7571).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
+    obj[2] = tmp(7609).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
     obj[3] = <CloseSoundboardMobileFloatingCtaIcon />;
     return obj;
   } else {

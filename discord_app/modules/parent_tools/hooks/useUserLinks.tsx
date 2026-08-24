@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/parent_tools/hooks/us
 export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, arg0];
   return React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -38,7 +38,7 @@ export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
 export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
   let _require = PENDING;
   const items = [closure_5];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, PENDING];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -57,9 +57,9 @@ export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
     const mapped = sorted.map((user_id) => user_id.user_id);
     return mapped.filter((arg0) => null != arg0);
   }, items1);
-  const obj = _defaultAreStatesEqual;
+  const obj = defaultAreStatesEqual;
   const items2 = [closure_4];
-  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useActiveLinkUserIds = function useActiveLinkUserIds() {
@@ -108,7 +108,7 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
   let _require = ACTIVE;
   let stateFromStores;
   const items = [closure_5];
-  stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -127,9 +127,9 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
     const mapped = sorted.map((user_id) => user_id.user_id);
     return mapped.filter((arg0) => null != arg0);
   }, items1);
-  const obj = _defaultAreStatesEqual;
+  const obj = defaultAreStatesEqual;
   const items2 = [closure_4];
-  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useHasActiveLinks = function useHasActiveLinks() {
@@ -192,7 +192,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(7622)();
+  const tmp = stateFromStores(7660)();
   const items = [closure_5];
   stateFromStores = ACTIVE(647).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -278,11 +278,11 @@ export const useAcceptedRequestsCount = function useAcceptedRequestsCount() {
 };
 export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(activityWindowTimestampFormatter) {
   const _require = activityWindowTimestampFormatter;
-  closure_1 = _useSelectedTeen.useSelectedTeenId();
-  const obj = _useSelectedTeen;
+  closure_1 = require("useSelectedTeen.tsx").useSelectedTeenId();
+  const obj = useSelectedTeen;
   const tmp = _require;
   const items = [closure_5];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let rangeStartTimestamp = null;
     if (null != closure_1) {
       rangeStartTimestamp = closure_1_5.getRangeStartTimestamp();
@@ -293,20 +293,20 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(5363).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(5363);
+    result = tmp(5368).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(5368);
   }
   return result;
 };
 export const useLinkTimestampText = function useLinkTimestampText(id, status) {
   const _require = id;
   const items = [closure_5];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_5.getLinkTimestamp(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_5.getLinkTimestamp(closure_0));
   if (null == stateFromStores) {
     return null;
   } else {
     const _Date = Date;
-    _getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = _getEmptyActivityFormatter;
+    require("../FamilyCenterUtils.tsx").formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = getEmptyActivityFormatter;
   }
 };

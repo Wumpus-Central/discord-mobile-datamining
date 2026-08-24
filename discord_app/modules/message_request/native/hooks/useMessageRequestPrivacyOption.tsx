@@ -8,10 +8,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   let id;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4066).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4069).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4066).RestrictedGuildIds;
+  const RestrictedGuildIds = id(4069).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -37,7 +37,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[2] = tmp5;
   obj[3] = callback;
   obj[4] = hasItem1;
-  return jsx(id(7177).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7215).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const result = require("set").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 

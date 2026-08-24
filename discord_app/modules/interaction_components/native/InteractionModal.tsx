@@ -6,7 +6,7 @@ import Button from "../../../design/void/native.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -20,7 +20,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function onClose() {
-  return _modDef5260.popWithKey(interaction_modal);
+  return _modDef5265.popWithKey(interaction_modal);
 }
 class InteractionModal {
   constructor(arg0) {
@@ -130,6 +130,6 @@ const result = require("set").fileFinishedImporting("modules/interaction_compone
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {
-  let arr = _modDef5260;
+  let arr = _modDef5265;
   arr = arr.push(InteractionModal, closure_0, interaction_modal);
 };

@@ -2,7 +2,6 @@
 import dispatcherDefault from "../Dispatcher.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchUserEntitlements() {
@@ -24,7 +23,7 @@ function _fetchUserEntitlements() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -189,7 +188,7 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
     obj = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: closure_0 };
     obj.dispatch(obj);
   });
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(closure_18), oldFormErrors: true, query: { exclude_consumed: flag }, rejectWithError: true };
   const value = HTTP.get(obj);
   return value.then((body) => {

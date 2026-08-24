@@ -17,11 +17,11 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const items1 = [closure_4];
-  const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let str;
     if (sessionId != null) {
       str = sessionId.sessionId;
@@ -46,7 +46,7 @@ export default function useConsoleConnectingInfo(arg0) {
     str = "";
   }
   let channelId1;
-  const obj2 = _defaultAreStatesEqual;
+  const obj2 = defaultAreStatesEqual;
   const tmp5 = _require;
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;
@@ -59,7 +59,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj[1] = channelId2 === arg0 || channelId === arg0;
   obj[2] = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj[3] = tmp5(16389).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj[3] = tmp5(16486).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj[4] = getConsoleColorDefault(str);
   obj[5] = tmp9;
   return obj;

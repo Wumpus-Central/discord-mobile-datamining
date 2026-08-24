@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
   dependencyMap = arg1;
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let value = null;

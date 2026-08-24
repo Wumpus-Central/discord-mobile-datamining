@@ -3,7 +3,7 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import createToggle from "../../settings/native/renderer/SettingBuilders.tsx";
-import _modDef13991 from "../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14059 from "../../settings/native/renderer/SettingLayout.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
@@ -41,6 +41,6 @@ export default function FamilyCenterParentalControlsContentAndSocial() {
   obj[0] = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(_modDef13991, { node: list });
+  obj4[0] = jsx(_modDef14059, { node: list });
   return <View>{null}</View>;
 };

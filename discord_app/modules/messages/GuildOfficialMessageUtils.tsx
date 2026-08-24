@@ -14,7 +14,7 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 require = arg1;
 function useCanManageGuildOfficialMessages(arg0, arg1, location) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -101,7 +101,7 @@ export const isGuildOfficialMessagesEnabled = function isGuildOfficialMessagesEn
 };
 export const useIsGuildOfficialMessagesEnabled = function useIsGuildOfficialMessagesEnabled(id, useGuildActionRows) {
   const _require = id;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {

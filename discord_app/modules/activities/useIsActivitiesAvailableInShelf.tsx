@@ -7,9 +7,9 @@ const result = require("set").fileFinishedImporting("modules/activities/useIsAct
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _useIsActivitiesEnabledForCurrentPlatform.useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform.tsx").useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != arg0;
-  let obj = _useIsActivitiesEnabledForCurrentPlatform;
+  let obj = useIsActivitiesEnabledForCurrentPlatform;
   if (tmp3) {
     tmp3 = "" !== arg0;
   }

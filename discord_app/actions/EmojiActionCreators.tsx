@@ -9,8 +9,6 @@ import closure_5 from "../modules/gateway/GatewayConnectionStore.tsx";
 import closure_6 from "../stores/GuildAvailabilityStore.tsx";
 import { Endpoints } from "../Constants.tsx";
 import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 function _updateEmoji() {
@@ -32,7 +30,7 @@ function _updateEmoji() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -85,7 +83,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4274)(c4);
+            const tmp18 = new callback2(4278)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -131,7 +129,7 @@ let result = require("set").fileFinishedImporting("actions/EmojiActionCreators.t
 
 export const setDiversityColor = function setDiversityColor(arg0) {
   const _require = arg0;
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (diversitySurrogate) => {
     const StringValue = callback(closure_1_2[7]).StringValue;
     diversitySurrogate.diversitySurrogate = StringValue.create();
@@ -143,7 +141,7 @@ export const fetchEmoji = function fetchEmoji(guildId) {
   let obj = dispatcherDefault;
   obj = { type: "EMOJI_FETCH", guildId };
   obj.dispatch(obj);
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.GUILD_EMOJIS(guildId), oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
   value.then((body) => {

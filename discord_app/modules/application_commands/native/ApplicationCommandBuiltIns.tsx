@@ -8,15 +8,15 @@ const require = arg1;
 let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["26C4oi"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
   set: undefined
 });
 Object.defineProperty(obj, "displayDescription", {
   get: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["26C4oi"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
   set: undefined
 });
@@ -27,11 +27,11 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4984).computeChannelName(channel, closure_4, closure_3);
+    const channelName = channel(4989).computeChannelName(channel, closure_4, closure_3);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;
-    const obj5 = channel(4984);
+    const obj5 = channel(4989);
     const intl6 = channel(1236).intl;
     obj = { name: null };
     obj[0] = channelName;

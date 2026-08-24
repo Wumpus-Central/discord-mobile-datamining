@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import tDefault from "../../../_runtime/04092_t.js";
+import tDefault from "../../../_runtime/04095_t.js";
 import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
 import CodedLinkType from "../coded_links/CodedLink.tsx";
 import NOOP from "../../utils/AutocompleteUtils.tsx";
@@ -12,7 +12,6 @@ import closure_4 from "../../records/LinkRecord.tsx";
 import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
 import closure_6 from "../../stores/RelationshipStore.tsx";
 import closure_7 from "../../stores/UserStore.tsx";
-import { queryGamesAutocomplete } from "../games/autocomplete/queryGamesAutocomplete.tsx";
 
 require = arg1;
 function getAutocompleterBoosterMap(USER, options) {
@@ -166,11 +165,11 @@ prototype["setLimit"] = function setLimit(_limit) {
 prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCategoryLimit(_refetchForSingleCategoryLimit) {
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
-prototype["setResultTypes"] = function setResultTypes(items1) {
+prototype["setResultTypes"] = function setResultTypes(items) {
   let set = null;
-  if (null != items1) {
+  if (null != items) {
     const _Set = Set;
-    set = new Set(items1);
+    set = new Set(items);
   }
   const self = this;
   this.resultTypes = set;
@@ -369,8 +368,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6714).getBoosterMap(tmp);
-      const obj2 = blacklist(6714);
+      let boosterMap = blacklist(6751).getBoosterMap(tmp);
+      const obj2 = blacklist(6751);
     } else {
       boosterMap = {};
     }
@@ -417,8 +416,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6714).getBoosterMap(tmp);
-      const obj2 = blacklist(6714);
+      let boosterMap = blacklist(6751).getBoosterMap(tmp);
+      const obj2 = blacklist(6751);
     } else {
       boosterMap = {};
     }
@@ -525,8 +524,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6714).getBoosterMap(tmp);
-      const obj2 = blacklist(6714);
+      let boosterMap = blacklist(6751).getBoosterMap(tmp);
+      const obj2 = blacklist(6751);
     } else {
       boosterMap = {};
     }
@@ -558,7 +557,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _queryGamesAutocomplete.queryGamesAutocomplete(query);
+    let result = require("../games/autocomplete/queryGamesAutocomplete.tsx").queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }
@@ -600,7 +599,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(6714);
+      let tmp3Result = tmp3(6751);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -627,7 +626,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(6714);
+              tmp3Result = tmp3(6751);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

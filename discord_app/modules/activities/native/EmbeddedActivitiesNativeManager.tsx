@@ -5,12 +5,12 @@ import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
 import dispatcherDefault2 from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4662 from "../../../actions/native/AlertActionCreators.tsx";
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "../EmbeddedActivitiesActionCreators.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import getShelfItemTrackingPropertiesDefault from "../EmbeddedActivitiesManager.tsx";
 import NativeModulesDefault from "../../device/ThermalUtils.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08764_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08801_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../stores/RTCConnectionStore.tsx";
@@ -18,7 +18,7 @@ import closure_6 from "../EmbeddedActivitiesStore.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
-import WebView from "../../../../_runtime/06304_WebView.js";
+import WebView from "../../../../_runtime/06335_WebView.js";
 import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
@@ -257,7 +257,7 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
 const prototype = EmbeddedActivitiesNativeManager.prototype;
 prototype["showErrorModal"] = function showErrorModal(reason, id) {
   ({ code, message } = reason);
-  let obj = _modDef4656;
+  let obj = _modDef4662;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
@@ -265,7 +265,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = _modDef4656;
+  let obj = _modDef4662;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PtobXW);

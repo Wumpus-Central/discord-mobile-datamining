@@ -2,7 +2,7 @@
 import getSystemLocale from "../../intl/index.native.tsx";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import tDefault from "../../../_runtime/04092_t.js";
+import tDefault from "../../../_runtime/04095_t.js";
 import ME2 from "../links/LinkUtils.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import closure_3 from "../channel/GatedChannelStore.tsx";
@@ -12,16 +12,15 @@ import closure_6 from "../../stores/PermissionStore.tsx";
 import closure_7 from "../../stores/RelationshipStore.tsx";
 import closure_8 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
 import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 
 require = arg1;
 function getChannel(id, arr) {
   const _require = id;
   const channel = store.getChannel(id);
-  const isSubscriptionGated = _getChannelRoleSubscriptionStatus.getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
-  const obj2 = _getChannelRoleSubscriptionStatus;
-  let str = _allowChannelAccess.getMentionIconType(channel);
+  const isSubscriptionGated = require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx").getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
+  const obj2 = getChannelRoleSubscriptionStatus;
+  let str = require("../../utils/ChannelUtils.tsx").getMentionIconType(channel);
   if (str == null) {
     str = "text";
   }
@@ -47,18 +46,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4984);
+    let tmpResult = tmp(4989);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(6818);
+    tmpResult = tmp(6855);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4488).canViewChannel(channel);
+    obj[7] = tmp(4492).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4488);
+    const tmpResult1 = tmp(4492);
   }
   return tmp4;
 }
@@ -170,9 +169,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4984);
+                let tmp35Result = tmp35(4989);
                 const channelName = tmp35Result.computeChannelName(channel, closure_8, closure_7);
-                tmp35Result = tmp35(4979);
+                tmp35Result = tmp35(4984);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";

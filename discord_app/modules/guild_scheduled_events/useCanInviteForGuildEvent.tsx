@@ -9,7 +9,6 @@ import closure_7 from "../../stores/PermissionStore.tsx";
 import { isGuildEventEnded } from "GuildScheduledEventStore.tsx";
 import { GuildScheduledEventEntityTypes as closure_9 } from "GuildScheduledEventsConstants.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function canEveryoneRoleViewEvent(guildEvent, items1) {
@@ -74,7 +73,7 @@ export default function useCanInviteForGuildEvent(arg0) {
   const _require = arg0;
   let items = [closure_5, closure_4, closure_6, closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_4, closure_1_6, closure_1_3];
     return closure_1_12(closure_0, items);
   }, items1);

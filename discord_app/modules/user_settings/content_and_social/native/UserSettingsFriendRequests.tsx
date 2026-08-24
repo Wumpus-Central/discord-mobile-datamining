@@ -10,7 +10,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
 
 export default function UserSettingsFriendRequests() {
-  let FriendSourceFlagsSetting = setting(4066).FriendSourceFlagsSetting;
+  let FriendSourceFlagsSetting = setting(4069).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = React.useMemo(() => setting(closure_1_2[5]).computeFlags(setting), items);
@@ -31,7 +31,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [callback(setting(7178).TableSwitchRow, obj), , ];
+  const items1 = [callback(setting(7216).TableSwitchRow, obj), , ];
   obj1 = { label: null, value: null, onValueChange: null };
   const intl3 = setting(1236).intl;
   obj1[0] = intl3.string(setting(1236).t.IqlCSq);
@@ -46,7 +46,7 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = callback(setting(7178).TableSwitchRow, obj1);
+  items1[1] = callback(setting(7216).TableSwitchRow, obj1);
   const obj2 = { label: null, value: null, onValueChange: null };
   const intl4 = setting(1236).intl;
   obj2[0] = intl4.string(setting(1236).t.mozb8f);
@@ -61,8 +61,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = callback(setting(7178).TableSwitchRow, obj2);
+  items1[2] = callback(setting(7216).TableSwitchRow, obj2);
   obj[2] = items1;
-  obj[0] = callback2(setting(6286).TableRowGroup, obj);
+  obj[0] = callback2(setting(6317).TableRowGroup, obj);
   return callback(View, obj);
 };

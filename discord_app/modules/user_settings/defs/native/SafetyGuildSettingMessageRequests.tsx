@@ -13,21 +13,20 @@ import closure_3 from "../../../../stores/GuildStore.tsx";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "../../privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx";
 import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "../../../settings/native/renderer/SettingRendererConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 function showMessageRequestRestrictionModal(arg0) {
   const _require = arg0;
   let obj = setDefault;
   obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.yAfu1p);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t.Ry2z74);
-  const intl3 = _getSystemLocale.intl;
-  obj[2] = intl3.string(_getSystemLocale.t.p89ACt);
-  const intl4 = _getSystemLocale.intl;
-  obj[3] = intl4.string(_getSystemLocale.t.gm1Vej);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../../intl/index.native.tsx").t.yAfu1p);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../../../intl/index.native.tsx").t.Ry2z74);
+  const intl3 = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(require("../../../../intl/index.native.tsx").t.p89ACt);
+  const intl4 = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl4.string(require("../../../../intl/index.native.tsx").t.gm1Vej);
   obj[4] = componentDidMountDefault.Colors.RED;
   obj[5] = function onConfirm() {
     const MessageRequestRestrictedDefault = callback(closure_1_2[4]).MessageRequestRestrictedDefault;
@@ -73,9 +72,9 @@ createToggle = {
       }
       tmp7 = hasItem;
     }
-    const MessageRequestRestrictedDefault = tmp(4066).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = tmp(4069).MessageRequestRestrictedDefault;
     const obj3 = useParentalControlledExplicitContentSettings;
-    const MessageRequestRestrictedGuildIds = tmp(4066).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = tmp(4069).MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
     let tmp9 = !setting1.includes(selectedGuildId);
     let tmp10 = !tmp7;

@@ -4,10 +4,6 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
@@ -28,11 +24,11 @@ let result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2A
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = callback();
-  const tmp4 = sharedValue(9765)(arg0);
+  const tmp4 = sharedValue(9804)(arg0);
   const _require = tmp4;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   sharedValue = obj.useSharedValue(0);
-  obj1 = _ReanimatedRexport;
+  obj1 = ReanimatedRexport;
   const fn = function b() {
     let opacity = sharedValue.get();
     if (opacity == null) {
@@ -80,22 +76,22 @@ export default function OAuth2AuthorizeModal(arg0) {
   if (null != tmp4.backStep) {
     const obj3 = { color: null };
     obj3[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    let tmp11Result = tmp11(tmp5(10767).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = tmp11(tmp5(10806).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: null };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    tmp11Result = tmp11(tmp5(6368).XSmallIcon, obj4);
+    tmp11Result = tmp11(tmp5(6399).XSmallIcon, obj4);
   }
   obj2[3] = tmp11Result;
-  const items2 = [closure_5(_PressableBase.PressableOpacity, obj2), , ];
+  const items2 = [closure_5(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj2), , ];
   const obj5 = { style: tmp.title, children: null };
   const obj6 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
   const intl3 = tmp5(1236).intl;
-  obj6[2] = intl3.string(_getSystemLocale.t["y+/PE9"]);
-  obj5[1] = closure_5(_Text.Text, obj6);
+  obj6[2] = intl3.string(require("../../../intl/index.native.tsx").t["y+/PE9"]);
+  obj5[1] = closure_5(require("../../../design/components/Text/native/Text.tsx").Text, obj6);
   items2[1] = closure_5(View, obj5);
   const items3 = [tmp.titleContainerBorder, animatedStyle];
-  items2[2] = closure_5(sharedValue(4115).View, { style: items3 });
+  items2[2] = closure_5(sharedValue(4119).View, { style: items3 });
   obj[1] = items2;
   const items4 = [closure_6(View, obj), ];
   const obj7 = { bottom: true, style: tmp.contentContainer, children: null };
@@ -103,8 +99,8 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj8.onScroll = callback;
   obj8.centerContent = true;
-  obj7[2] = closure_5(sharedValue(10769), obj8);
-  items4[1] = closure_5(_SafeAreaPaddingView.SafeAreaPaddingView, obj7);
+  obj7[2] = closure_5(sharedValue(10808), obj8);
+  items4[1] = closure_5(require("../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);
 };

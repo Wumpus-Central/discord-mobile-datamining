@@ -31,7 +31,7 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = product.type === tmp(1949).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
-    let tmpResult = tmp(5313);
+    let tmpResult = tmp(5318);
     let currency;
     if (result3 != null) {
       currency = result3.currency;
@@ -39,7 +39,7 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = tmpResult.shouldHideGiftingForCurrency(currency);
   }
   if (!result) {
-    tmpResult = tmp(4052);
+    tmpResult = tmp(4055);
     result = !tmpResult.isCollectibleGiftingSupported();
   }
   return !result;

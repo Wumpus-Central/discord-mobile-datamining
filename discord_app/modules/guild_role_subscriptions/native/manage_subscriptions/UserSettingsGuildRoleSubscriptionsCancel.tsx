@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import tDefault from "../../../../../_runtime/03975_t.js";
+import tDefault from "../../../../../_runtime/03978_t.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
@@ -10,7 +10,7 @@ import useFetchListingsForGuild from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/14581_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14649_registerAsset.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import SectionTitleAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -73,8 +73,8 @@ function CancelSubscriptionButtonFooter(guild) {
   const tmp = callback4();
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  analyticsLocations = subscription(7139)(subscription(7159).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  let obj = subscription(7935);
+  analyticsLocations = subscription(7177)(subscription(7197).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
+  let obj = subscription(7974);
   cancelSubscription = obj.useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
@@ -97,7 +97,7 @@ function CancelSubscriptionButtonFooter(guild) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -120,9 +120,9 @@ function CancelSubscriptionButtonFooter(guild) {
             const obj2 = { guildName: null };
             obj2[0] = lib.name;
             obj1[0] = intl2.formatToPlainString(lib(1236).t.sBs7sh, obj2);
-            const obj15 = lib2(4656);
+            const obj15 = lib2(4662);
             const _HermesInternal = HermesInternal;
-            obj1[1] = "You can resubscribe any time before " + lib2(3975)(lib2.currentPeriodEnd).format(closure_1_12) + ".";
+            obj1[1] = "You can resubscribe any time before " + lib2(3978)(lib2.currentPeriodEnd).format(closure_1_12) + ".";
             const intl3 = lib(1236).intl;
             obj1[2] = intl3.string(lib(1236).t["3KZjFH"]);
             obj1[3] = lib(1297).ButtonColors.RED;
@@ -153,7 +153,7 @@ function CancelSubscriptionButtonFooter(guild) {
                 obj5[0] = v0();
                 return obj5;
               } else if (lib2.isPurchasedViaDesktop) {
-                let obj7 = closure_1_2(4466);
+                let obj7 = closure_1_2(4470);
                 c4 = 4;
                 v0 = 1;
                 let obj6 = { value: null, done: false };
@@ -170,11 +170,11 @@ function CancelSubscriptionButtonFooter(guild) {
               dependencyMap = 0;
               lib2 = closure_2;
               dependencyMap(false);
-              obj6 = lib(4093);
+              obj6 = lib(4096);
               obj6.presentFailedToast(lib2.message);
-              let tmp38 = lib2 instanceof lib2(4061);
+              let tmp38 = lib2 instanceof lib2(4064);
               if (tmp38) {
-                tmp38 = lib2.code === lib(4061).ErrorCodes.ALREADY_CANCELED;
+                tmp38 = lib2.code === lib(4064).ErrorCodes.ALREADY_CANCELED;
               }
               if (tmp38) {
                 if (closure_1_2 != null) {
@@ -200,7 +200,7 @@ function CancelSubscriptionButtonFooter(guild) {
                   obj7[0] = arg1;
                   return obj7;
                 } else {
-                  obj1 = closure_1_2(4466);
+                  obj1 = closure_1_2(4470);
                   c4 = 5;
                   v0 = 1;
                   const obj8 = { value: null, done: false };
@@ -225,7 +225,7 @@ function CancelSubscriptionButtonFooter(guild) {
                   closure_1_2();
                 }
               } else {
-                obj4 = lib(4093);
+                obj4 = lib(4096);
                 const intl = lib(1236).intl;
                 obj4.presentFailedToast(intl.string(lib(1236).t.R0RpRX));
               }
@@ -259,7 +259,7 @@ function CancelSubscriptionButtonFooter(guild) {
   let intl = tmp10(1236).intl;
   obj[2] = intl.string(guild(1236).t.cM1H0K);
   obj[3] = callback;
-  obj[1] = closure_10(guild(4745).Button, obj);
+  obj[1] = closure_10(guild(4750).Button, obj);
   return closure_10(closure_7, obj);
 }
 function Content(subscription) {
@@ -298,7 +298,7 @@ function Content(subscription) {
       obj4[2] = { textTransform: "uppercase" };
       const intl = tmp5(1236).intl;
       obj4[3] = intl.string(tmp5(1236).t.xyvN8p);
-      items1[2] = callback2(tmp5(4734).Text, obj4);
+      items1[2] = callback2(tmp5(4739).Text, obj4);
       items1[3] = callback2(tmp5(1297).Spacer, { size: 16 });
       const obj5 = { listingId: null, guildId: null };
       obj5[0] = listing.id;
@@ -322,7 +322,7 @@ function Content(subscription) {
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = "M/DD/YY";
-createCacheKey = { container: { flex: 1 }, body: { marginVertical: 24, marginHorizontal: 16 }, heroImage: { width: "100%", height: "View", aspectRatio: "<string:2353406737>" }, footer: null };
+createCacheKey = { container: { flex: 1 }, body: { marginVertical: 24, marginHorizontal: 16 }, heroImage: { width: "100%", height: "x", aspectRatio: "<string:2353406737>" }, footer: null };
 createCacheKey = { borderTopColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 };
 createCacheKey[3] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);

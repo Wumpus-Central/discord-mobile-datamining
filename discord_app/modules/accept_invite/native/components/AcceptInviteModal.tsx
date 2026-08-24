@@ -2,7 +2,6 @@
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { CreateGuildModalStates } from "../../../create_guild/native/CreateGuildConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/accept_invite/native/components/AcceptInviteModal.tsx");
@@ -13,7 +12,7 @@ export default function AcceptInviteModal(arg0) {
 
   }, []);
   const items = [arg0];
-  return jsx(_NavigationStack.Navigator, {
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
     screens: React.useMemo(() => {
       let obj = {};
       obj = { fullscreen: true, headerShown: false, impressionName: lib(closure_1_2[3]).ImpressionNames.INVITE_ACCEPT, impressionProperties: null, render: null };

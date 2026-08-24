@@ -2,8 +2,6 @@
 import setDefault from "../../utils/Durations.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
-import { useForceUpdate } from "../../../_runtime/07411_useForceUpdate.js";
-import { TIMESTAMP_FORMATS } from "TimestampUtils.tsx";
 
 const require = arg1;
 let items = [2 * setDefault.Seconds.MINUTE, setDefault.Seconds.SECOND];
@@ -19,7 +17,7 @@ let result = require("set").fileFinishedImporting("modules/markup/useFormattedTi
 
 export default function useFormattedTimestamp(format) {
   const _require = format;
-  const forceUpdate = _useForceUpdate.useForceUpdate();
+  const forceUpdate = require("../../../_runtime/07449_useForceUpdate.js").useForceUpdate();
   const items = [forceUpdate, , ];
   ({ format: arr[1], parsed: arr[2] } = format);
   const effect = React.useEffect(() => {
@@ -48,7 +46,7 @@ export default function useFormattedTimestamp(format) {
     }
   }, items);
   if ("R" === format.format) {
-    const TIMESTAMP_FORMATS = _TIMESTAMP_FORMATS.TIMESTAMP_FORMATS;
+    const TIMESTAMP_FORMATS = require("TimestampUtils.tsx").TIMESTAMP_FORMATS;
     let formatted = TIMESTAMP_FORMATS.R(format.parsed);
   } else {
     formatted = format.formatted;

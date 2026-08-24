@@ -2,18 +2,16 @@
 import nDefault from "../../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../../_runtime/06352__isNativeReflectConstruct.js";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../../_runtime/06383__isNativeReflectConstruct.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
 function YouBarMaskedBackground(barWidth) {
@@ -48,7 +46,7 @@ function YouBarAnimatedBackground(arg0) {
   let _require;
   importDefault = undefined;
   ({ barWidth, backgroundColor } = arg0);
-  let obj = _map;
+  let obj = map;
   const token = obj.useToken(ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS);
   const tmp3 = useQuestDockAnimatedBorderRadiusDefault(token);
   _require = tmp3;
@@ -63,13 +61,13 @@ function YouBarAnimatedBackground(arg0) {
     obj[2] = store(closure_1_2[12]).withSpring(closure_1.get(), closure_1_5);
     return obj;
   };
-  obj = { withSpring: _CONFIG_NEVER_ANIMATE.withSpring, questDockAnimatedBorderRadius: tmp3, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp4 };
+  obj = { withSpring: require("../../../../design/animation/reanimated/spring/spring.tsx").withSpring, questDockAnimatedBorderRadius: tmp3, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp4 };
   fn.__closure = obj;
   fn.__workletHash = 14606701040012;
   fn.__initData = closure_10;
-  const animatedStyle = _ReanimatedRexport.useAnimatedStyle(fn);
+  const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
   const style = [{ position: "absolute" }, tmp.youRowFloating, { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor }, { borderTopRightRadius: 0, borderTopLeftRadius: 0 }, animatedStyle];
-  return callback(_modDef4115.View, { style });
+  return callback(_modDef4119.View, { style });
 }
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;

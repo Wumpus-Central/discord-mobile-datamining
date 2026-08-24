@@ -4,7 +4,6 @@ import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import closure_3 from "../channel/GatedChannelStore.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
@@ -14,7 +13,7 @@ export const useCanChannelBeDefault = function useCanChannelBeDefault(arg0, arg1
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_3, closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(callback);
     if (null != channel) {
       const GUILD_VOCAL = closure_1_5.GUILD_VOCAL;

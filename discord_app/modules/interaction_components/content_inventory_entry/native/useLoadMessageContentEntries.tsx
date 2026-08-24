@@ -30,7 +30,7 @@ function _fetchApplicationParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ function _fetchApplicationParts() {
             return obj;
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp6) {
           c4 = tmp;
           throw tmp6;
@@ -131,7 +131,7 @@ function _fetchUserParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ function _fetchUserParts() {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -195,7 +195,7 @@ function _fetchUserParts() {
                         return obj;
                       } else {
                         v0 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } catch (tmp8) {
                       v0 = tmp;
@@ -216,7 +216,7 @@ function _fetchUserParts() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c1 = tmp;
@@ -252,7 +252,7 @@ function _fetchWatchedContentParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -291,7 +291,7 @@ function _fetchWatchedContentParts() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp11) {
           c1 = tmp;
           throw tmp11;
@@ -326,7 +326,7 @@ function _fetchListenedContentParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -360,7 +360,7 @@ function _fetchListenedContentParts() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp7) {
           c1 = tmp;
           throw tmp7;
@@ -395,7 +395,7 @@ function _fetchTopArtistContentParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -412,7 +412,7 @@ function _fetchTopArtistContentParts() {
             } else if ("media" in lib.extra) {
               const image_url = lib.extra.media.image_url;
               v0(38)(null != image_url, "missing image url for top artist");
-              obj1 = lib(8345);
+              obj1 = lib(8384);
               dependencyMap = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
@@ -429,7 +429,7 @@ function _fetchTopArtistContentParts() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp10) {
           v0 = tmp;
           throw tmp10;
@@ -465,7 +465,7 @@ function _loadContentEntryParts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -495,7 +495,7 @@ function _loadContentEntryParts() {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -512,7 +512,7 @@ function _loadContentEntryParts() {
                       if (closure_1_2.type === arr(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                         function _fetchEntryParts() {
                           const self = this;
-                          const tmp = closure_1_4(/* F120921 */ function() { ... });
+                          const tmp = closure_1_4(/* F121951 */ function() { ... });
                           closure_1 = tmp;
                           const apply = tmp.apply;
                           if (typeof apply === "unknown") {
@@ -587,7 +587,7 @@ function _loadContentEntryParts() {
                         })());
                       }
                       arr = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp4) {
                     arr = tmp;
@@ -628,7 +628,7 @@ function _loadContentEntryParts() {
               return obj2;
             } else {
               c11 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             if (3 !== tmp8) {
@@ -732,7 +732,7 @@ function isMessageRenderable(arg0) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
     if (nextResult.type === PermissionOverwriteType.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = tmp3(8343);
+      let tmp3Result = tmp3(8382);
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };
       let tmp5 = nextResult;
@@ -768,7 +768,7 @@ export default function useLoadMessageContentEntries(arg0) {
   const tmp7 = first(first1.useState(new Set()), 2);
   first1 = tmp7[0];
   closure_6 = tmp7[1];
-  let obj = _hasFetchedColors;
+  let obj = hasFetchedColors;
   _require = undefined;
   const colorStore = obj.useColorStore((palette) => palette.palette);
   _require = callback((arg0, arg1) => {
@@ -789,7 +789,7 @@ export default function useLoadMessageContentEntries(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

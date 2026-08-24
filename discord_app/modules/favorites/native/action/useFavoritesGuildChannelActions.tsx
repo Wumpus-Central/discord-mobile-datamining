@@ -11,17 +11,17 @@ const result = require("set").fileFinishedImporting("modules/favorites/native/ac
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   const _require = channelId;
-  let obj = _useFavoritesAccess;
+  let obj = useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
-  let isFavoritableChannelResult = _getFavoritesAwareGuildName.isFavoritableChannel(channelId);
-  const obj2 = _getFavoritesAwareGuildName;
+  let isFavoritableChannelResult = require("../../FavoritesUtils.tsx").isFavoritableChannel(channelId);
+  const obj2 = getFavoritesAwareGuildName;
   const tmp = _require;
   const items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
-  const obj3 = _initialize;
-  const isFavoritesGuildSelected = _useFavoritesAccess.useIsFavoritesGuildSelected();
-  const obj4 = _useFavoritesAccess;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
+  const obj3 = initialize;
+  const isFavoritesGuildSelected = require("../../FavoritesHooks.tsx").useIsFavoritesGuildSelected();
+  const obj4 = useFavoritesAccess;
   const items1 = [closure_3, closure_2];
   if (isFavoritableChannelResult) {
     isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
@@ -32,7 +32,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
       return isMemberResult;
     });
   }
-  obj5 = _initialize;
+  obj5 = initialize;
   let tmp7 = hasAccess;
   if (hasAccess) {
     tmp7 = isFavoritableChannelResult;
@@ -43,7 +43,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(9990).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10029).useFavoritesBetaTagDismissibleContent(tmp7);
   obj = { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
   return obj;
 };

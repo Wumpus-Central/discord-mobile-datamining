@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import tDefault from "../../../../_runtime/03975_t.js";
+import tDefault from "../../../../_runtime/03978_t.js";
 import closure_3 from "../../../stores/billing/UserOfferStore.tsx";
 import { PremiumSubscriptionSKUs } from "../PremiumConstants.tsx";
 import { NoticeTypes } from "../../../Constants.tsx";

@@ -545,7 +545,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _cleanString;
+  let obj = cleanString;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {

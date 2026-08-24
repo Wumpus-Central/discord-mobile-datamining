@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/components/Login.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef4662 from "../../../../actions/native/AlertActionCreators.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -32,7 +32,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = _modDef4656;
+  let obj = _modDef4662;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
@@ -136,7 +136,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ export default function Login(isMultiAccount) {
             v0(true);
             v02({});
             c3 = 2;
-            let obj3 = callback(5256);
+            let obj3 = callback(5261);
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
@@ -172,7 +172,7 @@ export default function Login(isMultiAccount) {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj2 = closure_1_0(8585);
+            let obj2 = closure_1_0(8624);
             callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
             callback2(callback);
             c3 = 0;
@@ -191,9 +191,9 @@ export default function Login(isMultiAccount) {
           } else {
             closure_0 = arg1;
             if (false !== closure_0) {
-              if (closure_0 === closure_1_0(8583).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = closure_1_0(4657);
-                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(8584), {}));
+              if (closure_0 === closure_1_0(8622).PasswordResetMethods.ONE_TIME_LOGIN) {
+                obj = closure_1_0(4663);
+                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(8623), {}));
               } else {
                 obj3 = { title: null, body: null };
                 const intl = closure_1_0(1236).intl;
@@ -202,8 +202,8 @@ export default function Login(isMultiAccount) {
                 const obj4 = { email: null };
                 obj4[0] = closure_6;
                 obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
-                callback(4656).show(obj3);
-                const obj8 = callback(4656);
+                callback(4662).show(obj3);
+                const obj8 = callback(4662);
               }
               c3 = 1;
             }
@@ -211,7 +211,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           v0(false);
           v02 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp47) {
         dependencyMap = tmp47;
@@ -246,7 +246,7 @@ export default function Login(isMultiAccount) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -355,7 +355,7 @@ export default function Login(isMultiAccount) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

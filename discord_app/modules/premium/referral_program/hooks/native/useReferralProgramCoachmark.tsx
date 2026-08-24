@@ -1,6 +1,6 @@
 // discord_app/modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16007_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/16104_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -8,10 +8,8 @@ import { UserSettingsSections } from "../../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import { useSelectedDismissibleContent } from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { useIsEligibleSenderForReferralProgram } from "../useIsEligibleSenderForReferralProgram.tsx";
 
 const require = arg1;
 function ReferralProgramCoachmarkImg() {
@@ -28,13 +26,13 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   disabled = disabled.disabled;
   let _require;
   closure_1 = undefined;
-  let obj = _UNSAFE_isDismissibleContentDismissed;
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
+  let obj = UNSAFE_isDismissibleContentDismissed;
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = _useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(result);
-  _useSelectedDismissibleContent;
+  const isEligibleSenderForReferralProgram = require("../useIsEligibleSenderForReferralProgram.tsx").useIsEligibleSenderForReferralProgram(result);
+  useSelectedDismissibleContent;
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
       let items = [tmp(1377).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];

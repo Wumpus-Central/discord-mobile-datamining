@@ -6,7 +6,7 @@ import Button from "../../../../design/components/Button/native/Button.native.ts
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import registerAssetDefault from "../../../../../_runtime/12926_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12981_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

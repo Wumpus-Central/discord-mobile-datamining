@@ -1,8 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
 import set from "../../../_runtime/00002_set.js";
-import isIterable from "../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../_runtime/04009_isIterable.js";
 import identity from "../../../_runtime/00700_identity.js";
-import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 
 let closure_2 = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
@@ -12,7 +11,7 @@ const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopV
 
 export const useSelectedVariantIndex = function useSelectedVariantIndex(product) {
   const _require = product;
-  let defaultVariantIndex = _useDefaultVariantIndex.useDefaultVariantIndex(product);
+  let defaultVariantIndex = require("hooks/useDefaultVariantIndex.tsx").useDefaultVariantIndex(product);
   let tmp2 = state((selectionStates) => {
     let tmp2 = null;
     if (null != product) {

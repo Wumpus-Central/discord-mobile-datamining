@@ -1,7 +1,6 @@
 // discord_app/modules/guild_action_sheet/native/GuildActionSheetUtils.tsx
 import closure_2 from "../../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildActionSheetUtils.tsx");
@@ -10,7 +9,7 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
   const _require = guild;
   const items = [closure_2];
   const items1 = [guild];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {

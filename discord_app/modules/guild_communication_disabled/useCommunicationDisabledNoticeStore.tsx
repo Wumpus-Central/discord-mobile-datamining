@@ -1,18 +1,16 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import identity from "../../../_runtime/00700_identity.js";
-import isIterable from "../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../_runtime/04009_isIterable.js";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "GuildDisableCommunicationConstants.tsx";
 import keys from "../../../_runtime/00645_keys.js";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 require = arg1;
 let closure_4 = keys.createStore((arg0, arg1) => {
   const _require = arg0;
   dependencyMap = arg1;
-  let Storage = _Storage.Storage;
+  let Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
   let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
@@ -41,7 +39,7 @@ let closure_4 = keys.createStore((arg0, arg1) => {
 });
 Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0) => {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     const obj = { notificationDismissedInGuilds: new Set(closure_0) };
     return closure_1_4.setState(obj);
   });

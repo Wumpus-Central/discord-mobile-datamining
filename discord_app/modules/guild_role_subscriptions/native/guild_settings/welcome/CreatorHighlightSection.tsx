@@ -3,14 +3,11 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09355_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/09392_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 require = arg1;
 function GuildServerSubscriberCount(arg0) {
@@ -42,14 +39,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(16929)(guild_id, 3, 60);
+  const tmp4 = guild_id(17022)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(16901), {});
+    obj[1] = callback(tmp2(16994), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -64,12 +61,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
     obj1[1] = obj2;
-    const items1 = [callback(tmp2(5449), obj1), ];
+    const items1 = [callback(tmp2(5454), obj1), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.cardHeaderContainer;
     const obj4 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj4[4] = guildName;
-    const items2 = [callback(_Text.Text, obj4), ];
+    const items2 = [callback(require("../../../../../design/components/Text/native/Text.tsx").Text, obj4), ];
     let tmp9Result = null != subscriberCount;
     if (tmp9Result) {
       const obj5 = { subscriberCount: null, style: null };
@@ -85,7 +82,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj6 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj6[0] = tmp.ownerQuote;
     obj6[3] = quote;
-    items3[1] = callback(_Text.Text, obj6);
+    items3[1] = callback(require("../../../../../design/components/Text/native/Text.tsx").Text, obj6);
     const obj7 = { style: null, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
     obj7[0] = tmp.ownerUsername;
     const intl = tmp10(1236).intl;
@@ -96,8 +93,8 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       quote_attribution_title = intl2.string(tmp10(1236).t.pclUFJ);
     }
     obj8[1] = quote_attribution_title;
-    obj7[5] = intl.format(_getSystemLocale.t.m0b6Kj, obj8);
-    items3[2] = callback(_Text.Text, obj7);
+    obj7[5] = intl.format(require("../../../../../intl/index.native.tsx").t.m0b6Kj, obj8);
+    items3[2] = callback(require("../../../../../design/components/Text/native/Text.tsx").Text, obj7);
     let tmp7Result = null != emojisToShow;
     if (tmp7Result) {
       tmp7Result = emojisToShow.length > 0;
@@ -109,7 +106,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       obj10[0] = tmp.premiumEmojisTitle;
       const intl3 = tmp10(1236).intl;
       obj10[3] = intl3.string(tmp10(1236).t.wg53L8);
-      const items4 = [tmp9(tmp10(4734).Text, obj10), ];
+      const items4 = [tmp9(tmp10(4739).Text, obj10), ];
       const obj11 = { style: null, children: null };
       const items5 = [, ];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -128,7 +125,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         obj12[0] = tmp.emojiListItem;
         const _HermesInternal = HermesInternal;
         obj12[3] = "+" + notShownEmojiCount;
-        tmp9Result = tmp9(tmp10(4734).Text, obj12);
+        tmp9Result = tmp9(tmp10(4739).Text, obj12);
       }
       items6[1] = tmp9Result;
       obj11[1] = items6;
@@ -142,9 +139,9 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj14 = { pillStyle: null, text: null, onPress: null, shrink: true };
     obj14[0] = tmp.viewServerButton;
     const intl4 = tmp10(1236).intl;
-    obj14[1] = intl4.string(_getSystemLocale.t.mQ2IGa);
+    obj14[1] = intl4.string(require("../../../../../intl/index.native.tsx").t.mQ2IGa);
     obj14[2] = tmp5;
-    obj13[1] = callback(_CollapsingText.BaseTextButton, obj14);
+    obj13[1] = callback(require("../../../../../design/components/Button/native/BaseTextButton.native.tsx").BaseTextButton, obj14);
     items3[4] = callback(closure_4, obj13);
     obj[1] = items3;
     return closure_7(closure_4, obj);

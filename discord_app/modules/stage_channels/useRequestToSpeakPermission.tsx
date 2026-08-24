@@ -12,10 +12,10 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const _require = id;
   const items = [closure_5];
   const items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
-  let obj = _initialize;
-  const canEveryoneRoleResult = stateFromStores(4026).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4026);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
+  let obj = initialize;
+  const canEveryoneRoleResult = stateFromStores(4029).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4029);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

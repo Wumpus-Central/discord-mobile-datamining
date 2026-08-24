@@ -58,7 +58,7 @@ export default function Overview() {
             HTTP.post(obj);
           });
         };
-        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj);
+        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj, arg0);
       } else {
         obj = { style: null, children: null };
         obj[0] = verificationType.verificationType;

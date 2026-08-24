@@ -94,7 +94,7 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
   const _require = channel;
-  let obj = _fromGuildPropertiesWithAdditionalFields;
+  let obj = fromGuildPropertiesWithAdditionalFields;
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);

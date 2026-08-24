@@ -3,7 +3,7 @@ import timestampDefault from "../debug/Logger.tsx";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../impersonate/ImpersonateStore.tsx";
 import closure_5 from "../lurker_mode/LurkingStore.tsx";
@@ -41,7 +41,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ let obj = {
             obj1[3] = SAFETY_AUTOMOD;
             obj1.dispatch(obj1);
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp26) {
           c0 = tmp;
@@ -144,7 +144,7 @@ let obj = {
   },
   updateEmbed(arg0, enabled, channel_id) {
     const _require = arg0;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_10.GUILD_WIDGET(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { enabled, channel_id };
     return HTTP.patch(obj).then((body) => {
@@ -167,11 +167,11 @@ let obj = {
   updateIcon(c2, base64) {
     const _require = c2;
     closure_1 = base64;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_10.GUILD(c2), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { icon: base64 };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     HTTP.patch(obj).then(() => {
       obj = base64(closure_1_2[9]);
       obj = { type: "GUILD_SETTINGS_UPDATE", icon: base64 };
@@ -234,7 +234,7 @@ let obj = {
     const merged = Object.assign(tmp);
     let toServerGuildProfileResult = profile;
     if (null != profile) {
-      let obj3 = _toServerGuildProfile;
+      let obj3 = toServerGuildProfile;
       toServerGuildProfileResult = obj3.toServerGuildProfile(profile);
     }
     obj.profile = toServerGuildProfileResult;
@@ -244,14 +244,14 @@ let obj = {
     obj(709).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(709);
-    const obj6 = obj(8382);
+    const obj6 = obj(8421);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
     obj3 = { for_discovery: obj.isForDiscovery };
     obj1 = { [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash };
-    obj2[5] = _sendRequest.rejectWithMigratedError();
-    const obj10 = _sendRequest;
+    obj2[5] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj10 = sendRequest;
     return HTTP.patch(obj2).then((body) => {
       obj = obj(closure_1_2[9]);
       obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: body.body };
@@ -270,11 +270,11 @@ let obj = {
   },
   updateGuildModeration(id, verificationLevel) {
     const _require = id;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { verification_level: verificationLevel.verificationLevel, explicit_content_filter: verificationLevel.explicitContentFilter };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((arg0) => {
       const result = closure_1_1(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
       return arg0;
@@ -289,7 +289,7 @@ let obj = {
     if (closure_0 === undefined) {
       tmp2 = null;
     }
-    obj = _modDef5227;
+    obj = _modDef5232;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
     obj[3] = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
@@ -302,7 +302,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    obj = _modDef5227;
+    obj = _modDef5232;
     obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
@@ -335,7 +335,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -396,7 +396,7 @@ let obj = {
               obj.transitionTo(closure_1_14.GUILD_DISCOVERY);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -423,7 +423,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -442,9 +442,9 @@ let obj = {
               c0 = 0;
               if (closure_1_4.isFullServerPreview(closure_1_0)) {
                 if (closure_1_1 === closure_1_6.getId()) {
-                  const result = closure_1_0(6792).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = closure_1_0(6829).updateImpersonatedRoles(tmp29, dependencyMap);
                   c3 = 3;
-                  const obj6 = closure_1_0(6792);
+                  const obj6 = closure_1_0(6829);
                 }
               }
               const HTTP = closure_1_0(530).HTTP;
@@ -490,11 +490,11 @@ let obj = {
   bulkAddMemberRoles(id, id2, keys) {
     const _require = id;
     closure_1 = id2;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_10.GUILD_ROLE_MEMBERS(id, id2), body: obj, rejectWithError: null };
     obj = { member_ids: keys };
-    obj[2] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((added) => {
       obj = id2(closure_1_2[9]);
       obj = { type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: closure_0, roleId: id2, added: added.body };
@@ -539,7 +539,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -577,7 +577,7 @@ let obj = {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -599,7 +599,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -637,7 +637,7 @@ let obj = {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -661,7 +661,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -706,7 +706,7 @@ let obj = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           if (c2) {
             c1 = 2;

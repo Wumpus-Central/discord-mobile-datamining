@@ -3,7 +3,6 @@ import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes
 import closure_2 from "../../stores/ChannelStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function isActivityInTextSupportedForChannel(channel) {
@@ -51,7 +50,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
   const items = [closure_2, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
@@ -86,7 +85,7 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {

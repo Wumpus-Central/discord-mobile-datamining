@@ -11,29 +11,24 @@ export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRec
   const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
   const userId = wishlistAndRecommendations.userId;
   const numItems = wishlistAndRecommendations.numItems;
-  let isEligibleForSocialLayerStorefrontMobilePurchasing;
   let memo;
-  let obj = wishlistAndRecommendations(skusToUserAndReason[3]);
-  isEligibleForSocialLayerStorefrontMobilePurchasing = obj.useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "use_wishlist_sku_filter" });
-  const items = [wishlistAndRecommendations, isEligibleForSocialLayerStorefrontMobilePurchasing];
+  const items = [wishlistAndRecommendations];
   memo = userId.useMemo(() => wishlistAndRecommendations.filter((productLine) => {
-    const GIFTABLE_PRODUCT_LINES = closure_1_0(closure_1_1[4]).GIFTABLE_PRODUCT_LINES;
+    const GIFTABLE_PRODUCT_LINES = callback(table[3]).GIFTABLE_PRODUCT_LINES;
     let hasItem = GIFTABLE_PRODUCT_LINES.has(productLine.productLine);
     if (hasItem) {
-      let tmp5 = productLine.productLine !== closure_1_4.SOCIAL_LAYER_GAME_ITEM;
-      if (!tmp5) {
-        let result = closure_4;
-        if (closure_4) {
-          result = closure_1_0(closure_1_1[5]).isSlayerSkuAvailableOnThisPlatform(productLine);
-          const tmpResult = closure_1_0(closure_1_1[5]);
-        }
-        tmp5 = result;
+      let result = productLine.productLine !== constants.SOCIAL_LAYER_GAME_ITEM;
+      if (!result) {
+        result = callback(table[4]).isSlayerSkuAvailableOnThisPlatform(productLine);
+        const tmpResult = callback(table[4]);
       }
-      hasItem = tmp5;
+      hasItem = result;
     }
     return hasItem;
   }), items);
-  obj = {
+  const items1 = [memo, userId, skusToUserAndReason];
+  const items2 = [memo, numItems];
+  return {
     totalUnownedWishlistItemCount: userId.useMemo(() => memo.filter((arg0) => {
       let tmp2 = null != table[arg0.id];
       if (tmp2) {
@@ -43,7 +38,4 @@ export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRec
     }).length, items1),
     slicedWishlistAndRecommendations: userId.useMemo(() => memo.slice(0, numItems), items2)
   };
-  items1 = [memo, userId, skusToUserAndReason];
-  items2 = [memo, numItems];
-  return obj;
 };

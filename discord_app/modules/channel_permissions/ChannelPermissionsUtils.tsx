@@ -15,8 +15,6 @@ import GuildRoleRecordTypeTag from "../../records/GuildRoleRecord.tsx";
 import closure_8 from "../../stores/GuildMemberStore.tsx";
 import closure_9 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 function getRoleRowData(colorString) {
   let flag = arg1;
@@ -318,8 +316,8 @@ export const getExistingRolesRows = function getExistingRolesRows(guild, sortedG
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => callback2(arg0));
   if (0 === mapped.length) {
-    const intl2 = _getSystemLocale.intl;
-    let stringResult = intl2.string(_getSystemLocale.t.nZfHsf);
+    const intl2 = require("../../intl/index.native.tsx").intl;
+    let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
       const intl = tmp4(1236).intl;
       stringResult = intl.string(tmp4(1236).t["gnsna/"]);
@@ -385,8 +383,8 @@ export const getExistingRolesRowWithPermissionDisabled = function getExistingRol
   const sorted = found.sort(sortRoles);
   let mapped = sorted.map((arg0) => closure_1_14(arg0, closure_1_6(arg0, closure_0)));
   if (0 === mapped.length) {
-    const intl2 = _getSystemLocale.intl;
-    let stringResult = intl2.string(_getSystemLocale.t.nZfHsf);
+    const intl2 = require("../../intl/index.native.tsx").intl;
+    let stringResult = intl2.string(require("../../intl/index.native.tsx").t.nZfHsf);
     if (stringResult === undefined) {
       const intl = tmp4(1236).intl;
       stringResult = intl.string(tmp4(1236).t["gnsna/"]);
@@ -411,7 +409,7 @@ export const getMembersRows = function getMembersRows(stateFromStoresArray, chan
     };
   }
   const mapped = stateFromStoresArray.map(currentUser.getUser);
-  const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   const found1 = found.filter((id) => {
     const tmp2 = closure_1_5(guild, id);
     let tmp3 = !tmp2;
@@ -454,7 +452,7 @@ export const getExistingMembers = function getExistingMembers(memberIds, channel
   closure_2 = accessPermissions;
   dependencyMap = arg4;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   return found.filter((id) => {
     id = id.id;
     const currentUser = closure_1_9.getCurrentUser();
@@ -493,7 +491,7 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
   closure_2 = accessPermissions;
   dependencyMap = arg4;
   const mapped = memberIds.map(currentUser.getUser);
-  const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   const found1 = found.filter((id) => {
     id = id.id;
     const currentUser = closure_1_9.getCurrentUser();

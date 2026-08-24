@@ -3,7 +3,6 @@ import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../GuildPowerupsStore.tsx";
 import { PowerupActiveStatusType } from "../constants/GuildPowerupsConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
@@ -13,7 +12,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   importDefault = arg1;
   dependencyMap = arg2;
   const items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
   const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
   closure_4 = tmp2;
   const items1 = [stateFromStores, , , , ];
@@ -53,7 +52,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = callback(1236).intl;
-              const tmp11 = lib(2367);
+              const tmp11 = lib(2368);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

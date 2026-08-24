@@ -4,7 +4,6 @@ import closure_3 from "../../../../stores/GuildStore.tsx";
 import closure_4 from "../../../../stores/PermissionStore.tsx";
 import closure_5 from "../../../../stores/VoiceStateStore.tsx";
 import { Permissions } from "../../../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");
@@ -13,7 +12,7 @@ export default function useCanConnect(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_4, closure_3, closure_5];
   const items1 = [arg0];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const channel = closure_1_2.getChannel(callback);
     let tmp = null != channel;
     if (tmp) {

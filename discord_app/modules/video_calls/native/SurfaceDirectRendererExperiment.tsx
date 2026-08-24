@@ -17,6 +17,6 @@ export const useSurfaceDirectRendererExperiment = function useSurfaceDirectRende
   const _require = userId;
   const items = [closure_2];
   const items1 = [userId];
-  const obj = _initialize;
-  return null != userId && !_initialize.useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
+  const obj = initialize;
+  return null != userId && !require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
 };

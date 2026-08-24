@@ -4,7 +4,6 @@ import closure_4 from "../../../../_runtime/00019_noop.js";
 import { AuthorizeFlow } from "../ApplicationAccountLinkingConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
-import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
@@ -16,7 +15,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   let _require;
   const debug = obj.debug;
-  const authorizationApp = _getAuthorizationApp.useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = require("../hooks/useAuthorizationApp.tsx").useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -26,7 +25,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = _getAuthorizationApp;
+  let obj2 = getAuthorizationApp;
   const tmp = undefined !== debug && debug;
   const tmp2 = _require;
   let parentId;
@@ -40,7 +39,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = _useAuthorizedAppsTokens.useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = require("../hooks/useAuthorizedAppsToken.tsx").useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
   _require = undefined;
   _require = callback((arg0) => {
@@ -60,7 +59,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

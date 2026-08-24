@@ -36,7 +36,7 @@ function _fetchUserOffer() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -62,7 +62,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "r", paymentGatewayOverride: "accessibilityRole" };
+                  obj1 = { offerId: "Array", paymentGatewayOverride: "ct" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;

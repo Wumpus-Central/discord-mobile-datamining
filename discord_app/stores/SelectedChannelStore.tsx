@@ -16,8 +16,6 @@ import closure_18 from "PermissionStore.tsx";
 import closure_19 from "SelectedGuildStore.tsx";
 import ME from "../Constants.tsx";
 import set from "../../_runtime/00002_set.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 function handleConnectionOpen(sessionId) {
   sessionId = sessionId.sessionId;
@@ -110,7 +108,7 @@ function handleConnectionOpen(sessionId) {
     _require = true;
   }
   if (_require) {
-    const Storage = _Storage.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
     obj[0] = closure_6;
     obj[1] = c8;
@@ -121,7 +119,7 @@ function handleConnectionOpen(sessionId) {
     const values = tmp9(12)(closure_25).values();
     const obj6 = tmp9(12)(closure_25);
     const combined = values.concat(tmp9(12).values(closure_27));
-    const found = combined.filter(_isDiscordFrontendDevelopment.isNotNullish);
+    const found = combined.filter(require("../utils/GlobalUtils.tsx").isNotNullish);
     const tmp9Result = tmp9(12);
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {

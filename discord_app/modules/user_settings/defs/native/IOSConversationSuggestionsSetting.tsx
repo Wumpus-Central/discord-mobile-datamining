@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../../../_runtime/04009_isIterable.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import identity from "../../../../../_runtime/00700_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";

@@ -10,7 +10,7 @@ let result = require("set").fileFinishedImporting("modules/opt_in_channels/useBa
 
 export default function useBatchUpdateChannelSettings(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getPendingChannelUpdates(closure_0));
   let items1 = [arg0];
@@ -42,13 +42,13 @@ export default function useBatchUpdateChannelSettings(arg0) {
         isCollapsedResult = null != id;
       }
       if (isCollapsedResult) {
-        let obj = callback(10750);
+        let obj = callback(10789);
         obj.categoryExpand(id);
       }
-      obj1 = callback(10747);
+      obj1 = callback(10786);
       if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
         if (id === id) {
-          let tmp8Result = tmp8(10747);
+          let tmp8Result = tmp8(10786);
           obj = { include: null };
           const _Set2 = Set;
           const items = [id];
@@ -56,7 +56,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           obj[0] = set;
           const result = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         } else {
-          tmp8Result = tmp8(10747);
+          tmp8Result = tmp8(10786);
           obj = { exclude: null };
           const _Set = Set;
           const items1 = [id];
@@ -65,7 +65,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           const result1 = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         }
       } else {
-        const tmp8Result1 = tmp8(6794);
+        const tmp8Result1 = tmp8(6831);
         obj1 = { section: null };
         obj1[0] = constants.CHANNEL_BROWSER;
         const result2 = tmp8Result1.updateOptInChannelsImmediate(closure_0, id, !isChannelOptedInResult, obj1);

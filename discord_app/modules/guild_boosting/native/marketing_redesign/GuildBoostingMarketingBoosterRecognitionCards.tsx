@@ -7,10 +7,10 @@ import BoostGemIcon from "../../../../design/components/Icon/native/redesign/gen
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
 import BoostTier3Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import registerAssetDefault from "../../../../../_runtime/13029_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13030_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13031_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/13032_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13084_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13085_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13086_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/13087_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

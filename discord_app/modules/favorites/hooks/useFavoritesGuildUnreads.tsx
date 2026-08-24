@@ -6,7 +6,6 @@ import closure_6 from "../../../stores/GuildReadStateStore.tsx";
 import closure_7 from "../../../stores/PermissionStore.tsx";
 import closure_8 from "../../../stores/ReadStateStore.tsx";
 import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildUnreads.tsx");
@@ -14,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/hooks/use
 export default function useFavoritesGuildUnreads(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_5, closure_6, closure_4, closure_7, closure_8, closure_9];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const keys = closure_1_1(closure_1_2[8]).keys(set);
     set = new Set();
     return keys.reduce((badge, id) => {

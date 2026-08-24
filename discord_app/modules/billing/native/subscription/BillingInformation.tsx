@@ -1,7 +1,6 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
 import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { SubscriptionStatusTypes } from "../../../../Constants.tsx";
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
@@ -16,9 +15,9 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _getPremiumPlanItem;
+  let obj = getPremiumPlanItem;
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
-  let tmp5 = _PlatformTypes.isIOS() && subscription.isPurchasedViaApple;
+  let tmp5 = require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx").isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
@@ -38,7 +37,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -70,7 +69,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           v0 = tmp;

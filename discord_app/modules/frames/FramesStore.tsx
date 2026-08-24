@@ -16,9 +16,9 @@ const Store = initializeDefault.Store;
 class FramesStoreClass extends Store {
 }
 const prototype = FramesStoreClass.prototype;
-prototype["getFrame"] = function getFrame(closure_0) {
-  if (null != closure_0) {
-    return map.get(closure_0);
+prototype["getFrame"] = function getFrame(frameId) {
+  if (null != frameId) {
+    return map.get(frameId);
   }
 };
 prototype["getMainFrame"] = function getMainFrame() {
@@ -51,8 +51,8 @@ prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
     continue;
   }
 };
-prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(callback3(arg0, arg1));
+prototype["getFrameBySurface"] = function getFrameBySurface(arg0, closure_1) {
+  return map.get(callback3(arg0, closure_1));
 };
 FramesStoreClass.displayName = "FramesStore";
 const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
@@ -76,7 +76,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
         obj = {};
         const merged = Object.assign(value);
         obj.state = "launched";
-        obj = { url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, iframeId: null };
+        obj = { url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null };
         obj[0] = tmp14;
         const _Date = Date;
         obj[1] = Date.now();
@@ -198,6 +198,31 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     }
     return flag;
   },
+  FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY: function handleSetPrefersPictureInPictureOnNavigateAway(frameId) {
+    frameId = frameId.frameId;
+    let flag = false;
+    if (null != frameId) {
+      let obj = map;
+      const value = map.get(frameId);
+      let tmp5 = callback2(value);
+      if (tmp5) {
+        let flag2 = tmp2(value.data);
+        if (flag2) {
+          obj = {};
+          const merged = Object.assign(value);
+          obj = {};
+          const merged1 = Object.assign(value.data);
+          obj.prefersPictureInPictureOnNavigateAway = tmp;
+          obj.data = obj;
+          const result = obj.set(frameId, obj);
+          flag2 = true;
+        }
+        tmp5 = flag2;
+      }
+      flag = tmp5;
+    }
+    return flag;
+  },
   FRAME_SET_PROXY_TICKET_REFRESHING: function handleSetProxyTicketRefreshing(frameId) {
     frameId = frameId.frameId;
     let flag = false;
@@ -248,28 +273,30 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     }
     return flag;
   },
-  FRAME_IFRAME_MOUNT: function handleFrameIframeMount(frameId) {
-    frameId = frameId.frameId;
+  FRAME_IFRAME_MOUNT: function handleFrameIframeMount(arg0) {
+    ({ frameId, iframeId } = arg0);
     let flag = false;
     if (null != frameId) {
       let obj = map;
       const value = map.get(frameId);
-      let tmp5 = callback2(value);
-      if (tmp5) {
-        let flag2 = tmp2(value.data);
+      let tmp4 = callback2(value);
+      if (tmp4) {
+        let flag2 = tmp(value.data);
         if (flag2) {
           obj = {};
           const merged = Object.assign(value);
+          const data = value.data;
           obj = {};
-          const merged1 = Object.assign(value.data);
-          obj.iframeId = tmp;
+          const merged1 = Object.assign(data);
+          obj.iframeId = iframeId;
+          obj.prefersPictureInPictureOnNavigateAway = data.iframeId === iframeId && data.prefersPictureInPictureOnNavigateAway;
           obj.data = obj;
           const result = obj.set(frameId, obj);
           flag2 = true;
         }
-        tmp5 = flag2;
+        tmp4 = flag2;
       }
-      flag = tmp5;
+      flag = tmp4;
     }
     return flag;
   },
@@ -288,6 +315,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
           obj = {};
           const merged1 = Object.assign(value.data);
           obj.iframeId = null;
+          obj.prefersPictureInPictureOnNavigateAway = false;
           obj.data = obj;
           const result = obj.set(frameId, obj);
           flag2 = true;

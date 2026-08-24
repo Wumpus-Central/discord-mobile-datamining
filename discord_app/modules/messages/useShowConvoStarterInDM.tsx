@@ -7,7 +7,6 @@ import closure_4 from "../../stores/MessageStore.tsx";
 import closure_5 from "../../stores/RelationshipStore.tsx";
 import closure_6 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 
 let useRef = noop.useRef;
@@ -30,12 +29,12 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   if (tmp) {
     recipientId = channel.getRecipientId();
   }
-  const strangerDangerWarning = _useStrangerDangerWarning.useStrangerDangerWarning(channel.id);
+  const strangerDangerWarning = require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(channel.id);
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj = _useStrangerDangerWarning;
+  const obj = useStrangerDangerWarning;
   const items = [recipientId, closure_3, strangerDangerWarning, hasFlagResult];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (ref2.current !== id.id) {
       ref.current = false;
       tmp.current = tmp2.id;

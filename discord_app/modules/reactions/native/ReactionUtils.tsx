@@ -1,11 +1,11 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import setDefault from "../../../actions/AlertActionCreators.tsx";
 import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/10470_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10471_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10509_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10510_registerAsset.js";
 import closure_3 from "../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../stores/MessageStore.tsx";
 import closure_5 from "../../../stores/SelectedGuildStore.tsx";
@@ -13,8 +13,6 @@ import closure_6 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 require = arg1;
 ({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9 } = ME);
@@ -34,7 +32,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9317, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9354, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
       const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
@@ -152,14 +150,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj1[2] = isPoll.emoji;
     const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10457, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl(10496, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl(10469, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl(10508, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
@@ -168,16 +166,16 @@ export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, 
   importDefault = arg1;
   let obj = setDefault;
   obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.ZbtGBm);
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx").t.ZbtGBm);
   obj = { variant: "text-md/normal", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t.VpjOCo);
-  obj[1] = jsx(_Text.Text, { variant: "text-md/normal", children: null });
-  const intl3 = _getSystemLocale.intl;
-  obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
-  const intl4 = _getSystemLocale.intl;
-  obj[3] = intl4.string(_getSystemLocale.t.oyYWHE);
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.VpjOCo);
+  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: null });
+  const intl3 = require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(require("../../../intl/index.native.tsx").t["ETE/oC"]);
+  const intl4 = require("../../../intl/index.native.tsx").intl;
+  obj[3] = intl4.string(require("../../../intl/index.native.tsx").t.oyYWHE);
   obj[4] = function onConfirm() {
     return callback(closure_1_2[10]).removeAllReactions(callback, closure_1);
   };

@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TABS,
   getComponent() {
-    return UserSettingsDesignSystemTabs.default;
+    return UserSettingsDesignSystemTabs /* UserSettingsDesignSystemTabs */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -16,14 +16,13 @@ import closure_11 from "ThreadSummaryStore.tsx";
 import ME from "../../Constants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 
 require = arg1;
 function patchThread(id, body) {
   const _require = id;
-  const HTTP = _sendRequest.HTTP;
-  const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: _sendRequest.rejectWithMigratedError() };
-  const obj2 = _sendRequest;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const obj = { url: closure_12.CHANNEL(id.id), body, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  const obj2 = sendRequest;
   return HTTP.patch(obj).then((body) => {
     let obj = closure_1_1(closure_1_2[11]);
     obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -56,9 +55,9 @@ export default {
       obj.locked = true;
     }
     const _require = channel;
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: _sendRequest.rejectWithMigratedError() };
-    const obj3 = _sendRequest;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    obj = { url: closure_12.CHANNEL(channel.id), body: obj, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -91,7 +90,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -156,7 +155,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -223,7 +222,7 @@ export default {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -409,7 +408,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -459,7 +458,7 @@ export default {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c0 = tmp;
           throw tmp9;
@@ -470,9 +469,9 @@ export default {
   setInvitable(id, invitable) {
     let obj = { invitable };
     const _require = id;
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: _sendRequest.rejectWithMigratedError() };
-    const obj3 = _sendRequest;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { type: "THREAD_UPDATE", channel: closure_1_4(body.body) };
@@ -505,7 +504,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -583,7 +582,7 @@ export default {
                 closure_1_18(lib, false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -629,7 +628,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -820,7 +819,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -994,7 +993,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1121,7 +1120,7 @@ export default {
     const callback = c3;
     let MATCH_SOME = c4;
     if (c4 === undefined) {
-      MATCH_SOME = _set.ThreadSearchTagSetting.MATCH_SOME;
+      MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx").ThreadSearchTagSetting.MATCH_SOME;
     }
     return callback(function*() {
       let threads = tmp3;
@@ -1164,7 +1163,7 @@ export default {
         let flag = arg1;
         let obj = dispatcherDefault;
         obj.dispatch({ type: "SUMMARIZE_THREAD_START" });
-        const HTTP = _sendRequest.HTTP;
+        const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
         obj = { url: null, body: null, rejectWithError: null };
         obj[0] = closure_12.AI_SUMMARIZE_THREAD(isThread.id);
         if (arg1 == null) {
@@ -1173,9 +1172,9 @@ export default {
         obj = { ephemeral: null };
         obj[0] = flag;
         obj[1] = obj;
-        obj[2] = _sendRequest.rejectWithMigratedError();
+        obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
         const tmp5 = _require;
-        const tmp5Result = _sendRequest;
+        const tmp5Result = sendRequest;
         const postResult = HTTP.post(obj);
         return HTTP.post(obj).then(() => {
           let obj = closure_1_1(closure_1_2[11]);

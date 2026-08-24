@@ -26,7 +26,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   obj[1] = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = {
     header: memo,
-    children: jsx(notification(10048).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10087).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = closure_1_6;
@@ -53,9 +53,9 @@ export const BugReporterNotification = function BugReporterNotification(notifica
     },
     notification
   };
-  return jsx(notification(10113).NotificationPressable, {
+  return jsx(notification(10152).NotificationPressable, {
     header: memo,
-    children: jsx(notification(10048).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10087).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = closure_1_6;

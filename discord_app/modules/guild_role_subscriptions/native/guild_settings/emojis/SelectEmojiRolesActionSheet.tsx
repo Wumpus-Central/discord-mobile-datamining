@@ -93,7 +93,7 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   const intl4 = tmp5(1236).intl;
   obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
   obj1[2] = tmp7Result;
-  tmp7Result = tmp7(tmp5(6949).BottomSheetTitleHeader, obj1);
+  tmp7Result = tmp7(tmp5(6987).BottomSheetTitleHeader, obj1);
   const items1 = [subscriptionListingsForGuild.length];
-  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(8124), obj3) });
+  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(8163), obj3) });
 };

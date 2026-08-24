@@ -29,7 +29,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES,
   getComponent() {
-    return UserListItem.default;
+    return UserListItem /* UserListItem */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

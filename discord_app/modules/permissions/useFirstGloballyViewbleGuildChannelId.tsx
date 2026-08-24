@@ -1,7 +1,6 @@
 // discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
 import closure_3 from "../../stores/GuildChannelStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
@@ -10,7 +9,7 @@ export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyVi
   const _require = guildId;
   const items = [closure_3];
   const items1 = [guildId];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const selectableChannels = closure_1_3.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {

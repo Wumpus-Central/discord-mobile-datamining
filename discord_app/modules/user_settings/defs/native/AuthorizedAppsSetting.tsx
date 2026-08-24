@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AUTHORIZED_APPS,
   getComponent() {
-    return UserSettingsAuthedApps.default;
+    return UserSettingsAuthedApps /* UserSettingsAuthedApps */.default;
   }
 };
 const route = createToggle.createRoute(obj);

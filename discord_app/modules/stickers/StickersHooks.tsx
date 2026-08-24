@@ -13,7 +13,6 @@ import closure_10 from "StickersPersistedStore.tsx";
 import closure_11 from "StickersStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 
 require = arg1;
 function useStickerPackCategories(channel) {
@@ -204,7 +203,7 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
     const stickerPacks = pack_id(table[11]).fetchStickerPacks();
   }, []);
   const items = [closure_11];
-  const stateFromStores = _initialize.useStateFromStores(items, () => obj.hasLoadedStickerPacks);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => obj.hasLoadedStickerPacks);
   const items1 = [pack_id, stateFromStores];
   const effect1 = React.useEffect(() => {
     let tmp = stateFromStores;
@@ -264,7 +263,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         let tmpResult = tmp(tmp2[14]);
         const guildId = closure_2_7.getGuildId();
         let canCreateExpressions = null != guild;
-        const findIndexResult = c6.findIndex((type) => type.type === SEARCH_RESULTS(4964).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = c6.findIndex((type) => type.type === SEARCH_RESULTS(4969).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -410,7 +409,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10200).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10239).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -418,7 +417,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10200);
+  const obj = stickerIds(10239);
   const tmp = stickerIds;
   const items = [closure_11];
   const items1 = [stickerIds];
@@ -465,7 +464,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10200).useFrecencySettings();
+  const frecencySettings = keys(10239).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -484,7 +483,7 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10200);
+  const obj = keys(10239);
   const tmp = keys;
   const items = [closure_11];
   const items1 = [keys];
@@ -504,7 +503,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   c3 = undefined;
   let obj;
   let React;
-  obj = _initialize;
+  obj = initialize;
   const items = [closure_11];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getStickerById(id.id));
   const tmp4 = obj(React.useState(true), 2);
@@ -512,10 +511,10 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   [tmp6, c3] = obj(React.useState(false), 2);
   const tmp = _require;
   const tmp5 = obj(React.useState(false), 2);
-  let isGuildStickerResult = _getStickerExtensionFromFormatType.isGuildSticker(renderableSticker);
+  let isGuildStickerResult = require("StickersUtils.tsx").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(4823).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(4823);
+    isGuildStickerResult = tmp(4828).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(4828);
   }
   obj = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   React = obj2.useRef(obj);
@@ -536,7 +535,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -560,7 +559,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
                       if (!current.hasFetched) {
                         dependencyMap(false);
                         dependencyMap = 1;
-                        obj1 = closure_1_0(10218);
+                        obj1 = closure_1_0(10257);
                         c1 = 2;
                         v0 = 1;
                         obj1 = { value: null, done: false };

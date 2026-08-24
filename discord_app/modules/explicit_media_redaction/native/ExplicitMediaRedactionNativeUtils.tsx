@@ -1,7 +1,7 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
 import closure_3 from "../../../stores/UserStore.tsx";
@@ -73,7 +73,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj);
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14179, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14247, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {
@@ -85,29 +85,29 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
     } else {
       if (media.type === SearchMediaTypes.ATTACHMENT) {
         let obj = { type: null, media: null };
-        obj[0] = tmp4(5022).ObscuredMediaTypes.Attachment;
+        obj[0] = tmp4(5027).ObscuredMediaTypes.Attachment;
         obj[1] = media.attachment;
         let tmp = obj;
       } else if (media.type === tmp8.EMBED) {
         obj = { type: null, media: null };
-        obj[0] = tmp4(5022).ObscuredMediaTypes.Embed;
+        obj[0] = tmp4(5027).ObscuredMediaTypes.Embed;
         obj[1] = media.embed;
         tmp = obj;
       } else {
         tmp = null;
         if (media.type === tmp8.COMPONENT) {
           obj = { type: null, media: null };
-          obj[0] = tmp4(5022).ObscuredMediaTypes.GenericMedia;
+          obj[0] = tmp4(5027).ObscuredMediaTypes.GenericMedia;
           obj[1] = media.unfurledMediaItem;
           tmp = obj;
         }
       }
       let tmp2 = null != tmp;
       if (tmp2) {
-        let tmp4Result = tmp4(5019);
+        let tmp4Result = tmp4(5024);
         let result = tmp4Result.isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
         if (result) {
-          tmp4Result = tmp4(5001);
+          tmp4Result = tmp4(5006);
           result = tmp4Result.shouldAgeVerifyForExplicitMedia();
         }
         tmp2 = result;

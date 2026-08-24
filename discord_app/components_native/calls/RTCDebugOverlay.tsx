@@ -93,7 +93,7 @@ function RTCDebugGeneral() {
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4984)(stateFromStores1) } } }) };
+  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4989)(stateFromStores1) } } }) };
   obj[1] = name;
   return closure_14(Section, obj);
 }
@@ -208,7 +208,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(709).wait(callback2(12597).close);
+    return () => callback(709).wait(callback2(12651).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

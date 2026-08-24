@@ -1,9 +1,7 @@
 // discord_app/modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx
-import tDefault from "../../../../_runtime/03975_t.js";
+import tDefault from "../../../../_runtime/03978_t.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "../../../../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
 
 const require = arg1;
 function _scheduleMessage() {
@@ -25,7 +23,7 @@ function _scheduleMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -170,25 +168,25 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   const startOfResult2 = tDefault().startOf("isoWeek");
   obj = { label: null, value: null };
   const result2 = tDefault().startOf("isoWeek").add(1, "week").set("hours", 9);
-  let intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.tjIn9i);
+  let intl = require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../intl/index.native.tsx").t.tjIn9i);
   obj[1] = result;
   const items = [obj, , ];
   obj = { label: null, value: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[0] = intl2.string(_getSystemLocale.t.EMRZyS);
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl2.string(require("../../../intl/index.native.tsx").t.EMRZyS);
   obj[1] = result1;
   items[1] = obj;
   obj1 = { label: null, value: null };
-  const intl3 = _getSystemLocale.intl;
-  obj1[0] = intl3.string(_getSystemLocale.t["+P5MmK"]);
+  const intl3 = require("../../../intl/index.native.tsx").intl;
+  obj1[0] = intl3.string(require("../../../intl/index.native.tsx").t["+P5MmK"]);
   obj1[1] = result2;
   items[2] = obj1;
   const addResult2 = tDefault().startOf("isoWeek").add(1, "week");
   const obj2 = { key: "schedule-message", header: null, hasIcons: false, options: null };
   obj3 = { title: null };
-  const intl4 = _getSystemLocale.intl;
-  obj3[0] = intl4.string(_getSystemLocale.t["3+ii4F"]);
+  const intl4 = require("../../../intl/index.native.tsx").intl;
+  obj3[0] = intl4.string(require("../../../intl/index.native.tsx").t["3+ii4F"]);
   obj2[1] = obj3;
   const items1 = [
     ...items.map((label) => {
@@ -204,8 +202,8 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
     })
   ];
   const obj4 = { label: null, onPress: null };
-  const intl5 = _getSystemLocale.intl;
-  obj4[0] = intl5.string(_getSystemLocale.t.stHooC);
+  const intl5 = require("../../../intl/index.native.tsx").intl;
+  obj4[0] = intl5.string(require("../../../intl/index.native.tsx").t.stHooC);
   obj4[1] = function onPress() {
     let obj = closure_1_1(closure_1_2[10]);
     obj = { title: null, mode: "datetime", startDate: null, minimumDate: null, maximumDate: null, onSubmit: null };
@@ -229,5 +227,5 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   };
   items1[tmp4] = obj4;
   obj2[3] = items1;
-  const result3 = _showSimpleActionSheet.showSimpleActionSheet(obj2);
+  const result3 = require("../../action_sheet/native/showSimpleActionSheet.tsx").showSimpleActionSheet(obj2);
 };

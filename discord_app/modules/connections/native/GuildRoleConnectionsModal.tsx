@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[closure_1_5] = obj;
     return obj;
   }, items);
-  return jsx(guildId(6312).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(6343).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });
 const result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModal.tsx");
 

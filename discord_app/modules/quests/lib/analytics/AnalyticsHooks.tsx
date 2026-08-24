@@ -6,7 +6,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(10687).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(10726).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(closure_1_2[3]);
@@ -20,7 +20,7 @@ export const useTrackQuestEventWithImpression = function useTrackQuestEventWithI
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(10687).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(10726).useGetQuestImpressionId();
   callback = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
@@ -104,7 +104,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(10687).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(10726).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(closure_1_2[3]);
@@ -118,7 +118,7 @@ export const useTrackAdContentEventWithImpression = function useTrackAdContentEv
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(10687).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(10726).useGetQuestImpressionId();
   callback = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
@@ -212,12 +212,12 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
   let callback2;
   let callback3;
   let callback4;
-  const QuestContent = questHomeHero(6719).QuestContent;
+  const QuestContent = questHomeHero(6756).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];
   memo = memo.useMemo(() => {
-    const contentProperties = questHomeHero(7480).getContentProperties(dependencyMap);
+    const contentProperties = questHomeHero(7518).getContentProperties(dependencyMap);
     delete tmp[tmp2];
     return contentProperties;
   }, items);
@@ -227,12 +227,12 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
       if (shouldShowQuestHomeHeroContent) {
         let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
         obj[0] = tmp.id;
-        obj[1] = questHomeHero(7469).AdCreativeType.QUEST_HOME_HERO;
+        obj[1] = questHomeHero(7507).AdCreativeType.QUEST_HOME_HERO;
         obj[2] = arg0;
         obj[3] = memo;
         obj[4] = dependencyMap;
-        questHomeHero(7470).trackAdContentEvent(obj);
-        const obj2 = questHomeHero(7470);
+        questHomeHero(7508).trackAdContentEvent(obj);
+        const obj2 = questHomeHero(7508);
       }
     }
     obj = shouldShowQuestHomeHeroContent(698);

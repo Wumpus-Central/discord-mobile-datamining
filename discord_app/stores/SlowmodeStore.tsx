@@ -4,7 +4,6 @@ import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import closure_3 from "ChannelStore.tsx";
 import closure_4 from "PermissionStore.tsx";
-import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
 import { canBypassSlowmodeHelper } from "../modules/chat/SlowmodeUtils.tsx";
 
 const require = arg1;
@@ -17,7 +16,7 @@ function setCooldown(channel, SendMessage, arg2) {
     const id = channel.id;
     delete tmp2[tmp];
   }
-  obj = _canBypassSlowmodeHelper;
+  obj = canBypassSlowmodeHelper;
   if (!obj.canBypassSlowmode(channel)) {
     if (arg2 > 0) {
       const _Date = Date;
@@ -27,7 +26,7 @@ function setCooldown(channel, SendMessage, arg2) {
       obj[0] = channel.rateLimitPerUser;
       obj[1] = arg2;
       obj[2] = sum;
-      const timeout = new _start.Timeout();
+      const timeout = new require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
       obj[3] = timeout;
       tmp3[SendMessage][channel.id] = obj;
       const timer2 = tmp3[SendMessage][channel.id].timer;

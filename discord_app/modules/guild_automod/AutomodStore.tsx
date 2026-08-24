@@ -5,7 +5,6 @@ import closure_4 from "../../../_runtime/00019_noop.js";
 import { AutomodTriggerType } from "Constants.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
 import identity from "../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../_runtime/04006_isIterable.js";
 
 const require = arg1;
 let closure_7 = {};
@@ -105,7 +104,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -232,7 +231,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _isIterable.shallow), 2);
+  }, require("../../../_runtime/04009_isIterable.js").shallow), 2);
   first = tmp2[0];
   const callback = tmp4;
   const items = [tmp[0], ];
@@ -249,7 +248,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -316,7 +315,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _isIterable.shallow), 2);
+  }, require("../../../_runtime/04009_isIterable.js").shallow), 2);
   first = tmp2[0];
   const callback = tmp4;
   let items = [tmp[0], ];
@@ -333,7 +332,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -406,7 +405,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -437,7 +436,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           v0 = tmp;
@@ -462,5 +461,5 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
     }
     obj = { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
     return obj;
-  }, _isIterable.shallow);
+  }, require("../../../_runtime/04009_isIterable.js").shallow);
 };

@@ -6,7 +6,6 @@ import closure_6 from "../../stores/ChannelStore.tsx";
 import closure_7 from "../../stores/SelectedChannelStore.tsx";
 import ME from "../../Constants.tsx";
 import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 
 const require = arg1;
 function initialize() {
@@ -30,7 +29,7 @@ function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -57,11 +56,11 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4202);
+        let tmp13Result = tmp13(4206);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4215).RouteParam;
-        const RouteParam2 = tmp13(4215).RouteParam;
+        const RouteParam = tmp13(4219).RouteParam;
+        const RouteParam2 = tmp13(4219).RouteParam;
         obj[0] = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
         const HTTP = tmp13(530).HTTP;
@@ -139,7 +138,7 @@ export default {
         let tmp9 = nextResult;
         let tmp10 = items1;
         let tmp11 = dependencyMap;
-        if (nextResult !== items1(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(5394).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp12 = isStaticChannelRoute;
           let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {

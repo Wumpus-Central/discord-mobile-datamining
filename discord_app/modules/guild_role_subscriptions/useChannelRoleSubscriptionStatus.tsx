@@ -3,7 +3,6 @@ import closure_2 from "../channel/GatedChannelStore.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8) {
@@ -51,6 +50,6 @@ export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2, closure_4];
   const items1 = [arg0];
-  return _initialize.useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
 };
 export { getChannelRoleSubscriptionStatus };

@@ -35,7 +35,7 @@ function _saveProfileAndAccountRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -168,8 +168,8 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(5256).logoutInternal();
-    const obj = callback2(5256);
+    callback2(5261).logoutInternal();
+    const obj = callback2(5261);
     callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
@@ -229,11 +229,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_provider = tmp13;
     obj.push_voip_token = value;
   }
-  obj = { headers: avatarId(8382).buildHeadersForMd5({ [avatar(8379).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  obj = { headers: avatarId(8421).buildHeadersForMd5({ [avatar(8418).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
   const tmp = avatarId;
   tmp11 = null != tmp10 && null != value;
   tmp13 = closure_8;
-  let tmpResult = avatarId(8382);
+  let tmpResult = avatarId(8421);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

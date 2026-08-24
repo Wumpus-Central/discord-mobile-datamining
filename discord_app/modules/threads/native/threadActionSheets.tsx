@@ -1,6 +1,6 @@
 // discord_app/modules/threads/native/threadActionSheets.tsx
 import set from "../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/threads/native/threadActionSheets.tsx");
@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/threads/native/threadActionShe
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(10514, dependencyMap.paths), "ThreadNotificationsBottomSheet", obj);
+  obj.openLazy(asyncRequireImpl(10553, dependencyMap.paths), "ThreadNotificationsBottomSheet", obj);
 };

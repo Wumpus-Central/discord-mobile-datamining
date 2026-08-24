@@ -10,7 +10,6 @@ import closure_7 from "../../stores/GuildStore.tsx";
 import closure_8 from "../../stores/PermissionStore.tsx";
 import closure_9 from "StageInstanceStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 ({ GuildFeatures: c10, Permissions: unpackModuleId } = ME);
@@ -27,7 +26,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = tmp2(4026).NONE;
+    deny = tmp2(4029).NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = fromStringAll;
@@ -36,7 +35,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = tmp2(4026).NONE;
+    allow = tmp2(4029).NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -48,7 +47,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     deny = deny.deny;
   }
   if (deny == null) {
-    deny = tmp(4026).NONE;
+    deny = tmp(4029).NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = fromStringAll;
@@ -57,7 +56,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     allow = deny.allow;
   }
   if (allow == null) {
-    allow = tmp(4026).NONE;
+    allow = tmp(4029).NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -90,7 +89,7 @@ export const isEmptyOverwrite = function isEmptyOverwrite(c2) {
   ({ allow, deny } = c2);
   let equalsResult = fromStringAll.equals(allow, applyOverwritesAll.NONE);
   if (equalsResult) {
-    equalsResult = tmp(506).equals(deny, tmp(4026).NONE);
+    equalsResult = tmp(506).equals(deny, tmp(4029).NONE);
     const tmpResult = tmp(506);
   }
   return equalsResult;
@@ -99,7 +98,7 @@ export const useCanCreateStageChannelByGuild = function useCanCreateStageChannel
   const _require = guildId;
   const items = [closure_8, closure_5, closure_7];
   const items1 = [guildId];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const id = closure_1_5.getId();
     const guild = closure_1_7.getGuild(guildId);
     let tmp3 = null != guild;
@@ -122,7 +121,7 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
   const _require = id;
   const items = [closure_8, closure_7, closure_6];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = closure_1_6.getChannel(id);
     let guildId;
     if (channel != null) {
@@ -144,7 +143,7 @@ export const useCanModerateRequestToSpeak = function useCanModerateRequestToSpea
   const _require = id;
   const items = [closure_6, closure_8];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_8.can(closure_1_11.MUTE_MEMBERS, closure_1_6.getChannel(tmp));

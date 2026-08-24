@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   const _require = channel;
-  let obj = _useChannelPresetSettings;
+  let obj = useChannelPresetSettings;
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };

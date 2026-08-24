@@ -6,10 +6,6 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { useScreenRecordingStore } from "ScreenRecordingStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 
 const require = arg1;
 noopAll;
@@ -70,7 +66,7 @@ export default function ScreenRecordingActionSheet() {
     }
   }
   obj = { style: tmp.container, children: null };
-  const items = [callback(_Text.Text, { variant: "heading-xl/bold", children: str }), callback(_Text.Text, { variant: "text-md/normal", children: str2 }), ];
+  const items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: str }), callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str2 }), ];
   obj = {
     disabled: tmp2,
     text: "Done",
@@ -80,22 +76,22 @@ export default function ScreenRecordingActionSheet() {
       callback2(closure_1_2[8]).hideActionSheet();
     }
   };
-  items[2] = callback(_Button.Button, obj);
+  items[2] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, obj);
   obj[1] = items;
   obj1 = { style: tmp.container, children: null };
   const tmp11 = callback2(View, obj);
   const tmp6 = callback2;
   const tmp9 = _require;
   const items1 = [
-    callback(_PressableBase.PressableOpacity, {
+    callback(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, {
       style: tmp.closeButton,
       onPress() {
         return callback2(table[8]).hideActionSheet();
       },
       accessibilityLabel: "close",
-      children: callback(_XSmallIcon.XSmallIcon, { size: "md", color: "text-default" })
+      children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { size: "md", color: "text-default" })
     }),
-    callback(_Text.Text, { variant: "heading-xl/bold", children: tmp5.title }),
+    callback(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: tmp5.title }),
   ,
 
   ];
@@ -106,17 +102,17 @@ export default function ScreenRecordingActionSheet() {
       return callback2(table[8]).hideActionSheet();
     },
     accessibilityLabel: "close",
-    children: callback(_XSmallIcon.XSmallIcon, { size: "md", color: "text-default" })
+    children: callback(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { size: "md", color: "text-default" })
   };
   const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
   obj4[1] = get_defaultRulesDefault.parse(tmp5.instructions);
-  items1[2] = callback(_Text.Text, obj4);
+  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj4);
   const obj5 = { style: tmp.buttonContainer, children: null };
   let tmp12 = !flag;
   if (flag) {
     tmp12 = tmp2;
   }
-  obj5[1] = callback(_Button.Button, {
+  obj5[1] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, {
     disabled: tmp12,
     text: "Next",
     loading: tmp2,
@@ -130,5 +126,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return callback(tmp9(7175).ActionSheet, { children });
+  return callback(tmp9(7213).ActionSheet, { children });
 };

@@ -8,8 +8,6 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -144,9 +142,9 @@ export default function GuildBoostingMarketingFaq() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.content, children: null };
   obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t.HPJ6Nj);
-  let items = [callback2(_Text.Heading, obj), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t.HPJ6Nj);
+  let items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Heading, obj), ];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,

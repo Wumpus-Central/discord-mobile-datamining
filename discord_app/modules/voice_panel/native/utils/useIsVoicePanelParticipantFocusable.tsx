@@ -4,7 +4,6 @@ import closure_3 from "../../../calls/ChannelRTCStore.tsx";
 import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
 import closure_5 from "../../../../stores/MediaEngineStore.tsx";
 import ParticipantTypes from "../../../calls/CallConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, closure_1_4) {
@@ -41,7 +40,7 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
       if (callback2(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, sharedValue1);
       } else if (callback3(participant)) {
-        let tmp4Result = tmp4(11444);
+        let tmp4Result = tmp4(11493);
         result = tmp4Result.canRenderParticipantVideo(participant, tmp);
       } else {
         tmp4Result = tmp4(1370);
@@ -59,6 +58,6 @@ export default function useIsVoicePanelParticipantFocusable(arg0, arg1, arg2) {
   dependencyMap = arg1;
   closure_2 = arg2;
   const items = [closure_3, closure_5, closure_2, closure_4];
-  return _initialize.useStateFromStores(items, () => closure_1_9(closure_0, closure_1, closure_2, closure_1_3, closure_1_5, closure_2, closure_1_4));
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_9(closure_0, closure_1, closure_2, closure_1_3, closure_1_5, closure_2, closure_1_4));
 };
 export { isVoicePanelParticipantFocusable };

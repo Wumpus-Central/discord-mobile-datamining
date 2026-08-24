@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../stores/SortedGuildStore.tsx";
@@ -34,7 +34,7 @@ createToggle = {
   },
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15012, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15076, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   }
 };
 createToggle = createToggle.createGuildSelector(createToggle);

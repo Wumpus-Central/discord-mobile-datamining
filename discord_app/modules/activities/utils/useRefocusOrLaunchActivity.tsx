@@ -41,7 +41,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,8 +68,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     obj1 = { frameId: null, layoutMode: null };
                     obj1[0] = tmp10.id;
                     obj1[1] = closure_1_8.FOCUSED;
-                    const result = closure_1_1(8705).updateFrameLayoutMode(obj1);
-                    const obj9 = closure_1_1(8705);
+                    const result = closure_1_1(8742).updateFrameLayoutMode(obj1);
+                    const obj9 = closure_1_1(8742);
                   }
                 }
                 if (tmp9) {
@@ -78,15 +78,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  closure_1_1(8733)(guild_id, _location);
-                  const tmp25 = closure_1_1(8733);
+                  closure_1_1(8770)(guild_id, _location);
+                  const tmp25 = closure_1_1(8770);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (closure_1_7) {
-                    let obj5 = closure_1_1(8705);
+                    let obj5 = closure_1_1(8742);
                     let obj2 = { applicationId: null, surface: null };
                     obj2[0] = tmp41;
                     obj2[1] = closure_1_7;
@@ -108,7 +108,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = closure_1_0(10710);
+                obj2 = closure_1_0(10749);
                 const obj4 = { appId: null, botId: null, analyticsLocations: null };
                 obj4[0] = tmp41;
                 let id1;

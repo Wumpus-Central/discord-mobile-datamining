@@ -2,11 +2,10 @@
 import set from "../../../../../_runtime/00002_set.js";
 import set2 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../../../_runtime/04009_isIterable.js";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import DEFAULT_FONT_SCALE_STORE_STATE from "../../appearance/native/FontScaleStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const useFontScaleStore = DEFAULT_FONT_SCALE_STORE_STATE.useFontScaleStore;
 const toggle = createToggle.createToggle({
@@ -20,7 +19,7 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;
-    return _batchUpdates.batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
+    return require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
   },
   useDescription: function useClassicChatFontScaleDescription() {
     const intl = getSystemLocale.intl;
@@ -39,7 +38,7 @@ const obj = {
   },
   onValueChange: function onClassicChatFontScaleChange(arg0) {
     const _require = arg0;
-    return _batchUpdates.batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
+    return require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
   },
   useDescription: function useClassicChatFontScaleDescription() {
     const intl = getSystemLocale.intl;

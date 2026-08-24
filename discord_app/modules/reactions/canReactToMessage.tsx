@@ -6,7 +6,6 @@ import closure_3 from "../../stores/GuildVerificationStore.tsx";
 import closure_4 from "../../stores/PermissionStore.tsx";
 import closure_5 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function canReactToMessageInternal(state, getGuildId, items) {
@@ -61,7 +60,7 @@ export const useCanReactToMessage = function useCanReactToMessage(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   let items = [closure_5, closure_2, closure_3, closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_2, closure_1_3, closure_1_4];
     return closure_1_10(closure_0, closure_1, items);
   });

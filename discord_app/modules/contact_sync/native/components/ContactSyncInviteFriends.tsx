@@ -2,16 +2,13 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/11874_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/11923_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -25,7 +22,7 @@ const result = require("set").fileFinishedImporting("modules/contact_sync/native
 
 export default function ContactSyncInviteFriends() {
   let tmp = callback3();
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = { children: null };
@@ -33,19 +30,19 @@ export default function ContactSyncInviteFriends() {
   obj1 = { style: tmp.art, source: registerAssetDefault };
   const items1 = [callback(preloadDefault, obj1), , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  let intl = _getSystemLocale.intl;
-  obj2[4] = intl.string(_getSystemLocale.t.ZxBpLf);
-  items1[1] = callback(_Text.Text, obj2);
+  let intl = require("../../../../intl/index.native.tsx").intl;
+  obj2[4] = intl.string(require("../../../../intl/index.native.tsx").t.ZxBpLf);
+  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   const obj3 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj3[3] = intl2.string(_getSystemLocale.t["fXtCJ+"]);
-  items1[2] = callback(_Text.Text, obj3);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj3[3] = intl2.string(require("../../../../intl/index.native.tsx").t["fXtCJ+"]);
+  items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3);
   obj[1] = items1;
   const items2 = [callback2(View, obj), ];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl3 = _getSystemLocale.intl;
-  obj5[2] = intl3.string(_getSystemLocale.t["6Qgrev"]);
+  const intl3 = require("../../../../intl/index.native.tsx").intl;
+  obj5[2] = intl3.string(require("../../../../intl/index.native.tsx").t["6Qgrev"]);
   obj5[3] = function onPress() {
     let obj = closure_1_1(closure_1_2[13]);
     obj = { friend_add_type: "Invite", source_page: closure_1_6.CONTACT_SYNC_MODAL };
@@ -62,7 +59,7 @@ export default function ContactSyncInviteFriends() {
     const tmp5 = callback;
     callback(closure_1_2[15]).showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
   };
-  obj4[1] = callback(_Button.Button, obj5);
+  obj4[1] = callback(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj5);
   items2[1] = callback(View, obj4);
   obj[0] = items2;
   return callback2(closure_9, obj);

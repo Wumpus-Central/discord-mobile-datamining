@@ -7,7 +7,6 @@ import closure_6 from "../../../_runtime/00019_noop.js";
 import closure_7 from "../gateway/GatewayConnectionStore.tsx";
 import closure_8 from "GuildRoleSubscriptionsStore.tsx";
 import { FetchState } from "GuildRoleSubscriptionsStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useGroupListingsFetchContext } from "GroupListingsFetchContext.tsx";
 
 const require = arg1;
@@ -94,7 +93,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -130,7 +129,7 @@ export const useCreateSubscriptionGroupListing = function useCreateSubscriptionG
               c5 = 0;
               callback(false);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
@@ -216,7 +215,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -252,7 +251,7 @@ export const useUpdateSubscriptionGroupListing = function useUpdateSubscriptionG
             c6 = 0;
             callback(false);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c7 = 3;
             throw arg1;
@@ -316,7 +315,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
   }
   const items = [closure_8];
   const items1 = [id, flag, flag2];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (null == stateFromStoresArray) {
       return [];
     } else {
@@ -359,7 +358,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
 export const useSubscriptionListing = function useSubscriptionListing(editStateId) {
   const _require = editStateId;
   const items = [closure_8];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let subscriptionListing = null;
     if (null != closure_0) {
       subscriptionListing = closure_1_8.getSubscriptionListing(tmp);
@@ -370,7 +369,7 @@ export const useSubscriptionListing = function useSubscriptionListing(editStateI
 export const useSubscriptionGroupListing = function useSubscriptionGroupListing(arg0) {
   const _require = arg0;
   const items = [closure_8];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let subscriptionGroupListing = null;
     if (null != closure_0) {
       subscriptionGroupListing = closure_1_8.getSubscriptionGroupListing(tmp);
@@ -380,10 +379,10 @@ export const useSubscriptionGroupListing = function useSubscriptionGroupListing(
 };
 export const useGroupListingsForGuild = function useGroupListingsForGuild(guildId) {
   const _require = guildId;
-  closure_1 = _useGroupListingsFetchContext.useGroupListingsFetchContext("useGroupListingsForGuild");
-  const obj = _useGroupListingsFetchContext;
+  closure_1 = require("GroupListingsFetchContext.tsx").useGroupListingsFetchContext("useGroupListingsForGuild");
+  const obj = useGroupListingsFetchContext;
   const items = [closure_8];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (closure_1) {
         let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -401,7 +400,7 @@ export const useSubscriptionListingsForGuild = function useSubscriptionListingsF
   }
   useFetchListingsForGuild(guildId);
   const items = [closure_8];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
       let subscriptionGroupListingsForGuild = closure_1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -465,7 +464,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -501,7 +500,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
               c6 = 0;
               callback(false);
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c7 = 3;
               throw arg1;
@@ -584,7 +583,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -643,7 +642,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
               c4 = 0;
               callback(false);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
@@ -710,7 +709,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
 export const useSubscriptionsSettings = function useSubscriptionsSettings(guildId) {
   const _require = guildId;
   const items = [closure_8];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let subscriptionSettings;
     if (null != closure_0) {
       subscriptionSettings = closure_1_8.getSubscriptionSettings(tmp);
@@ -742,7 +741,7 @@ export const useUpdateSubscriptionsSettings = function useUpdateSubscriptionsSet
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -842,7 +841,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -878,7 +877,7 @@ export const useDeleteSubscriptionGroupListing = function useDeleteSubscriptionG
               c5 = 0;
               callback(false);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
@@ -962,7 +961,7 @@ export const useFetchSubscriptionsSettings = function useFetchSubscriptionsSetti
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1066,7 +1065,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1148,7 +1147,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
 export const useSubscriptionTrial = function useSubscriptionTrial(editStateId) {
   const _require = editStateId;
   const items = [closure_8];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let subscriptionTrial = null;
     if (null != closure_0) {
       subscriptionTrial = closure_1_8.getSubscriptionTrial(tmp);

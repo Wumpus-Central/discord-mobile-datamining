@@ -40,7 +40,7 @@ prototype["update"] = function update(current) {
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
   if (nowResult === undefined) {
-    let obj = RTC_DISCONNECTED(4548);
+    let obj = RTC_DISCONNECTED(4553);
     nowResult = obj.now();
   }
   const stateDurations = this.getStateDurations(nowResult);

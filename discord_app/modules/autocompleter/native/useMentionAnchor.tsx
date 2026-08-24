@@ -30,7 +30,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      obj1 = _AutocompleteFormDivider;
+      obj1 = AutocompleteFormDivider;
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;
@@ -59,8 +59,8 @@ export default function useMentionAnchor(c22) {
             startsWithResult1 = arg1 >= lastIndexOfResult + arg3.length;
           }
           if (startsWithResult1) {
-            startsWithResult1 = tmp25(10176).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
-            const tmp25Result = tmp25(10176);
+            startsWithResult1 = tmp25(10215).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
+            const tmp25Result = tmp25(10215);
           }
           tmp18 = null;
           if (startsWithResult1) {
@@ -68,7 +68,7 @@ export default function useMentionAnchor(c22) {
           }
         }
         tmp16 = tmp18;
-        obj9 = _AutocompleteFormDivider;
+        obj9 = AutocompleteFormDivider;
         tmp25 = _require;
       }
       if (null != tmp16) {

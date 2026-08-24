@@ -3,14 +3,13 @@ import messagesProxyDefault from "../GuildPowerups.messages.js";
 import closure_3 from "../../../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx");
 
 export default function useGuildPowerupTier3OverrideConfig(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   if (obj.useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
@@ -22,7 +21,7 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
     return true === hasItem;
   })) {
     obj = { shouldShow: true, text: null };
-    const intl = _getSystemLocale.intl;
+    const intl = require("../../../../intl/index.native.tsx").intl;
     obj[1] = intl.string(messagesProxyDefault.l9n4QZ);
   } else {
     obj = { shouldShow: false, text: "" };

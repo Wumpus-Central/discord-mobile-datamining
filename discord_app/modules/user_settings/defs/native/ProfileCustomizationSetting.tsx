@@ -17,7 +17,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return ProfileCustomizationSubsection.default;
+    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
   }
 };
 const route = createToggle.createRoute(obj);

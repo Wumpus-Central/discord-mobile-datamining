@@ -2,7 +2,6 @@
 import closure_2 from "../../../stores/CallStore.tsx";
 import closure_3 from "../ChannelRTCStore.tsx";
 import { ParticipantTypes } from "../CallConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
@@ -12,7 +11,7 @@ export default function useIsCallActive(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2, closure_3];
   const items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isCallActiveResult = closure_1_2.isCallActive(closure_0, closure_1);
     if (isCallActiveResult) {
       const participants = closure_1_3.getParticipants(closure_0);
@@ -34,7 +33,7 @@ export const useIsCallActiveNullable = function useIsCallActiveNullable(id) {
   dependencyMap = arg1;
   const items = [closure_2, closure_3];
   const items1 = [id, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let isCallActiveResult = closure_1_2.isCallActive(tmp, closure_1);

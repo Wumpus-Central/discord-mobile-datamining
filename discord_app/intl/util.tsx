@@ -1,14 +1,13 @@
 // discord_app/intl/util.tsx
 import closure_2 from "../../_runtime/00019_noop.js";
 import { items } from "../../_runtime/01296_items.js";
-import { messagesProxy } from "messages/en-US.messages.js";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
-  _require = _messagesProxy.default;
-  const found = _items.filter((enabled) => enabled.enabled);
+  _require = require("messages/en-US.messages.js").default;
+  const found = require("../../_runtime/01296_items.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };

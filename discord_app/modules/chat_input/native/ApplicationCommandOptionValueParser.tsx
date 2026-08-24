@@ -13,7 +13,6 @@ import closure_8 from "../../../stores/GuildRoleStore.tsx";
 import closure_9 from "../../../stores/RelationshipStore.tsx";
 import closure_10 from "../../../stores/UserStore.tsx";
 import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
-import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
 
 require = arg1;
 function getUsers(getGuildId) {
@@ -42,14 +41,14 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: arr(4984).computeChannelName(id, closure_10, closure_9) };
+      const obj = { id: id.id, text: arr(4989).computeChannelName(id, closure_10, closure_9) };
       return obj;
     });
   } else {
     dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(_NOOP.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(_NOOP.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
+    const tmp9Result = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -65,13 +64,13 @@ function getChannels(getGuildId, arr) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4984).computeChannelName(id, closure_1_10, closure_1_9);
-          const obj3 = arr(4984);
+          name = arr(4989).computeChannelName(id, closure_1_10, closure_1_9);
+          const obj3 = arr(4989);
         }
         let channelName = name;
       } else {
-        channelName = arr(4984).computeChannelName(id, closure_1_10, closure_1_9);
-        const obj2 = arr(4984);
+        channelName = arr(4989).computeChannelName(id, closure_1_10, closure_1_9);
+        const obj2 = arr(4989);
       }
       obj[1] = channelName;
       return obj;

@@ -3,12 +3,10 @@ import encodeProperties from "../../discord_common/js/packages/analytics-utils/A
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../stores/SurveyStore.tsx";
 import { SURVEY_REFETCH_INTERVAL } from "../stores/SurveyStore.tsx";
 import ME from "../Constants.tsx";
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 ({ AnalyticEvents: c5, NoticeTypes: closure_6, Endpoints: error } = ME);
@@ -63,7 +61,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
   };
   obj[2] = obj;
-  const obj2 = _modDef5227;
+  const obj2 = _modDef5232;
   obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
@@ -99,9 +97,9 @@ export const surveySeen = function surveySeen(key) {
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = _modDef5227;
+  const obj3 = _modDef5232;
   obj[1] = {
-    event: _encodeProperties.NetworkActionNames.USER_SURVEY_SEEN,
+    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
       let obj = key(closure_1_2[6]);
       obj = { key };
@@ -109,13 +107,13 @@ export const surveySeen = function surveySeen(key) {
     }
   };
   obj1 = {
-    event: _encodeProperties.NetworkActionNames.USER_SURVEY_SEEN,
+    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
       let obj = key(closure_1_2[6]);
       obj = { key };
       return obj.exact(obj);
     }
   };
-  obj[2] = _sendRequest.rejectWithMigratedError();
+  obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
   return obj3.post(obj);
 };

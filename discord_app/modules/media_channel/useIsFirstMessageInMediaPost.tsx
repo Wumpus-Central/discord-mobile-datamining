@@ -1,7 +1,6 @@
 // discord_app/modules/media_channel/useIsFirstMessageInMediaPost.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");
@@ -9,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/media_channel/useIs
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
   const items = [arg0];
-  return _defaultAreStatesEqual.useStateFromStores([], () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const channel_id = tmp.channel_id;

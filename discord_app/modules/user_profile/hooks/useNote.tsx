@@ -3,7 +3,6 @@ import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../notes/NoteStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function _fetchNote() {
@@ -25,7 +24,7 @@ function _fetchNote() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -114,7 +113,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useNote(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getNote(closure_0));
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

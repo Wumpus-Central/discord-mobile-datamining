@@ -40012,8 +40012,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4290).isBuildOverrideLink(type.target);
-      const obj = callback(4290);
+      tmp = !callback(4294).isBuildOverrideLink(type.target);
+      const obj = callback(4294);
     }
     return tmp;
   });
@@ -40022,8 +40022,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4364).isExperimentEmbedURL(type.target);
-      const obj = callback(4364);
+      tmp = !callback(4368).isExperimentEmbedURL(type.target);
+      const obj = callback(4368);
     }
     return tmp;
   });
@@ -40205,7 +40205,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _getEffectiveVideoProvider;
+            obj3 = getEffectiveVideoProvider;
           }
         } else {
           items2 = arr;
@@ -40309,16 +40309,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4290).isBuildOverrideLink(type.target);
-        const obj = callback(4290);
+        tmp = !callback(4294).isBuildOverrideLink(type.target);
+        const obj = callback(4294);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4364).isExperimentEmbedURL(type.target);
-        const obj = callback(4364);
+        tmp = !callback(4368).isExperimentEmbedURL(type.target);
+        const obj = callback(4368);
       }
       return tmp;
     });

@@ -7,12 +7,12 @@ let closure_4 = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
 
 export const useVideoQuestCaptions = (quest) => {
-  const questAsset = url(10486).getQuestAsset(quest, url(10486).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+  const questAsset = url(10525).getQuestAsset(quest, url(10525).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
   url = undefined;
   if (questAsset != null) {
     url = questAsset.url;
   }
-  let obj = url(10486);
+  let obj = url(10525);
   [tmp4, dependencyMap] = callback(React.useState(constants.NONE), 2);
   const captions = callback(React.useState(null), 2);
   callback = captions[1];

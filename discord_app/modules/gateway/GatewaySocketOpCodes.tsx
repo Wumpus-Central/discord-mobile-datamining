@@ -3,7 +3,6 @@ import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import Opcode from "GatewaySocketOpcode.tsx";
 import closure_3 from "../../stores/RTCRegionStore.tsx";
 import { EventEmitter } from "../../../_runtime/00652_EventEmitter.js";
-import { Opcode } from "GatewaySocketOpcode.tsx";
 
 require = arg1;
 class GatewaySocketOpCodes extends EventEmitter {
@@ -111,7 +110,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   if (_require > 0) {
     obj = { subscriptions: null };
     obj[0] = dependencyMap;
-    self.send(_Opcode.Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+    self.send(require("GatewaySocketOpcode.tsx").Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
   }
 };
 prototype["callConnect"] = function callConnect(channel_id) {

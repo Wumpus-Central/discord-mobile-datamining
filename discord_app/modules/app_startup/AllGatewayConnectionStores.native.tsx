@@ -52,6 +52,7 @@ import computeRolesForGuild from "../guild_role_subscriptions/SubscriptionRoleSt
 import scheduledEventSort from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import handleReset from "../guild_sidebar/ChannelListStore.tsx";
 import snapshotSelectedGuildId from "../guild_themes/GuildThemeRuntimeStore.tsx";
+import markAllStale from "../guilds_bar/GuildMediaStateStore.tsx";
 import harvestType from "../harvester/DataHarvestStore.tsx";
 import findOrCreateMessageRecord from "../inbox/RecentMentionsStore.tsx";
 import handleSetLocationMetadata from "../location_metadata/stores/LocationMetadataStore.tsx";
@@ -73,7 +74,7 @@ import resetStates from "../relationships/GuildFriendshipStore.tsx";
 import getState from "../replies/PendingReplyStore.tsx";
 import processMessage from "../replies/ReferencedMessageStore.tsx";
 import updateTtl from "../rewards/ProgramRewardsStore.tsx";
-import computeCallVerification from "../rtc/SecureFramesVerifiedStore.tsx";
+import getVoiceStatesForGuild from "../rtc/SecureFramesVerifiedStore.tsx";
 import getVoiceStatesForGuild from "../rtc/TransientKeyStore.tsx";
 import getVoiceStatesForGuild from "../saved_messages/SavedMessagesStore.tsx";
 import getVoiceStatesForGuild from "../scheduled_messages/ScheduledMessageStore.tsx";

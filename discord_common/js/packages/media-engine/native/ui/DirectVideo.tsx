@@ -5,23 +5,6 @@ import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 const logger = new require("log").Logger("DirectVideo");
 logger.enableNativeLogger(true);
-class RefCountedStream {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.refcount = 1;
-    obj.stream = window.createDiscordStream(global);
-    return obj;
-  }
-}
-const prototype = RefCountedStream.prototype;
-prototype["addref"] = function addref() {
-  this.refcount = this.refcount + 1;
-};
-prototype["release"] = function release() {
-  this.refcount = this.refcount - 1;
-  return 0 === this.refcount;
-};
-const map = new Map();
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
 
 export default function DirectVideo(streamId, onContainerResized) {
@@ -155,46 +138,14 @@ export default function DirectVideo(streamId, onContainerResized) {
       if (flag) {
         if (null != current.srcObject) {
           current.srcObject = null;
-          let value = store.get(current);
-          if (tmp16) {
-            let voiceEngine = streamId(onReady[3]).getVoiceEngine();
-            let result = voiceEngine.removeDirectVideoOutputSink(tmp15);
-            obj4.delete(tmp15);
-            const obj6 = streamId(onReady[3]);
-          }
-          obj4 = store;
-          tmp16 = null != value && value.release();
         }
       } else {
         const _HermesInternal = HermesInternal;
         ref.info("attaching srcObject for " + current);
-        value = store.get(current);
-        if (null == value) {
-          if (typeof ref !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          const obj = Object.create(ref.prototype);
-          obj.refcount = 1;
-          const _window = window;
-          obj.stream = window.createDiscordStream(tmp2);
-          const voiceEngine1 = streamId(onReady[3]).getVoiceEngine();
-          const result1 = voiceEngine1.addDirectVideoOutputSink(tmp2);
-          const result2 = store.set(tmp2, obj);
-          value = obj;
-          const obj2 = streamId(onReady[3]);
-          const tmp7 = ref;
-        } else {
-          value.addref();
-        }
-        current.srcObject = value.stream;
+        const result = streamId(onReady[3]).acquireDirectVideoStream(current);
+        current.srcObject = result.stream;
         return () => {
-          const value = closure_7.get(current);
-          if (tmp2) {
-            const voiceEngine = streamId(onReady[3]).getVoiceEngine();
-            const result = voiceEngine.removeDirectVideoOutputSink(tmp);
-            closure_7.delete(tmp);
-            const obj3 = streamId(onReady[3]);
-          }
+          closure_1.release();
           current.srcObject = null;
         };
       }

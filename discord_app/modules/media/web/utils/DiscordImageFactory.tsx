@@ -1,6 +1,6 @@
 // discord_app/modules/media/web/utils/DiscordImageFactory.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import detectFile from "../../../../../_runtime/04880_detectFile.js";
+import detectFile from "../../../../../_runtime/04885_detectFile.js";
 import create from "DiscordImagePng.tsx";
 
 const result = set.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");

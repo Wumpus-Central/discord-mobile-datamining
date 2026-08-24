@@ -6,7 +6,6 @@ import closure_5 from "../../../../stores/AppliedGuildBoostStore.tsx";
 import closure_6 from "../../../../stores/GuildMemberRequesterStore.tsx";
 import closure_7 from "../../../../stores/GuildMemberStore.tsx";
 import closure_8 from "../../../../stores/GuildStore.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
@@ -96,7 +95,7 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
   const date = new Date(obj.extractTimestamp(boost.id));
   const items = [closure_7];
   const items1 = [boost];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const member = closure_1_7.getMember(boost.guildId, boost.userId);
     let nick = closure_1_7.getNick(boost.guildId, boost.userId);
     if (nick == null) {

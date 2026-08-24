@@ -28,11 +28,11 @@ export default function useIsPrivateAudioOnlyCall(id) {
     }, items1, areParticipantStatesEqual), 1)[0]);
   }
   dependencyMap = tmp3;
-  obj = _initialize;
+  obj = initialize;
   const tmp = _require;
   const items2 = [closure_7, closure_6, closure_5];
   const items3 = [id, tmp3];
-  return _initialize.useStateFromStores(items2, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
       isPrivateResult = !closure_1_7.hasVideo(tmp.id);

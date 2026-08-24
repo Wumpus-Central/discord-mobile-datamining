@@ -1,7 +1,6 @@
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "ApplicationStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
@@ -31,7 +30,7 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [closure_4];
-  return _initialize.useStateFromStoresArray(items1, () => items1.map((arg0) => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
       application = application.getApplication(arg0);

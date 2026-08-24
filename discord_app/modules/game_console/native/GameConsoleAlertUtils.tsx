@@ -1,11 +1,10 @@
 // discord_app/modules/game_console/native/GameConsoleAlertUtils.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4662 from "../../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../../stores/MediaEngineStore.tsx";
 import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "../GameConsoleConstants.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 const require = arg1;
@@ -16,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/game_console/native/G
 export default {
   maybeShowPTTAlert(XBOX) {
     if (mode.getMode() === constants.PUSH_TO_TALK) {
-      if (!obj2.UNSAFE_isDismissibleContentDismissed(_DismissibleContent.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
+      if (!obj2.UNSAFE_isDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
         let obj = {};
         let intl = tmp10(1236).intl;
         obj[constants2.XBOX] = intl.string(tmp10(1236).t.bVZ7vy);
@@ -43,17 +42,17 @@ export default {
         }
         return resolved;
       }
-      obj2 = _UNSAFE_isDismissibleContentDismissed;
+      obj2 = UNSAFE_isDismissibleContentDismissed;
     }
     return Promise.resolve();
   },
   showSelfDismissableAlert(reconnectPlatformType) {
     reconnectPlatformType = reconnectPlatformType.reconnectPlatformType;
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
-    let obj = _modDef4656;
+    let obj = _modDef4662;
     obj = { title, body: null, onConfirm: null };
-    obj = { body, errorCodeMessage, dismissCallback: _modDef4656.close };
-    obj[1] = jsx(reconnectPlatformType(9850).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4656.close });
+    obj = { body, errorCodeMessage, dismissCallback: _modDef4662.close };
+    obj[1] = jsx(reconnectPlatformType(9889).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4662.close });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

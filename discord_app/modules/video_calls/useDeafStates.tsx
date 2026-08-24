@@ -2,7 +2,6 @@
 import closure_2 from "../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../stores/MediaEngineStore.tsx";
 import closure_4 from "../../stores/VoiceStateStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
@@ -11,7 +10,7 @@ export default function useDeafStates(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_3, closure_2];
   const items1 = [arg0];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let obj = closure_0;
     if (closure_1_4 !== undefined) {
       if (obj3 !== undefined) {

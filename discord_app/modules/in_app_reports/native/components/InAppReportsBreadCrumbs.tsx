@@ -4,9 +4,6 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { set } from "../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -55,12 +52,12 @@ export default function Breadcrumbs(element) {
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp2.container;
-        let map = _Text.Text;
+        let map = require("../../../../design/components/Text/native/Text.tsx").Text;
         obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         obj[0] = tmp2.title;
-        const REPORT_TO_MOD = _set.ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = require("../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
-        const intl = _getSystemLocale.intl;
+        const intl = require("../../../../intl/index.native.tsx").intl;
         const string = intl.string;
         if (hasItem) {
           let stringResult = string(_6mx_DP);

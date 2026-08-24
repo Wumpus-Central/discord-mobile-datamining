@@ -65,13 +65,13 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj1[6] = giftIntentType;
         ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = callback(theme));
         const tmp6 = callback(theme);
-        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4311));
+        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4315));
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
         const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8295));
+        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8335));
         const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8296));
+        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8336));
         const intl4 = getSystemLocale.intl;
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;

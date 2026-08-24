@@ -3,7 +3,7 @@ import set from "../../_runtime/00002_set.js";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import coerceMainRoute from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import uniqueIdDefault from "../../_runtime/05261_uniqueId.js";
+import uniqueIdDefault from "../../_runtime/05266_uniqueId.js";
 import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 
@@ -38,7 +38,7 @@ export default {
     }
     closure_3 = tmp;
     const _require = navigationParams;
-    const rootNavigationRef = _getRootNavigationRef.getRootNavigationRef();
+    const rootNavigationRef = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx").getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
         if (closure_1_1 instanceof Promise) {
@@ -49,7 +49,7 @@ export default {
         nextPromise.then((arg0) => self.push(arg0, closure_2, closure_3, closure_0));
       }
     }
-    const obj = _getRootNavigationRef;
+    const obj = getRootNavigationRef;
     return new Promise((arg0) => {
       closure_0 = arg0;
       return callback(table[6]).enqueue(() => callback(closure_1_4.pushLazy(closure_1_1, closure_1_2, closure_1_3, callback)));

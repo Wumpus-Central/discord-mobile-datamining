@@ -61,7 +61,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
   const tmp = callback4();
   const tmp2 = callback6();
-  let obj = _map;
+  let obj = map;
   const diff = useWindowDimensionsDefault().width - 2 * obj.useToken(ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
   [tmp5, c0] = callback(React.useState(undefined), 2);
   callback = React.useCallback((nativeEvent) => {

@@ -5,6 +5,7 @@ import PermissionOverwriteType from "../../flow/Server.tsx";
 import messagesProxyDefault from "AgeAssurance.messages.js";
 import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import isManualAgeAssuranceFallbackEnabled from "ManualAgeAssuranceFallbackExperiment.tsx";
 import apexExperiment from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,19 +49,20 @@ function useAgeVerificationRunner(onComplete) {
   current = current.useRef(prop).current;
   const items1 = [current];
   callback = obj.useCallback(() => {
-    obj = entryPoint(flag[19]);
+    obj = entryPoint(flag[20]);
     obj = { type: "CLOSE_AGE_VERIFICATION_MODAL", status: current };
     obj.dispatch(obj);
   }, items1);
   _require = undefined;
-  _require = onMethodUnavailable((arg0) => {
+  _require = onMethodUnavailable((arg0, arg1) => {
     closure_0 = arg0;
-    c5 = 0;
+    closure_1 = arg1;
     c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (v02 === 2) {
-        v02 = 3;
+    c7 = 0;
+    c5 = 0;
+    return (function*(arg0, arg1) {
+      if (c7 === 2) {
+        c7 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp8 === 3) {
         if (arg0 === 1) {
@@ -70,100 +72,111 @@ function useAgeVerificationRunner(onComplete) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v02 = 2;
-          if (0 === c5) {
+          c7 = 2;
+          if (0 === v0) {
             if (arg0 === 1) {
-              v02 = 3;
+              c7 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v02 = 3;
+              c7 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              closure_2 = tmp4;
-              closure_1 = tmp6;
-              let lib;
-              v0(true);
-              v0 = 2;
-              entryPoint(flag[19]).dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-              c5 = 3;
-              v02 = 1;
+              closure_3 = tmp4;
+              closure_2 = tmp6;
+              const lib = closure_1;
+              closure_1 = undefined;
+              closure_1_4(true);
+              c5 = 2;
+              entryPoint(flag[20]).dispatch({ type: "INITIATE_AGE_VERIFICATION" });
+              v0 = 3;
+              c7 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = lib();
               return obj1;
             }
           } else if (1 === tmp9) {
-            v0 = 0;
-            v0(false);
-            throw closure_3;
+            c5 = 0;
+            closure_1_4(false);
+            throw closure_4;
           } else {
             if (2 === tmp9) {
-              v0 = 1;
-              closure_1 = closure_3;
-              v02();
+              c5 = 1;
+              closure_2 = closure_4;
+              v0();
               if (null != closure_1_3) {
                 let code;
-                if (closure_1_1 != null) {
-                  const body = closure_1_1.body;
+                if (closure_1_2 != null) {
+                  const body = closure_1_2.body;
                   if (body != null) {
                     code = body.code;
                   }
                 }
                 if (code === closure_2_13.AGE_VERIFICATION_METHOD_UNAVAILABLE) {
-                  let obj3 = entryPoint(flag[21]);
-                  obj3.showFailedToast(closure_2_16.AGE_VERIFICATION_METHOD_UNAVAILABLE);
+                  entryPoint(flag[22]).showFailedToast(closure_2_16.AGE_VERIFICATION_METHOD_UNAVAILABLE);
                   closure_1_3();
+                  const obj5 = entryPoint(flag[22]);
                 }
-                v0 = 0;
-                v0(false);
-                v02 = 3;
+                c5 = 0;
+                closure_1_4(false);
+                c7 = 3;
               }
-              let obj2 = entryPoint(flag[21]);
-              obj2.showFailedToast(closure_2_16.TIGGER_PAWTECT_ERROR);
+              entryPoint(flag[22]).showFailedToast(closure_2_16.TIGGER_PAWTECT_ERROR);
+              const obj4 = entryPoint(flag[22]);
             } else if (arg0 === 1) {
-              v02 = 3;
+              c7 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              lib = arg1;
-              obj2 = { webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, onClose: null, onCancel: null, entryPoint: null, shouldShowExpressiveModal: null };
-              obj2[0] = lib.verification_webview_url;
-              obj2[1] = lib.verification_request_id;
-              obj2[2] = lib.verification_vendor_name;
-              obj2[3] = lib.incode_parameters;
-              obj2[4] = lib;
-              obj2[5] = v02;
-              obj2[6] = v02;
-              obj2[7] = closure_1_1;
-              obj2[8] = closure_1_2;
-              if (false === obj9.showAgeVerification(obj2)) {
-                obj = entryPoint(flag[21]);
-                obj.showFailedToast(closure_2_16.TIGGER_PAWTECT_ERROR);
-                v02();
+              closure_1 = arg1;
+              let method;
+              if (lib != null) {
+                method = lib.method;
               }
-              v0 = 1;
-              obj9 = entryPoint(flag[20]);
+              obj = { method: null, externalWindow: null, webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, onClose: null, onCancel: null, entryPoint: null, shouldShowExpressiveModal: null };
+              obj[0] = method;
+              let externalWindow;
+              if (lib != null) {
+                externalWindow = lib.externalWindow;
+              }
+              obj[1] = externalWindow;
+              obj[2] = closure_1.verification_webview_url;
+              obj[3] = closure_1.verification_request_id;
+              obj[4] = closure_1.verification_vendor_name;
+              obj[5] = closure_1.incode_parameters;
+              obj[6] = lib;
+              obj[7] = v0;
+              obj[8] = v0;
+              obj[9] = closure_1;
+              obj[10] = closure_1_2;
+              if (false === obj10.showAgeVerification(obj)) {
+                obj1 = entryPoint(flag[22]);
+                obj1.showFailedToast(closure_2_16.TIGGER_PAWTECT_ERROR);
+                v0();
+              }
+              c5 = 1;
+              obj10 = entryPoint(flag[21]);
             }
-            v0 = 0;
-            v0(false);
-            v02 = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            c5 = 0;
+            closure_1_4(false);
+            c7 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
           }
-        } catch (tmp57) {
-          closure_3 = tmp57;
-          if (tmp5 === v0) {
-            v02 = tmp3;
-            throw tmp57;
-          } else if (tmp2 === tmp59) {
-            c5 = tmp2;
+        } catch (tmp72) {
+          closure_4 = tmp72;
+          if (tmp5 === c5) {
+            c7 = tmp3;
+            throw tmp72;
+          } else if (tmp2 === tmp74) {
+            v0 = tmp2;
           } else {
-            c5 = tmp;
+            v0 = tmp;
           }
         }
       }
@@ -187,7 +200,7 @@ function useAgeVerificationRunner(onComplete) {
 }
 function useShouldCallReactiveCheck() {
   const items = [closure_10];
-  const stateFromStores = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
@@ -201,8 +214,8 @@ function useShouldCallReactiveCheck() {
     tmp5 = prop1 !== tmp(1954).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(4072);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5039).AgeGatedFeature.REACTIVE_CHECK);
+  let tmpResult = tmp(4075);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5044).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -234,7 +247,7 @@ function shouldCallReactiveCheck() {
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5039).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5044).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -256,7 +269,7 @@ function _maybePerformReactiveCheck() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +286,7 @@ function _maybePerformReactiveCheck() {
           } else {
             let tmp5 = null;
             if (closure_1_23()) {
-              let obj2 = v0(closure_1_2[26]);
+              let obj2 = v0(closure_1_2[27]);
               c1 = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
@@ -320,7 +333,7 @@ let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);
 const set1 = new Set(items1);
 let obj = { CTAS: "ctas", CONTENT_TYPE: "content_type" };
-obj = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen" };
+obj = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", REQUEST_MANUAL_REVIEW: "request_manual_review" };
 result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationUtils.tsx");
 
 export const ageGateSourceHasLightboxBackdrop = function ageGateSourceHasLightboxBackdrop(arg0) {
@@ -334,7 +347,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5039).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5044).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
       tmp8 = prop !== tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -387,8 +400,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5039).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5039).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5044).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5044).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1954).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };
@@ -472,6 +485,34 @@ export const isAgeVerificationMessageWithRetryCta = function isAgeVerificationMe
               const str = found.rawValue;
             }
             return hasItem;
+          }
+        }
+      }
+    }
+  }
+  return false;
+};
+export const isAgeVerificationMessageWithManualReviewCta = function isAgeVerificationMessageWithManualReviewCta(arg0, arg1) {
+  const message = store.getMessage(arg0, arg1);
+  if (null != message) {
+    if (null != message.embeds) {
+      if (0 !== message.embeds.length) {
+        if (null != message.embeds[0].fields) {
+          if (message.embeds[0].type === constants.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+            const fields = message.embeds[0].fields;
+            const found = fields.find((rawName) => rawName.rawName === constants.CTAS);
+            let hasItem;
+            if (found != null) {
+              const parts = found.rawValue.split(",");
+              hasItem = parts.includes(obj.REQUEST_MANUAL_REVIEW);
+              const str = found.rawValue;
+            }
+            let result = true === hasItem;
+            if (result) {
+              result = isManualAgeAssuranceFallbackEnabled.isManualAgeAssuranceFallbackEnabled("isAgeVerificationMessageWithManualReviewCta");
+              const obj2 = isManualAgeAssuranceFallbackEnabled;
+            }
+            return result;
           }
         }
       }
@@ -564,7 +605,7 @@ export const useInitiateAgeVerification = function useInitiateAgeVerification(sh
       closure_0 = arg0;
       startVerification = arg1;
       return startVerification(() => {
-        obj = classificationId(closure_2_2[22]);
+        obj = classificationId(closure_2_2[23]);
         obj = { method: closure_0, classificationId: closure_0, vendor: closure_1 };
         return obj.requestAgeVerification(obj);
       });
@@ -578,19 +619,18 @@ export const useInitiateAgeVerificationV2 = function useInitiateAgeVerificationV
   startVerification = tmp.startVerification;
   obj = {
     loading: tmp.loading,
-    initiateAgeVerificationV2: React.useCallback((arg0, arg1) => {
+    initiateAgeVerificationV2: React.useCallback((arg0) => {
       startVerification = arg0;
-      closure_1 = arg1;
-      return startVerification(() => callback(closure_1_2[22]).initiateAgeVerificationV2(callback, closure_1));
+      return startVerification(() => lib(closure_1_2[23]).initiateAgeVerificationV2(lib.method, lib.vendor), arg0);
     }, items)
   };
   items = [startVerification];
   return obj;
 };
-export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificationStatusChange(callback1) {
-  const _require = callback1;
+export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificationStatusChange(callback) {
+  const _require = callback;
   const items = [closure_10];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -599,13 +639,13 @@ export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificat
     return prop;
   });
   const tmp2 = usePreviousDefault(stateFromStores);
-  obj = _initialize;
+  obj = initialize;
   const items1 = [closure_8];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
-  const obj2 = _initialize;
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => null != closure_8.getSuspendedUserToken());
+  const obj2 = initialize;
   const items2 = [closure_8];
   let tmp5 = null != tmp2;
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => closure_8.isAuthenticated());
+  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_8.isAuthenticated());
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }
@@ -618,14 +658,14 @@ export const useWatchAgeVerificationStatusChange = function useWatchAgeVerificat
     tmp6 = !stateFromStores2;
   }
   dependencyMap = tmp6;
-  const items3 = [callback1, tmp5, tmp6];
+  const items3 = [callback, tmp5, tmp6];
   const effect = React.useEffect(() => {
     let tmp = closure_1;
     if (!closure_1) {
       tmp = closure_2;
     }
     if (tmp) {
-      callback1();
+      callback();
     }
   }, items3);
 };
@@ -636,37 +676,53 @@ export const isFullscreenAgeVerificationEntryPoint = function isFullscreenAgeVer
   }
   return hasItem;
 };
-export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetStartedTitle(entryPoint) {
+export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetStartedTitle(entryPoint, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
   const hasItem = set.has(entryPoint);
   const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
   if (hasItem) {
-    let stringResult = string(t.lSWVTM);
+    let stringResult = string(tmp2(1236).t.lSWVTM);
+  } else if (flag) {
+    stringResult = string(messagesProxyDefault["/kgWIg"]);
   } else {
-    stringResult = string(t.xYXsr6);
+    stringResult = string(tmp2(1236).t.xYXsr6);
   }
   return stringResult;
 };
-export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationGetStartedSubtitle(entryPoint, arg1, isSuspendedUser) {
+export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationGetStartedSubtitle(entryPoint, arg1, isSuspendedUser, arg3) {
   let flag = isSuspendedUser;
   if (isSuspendedUser === undefined) {
     flag = false;
   }
   if (set.has(entryPoint)) {
-    const intl4 = getSystemLocale.intl;
-    let stringResult = intl4.string(getSystemLocale.t["S/xS/w"]);
+    const intl5 = getSystemLocale.intl;
+    let stringResult = intl5.string(getSystemLocale.t["S/xS/w"]);
   } else if (flag) {
-    const intl3 = getSystemLocale.intl;
-    stringResult = intl3.string(messagesProxyDefault.h7qzoa);
-  } else if (null != arg1) {
-    const intl2 = getSystemLocale.intl;
-    obj = { handleOnHelpUrlHook: null };
-    obj[0] = arg1;
-    stringResult = intl2.format(messagesProxyDefault.RpMIT0, obj);
+    const intl4 = getSystemLocale.intl;
+    stringResult = intl4.string(messagesProxyDefault.h7qzoa);
   } else {
-    const intl = getSystemLocale.intl;
-    stringResult = intl.string(getSystemLocale.t.HxS3oQ);
+    if (null != arg1) {
+      if (null != arg3) {
+        const intl3 = getSystemLocale.intl;
+        obj = { handleOnHelpUrlHook: null, handleOnTrustedProvidersHook: null };
+        obj[0] = arg1;
+        obj[1] = arg3;
+        stringResult = intl3.format(messagesProxyDefault["+Ft5ch"], obj);
+      }
+    }
+    if (null != arg1) {
+      const intl2 = getSystemLocale.intl;
+      obj = { handleOnHelpUrlHook: null };
+      obj[0] = arg1;
+      stringResult = intl2.format(messagesProxyDefault.RpMIT0, obj);
+    } else {
+      const intl = getSystemLocale.intl;
+      stringResult = intl.string(getSystemLocale.t.HxS3oQ);
+    }
   }
   return stringResult;
 };
@@ -682,8 +738,8 @@ export const useMaybePerformReactiveCheckForSource = function useMaybePerformRea
       hasItem = closure_1_15.has(NSFW_SERVER);
     }
     if (hasItem) {
-      NSFW_SERVER(closure_1_2[26]).fetchReactiveCheckResult();
-      obj = NSFW_SERVER(closure_1_2[26]);
+      NSFW_SERVER(closure_1_2[27]).fetchReactiveCheckResult();
+      obj = NSFW_SERVER(closure_1_2[27]);
     }
   }, items);
 };

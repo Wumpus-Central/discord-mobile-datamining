@@ -8,19 +8,19 @@ const result = set.fileFinishedImporting("modules/premium/roadblocks/native/util
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
   if (keys.UpsellTypes.UPLOAD === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
+    openPremiumUpsellActionSheetDefault(tmp(8521).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
   } else if (tmp(691).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+    openPremiumUpsellActionSheetDefault(tmp(8521).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
     return true;
   } else if (tmp(691).UpsellTypes.ANIMATED_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.ANIMATED_EMOJIS);
+    openPremiumUpsellActionSheetDefault(tmp(8521).EntitlementFeatureNames.ANIMATED_EMOJIS);
     return true;
   } else if (tmp(691).UpsellTypes.SOUNDBOARD === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
+    openPremiumUpsellActionSheetDefault(tmp(8521).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
     return true;
   } else if (tmp(691).UpsellTypes.STREAM_HIGH_QUALITY === initialUpsellKey) {
-    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.STREAM_HIGH_QUALITY);
+    openPremiumUpsellActionSheetDefault(tmp(8521).EntitlementFeatureNames.STREAM_HIGH_QUALITY);
     return true;
   } else {
     return false;

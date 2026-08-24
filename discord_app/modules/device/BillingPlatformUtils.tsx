@@ -22,3 +22,6 @@ export const isCollectibleGiftingSupported = function isCollectibleGiftingSuppor
 export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
   return !isMetaQuest.isMetaQuest();
 };
+export const isSocialLayerStorefrontPurchaseSupported = function isSocialLayerStorefrontPurchaseSupported() {
+  return !isMetaQuest.isMetaQuest();
+};

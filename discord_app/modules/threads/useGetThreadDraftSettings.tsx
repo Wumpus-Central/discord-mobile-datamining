@@ -1,6 +1,5 @@
 // discord_app/modules/threads/useGetThreadDraftSettings.tsx
 import closure_3 from "../../stores/DraftStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/threads/useGetThrea
 export default function useGetThreadDraftSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);
@@ -25,7 +24,7 @@ export default function useGetThreadDraftSettings(arg0) {
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let threadSettings = closure_1_3.getThreadSettings(tmp);

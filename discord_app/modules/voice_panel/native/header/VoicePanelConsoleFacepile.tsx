@@ -7,7 +7,6 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { PlatformTypes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 
 require = arg1;
 function getConsoleInfo(type) {
@@ -60,6 +59,6 @@ export default function VoicePanelConsoleFacepile() {
     obj[1] = closure_1_5(lib(closure_1_2[10]).Icon, obj);
     return closure_1_5(lib2(closure_1_2[9]), obj);
   }, items1);
-  return jsx(_Button.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(require("../../../../design/void/native.tsx").SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };
 export { getConsoleInfo };

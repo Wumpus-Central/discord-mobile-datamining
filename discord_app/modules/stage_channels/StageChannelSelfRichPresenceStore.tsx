@@ -49,7 +49,7 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6703).StageChannelParticipantNamedIndex.SPEAKER);
+              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6740).StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
@@ -71,11 +71,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4984);
+                let tmp12Result = tmp12(4989);
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(4988);
+              tmp12Result = tmp12(4993);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {
@@ -166,9 +166,9 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
     voiceStates = voiceStates.voiceStates;
     let _require;
     if (null != c17) {
-      const result = _unpackStageChannelParty.unpackStageChannelParty(c17);
+      const result = require("StageChannelRichPresenceUtils.tsx").unpackStageChannelParty(c17);
       _require = result;
-      const obj = _unpackStageChannelParty;
+      const obj = unpackStageChannelParty;
       if (tmp5) {
         handleUpdateActivity();
       }

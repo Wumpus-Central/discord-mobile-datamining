@@ -19,7 +19,6 @@ import closure_10 from "FavoriteStore.tsx";
 import ME from "../../Constants.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import date from "FavoritesConstants.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 function getNextPositionFromChannels(arg0) {
@@ -151,7 +150,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(9982)(limit);
+    tmp(10021)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -160,8 +159,8 @@ function showLimitReachedAlert(limit) {
     obj = { count: null };
     obj[0] = limit;
     obj[1] = intl2.formatToPlainString(getSystemLocale.t.JaIyFi, obj);
-    tmp(4827).show(obj);
-    const tmpResult = tmp(4827);
+    tmp(4832).show(obj);
+    const tmpResult = tmp(4832);
   }
 }
 function onSaveFailed(status) {
@@ -254,7 +253,7 @@ function _addFavoriteChannelsToParent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -480,7 +479,7 @@ function _addFavoriteChannels() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -536,7 +535,7 @@ function _addFavoriteChannels() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c5 = tmp;
@@ -644,7 +643,7 @@ function _addFavoriteCategory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -781,7 +780,7 @@ function _addFavoriteChannelsToCategory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -834,7 +833,7 @@ function _addFavoriteChannelsToCategory() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c4 = tmp;
@@ -885,8 +884,8 @@ export const setFavoriteChannelNickname = function setFavoriteChannelNickname(ca
     if (batched === undefined) {
       batched = false;
     }
-    const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-    const UserSettingsDelay = _updateUserGuildSettings.UserSettingsDelay;
+    const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+    const UserSettingsDelay = require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay;
     const tmp3 = batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION;
     PreloadedUserSettingsActionCreators.updateAsync("favorites", update, tmp3, onSaveFailed);
   }
@@ -917,7 +916,7 @@ export const removeFavoriteCategory = function removeFavoriteCategory(closure_0)
 export const setFavoriteCategoriesCollapsed = function setFavoriteCategoriesCollapsed(arg0, id) {
   const _require = arg0;
   closure_1 = id;
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("favorites", function update(favoriteChannels) {
     let tmp = closure_1;
     if (null != closure_1) {
@@ -928,7 +927,7 @@ export const setFavoriteCategoriesCollapsed = function setFavoriteCategoriesColl
       keys = Object.keys(favoriteChannels.favoriteChannels);
     }
     tmp = keys[Symbol.iterator]();
-  }, _updateUserGuildSettings.UserSettingsDelay.FREQUENT_USER_ACTION, onSaveFailed);
+  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.FREQUENT_USER_ACTION, onSaveFailed);
 };
 export const updateFavoriteChannels = function updateFavoriteChannels(dnDUpdates) {
   const _require = dnDUpdates;
@@ -966,8 +965,8 @@ export const updateFavoriteChannels = function updateFavoriteChannels(dnDUpdates
     if (batched === undefined) {
       batched = false;
     }
-    const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-    const UserSettingsDelay = _updateUserGuildSettings.UserSettingsDelay;
+    const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+    const UserSettingsDelay = require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay;
     let tmp3 = batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION;
     PreloadedUserSettingsActionCreators.updateAsync("favorites", update, tmp3, onSaveFailed);
   }
@@ -1004,8 +1003,8 @@ export const updateFavoriteChannelParent = function updateFavoriteChannelParent(
   if (batched === undefined) {
     batched = false;
   }
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-  const UserSettingsDelay = _updateUserGuildSettings.UserSettingsDelay;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const UserSettingsDelay = require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay;
   PreloadedUserSettingsActionCreators.updateAsync("favorites", update, batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION, onSaveFailed);
 };
 export const toggleFavoriteGuildMuted = function toggleFavoriteGuildMuted() {
@@ -1074,8 +1073,8 @@ export const setFavoritesGuildVisibility = function setFavoritesGuildVisibility(
   if (batched === undefined) {
     batched = false;
   }
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-  const UserSettingsDelay = _updateUserGuildSettings.UserSettingsDelay;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const UserSettingsDelay = require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay;
   PreloadedUserSettingsActionCreators.updateAsync("favorites", update, batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION, onSaveFailed);
 };
 export const setFavoritesGuildVisibilityFromSettings = function setFavoritesGuildVisibilityFromSettings(arg0) {
@@ -1101,8 +1100,8 @@ export const setFavoritesGuildVisibilityFromSettings = function setFavoritesGuil
   if (batched === undefined) {
     batched = false;
   }
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
-  const UserSettingsDelay = _updateUserGuildSettings.UserSettingsDelay;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const UserSettingsDelay = require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay;
   PreloadedUserSettingsActionCreators.updateAsync("favorites", update, batched ? UserSettingsDelay.FREQUENT_USER_ACTION : UserSettingsDelay.INFREQUENT_USER_ACTION, onSaveFailed);
   let isFavoritesGuildIdResult = !arg0;
   if (!arg0) {

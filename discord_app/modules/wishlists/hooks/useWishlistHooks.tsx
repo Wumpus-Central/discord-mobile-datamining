@@ -7,7 +7,6 @@ import closure_7 from "../../../stores/AuthenticationStore.tsx";
 import closure_8 from "../../../stores/UserStore.tsx";
 import closure_9 from "../WishlistStore.tsx";
 import { getWishlistSkuIds } from "../records/WishlistRecord.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getUserWishlistKey(arg0, arg1) {
@@ -240,7 +239,7 @@ export const useIsSkuInWishlist = function useIsSkuInWishlist(stateFromStores, s
   const _require = stateFromStores;
   closure_1 = skuId;
   const items = [closure_9];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
       hasSkuIdResult = closure_1_9.hasSkuId(tmp, closure_1);

@@ -23,7 +23,7 @@ function _openSafetyFlow() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -105,6 +105,8 @@ function _openSafetyFlow() {
                       let UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.AGE_VERIFICATION;
                     } else if (closure_1.task_type === tmp(tmp2[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
                       UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
+                    } else if (closure_1.task_type === tmp(tmp2[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
+                      UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION;
                     } else if (null != tmp(tmp2[3]).TASK_TYPE_TO_SCREENS[closure_1.task_type]) {
                       UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.OVERVIEW;
                     } else {
@@ -123,7 +125,7 @@ function _openSafetyFlow() {
               }
               constants = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             c7 = 3;
           }

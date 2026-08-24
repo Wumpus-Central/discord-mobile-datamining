@@ -6,12 +6,12 @@ import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16920_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/16923_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../_runtime/16924_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../_runtime/16925_registerAsset.js";
-import registerAssetDefault5 from "../../../../../../_runtime/16926_registerAsset.js";
-import registerAssetDefault6 from "../../../../../../_runtime/16927_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/17013_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/17016_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/17017_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/17018_registerAsset.js";
+import registerAssetDefault5 from "../../../../../../_runtime/17019_registerAsset.js";
+import registerAssetDefault6 from "../../../../../../_runtime/17020_registerAsset.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "../../../GuildRoleSubscriptionsConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -63,9 +63,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(16921);
+    let tmpResult = tmp(17014);
   } else {
-    tmpResult = tmp(16922);
+    tmpResult = tmp(17015);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

@@ -36,7 +36,7 @@ class MonitoringAgent {
 const prototype = MonitoringAgent.prototype;
 prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUNT) {
   let tags = name.tags;
-  obj = { name: name.name, type: COUNT, tags: obj(5010).getGlobalTagsArray() };
+  obj = { name: name.name, type: COUNT, tags: obj(5015).getGlobalTagsArray() };
   if (null != tags) {
     const item = tags.forEach((arg0) => {
       const tags = obj.tags;
@@ -59,10 +59,10 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
     const _HermesInternal = HermesInternal;
     tags1.push("platform:" + str);
   }
-  const CurrentReleaseChannel = tmp(5007).CurrentReleaseChannel;
+  const CurrentReleaseChannel = tmp(5012).CurrentReleaseChannel;
   let tmp9 = null;
   if (null != CurrentReleaseChannel) {
-    const ALL = tmp(5008).ReleaseChannelsSets.ALL;
+    const ALL = tmp(5013).ReleaseChannelsSets.ALL;
     tmp9 = null;
     if (ALL.has(CurrentReleaseChannel)) {
       tmp9 = CurrentReleaseChannel;
@@ -119,7 +119,7 @@ prototype["_flush"] = function _flush() {
     obj[0] = Endpoints.METRICS_V2;
     obj = { metrics: null, client_info: null };
     obj[0] = items;
-    obj[1] = { built_at: "1786771171113", build_number: "6244" };
+    obj[1] = { built_at: "1787548775098", build_number: "6266" };
     obj[1] = obj;
     HTTP.post(obj).catch(() => {
       if (self._metrics.length + items.length < 100) {

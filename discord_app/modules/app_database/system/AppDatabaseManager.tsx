@@ -5,8 +5,6 @@ import databaseNameDefault from "DatabaseManager.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import set from "../../../../_runtime/00002_set.js";
-import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 
 const require = arg1;
 let closure_5 = new timestampDefault("AppDatabaseManager");
@@ -69,7 +67,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === _index.DatabaseState.Open) {
+        if (stateResult === require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -136,7 +134,7 @@ AppDatabaseManager["register"] = function register(arg0, arr) {
     return items;
   })), () => {
 
-  }, _dispatcher.DispatchBand.Database);
+  }, require("../../../Dispatcher.tsx").DispatchBand.Database);
   const fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
     const items = [arg0, closure_0];
     return items;

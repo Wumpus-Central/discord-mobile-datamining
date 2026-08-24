@@ -2,7 +2,6 @@
 import set from "../../../_runtime/00002_set.js";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import identity from "../../../_runtime/00700_identity.js";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {
@@ -66,7 +65,7 @@ export const useChannelPollInteractions = function useChannelPollInteractions(ar
 };
 export const clearChannelPollState = function clearChannelPollState(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_4.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
       pollsByMessageId = undefined;
@@ -90,7 +89,7 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
 export const clearPollState = function clearPollState(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_4.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
       let obj = pollsByChannelId[closure_0];

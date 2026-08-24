@@ -2,7 +2,7 @@
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import addVersionedDismissedContent from "../dismissible_content/DismissibleContentUtils.tsx";
-import _modDef8666 from "../../actions/ChannelRTCActionCreators.tsx";
+import _modDef8703 from "../../actions/ChannelRTCActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { getOrFetchApplicationCommandIndexForTarget as closure_4 } from "../application_commands/ApplicationCommandIndexStore.tsx";
 import closure_5 from "../applications/ApplicationStore.tsx";
@@ -48,7 +48,7 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -212,12 +212,12 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                     throwTypeErrorResult = currentUser;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    let PRIVATE_CHANNEL2 = callback(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+                    let PRIVATE_CHANNEL2 = callback(8775).EmbeddedActivityLocationKind.GUILD_CHANNEL;
                   } else {
                     throwTypeErrorResult = currentUser;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    PRIVATE_CHANNEL2 = callback(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+                    PRIVATE_CHANNEL2 = callback(8775).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
                   }
                   obj3[4] = PRIVATE_CHANNEL2;
                   obj3 = callback(closure_1_2[23]).stashPendingFrameLaunch(throwTypeErrorResult, obj3);
@@ -330,19 +330,19 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                 throwTypeErrorResult = closure_26;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                if (!(closure_26 instanceof callback2(8726))) {
+                if (!(closure_26 instanceof callback2(8763))) {
                   throwTypeErrorResult = c12;
                   throwTypeErrorResult = currentUser;
                   throwTypeErrorResult = closure_26;
                   throwTypeErrorResult = callback2;
                   throwTypeErrorResult = dependencyMap;
-                  if (!(closure_26 instanceof callback2(4274))) {
+                  if (!(closure_26 instanceof callback2(4278))) {
                     throwTypeErrorResult = c12;
                     throwTypeErrorResult = currentUser;
                     throwTypeErrorResult = closure_26;
                     throwTypeErrorResult = callback2;
                     throwTypeErrorResult = dependencyMap;
-                    if (!(closure_26 instanceof callback2(4808))) {
+                    if (!(closure_26 instanceof callback2(4813))) {
                       throwTypeErrorResult = c12;
                       throwTypeErrorResult = currentUser;
                       throwTypeErrorResult = callback2;
@@ -350,7 +350,7 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                       throwTypeErrorResult = closure_26;
                       throwTypeErrorResult = new.target;
                       throwTypeErrorResult = new.target;
-                      throwTypeErrorResult = new callback2(4274)(closure_26);
+                      throwTypeErrorResult = new callback2(4278)(closure_26);
                     }
                     throwTypeErrorResult = c12;
                     obj7[6] = throwTypeErrorResult;
@@ -399,7 +399,7 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                   throwTypeErrorResult = dependencyMap;
                   throwTypeErrorResult = currentUser;
                   throwTypeErrorResult = c19;
-                  throwTypeErrorResult = callback2(8768);
+                  throwTypeErrorResult = callback2(8805);
                   if (dependencyMap) {
                     let JOIN = throwTypeErrorResult.LAUNCH;
                   } else {
@@ -526,8 +526,8 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                     callback3();
                   }
                   if ("failure" === closure_24.result) {
-                    let tmp43 = callback2(8726);
-                    tmp43 = new tmp43(callback2(8726).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, closure_24.reason);
+                    let tmp43 = callback2(8763);
+                    tmp43 = new tmp43(callback2(8763).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, closure_24.reason);
                     throw tmp43;
                   }
                 }
@@ -564,8 +564,8 @@ function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
                     c17 = 3;
                     return { value: false, done: true };
                   } else {
-                    let tmp11 = callback2(8726);
-                    tmp11 = new tmp11(callback2(8726).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                    let tmp11 = callback2(8763);
+                    tmp11 = new tmp11(callback2(8763).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
                     throw tmp11;
                   }
                 }
@@ -629,7 +629,7 @@ function _maybeSendPrimaryAppCommand() {
           obj[0] = isAuthorized;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -686,13 +686,13 @@ function _maybeSendPrimaryAppCommand() {
               store = 3;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback2(8769)(dependencyMap, callback);
+              obj2[0] = callback2(8806)(dependencyMap, callback);
               return obj2;
             }
           } else if (2 === tmp7) {
             v0 = 0;
             const message = c3;
-            if (message.message === callback(8769).NO_PRIMARY_APP_COMMAND_ERROR) {
+            if (message.message === callback(8806).NO_PRIMARY_APP_COMMAND_ERROR) {
               const obj3 = { result: "failure", reason: null };
               obj3[1] = constants.NO_PRIMARY_APP_COMMAND;
               c6 = 3;
@@ -768,7 +768,7 @@ function _maybeSendPrimaryAppCommand() {
                     }
                     currentUser2 = currentUser.getCurrentUser();
                     if (null != currentUser2) {
-                      let obj15 = callback(8737);
+                      let obj15 = callback(8774);
                       const obj10 = { applicationId: null, application: null, channel: null, currentEmbeddedApplication: null, embeddedActivitiesManager: null, user: null, onConfirmActivityLaunchChecksAlertOpen: null, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: false };
                       obj10[0] = callback;
                       obj10[1] = currentEmbeddedActivity;
@@ -840,7 +840,7 @@ function _maybeSendPrimaryAppCommand() {
                 store = 6;
                 c6 = 1;
                 const obj16 = { value: null, done: false };
-                obj16[0] = callback(8771).installApplicationOnDemandIfNeeded(obj15);
+                obj16[0] = callback(8808).installApplicationOnDemandIfNeeded(obj15);
                 return obj16;
               }
             } else if (6 === tmp7) {
@@ -941,7 +941,7 @@ function _joinEmbeddedActivity() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1012,7 +1012,7 @@ function _joinEmbeddedActivity() {
                   c4 = 2;
                   application = 1;
                   const obj4 = { value: null, done: false };
-                  obj4[0] = callback2(8735)(closure_7, callback2);
+                  obj4[0] = callback2(8772)(closure_7, callback2);
                   return obj4;
                 }
               }
@@ -1074,15 +1074,15 @@ function _joinEmbeddedActivity() {
                           obj10[3] = currentEmbeddedActivity2;
                           showResult = closure_14;
                           obj10[4] = closure_14;
-                          channel = callback(11130).getEmbeddedActivityLaunchability(obj10);
+                          channel = callback(11169).getEmbeddedActivityLaunchability(obj10);
                           showResult = channel;
                           showResult = callback;
                           showResult = dependencyMap;
-                          if (channel !== callback(11130).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+                          if (channel !== callback(11169).EmbeddedActivityLaunchability.CAN_LAUNCH) {
                             closure_11 = constants.LAUNCHABILITY_CHECK_FAILED_OTHER;
-                            if (channel === callback(11130).EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION) {
+                            if (channel === callback(11169).EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION) {
                               closure_11 = constants.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION;
-                              let obj24 = callback(8730);
+                              let obj24 = callback(8767);
                               const result = obj24.showActivitiesInvalidPermissionsAlert();
                             } else {
                               showResult = dependencyMap;
@@ -1090,7 +1090,7 @@ function _joinEmbeddedActivity() {
                               showResult = channel;
                               showResult = callback;
                               showResult = dependencyMap;
-                              if (channel === callback(11130).EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS) {
+                              if (channel === callback(11169).EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS) {
                                 showResult = dependencyMap;
                                 showResult = c3;
                                 showResult = constants;
@@ -1110,8 +1110,8 @@ function _joinEmbeddedActivity() {
                                 showResult = callback;
                                 showResult = dependencyMap;
                                 obj11[1] = intl2.string(callback(1236).t.UXoQTp);
-                                showResult = callback2(4827).show(obj11);
-                                const obj41 = callback2(4827);
+                                showResult = callback2(4832).show(obj11);
+                                const obj41 = callback2(4832);
                               }
                             }
                             { result: "failure", reason: null }[1] = closure_11;
@@ -1134,7 +1134,7 @@ function _joinEmbeddedActivity() {
                               currentUser = application.getApplication(applicationId1);
                             }
                             if (c3) {
-                              let obj21 = callback(8737);
+                              let obj21 = callback(8774);
                               const obj12 = { applicationId: null, application: null, channel: null, currentEmbeddedApplication: null, embeddedActivitiesManager: null, user: null };
                               obj12[0] = callback;
                               obj12[1] = closure_8;
@@ -1149,7 +1149,7 @@ function _joinEmbeddedActivity() {
                               return obj13;
                             }
                           }
-                          const obj39 = callback(11130);
+                          const obj39 = callback(11169);
                         }
                       }
                     }
@@ -1200,7 +1200,7 @@ function _joinEmbeddedActivity() {
                     obj21[1] = obj22;
                     obj20[0] = obj21;
                     if (null != callback2) {
-                      obj15 = callback2(5227);
+                      obj15 = callback2(5232);
                       const obj23 = { url: null, body: null };
                       obj23[0] = closure_22.ACTIVITY_CHANNEL_LAUNCH(callback2, callback);
                       obj24 = { session_id: null, guild_id: null };
@@ -1247,7 +1247,7 @@ function _joinEmbeddedActivity() {
                 showResult = callback2;
                 showResult = dependencyMap;
                 showResult = sessionId;
-                closure_14 = callback2(8724)(sessionId.id);
+                closure_14 = callback2(8761)(sessionId.id);
                 showResult = obj20;
                 showResult = sessionId;
                 currentEmbeddedActivity = obj20.includes(sessionId.type);
@@ -1261,10 +1261,10 @@ function _joinEmbeddedActivity() {
                   c4 = 4;
                   application = 1;
                   const obj31 = { value: null, done: false };
-                  obj31[0] = callback2(8744)(obj30);
+                  obj31[0] = callback2(8781)(obj30);
                   return obj31;
                 } else {
-                  obj8 = callback(8446);
+                  obj8 = callback(8485);
                   const obj32 = { result: "failure", reason: null };
                   obj32[1] = constants.AIT_NOT_ENABLED_FOR_USER;
                   application = 3;
@@ -1312,7 +1312,7 @@ function stopEmbeddedActivity(showFeedback) {
   const obj2 = dispatcherDefault;
   const tmp2 = importDefault;
   const tmp6 = applicationId;
-  const embeddedActivityLocationChannelId = applicationId(4011).getEmbeddedActivityLocationChannelId(_location);
+  const embeddedActivityLocationChannelId = applicationId(4014).getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     selectedParticipantId = selectedParticipantId.getSelectedParticipantId(embeddedActivityLocationChannelId);
     currentUser = currentUser.getCurrentUser();
@@ -1332,10 +1332,10 @@ function stopEmbeddedActivity(showFeedback) {
           }
           obj[1] = compositeInstanceId;
           if (selectedParticipantId === tmp6Result.getEmbeddedActivityParticipantId(obj)) {
-            const participant = _modDef8666.selectParticipant(embeddedActivityLocationChannelId, null);
-            const tmp2Result = _modDef8666;
+            const participant = _modDef8703.selectParticipant(embeddedActivityLocationChannelId, null);
+            const tmp2Result = _modDef8703;
           }
-          tmp6Result = tmp6(4777);
+          tmp6Result = tmp6(4782);
         }
       }
     }
@@ -1408,7 +1408,7 @@ function _uploadImageAttachment() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1453,7 +1453,7 @@ function _uploadImageAttachment() {
             callback = closure_5;
             obj4 = callback(709);
             obj4.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" });
-            const tmp27 = new callback(4274)(callback);
+            const tmp27 = new callback(4278)(callback);
             c8 = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = tmp27;
@@ -1536,7 +1536,7 @@ function _fetchShelf() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1794,7 +1794,7 @@ function _sendEmbeddedActivityInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1832,7 +1832,7 @@ function _sendEmbeddedActivityInvite() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj2 = callback(8042);
+              let obj2 = callback(8081);
               obj2 = { target_type: null, target_application_id: null };
               obj2[0] = constants.EMBEDDED_APPLICATION;
               obj2[1] = dependencyMap;
@@ -1853,11 +1853,11 @@ function _sendEmbeddedActivityInvite() {
           } else {
             code = arg1;
             if (null != channel.getChannel(callback)) {
-              obj = callback(7427);
+              obj = callback(7465);
               obj.sendInvite(callback, code.code, c3, c4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp30) {
           c4 = tmp;
@@ -1895,7 +1895,7 @@ function _sendEmbeddedActivityInviteUser() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1934,7 +1934,7 @@ function _sendEmbeddedActivityInviteUser() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj4 = callback(8042);
+              let obj4 = callback(8081);
               let obj2 = { target_type: null, target_application_id: null };
               obj2[0] = constants.EMBEDDED_APPLICATION;
               obj2[1] = callback;
@@ -1955,7 +1955,7 @@ function _sendEmbeddedActivityInviteUser() {
               return obj4;
             } else {
               closure_6 = arg1;
-              obj1 = callback(4770);
+              obj1 = callback(4775);
               c3 = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
@@ -1987,7 +1987,7 @@ function _sendEmbeddedActivityInviteUser() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c4 = tmp;
@@ -2026,7 +2026,7 @@ function _validateTestMode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2149,7 +2149,7 @@ function _refreshProxyTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2209,23 +2209,23 @@ function _refreshProxyTicket() {
             }
             closure_4 = dependencyMap;
             if (null != closure_4) {
-              PRIVATE_CHANNEL = callback(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(8775).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(8775).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             let tmp36 = callback2(709);
             let dispatch = tmp36.dispatch;
             let obj4 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: null, applicationId: null, channelId: null, guildId: null, locationKind: null, error: null };
-            obj4 = callback(7501);
+            obj4 = callback(7539);
             obj4[1] = obj4.createNonce();
             obj4[2] = callback;
             obj4[3] = callback2;
             obj4[4] = closure_4;
             obj4[5] = PRIVATE_CHANNEL;
-            if (!(closure_6 instanceof callback2(8726))) {
-              if (!(closure_6 instanceof callback2(4274))) {
-                if (!(closure_6 instanceof callback2(4808))) {
-                  let tmp63 = new callback2(4274)(closure_6);
+            if (!(closure_6 instanceof callback2(8763))) {
+              if (!(closure_6 instanceof callback2(4278))) {
+                if (!(closure_6 instanceof callback2(4813))) {
+                  let tmp63 = new callback2(4278)(closure_6);
                 }
                 obj4[6] = tmp63;
                 dispatch(obj4);

@@ -12,11 +12,11 @@ export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
   let obj = generateAcceptInviteOptionsDefault;
   generateAcceptInviteOptionsDefault.revokeFriendInvites().then(() => {
-    let obj = callback2(4094);
+    let obj = callback2(4097);
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1236).intl;
     obj[1] = intl.string(callback(1236).t.jSHEOQ);
-    obj[2] = callback2(8764);
+    obj[2] = callback2(8801);
     obj.open(obj);
   });
 };

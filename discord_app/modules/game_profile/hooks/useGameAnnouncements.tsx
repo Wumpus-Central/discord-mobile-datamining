@@ -10,7 +10,7 @@ let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameAnnoun
 export default function useGameAnnouncements(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;

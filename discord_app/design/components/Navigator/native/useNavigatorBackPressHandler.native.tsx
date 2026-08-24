@@ -1,6 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
 import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 
 const require = arg1;
 require("get ActivityIndicator").BackHandler;
@@ -12,7 +11,7 @@ export const useNavigatorBackPressHandler = function useNavigatorBackPressHandle
   const layoutEffect = React.useLayoutEffect(() => {
     closure_1.current = closure_0;
   });
-  const focusEffect = _createStandardNavigationFactories.useFocusEffect(React.useCallback(() => {
+  const focusEffect = require("../../../../../_runtime/01501_createStandardNavigationFactories.js").useFocusEffect(React.useCallback(() => {
     if (!obj.isIOS()) {
       callback = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
       return () => closure_0.remove();

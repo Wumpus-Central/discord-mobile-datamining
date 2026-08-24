@@ -1,6 +1,6 @@
 // discord_app/modules/channel/native/openChannelPicker.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../../../stores/GuildChannelStore.tsx";
 import closure_4 from "../../../stores/GuildStore.tsx";
@@ -34,5 +34,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(10573, dependencyMap.paths), "ChannelPicker", obj);
 };

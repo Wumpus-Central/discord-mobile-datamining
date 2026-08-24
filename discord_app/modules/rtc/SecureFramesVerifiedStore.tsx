@@ -122,7 +122,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
           tmp6 = computeCallVerification();
         }
         return tmp6;
-      } else if (tmp10(4569).MediaEngineContextTypes.DEFAULT === context) {
+      } else if (tmp10(4574).MediaEngineContextTypes.DEFAULT === context) {
         map.clear();
         map1.clear();
         c10 = false;

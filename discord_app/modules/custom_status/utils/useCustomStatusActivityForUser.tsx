@@ -11,12 +11,12 @@ const result = require("set").fileFinishedImporting("modules/custom_status/utils
 export default function useCustomStatusActivityForUser(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_2.getId() === closure_0);
-  const obj = _initialize;
-  const customStatusActivity = __activityFromSetting.useCustomStatusActivity();
-  const obj2 = __activityFromSetting;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getId() === closure_0);
+  const obj = initialize;
+  const customStatusActivity = require("userSettingToActivity.tsx").useCustomStatusActivity();
+  const obj2 = _activityFromSetting;
   const items1 = [closure_3];
-  let stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_3.findActivity(closure_0, (type) => type.type === constants.CUSTOM_STATUS));
+  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_3.findActivity(closure_0, (type) => type.type === constants.CUSTOM_STATUS));
   if (stateFromStores) {
     stateFromStores1 = customStatusActivity;
   }

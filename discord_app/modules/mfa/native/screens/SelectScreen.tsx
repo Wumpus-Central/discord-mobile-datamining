@@ -6,10 +6,7 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SELECT_NAMES } from "../../MFAConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 require = arg1;
 noopAll;
@@ -31,18 +28,18 @@ export default function SelectScreen(mfaChallenge) {
   const _require = mfaChallenge;
   const tmp = useWideAuthViewDefault();
   const tmp2 = callback3(tmp);
-  let obj = _useNavigation;
+  let obj = useNavigation;
   importDefault = obj.useNavigation();
   obj = { top: !tmp, style: tmp2.container, children: null };
   obj = { style: tmp2.selectContainer, children: null };
   obj1 = { variant: "heading-xl/extrabold", children: null };
-  const intl = _getSystemLocale.intl;
-  obj1[1] = intl.string(_getSystemLocale.t.S9b9bX);
-  const items = [callback(_Text.Text, obj1), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.S9b9bX);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
   const obj2 = { variant: "text-sm/medium", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj2[1] = intl2.string(_getSystemLocale.t.Jz1lXO);
-  items[1] = callback(_Text.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj2[1] = intl2.string(require("../../../../intl/index.native.tsx").t.Jz1lXO);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const methods = mfaChallenge.mfaChallenge.methods;
@@ -60,5 +57,5 @@ export default function SelectScreen(mfaChallenge) {
     })
   });
   obj[2] = items1;
-  return callback2(_SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  return callback2(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj);
 };

@@ -1,19 +1,17 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import NativeShadowType from "../PollMessageChatDataTypes.tsx";
-import { t } from "../../../../../_runtime/04486_t.js";
-import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
-import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";
+import { t } from "../../../../../_runtime/04490_t.js";
 
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _t.match(arg1);
-  const str = _t;
-  obj[3] = match.with(_PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  const match = require("../../../../../_runtime/04490_t.js").match(arg1);
+  const str = t;
+  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _NativeShadowType.PollRadioStyle.HOLLOW;
+  obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   return obj;
@@ -25,12 +23,12 @@ function normalVote(border, arg1) {
   let obj = {};
   const _require = border;
   obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _t.match(arg1);
-  const str = _t;
-  obj[3] = match.with(_PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  const match = require("../../../../../_runtime/04490_t.js").match(arg1);
+  const str = t;
+  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _NativeShadowType.PollRadioStyle.HOLLOW;
+  obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   const merged = Object.assign(obj);

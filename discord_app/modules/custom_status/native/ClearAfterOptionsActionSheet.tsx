@@ -37,7 +37,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.E45wvP);
   obj[2] = initialValue;
-  obj[4] = ClearAfterOptions.map((value) => callback3(callback(8100).TableRadioRow, { value, label: callback2(9543)(value) }, value));
+  obj[4] = ClearAfterOptions.map((value) => callback3(callback(8139).TableRadioRow, { value, label: callback2(9580)(value) }, value));
   const items = [callback2(context.TableRadioGroup, obj), ];
   obj1 = { style: tmp.buttonWrapper, children: null };
   const obj2 = {

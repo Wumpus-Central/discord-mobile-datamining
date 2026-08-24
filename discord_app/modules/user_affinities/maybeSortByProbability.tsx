@@ -1,13 +1,12 @@
 // discord_app/modules/user_affinities/maybeSortByProbability.tsx
 import set from "../../../_runtime/00002_set.js";
-import { apexExperiment } from "VoiceUserAffinityExperiment.tsx";
 
 const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;
   const _require = userAffinitiesMap;
-  const voiceUserAffinitySortType = _apexExperiment.getVoiceUserAffinitySortType(location);
+  const voiceUserAffinitySortType = require("VoiceUserAffinityExperiment.tsx").getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {

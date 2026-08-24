@@ -5,9 +5,6 @@ import closure_4 from "../experiments/ExperimentStore.tsx";
 import closure_5 from "../../stores/RelationshipStore.tsx";
 import closure_6 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
@@ -20,8 +17,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     flag2 = false;
   }
   if (channel.isObfuscated()) {
-    const intl3 = _getSystemLocale.intl;
-    return intl3.string(_getSystemLocale.t["/YzI63"]);
+    const intl3 = require("../../intl/index.native.tsx").intl;
+    return intl3.string(require("../../intl/index.native.tsx").t["/YzI63"]);
   } else {
     const type = channel.type;
     if (constants.DM === type) {
@@ -35,7 +32,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
       } else {
         const recipients = channel.recipients;
         const mapped = recipients.map(closure_9.getUser);
-        const first = callback(mapped.filter(_isDiscordFrontendDevelopment.isNotNullish), 1)[0];
+        const first = callback(mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish), 1)[0];
         if (null == first) {
           return "???";
         } else {
@@ -64,7 +61,7 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         const recipients1 = channel.recipients;
         _require = closure_7;
         const mapped1 = recipients1.map(closure_9.getUser);
-        const found = mapped1.filter(_isDiscordFrontendDevelopment.isNotNullish);
+        const found = mapped1.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
         const mapped2 = found.map((id) => {
           nickname = nickname.getNickname(id.id);
           if (nickname == null) {
@@ -90,8 +87,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
             if (tmp3.GUILD_MEDIA !== type) {
               if (tmp3.GUILD_CATEGORY === type) {
                 if (channel.id === closure_8) {
-                  const intl = _getSystemLocale.intl;
-                  let stringResult = intl.string(_getSystemLocale.t.GSfOoo);
+                  const intl = require("../../intl/index.native.tsx").intl;
+                  let stringResult = intl.string(require("../../intl/index.native.tsx").t.GSfOoo);
                 } else {
                   stringResult = str;
                   if (flag2) {
@@ -152,7 +149,7 @@ export default function useChannelName(arg0) {
     flag = false;
   }
   const items = [closure_6, closure_4, closure_5];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       tmp2 = closure_1_9(tmp, closure_1_6, closure_1_5, flag);
@@ -163,7 +160,7 @@ export default function useChannelName(arg0) {
 export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroupDmNameFromUserIds(arr, getUser) {
   const _require = arg2;
   const mapped = arr.map(getUser.getUser);
-  const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -187,7 +184,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   recipients = recipients.recipients;
   const _require = arg2;
   const mapped = recipients.map(getUser.getUser);
-  const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   const mapped1 = found.map((id) => {
     nickname = nickname.getNickname(id.id);
     if (nickname == null) {
@@ -210,7 +207,7 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
 export const useComputedGroupDmName = function useComputedGroupDmName(arg0) {
   const _require = arg0;
   const items = [closure_6, closure_5];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let obj = callback;
     let tmp = null;
     if (null != callback) {

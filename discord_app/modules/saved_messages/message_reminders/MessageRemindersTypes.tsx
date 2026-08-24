@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
 import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import tDefault from "../../../../_runtime/03975_t.js";
+import tDefault from "../../../../_runtime/03978_t.js";
 
 const items = [
   {
@@ -66,10 +66,10 @@ const items = [
       } else {
         num3 = 8;
         if (1 === dayResult) {
-          const obj2 = tmp(3975)();
-          const startOfResult = tmp(3975)().startOf("day");
+          const obj2 = tmp(3978)();
+          const startOfResult = tmp(3978)().startOf("day");
           num3 = 8;
-          const addResult = tmp(3975)().startOf("day").add(9, "hours");
+          const addResult = tmp(3978)().startOf("day").add(9, "hours");
         }
       }
       const obj = tDefault();

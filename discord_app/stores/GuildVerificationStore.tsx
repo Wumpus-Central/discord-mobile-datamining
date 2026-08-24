@@ -204,7 +204,7 @@ function recomputeGuild(guildId) {
             if (num == null) {
               num = 0;
             }
-            const obj2 = _hasFlag;
+            const obj2 = hasFlag;
           }
         }
       }

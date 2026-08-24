@@ -38,10 +38,10 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
     }
   }
 };
-export const isLaunched = function isLaunched(mainFrame) {
+export const isLaunched = function isLaunched(item10005) {
   let state;
-  if (mainFrame != null) {
-    state = mainFrame.state;
+  if (item10005 != null) {
+    state = item10005.state;
   }
   return "launched" === state;
 };

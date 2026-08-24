@@ -21,7 +21,7 @@ const result = require("set").fileFinishedImporting("design/components/experimen
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _getFontScale;
+  let obj = getFontScale;
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

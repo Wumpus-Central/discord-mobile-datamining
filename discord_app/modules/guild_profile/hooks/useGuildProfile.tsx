@@ -9,12 +9,12 @@ const result = require("set").fileFinishedImporting("modules/guild_profile/hooks
 
 export const useGuildProfile = function useGuildProfile(guildId) {
   const _require = guildId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getProfile(closure_0));
   const items1 = [closure_4];
   obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_4.getFetchStatus(closure_0));
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_4.getFetchStatus(closure_0));
   const items2 = [guildId];
   obj[1] = React.useCallback(callback(() => {
     closure_0 = arg0;
@@ -32,7 +32,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

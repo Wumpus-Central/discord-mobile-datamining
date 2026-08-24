@@ -1,14 +1,13 @@
 // discord_app/modules/application_assets_v2/ApplicationAssetsV2Store.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import { apply } from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {
   const values = Object.values(configs.configs);
   const _require = false;
   const flatResult = values.flat();
-  const entries = Object.entries(_apply.groupBy(flatResult, (application_id) => application_id.application_id));
+  const entries = Object.entries(require("../../../_runtime/00012_apply.js").groupBy(flatResult, (application_id) => application_id.application_id));
   const mapped = entries.map((arg0) => {
     [tmp, obj] = arg0;
     const items = [
@@ -68,7 +67,7 @@ const applicationAssetsV2Store = new ApplicationAssetsV2Store(dispatcherDefault,
   },
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function handleFetchSuccess(configs) {
     const _require = false;
-    const entries = Object.entries(_apply.groupBy(configs.configs, (application_id) => application_id.application_id));
+    const entries = Object.entries(require("../../../_runtime/00012_apply.js").groupBy(configs.configs, (application_id) => application_id.application_id));
     const mapped = entries.map((arg0) => {
       [tmp, obj] = arg0;
       const items = [

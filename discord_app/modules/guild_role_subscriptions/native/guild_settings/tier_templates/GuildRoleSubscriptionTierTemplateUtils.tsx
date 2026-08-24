@@ -6,18 +6,18 @@ const result = set.fileFinishedImporting("modules/guild_role_subscriptions/nativ
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {
   if (set2.ChannelTypes.GUILD_TEXT === type) {
-    return tmp(6874).TextLockIcon;
+    return tmp(6912).TextLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_VOICE === type) {
-    return tmp(6893).VoiceLockIcon;
+    return tmp(6931).VoiceLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_STAGE_VOICE === type) {
-    return tmp(6891).StageLockIcon;
+    return tmp(6929).StageLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_FORUM === type) {
-    return tmp(6881).ForumLockIcon;
+    return tmp(6919).ForumLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_MEDIA === type) {
-    return tmp(6880).ImageLockIcon;
+    return tmp(6918).ImageLockIcon;
   } else if (tmp(692).ChannelTypes.GUILD_ANNOUNCEMENT === type) {
-    return tmp(6888).AnnouncementsLockIcon;
+    return tmp(6926).AnnouncementsLockIcon;
   } else {
-    return tmp(6874).TextLockIcon;
+    return tmp(6912).TextLockIcon;
   }
 };

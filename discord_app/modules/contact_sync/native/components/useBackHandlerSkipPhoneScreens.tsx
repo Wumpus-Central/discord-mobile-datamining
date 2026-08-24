@@ -3,7 +3,6 @@ import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import useNavigatorBackPressHandler from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import ContactSyncLandingPage from "../ContactSyncConstants.tsx";
-import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const ContactSyncScenes = ContactSyncLandingPage.ContactSyncScenes;
@@ -12,7 +11,7 @@ const result = set.fileFinishedImporting("modules/contact_sync/native/components
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  _useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
+  require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx").useNavigatorBackPressHandler(() => {
     if (null != closure_1) {
       tmp();
     } else {

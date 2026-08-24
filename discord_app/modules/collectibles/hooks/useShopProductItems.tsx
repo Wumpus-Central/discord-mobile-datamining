@@ -14,25 +14,25 @@ class ItemsSortingHat {
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
   get: function firstAvatarDecoration(first) {
-    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
+    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileEffect", {
   get: function firstProfileEffect() {
-    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
+    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstNameplate", {
   get: function firstNameplate(first) {
-    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
+    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
   get: function firstProfileFrame(first) {
-    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
+    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
   },
   set: undefined
 });

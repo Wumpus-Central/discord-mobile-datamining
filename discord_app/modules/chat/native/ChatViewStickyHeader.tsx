@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     if (tmp[0]) {
       let obj = { channel: null };
       obj[0] = channel;
-      tmp8 = callback2(tmp2(10626), obj);
+      tmp8 = callback2(tmp2(10665), obj);
     }
   }
   const items = [tmp8, , , ];
@@ -82,7 +82,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     obj = { channel: null, clearUnreadsNotice: null };
     obj[0] = channel;
     obj[1] = clearUnreadsNotice;
-    tmp13 = callback2(tmp2(10630), obj);
+    tmp13 = callback2(tmp2(10669), obj);
   }
   obj1 = { children: null };
   items[2] = tmp13;

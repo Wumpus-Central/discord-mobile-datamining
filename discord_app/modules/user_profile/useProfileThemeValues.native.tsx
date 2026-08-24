@@ -2,7 +2,6 @@
 import set from "../../../_runtime/00002_set.js";
 import noop from "../../../_runtime/00019_noop.js";
 import closure_4 from "../a11y/AccessibilityStore.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");
@@ -10,7 +9,7 @@ const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeVa
 export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [closure_4];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => saturation.saturation);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => saturation.saturation);
   const tmp2 = stateFromStores(1367)("useProfileThemeValues");
   dependencyMap = tmp2;
   const items1 = [theme, stateFromStores, tmp2];

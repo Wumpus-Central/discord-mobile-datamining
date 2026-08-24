@@ -224,7 +224,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   let values = Object.values(closure_14);
   const _require = values.map((id) => id.id);
   const currentUser = authStore.getCurrentUser();
-  obj = _getPremiumPlanItem;
+  obj = getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       items = [];
@@ -302,7 +302,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
 prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _getPremiumPlanItem;
+  obj = getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
@@ -346,7 +346,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
 prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _getPremiumPlanItem;
+  obj = getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {

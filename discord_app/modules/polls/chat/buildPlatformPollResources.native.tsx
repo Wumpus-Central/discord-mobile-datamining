@@ -1,15 +1,14 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import ensureAvatarSource from "../../../utils/native/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/06944_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/07180_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/06982_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07218_registerAsset.js";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
-import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
 import { frozen } from "../../messages/native/renderer/EmbedUtils.tsx";
 
 require = arg1;
 let closure_3 = importDefaultResult.mapValues(require("normal").pollStyleSets, (arg0) => {
   const _require = arg0;
-  closure_1 = _createCacheKey.createNativeStyleProperties((arg0) => {
+  closure_1 = require("../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties((arg0) => {
     let tmp = callback(callback2(closure_1_2[3]), arg0);
     return callback2(closure_1_2[0]).pickBy(tmp, (num) => {
       let tmp = typeof num !== "number";
@@ -41,9 +40,9 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
   importDefault = layoutType;
   const obj = { styles: importDefaultResult.mapValues(closure_3, (arg0) => arg0(closure_0, closure_1)), selectedIcon: null, checkmarkIcon: null };
   const obj2 = importDefaultResult;
-  obj[1] = _frozen.getAssetUriForEmbed(registerAssetDefault);
-  const obj3 = _frozen;
-  obj[2] = _frozen.getAssetUriForEmbed(registerAssetDefault2);
+  obj[1] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault);
+  const obj3 = frozen;
+  obj[2] = require("../../messages/native/renderer/EmbedUtils.tsx").getAssetUriForEmbed(registerAssetDefault2);
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {

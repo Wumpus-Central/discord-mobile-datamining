@@ -9,9 +9,7 @@ import closure_7 from "../../../../stores/DeveloperOptionsStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
-import { noop } from "../../../../../discord_common/js/packages/flash-list/index.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getDeviceMetadata } from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 require = arg1;
 function Code(arg0) {
@@ -43,8 +41,8 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(10136)(closure_5, !first, first1).split("\n"), items);
-  obj1 = _initialize;
+  const memo = React.useMemo(() => first(10175)(closure_5, !first, first1).split("\n"), items);
+  obj1 = initialize;
   let items1 = [closure_7];
   closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
   closure_7 = first(9).loadIndex.start - useResult;
@@ -53,7 +51,7 @@ export default function UserSettingsStartupTimings() {
   closure_9 = first(9).loadLazyCache.end - first(9).loadLazyCache.start;
   closure_10 = first(9).ready.end - first(9).ready.start;
   callback3 = Math.ceil(first(9).renderLatestMessages.importTime);
-  const lastTrackedAppUiViewed2Properties = _getDeviceMetadata.getLastTrackedAppUiViewed2Properties();
+  const lastTrackedAppUiViewed2Properties = require("../../../tti_analytics/native/TTIAnalyticsUtils.tsx").getLastTrackedAppUiViewed2Properties();
   num = undefined;
   if (lastTrackedAppUiViewed2Properties != null) {
     num = lastTrackedAppUiViewed2Properties.time_first_contentful_paint;
@@ -73,7 +71,7 @@ export default function UserSettingsStartupTimings() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +90,7 @@ export default function UserSettingsStartupTimings() {
             closure_0 = tmp2;
             closure_0 = undefined;
             closure_1 = undefined;
-            let obj3 = closure_1_1(4236);
+            let obj3 = closure_1_1(4240);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -109,13 +107,13 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = closure_1_1(10136)(closure_0);
-          obj = closure_1_0(9067);
+          closure_1 = closure_1_1(10175)(closure_0);
+          obj = closure_1_0(9104);
           obj3 = { message: null };
           obj3[0] = closure_1;
           obj.showShareActionSheet(obj3, "Startup Timing");
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -129,7 +127,7 @@ export default function UserSettingsStartupTimings() {
   obj[0] = obj1;
   obj[1] = function ListHeaderComponent() {
     let obj = { spacing: 16, style: { padding: 16 }, children: null };
-    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(8558).TableCheckboxRow, obj) };
+    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(8597).TableCheckboxRow, obj) };
     obj = {
       label: "Show start times at launch",
       onPress() {
@@ -139,7 +137,7 @@ export default function UserSettingsStartupTimings() {
       },
       checked: closure_6
     };
-    const items = [callback(lib(6286).TableRowGroup, obj), , , , ];
+    const items = [callback(lib(6317).TableRowGroup, obj), , , , ];
     obj1 = { children: null };
     const result = closure_7 / 1000;
     const items1 = ["Native: ", callback(lastTrackedAppUiViewed2Properties, { color: "text-brand", children: "" + result + "s (" + Math.round(closure_7 / num * 100) + "%)" })];
@@ -216,26 +214,26 @@ export default function UserSettingsStartupTimings() {
     items2[7] = callback2(lastTrackedAppUiViewed2Properties, obj17);
     obj16[0] = items2;
     obj15[0] = callback2(closure_10, obj16);
-    obj14[2] = callback(lib(6291).TableRow, obj15);
-    items[1] = callback(lib(6286).TableRowGroup, obj14);
+    obj14[2] = callback(lib(6322).TableRow, obj15);
+    items[1] = callback(lib(6317).TableRowGroup, obj14);
     const obj18 = { title: "Legend", hasIcons: false, children: null };
     const obj19 = { label: null };
     const obj20 = { children: null };
     const items10 = [callback2(lastTrackedAppUiViewed2Properties, { children: ["\u2615", " - Java / Kotlin"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3A8}", " - React render"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F4BE}", " - CacheStore"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F9A5}", " - Slow Store Update / Handler"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F3C3}", " - Startup Event"] }), callback2(lastTrackedAppUiViewed2Properties, { children: ["\u{1F310}", " - Socket Event"] })];
     obj20[0] = items10;
     obj19[0] = callback2(closure_10, obj20);
-    obj18[2] = callback(lib(6291).TableRow, obj19);
-    items[2] = callback(lib(6286).TableRowGroup, obj18);
+    obj18[2] = callback(lib(6322).TableRow, obj19);
+    items[2] = callback(lib(6317).TableRowGroup, obj18);
     const obj21 = { title: "Detailed Times", hasIcons: false, children: null };
     const items11 = [
-      callback(lib(8558).TableCheckboxRow, {
+      callback(lib(8597).TableCheckboxRow, {
         label: "Hide the Noise",
         onPress() {
           return callback((arg0) => !arg0);
         },
         checked: first
       }),
-      callback(lib(8558).TableCheckboxRow, {
+      callback(lib(8597).TableCheckboxRow, {
         label: "Hide paints",
         onPress() {
           return callback2((arg0) => !arg0);
@@ -244,7 +242,7 @@ export default function UserSettingsStartupTimings() {
       })
     ];
     obj21[2] = items11;
-    items[3] = callback2(lib(6286).TableRowGroup, obj21);
+    items[3] = callback2(lib(6317).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj10 = { color: "text-brand", children: "" + result4 + "s (" + Math.round(closure_10 / num * 100) + "%)" };
     const obj22 = {
@@ -261,10 +259,10 @@ export default function UserSettingsStartupTimings() {
       },
       checked: !first1
     };
-    obj24[2] = callback(lib(6291).TableRow, { icon: callback(lib(12047).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
-    items[4] = callback(lib(6286).TableRowGroup, obj24);
+    obj24[2] = callback(lib(6322).TableRow, { icon: callback(lib(12099).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
+    items[4] = callback(lib(6317).TableRowGroup, obj24);
     obj[2] = items;
-    const items12 = [callback2(lib(4733).Stack, obj), callback(closure_6, { style: lib.border })];
+    const items12 = [callback2(lib(4738).Stack, obj), callback(closure_6, { style: lib.border })];
     obj13[0] = items12;
     return callback2(closure_10, obj13);
   };
@@ -272,6 +270,6 @@ export default function UserSettingsStartupTimings() {
   obj[3] = function renderItem(children) {
     return callback(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj[1] = callback2(_noop.FlashList, obj);
+  obj[1] = callback2(require("../../../../../discord_common/js/packages/flash-list/index.js").FlashList, obj);
   return callback2(closure_6, obj);
 };

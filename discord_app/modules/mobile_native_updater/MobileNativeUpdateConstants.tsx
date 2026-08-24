@@ -1,6 +1,6 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateConstants.tsx
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import importDefaultResult from "../../../_runtime/03975_t.js";
+import importDefaultResult from "../../../_runtime/03978_t.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import durationResult from "../../../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx";
 

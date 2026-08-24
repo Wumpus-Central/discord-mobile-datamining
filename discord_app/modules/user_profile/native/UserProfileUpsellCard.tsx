@@ -5,7 +5,6 @@ import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndica
 import { Gradients } from "../../colors/native/ColorConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Button } from "../../../design/void/native.tsx";
 
 const require = arg1;
 noopAll;
@@ -30,7 +29,7 @@ export default function UserProfileUpsellCard(headerText) {
   ({ style, children, ctaText, showLinearGradient, cardStyle, contentStyle, ctaStyle, onPress } = headerText);
   const tmp = callback();
   _require = tmp;
-  let obj = { borderWidth: 1, style: items, direction: _Button.GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: ThemesDefault.radii.lg, children: null };
+  let obj = { borderWidth: 1, style: items, direction: require("../../../design/void/native.tsx").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: ThemesDefault.radii.lg, children: null };
   items = [tmp.outer, style];
   obj = { bounces: false, style: items1, contentContainerStyle: items2, children: null };
   items1 = [tmp.scroll, cardStyle];
@@ -41,10 +40,10 @@ export default function UserProfileUpsellCard(headerText) {
     obj[0] = tmp.titleContainer;
     obj1 = { color: null, size: "xs" };
     obj1[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    const items3 = [tmp2(tmp3(7988).NitroWheelIcon, obj1), ];
+    const items3 = [tmp2(tmp3(8027).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: null };
     obj2[1] = headerText;
-    items3[1] = tmp2(tmp3(4734).Text, obj2);
+    items3[1] = tmp2(tmp3(4739).Text, obj2);
     obj[1] = items3;
     tmp6Result = tmp6(closure_3, obj);
   }
@@ -53,7 +52,7 @@ export default function UserProfileUpsellCard(headerText) {
     style: items5,
     onPress,
     text: ctaText,
-    color: _Button.ButtonColors.GREEN,
+    color: require("../../../design/void/native.tsx").ButtonColors.GREEN,
     renderIcon() {
       return callback(lib(table[8]).NitroWheelIcon, { color: "white", size: "xs" });
     },
@@ -69,8 +68,8 @@ export default function UserProfileUpsellCard(headerText) {
     };
   }
   obj3[5] = fn;
-  items4[2] = closure_6(_Button.ShinyButton, obj3);
+  items4[2] = closure_6(require("../../../design/void/native.tsx").ShinyButton, obj3);
   obj[3] = items4;
   obj[5] = closure_7(closure_4, obj);
-  return closure_6(_Button.GradientBorder, obj);
+  return closure_6(require("../../../design/void/native.tsx").GradientBorder, obj);
 };

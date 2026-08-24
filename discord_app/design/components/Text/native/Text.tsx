@@ -5,7 +5,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentProvider from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import set from "PlainTextEligibility.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04743___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04748___INTERNAL_VIEW_CONFIG.js";
 import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -113,7 +113,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  let tmp4Result = tmp4(4742);
+  let tmp4Result = tmp4(4747);
   obj = { animated: flag, children, enabled: plainTextExperimentEnabled, experimentalUseNativeText: flag2, hasRef: null != arg1, hasTextAncestor: context, isIOS: null, props: null, style: null };
   tmp4Result = tmp4(501);
   obj[6] = tmp4Result.isIOS();

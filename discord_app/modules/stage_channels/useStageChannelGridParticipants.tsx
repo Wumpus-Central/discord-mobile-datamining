@@ -5,7 +5,6 @@ import closure_4 from "../calls/ChannelRTCStore.tsx";
 import closure_5 from "StageChannelParticipantStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { throttleStateFn } from "../../hooks/useThrottle.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
 const require = arg1;
 let closure_6 = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
@@ -17,14 +16,14 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   closure_2 = arg2;
   const items = [closure_5];
   const items1 = [arg0];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual);
-  const obj = _initialize;
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
+  const obj = initialize;
   const items2 = [stateFromStores1];
   const items3 = [arg0];
-  stateFromStores1 = _initialize.useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
   const items4 = [stateFromStores, arg1, stateFromStores1, arg2, arg0];
   return stateFromStores.useMemo(() => {
     const items = [];
@@ -104,7 +103,7 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   }, items4);
 };
 export const useThrottleDurationForChannel = function useThrottleDurationForChannel(id) {
-  stageParticipantsCount = stageParticipantsCount(6708).useStageParticipantsCount(id, stageParticipantsCount(6703).StageChannelParticipantNamedIndex.AUDIENCE);
+  stageParticipantsCount = stageParticipantsCount(6745).useStageParticipantsCount(id, stageParticipantsCount(6740).StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp2 = callback(React.useState(false), 2);
   dependencyMap = tmp2[1];
   const items = [stageParticipantsCount];
@@ -130,14 +129,14 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   dependencyMap = memo;
   let items = [closure_5];
   let items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_0, closure_1_5.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual);
-  const obj = _initialize;
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
+  const obj = initialize;
   let items2 = [stateFromStores1];
   let items3 = [id];
-  stateFromStores1 = _initialize.useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
   let items4 = [stateFromStores, memo, stateFromStores1, flag, id];
   memo = stateFromStores.useMemo(() => {
     const items = [];
@@ -215,12 +214,12 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
     const items6 = [items, items1];
     return items6;
   }, items4);
-  const obj2 = _initialize;
+  const obj2 = initialize;
   [tmp5, tmp6] = flag(memo, 2);
   const tmp4 = flag(memo, 2);
-  let items5 = [memo[_require(undefined, 6703).StageChannelParticipantNamedIndex.AUDIENCE]];
-  const obj3 = _throttleStateFn;
-  [tmp8, tmp9] = flag(_throttleStateFn.useThrottledState(memo, throttleDurationForChannel, items5), 2);
+  let items5 = [memo[_require(undefined, 6740).StageChannelParticipantNamedIndex.AUDIENCE]];
+  const obj3 = throttleStateFn;
+  [tmp8, tmp9] = flag(require("../../hooks/useThrottle.tsx").useThrottledState(memo, throttleDurationForChannel, items5), 2);
   if (flag) {
     let SELECTED = tmp10.MEDIA;
     let tmp11 = tmp10;

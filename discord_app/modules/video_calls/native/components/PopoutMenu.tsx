@@ -26,9 +26,9 @@ function PopoutMenuRow(onClose) {
     obj[0] = icon;
     tmp3Result = tmp3(onClick(1297).Icon, obj);
   }
-  obj = { leading: tmp3Result, label: tmp3(onClick(8083).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
+  obj = { leading: tmp3Result, label: tmp3(onClick(8122).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
-  return closure_6(onClose(6937), obj);
+  return closure_6(onClose(6975), obj);
 }
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);

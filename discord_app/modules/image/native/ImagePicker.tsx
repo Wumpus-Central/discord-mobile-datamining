@@ -2,8 +2,8 @@
 import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import launchCamera from "../../../../_runtime/04853_launchCamera.js";
-import openPickerDefault from "../../../../_runtime/04855_openPicker.js";
+import launchCamera from "../../../../_runtime/04858_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/04860_openPicker.js";
 import closure_3 from "../../user_settings/ThemeStore.tsx";
 import { ThemeTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
@@ -26,10 +26,10 @@ export default {
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    let tmp4Result = tmp4(4852);
+    let tmp4Result = tmp4(4857);
     obj2 = set;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    tmp4Result = tmp4(4853);
+    tmp4Result = tmp4(4858);
     obj = {};
     const merged = Object.assign(mediaType);
     obj.mediaType = str;

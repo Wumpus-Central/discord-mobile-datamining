@@ -2,7 +2,6 @@
 import closure_2 from "../../../../stores/GuildStore.tsx";
 import closure_3 from "../GuildPowerupsStore.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");
@@ -11,7 +10,7 @@ export default function useIsGuildThemePerkEnabled(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != callback;
     if (tmp2) {
       const guild = closure_1_2.getGuild(tmp);

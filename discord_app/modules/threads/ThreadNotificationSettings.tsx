@@ -5,7 +5,6 @@ import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
 import closure_4 from "JoinedThreadsStore.tsx";
 import { ThreadMemberFlags } from "ThreadConstants.tsx";
 import { UserNotificationSettings } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function computeThreadNotificationSetting(channel) {
@@ -63,5 +62,5 @@ export const useThreadNotificationSetting = function useThreadNotificationSettin
   const _require = channel;
   const items = [closure_4, closure_3, closure_2];
   const items1 = [channel];
-  return _initialize.useStateFromStores(items, () => closure_1_7(closure_0), items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7(closure_0), items1);
 };

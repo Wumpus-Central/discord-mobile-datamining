@@ -1,7 +1,6 @@
 // discord_app/modules/chat_input/native/useChatBottomManagerUIStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import keys from "../../../../_runtime/00644_keys.js";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 let chatInputContainerHeight = "chatInputContainerHeight";
 let obj = keys.create(() => {
@@ -21,7 +20,7 @@ export const updateChatInputContainerHeight = function updateChatInputContainerH
   const _require = num;
   dependencyMap = arg1;
   if (typeof num === "number") {
-    const Storage = _Storage.Storage;
+    const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     let result = Storage.set(chatInputContainerHeight, arg1);
   }
   obj.setState((chatInputContainerHeight) => {

@@ -3,7 +3,6 @@ import privDefault from "../../../_runtime/01405_priv.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "GuildRoleMemberCountStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchMemberCountsFromBackend() {
@@ -73,7 +72,7 @@ function _fetchMemberCounts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -116,7 +115,7 @@ function _fetchMemberCounts() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp7) {
           c1 = tmp;
           throw tmp7;
@@ -161,8 +160,8 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const result = store.set(combined, true);
   const _require = closure_0;
-  const HTTP = _sendRequest.HTTP;
-  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: _sendRequest.rejectWithMigratedError() };
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
     const membersById = closure_1_1(closure_1_2[6]).requestMembersById(closure_0, body.body, false);

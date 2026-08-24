@@ -21,7 +21,6 @@ import ME from "../../Constants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { MAX_THREAD_UNREAD_MESSAGE_COUNT as closure_25 } from "../threads/ThreadConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
 import { _formatMessageCountLabel } from "../threads/MessageCountUtils.tsx";
 
 require = arg1;
@@ -35,7 +34,7 @@ export const useLoadForumUnreadCounts = function useLoadForumUnreadCounts(channe
   dependencyMap = tagFilter;
   closure_3 = tagSetting;
   let items = [closure_7];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_7.hasLoaded(channel.guild_id));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.hasLoaded(channel.guild_id));
   const items1 = [, , , , , ];
   ({ id: arr2[0], guild_id: arr2[1] } = channel);
   items1[2] = stateFromStores;
@@ -65,7 +64,7 @@ export const useLoadForumUnreadCounts = function useLoadForumUnreadCounts(channe
 export const useExistingPin = function useExistingPin(thread) {
   const _require = thread;
   const items = [closure_7, closure_9];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const tmp = closure_1_1(closure_1_2[23]);
     const keys = closure_1_1(closure_1_2[23])(closure_1_7.getThreadsForParent(thread.guild_id, thread.parent_id)).keys();
     const found = keys.filter((arg0) => {
@@ -372,7 +371,7 @@ export const useMaxPossibleForumPostReactions = function useMaxPossibleForumPost
 };
 export const useMessageCount = function useMessageCount(thread) {
   const _require = thread;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let num = closure_1_8.getCount(thread.id);
@@ -381,18 +380,18 @@ export const useMessageCount = function useMessageCount(thread) {
     }
     return num;
   });
-  const messageCountText = __formatMessageCountLabel.getMessageCountText(stateFromStores, thread.id);
-  const obj2 = __formatMessageCountLabel;
+  const messageCountText = require("../threads/MessageCountUtils.tsx").getMessageCountText(stateFromStores, thread.id);
+  const obj2 = _formatMessageCountLabel;
   const items1 = [closure_13];
-  dependencyMap = _initialize.useStateFromStores(items1, () => {
+  dependencyMap = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     const items = [closure_1_13];
     return thread(table[21]).canDisplayPostUnreadMessageCount(thread.id, items);
   });
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const items2 = [closure_17];
   obj = { messageCount: stateFromStores, isMaxMessageCount: null, messageCountText: null, unreadCount: null };
   let tmp4 = null != stateFromStores;
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     if (closure_2) {
       const count = closure_1_17.getCount(thread.id);
       if (null != count) {
@@ -432,7 +431,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(589);
   const items = [closure_14];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_14.getUser(id));
-  const nullableMessageAuthor = id(4814).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4819).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;
@@ -477,10 +476,10 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
 export const useForumPostAuthor = function useForumPostAuthor(thread) {
   const _require = thread;
   const items = [closure_14];
-  const user = _initialize.useStateFromStores(items, () => closure_1_14.getUser(thread.ownerId));
-  const obj = _initialize;
+  const user = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_14.getUser(thread.ownerId));
+  const obj = initialize;
   const items1 = [closure_16];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     const message = closure_1_16.getMessage(thread.id);
     let firstMessage;
     if (message != null) {
@@ -488,7 +487,7 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
     }
     return firstMessage;
   });
-  const obj2 = _initialize;
+  const obj2 = initialize;
   let author;
   if (stateFromStores1 != null) {
     author = stateFromStores1.author;
@@ -498,7 +497,7 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
   }
   const items2 = [, ];
   ({ guild_id: arr3[0], ownerId: arr3[1] } = thread);
-  author = _useNullableMessageAuthor.useNullableUserAuthor(author, thread);
+  author = require("../messages/useMessageAuthor.tsx").useNullableUserAuthor(author, thread);
   const effect = React.useEffect(() => {
     if (null != thread.ownerId) {
       const member = closure_1_10.requestMember(tmp.guild_id, tmp.ownerId);
@@ -569,12 +568,12 @@ export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageM
 export const useCanManageChannel = function useCanManageChannel(channel) {
   const _require = channel;
   const items = [closure_12];
-  return _initialize.useStateFromStores(items, () => closure_1_12.can(closure_1_23.MANAGE_CHANNELS, closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.can(closure_1_23.MANAGE_CHANNELS, closure_0));
 };
 export const useForumPostReadStates = function useForumPostReadStates(stateFromStores) {
   const _require = stateFromStores;
   let items = [closure_11, closure_13];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let guildId = stateFromStores.getGuildId();
     if (guildId == null) {
       guildId = closure_1_22;
@@ -607,7 +606,7 @@ export const useChannelTemplate = function useChannelTemplate(parentChannel) {
 };
 export const useForumThreadsForChannelList = function useForumThreadsForChannelList(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeJoinedThreads: closure_1_6.getActiveJoinedThreadsForGuild(closure_0), activeUnjoinedThreads: closure_1_6.getActiveUnjoinedThreadsForGuild(closure_0), newThreadCounts: closure_1_6.getNewThreadCountsForGuild(closure_0) }));
   obj = { activeJoinedThreads: stateFromStoresObject.activeJoinedThreads, activeUnjoinedThreads: stateFromStoresObject.activeUnjoinedThreads, newThreadCounts: stateFromStoresObject.newThreadCounts };
@@ -616,12 +615,12 @@ export const useForumThreadsForChannelList = function useForumThreadsForChannelL
 export const useCanSearchForumPosts = function useCanSearchForumPosts(channel) {
   const _require = channel;
   const items = [closure_12];
-  return _initialize.useStateFromStores(items, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
 };
 export const useCanViewArchivedPosts = function useCanViewArchivedPosts(channel) {
   const _require = channel;
   const items = [closure_12];
-  return _initialize.useStateFromStores(items, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
 };
 export const useForumSearchQuery = function useForumSearchQuery(channelId) {
   channelId = channelId.channelId;
@@ -642,7 +641,7 @@ export const useForumSearchState = function useForumSearchState(channelId) {
 export const useHasForumSearchQuery = function useHasForumSearchQuery(channelId) {
   const _require = channelId;
   const items = [closure_18];
-  return _initialize.useStateFromStores(items, () => null != closure_1_18.getSearchQuery(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => null != closure_1_18.getSearchQuery(closure_0));
 };
 export const useAutomaticForumSearch = function useAutomaticForumSearch(channel, tagFilter, tagSetting) {
   let _require = channel;
@@ -659,15 +658,15 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
   closure_8 = undefined;
   _require = channel.id;
   const items = [closure_18];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => ({ isSearchLoading: closure_1_18.getSearchLoading(closure_0), searchQuery: closure_1_18.getSearchQuery(closure_0), searchResults: closure_1_18.getSearchResults(closure_0) }));
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ isSearchLoading: closure_1_18.getSearchLoading(closure_0), searchQuery: closure_1_18.getSearchQuery(closure_0), searchResults: closure_1_18.getSearchResults(closure_0) }));
   isSearchLoading = stateFromStoresObject.isSearchLoading;
   searchQuery = stateFromStoresObject.searchQuery;
   _require = channel;
-  let obj = _initialize;
+  let obj = initialize;
   const items1 = [closure_12];
-  stateFromStores = _initialize.useStateFromStores(items1, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_12.can(closure_1_23.READ_MESSAGE_HISTORY, closure_0));
   closure_7 = isSearchLoading.useRef(null);
-  const obj2 = _initialize;
+  const obj2 = initialize;
   closure_8 = isSearchLoading.useRef(new Set());
   const items2 = [stateFromStores, , , , , , , ];
   ({ guild_id: arr3[1], id: arr3[2] } = channel);
@@ -724,7 +723,7 @@ export const useUnreadThreadsCountForParent = function useUnreadThreadsCountForP
   const _require = guild_id;
   closure_1 = id;
   const items = [closure_6, closure_13, closure_9];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     channel = closure_1_9.getChannel(closure_1);
     let isForumLikeChannelResult;
     if (channel != null) {

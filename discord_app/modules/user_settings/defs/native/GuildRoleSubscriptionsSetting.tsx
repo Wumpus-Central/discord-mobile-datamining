@@ -25,7 +25,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
   getComponent() {
-    return GuildRoleSubscriptionsSectionHeader.default;
+    return GuildRoleSubscriptionsSectionHeader /* GuildRoleSubscriptionsSectionHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

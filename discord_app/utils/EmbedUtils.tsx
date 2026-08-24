@@ -67,7 +67,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = tmp(3975);
+    let tmpResult = tmp(3978);
     const date = new Date(footer.timestamp);
     obj.timestamp = tmpResult(date);
   }
@@ -234,13 +234,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4805).transformComponents(footer.components);
+    const transformComponentsResult = obj6(4810).transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4805);
+    const obj17 = obj6(4810);
   }
   return obj;
 };

@@ -16,9 +16,6 @@ import { MessageSendLocation } from "../../../messages/MessageConstants.tsx";
 import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { LegacyBaseButton } from "../../../../../_runtime/06377_LegacyBaseButton.js";
-import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
@@ -71,19 +68,19 @@ const memoResult = importAllResult.memo((disabled) => {
   let callback2;
   let callback3;
   c14 = undefined;
-  let obj = _useIsMobileVisualRefreshExperimentEnabled;
-  obj1 = _useGradientBottom;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
+  obj1 = useGradientBottom;
   const clientThemesOverride = obj1.useClientThemesOverride(callback2().themedChatInput);
   const tmp3 = state((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);
   dependencyMap = tmp3;
   let tmp = callback2();
-  sharedValue = _ReanimatedRexport.useSharedValue(0);
+  sharedValue = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
   _require = undefined;
   sharedValue1 = undefined;
   let ref = importAllResult.useRef(false);
   _require = ref;
-  let obj3 = _ReanimatedRexport;
-  sharedValue1 = _ReanimatedRexport.useSharedValue(false);
+  let obj3 = ReanimatedRexport;
+  sharedValue1 = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(false);
   let items = [ref, sharedValue1];
   const items1 = [
     ref,
@@ -100,7 +97,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   closure_8 = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp11 = sharedValue1(10718)();
+  const tmp11 = sharedValue1(10757)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     closure_0 = arg0;
@@ -118,7 +115,7 @@ const memoResult = importAllResult.memo((disabled) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -233,7 +230,7 @@ const memoResult = importAllResult.memo((disabled) => {
                 const obj17 = callback(closure_2[29]);
               }
               startTimeMillis = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } catch (tmp32) {
@@ -323,9 +320,9 @@ const memoResult = importAllResult.memo((disabled) => {
       }
     };
   }, items4);
-  let obj4 = _ReanimatedRexport;
+  let obj4 = ReanimatedRexport;
   const items5 = [first, tmp7[2], channelId];
-  const isModalOpen = _coerceMainRoute.useIsModalOpen();
+  const isModalOpen = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useIsModalOpen();
   const effect4 = importAllResult.useEffect(() => {
     function cancel() {
       const self = this;
@@ -351,7 +348,7 @@ const memoResult = importAllResult.memo((disabled) => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -458,7 +455,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -597,7 +594,7 @@ const memoResult = importAllResult.memo((disabled) => {
       return;
     }
   }
-  obj = { voiceMessageAnimationState: tmp3, runOnJS: _ReanimatedRexport.runOnJS, triggerHapticGuarded };
+  obj = { voiceMessageAnimationState: tmp3, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, triggerHapticGuarded };
   Z.__closure = obj;
   Z.__workletHash = 9127775028714;
   Z.__initData = closure_30;
@@ -628,9 +625,9 @@ const memoResult = importAllResult.memo((disabled) => {
       const obj = callback(store[18]);
     }
   }, items9);
-  let obj5 = _coerceMainRoute;
-  const tmp23 = sharedValue1(8866);
-  let intl = _getSystemLocale.intl;
+  let obj5 = coerceMainRoute;
+  const tmp23 = sharedValue1(8903);
+  let intl = require("../../../../intl/index.native.tsx").intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -643,7 +640,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -679,7 +676,7 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -702,7 +699,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -738,14 +735,14 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
         throw tmp12;
       }
     }
-  }), intl.string(_getSystemLocale.t.lwy6aX)));
+  }), intl.string(require("../../../../intl/index.native.tsx").t.lwy6aX)));
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(store[38]).Gesture;
     const PanResult = Gesture.Pan();
@@ -799,7 +796,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(11421)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
+  obj1 = { ref: sharedValue1(11472)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
   const tmp23Result = tmp23(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -812,7 +809,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -848,17 +845,17 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c2 = tmp;
         throw tmp12;
       }
     }
-  }), intl.string(_getSystemLocale.t.lwy6aX));
-  obj1[1] = _MicrophoneIcon.MicrophoneIcon;
-  const intl2 = _getSystemLocale.intl;
-  obj1[3] = intl2.string(_getSystemLocale.t.lwy6aX);
+  }), intl.string(require("../../../../intl/index.native.tsx").t.lwy6aX));
+  obj1[1] = require("../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx").MicrophoneIcon;
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx").t.lwy6aX);
   obj1[4] = accessibilityActions;
   obj1[5] = onAccessibilityAction;
   obj1[6] = disabled;
@@ -867,8 +864,8 @@ const memoResult = importAllResult.memo((disabled) => {
     tmp30 = clientThemesOverride;
   }
   obj1[7] = tmp30;
-  obj[1] = jsx(sharedValue1(11402), { ref: sharedValue1(11421)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
-  return jsx(_LegacyBaseButton.GestureDetector, { gesture: memo, children: null });
+  obj[1] = jsx(sharedValue1(11453), { ref: sharedValue1(11472)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
+  return jsx(require("../../../../../_runtime/06408_LegacyBaseButton.js").GestureDetector, { gesture: memo, children: null });
 });
 let result = require("set").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");
 

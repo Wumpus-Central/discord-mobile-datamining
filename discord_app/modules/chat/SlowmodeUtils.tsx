@@ -3,7 +3,6 @@ import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
@@ -17,14 +16,14 @@ export const canBypassSlowmode = function canBypassSlowmode(channel) {
 export const useCanBypassSlowmode = function useCanBypassSlowmode(channel) {
   const _require = channel;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => closure_1_3.can(closure_1_4.BYPASS_SLOWMODE, closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.can(closure_1_4.BYPASS_SLOWMODE, closure_0));
 };
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["8+NidX"]);
   } else if (stateFromStores >= setDefault.Millis.HOUR) {
-    let tmp2Result = tmp2(3975);
+    let tmp2Result = tmp2(3978);
     const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + durationResult.minutes();
@@ -34,7 +33,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal5 = HermesInternal;
     return "" + durationResult.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = tmp2(3975);
+    tmp2Result = tmp2(3978);
     const durationResult1 = tmp2Result.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + durationResult1.seconds();

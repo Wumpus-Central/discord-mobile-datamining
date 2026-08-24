@@ -25,7 +25,7 @@ class VoicePanelConsoleStatus {
     color = tmp5.color;
     tmp6 = state;
     ({ icon, text, displayCancel } = tmp5);
-    obj = require("module_4115");
+    obj = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue = obj.useSharedValue(false);
     closure_4 = sharedValue;
     items = [, ];
@@ -35,7 +35,7 @@ class VoicePanelConsoleStatus {
       const result = sharedValue.set(state !== state(windowDimensions[10]).TransitionStates.YEETED);
     }, items);
     tmp9 = require("useControlsTranslation")(mode, wrapperSpecs, accessoryHeights);
-    obj2 = require("module_4115");
+    obj2 = require("../../../reanimated/ReanimatedRexport.tsx");
     fn = function v() {
       let obj = { backgroundColor: color, width: windowDimensions.get().width - 2 * sharedValue, height: closure_1_5 + 36, borderRadius: 32, transform: null };
       let num = 100;
@@ -62,12 +62,12 @@ class VoicePanelConsoleStatus {
       obj[4] = items;
       return obj;
     };
-    obj = { color, windowDimensions, EDGE_GUTTER: closure_4, CONTROLS_HEIGHT, CONSOLE_STATUS_HEIGHT: 36, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, shouldShow: sharedValue, FADE_IN_MODE_PHYSICS: closure_9, runOnJS: require("module_4115").runOnJS, cleanUp };
+    obj = { color, windowDimensions, EDGE_GUTTER: closure_4, CONTROLS_HEIGHT, CONSOLE_STATUS_HEIGHT: 36, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, shouldShow: sharedValue, FADE_IN_MODE_PHYSICS: closure_9, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 14156265059426;
     fn.__initData = closure_10;
     animatedStyle = obj2.useAnimatedStyle(fn);
-    obj4 = require("module_4115");
+    obj4 = require("../../../reanimated/ReanimatedRexport.tsx");
     class V {
       constructor() {
         obj = { width: windowDimensions.get().width - 2 * closure_4 };
@@ -109,16 +109,16 @@ class VoicePanelConsoleStatus {
     items3[2] = tmp13Result;
     obj4[1] = items3;
     obj3[1] = tmp12(tmp15, obj4);
-    obj2[1] = tmp13(require("module_4115").View, obj3);
+    obj2[1] = tmp13(require("../../../reanimated/ReanimatedRexport.tsx").View, obj3);
     items4 = [, ];
     items4[0] = tmp13(tmp14, obj2);
     obj9 = { style: items5, children: tmp13(require("VoicePanelVisualEffectView").VoicePanelVisualEffectView, {}) };
     items5 = [, ];
     items5[0] = tmp.blockingControlCover;
     items5[1] = animatedStyle1;
-    items4[1] = tmp13(require("module_4115").View, obj9);
+    items4[1] = tmp13(require("../../../reanimated/ReanimatedRexport.tsx").View, obj9);
     obj1[1] = items4;
-    return tmp12(require("module_4115").View, obj1);
+    return tmp12(require("../../../reanimated/ReanimatedRexport.tsx").View, obj1);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);

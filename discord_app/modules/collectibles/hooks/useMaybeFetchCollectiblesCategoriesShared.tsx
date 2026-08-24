@@ -15,11 +15,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   const _require = arg0;
   dependencyMap = noOp;
   const callback = arg2;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_6];
-  const tmp2 = callback(_initialize.useStateFromStoresArray(items1, () => {
+  const tmp2 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     const items = [, , , , , , ];
     ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
     if (lastErrorTimestamp == null) {

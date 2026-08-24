@@ -2,7 +2,6 @@
 import closure_2 from "../../CollectiblesCategoryStore.tsx";
 import closure_3 from "../../CollectiblesPurchaseStore.tsx";
 import { isProfileFrameRecord } from "../../records/ProfileFrameRecord.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");
@@ -10,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/profil
 export default function useProfileFrame(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = closure_1_2.getProduct(tmp);
       let first;

@@ -1,7 +1,6 @@
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
 import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 function runAfterInteractions(arg0, MINUTE) {
   const _require = arg0;
@@ -15,7 +14,7 @@ function runAfterInteractions(arg0, MINUTE) {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _start.DelayedCall(num, () => {
+  delayedCall = new require("../../../discord_common/js/packages/timers/Timers.tsx").DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });

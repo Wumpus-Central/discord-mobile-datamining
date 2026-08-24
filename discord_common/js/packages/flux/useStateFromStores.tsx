@@ -42,7 +42,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     tmp7 = null != state && tmp(state, tmp6);
   } else {
     tmp5 = state;
-    const obj2 = _shallowEqual;
+    const obj2 = shallowEqual;
   }
   callback3(() => {
     current.getStateFromStores = closure_1;

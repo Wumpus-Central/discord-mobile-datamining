@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import handleRelationshipAddErrorDefault from "../../../../../actions/RelationshipActionCreators.tsx";
-import _modDef9887 from "../../../../people/PeopleUtils.tsx";
+import _modDef9926 from "../../../../people/PeopleUtils.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import { AnalyticsSections } from "../../../../../Constants.tsx";
@@ -28,7 +28,7 @@ function _sendWave() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -72,17 +72,17 @@ function _sendWave() {
                   c7 = 4;
                   c8 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = flag(4770).getDMChannel(callback);
+                  obj2[0] = flag(4775).getDMChannel(callback);
                   return obj2;
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(11430);
+                    let obj7 = callback(11481);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
                     obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(7427);
+                    let obj9 = flag(7465);
                     let obj4 = { location: null };
                     obj4[0] = constants.SEND_WAVE;
                     c7 = 5;
@@ -99,7 +99,7 @@ function _sendWave() {
               if (2 !== tmp8) {
                 if (3 === tmp8) {
                   constants = 0;
-                  obj4 = callback(4093);
+                  obj4 = callback(4096);
                   const intl = callback(1236).intl;
                   obj4.presentError(intl.string(callback(1236).t.iufib1));
                   c8 = 3;
@@ -122,7 +122,7 @@ function _sendWave() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   if (flag) {
-                    obj = flag(4770);
+                    obj = flag(4775);
                     obj7 = { recipientIds: null };
                     obj7[0] = callback;
                     obj.openPrivateChannel(obj7);
@@ -130,7 +130,7 @@ function _sendWave() {
                 }
               }
               constants = 0;
-              obj5 = callback(4093);
+              obj5 = callback(4096);
               const intl2 = callback(1236).intl;
               obj5.presentError(intl2.string(callback(1236).t.iufib1));
               c8 = 3;
@@ -173,13 +173,13 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/f
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9887;
+  let obj = _modDef9926;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9887;
+  let obj = _modDef9926;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };

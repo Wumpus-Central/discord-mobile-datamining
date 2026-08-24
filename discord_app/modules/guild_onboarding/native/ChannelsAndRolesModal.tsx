@@ -3,7 +3,7 @@ import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/u
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useGuildOnboardingAvailableDefault from "../useGuildOnboardingAvailable.tsx";
-import _modDef9930 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef9969 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -109,5 +109,5 @@ export default function ChannelsAndRolesModal(arg0) {
       return closure_1_8(closure_1_11, { guildId: closure_0, defaultTab: closure_1 });
     }
   };
-  return tmp3(_modDef9930, obj);
+  return tmp3(_modDef9969, obj);
 };

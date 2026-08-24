@@ -69,7 +69,7 @@ class CollectiblesShopV2 {
       tmp9 = !nativePaymentsConnected;
     }
     if (tmp9) {
-      tmpResult = require("module_1208");
+      tmpResult = require("../../../utils/SentryUtils.native.tsx");
       tmp5Result1 = require("set");
       str = "collectibles mobile shop failed to connect to native payments isIOS: ";
       text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;

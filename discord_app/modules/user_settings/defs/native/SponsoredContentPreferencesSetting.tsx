@@ -21,7 +21,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SPONSORED_CONTENT_PREFERENCES,
   getComponent() {
-    return SponsoredContentPreferencesScreen.default;
+    return SponsoredContentPreferencesScreen /* SponsoredContentPreferencesScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

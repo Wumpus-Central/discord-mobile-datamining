@@ -52,16 +52,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(5319).default.getUserCountry();
-      const _default2 = tmp2(5319).default;
+      let ipCountryCode = tmp2(5324).default.getUserCountry();
+      const _default2 = tmp2(5324).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(5321).default.getStoreFront();
+      const storeFront = tmp2(5326).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(5321).default;
+      const _default = tmp2(5326).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }

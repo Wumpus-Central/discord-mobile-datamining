@@ -1,7 +1,6 @@
 // discord_app/modules/calls/useCallA11yState.tsx
 import closure_2 from "../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../stores/CallStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/calls/useCallA11yState.tsx");
@@ -9,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/calls/useCallA11ySt
 export default function useCallA11yState(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2];
-  return _initialize.useStateFromStoresObject(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     let obj = closure_1_3;
     const call = closure_1_3.getCall(closure_0);
     const id = closure_1_2.getId();

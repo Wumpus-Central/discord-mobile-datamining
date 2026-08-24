@@ -7,7 +7,6 @@ import closure_3 from "../../../../activities/EmbeddedActivitiesStore.tsx";
 import closure_4 from "../../../../../stores/ApplicationStreamingStore.tsx";
 import closure_5 from "../../../../../stores/RelationshipStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 noopAll;
@@ -87,7 +86,7 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
   const _require = channel_id;
   const items = [closure_3, closure_4, closure_5];
   const items1 = [channel_id];
-  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
+  return require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
     if (null == channelId) {
       return {};
     } else {

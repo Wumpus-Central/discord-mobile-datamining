@@ -67,8 +67,8 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = _asString.getSpotifyMetadataFromActivity(closure_0, closure_1);
-  let obj = _asString;
+  const spotifyMetadataFromActivity = require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(closure_0, closure_1);
+  let obj = asString;
   spotifyMetadataFromActivity.then((metadata) => {
     let obj = callback(closure_1_2[3]);
     obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };

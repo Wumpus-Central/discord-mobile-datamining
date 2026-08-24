@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.PREMIUM_PLAN_SELECT,
   getComponent() {
-    return PremiumPlanSelectSettingScreen.default;
+    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

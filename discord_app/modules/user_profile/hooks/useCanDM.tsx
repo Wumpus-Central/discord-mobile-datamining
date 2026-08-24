@@ -5,7 +5,6 @@ import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../stores/GuildMemberStore.tsx";
 import closure_6 from "../../../stores/RelationshipStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
@@ -14,21 +13,21 @@ export default function useCanDM(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   const items = [closure_4];
-  closure_2 = _initialize.useStateFromStores(items, () => id.getId() === closure_0);
-  const obj = _initialize;
+  closure_2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId() === closure_0);
+  const obj = initialize;
   const items1 = [closure_3];
-  closure_3 = _initialize.useStateFromStores(items1, () => {
+  closure_3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let isLurkingResult = null != closure_1;
     if (isLurkingResult) {
       isLurkingResult = lurking.isLurking(tmp);
     }
     return isLurkingResult;
   });
-  const RestrictedGuildIds = _explicitContentFromProto.RestrictedGuildIds;
+  const RestrictedGuildIds = require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
   closure_4 = RestrictedGuildIds.useSetting();
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const items2 = [closure_6, closure_5, closure_2];
-  return _initialize.useStateFromStores(items2, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let tmp = !gameFriendsForUser;
     if (!gameFriendsForUser) {
       tmp = !closure_3;
@@ -59,7 +58,7 @@ export const canDm = function canDm(userId, guildId) {
   if (isLurkingResult) {
     isLurkingResult = lurking.isLurking(guildId);
   }
-  const RestrictedGuildIds = _explicitContentFromProto.RestrictedGuildIds;
+  const RestrictedGuildIds = require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
   _require = RestrictedGuildIds.getSetting();
   let isFriendResult = friend.isFriend(userId);
   let tmp8 = !tmp4;
@@ -76,7 +75,7 @@ export const canDm = function canDm(userId, guildId) {
   if (!tmp8) {
     let setting = gameFriendsForUser.getGameFriendsForUser(userId).length > 0;
     if (setting) {
-      const AllowGameFriendDmsInDiscord = _explicitContentFromProto.AllowGameFriendDmsInDiscord;
+      const AllowGameFriendDmsInDiscord = require("../../user_settings/UserSettings.tsx").AllowGameFriendDmsInDiscord;
       setting = AllowGameFriendDmsInDiscord.getSetting();
     }
     tmp8 = setting;

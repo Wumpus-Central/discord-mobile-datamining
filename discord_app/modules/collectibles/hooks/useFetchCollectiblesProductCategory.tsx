@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
   setDefault();
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   let items = [closure_4];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {
     const items = [closure_1_4.isFetchingCategories, closure_1_4.getCategoryForProduct(closure_0)];

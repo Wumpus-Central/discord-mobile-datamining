@@ -11,13 +11,13 @@ let result = require("set").fileFinishedImporting("modules/guild_scheduled_event
 
 export default function useEventsButtonProps(id) {
   const _require = id;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const items1 = [id.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [closure_5];
-  const eventsMuted = _initialize.useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
+  const eventsMuted = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
   const arr4 = useGuildEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
@@ -45,13 +45,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1236).intl;
     name = intl.string(tmp(1236).t.tlopTM);
   }
-  let mode = tmp(11553).ChannelModes.DEFAULT;
+  let mode = tmp(11602).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(11553).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(11602).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

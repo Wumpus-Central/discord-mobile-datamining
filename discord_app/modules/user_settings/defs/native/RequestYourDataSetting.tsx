@@ -4,8 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import tDefault from "../../../../../_runtime/03975_t.js";
-import isIterable from "../../../../../_runtime/04006_isIterable.js";
+import tDefault from "../../../../../_runtime/03978_t.js";
+import isIterable from "../../../../../_runtime/04009_isIterable.js";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import saveProfileAndAccountRequest from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import harvestDisabled from "../../../harvester/HarvesterUtils.tsx";
@@ -13,7 +13,6 @@ import closure_4 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import identity from "../../../../../_runtime/00700_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { RequestDataScreen } from "../../privacy_and_safety/native/RequestDataScreen.tsx";
 
 function useIsHarvestRequestDisabled() {
   const items = [closure_4];
@@ -100,7 +99,7 @@ obj = {
 obj = {
   route: UserSettingsSections.REQUEST_DATA,
   getComponent() {
-    return RequestDataScreen.default;
+    return require("../../privacy_and_safety/native/RequestDataScreen.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);

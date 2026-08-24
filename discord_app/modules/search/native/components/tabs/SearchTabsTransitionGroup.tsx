@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
-import wrapChildrenDefault from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import ManaContext from "../../../../../../discord_common/js/packages/design/native.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -136,5 +136,5 @@ let result = require("set").fileFinishedImporting("modules/search/native/compone
 
 export default function SearchTabsTransitionGroup(state) {
   const items = [state.state];
-  return jsx(wrapChildrenDefault.TransitionGroup, { items, getItemKey, renderItem });
+  return jsx(ManaContext.TransitionGroup, { items, getItemKey, renderItem });
 };

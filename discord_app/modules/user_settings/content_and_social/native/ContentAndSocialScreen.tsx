@@ -197,16 +197,16 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = getSystemLocale.intl;
     const obj3 = { helpdeskArticle: null };
-    obj3[0] = tmp2(1993).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj3[0] = tmp2(1994).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     obj2[2] = intl2.format(getSystemLocale.t.V8wClM, obj3);
     items[1] = callback2(Text.Text, obj2);
     obj[1] = items;
     tmp7 = callback3(closure_6, obj);
-    const tmp2Result = tmp2(1993);
+    const tmp2Result = tmp2(1994);
   } else {
     obj = { node: null };
     obj[0] = tmp5;
-    tmp7 = callback2(tmp2(13991), obj);
+    tmp7 = callback2(tmp2(14059), obj);
   }
   return tmp7;
 };

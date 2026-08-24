@@ -2,7 +2,6 @@
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00644_keys.js";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
@@ -41,7 +40,7 @@ let closure_5 = keys.create((arg0) => {
     }));
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
-  let Storage = _Storage.Storage;
+  let Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
   screenReaderEnabled = Storage.get(screenReaderEnabled);
   if (screenReaderEnabled == null) {
     screenReaderEnabled = false;

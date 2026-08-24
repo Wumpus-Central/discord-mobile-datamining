@@ -2,14 +2,12 @@
 import set from "../../../../_runtime/00002_set.js";
 import markAnalyticsFeedItemSeen from "../../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
 import maybeMarkSeen from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
-import { maybeMarkSeen } from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
-import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
 
 const AnalyticsFeedItemSeenManager = maybeMarkSeen.AnalyticsFeedItemSeenManager;
 const prototype = function ForumChannelSeenManager(channelId) {
   channelId = channelId.channelId;
   let obj = { windowId: channelId.windowId, isPaused: channelId.isPaused, id: null };
-  const FORUM_CHANNEL = _maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL;
+  const FORUM_CHANNEL = require("../../../utils/AnalyticsFeedItemSeenManager.tsx").AnalyticsFeedTypes.FORUM_CHANNEL;
   obj[2] = concat(FORUM_CHANNEL, "_", channelId);
   tmp = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
   // ThrowIfThisInitialized (0x7c)
@@ -52,7 +50,7 @@ const prototype = function ForumChannelSeenManager(channelId) {
   };
   tmp.guildId = channelId.guildId;
   tmp.channelId = channelId;
-  tmp.sessionId = _collectForumAnalyticsMetadata.getForumChannelSessionId(channelId);
+  tmp.sessionId = require("TrackingUtils.tsx").getForumChannelSessionId(channelId);
   return tmp;
 }.prototype;
 class prototype extends AnalyticsFeedItemSeenManager {

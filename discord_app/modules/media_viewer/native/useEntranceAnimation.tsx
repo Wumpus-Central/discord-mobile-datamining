@@ -2,12 +2,11 @@
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import keys from "../../../../_runtime/00644_keys.js";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const require = arg1;
 function setUseEntranceAnimationState(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_5.setState(closure_0));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_5.setState(closure_0));
 }
 let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
 obj = keys.create(() => ({ isComplete: false }));

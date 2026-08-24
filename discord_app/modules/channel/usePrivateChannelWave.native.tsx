@@ -4,7 +4,6 @@ import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../_runtime/00019_noop.js";
 import ME from "../../Constants.tsx";
 import { MessageSendLocation } from "../messages/MessageConstants.tsx";
-import { usePrivateChannelWaveEligible } from "usePrivateChannelWaveEligible.tsx";
 
 const require = arg1;
 ({ ME: closure_6, Routes: error } = ME);
@@ -29,7 +28,7 @@ export default function usePrivateChannelWave(id) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -108,7 +107,7 @@ export default function usePrivateChannelWave(id) {
       }
     }
   }), items);
-  obj[0] = _usePrivateChannelWaveEligible.usePrivateChannelWaveEligible(id, arg1);
+  obj[0] = require("usePrivateChannelWaveEligible.tsx").usePrivateChannelWaveEligible(id, arg1);
   obj[1] = callback;
   return obj;
 };

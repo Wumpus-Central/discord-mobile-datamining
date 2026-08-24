@@ -26,8 +26,8 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _getOrRefreshPushSyncToken.setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _getOrRefreshPushSyncToken;
+    let result = require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = getOrRefreshPushSyncToken;
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();
@@ -72,7 +72,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp4) {
           c0 = tmp;

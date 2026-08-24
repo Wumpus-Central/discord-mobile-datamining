@@ -36,7 +36,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         id = target_application.id;
         if (applicationAssetFetchState.getApplicationAssetFetchState(id) === FetchState.NOT_FETCHED) {
-          let obj2 = id(7247);
+          let obj2 = id(7285);
           const assetIds = obj2.fetchAssetIds(id, closure_16);
         }
         const tmp13 = getEmbedThemeColorsDefault(inviteCode.theme);
@@ -61,7 +61,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         let simpleChannelIcon = null;
         if (null != channel) {
-          let obj3 = id(6832);
+          let obj3 = id(6870);
           simpleChannelIcon = obj3.getSimpleChannelIcon(channel);
         }
         if (null != simpleChannelIcon) {
@@ -84,7 +84,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           if (null != name) {
             const intl2 = tmp25(1236).intl;
             obj = { channelName: null, guildName: null };
-            let tmp25Result = tmp25(4984);
+            let tmp25Result = tmp25(4989);
             obj[0] = tmp25Result.computeChannelName(channel, closure_13, closure_12);
             obj[1] = name;
             let formatToPartsResult = intl2.formatToParts(tmp25(1236).t.omZR7L, obj);
@@ -104,7 +104,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           }
           if (null != id) {
             if (null != id2) {
-              tmp25Result = tmp25(12767);
+              tmp25Result = tmp25(12822);
               obj1 = { channelId: null, guildId: null, applicationId: null };
               obj1[0] = id;
               obj1[1] = id2;
@@ -122,15 +122,15 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
                 stringResult = intl3.string(tmp25(1236).t.KC26NR);
               }
             }
-            let assetIds1 = tmp25(7247).getAssetIds(id, closure_16);
+            let assetIds1 = tmp25(7285).getAssetIds(id, closure_16);
             if (assetIds1 == null) {
               assetIds1 = [];
             }
             const first = callback(assetIds1, 1)[0];
             let assetImage;
             if (null != first) {
-              assetImage = tmp25(7247).getAssetImage(id, first, 1024);
-              const tmp25Result2 = tmp25(7247);
+              assetImage = tmp25(7285).getAssetImage(id, first, 1024);
+              const tmp25Result2 = tmp25(7285);
             }
             obj2 = {};
             const merged = Object.assign(baseColors);

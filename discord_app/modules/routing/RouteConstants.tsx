@@ -525,7 +525,7 @@ obj[123] = function GAME_SHOP(arg0, id, slug) {
 obj[124] = function GUILD_PRODUCT(arg0, arg1) {
   return "/channels/" + arg0 + "/shop/" + arg1;
 };
-obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, id, slug) {
+obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, c1, slug) {
   const combined = "/shop?tab=" + CollectibleShopTab.GAME_SHOPS + "&applicationId=" + applicationId;
   let sum = combined;
   if (null != pageIndex) {
@@ -533,9 +533,9 @@ obj[128] = function COLLECTIBLES_SHOP_GAME_SHOP(applicationId, pageIndex, id, sl
     sum = combined + "&pageIndex=" + pageIndex;
   }
   let sum1 = sum;
-  if (null != id) {
+  if (null != c1) {
     const _HermesInternal2 = HermesInternal;
-    sum1 = sum + "&skuId=" + id;
+    sum1 = sum + "&skuId=" + c1;
   }
   let sum2 = sum1;
   if (null != slug) {

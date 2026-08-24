@@ -47,8 +47,8 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
     hexToRgbResult = store.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _hexToRgba.hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
-    const obj2 = _hexToRgba;
+    hexToRgbResult = require("../../../../utils/ColorUtils.tsx").hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
+    const obj2 = hexToRgba;
   }
   const tmp7 = callback(React.useState(hexToRgbResult), 2);
   dependencyMap = tmp7[1];
@@ -131,8 +131,8 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
     hexToRgbResult = store.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _hexToRgba.hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
-    const obj2 = _hexToRgba;
+    hexToRgbResult = require("../../../../utils/ColorUtils.tsx").hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
+    const obj2 = hexToRgba;
   }
   [tmp8, dependencyMap] = callback(React.useState(hexToRgbResult), 2);
   const items = [arg0];

@@ -11,9 +11,6 @@ import { AnalyticEvents } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -38,10 +35,10 @@ const result = require("set").fileFinishedImporting("modules/premium/gifting/nat
 export default function GiftingBadgeInfoActionSheet() {
   const tmp = callback3();
   const _require = tmp;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8932).BadgeId.GIFTING));
-  obj1 = _initialize;
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8969).BadgeId.GIFTING));
+  obj1 = initialize;
   const items1 = [closure_5];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
@@ -54,13 +51,13 @@ export default function GiftingBadgeInfoActionSheet() {
   obj[0] = items2;
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: null };
-  let intl = _getSystemLocale.intl;
+  let intl = require("../../../../intl/index.native.tsx").intl;
   obj2[4] = intl.string(messagesProxyDefault["0MB2C6"]);
-  const items3 = [callback(_Text.Text, obj2), ];
+  const items3 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2), ];
   let obj3 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = _getSystemLocale.intl;
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj3[3] = intl2.string(messagesProxyDefault.k9sNVH);
-  items3[1] = callback(_Text.Text, obj3);
+  items3[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3);
   obj1[1] = items3;
   const items4 = [callback2(View, obj1), ];
   const obj4 = { style: tmp.tierCards, children: null };
@@ -116,5 +113,5 @@ export default function GiftingBadgeInfoActionSheet() {
   items4[1] = callback(View, obj4);
   obj[1] = items4;
   obj5[2] = callback2(View, obj);
-  return callback(_Background.BottomSheet, obj5);
+  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj5);
 };

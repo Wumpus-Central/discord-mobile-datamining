@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
   getComponent() {
-    return Radio.default;
+    return Radio /* Radio */.default;
   }
 };
 const route = createToggle.createRoute(obj);

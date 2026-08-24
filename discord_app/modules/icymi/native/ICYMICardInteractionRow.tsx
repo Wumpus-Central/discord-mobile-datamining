@@ -19,7 +19,6 @@ import ME from "../../../Constants.tsx";
 import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function AddEmojiButton(channel) {
@@ -664,7 +663,7 @@ export const useThread = function useThread(id) {
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [closure_9, closure_8];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     if (null != message) {
       if (null != guild) {
         let channel = canForwardMessage.getChannel(tmp.id);

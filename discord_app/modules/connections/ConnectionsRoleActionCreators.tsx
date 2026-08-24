@@ -1,7 +1,6 @@
 // discord_app/modules/connections/ConnectionsRoleActionCreators.tsx
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _putRoleConnectionsConfigurations() {
@@ -24,7 +23,7 @@ function _putRoleConnectionsConfigurations() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -105,7 +104,7 @@ function _putRoleConnectionsConfigurations() {
             obj7[2] = closure_2;
             obj2.dispatch(obj7);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp28) {
           c6 = tmp;
@@ -145,7 +144,7 @@ const result = require("set").fileFinishedImporting("modules/connections/Connect
 
 export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsConfiguration(guildId, id) {
   const _require = id;
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id), rejectWithError: true });
   let obj = { url: Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(guildId, id), rejectWithError: true };
   value.then((body) => {

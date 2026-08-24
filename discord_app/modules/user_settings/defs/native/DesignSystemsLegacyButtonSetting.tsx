@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
-    return ComparisonRow.default;
+    return ComparisonRow /* ComparisonRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

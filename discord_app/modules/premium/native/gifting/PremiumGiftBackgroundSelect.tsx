@@ -22,7 +22,7 @@ class GiftBackgroundSelect {
     first = tmp2[0];
     closure_0 = first;
     closure_1 = tmp2[1];
-    obj = require("module_4115");
+    obj = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue = obj.useSharedValue(false);
     closure_2 = sharedValue;
     items = [, ];
@@ -31,7 +31,7 @@ class GiftBackgroundSelect {
     effect = closure_4.useEffect(() => {
       const result = sharedValue.set(null != first);
     }, items);
-    obj2 = require("module_4115");
+    obj2 = require("../../../reanimated/ReanimatedRexport.tsx");
     class N {
       constructor() {
         tmp = closure_0;

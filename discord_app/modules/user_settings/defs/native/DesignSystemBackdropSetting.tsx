@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
   getComponent() {
-    return BackdropCard.default;
+    return BackdropCard /* BackdropCard */.default;
   }
 };
 const route = createToggle.createRoute(obj);

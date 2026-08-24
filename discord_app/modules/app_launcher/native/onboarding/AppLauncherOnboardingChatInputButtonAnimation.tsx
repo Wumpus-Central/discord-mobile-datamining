@@ -2,15 +2,15 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingNone from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import MINIMUM_HIT_AREA from "../../../../design/components/Button/native/ButtonConstants.native.tsx";
 import playDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import useGradientBottom from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod11238 from "../../../../../_runtime/metro/11238__.js";
-import _mod11406 from "../../../../../_runtime/metro/11406__.js";
+import _mod11289 from "../../../../../_runtime/metro/11289__.js";
+import _mod11457 from "../../../../../_runtime/metro/11457__.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -37,7 +37,7 @@ class EnteringAnimation {
     obj = { initialValues: { opacity: 0 }, animations: null };
     obj = { opacity: null };
     obj3 = require("CONFIG_NEVER_ANIMATE_TIMING");
-    obj[0] = require("module_1");
+    obj[0] = require("../../../debug/logAppStart.tsx");
     obj[1] = obj;
     return obj;
   }
@@ -51,7 +51,7 @@ class ExitingAnimation {
     obj = { initialValues: { opacity: 1 }, animations: null };
     obj = { opacity: null };
     obj3 = require("CONFIG_NEVER_ANIMATE_TIMING");
-    obj[0] = require("module_0");
+    obj[0] = require("../../../../index.native.tsx");
     obj[1] = obj;
     return obj;
   }
@@ -74,17 +74,17 @@ export const AppLauncherOnboardingChatInputButtonAnimation = function AppLaunche
   obj = { children: null };
   obj = { entering: EnteringAnimation, exiting: ExitingAnimation, style: items1, collapsable: false, children: null };
   items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
-  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod11406, autoPlay: !stateFromStores };
+  obj1 = { collapsable: false, style: tmp.glowLottie, source: _mod11457, autoPlay: !stateFromStores };
   const items2 = [callback(playDefault, obj1), , ];
   const items3 = [tmp.glowMask, gradientBottom];
   items2[1] = callback(closure_3, { collapsable: false, style: items3 });
   items2[2] = callback(closure_3, { collapsable: false, style: tmp.fakeButton });
   obj[4] = items2;
-  const items4 = [callback2(_modDef4115.View, obj), ];
+  const items4 = [callback2(_modDef4119.View, obj), ];
   const obj3 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj2 = { collapsable: false, style: tmp.fakeButton };
   const tmp5 = playDefault;
-  obj3[2] = _mod11238;
+  obj3[2] = _mod11289;
   obj3[3] = !stateFromStores;
   items4[1] = callback(playDefault, obj3);
   obj[0] = items4;

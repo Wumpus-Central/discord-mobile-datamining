@@ -16,7 +16,6 @@ import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativ
 import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 
 const require = arg1;
 function getCommandOptionComponents(option) {
@@ -81,11 +80,11 @@ function getCommandOptionComponents(option) {
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_18, tmp6(4984).computeChannelName(channel, authStore, closure_11)];
+            const items1 = [closure_18, tmp6(4989).computeChannelName(channel, authStore, closure_11)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = callback2(tmp6(1297).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4984);
+            const tmp6Result = tmp6(4989);
           }
           const str3 = iter.value;
         } else {
@@ -220,7 +219,7 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
     let str = "";
     combined = "" + name_localized;
   }
-  if (item10118.type !== _PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
+  if (item10118.type !== require("../../../flow/Server.tsx").ApplicationCommandOptionType.SUB_COMMAND) {
     if (item10118.type !== tmp5(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10118.value) {
@@ -237,8 +236,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_18 + tmp5(4984).computeChannelName(channel, authStore, closure_11);
-            const tmp5Result = tmp5(4984);
+            sum = closure_18 + tmp5(4989).computeChannelName(channel, authStore, closure_11);
+            const tmp5Result = tmp5(4989);
           }
           const str4 = item10118.value;
         } else if (tmp5(1954).ApplicationCommandOptionType.ROLE === type) {
@@ -666,7 +665,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(closure_1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(7139)(messageId(7159).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(7177)(messageId(7197).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -709,6 +708,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(6950).BottomSheet, obj);
-  return closure_21(channelId(7139).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(6988).BottomSheet, obj);
+  return closure_21(channelId(7177).AnalyticsLocationProvider, obj);
 };

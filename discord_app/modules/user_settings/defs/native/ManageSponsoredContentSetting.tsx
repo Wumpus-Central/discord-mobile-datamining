@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.MANAGE_SPONSORED_CONTENT,
   getComponent() {
-    return AdTopicRow.default;
+    return AdTopicRow /* AdTopicRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

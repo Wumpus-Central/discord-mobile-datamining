@@ -17,7 +17,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    _require = _01905__;
+    _require = 01905__;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((arg0) => {

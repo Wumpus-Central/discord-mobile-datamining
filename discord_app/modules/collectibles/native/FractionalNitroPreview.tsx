@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04761_LinearGradient.js";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
@@ -9,7 +9,6 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { VerticalGradient } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -30,7 +29,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 export const FractionalNitroPreview = function FractionalNitroPreview() {
   const tmp = callback3();
   const _require = tmp;
-  let items = [_getSystemLocale.t.E1NP2x, _getSystemLocale.t.kpMomJ, _getSystemLocale.t.xT1Vfn, _getSystemLocale.t.myyAEr, _getSystemLocale.t.zTk8Ul];
+  let items = [require("../../../intl/index.native.tsx").t.E1NP2x, require("../../../intl/index.native.tsx").t.kpMomJ, require("../../../intl/index.native.tsx").t.xT1Vfn, require("../../../intl/index.native.tsx").t.myyAEr, require("../../../intl/index.native.tsx").t.zTk8Ul];
   let obj = { style: tmp.container, children: null };
   obj = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
   const items1 = [callback(LinearGradientDefault, obj), , , ];

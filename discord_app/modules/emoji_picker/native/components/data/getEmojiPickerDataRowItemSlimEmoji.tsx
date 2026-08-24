@@ -1,6 +1,5 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx
 import set from "../../../../../../_runtime/00002_set.js";
-import { useEmojiPickerData } from "useEmojiPickerData.tsx";
 
 const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
 
@@ -8,7 +7,7 @@ export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked)
   const _require = isSectionNitroLocked;
   const emojis = isSectionNitroLocked.emojis;
   return {
-    type: _useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW_SLIM,
+    type: require("useEmojiPickerData.tsx").EmojiPickerItemType.EMOJI_ROW_SLIM,
     emojis: emojis.map((type) => {
       if (type.type === isSectionNitroLocked(closure_1_1[1]).EmojiTypes.UNICODE) {
         let obj = { name: null, surrogates: null };

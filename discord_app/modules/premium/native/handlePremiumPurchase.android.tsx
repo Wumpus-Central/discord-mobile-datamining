@@ -39,7 +39,7 @@ function _validatePurchase() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -102,7 +102,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(7619)(c6);
+            const tmp18 = new lib(7657)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -116,7 +116,7 @@ function _validatePurchase() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp25) {
           c3 = tmp25;
@@ -191,7 +191,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -611,7 +611,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 return obj;
               }
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (throwTypeErrorResult) {
             c4 = throwTypeErrorResult;

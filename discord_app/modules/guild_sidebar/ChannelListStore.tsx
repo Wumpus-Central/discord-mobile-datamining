@@ -20,7 +20,6 @@ import closure_14 from "../../stores/ReadStateStore.tsx";
 import closure_15 from "../../stores/SelectedChannelStore.tsx";
 import closure_16 from "../../stores/UserGuildSettingsStore.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 require = arg1;
 function handleReset() {
@@ -146,7 +145,7 @@ const channelListStore = new ChannelListStore(dispatcherDefault, {
       }
       return guild_id;
     });
-    const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+    const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
     const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (closure_1_20.clearGuildId(guildId)) {
@@ -378,7 +377,7 @@ let obj = {
       }
       return guild_id;
     });
-    const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+    const found = mapped.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
     const arr = applyDefault(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (closure_1_20.clearGuildId(guildId)) {

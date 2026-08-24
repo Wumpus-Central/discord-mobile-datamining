@@ -82,7 +82,7 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl(arg0) {
-    const obj = items.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    const obj = items /* items */.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
     if (obj != null) {
       prop = obj.connectionEntrypointUrlOverride;

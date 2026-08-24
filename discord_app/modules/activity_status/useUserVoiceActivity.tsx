@@ -5,7 +5,7 @@ import importDefaultResult2 from "../../stores/VoiceStateStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 
 const require = arg1;
-function getVisibleUserVoiceActivity(arg0) {
+function getVisibleUserVoiceActivity(arg0, arg1) {
   ({ userId, guildId } = arg0);
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -63,7 +63,7 @@ function getVisibleUserVoiceActivity(arg0) {
   }
 }
 let closure_6 = { ChannelStore: importDefaultResult, PermissionStore: importDefaultResult1, VoiceStateStore: importDefaultResult2 };
-let closure_7 = Object.freeze({ voiceState: "r", voiceChannel: "accessibilityRole" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "ct" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {

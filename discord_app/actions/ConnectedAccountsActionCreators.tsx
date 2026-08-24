@@ -3,11 +3,10 @@ import timestampDefault from "../modules/debug/Logger.tsx";
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../stores/ConnectedAccountsStore.tsx";
 import ME from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 function callback(arg0, arg1) {
@@ -92,7 +91,7 @@ let obj = {
   },
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
-    let obj = _modDef5227;
+    let obj = _modDef5232;
     obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, friend_sync: null };
     friend_sync = undefined;
@@ -134,7 +133,7 @@ let obj = {
     return this.update(type, id, { show_activity: closure_0 });
   },
   update(arg0, arg1, body) {
-    let obj = _modDef5227;
+    let obj = _modDef5232;
     obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
@@ -149,8 +148,8 @@ let obj = {
     let obj = dispatcherDefault;
     obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
     obj.dispatch(obj);
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
     HTTP.post(obj, (ok) => {
       let obj = callback(closure_1_2[5]);
       obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };
@@ -186,7 +185,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -288,7 +287,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

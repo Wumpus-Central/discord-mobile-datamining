@@ -2,7 +2,6 @@
 import canStreamInChannel from "../go_live/utils/StreamPermissionUtils.tsx";
 import closure_2 from "../../stores/GuildStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");
@@ -11,7 +10,7 @@ export default function useHasVideoPermission(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp = null != callback;
     if (tmp) {
       let isPrivateResult = obj.isPrivate();

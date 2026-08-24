@@ -6,9 +6,6 @@ import closure_5 from "../../../../_runtime/00019_noop.js";
 import { WebBrowserType } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -24,14 +21,14 @@ export default function FederatedSocialModal(platformType) {
     name = value.name;
   }
   if (name == null) {
-    let intl = _getSystemLocale.intl;
-    name = intl.string(_getSystemLocale.t["bU/GZm"]);
+    let intl = require("../../../intl/index.native.tsx").intl;
+    name = intl.string(require("../../../intl/index.native.tsx").t["bU/GZm"]);
   }
   screens = { root: null };
   let obj = { headerTitle: null, headerLeft: null, render: null };
-  let intl2 = _getSystemLocale.intl;
-  obj[0] = intl2.formatToPlainString(_getSystemLocale.t["ImMhq+"], { serviceName: name });
-  obj[1] = _HeaderBackImage.getHeaderBackButton(platformType.onClose);
+  let intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[0] = intl2.formatToPlainString(require("../../../intl/index.native.tsx").t["ImMhq+"], { serviceName: name });
+  obj[1] = require("../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     ({ location: closure_0, successRedirect: closure_1, platformType } = platformType);
     const onClose = platformType.onClose;
@@ -52,7 +49,7 @@ export default function FederatedSocialModal(platformType) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -191,5 +188,5 @@ export default function FederatedSocialModal(platformType) {
     return closure_1_8(platformType(closure_1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_NavigationStack.Navigator, { initialRouteName: "root", screens });
+  return callback(require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { initialRouteName: "root", screens });
 };

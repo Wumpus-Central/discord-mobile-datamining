@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import tDefault from "../../../../../_runtime/03975_t.js";
+import tDefault from "../../../../../_runtime/03978_t.js";
 import _checkForNewerBuildAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
 import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 import closure_4 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
@@ -16,9 +16,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [closure_4];
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4324).DownloadIcon;
+      let RefreshIcon = tmp(4328).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13952).RefreshIcon;
+      RefreshIcon = tmp(14020).RefreshIcon;
     }
     return <RefreshIcon />;
   },

@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import registerAssetDefault from "../../../../../_runtime/09355_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09392_registerAsset.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 

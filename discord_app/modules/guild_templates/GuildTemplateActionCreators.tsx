@@ -222,7 +222,7 @@ export default {
         obj = { type: "GUILD_TEMPLATE_RESOLVE", code: null };
         obj[1] = code;
         dispatcherDefault.dispatch(obj);
-        const HTTP = _sendRequest.HTTP;
+        const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
         obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_3.UNRESOLVED_GUILD_TEMPLATE(code);
         value = HTTP.get(obj);
@@ -278,9 +278,9 @@ export default {
   },
   syncGuildTemplate(arg0, arg1) {
     const _require = arg1;
-    const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
-    const obj2 = _sendRequest;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj2 = sendRequest;
     return HTTP.put(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code: closure_0 };
@@ -289,11 +289,11 @@ export default {
   },
   updateGuildTemplate(arg0, arg1, name, description) {
     const _require = arg1;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { name, description };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_SYNC_SUCCESS", guildTemplate: body.body, code: closure_0 };
@@ -303,9 +303,9 @@ export default {
   deleteGuildTemplate(arg0, arg1) {
     const _require = arg0;
     closure_1 = arg1;
-    const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
-    const obj2 = _sendRequest;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    let obj = { url: closure_3.GUILD_TEMPLATE(arg0, arg1), oldFormErrors: true, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+    const obj2 = sendRequest;
     return HTTP.del(obj).then(() => {
       let obj = callback(closure_1_2[1]);
       obj = { type: "GUILD_TEMPLATE_DELETE_SUCCESS", guildId: closure_0, code: callback };

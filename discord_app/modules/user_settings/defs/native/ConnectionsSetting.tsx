@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.CONNECTIONS,
   getComponent() {
-    return onPress.default;
+    return onPress /* onPress */.default;
   }
 };
 const route = createToggle.createRoute(obj);

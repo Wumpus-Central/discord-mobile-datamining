@@ -15,7 +15,7 @@ initialize = {
       return null;
     } else {
       if (importDefaultResult1.hasNoData(closure_0)) {
-        let NO_DATA = initialize.NO_DATA;
+        let NO_DATA = initialize /* initialize */.NO_DATA;
       } else {
         NO_DATA = obj.getGame(closure_0);
         if (NO_DATA == null) {
@@ -45,7 +45,7 @@ let closure_2 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_2 = importDefaultResult((arg0) => {
           return obj;
         }
         table = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         table = tmp;
         throw tmp9;

@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import tDefault from "../../../../_runtime/03975_t.js";
+import tDefault from "../../../../_runtime/03978_t.js";
 import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/GuildVerificationStore.tsx";
@@ -42,9 +42,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(11579).cancelLocalNotifications(userInfo);
-        const obj = callback(11579);
-        const result1 = callback(11579).cancelLocalNotifications(userInfo);
+        const result = callback(11628).cancelLocalNotifications(userInfo);
+        const obj = callback(11628);
+        const result1 = callback(11628).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -76,8 +76,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(11579).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(11579);
+              const result = tmp15(11628).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(11628);
             }
             tmp15 = importDefault;
           }

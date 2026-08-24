@@ -5,8 +5,6 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -46,10 +44,10 @@ export default function ChannelAutocompleteEmojiUpsell(results) {
   });
   const result = 24 * substr.length;
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", children: null };
-  const intl = _getSystemLocale.intl;
+  const intl = require("../../../intl/index.native.tsx").intl;
   obj = { count: results.length };
-  obj[3] = intl.format(_getSystemLocale.t.uEky42, obj);
-  let items = [callback(_Text.Text, obj), ];
+  obj[3] = intl.format(require("../../../intl/index.native.tsx").t.uEky42, obj);
+  let items = [callback(require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
   const items1 = [tmp.emojis, { width: result + 16 }];
   items[1] = callback(View, { style: items1, children: mapped });
   obj[1] = items;

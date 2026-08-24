@@ -60,7 +60,7 @@ export default function PremiumBillingInfo(subscription) {
   if (null == first) {
     return null;
   } else {
-    let tmp2Result = tmp2(7374);
+    let tmp2Result = tmp2(7412);
     const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
     obj = { style: null, children: null };
     obj[0] = subscription.style;
@@ -68,18 +68,18 @@ export default function PremiumBillingInfo(subscription) {
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj1[4] = intl.string(tmp2(1236).t.Sb6wI1);
-    const items = [callback2(tmp2(4734).Text, obj1), , ];
+    const items = [callback2(tmp2(4739).Text, obj1), , ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.billingContainer;
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl2 = tmp2(1236).intl;
     obj3[1] = intl2.string(tmp2(1236).t.KXQjfc);
-    const items1 = [callback2(tmp2(4734).Text, obj3), , ];
+    const items1 = [callback2(tmp2(4739).Text, obj3), , ];
     const obj4 = { style: null, variant: "text-sm/medium", children: null };
     obj4[0] = tmp.billingRenewalInfo;
-    tmp2Result = tmp2(7921);
+    tmp2Result = tmp2(7960);
     obj4[2] = tmp2Result.getBillingInformationStringNative(subscription, first, tmp6);
-    items1[1] = callback2(tmp2(4734).Text, obj4);
+    items1[1] = callback2(tmp2(4739).Text, obj4);
     const obj5 = { style: null, subscription: null };
     obj5[0] = tmp.billingManageGoogle;
     obj5[1] = subscription;
@@ -91,7 +91,7 @@ export default function PremiumBillingInfo(subscription) {
       const obj6 = { style: null, variant: "text-sm/medium", children: null };
       obj6[0] = tmp.externalSubtext;
       obj6[2] = externalManagementMessage;
-      tmp11Result = callback2(tmp2(4734).Text, obj6);
+      tmp11Result = callback2(tmp2(4739).Text, obj6);
     }
     items[2] = tmp11Result;
     obj[1] = items;

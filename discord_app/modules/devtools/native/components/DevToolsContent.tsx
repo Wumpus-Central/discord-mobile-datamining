@@ -16,7 +16,6 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 require = arg1;
 function DevToolsContentSortButtons(arg0) {
@@ -92,13 +91,13 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   let callback;
   let arr5;
   ({ title, embedded } = arg0);
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useNavigation();
   _require = undefined;
   importDefault = undefined;
   const tmp = callback4();
   const tmp3 = importDefault;
-  obj1 = _initialize;
+  obj1 = initialize;
   const items = [closure_7];
   _require = obj1.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -113,11 +112,11 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   });
   let tmp4 = useSafeAreaInsetsDefault();
   const items1 = [closure_8];
-  const stateFromStores = _initialize.useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-  const obj3 = _initialize;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  const obj3 = initialize;
   const items2 = [closure_9];
-  importDefault = stateFromStores + _initialize.useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
-  const obj4 = _initialize;
+  importDefault = stateFromStores + require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj4 = initialize;
   importDefault = getSortedDevToolsScreensDefault().map((arg0) => {
     [tmp] = arg0;
     if ("buildOverride" === tmp) {
@@ -125,7 +124,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
       if (null != closure_0) {
         let obj = { label: "Build override: ", value: null };
         obj[1] = tmp5;
-        tmp7 = closure_1_10(closure_1_13, obj);
+        tmp7 = closure_1_10(closure_1_13, obj, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
@@ -133,7 +132,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
       if (closure_1 > 0) {
         obj = { label: "Experiments overridden: ", value: null };
         obj[1] = closure_1.toString();
-        tmp2 = closure_1_10(closure_1_13, obj);
+        tmp2 = closure_1_10(closure_1_13, obj, tmp);
       }
       return tmp2;
     }
@@ -188,7 +187,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
       return closure_1_10(callback(_undefined[20]).TableRow, obj, tmp);
     })
   };
-  const tmp8 = callback2(_TableRowGroupTitle.TableRowGroup, obj);
+  const tmp8 = callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
   let tmp7Result = tmp8;
   if (!embedded) {
     obj = { style: null, contentContainerStyle: null, children: null };

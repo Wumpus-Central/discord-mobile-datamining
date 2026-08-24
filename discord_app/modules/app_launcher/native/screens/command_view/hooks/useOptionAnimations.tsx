@@ -25,7 +25,7 @@ class ExitingAnimation {
     bound = Math.min(global.currentOriginX - global.windowWidth, -global.windowWidth);
     obj2 = require("CONFIG_NEVER_ANIMATE_TIMING");
     obj = { duration: c4 };
-    animations[0] = require("module_0");
+    animations[0] = require("../../../../../../index.native.tsx");
     obj4 = require("CONFIG_NEVER_ANIMATE_TIMING");
     obj1 = { duration: c4 };
     animations[1] = obj4.withTiming(bound, obj1);
@@ -44,7 +44,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4115);
+  let obj = sharedValue(4119);
   sharedValue = obj.useSharedValue(false);
   dependencyMap = React.useRef([]);
   let items = [sharedValue];

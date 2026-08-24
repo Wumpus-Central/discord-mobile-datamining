@@ -7,10 +7,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
-import { getEventLocationIconSource } from "GuildEventUtils.tsx";
 
 const require = arg1;
 function PreviewBody(event) {
@@ -24,25 +21,25 @@ function PreviewBody(event) {
   const tmp = callback3();
   _require = tmp;
   channel_id = event.channel_id;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4984)(stateFromStores);
+  const tmp6 = channel_id(4989)(stateFromStores);
   dependencyMap = tmp6;
-  obj1 = _getChannelFromEvent;
+  obj1 = getChannelFromEvent;
   locationFromEvent = obj1.getLocationFromEvent(event);
   let tmp8 = tmp6;
   if (tmp6 == null) {
     tmp8 = locationFromEvent;
   }
   locationFromEvent = tmp8;
-  eventLocationIconSource = _getEventLocationIconSource.getEventLocationIconSource(event, stateFromStores, true);
+  eventLocationIconSource = require("GuildEventUtils.tsx").getEventLocationIconSource(event, stateFromStores, true);
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
-  obj[3] = intl.string(_getSystemLocale.t.yBsFE3);
-  const items2 = [callback(_Text.Text, obj), ];
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.yBsFE3);
+  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
   obj1 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
@@ -50,7 +47,7 @@ function PreviewBody(event) {
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(8886)(obj3);
+    obj2[0] = channel_id(8923)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
@@ -74,13 +71,13 @@ function PreviewBody(event) {
       if (dependencyMap == null) {
         let result = null;
         if (null != locationFromEvent) {
-          result = lib(8887).guildEventLocationParser(tmp12, true);
-          const tmp9Result = lib(8887);
+          result = lib(8924).guildEventLocationParser(tmp12, true);
+          const tmp9Result = lib(8924);
         }
         tmp11 = result;
       }
       obj = { children: null };
-      items[1] = closure_1_6(lib(4734).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
+      items[1] = closure_1_6(lib(4739).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
       obj[0] = items;
       let str = locationFromEvent;
       if (locationFromEvent == null) {
@@ -94,7 +91,7 @@ function PreviewBody(event) {
     formatResult = intl3.string(tmp2(1236).t.KDPFi9);
   }
   obj1[4] = formatResult;
-  items2[1] = callback(_Text.Text, obj1);
+  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
   obj[1] = items2;
   return closure_7(locationFromEvent, obj);
 }

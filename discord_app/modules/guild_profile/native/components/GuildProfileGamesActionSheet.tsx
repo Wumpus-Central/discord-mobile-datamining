@@ -5,14 +5,12 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 
 const require = arg1;
 function GuildProfileGameRow(activityLevel) {
   ({ game, clickable } = activityLevel);
   let _require;
-  let obj = { gameId: game.id, source: _GameProfileEmbedAction.GameProfileSources.GuildProfileGames, trackEntryPointImpression: clickable };
+  let obj = { gameId: game.id, source: require("../../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.GuildProfileGames, trackEntryPointImpression: clickable };
   const tmp3Result = useOpenGameProfileModalDefault(obj);
   _require = tmp3Result;
   if (clickable) {
@@ -24,7 +22,7 @@ function GuildProfileGameRow(activityLevel) {
     fn = () => callback();
   }
   obj[3] = fn;
-  return jsx(_TableRowInner.TableRow, { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: clickable, onPress: null });
+  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: clickable, onPress: null });
 }
 let closure_7 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");

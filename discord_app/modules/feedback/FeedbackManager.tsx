@@ -6,13 +6,11 @@ import closure_2 from "../hotspot/HotspotStore.tsx";
 import closure_3 from "../../stores/RTCConnectionStore.tsx";
 import closure_4 from "FeedbackOverrideStore.tsx";
 import FeedbackRating from "Constants.tsx";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 require = arg1;
 function optOutEligibilityCheck(hotspot) {
   const _require = hotspot;
-  const InAppFeedbackStates = _explicitContentFromProto.InAppFeedbackStates;
+  const InAppFeedbackStates = require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[hotspot.feedbackType];
   let optOutExpiryTime;
   if (tmp3 != null) {
@@ -33,7 +31,7 @@ function optOutEligibilityCheck(hotspot) {
     tmp10 = !tmp5;
   }
   if (tmp10) {
-    const InAppFeedbackStates2 = _explicitContentFromProto.InAppFeedbackStates;
+    const InAppFeedbackStates2 = require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);
@@ -55,7 +53,7 @@ function triggerRateEligibilityCheck(chance) {
 }
 function recencyEligibilityCheck(cooldown, storageKey) {
   const _require = storageKey;
-  const InAppFeedbackStates = _explicitContentFromProto.InAppFeedbackStates;
+  const InAppFeedbackStates = require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[storageKey.feedbackType];
   let lastImpressionTime;
   if (tmp3 != null) {
@@ -83,7 +81,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     isNaNResult = Number.isNaN(tmp7);
   }
   if (!isNaNResult) {
-    const InAppFeedbackStates2 = tmp(4066).InAppFeedbackStates;
+    const InAppFeedbackStates2 = tmp(4069).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);
@@ -95,7 +93,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     });
   }
   const items = [lastImpressionTime, tmp7];
-  let num = _apply.max(items);
+  let num = require("../../../_runtime/00012_apply.js").max(items);
   if (num == null) {
     num = 0;
   }

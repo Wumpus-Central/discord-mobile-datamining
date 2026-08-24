@@ -288,8 +288,8 @@ prototype["getCurrentClientVoiceChannelId"] = function getCurrentClientVoiceChan
   }
   return channelId;
 };
-prototype["getUsersWithVideo"] = function getUsersWithVideo(arg0) {
-  let value = map.get(arg0);
+prototype["getUsersWithVideo"] = function getUsersWithVideo(closure_0) {
+  let value = map.get(closure_0);
   if (value == null) {
     value = set;
   }

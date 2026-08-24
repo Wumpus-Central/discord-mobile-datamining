@@ -5,7 +5,6 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { context } from "WideAuthScrollContext.tsx";
 
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
@@ -52,7 +51,7 @@ export default function AuthFormView(arg0) {
   ({ backgroundImageSource, backgroundImageCover } = arg0);
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback2(tmp3);
-  _require = React.useContext(_context.WideAuthScrollContext);
+  _require = React.useContext(require("WideAuthScrollContext.tsx").WideAuthScrollContext);
   if (tmp3) {
     let obj = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, scrollEventThrottle: 16, onScroll: null, style: null, contentContainerStyle: null, children: null };
     obj[0] = { top: 0 };
@@ -66,7 +65,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       obj = { children: null };
       obj[0] = headerText;
-      tmp15 = callback(tmp(8611), obj);
+      tmp15 = callback(tmp(8648), obj);
     }
     const items1 = [tmp15, , ];
     let tmp17 = null;
@@ -89,7 +88,7 @@ export default function AuthFormView(arg0) {
     const obj2 = { backgroundImageSource: null, backgroundImageCover: null };
     obj2[0] = backgroundImageSource;
     obj2[1] = backgroundImageCover;
-    const items3 = [callback(tmp(8612), obj2), callback(tmp(8615), {}), ];
+    const items3 = [callback(tmp(8649), obj2), callback(tmp(8652), {}), ];
     const obj3 = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: null, contentContainerStyle: null, children: null };
     obj3[0] = { top: 0 };
     obj3[4] = tmp4.flex;
@@ -101,7 +100,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       const obj4 = { children: null };
       obj4[0] = headerText;
-      tmp7Result = tmp7(tmp(8611), obj4);
+      tmp7Result = tmp7(tmp(8648), obj4);
     }
     const items5 = [tmp7Result, , ];
     tmp7Result = null;

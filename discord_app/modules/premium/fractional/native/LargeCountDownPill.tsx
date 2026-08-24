@@ -4,8 +4,6 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -38,7 +36,7 @@ export default function LargeCountDownPill(countdownText) {
   };
   obj = { style: tmp.largeCountdownPill, children: null };
   obj = { variant: "text-xs/bold", style: tmp.largeCountdownPillText, children: countdownText.countdownText.toUpperCase() };
-  const items = [callback(_Text.Text, obj), callback(_CircleInformationIcon.CircleInformationIcon, { style: tmp.iconStyle, color: ThemesDefault.colors.TEXT_STATUS_IDLE })];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj), callback(require("../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx").CircleInformationIcon, { style: tmp.iconStyle, color: ThemesDefault.colors.TEXT_STATUS_IDLE })];
   obj[1] = items;
   obj[1] = callback2(closure_4, obj);
   return callback(closure_3, obj);

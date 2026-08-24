@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
-import _modDef10047 from "MessageNotification.tsx";
-import _modDef10122 from "MessageFailedToSendNotification.tsx";
+import _modDef10086 from "MessageNotification.tsx";
+import _modDef10161 from "MessageFailedToSendNotification.tsx";
 import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification.tsx";
 import BugReporterNotification from "../../bug_reporter/native/BugReporterNotification.tsx";
 import AlertNotificationDefault from "AlertNotification.tsx";
 import ReactionNotificationBodyDefault from "ReactionNotification.tsx";
 import NotificationAvatarDefault from "ReminderNotification.tsx";
-import _modDef10522 from "RestrictedHoursWarningNotification.tsx";
+import _modDef10561 from "RestrictedHoursWarningNotification.tsx";
 import MessageRequestInAppNotificationDefault from "MessageRequestNotification.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -25,11 +25,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10047, { notification: null });
+    return jsx(_modDef10086, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10122, { notification: null });
+    return jsx(_modDef10161, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -64,13 +64,13 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef10522, { notification: null });
+    return jsx(_modDef10561, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
-obj[1] = Easing.in(require("module_4115").Easing.ease);
+obj[1] = Easing.in(require("../../reanimated/ReanimatedRexport.tsx").Easing.ease);
 let closure_16 = createCacheKey.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}" };
 let closure_19 = { code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}" };

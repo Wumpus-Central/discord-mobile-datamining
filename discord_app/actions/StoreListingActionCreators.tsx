@@ -73,7 +73,7 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   const value = closure_4.get(skuId);
   let result = null != value;
   if (result) {
-    let obj = _isTestModeForApplication;
+    let obj = isTestModeForApplication;
     result = obj.isTestModeForApplication(value.applicationId);
   }
   importDefault = result;
@@ -87,7 +87,7 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
     STORE_LISTINGS_SKUResult = obj5.STORE_PUBLISHED_LISTINGS_SKU(skuId);
   }
   obj = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
-  const obj4 = __httpGetWithCountryCodeQuery;
+  const obj4 = _httpGetWithCountryCodeQuery;
   obj[1] = tmp7(530).rejectWithMigratedError();
   const result1 = obj4.httpGetWithCountryCodeQuery(obj);
   const tmp7Result = tmp7(530);

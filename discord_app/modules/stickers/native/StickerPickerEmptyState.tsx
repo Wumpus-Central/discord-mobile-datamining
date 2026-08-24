@@ -11,9 +11,6 @@ import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useStickerPackCategories } from "../StickersHooks.tsx";
 
 require = arg1;
@@ -36,16 +33,16 @@ let result = require("set").fileFinishedImporting("modules/stickers/native/Stick
 export default function _default() {
   const tmp = callback4();
   const _require = tmp;
-  let obj = _useStickerPackCategories;
+  let obj = useStickerPackCategories;
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).EMPTY_STATE).analyticsLocations;
-  obj1 = _initialize;
+  analyticsLocations = analyticsLocations(7177)(analyticsLocations(7197).EMPTY_STATE).analyticsLocations;
+  obj1 = initialize;
   const items = [closure_6];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const mapped = closure_7.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
-  const tmp3 = analyticsLocations(7139);
+  const tmp3 = analyticsLocations(7177);
   [dependencyMap, closure_3] = callback(React.useState(null), 2);
   const items1 = [analyticsLocations];
   const effect = React.useEffect(() => {
@@ -56,13 +53,13 @@ export default function _default() {
   }, items1);
   obj = { children: null };
   obj = { style: tmp.header, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[4] = intl.string(_getSystemLocale.t.HEm04J);
-  const items2 = [callback2(_Text.Text, obj), , , ];
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[4] = intl.string(require("../../../intl/index.native.tsx").t.HEm04J);
+  const items2 = [callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj), , , ];
   obj1 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj1[3] = intl2.string(_getSystemLocale.t.FnNud4);
-  items2[1] = callback2(_Text.Text, obj1);
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj1[3] = intl2.string(require("../../../intl/index.native.tsx").t.FnNud4);
+  items2[1] = callback2(require("../../../design/components/Text/native/Text.tsx").Text, obj1);
   const tmp4 = callback(React.useState(null), 2);
   items2[2] = callback2(View, {
     style: tmp.stickersRow,
@@ -111,15 +108,15 @@ export default function _default() {
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(9367);
+  obj5[0] = analyticsLocations(9404);
   obj5[1] = tmp.nitroWheel;
-  obj4[0] = callback2(analyticsLocations(5449), obj5);
-  const intl3 = _getSystemLocale.intl;
-  obj4[1] = intl3.string(_getSystemLocale.t.pj0XBN);
+  obj4[0] = callback2(analyticsLocations(5454), obj5);
+  const intl3 = require("../../../intl/index.native.tsx").intl;
+  obj4[1] = intl3.string(require("../../../intl/index.native.tsx").t.pj0XBN);
   obj4[4] = function onPress() {
     return analyticsLocations(table[23])({ section: constants.EXPRESSION_PICKER });
   };
-  obj3[1] = callback2(_Button.Button, obj4);
+  obj3[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx").Button, obj4);
   items2[3] = callback2(View, obj3);
   obj[0] = items2;
   return callback3(View, obj);

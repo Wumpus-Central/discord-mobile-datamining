@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SESSIONS,
   getComponent() {
-    return UserSettingsSessions.default;
+    return UserSettingsSessions /* UserSettingsSessions */.default;
   }
 };
 const route = createToggle.createRoute(obj);

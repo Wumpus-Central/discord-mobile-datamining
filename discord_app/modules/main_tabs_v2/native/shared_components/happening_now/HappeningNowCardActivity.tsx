@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Button from "../../../../../design/void/native.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import registerAssetDefault from "../../../../../../_runtime/15337_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/15338_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/15401_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/15402_registerAsset.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -55,7 +55,7 @@ function IconOrPreview(arg0) {
     tmp9 = null != large_image;
   }
   if (tmp9) {
-    let obj = _updateAssets;
+    let obj = updateAssets;
     let application_id;
     if (activity != null) {
       application_id = activity.application_id;
@@ -86,7 +86,7 @@ function IconOrPreview(arg0) {
     tmp17 = null != small_image;
   }
   if (tmp17) {
-    obj1 = _updateAssets;
+    obj1 = updateAssets;
     let application_id1;
     if (activity != null) {
       application_id1 = activity.application_id;
@@ -99,15 +99,15 @@ function IconOrPreview(arg0) {
     assetImage = obj1.getAssetImage(application_id1, small_image1, items1);
   }
   if (null != assetImage) {
-    let obj3 = _useDominantRGBFromImage;
+    let obj3 = useDominantRGBFromImage;
     const memoizedImageSourceResult = obj3.memoizedImageSource(assetImage);
-    let obj4 = _useDominantRGBFromImage;
+    let obj4 = useDominantRGBFromImage;
     const dominantRGBFromImage = obj4.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
     ({ r, g, b } = dominantRGBFromImage);
-    const rgbToHexResult = _hexToRgba.rgbToHex(r, g, b);
+    const rgbToHexResult = require("../../../../../utils/ColorUtils.tsx").rgbToHex(r, g, b);
     importDefault = rgbToHexResult;
-    const obj6 = _hexToRgba;
-    const hexWithOpacityResult = _hexToRgba.hexWithOpacity(rgbToHexResult, 0.2);
+    const obj6 = hexToRgba;
+    const hexWithOpacityResult = require("../../../../../utils/ColorUtils.tsx").hexWithOpacity(rgbToHexResult, 0.2);
     dependencyMap = hexWithOpacityResult;
     const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
     const memo = importAllResult.useMemo(() => {
@@ -120,7 +120,7 @@ function IconOrPreview(arg0) {
       obj[0] = memo;
       obj = { stream: null, children: null, style: null, ctaText: null, disabled: true };
       obj[0] = stream;
-      let tmp2Result = tmp2(12616);
+      let tmp2Result = tmp2(12670);
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13[0], stageStreamLiveText: obj13[1] } = tmp);
       obj[1] = callback(tmp28(1297).LiveTag, obj1);
@@ -130,7 +130,7 @@ function IconOrPreview(arg0) {
       obj[1] = callback(tmp2Result, obj);
       return callback(closure_4, obj);
     } else {
-      if (tmp2(7261)(activity)) {
+      if (tmp2(7299)(activity)) {
         const intl4 = tmp28(1236).intl;
         let stringResult = intl4.string(tmp28(1236).t.rmnkz4);
       } else {
@@ -141,7 +141,7 @@ function IconOrPreview(arg0) {
         if (type === constants.LISTENING) {
           const intl3 = tmp28(1236).intl;
           stringResult = intl3.string(tmp28(1236).t.kUEnxN);
-        } else if (tmp2(12099)(activity)) {
+        } else if (tmp2(12151)(activity)) {
           const intl2 = tmp28(1236).intl;
           stringResult = intl2.string(tmp28(1236).t.T0uYK9);
         } else {
@@ -163,11 +163,11 @@ function IconOrPreview(arg0) {
       obj4 = { style: null, source: null };
       obj4[0] = tmp.cardImageAsset;
       obj4[1] = memoizedImageSourceResult;
-      obj3[1] = callback(tmp2(5449), obj4);
+      obj3[1] = callback(tmp2(5454), obj4);
       obj2[2] = callback(closure_4, obj3);
       return callback(closure_4, obj2);
     }
-    const obj7 = _hexToRgba;
+    const obj7 = hexToRgba;
   } else {
     let type2;
     if (activity != null) {
@@ -178,7 +178,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = tmp2(15347);
+      tmp2Result = tmp2(15411);
     }
   }
 }
@@ -211,7 +211,7 @@ obj[1] = obj;
 obj[2] = { marginBottom: 2 };
 obj[3] = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" };
 obj[4] = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" };
-createCacheKey = { flex: 1, borderRadius: ThemesDefault.radii.sm - 1 };
+createCacheKey = { flex: 1, width: "100%", borderRadius: ThemesDefault.radii.sm - 1 };
 obj[5] = createCacheKey;
 obj[6] = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
 let obj2 = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };

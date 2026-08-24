@@ -32,7 +32,7 @@ export const setPaymentSuccess = function setPaymentSuccess() {
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -49,11 +49,11 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
         openPremiumPlanSelectionActionSheetDefault(obj);
         const tmp3 = openPremiumPlanSelectionActionSheetDefault;
       }
-      _batchUpdates.batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = _batchUpdates;
+      const obj2 = batchUpdates;
     }
   }
 };
@@ -82,6 +82,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "call" });
+    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessibilityLabel", onPaymentDismiss: "useCallback" });
   });
 };

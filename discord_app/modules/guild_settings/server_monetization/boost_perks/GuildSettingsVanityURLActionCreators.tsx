@@ -26,11 +26,11 @@ export const setCode = function setCode(code) {
 };
 export const saveCode = function saveCode(id, code) {
   const _require = arg2;
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { code };
-  obj[3] = _sendRequest.rejectWithMigratedError();
-  const obj3 = _sendRequest;
+  obj[3] = require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  const obj3 = sendRequest;
   return HTTP.patch(obj).then((body) => {
     ({ code, uses } = body.body);
     callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });

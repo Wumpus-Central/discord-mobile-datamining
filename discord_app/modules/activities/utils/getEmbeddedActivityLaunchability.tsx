@@ -7,7 +7,6 @@ import closure_4 from "../../../stores/PermissionStore.tsx";
 import closure_5 from "../../../stores/VoiceStateStore.tsx";
 import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "../Constants.tsx";
 import { Permissions } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function getEmbeddedActivityLaunchability(arg0) {
@@ -69,7 +68,7 @@ export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaun
   const _require = channelId;
   const items = [closure_2, closure_3, closure_4, closure_5];
   const items1 = [channelId];
-  return _initialize.useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {

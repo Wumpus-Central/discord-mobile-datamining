@@ -7,7 +7,7 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 import set from "../../../../_runtime/00002_set.js";
 
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsModes);
-let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "M14 14H12V15H14V14Z", showControls: null, showFloatingCTA: "", streamOutputSinkStack: "", windowDimensions: null, wrapperDimensions: "default", useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
+let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "M3.00002 10V12H4.00002V13H12V12H13V10H3.00002Z", showControls: null, showFloatingCTA: "", streamOutputSinkStack: "", windowDimensions: null, wrapperDimensions: "default", useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
 obj[2] = createFakeSharedValue.createFakeSharedValue(false);
 obj[3] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0 });
 obj = { mode: VoicePanelControlsModes.FLOATING_DEFAULT, locked: false, height: CONTROLS_HEIGHT, pushToTalk: false };
@@ -34,9 +34,9 @@ obj[16] = createFakeSharedValue.createFakeSharedValue(require("MIN_PAN_GESTURE_M
 let set = new Set();
 obj[17] = set;
 obj[18] = createFakeSharedValue.createFakeSharedValue({ top: 0, bottom: 0 });
-obj[19] = require("module_0");
+obj[19] = require("../../../index.native.tsx");
 obj[20] = createFakeSharedValue.createFakeSharedValue(require("EMPTY_SAFE_AREA_INSETS").EMPTY_SAFE_AREA_INSETS);
-obj[21] = require("module_0");
+obj[21] = require("../../../index.native.tsx");
 obj[22] = function setControlsMode() {
   error = new Error("VoicePanelContextType.Provider.setControlsMode: not called within a context provider");
   throw error;

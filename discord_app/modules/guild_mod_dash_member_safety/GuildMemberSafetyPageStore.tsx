@@ -46,7 +46,7 @@ prototype["initialize"] = function initialize() {
     const guildMemberSafetyMembers = new getGuildMemberSecondaryIndexes.GuildMemberSafetyMembers(self.guildId);
     self._members = guildMemberSafetyMembers;
     ({ guildId, _members } = self);
-    const guildMemberSafetyPagination = new items.GuildMemberSafetyPagination(guildId, _members.values(self.getSearchIndex()));
+    const guildMemberSafetyPagination = new items /* items */.GuildMemberSafetyPagination(guildId, _members.values(self.getSearchIndex()));
     self._pagination = guildMemberSafetyPagination;
   }
 };
@@ -88,7 +88,7 @@ Object.defineProperty(prototype, "searchChunkSize", {
       num = 0;
       if (self._initialized) {
         const _pagination = self._pagination;
-        num = items.getSearchChunkLimit(_pagination.getPaginationState());
+        num = items /* items */.getSearchChunkLimit(_pagination.getPaginationState());
         const obj = items;
       }
     }
@@ -689,7 +689,7 @@ prototype["getPaginationState"] = function getPaginationState() {
     }
     return paginationState;
   }
-  paginationState = items.createDefaultMemberSafetyPaginationState();
+  paginationState = items /* items */.createDefaultMemberSafetyPaginationState();
 };
 prototype["getPaginatedMembers"] = function getPaginatedMembers() {
   const self = this;

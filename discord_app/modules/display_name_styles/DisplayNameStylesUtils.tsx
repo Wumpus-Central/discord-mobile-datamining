@@ -51,8 +51,8 @@ export const wrapHue = function wrapHue(h) {
 export const GUMMY_STRIPES = items;
 export const buildGummyColors = function buildGummyColors(closure_1_11) {
   const tmp = nDefault;
-  let obj = _int2hslRaw;
-  const tmp3 = callback(tmp(_int2hslRaw.int2hex(closure_1_11)).hsl(), 3);
+  let obj = int2hslRaw;
+  const tmp3 = callback(tmp(require("../../../discord_common/js/shared/utils/ColorUtils.tsx").int2hex(closure_1_11)).hsl(), 3);
   const first = tmp3[0];
   let num = 0;
   if (!Number.isNaN(first)) {

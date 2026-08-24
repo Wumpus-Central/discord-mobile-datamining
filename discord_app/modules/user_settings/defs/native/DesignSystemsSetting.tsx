@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM,
   getComponent() {
-    return SettingsDesignSystemsScreen.default;
+    return SettingsDesignSystemsScreen /* SettingsDesignSystemsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -2,7 +2,6 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import closure_2 from "../UserSettingsOverridesStore.tsx";
 import { SettingsOverrideReasonKeys as closure_3 } from "../UserSettingsConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
@@ -19,7 +18,7 @@ export default function getSettingsOverrideReason(arg0) {
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const appliedOverrideReasonKey = closure_1_2.getAppliedOverrideReasonKey(callback);
     if (closure_1_3.REDUCED_MOTION === appliedOverrideReasonKey) {
       const intl2 = callback(closure_1_1[2]).intl;

@@ -3,14 +3,13 @@ import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function orderPowerupListings(items) {
   const findIndexResult = items.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_GUILD_THEME_SKU_ID;
+      tmp = type.powerup.skuId === callback(4269).GUILD_POWERUP_GUILD_THEME_SKU_ID;
     }
     return tmp;
   });
@@ -24,7 +23,7 @@ function orderPowerupListings(items) {
   const findIndexResult1 = obj.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
+      tmp = type.powerup.skuId === callback(4269).GUILD_POWERUP_TAG_SKU_ID;
     }
     return tmp;
   });
@@ -51,7 +50,7 @@ function orderPowerupListings(items) {
         items1.splice(items1.findIndex((type) => {
           let tmp = "singlePerk" === type.type;
           if (tmp) {
-            tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
+            tmp = type.powerup.skuId === callback(4269).GUILD_POWERUP_TAG_SKU_ID;
           }
           return tmp;
         }) + 1, 0, callback(items1.splice(findIndexResult2, 1), 1)[0]);
@@ -143,7 +142,7 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   dependencyMap = gameServerEnabled;
   const items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;

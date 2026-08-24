@@ -2,7 +2,6 @@
 import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../stores/ChannelStore.tsx";
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 const require = arg1;
@@ -13,7 +12,7 @@ export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
   const tmp = useIsConnectedToVoiceChannelDefault(arg0);
-  obj = _UNSAFE_isDismissibleContentDismissed;
+  obj = UNSAFE_isDismissibleContentDismissed;
   let tmp3 = tmp;
   if (tmp) {
     if (obj.VOICE_CONTROLS === arg1) {
@@ -36,7 +35,7 @@ export default function useSoundboardConfig(arg0, arg1) {
       }
     }, items),
     disabled: React.useMemo(() => !callback2(closure_1_2[6])(closure_1_4.getChannel(closure_0)), items1),
-    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
+    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
   };
   items = [arg0, arg1];
   items1 = [arg0];

@@ -16,7 +16,7 @@ class UnreadIndicator {
     if (MOUNTED === undefined) {
       tmp = sharedId;
       tmp2 = MOUNTED;
-      MOUNTED = require("wrapChildrenDefault").TransitionStates.MOUNTED;
+      MOUNTED = require("ManaContext").TransitionStates.MOUNTED;
     }
     cleanUp = global.cleanUp;
     closure_4 = undefined;
@@ -31,12 +31,12 @@ class UnreadIndicator {
     closure_4 = token;
     tmp7 = closure_12(c7());
     closure_5 = tmp7;
-    tmp8 = MOUNTED === require("wrapChildrenDefault").TransitionStates.MOUNTED;
+    tmp8 = MOUNTED === require("ManaContext").TransitionStates.MOUNTED;
     closure_6 = tmp8;
     num = 8;
     if (global.selected) {
       num = 8;
-      if (MOUNTED !== require("wrapChildrenDefault").TransitionStates.YEETED) {
+      if (MOUNTED !== require("ManaContext").TransitionStates.YEETED) {
         num = 40;
       }
     }
@@ -116,9 +116,9 @@ class UnreadIndicator {
     obj1[0] = require("CONFIG_NEVER_ANIMATE").withSpring;
     obj1[1] = closure_11;
     obj1[2] = MOUNTED;
-    obj1[3] = require("wrapChildrenDefault").TransitionStates;
+    obj1[3] = require("ManaContext").TransitionStates;
     obj1[4] = cleanUp;
-    obj1[5] = require("module_4115").runOnJS;
+    obj1[5] = require("../../reanimated/ReanimatedRexport.tsx").runOnJS;
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
     fn2.__initData = closure_15;

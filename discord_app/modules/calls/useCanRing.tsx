@@ -22,16 +22,16 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   }
   importDefault = stateFromStores;
   const items = [closure_8];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
       tmp2 = stateFromStores(closure_1_2[12])(tmp, closure_1_8);
     }
     return tmp2;
   });
-  const obj = _initialize;
+  const obj = initialize;
   const items1 = [closure_6, closure_7];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -47,7 +47,7 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
     }
   });
   let id;
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const tmp4 = importDefault;
   if (stateFromStores != null) {
     id = stateFromStores.id;

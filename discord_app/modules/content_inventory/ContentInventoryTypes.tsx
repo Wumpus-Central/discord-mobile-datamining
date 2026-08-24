@@ -95,11 +95,11 @@ export const isXboxEntry = function isXboxEntry(content_type) {
     if (content_type != null) {
       content_type1 = content_type.content_type;
     }
-    tmp4 = content_type1 === tmp2(8344).ContentInventoryEntryType.TOP_GAME;
+    tmp4 = content_type1 === tmp2(8383).ContentInventoryEntryType.TOP_GAME;
   }
   let tmp6 = tmp4;
   if (tmp6) {
-    tmp6 = content_type.extra.platform === tmp2(9049).PlatformType.XBOX;
+    tmp6 = content_type.extra.platform === tmp2(9086).PlatformType.XBOX;
   }
   return tmp6;
 };
@@ -114,11 +114,11 @@ export const isPlaystationEntry = function isPlaystationEntry(content_type) {
     if (content_type != null) {
       content_type1 = content_type.content_type;
     }
-    tmp4 = content_type1 === tmp2(8344).ContentInventoryEntryType.TOP_GAME;
+    tmp4 = content_type1 === tmp2(8383).ContentInventoryEntryType.TOP_GAME;
   }
   let tmp6 = tmp4;
   if (tmp6) {
-    tmp6 = content_type.extra.platform === tmp2(9049).PlatformType.PLAYSTATION;
+    tmp6 = content_type.extra.platform === tmp2(9086).PlatformType.PLAYSTATION;
   }
   return tmp6;
 };
@@ -133,28 +133,28 @@ export const isConsoleEntry = function isConsoleEntry(content_type) {
     if (content_type != null) {
       content_type1 = content_type.content_type;
     }
-    tmp4 = content_type1 === tmp2(8344).ContentInventoryEntryType.TOP_GAME;
+    tmp4 = content_type1 === tmp2(8383).ContentInventoryEntryType.TOP_GAME;
   }
   let tmp6 = tmp4;
   if (tmp6) {
-    tmp6 = content_type.extra.platform === tmp2(9049).PlatformType.XBOX;
+    tmp6 = content_type.extra.platform === tmp2(9086).PlatformType.XBOX;
   }
   if (!tmp6) {
     let content_type2;
     if (content_type != null) {
       content_type2 = content_type.content_type;
     }
-    let tmp8 = content_type2 === tmp2(8344).ContentInventoryEntryType.PLAYED_GAME;
+    let tmp8 = content_type2 === tmp2(8383).ContentInventoryEntryType.PLAYED_GAME;
     if (!tmp8) {
       let content_type3;
       if (content_type != null) {
         content_type3 = content_type.content_type;
       }
-      tmp8 = content_type3 === tmp2(8344).ContentInventoryEntryType.TOP_GAME;
+      tmp8 = content_type3 === tmp2(8383).ContentInventoryEntryType.TOP_GAME;
     }
     let tmp10 = tmp8;
     if (tmp10) {
-      tmp10 = content_type.extra.platform === tmp2(9049).PlatformType.PLAYSTATION;
+      tmp10 = content_type.extra.platform === tmp2(9086).PlatformType.PLAYSTATION;
     }
     tmp6 = tmp10;
   }
@@ -178,21 +178,21 @@ export const isRecentActivityEntry = function isRecentActivityEntry(length) {
     if (length != null) {
       content_type1 = length.content_type;
     }
-    tmp4 = content_type1 === tmp2(8344).ContentInventoryEntryType.TOP_GAME;
+    tmp4 = content_type1 === tmp2(8383).ContentInventoryEntryType.TOP_GAME;
   }
   if (!tmp4) {
     let content_type2;
     if (length != null) {
       content_type2 = length.content_type;
     }
-    tmp4 = content_type2 === tmp2(8344).ContentInventoryEntryType.LISTENED_SESSION;
+    tmp4 = content_type2 === tmp2(8383).ContentInventoryEntryType.LISTENED_SESSION;
   }
   if (!tmp4) {
     let content_type3;
     if (length != null) {
       content_type3 = length.content_type;
     }
-    tmp4 = content_type3 === tmp2(8344).ContentInventoryEntryType.WATCHED_MEDIA;
+    tmp4 = content_type3 === tmp2(8383).ContentInventoryEntryType.WATCHED_MEDIA;
   }
   if (!tmp4) {
     let extra;

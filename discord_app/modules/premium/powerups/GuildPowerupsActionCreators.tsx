@@ -4,9 +4,7 @@ import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPU
 import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import BoostedGuildTiers from "constants/GuildPowerupsConstants.tsx";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
-import { items } from "mocks/GuildPowerupMocks.tsx";
 
 ({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: c4 } = BoostedGuildTiers);
 const Endpoints = ME.Endpoints;
@@ -23,11 +21,11 @@ export const guildPowerupsResetNotifications = function guildPowerupsResetNotifi
 export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
   const _require = closure_0;
   if (true === arg1) {
-    const MOCK_LEVELS = _items.MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(_items.MOCK_PERKS);
+    const MOCK_LEVELS = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = _items.MOCK_LEVELS;
-    obj[constants.PERK] = _items.MOCK_PERKS;
+    obj[constants.LEVEL] = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
+    obj[constants.PERK] = require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS;
     let obj2 = dispatcherDefault;
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
     obj[1] = closure_0;
@@ -51,8 +49,8 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj2[0] = closure_3;
     obj2[1] = closure_0;
     obj1[1] = obj2;
-    const obj5 = __httpGetWithCountryCodeQuery;
-    obj1[3] = _sendRequest.rejectWithMigratedError();
+    const obj5 = _httpGetWithCountryCodeQuery;
+    obj1[3] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     const result = obj5.httpGetWithCountryCodeQuery(obj1);
     return result.then((body) => {
       const callback = body;
@@ -93,8 +91,8 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = __httpGetWithCountryCodeQuery;
-  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
+  let obj = _httpGetWithCountryCodeQuery;
+  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = {};

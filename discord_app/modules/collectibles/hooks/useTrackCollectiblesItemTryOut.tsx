@@ -5,7 +5,6 @@ import ME from "../../../Constants.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import closure_4 from "../CollectiblesCategoryStore.tsx";
 import GuildFeatures from "../../premium/PremiumConstants.tsx";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 noop.useCallback;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -16,7 +15,7 @@ const result = set.fileFinishedImporting("modules/collectibles/hooks/useTrackCol
 export default function useTrackCollectiblesItemTryOut(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => products.products);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores, arg0];
   return useCallback((skuId) => {
     const value = stateFromStores.get(skuId.skuId);

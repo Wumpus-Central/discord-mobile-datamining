@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/components/UserTile.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08117_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12461_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/12462_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/12463_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08156_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12513_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/12514_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/12515_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

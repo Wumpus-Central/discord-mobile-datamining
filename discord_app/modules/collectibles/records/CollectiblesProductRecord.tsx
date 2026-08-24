@@ -6,7 +6,6 @@ import closure_4 from "CollectiblesBundledProductRecord.tsx";
 import createCollectiblesItemsFromServerResponse from "CollectiblesItemRecord.tsx";
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "../CollectiblesShopConstants.tsx";
 import ME from "../../../Constants.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;
 ({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
@@ -80,7 +79,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+        let type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -89,7 +88,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj = {};
       }
       let items = obj.items;
-      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "r", bundledProducts: "isArray" };
+      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "<string:22144000>", bundledProducts: "<string:18669824>" };
       ({ id: obj2[0], id: obj2[1] } = first);
       ({ name: obj2[2], summary: obj2[3], primaryCollectionStyles: obj2[4] } = skus);
       obj[5] = type;
@@ -116,7 +115,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       obj[9] = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
       ({ prices: obj2[10], previewAssetPaths } = first);
       obj[11] = previewAssetPaths;
-      let str2 = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+      let str2 = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;
@@ -136,7 +135,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "accessibilityRole", items: "apply", categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "call", items: "useStateFromStores", categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: "embed" };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

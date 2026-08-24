@@ -3,5 +3,5 @@ import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartHandsSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/cb6c6e7c80b43ea83811839368c5c1ff1827b7826c284716690b911022053e22.png";
-export const metadata = { fileBytes: 20550 };
+export default "https://cdn.discordapp.com/assets/content/c15fb660855e86d9533a93e4a9bca68e77b16d462fc8e4e49445a3b387621fb0.png";
+export const metadata = { fileBytes: 20547 };

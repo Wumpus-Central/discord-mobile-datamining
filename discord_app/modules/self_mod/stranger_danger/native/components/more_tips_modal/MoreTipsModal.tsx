@@ -12,7 +12,6 @@ import { AnalyticEvents } from "../../../../../../Constants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { NavigationStack } from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 require = arg1;
 function MoreTipsModalScreen(learnMore) {
@@ -67,7 +66,7 @@ export default function MoreTipsModal(channelId) {
   importDefault = warningId;
   const senderId = channelId.senderId;
   dependencyMap = senderId;
-  let MORE_TIPS = _defaultAreStatesEqual;
+  let MORE_TIPS = defaultAreStatesEqual;
   const items = [c6];
   const stateFromStores = MORE_TIPS.useStateFromStores(items, () => _undefined5.getChannelSafetyWarning(c0, c1));
   let React = stateFromStores;
@@ -118,5 +117,5 @@ export default function MoreTipsModal(channelId) {
       return closure_1_8(closure_1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
     }
   };
-  return callback(_NavigationStack.Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  return callback(require("../../../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

@@ -1,6 +1,7 @@
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
 import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
+import getHostWithoutPort from "../core/UrlHostUtils.tsx";
 import set from "../../../_runtime/00002_set.js";
 
 let parts;
@@ -19,13 +20,7 @@ function isImageProxyURL(hostname) {
   return startsWithResult;
 }
 const mapped = parts.map((str) => str.substring(2));
-const mapped1 = mapped.map(function getHostWithoutPort(arg0) {
-  let first;
-  if (arg0 != null) {
-    first = arg0.split(":")[0];
-  }
-  return first;
-});
+const mapped1 = mapped.map(getHostWithoutPort.getHostWithoutPort);
 let set = new Set(mapped1.filter(Boolean));
 let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 

@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/08176_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08215_registerAsset.js";
 import GuildEventCardControlsDefault from "GuildEventCard.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -27,7 +27,7 @@ function NavigationBar(onClose) {
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(5433).PressableOpacity, obj);
+  obj[0] = callback(onClose(5438).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {
@@ -101,7 +101,7 @@ export default function StartEventModal(event) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -141,7 +141,7 @@ export default function StartEventModal(event) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp11) {
           c0 = tmp;
           throw tmp11;

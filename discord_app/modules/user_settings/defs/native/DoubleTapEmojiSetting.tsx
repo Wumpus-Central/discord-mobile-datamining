@@ -69,7 +69,7 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
+    let obj = EMOJI_PICKER_ACTION_SHEET_KEY;
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -87,7 +87,7 @@ const pressable = createToggle.createPressable({
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -130,7 +130,7 @@ const pressable = createToggle.createPressable({
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
               constants = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             constants = tmp;
@@ -208,7 +208,7 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
+    let obj = EMOJI_PICKER_ACTION_SHEET_KEY;
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -226,7 +226,7 @@ let obj1 = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -269,7 +269,7 @@ let obj1 = {
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
               constants = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             constants = tmp;

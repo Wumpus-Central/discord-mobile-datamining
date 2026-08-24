@@ -63,8 +63,8 @@ obj = {
   }
 };
 const reactFormatter = module_1274.makeReactFormatter(obj);
-const intlManager = new require("module_1274").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
-set = { format: reactFormatter, formatToPlainString: require("module_1274").stringFormatter, formatToMarkdownString: require("module_1274").markdownFormatter, formatToParts: require("module_1274").astFormatter };
+const intlManager = new require("../../_runtime/metro/01274__.js").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+set = { format: reactFormatter, formatToPlainString: require("../../_runtime/metro/01274__.js").stringFormatter, formatToMarkdownString: require("../../_runtime/metro/01274__.js").markdownFormatter, formatToParts: require("../../_runtime/metro/01274__.js").astFormatter };
 set = intlManager.withFormatters(set);
 const result = set.fileFinishedImporting("intl/index.native.tsx");
 

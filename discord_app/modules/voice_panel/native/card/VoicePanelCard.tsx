@@ -1171,13 +1171,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4744);
+  let tmpResult = tmp(4749);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4744);
+  tmpResult = tmp(4749);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1443,7 +1443,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "call", layout: "heading-xl/semibold", layoutPhysics: "mobile-text-heading-primary" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: "exhalar", layoutPhysics: "inhalar" };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

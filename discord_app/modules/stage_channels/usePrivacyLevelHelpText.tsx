@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/stage_channels/useP
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0));
   const obj2 = applyOverwritesAll;

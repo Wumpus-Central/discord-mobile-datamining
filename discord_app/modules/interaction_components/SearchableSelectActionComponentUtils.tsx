@@ -7,7 +7,6 @@ import closure_6 from "../../stores/GuildStore.tsx";
 import closure_7 from "../../stores/RelationshipStore.tsx";
 import closure_8 from "../../stores/UserStore.tsx";
 import closure_9 from "LocalInteractionComponentStateStore.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
@@ -19,14 +18,14 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
   if (null == channel) {
     return [];
   } else {
-    const tmp2 = type === _PermissionOverwriteType.ComponentType.USER_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(6714);
+    const tmp2 = type === require("../../flow/Server.tsx").ComponentType.USER_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    let obj = channel(6751);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
     obj[4] = tmp2;
-    obj[5] = type === _PermissionOverwriteType.ComponentType.ROLE_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
-    const tmp3 = type === _PermissionOverwriteType.ComponentType.ROLE_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
+    obj[5] = type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    const tmp3 = type === require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
     ({ users, roles } = obj.queryMentionResults(obj));
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
@@ -58,7 +57,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4813).SelectOptionType.CHANNEL, value: id.id, label: callback(4984).computeChannelName(id, closure_8, closure_7) };
+      const obj = { type: callback(4818).SelectOptionType.CHANNEL, value: id.id, label: callback(4989).computeChannelName(id, closure_8, closure_7) };
       return obj;
     });
   }

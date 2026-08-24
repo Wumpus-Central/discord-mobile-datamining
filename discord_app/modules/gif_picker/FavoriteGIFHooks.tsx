@@ -1,7 +1,6 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
 import useFrecencySettings from "../user_settings/FrecencyUserSettingsHooks.tsx";
 import closure_3 from "../../../_runtime/00019_noop.js";
-import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
 
 require = arg1;
 let closure_4 = {};
@@ -20,7 +19,7 @@ export const useFavoriteGIFs = function useFavoriteGIFs() {
 };
 export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   const _require = transformFavoriteGifUrl;
-  const favoriteGifs = _useFrecencySettings.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = require("../user_settings/FrecencyUserSettingsHooks.tsx").useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;

@@ -1,7 +1,7 @@
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
 import set from "../../../_runtime/00002_set.js";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
-import _modDef5260 from "../ModalActionCreators.tsx";
+import _modDef5265 from "../ModalActionCreators.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
 
 let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
@@ -13,7 +13,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = _modDef5260;
+      const obj2 = _modDef5265;
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -32,13 +32,13 @@ export default {
           const obj = self(closure_1_2[2]);
         }
       };
-      obj2.pushLazy(self(2007)(8845, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(2008)(8882, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
       const tmp3 = arg3;
-      const tmp9 = self(2007)(8845, dependencyMap.paths);
+      const tmp9 = self(2008)(8882, dependencyMap.paths);
     }
   },
   close() {
-    _modDef5260.popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    _modDef5265.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

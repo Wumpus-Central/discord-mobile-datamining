@@ -1,12 +1,10 @@
 // discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import registerAssetDefault from "../../../../_runtime/08496_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08535_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import { useYouBarSettingsCustomHeaderPaddingTop } from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 
 const require = arg1;
@@ -19,10 +17,10 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let _require;
   ({ logoUrl, buttonColor, categoryName } = arg0);
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  obj1 = _useYouBarSettingsCustomHeaderPaddingTop;
+  obj1 = useYouBarSettingsCustomHeaderPaddingTop;
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
@@ -31,16 +29,16 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj[0] = obj;
   obj1 = { style: tmp.backButton, children: null };
   const obj2 = { source: registerAssetDefault, color: buttonColor, accessibilityLabel: null, onPress: null };
-  const intl = _getSystemLocale.intl;
-  obj2[2] = intl.string(_getSystemLocale.t["13/7kX"]);
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj2[2] = intl.string(require("../../../intl/index.native.tsx").t["13/7kX"]);
   obj2[3] = function onPress() {
     navigation.goBack();
   };
-  obj1[1] = callback(_GenericHeaderTitle.HeaderIconButton, obj2);
+  obj1[1] = callback(require("../../main_tabs_v2/native/shared_components/HeaderShared.tsx").HeaderIconButton, obj2);
   const items = [callback(closure_4, obj1), , ];
   const obj3 = { resizeMode: "contain", style: tmp.logo, source: { uri: logoUrl }, accessibilityLabel: null, accessibilityRole: "header" };
-  const intl2 = _getSystemLocale.intl;
-  obj3[3] = intl2.formatToPlainString(_getSystemLocale.t.FNtLb3, { category: categoryName });
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj3[3] = intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.FNtLb3, { category: categoryName });
   items[1] = callback(closure_3, obj3);
   items[2] = callback(closure_4, { style: tmp.dummyRightButton });
   obj[1] = items;

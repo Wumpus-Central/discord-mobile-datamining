@@ -12,15 +12,15 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   const _require = arg0;
   importDefault = arg1;
   dependencyMap = byWeekday;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => first.getGuildScheduledEvent(closure_0));
   const tmp4 = usePrevValueDefault(byWeekday);
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(8785);
-      tmpResult = tmp(8785);
+      let tmpResult = tmp(8822);
+      tmpResult = tmp(8822);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);

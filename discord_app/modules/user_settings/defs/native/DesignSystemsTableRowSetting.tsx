@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return MyTableRow.default;
+    return MyTableRow /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

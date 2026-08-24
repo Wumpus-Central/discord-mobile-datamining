@@ -30,7 +30,7 @@ export default function handleAppStateChanged(state) {
     const _default = createRTCConnection.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = tmp2(17115);
+    let tmp2Result = tmp2(17209);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {

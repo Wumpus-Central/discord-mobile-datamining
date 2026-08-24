@@ -6,7 +6,6 @@ import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../storefront/StorefrontPromotionOverrideStore.tsx";
 import closure_5 from "SocialLayerStorefrontStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchSocialLayerStorefront(arg0, Endpoints, arg2) {
@@ -46,7 +45,7 @@ function _fetchSocialLayerStorefront2() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -361,7 +360,7 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -544,7 +543,7 @@ function _fetchSocialLayerStorefrontEntries() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -670,7 +669,7 @@ function _fetchSocialLayerStorefrontById() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -907,7 +906,7 @@ function _fetchSocialLayerStorefrontConfig() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1252,7 +1251,7 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
         obj.dispatch(obj);
       }
     }, closure_11);
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: null, rejectWithError: true };
     obj[0] = Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, closure_0);
     const postResult = HTTP.post(obj);

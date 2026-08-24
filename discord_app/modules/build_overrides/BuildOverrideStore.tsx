@@ -30,7 +30,7 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
 prototype["getBuildOverride"] = function getBuildOverride(target) {
   const _require = target;
   if (!(target in obj1)) {
-    obj = _Version;
+    obj = Version;
     const validateURLResult = obj.validateURL(target);
     if (null != validateURLResult) {
       obj = {};
@@ -43,13 +43,13 @@ prototype["getBuildOverride"] = function getBuildOverride(target) {
       obj[3] = obj.Resolving;
       obj[target] = obj;
       obj1 = obj;
-      const buildOverrideMeta = tmp(4290).getBuildOverrideMeta(validateURLResult.url);
+      const buildOverrideMeta = tmp(4294).getBuildOverrideMeta(validateURLResult.url);
       buildOverrideMeta.then((override) => {
         obj = closure_1_1(closure_1_2[1]);
         obj = { type: "BUILD_OVERRIDE_RESOLVED", url: closure_0, override };
         obj.dispatch(obj);
       });
-      const tmpResult = tmp(4290);
+      const tmpResult = tmp(4294);
     } else {
       obj1 = {};
       const merged1 = Object.assign(obj1);

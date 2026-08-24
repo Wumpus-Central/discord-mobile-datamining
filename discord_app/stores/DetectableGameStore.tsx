@@ -12,7 +12,6 @@ import ApplicationTypes2 from "../modules/applications/ApplicationConstants.tsx"
 import keysDefault from "../lib/CachedEntriesMap.tsx";
 import GameTheme from "../modules/game_detection/GameDetectionTypes.tsx";
 import set from "../utils/PlatformUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 function gameFromServer(id) {
   ({ executables, aliases, third_party_skus } = id);
@@ -254,7 +253,7 @@ prototype["findGame"] = function findGame(nextResult) {
     }
     if (null != nextResult.exePath) {
       let parts = nextResult.exePath.split("/");
-      let found = parts.filter(_isDiscordFrontendDevelopment.isNotNullish);
+      let found = parts.filter(require("../utils/GlobalUtils.tsx").isNotNullish);
       const gameByExecutable = self.getGameByExecutable(found.pop());
       if (null != gameByExecutable) {
         return gameByExecutable;

@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
-import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef4980 from "../../actions/SelectedChannelActionCreators.tsx";
 import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
 import _initializeDefault from "StageChannelNewUserManager.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -10,7 +10,6 @@ import closure_8 from "../../stores/PermissionStore.tsx";
 import closure_9 from "../../stores/SelectedChannelStore.tsx";
 import { watchStream } from "../../actions/StreamActionCreators.tsx";
 import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
-import { Permissions } from "StageChannelPermissions.tsx";
 
 const require = arg1;
 function connectToStage(channel, flag) {
@@ -19,16 +18,16 @@ function connectToStage(channel, flag) {
   }
   if (!flag) {
     const _require = channel;
-    const canResult = closure_8.can(_Permissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+    const canResult = closure_8.can(require("StageChannelPermissions.tsx").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
       let num = openStageChannelSettingsAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8058).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(8097).openStageBlockedUsersSheet(channel, () => {
           closure_1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8058);
+        const tmp7Result = tmp7(8097);
       }
       tmp6 = num;
       const obj2 = openStageChannelSettingsAll;
@@ -41,19 +40,19 @@ function connectToStage(channel, flag) {
   _initializeDefault.initialize();
   const obj = closure_9;
   const obj4 = _initializeDefault;
-  const voiceChannel = _modDef4975.selectVoiceChannel(channel.id);
+  const voiceChannel = _modDef4980.selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
     const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
     if (null != found) {
-      _watchStream.watchStream(found, { noFocus: true });
-      const obj6 = _watchStream;
+      require("../../actions/StreamActionCreators.tsx").watchStream(found, { noFocus: true });
+      const obj6 = watchStream;
     }
     return true;
   }
-  const obj5 = _modDef4975;
+  const obj5 = _modDef4980;
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -74,19 +73,19 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _shouldShowVoiceChannelChangeConfirmation.shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _shouldShowVoiceChannelChangeConfirmation;
+    result = require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
-    result = flag2(8058).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8097).showChannelChangeConfirmationAlert(channel, () => {
       closure_1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8058);
+    const obj2 = flag2(8097);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8058).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8058);
+      flag2(8097).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8097);
     }
   }
 }
@@ -114,7 +113,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -188,7 +187,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
               return flag;
             });
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c4 = tmp;

@@ -3,7 +3,6 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../stores/ConsentStore.tsx";
 import { resetRegistration } from "RegistrationUIStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
@@ -11,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/auth/native/useInit
 export default function useInitialRegistrationStep(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     let tmp2 = callback === callback(closure_1_2[4]).getRegistrationSteps()[1];

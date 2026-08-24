@@ -5,7 +5,7 @@ import GuildThemeSourcePreference from "../../flow/Client.tsx";
 import GameTheme from "../../modules/game_detection/GameDetectionTypes.tsx";
 import DomainMigrationEventType from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
 import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
-import decideFileExtension from "../../modules/media/FileExtensionUtils.tsx";
+import getExtensionFromContentType from "../../modules/media/FileExtensionUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeFeatures } from "../../Constants.tsx";
@@ -84,7 +84,7 @@ function _transcodeImageToPng() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -292,23 +292,23 @@ const re22 = /[^a-zA-Z0-9]/g;
 const re23 = /\.[^.]*$/;
 let obj = { SAVED: "saved", CANCELED: "canceled", ERRORED: "errored" };
 obj = {
-  requireModule(discord_krisp) {
+  requireModule(discord_voice) {
     if (c14) {
-      if (closure_15.hasOwnProperty(discord_krisp)) {
-        if (null != tmp[discord_krisp]) {
-          return tmp[discord_krisp];
+      if (closure_15.hasOwnProperty(discord_voice)) {
+        if (null != tmp[discord_voice]) {
+          return tmp[discord_voice];
         }
       }
     }
     const nativeModules = DiscordNative.nativeModules;
-    const requireModuleResult = nativeModules.requireModule(discord_krisp);
+    const requireModuleResult = nativeModules.requireModule(discord_voice);
     if (c14) {
-      closure_15[discord_krisp] = requireModuleResult;
+      closure_15[discord_voice] = requireModuleResult;
     }
     return requireModuleResult;
   },
   ensureModule(discord_voice) {
-    if (set.isPlatformEmbedded) {
+    if (set /* set */.isPlatformEmbedded) {
       const nativeModules = DiscordNative.nativeModules;
       let ensureModuleResult = nativeModules.ensureModule(discord_voice);
     } else {
@@ -394,7 +394,7 @@ obj.inputEventUnregister = function inputEventUnregister(joined) {
   discordUtils.inputEventUnregister(parseInt(joined));
 };
 obj.setOnInputEventCallback = function setOnInputEventCallback(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
     discordUtils.inputWatchAll(arg0);
@@ -562,7 +562,7 @@ obj.getDiscordUtils = function getDiscordUtils() {
   return self.requireModule("discord_utils");
 };
 obj.isSystemDarkMode = function isSystemDarkMode() {
-  let isWindowsResult = set.isWindows();
+  let isWindowsResult = set /* set */.isWindows();
   if (isWindowsResult) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
@@ -620,7 +620,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(6923).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(6961).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -635,13 +635,13 @@ obj.setBadge = function setBadge(arg0) {
   }
 };
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
 obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const thumbar = DiscordNative.thumbar;
     if (thumbar != null) {
       const setThumbarButtons = thumbar.setThumbarButtons;
@@ -670,7 +670,7 @@ obj.bounceDock = function bounceDock(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -707,7 +707,7 @@ obj.bounceDock = function bounceDock(arg0) {
               dock = dock.dock;
               dock.cancelBounce(dock);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -719,7 +719,7 @@ obj.bounceDock = function bounceDock(arg0) {
   }
 };
 obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
   }
@@ -727,7 +727,7 @@ obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
 Object.defineProperty(obj, "architecture", {
   get: () => {
     let str = "";
-    if (set.isPlatformEmbedded) {
+    if (set /* set */.isPlatformEmbedded) {
       str = DiscordNative.process.arch;
     }
     return str;
@@ -737,7 +737,7 @@ Object.defineProperty(obj, "architecture", {
 Object.defineProperty(obj, "releaseChannel", {
   get: () => {
     let str = "";
-    if (set.isPlatformEmbedded) {
+    if (set /* set */.isPlatformEmbedded) {
       const app = DiscordNative.app;
       str = app.getReleaseChannel();
     }
@@ -750,7 +750,7 @@ Object.defineProperty(obj, "buildNumber", { get: () => closure_11, set: undefine
 Object.defineProperty(obj, "moduleVersions", { get: () => closure_12, set: undefined });
 Object.defineProperty(obj, "parsedOSRelease", {
   get: () => {
-    if (set.isPlatformEmbedded) {
+    if (set /* set */.isPlatformEmbedded) {
       const parts = DiscordNative.os.release.split(".");
       let mapped = parts.map((joined) => parseInt(joined, 10));
       const str = DiscordNative.os.release;
@@ -762,7 +762,7 @@ Object.defineProperty(obj, "parsedOSRelease", {
   set: undefined
 });
 obj.copy = function copy(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.copy(arg0);
   }
@@ -781,7 +781,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -895,7 +895,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -933,7 +933,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
           const _Buffer = Buffer;
           clipboard.copyImage(Buffer.from(closure_0), closure_1);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -944,8 +944,8 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 };
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
-    if (set.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(6924).decideFileExtension(closure_1_0, closure_1_1);
+    if (set /* set */.isPlatformEmbedded) {
+      const decideFileExtensionResult = tmp(6962).decideFileExtension(closure_1_0, closure_1_1);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -972,7 +972,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1168,7 +1168,7 @@ obj.saveFile = function saveFile(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1368,7 +1368,7 @@ obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(c0) {
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const fileManager = DiscordNative.fileManager;
     const getOpenH264LibraryPathSync = fileManager.getOpenH264LibraryPathSync;
     let openH264LibraryPathSync;
@@ -1379,12 +1379,12 @@ obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
   }
 };
 obj.canCopyImage = function canCopyImage(closure_1_0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     if (typeof DiscordNative.clipboard.copyImage !== "function") {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = decideFileExtension.decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = getExtensionFromContentType.decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             if (!set1.has(decideFileExtensionResult)) {
@@ -1392,7 +1392,7 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
             }
           }
         }
-        const tmp2Result = decideFileExtension;
+        const tmp2Result = getExtensionFromContentType;
       }
       return true;
     }
@@ -1402,27 +1402,27 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
   const tmp2 = require;
 };
 obj.cut = function cut() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.cut();
   }
 };
 obj.paste = function paste() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.paste();
   }
 };
 obj.readClipboard = function readClipboard() {
   let str = "";
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     str = clipboard.read();
   }
   return str;
 };
 obj.clipboardHasMixedContent = function clipboardHasMixedContent() {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     const hasMixedContent = clipboard.hasMixedContent;
@@ -1466,7 +1466,7 @@ obj.sendIPC = function sendIPC(APP_BADGE_SET, arg1) {
   ipc.send.apply(items);
 };
 obj.isIPCReady = function isIPCReady() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     try {
       let ipc;
       if (DiscordNative != null) {
@@ -1506,7 +1506,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1601,7 +1601,7 @@ obj.focus = function focus(arg0) {
   }
   let isWindowsResult = flag;
   if (flag) {
-    isWindowsResult = set.isWindows();
+    isWindowsResult = set /* set */.isWindows();
     obj = set;
   }
   if (isWindowsResult) {
@@ -1612,7 +1612,7 @@ obj.focus = function focus(arg0) {
   _window.focus(flag, arg0);
 };
 obj.blur = function blur() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     if (null != DiscordNative.window.blur) {
       const _window = DiscordNative.window;
       _window.blur();
@@ -1651,7 +1651,7 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1721,11 +1721,11 @@ obj.setMinimumSize = function setMinimumSize(arg0, arg1) {
   }
 };
 obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(6923).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(6961).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
@@ -1733,7 +1733,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
   }
 };
 obj.purgeMemory = function purgeMemory() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.purgeMemory();
   }
@@ -1747,7 +1747,7 @@ obj.triggerJSException = function triggerJSException(arg0) {
   crashReporter.triggerJSException(arg0);
 };
 obj.flushDNSCache = function flushDNSCache() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.flushDNSCache();
   }
@@ -1757,7 +1757,7 @@ obj.supportsFeature = function supportsFeature(arg0) {
   return features.supports(arg0);
 };
 obj.getEnableHardwareAcceleration = function getEnableHardwareAcceleration() {
-  const isPlatformEmbedded = set.isPlatformEmbedded;
+  const isPlatformEmbedded = set /* set */.isPlatformEmbedded;
   let enableHardwareAcceleration = !isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const gpuSettings = DiscordNative.gpuSettings;
@@ -1837,7 +1837,7 @@ obj.getGPUDriverVersions = function getGPUDriverVersions() {
   gPUDriverVersions = Promise.resolve(Object.freeze({}));
 };
 obj.setZoomFactor = function setZoomFactor(arg0) {
-  let flag = set.isPlatformEmbedded;
+  let flag = set /* set */.isPlatformEmbedded;
   if (flag) {
     const _window = DiscordNative.window;
     _window.setZoomFactor(arg0);
@@ -2077,7 +2077,7 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2149,7 +2149,7 @@ obj.showOpenDialog = function showOpenDialog(properties) {
 };
 obj.flushStorageData = function flushStorageData(arg0) {
   let _Promise = Promise;
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     _Promise = new _Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
@@ -2176,7 +2176,7 @@ obj.flushStorageData = function flushStorageData(arg0) {
 };
 obj.flushCookies = function flushCookies() {
   let _Promise = Promise;
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     _Promise = new _Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
@@ -2202,7 +2202,7 @@ obj.flushCookies = function flushCookies() {
   return _Promise;
 };
 obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     let setCrashInformation;
     if (DiscordNative != null) {
@@ -2220,7 +2220,7 @@ obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
 };
 obj.blockDisplaySleep = function blockDisplaySleep() {
   let blockDisplaySleepResult = null;
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     blockDisplaySleepResult = null;
     if (null != DiscordNative.powerSaveBlocker) {
       const powerSaveBlocker = DiscordNative.powerSaveBlocker;
@@ -2230,7 +2230,7 @@ obj.blockDisplaySleep = function blockDisplaySleep() {
   return blockDisplaySleepResult;
 };
 obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2240,7 +2240,7 @@ obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
   }
 };
 obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2250,15 +2250,15 @@ obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
   }
 };
 obj.relaunch = function relaunch() {
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     const app = DiscordNative.app;
     app.relaunch();
   }
 };
 obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg3) {
-  obj = _sendRequest;
+  obj = sendRequest;
   _require = "" + obj.getAPIBaseURL() + closure_0;
-  if (_set.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx").isPlatformEmbedded) {
     if (null == DiscordNative.http) {
       const _Error2 = Error;
       error = new Error("HTTP module not available");
@@ -2628,7 +2628,7 @@ obj.fetchRiotGamesLiveClientData = function fetchRiotGamesLiveClientData(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (set.isPlatformEmbedded) {
+  if (set /* set */.isPlatformEmbedded) {
     if (null == DiscordNative.riotGames) {
       const _Error2 = Error;
       error = new Error("Riot Games module not available");
@@ -2747,7 +2747,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -41,17 +41,17 @@ export default {
     closure_3 = location;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides.channel_overrides);
-    const currentGuildSettings = _UserNotificationSettings.getCurrentGuildSettings(guildId);
-    const obj2 = _UserNotificationSettings;
-    const manyCurrentChannelSettings = _UserNotificationSettings.getManyCurrentChannelSettings(guildId, keys);
-    const obj3 = _UserNotificationSettings;
+    const currentGuildSettings = require("../utils/NotificationSettingsUtils.tsx").getCurrentGuildSettings(guildId);
+    const obj2 = UserNotificationSettings;
+    const manyCurrentChannelSettings = require("../utils/NotificationSettingsUtils.tsx").getManyCurrentChannelSettings(guildId, keys);
+    const obj3 = UserNotificationSettings;
     let result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, channel_overrides);
     const obj4 = handleConnectionOpenDefault;
     obj = { type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE", guildId, settings: channel_overrides };
     dispatcherDefault.dispatch(obj);
     const obj5 = dispatcherDefault;
-    const result1 = _UserNotificationSettings.trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
-    const obj7 = _UserNotificationSettings;
+    const result1 = require("../utils/NotificationSettingsUtils.tsx").trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
+    const obj7 = UserNotificationSettings;
     const keys1 = DISCORD_EPOCHDefault.keys(channel_overrides.channel_overrides);
     const item = keys1.forEach((channelId) => {
       const value = closure_4.get(channelId);
@@ -82,8 +82,8 @@ export default {
     closure_3 = arg3;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides);
-    const manyCurrentChannelSettings = _UserNotificationSettings.getManyCurrentChannelSettings(guildId, keys);
-    const obj2 = _UserNotificationSettings;
+    const manyCurrentChannelSettings = require("../utils/NotificationSettingsUtils.tsx").getManyCurrentChannelSettings(guildId, keys);
+    const obj2 = UserNotificationSettings;
     obj = { channel_overrides };
     const result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, obj);
     const obj3 = handleConnectionOpenDefault;
@@ -138,7 +138,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -203,7 +203,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           c3 = tmp;

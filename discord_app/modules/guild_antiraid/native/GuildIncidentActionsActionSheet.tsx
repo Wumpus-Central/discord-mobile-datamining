@@ -14,7 +14,7 @@ function DurationSelectionActionSheet(onClose) {
   obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.vKYZzc);
-  const items = [callback2(onClose(6949).BottomSheetTitleHeader, obj), ];
+  const items = [callback2(onClose(6987).BottomSheetTitleHeader, obj), ];
   obj = {
     hasIcons: false,
     children: getTimeframes().map((label) => {
@@ -28,9 +28,9 @@ function DurationSelectionActionSheet(onClose) {
       }, label.value);
     })
   };
-  items[1] = callback2(onClose(7177).ActionSheetRow.Group, obj);
+  items[1] = callback2(onClose(7215).ActionSheetRow.Group, obj);
   obj[0] = items;
-  return callback3(onClose(7175).ActionSheet, obj);
+  return callback3(onClose(7213).ActionSheet, obj);
 }
 ({ resetGuildIncidentsActionSheetStore: c5, setInitialTime: closure_6, setPauseDms: error, setPauseInvites: closure_8, setTime: c9, useGuildIncidentsActionSheetStore: c10 } = useGuildIncidentsActionSheetStore);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);

@@ -93,7 +93,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -126,7 +126,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp5) {
                     c1 = tmp;

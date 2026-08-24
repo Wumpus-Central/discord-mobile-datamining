@@ -50,7 +50,7 @@ export const useDisplayNameStylesNewEffects = function useDisplayNameStylesNewEf
 };
 export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
   const _require = visibleFontOrder;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [visibleFontOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newFontsBadgeDismissed.getNewFontsBadgeDismissed());
@@ -64,7 +64,7 @@ export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNe
 };
 export const useDisplayNameStylesNewEffectsBadge = function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
   const _require = visibleEffectOrder;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [visibleEffectOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newEffectsBadgeDismissed.getNewEffectsBadgeDismissed());

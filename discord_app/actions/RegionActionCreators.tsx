@@ -2,7 +2,6 @@
 import set from "../../_runtime/00002_set.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("actions/RegionActionCreators.tsx");
@@ -10,7 +9,7 @@ const result = set.fileFinishedImporting("actions/RegionActionCreators.tsx");
 export default {
   fetchRegions(id) {
     const _require = id;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
       let obj = closure_1_1(closure_1_2[2]);

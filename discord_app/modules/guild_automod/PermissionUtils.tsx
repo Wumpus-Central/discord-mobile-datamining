@@ -2,7 +2,6 @@
 import closure_2 from "../../stores/GuildStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
@@ -33,7 +32,7 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       if (obj2 !== undefined) {
         const guild = closure_1_2.getGuild(tmp);
@@ -50,7 +49,7 @@ export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

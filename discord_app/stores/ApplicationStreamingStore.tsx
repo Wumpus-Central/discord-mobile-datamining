@@ -248,10 +248,10 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
     return null;
   }
 };
-prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(arg0) {
+prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(id) {
   if (canSpectateDefault(closure_13)) {
     let tmp4 = null;
-    if (null != dependencyMap[arg0]) {
+    if (null != dependencyMap[id]) {
       const _Object = Object;
       const values = Object.values(tmp3);
       let found = values.find((channelId) => {
@@ -711,7 +711,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    let obj = sourceId(4531);
+    let obj = sourceId(4536);
     obj = { streamType, guildId, channelId, ownerId: store2.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
@@ -803,13 +803,13 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.UNAUTHORIZED) {
         FAILED = tmp22.FAILED;
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
-        let obj = guildId(4531);
+        let obj = guildId(4536);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2007)(4655, dependencyMap.paths).then((arg0) => {
+        guildId(2008)(4661, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2007)(4655, dependencyMap.paths);
+        const promise = guildId(2008)(4661, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import set2 from "../channel/ChannelConstants.tsx";
-import _extends from "../../../_runtime/metro/04208__extends.js";
+import _extends from "../../../_runtime/metro/04212__extends.js";
 import RouteParam2 from "../routing/RouteUtils.tsx";
 
 const Routes = ME.Routes;

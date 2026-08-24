@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return ThemeTypes.default;
+    return ThemeTypes /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

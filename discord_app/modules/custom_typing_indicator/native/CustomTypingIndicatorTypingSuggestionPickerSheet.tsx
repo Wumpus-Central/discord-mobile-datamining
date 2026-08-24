@@ -22,32 +22,34 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   const tmp = callback4();
   const tmp2 = callback(React.useState(onChange.initialValue), 2);
   first = tmp2[0];
-  let obj = { contentStyles: tmp.content, dismissAccessibilityLabel: null, children: null };
+  let obj = { contentStyles: tmp.content, header: null, dismissAccessibilityLabel: null, children: null };
+  obj = { title: null };
   let intl = onChange(1236).intl;
-  obj[1] = intl.string(first(3403).hrl2cG);
-  obj = { value: first, onChange: tmp2[1], hasIcons: false, title: null, children: null };
+  obj[0] = intl.string(first(3406)["X+ijyw"]);
+  obj[1] = callback2(onChange(6987).BottomSheetTitleHeader, obj);
   const intl2 = onChange(1236).intl;
-  obj[3] = intl2.string(first(3403)["X+ijyw"]);
-  const customTypingIndicatorSuggestionPresets = onChange(14709).getCustomTypingIndicatorSuggestionPresets();
-  obj[4] = customTypingIndicatorSuggestionPresets.map((value) => {
+  obj[2] = intl2.string(first(3406).hrl2cG);
+  obj = { value: first, onChange: tmp2[1], hasIcons: false, children: null };
+  const customTypingIndicatorSuggestionPresets = onChange(11199).getCustomTypingIndicatorSuggestionPresets();
+  obj[3] = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1236).intl;
-    obj[1] = intl.string(onChange(14709).getCustomTypingIndicatorSuggestionMessage(value));
-    return callback(onChange(8100).TableRadioRow, obj, value);
+    obj[1] = intl.string(onChange(11199).getCustomTypingIndicatorSuggestionMessage(value));
+    return callback(onChange(8139).TableRadioRow, obj, value);
   });
-  const items = [callback2(onChange(8101).TableRadioGroup, obj), ];
-  obj = { style: tmp.buttonWrapper, children: null };
-  obj1 = {
+  const items = [callback2(onChange(8140).TableRadioGroup, obj), ];
+  obj1 = { style: tmp.buttonWrapper, children: null };
+  const obj2 = {
     onPress() {
       onChange(first);
-      first(closure_1_2[13]).hideActionSheet();
+      first(closure_1_2[14]).hideActionSheet();
     },
     text: null
   };
   const intl3 = onChange(1236).intl;
-  obj1[1] = intl3.string(first(3403)["6ZxPAQ"]);
-  obj[1] = callback2(onChange(4745).Button, obj1);
-  items[1] = callback2(View, obj);
-  obj[2] = items;
-  return callback3(onChange(7175).ActionSheet, obj);
+  obj2[1] = intl3.string(first(3406)["6ZxPAQ"]);
+  obj1[1] = callback2(onChange(4750).Button, obj2);
+  items[1] = callback2(View, obj1);
+  obj[3] = items;
+  return callback3(onChange(7213).ActionSheet, obj);
 };

@@ -5,7 +5,6 @@ import closure_3 from "MobileGameCommunitiesStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
 import importDefaultResult from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import importDefaultResult1 from "../../../Dispatcher.tsx";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 importDefaultResult = new importDefaultResult(setDefault.Millis.SECOND, setDefault.Millis.MINUTE, true);
@@ -23,7 +22,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
   if (closure_5 === undefined) {
     num = 20;
   }
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   let obj = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
   obj = { game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items };
   obj[1] = parseDefault.stringify(obj);
@@ -64,7 +63,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(obj);
               let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F118736 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F119728 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -132,7 +131,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(obj);
                   let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F118736 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F119728 */ function() { ... });
                 });
               }
             }).catch(() => {

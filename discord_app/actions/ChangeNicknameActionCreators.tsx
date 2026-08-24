@@ -10,11 +10,11 @@ export default {
   changeNickname(guildId, arg1, closure_4) {
     const _require = arg1;
     closure_1 = arg3;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: Endpoints.GUILD_MEMBER_NICK(guildId, closure_4), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick: closure_1 };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
       const nick = body.body.nick;
       callback2(closure_1_2[2]);

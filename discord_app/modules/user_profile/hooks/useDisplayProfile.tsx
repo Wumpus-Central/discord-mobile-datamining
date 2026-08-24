@@ -4,7 +4,6 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "../UserProfileStore.tsx";
 import areArraysShallowlyEqual from "../../../utils/FunctionUtils.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSinceDefault(arg0, arg1));
@@ -14,7 +13,7 @@ export default function useDisplayProfile(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_4, closure_5];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
       const items = [closure_1_4, closure_1_5];
@@ -47,7 +46,7 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
   _require = arg0;
   closure_1 = arg1;
   const items1 = [closure_4, closure_5];
-  return _initialize.useStateFromStores(items1, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != closure_0) {
       const items = [closure_1_4, closure_1_5];

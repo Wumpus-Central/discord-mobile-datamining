@@ -2,7 +2,6 @@
 import closure_2 from "../../stores/GuildStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isValidFormResponse } from "MemberVerificationUtils.tsx";
 
 const require = arg1;
@@ -25,7 +24,7 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
 export const useCanReviewGuildMemberApplications = function useCanReviewGuildMemberApplications(guildId) {
   const _require = guildId;
   const items = [closure_2];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
@@ -35,8 +34,8 @@ export const useCanReviewGuildMemberApplications = function useCanReviewGuildMem
     hasItem = closure_3.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _isValidFormResponse.guildHasVerificationGate(stateFromStores);
-    const tmpResult = _isValidFormResponse;
+    hasItem = require("MemberVerificationUtils.tsx").guildHasVerificationGate(stateFromStores);
+    const tmpResult = isValidFormResponse;
   }
   return hasItem;
 };

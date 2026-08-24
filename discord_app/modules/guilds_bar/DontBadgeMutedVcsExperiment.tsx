@@ -7,3 +7,6 @@ const result = require("set").fileFinishedImporting("modules/guilds_bar/DontBadg
 export const useIsDontBadgeMutedVcsEnabled = function useIsDontBadgeMutedVcsEnabled(useGuildMediaState) {
   return closure_0.useConfig({ location: useGuildMediaState }).enabled;
 };
+export const getIsDontBadgeMutedVcsEnabled = function getIsDontBadgeMutedVcsEnabled(GuildMediaStateStore) {
+  return closure_0.getConfig({ location: GuildMediaStateStore }).enabled;
+};

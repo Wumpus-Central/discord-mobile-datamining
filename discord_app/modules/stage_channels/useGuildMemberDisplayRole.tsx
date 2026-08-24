@@ -2,7 +2,6 @@
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import closure_3 from "../../stores/GuildMemberStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getHighestHoistedRole(arg0, arg1) {
@@ -37,7 +36,7 @@ export default function useGuildMemberDisplayRole(arg0, arg1) {
   closure_1 = arg1;
   let items = [closure_4, closure_3];
   const items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_4, closure_1_3];
     return closure_1_5(closure_0, closure_1, items);
   }, items1);

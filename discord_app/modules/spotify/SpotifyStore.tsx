@@ -21,7 +21,6 @@ import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";
 import ME from "../../Constants.tsx";
 import importDefaultResult from "../../lib/Platforms.tsx";
 import set from "../../../_runtime/00002_set.js";
-import { apiRequest } from "SpotifyActionCreators.tsx";
 
 require = arg1;
 function upsertAccount(accountId, accessToken) {
@@ -65,7 +64,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4259).Interval();
+    const interval = new obj(4263).Interval();
     obj.pingInterval = interval;
     const tmp15 = new failsDefault(undefined, MINUTE);
     obj.backoff = tmp15;
@@ -451,7 +450,7 @@ function updatePlayerState(arg0, arg1, device) {
         if (context.type === tmp12.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
-          const SpotifyAPI = _apiRequest.SpotifyAPI;
+          const SpotifyAPI = require("SpotifyActionCreators.tsx").SpotifyAPI;
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
@@ -632,7 +631,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(7243).SpotifyAPI;
+    const SpotifyAPI = accountId(7281).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -764,9 +763,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(7243).getProfile(this.accountId, this.accessToken);
-  const obj = self(7243);
-  const devices = self(7243).getDevices(this.accountId, this.accessToken);
+  const profile = self(7281).getProfile(this.accountId, this.accessToken);
+  const obj = self(7281);
+  const devices = self(7281).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1285,7 +1284,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(4779);
+        obj9 = device(4784);
       }
       if (null != tmp10) {
         if (!tmp22) {

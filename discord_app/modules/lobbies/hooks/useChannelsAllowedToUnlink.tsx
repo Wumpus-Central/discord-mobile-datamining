@@ -2,7 +2,6 @@
 import closure_2 from "../../../stores/GuildChannelStore.tsx";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "../../../stores/GuildChannelStore.tsx";
 import closure_4 from "../../../stores/PermissionStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
@@ -29,7 +28,7 @@ export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(ar
 export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id) {
   const _require = id;
   let items = [closure_4, closure_2];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     if (closure_1_2 !== undefined) {
       if (tmp2 !== undefined) {
         closure_0 = tmp2;

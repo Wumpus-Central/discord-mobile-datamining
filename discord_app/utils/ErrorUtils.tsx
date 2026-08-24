@@ -1,6 +1,6 @@
 // discord_app/utils/ErrorUtils.tsx
 import set from "../../_runtime/00002_set.js";
-import BAGGAGE_HEADER_NAME from "../../_runtime/07732_BAGGAGE_HEADER_NAME.js";
+import BAGGAGE_HEADER_NAME from "../../_runtime/07770_BAGGAGE_HEADER_NAME.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
@@ -13,9 +13,9 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
 }
 const result = set.fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
+export const getUnderlyingIOSError = function getUnderlyingIOSError(closure_8) {
   try {
-    let tmp3 = getUnderlyingIOSExceptionRecursively(c11);
+    let tmp3 = getUnderlyingIOSExceptionRecursively(closure_8);
     if (tmp3 == null) {
       tmp3 = null;
     }

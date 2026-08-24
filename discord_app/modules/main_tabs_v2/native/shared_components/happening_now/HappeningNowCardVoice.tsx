@@ -10,7 +10,6 @@ import { HappeningNowCardTrackingType as closure_8 } from "HappeningNowConstants
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 
 require = arg1;
@@ -132,11 +131,11 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = _apexExperiment.useVoiceUserAffinitySortType("useVoiceChannelUsers");
-  const obj = _apexExperiment;
+  const voiceUserAffinitySortType = require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const obj = apexExperiment;
   const items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
     const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);

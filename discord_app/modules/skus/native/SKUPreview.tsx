@@ -4,7 +4,6 @@ import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
-import apexExperiment from "../../slayer_storefront/experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
 import SourceIcon from "../../wishlists/native/WishlistItemCardBase.tsx";
 import firstAvatarDecoration from "../../collectibles/hooks/useShopProductItems.tsx";
 import BundleStaticPreviewContentDefault from "../../collectibles/native/BundleSampleV2.tsx";
@@ -133,7 +132,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9182).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9219).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);
@@ -162,18 +161,8 @@ class SocialLayerStorefrontSKUPreview {
       size = obj;
     }
     tmp3 = closure_8(size.width, size.height);
-    tmp4 = closure_2;
-    obj = require("apexExperiment");
-    tmp5 = null;
-    if (obj.useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "sku_preview" })) {
-      tmp6 = jsx;
-      tmp7 = closure_1;
-      obj1 = { sku: null, containerStyle: null };
-      obj1[0] = global.sku;
-      obj1[1] = tmp3.socialLayerStorefrontContainer;
-      tmp5 = jsx(require("SlayerStorefrontItemCard"), obj1);
-    }
-    return tmp5;
+    obj = { sku: global.sku, containerStyle: tmp3.socialLayerStorefrontContainer };
+    return jsx(require("SlayerStorefrontItemCard"), obj);
   }
 }
 class PremiumSKUPreview {

@@ -8,8 +8,6 @@ import closure_4 from "../../stores/UserStore.tsx";
 import closure_5 from "OwnedGameServersStore.tsx";
 import { GAME_SERVER_COLLECTION_ID } from "GameServerConstants.tsx";
 import ME from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { GameServerStatus } from "../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
 
 require = arg1;
@@ -51,8 +49,8 @@ export const fetchGameServerCatalog = function fetchGameServerCatalog(closure_0)
     obj[2] = flag2;
     obj[3] = flag2;
     obj[1] = obj;
-    const obj2 = __httpGetWithCountryCodeQuery;
-    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj2 = _httpGetWithCountryCodeQuery;
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
     let result = obj2.httpGetWithCountryCodeQuery(obj);
     return result.then((body) => {
       const products = body.body.products;
@@ -111,7 +109,7 @@ export const fetchGameServerInstances = function fetchGameServerInstances(arg0) 
     }, 5000);
     let resolved = Promise.resolve();
   } else {
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: null, rejectWithError: true, retries: 2, signal: null };
     obj[0] = closure_8.GAME_SERVERS(arg0);
     obj[3] = arg2;
@@ -136,7 +134,7 @@ export const fetchGameServerInstances = function fetchGameServerInstances(arg0) 
 export const fetchGameServerInstructions = function fetchGameServerInstructions(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  let obj = __httpGetWithCountryCodeQuery;
+  let obj = _httpGetWithCountryCodeQuery;
   obj = { url: closure_8.STOREFRONT_PRODUCT_BY_SKU_ID(arg1), query: obj, rejectWithError: true, retries: 3 };
   obj = { locale: closure_3.locale };
   const result = obj.httpGetWithCountryCodeQuery(obj);
@@ -212,7 +210,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
-    const mapped = body.map(callback(11656));
+    const mapped = body.map(callback(11705));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -227,7 +225,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
-    const mapped = regions.map(callback(11656));
+    const mapped = regions.map(callback(11705));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -256,10 +254,10 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Force Native Crash" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/semibold" };
     obj = {};
     const merged = Object.assign(found);
-    obj.status = _GameServerStatus.GameServerStatus.STARTING;
+    obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -272,13 +270,13 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Force Native Crash" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/semibold" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
     obj[2] = obj;
     obj.dispatch(obj);
-    let HTTP = _sendRequest.HTTP;
+    let HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj1 = { url: null, body: null, rejectWithError: true };
     obj1[0] = closure_8.GAME_SERVER_ME(found.id);
     const obj2 = { name: null };
@@ -342,27 +340,27 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Force Native Crash" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/semibold" };
     obj = {};
     let merged = Object.assign(found);
-    obj.status = _GameServerStatus.GameServerStatus.STARTING;
+    obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
-  let HTTP = _sendRequest.HTTP;
+  let HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true };
   const postResult = HTTP.post({ url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true });
   return HTTP.post({ url: closure_8.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let obj = callback2(709);
     let tmp3 = body;
-    if (body.status === callback(11654).GameServerStatus.SLEEPING) {
+    if (body.status === callback(11703).GameServerStatus.SLEEPING) {
       obj = {};
       const merged = Object.assign(body);
-      obj.status = callback(11654).GameServerStatus.STARTING;
+      obj.status = callback(11703).GameServerStatus.STARTING;
       tmp3 = obj;
     }
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "Force Native Crash" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/semibold" };
     obj[2] = tmp3;
     obj.dispatch(obj);
   }).catch((arg0) => {
@@ -385,7 +383,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
 };
 export const wakeGameServer = function wakeGameServer(arg0, arg1) {
   const _require = arg0;
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   let obj = { url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true };
   return HTTP.post({ url: closure_8.GAME_SERVER_WAKE(arg0, arg1), rejectWithError: true }).then((body) => {
     let obj = closure_1_1(closure_1_2[5]);

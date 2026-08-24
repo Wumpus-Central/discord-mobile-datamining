@@ -79,7 +79,7 @@ function _addPushNotificationMessageIfNotCached() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -131,15 +131,15 @@ function _addPushNotificationMessageIfNotCached() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
           logger.log("Push notification message not in cache, adding directly", lib.id, lib.channel_id);
-          obj1 = lib(4996);
+          obj1 = lib(5001);
           orCreate = obj1.getOrCreate(closure_0);
-          lib(4996).commit(orCreate.receivePushNotification(lib, dependencyMap));
+          lib(5001).commit(orCreate.receivePushNotification(lib, dependencyMap));
           closure_32.emitChange();
           c7 = 3;
-          const obj3 = lib(4996);
+          const obj3 = lib(5001);
         } catch (tmp27) {
           if (tmp4 === c5) {
             c7 = tmp2;
@@ -190,8 +190,8 @@ function receiveMediaMentionMessage(item10037) {
     const tmp5 = importDefault;
     const mutation = orCreate.receiveMessage(obj, false).mutate({ ready: true });
     const receiveMessageResult = orCreate.receiveMessage(obj, false);
-    tmp5(4996).commit(mutation);
-    const tmp5Result = tmp5(4996);
+    tmp5(5001).commit(mutation);
+    const tmp5Result = tmp5(5001);
   }
 }
 function handleCleanup() {
@@ -283,7 +283,7 @@ function handleReaction(optimistic) {
     } else {
       return false;
     }
-    obj4 = _MAX_REACTIONS;
+    obj4 = MAX_REACTIONS;
   }
   let obj = mergeMessageDefault;
   const tmp = importDefault;
@@ -583,7 +583,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS_CACHED: function handleLoadMessagesSuccessCached(truncate) {
     ({ channelId, jump, focus, before, after, limit } = truncate);
-    let obj = found(4996);
+    let obj = found(5001);
     const orCreate = obj.getOrCreate(channelId);
     let present;
     if (jump != null) {
@@ -647,7 +647,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
         tmp10 = mutation;
       }
     }
-    found(4996).commit(tmp10);
+    found(5001).commit(tmp10);
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
     let obj = mergeMessageDefault;
@@ -715,7 +715,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
         })(channelId, message, isConnectedResult);
       } else {
         logger.log("Inserting message tapped on from a push notification", message.id, message.channel_id);
-        let tmpResult = tmp(4996);
+        let tmpResult = tmp(5001);
         tmpResult.commit(orCreate.receivePushNotification(message, isConnectedResult));
       }
       tmp3Result = isIOSPushNotificationRawPayloadFixExperimentEnabled;
@@ -739,7 +739,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             removeResult = orCreate.remove(message.nonce);
             set.delete(message.nonce);
           }
-          tmpResult = tmp(4996);
+          tmpResult = tmp(5001);
           tmpResult.commit(removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId)));
           receiveMediaMentionMessage(message);
           const receiveMessageResult = removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId));
@@ -797,7 +797,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     const orCreate = mergeMessageDefault.getOrCreate(message.message.channel_id);
     if (null != orCreate) {
       if (orCreate.has(id)) {
-        let tmpResult = tmp(4996);
+        let tmpResult = tmp(5001);
         tmpResult.commit(orCreate.update(id, (message) => message(closure_1_2[23]).updateMessageRecord(message, message.message)));
         message = message.message;
         const media_mention = message.media_mention;
@@ -807,15 +807,15 @@ const messageStore = new MessageStore(dispatcherDefault, {
         }
         if (null != message_id) {
           if ("content" in message) {
-            tmpResult = tmp(4996);
+            tmpResult = tmp(5001);
             const orCreate1 = tmpResult.getOrCreate(message.media_mention.attachment_id);
             const updateResult1 = orCreate1.update(message.media_mention.message_id, (message) => {
               let obj = message(closure_1_2[23]);
               obj = { content: message.content };
               return obj.updateMessageRecord(message, obj);
             });
-            tmp(4996).commit(updateResult1);
-            const tmpResult1 = tmp(4996);
+            tmp(5001).commit(updateResult1);
+            const tmpResult1 = tmp(5001);
           }
         }
       }
@@ -848,7 +848,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
               attachment_id = mediaMention.attachment_id;
             }
             if (null != attachment_id) {
-              let tmpResult = tmp(4996);
+              let tmpResult = tmp(5001);
               value = tmpResult.get(attachment_id);
               if (null != value) {
                 const mediaMention2 = value.mediaMention;
@@ -857,7 +857,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
                   message_id = mediaMention2.message_id;
                 }
                 if (null != message_id) {
-                  tmpResult = tmp(4996);
+                  tmpResult = tmp(5001);
                   tmpResult.commit(value.remove(message_id));
                   const removeResult = value.remove(message_id);
                 }
@@ -865,7 +865,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             }
           }
           const removeResult1 = orCreate.remove(id);
-          tmp(4996).commit(removeResult1);
+          tmp(5001).commit(removeResult1);
           set.delete(id);
         } else {
           let id2 = orCreate.getAfter(id);
@@ -885,7 +885,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     ids = ids.ids;
     let orCreate;
     let mutation;
-    let obj = mutation(4996);
+    let obj = mutation(5001);
     orCreate = obj.getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
@@ -923,10 +923,10 @@ const messageStore = new MessageStore(dispatcherDefault, {
       if (orCreate === removeManyResult) {
         return false;
       } else {
-        let tmp8 = removeManyResult;
+        let tmp3 = removeManyResult;
         if (null != removeManyResult.revealedMessageId) {
           let tmpResult = tmp(12);
-          tmp8 = removeManyResult;
+          tmp3 = removeManyResult;
           if (tmpResult.some(ids, (arg0) => mutation.revealedMessageId === arg0)) {
             let id = removeManyResult.getAfter(removeManyResult.revealedMessageId);
             if (null == id) {
@@ -938,8 +938,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
             mutation = removeManyResult.mutate(obj);
           }
         }
-        tmpResult = tmp(4996);
-        tmpResult.commit(tmp8);
+        tmpResult = tmp(5001);
+        tmpResult.commit(tmp3);
         const item1 = ids.forEach((arg0) => {
           set.delete(arg0);
         });
@@ -1078,7 +1078,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
           const removeResult = orCreate.remove(messageId);
           obj5.delete(messageId);
           const mergeResult = orCreate.remove(messageId).merge(items);
-          tmp2(4996).commit(mergeResult);
+          tmp2(5001).commit(mergeResult);
         }
         const obj = mergeMessageDefault;
         tmp2 = importDefault;

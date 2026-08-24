@@ -2,7 +2,6 @@
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "../records/AvatarDecorationRecord.tsx";
-import { firstAvatarDecoration } from "useShopProductItems.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
@@ -11,7 +10,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const _require = product;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const shopProductItems = _firstAvatarDecoration.useShopProductItems(product);
+  const shopProductItems = require("useShopProductItems.tsx").useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   const firstNameplate = shopProductItems.firstNameplate;
@@ -75,7 +74,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "y", profileFrame: "HermesInternal" });
+          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "channel", profileEffect: "then", nameplate: "WireType", profileFrame: "header" });
           const obj = closure_1_0(closure_1_1[8]);
         }
       };

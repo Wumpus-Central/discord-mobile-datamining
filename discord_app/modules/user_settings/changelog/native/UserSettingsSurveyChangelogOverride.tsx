@@ -16,8 +16,6 @@ import closure_8 from "../../../../stores/SurveyStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
 require = arg1;
 function SurveyOverrideInfoActionSheet(survey) {
@@ -56,8 +54,8 @@ function SurveyOverrideActionSheet() {
     return surveyOverride;
   }), 2);
   const first = tmp[0];
-  let obj = { header: callback2(first(6949).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
-  const items = [callback2(first(8071).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: callback2(first(6987).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  const items = [callback2(first(8110).TextInput, { label: "Survey Override", size: "md", placeholder: "Enter the ID of the Survey you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Survey";
   if ("" === first) {
     str = "Reset Survey Override";
@@ -82,12 +80,12 @@ function SurveyOverrideActionSheet() {
     }
     closure_1_1(closure_1_3[16]).hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = callback2(first(4745).Button, obj);
+  items[1] = callback2(first(4750).Button, obj);
   obj[1] = items;
-  return closure_10(first(7175).ActionSheet, obj);
+  return closure_10(first(7213).ActionSheet, obj);
 }
 function SurveyInfo() {
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const tmp2 = usePreviousDefault(stateFromStores);
@@ -102,7 +100,7 @@ function SurveyInfo() {
       obj.openLazy(Promise.resolve(obj), "SurveyOverrideActionSheet");
     }
   };
-  const items1 = [callback2(_TableRowInner.TableRow, obj), ];
+  const items1 = [callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj), ];
   let str;
   if (null == tmp2) {
     str = "No survey data";
@@ -119,9 +117,9 @@ function SurveyInfo() {
   }
   obj1 = { title: "Surveys", hasIcons: false, children: null };
   obj[3] = fn;
-  items1[1] = callback2(_TableRowInner.TableRow, obj);
+  items1[1] = callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj);
   obj1[2] = items1;
-  return closure_10(_TableRowGroupTitle.TableRowGroup, obj1);
+  return closure_10(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj1);
 }
 function ChangelogOverrideDebuggingActionSheet() {
   let obj = { header: callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Changelog Debugging" }), children: null };
@@ -132,8 +130,8 @@ function ChangelogOverrideDebuggingActionSheet() {
 function ChangelogOverrideActionSheet() {
   const tmp = callback(importAllResult.useState(() => closure_7.overrideId()), 2);
   const first = tmp[0];
-  let obj = { header: callback2(first(6949).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
-  const items = [callback2(first(8071).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
+  let obj = { header: callback2(first(6987).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  const items = [callback2(first(8110).TextInput, { label: "Changelog Override", size: "md", placeholder: "Enter the ID of the changelog you want to test", onChange: tmp[1], isClearable: true }), ];
   let str = "Fetch Changelog";
   if ("" === first) {
     str = "Reset Changelog Override";
@@ -158,9 +156,9 @@ function ChangelogOverrideActionSheet() {
     }
     closure_1_1(closure_1_3[16]).hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = callback2(first(4745).Button, obj);
+  items[1] = callback2(first(4750).Button, obj);
   obj[1] = items;
-  return closure_10(first(7175).ActionSheet, obj);
+  return closure_10(first(7213).ActionSheet, obj);
 }
 function ChangelogInfo() {
   let obj = { title: "Changelog", hasIcons: false, children: null };
@@ -169,7 +167,7 @@ function ChangelogInfo() {
     subLabel: "Force a changelog to be shown.",
     arrow: true,
     onPress() {
-      let obj = callback(4342);
+      let obj = callback(4346);
       obj = { default: closure_16 };
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideActionSheet");
     }
@@ -179,7 +177,7 @@ function ChangelogInfo() {
     label: "Changelog debugging",
     arrow: true,
     onPress() {
-      let obj = callback(4342);
+      let obj = callback(4346);
       obj = { default: closure_15 };
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideDebuggingActionSheet");
     }

@@ -1,6 +1,6 @@
 // discord_app/records/GiftCodeRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
-import tDefault from "../../_runtime/03975_t.js";
+import tDefault from "../../_runtime/03978_t.js";
 import closure_3 from "../modules/billing/records/SubscriptionTrialRecord.tsx";
 import closure_4 from "PromotionRecord.tsx";
 import closure_5 from "SubscriptionPlanRecord.tsx";
@@ -136,13 +136,13 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !hasFlag.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !hasFlag /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return hasFlag.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return hasFlag /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
   set: undefined
 });

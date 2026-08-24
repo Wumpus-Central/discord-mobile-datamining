@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/safety_flows/native
 
 export default function OverviewScreen() {
   let tmp = callback2();
-  let obj = task(17089);
+  let obj = task(17182);
   task = obj.useSafetyFlowTask().task;
   obj1 = task(1500);
   const navigation = obj1.useNavigation();
@@ -31,12 +31,12 @@ export default function OverviewScreen() {
   obj = { spacing: navigation(712).space.PX_16, style: tmp.content, children: null };
   obj = { variant: "display-lg", style: tmp.title, children: null };
   const intl = task(1236).intl;
-  obj[2] = intl.string(navigation(2597).RRamMH);
-  const items1 = [callback(task(4734).Text, obj), , ];
+  obj[2] = intl.string(navigation(2598).RRamMH);
+  const items1 = [callback(task(4739).Text, obj), , ];
   obj1 = { variant: "text-md/medium", color: "text-strong", children: null };
   const intl2 = task(1236).intl;
-  obj1[2] = intl2.string(navigation(2597).I2Ctk1);
-  items1[1] = callback(task(4734).Text, obj1);
+  obj1[2] = intl2.string(navigation(2598).I2Ctk1);
+  items1[1] = callback(task(4739).Text, obj1);
   const obj2 = { spacing: navigation(712).space.PX_8, children: null };
   const flow_context = task.flow_context;
   let mapped;
@@ -44,32 +44,32 @@ export default function OverviewScreen() {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type) => {
-        const obj = { tip: task(17084).TASK_TYPE_TO_TITLE[task_type.task_type], index: arg1 + 1 };
-        return callback(navigation(6692), obj, task_type.task_type);
+        const obj = { tip: task(17177).TASK_TYPE_TO_TITLE[task_type.task_type], index: arg1 + 1 };
+        return callback(navigation(6728), obj, task_type.task_type);
       });
     }
   }
   const obj3 = { children: null };
   const obj4 = { children: null };
-  const items2 = [callback(task(6286).TableRowGroup, { hasIcons: true, children: mapped }), ];
+  const items2 = [callback(task(6317).TableRowGroup, { hasIcons: true, children: mapped }), ];
   const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1236).intl;
-  obj5[2] = intl3.string(navigation(2597)["0TnUrG"]);
-  items2[1] = callback(task(4734).Text, obj5);
+  obj5[2] = intl3.string(navigation(2598)["0TnUrG"]);
+  items2[1] = callback(task(4739).Text, obj5);
   obj2[1] = items2;
-  items1[2] = closure_5(task(4733).Stack, obj2);
+  items1[2] = closure_5(task(4738).Stack, obj2);
   obj[2] = items1;
-  obj4[0] = closure_5(task(4733).Stack, obj);
-  const items3 = [callback(task(5445).ModalContent, obj4), ];
+  obj4[0] = closure_5(task(4738).Stack, obj);
+  const items3 = [callback(task(5450).ModalContent, obj4), ];
   const obj6 = { children: null };
-  const items4 = [callback(navigation(17091), {}), ];
+  const items4 = [callback(navigation(17184), {}), ];
   const obj7 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
-  obj7[1] = intl4.string(navigation(2597).Ks6opt);
+  obj7[1] = intl4.string(navigation(2598).Ks6opt);
   obj7[2] = callback;
-  items4[1] = callback(task(11964).ModalActionButton, obj7);
+  items4[1] = callback(task(12013).ModalActionButton, obj7);
   obj6[0] = items4;
-  items3[1] = closure_5(task(11114).ModalFooter, obj6);
+  items3[1] = closure_5(task(11153).ModalFooter, obj6);
   obj3[0] = items3;
-  return closure_5(task(5440).ModalScreen, obj3);
+  return closure_5(task(5445).ModalScreen, obj3);
 };

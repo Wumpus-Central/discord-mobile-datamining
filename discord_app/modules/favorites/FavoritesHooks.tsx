@@ -115,7 +115,7 @@ export const useFavorites = function useFavorites() {
 export const useFavorite = function useFavorite(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  return _initialize.useStateFromStores(items, () => closure_1_5.getFavorite(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getFavorite(closure_0));
 };
 export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const items = [closure_5];
@@ -176,10 +176,10 @@ export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, 
   let tmp = arg0;
   const _require = arg0;
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => guildId.getGuildId());
-  const obj = _initialize;
-  const obj2 = _getFavoritesAwareGuildName;
-  _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => guildId.getGuildId());
+  const obj = initialize;
+  const obj2 = getFavoritesAwareGuildName;
+  initialize;
   [][0] = arg0;
   if (!isFavoritesGuildIdResult) {
     if (tmp == null) {

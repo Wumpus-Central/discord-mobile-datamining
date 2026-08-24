@@ -7,8 +7,6 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 require = arg1;
@@ -38,13 +36,13 @@ function BurstReactionAnimationContainerInner() {
       first(709).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4664);
+      const tmp11 = callback(4671);
       const withTiming = tmp11.withTiming;
       obj1 = { duration: 300 };
       if (first1) {
@@ -57,7 +55,7 @@ function BurstReactionAnimationContainerInner() {
           }
         };
         obj = { runOnJS: null, handleComponentFinish: null };
-        obj[0] = callback(4115).runOnJS;
+        obj[0] = callback(4119).runOnJS;
         obj[1] = handleComponentFinish;
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
@@ -67,7 +65,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, runOnJS: _ReanimatedRexport.runOnJS, handleComponentFinish };
+  obj = { animationData: first, showAnimation: first1, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -75,7 +73,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != first) {
     obj = { contentTypes: null, children: null };
-    let items = [_DismissibleContent.DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -83,7 +81,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = {
-        activeOpacity: callback(7531).BACKDROP_OPACITY,
+        activeOpacity: callback(7569).BACKDROP_OPACITY,
         onPress() {
           closure_1_4(false);
           closure_1_5.current = false;
@@ -104,7 +102,7 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7573), obj3);
+        tmpResult = tmp(first(7611), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
@@ -115,7 +113,7 @@ function BurstReactionAnimationContainerInner() {
         obj5[0] = tmp4.dismissTextContainer;
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4734).Text, obj5), ];
+        const items2 = [tmp(tmp2(4739).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -125,11 +123,11 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj[3] = items1;
       obj[1] = closure_1_10(closure_5, obj);
-      obj[1] = closure_1_8(first(4115).View, obj);
+      obj[1] = closure_1_8(first(4119).View, obj);
       return closure_1_8(callback(1297).OverlayView, obj);
     };
-    tmp8 = callback(first(10261), obj);
-    let tmp11 = first(10261);
+    tmp8 = callback(first(10300), obj);
+    let tmp11 = first(10300);
   }
   return tmp8;
 }

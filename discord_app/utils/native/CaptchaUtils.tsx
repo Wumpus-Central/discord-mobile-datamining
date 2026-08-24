@@ -1,7 +1,7 @@
 // discord_app/utils/native/CaptchaUtils.tsx
 import convertStringArrayToSkemaErrorItems from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
 import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
-import siteKeyDefault from "../../../_runtime/16503_siteKey.js";
+import siteKeyDefault from "../../../_runtime/16598_siteKey.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../modules/user_settings/LocaleStore.tsx";

@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return componentDidMount.default;
+    return componentDidMount /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

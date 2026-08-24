@@ -8,7 +8,6 @@ import closure_4 from "../../stores/GuildRoleStore.tsx";
 import closure_5 from "../../stores/GuildStore.tsx";
 import closure_6 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 import { _transformMetadataToCamelCase } from "DataUtils.tsx";
 import { getPromiseableActionHandlers } from "GuildAutomodActionActionCreators.native.tsx";
 
@@ -19,14 +18,14 @@ function _transformClientActionToApiAction(type) {
 }
 function _transformClientRuleToApiRule(id) {
   const _require = id;
-  let obj = __transformMetadataToCamelCase;
+  let obj = _transformMetadataToCamelCase;
   const result = obj._transformMetadataToSnakeCase(id.triggerMetadata);
   if (null != result) {
     delete tmp2[tmp];
   }
   obj = { id: id.id, name: id.name, guild_id: id.guildId, event_type: id.eventType, trigger_type: id.triggerType, trigger_metadata: result, actions: null, enabled: null, creator_id: null, position: null, exempt_channels: null, exempt_roles: null };
   const actions = id.actions;
-  const found = actions.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = actions.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   obj[6] = found.map(_transformClientActionToApiAction);
   ({ enabled: obj2[7], creatorId: obj2[8], position: obj2[9] } = id);
   let exemptChannels = id.exemptChannels;
@@ -202,7 +201,7 @@ function _fetchAutomodRules() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -285,7 +284,7 @@ function _executeAlertAction() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -330,7 +329,7 @@ function _executeAlertAction() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c3 = tmp;
           throw tmp8;
@@ -420,16 +419,16 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
     canResult = closure_6.can(constants.MANAGE_GUILD, guild);
   }
   if (canResult) {
-    const result = _getPromiseableActionHandlers.openConfirmRemoveMentionRaid(() => {
-      let obj = callback(5042);
-      obj = { feedback_type: callback(5242).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+    const result = require("GuildAutomodActionActionCreators.native.tsx").openConfirmRemoveMentionRaid(() => {
+      let obj = callback(5047);
+      obj = { feedback_type: callback(5247).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(closure_1_7.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(530).HTTP;
       obj = { url: closure_1_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };
       HTTP.post(obj);
       dependencyMap();
     });
-    let obj = _getPromiseableActionHandlers;
+    let obj = getPromiseableActionHandlers;
   }
 };
 export const clearMentionRaidDetected = function clearMentionRaidDetected(guildId) {

@@ -8,9 +8,9 @@ let closure_4 = { code: "function useOverlayLayoutDriverTsx2(){const{interpolate
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(4115).useSharedValue(0);
-  let obj = sharedValue(4115);
-  const mediaViewerDimensions = sharedValue(9013).useMediaViewerDimensions();
+  sharedValue = sharedValue(4119).useSharedValue(0);
+  let obj = sharedValue(4119);
+  const mediaViewerDimensions = sharedValue(9050).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = React.useEffect(() => {
@@ -22,7 +22,7 @@ export const useOverlayLayoutDriver = function useOverlayLayoutDriver() {
 };
 export const useHeaderLayoutAnimation = function useHeaderLayoutAnimation(animationDriver) {
   const _require = animationDriver;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const fn = function o() {
     let obj = { transform: null, opacity: null };
     obj = { translateY: animationDriver(closure_1_1[1]).interpolate(animationDriver.get(), [0, 0.75, 1], [-50, -50, 0]) };
@@ -32,7 +32,7 @@ export const useHeaderLayoutAnimation = function useHeaderLayoutAnimation(animat
     obj[1] = animationDriver(closure_1_1[1]).interpolate(animationDriver.get(), [0, 0.75, 1], [0, 0, 1]);
     return obj;
   };
-  obj = { interpolate: _ReanimatedRexport.interpolate, animationDriver };
+  obj = { interpolate: require("../../reanimated/ReanimatedRexport.tsx").interpolate, animationDriver };
   fn.__closure = obj;
   fn.__workletHash = 13622939479876;
   fn.__initData = closure_3;
@@ -40,7 +40,7 @@ export const useHeaderLayoutAnimation = function useHeaderLayoutAnimation(animat
 };
 export const useFooterLayoutAnimation = function useFooterLayoutAnimation(overlayLayoutDriver) {
   const _require = overlayLayoutDriver;
-  let obj = _ReanimatedRexport;
+  let obj = ReanimatedRexport;
   const fn = function n() {
     let obj = { transform: null, opacity: null };
     obj = { translateY: overlayLayoutDriver(closure_1_1[1]).interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [50, 50, 0]) };
@@ -50,7 +50,7 @@ export const useFooterLayoutAnimation = function useFooterLayoutAnimation(overla
     obj[1] = overlayLayoutDriver(closure_1_1[1]).interpolate(overlayLayoutDriver.get(), [0, 0.75, 1], [0, 0, 1]);
     return obj;
   };
-  obj = { interpolate: _ReanimatedRexport.interpolate, animationDriver: overlayLayoutDriver };
+  obj = { interpolate: require("../../reanimated/ReanimatedRexport.tsx").interpolate, animationDriver: overlayLayoutDriver };
   fn.__closure = obj;
   fn.__workletHash = 15220711492711;
   fn.__initData = closure_4;

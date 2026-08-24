@@ -1,7 +1,6 @@
 // discord_app/modules/game_profile/hooks/useSteamWebsiteUrl.tsx
 import closure_2 from "../../games/GameStore.tsx";
 import { Distributors } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
@@ -13,7 +12,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {
@@ -25,7 +24,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(9104).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(9141).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }

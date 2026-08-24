@@ -10,7 +10,7 @@ const result = set.fileFinishedImporting("modules/parent_tools/hooks/useSchedule
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "a" };
+    let obj = { subLabel: null, trailing: "r" };
     obj = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxyDefault.fOBIZH);

@@ -5,7 +5,6 @@ import CLOSEDDefault from "ConnectionState.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DispatcherWorkConstants.tsx";
 import set from "../../../_runtime/00002_set.js";
-import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
 require = arg1;
 let closure_5 = new timestampDefault("GatewaySocket");
@@ -210,7 +209,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     const none = "none";
     c4 = false;
     const telemetry2 = self.scheduler.telemetry;
-    telemetry2.measure(_WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
+    telemetry2.measure(require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
     try {
       closure_5 = [];
       if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
@@ -285,11 +284,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(13200).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(v0(13255).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(13203).flush();
+        items(13258).flush();
       });
       if (c4) {
         const Emitter3 = tmp2(589).Emitter;
@@ -297,7 +296,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13200).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(13255).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
@@ -324,7 +323,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
-    tmp2(13203).flush(type, data);
+    tmp2(13258).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -352,7 +351,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler2.dispatch(data, type, preloadedData);
       }
     }
-    if (self.socket.connectionState === tmp2(13202).RESUMING) {
+    if (self.socket.connectionState === tmp2(13257).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);

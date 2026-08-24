@@ -25,7 +25,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return SettingsAgeGroupHeader.default;
+    return SettingsAgeGroupHeader /* SettingsAgeGroupHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

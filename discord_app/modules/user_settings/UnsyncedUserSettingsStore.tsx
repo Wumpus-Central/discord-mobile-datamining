@@ -281,6 +281,16 @@ Object.defineProperty(prototype, "disableApplicationSubscriptionCancellationSurv
   },
   set: undefined
 });
+Object.defineProperty(prototype, "allowVibegrationsPictureInPictureOnNavigateAway", {
+  get: function allowVibegrationsPictureInPictureOnNavigateAway() {
+    let flag = closure_12.allowVibegrationsPictureInPictureOnNavigateAway;
+    if (flag == null) {
+      flag = true;
+    }
+    return flag;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "darkSidebar", {
   get: function darkSidebar() {
     let flag = closure_12.darkSidebar;

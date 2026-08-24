@@ -6,7 +6,7 @@ import { computeMaxX } from "HomeDrawerStore.tsx";
 import closure_7 from "HomeDrawerSubtitleStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { LaunchPadTypes } from "../../launchpad/native/LaunchPadConstants.tsx";
-import { Gesture } from "../../../../_runtime/06377_LegacyBaseButton.js";
+import { Gesture } from "../../../../_runtime/06408_LegacyBaseButton.js";
 import createFakeSharedValue from "../../reanimated/ReanimatedHelperTypes.tsx";
 
 const require = arg1;
@@ -36,8 +36,8 @@ obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, pane
 obj[0] = Gesture.Pan();
 obj[1] = {};
 obj[2] = createFakeSharedValue.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-obj[3] = require("module_0");
-obj[4] = require("module_0");
+obj[3] = require("../../../index.native.tsx");
+obj[4] = require("../../../index.native.tsx");
 obj[5] = {};
 obj[6] = {};
 obj[7] = {};

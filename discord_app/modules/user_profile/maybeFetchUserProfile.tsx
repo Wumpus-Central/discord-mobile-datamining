@@ -2,7 +2,6 @@
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/GuildMemberStore.tsx";
 import closure_5 from "UserProfileStore.tsx";
-import { _fetchProfile } from "../../actions/UserActionCreators.tsx";
 import { hasFetchedColors } from "../avatar/useAvatarColor.tsx";
 import { openCollectiblesShop } from "../collectibles/CollectiblesActionCreators.tsx";
 import { officialApplicationIds } from "../connections/ConnectionsUtils.tsx";
@@ -113,8 +112,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileEffect = userProfile.profileEffect;
     }
     if (null != profileEffect) {
-      const result = _openCollectiblesShop.maybeFetchCollectiblesProduct(profileEffect.skuId);
-      const obj2 = _openCollectiblesShop;
+      const result = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileEffect.skuId);
+      const obj2 = openCollectiblesShop;
     }
     if (null != guildId) {
       let profileFrame;
@@ -125,12 +124,12 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileFrame = userProfile.profileFrame;
     }
     if (null != profileFrame) {
-      const result1 = _openCollectiblesShop.maybeFetchCollectiblesProduct(profileFrame.skuId);
-      const obj3 = _openCollectiblesShop;
+      const result1 = require("../collectibles/CollectiblesActionCreators.tsx").maybeFetchCollectiblesProduct(profileFrame.skuId);
+      const obj3 = openCollectiblesShop;
     }
     if (null != closure_0) {
-      _hasFetchedColors.maybeFetchColors(closure_0);
-      const obj4 = _hasFetchedColors;
+      require("../avatar/useAvatarColor.tsx").maybeFetchColors(closure_0);
+      const obj4 = hasFetchedColors;
     }
     obj = { type: null, withMutualGuilds: null, withMutualFriends: null, withMutualFriendsCount: null, guildId: null, joinRequestId: null, abortSignal: null, connectionsRoleId: null };
     obj[0] = type;
@@ -145,13 +144,13 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       obj = { guildMember: null, channel: null };
       obj[0] = member.getMember(guildId, id);
       obj[1] = channel.getChannel(tmp);
-      const visibleConnectionsRole = _officialApplicationIds.getVisibleConnectionsRole(obj);
+      const visibleConnectionsRole = require("../connections/ConnectionsUtils.tsx").getVisibleConnectionsRole(obj);
       id = undefined;
       if (visibleConnectionsRole != null) {
         id = visibleConnectionsRole.id;
       }
       tmp34 = id;
-      const obj6 = _officialApplicationIds;
+      const obj6 = officialApplicationIds;
     }
     obj[7] = tmp34;
     if (flag3) {
@@ -161,7 +160,7 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       });
       return Promise.resolve();
     } else {
-      const profile = __fetchProfile.fetchProfile(id, obj, obj(8419));
+      const profile = require("../../actions/UserActionCreators.tsx").fetchProfile(id, obj, obj(8458));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

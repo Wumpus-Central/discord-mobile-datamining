@@ -2,7 +2,6 @@
 import set from "../../../../_runtime/00002_set.js";
 import insertUnsortedGuilds from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
@@ -11,15 +10,15 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: _ReanimatedRexport.makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "sans-serif-medium", scrollPosition: "normal", windowSize: "<string:973079306>", setStateShallow: "<string:167772559>", dropStart: "<string:838861251>", dropComplete: "<string:2835350031>" };
-  const obj2 = _ReanimatedRexport;
-  obj[4] = _ReanimatedRexport.makeMutable(obj);
-  const obj3 = _ReanimatedRexport;
-  obj[5] = _ReanimatedRexport.makeMutable(false);
-  let obj4 = _ReanimatedRexport;
-  obj[6] = _ReanimatedRexport.makeMutable({ start: 0, end: 0 });
-  const obj5 = _ReanimatedRexport;
-  obj[7] = _ReanimatedRexport.makeMutable(0);
+  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "ExposureTime", scrollPosition: null, windowSize: "\u{1F1E7}\u{1F1F9}", setStateShallow: 6, dropStart: 1385, dropComplete: "flag_bt" };
+  const obj2 = ReanimatedRexport;
+  obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
+  const obj3 = ReanimatedRexport;
+  obj[5] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(false);
+  let obj4 = ReanimatedRexport;
+  obj[6] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ start: 0, end: 0 });
+  const obj5 = ReanimatedRexport;
+  obj[7] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(0);
   obj[9] = function setStateShallow(obj) {
     const callback = obj;
     const tmp = callback2();
@@ -54,7 +53,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "text" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "applicationId" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -200,7 +199,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj[3] = num;
     obj[4] = dragDropInProgress;
     return obj;
-  }, _isIterable.shallow);
+  }, require("../../../../_runtime/04009_isIterable.js").shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

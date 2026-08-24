@@ -3,7 +3,7 @@ import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { ThemeTypes } from "../../../../../../discord_common/js/shared/Constants.tsx";
-import { registerAsset } from "../../../../../../_runtime/08143_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08182_registerAsset.js";
 import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
 
 const require = arg1;
@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16888);
+      let tmpResult = tmp(16981);
     } else {
-      tmpResult = tmp(16889);
+      tmpResult = tmp(16982);
     }
     return tmpResult;
   },
@@ -29,16 +29,16 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return getChannelSetupSource.getChannelSetupSource(this.theme);
+    return getChannelSetupSource /* getChannelSetupSource */.getChannelSetupSource(this.theme);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16894);
+      let tmpResult = tmp(16987);
     } else {
-      tmpResult = tmp(16895);
+      tmpResult = tmp(16988);
     }
     return tmpResult;
   },

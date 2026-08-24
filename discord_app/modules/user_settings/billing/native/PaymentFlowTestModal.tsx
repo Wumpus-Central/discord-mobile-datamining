@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTestModal.tsx
 import TestViewDefault from "PaymentFlowTest.android.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/09970_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo(function PaymentFlowTestModal() {
-  let obj = _NavigationStack;
+  let obj = NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {

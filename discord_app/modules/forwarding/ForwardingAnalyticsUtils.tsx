@@ -34,9 +34,9 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     }
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
     const obj5 = collectGuildAnalyticsMetadata;
-    const merged1 = Object.assign(tmp13(5042).collectChannelAnalyticsMetadata(channel));
+    const merged1 = Object.assign(tmp13(5047).collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(5042);
+    const tmp13Result = tmp13(5047);
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {

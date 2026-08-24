@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/GuildDirectoryActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../../utils/TrackedHTTPUtils.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "GuildDirectorySearchStore.tsx";
 import { DirectoryEntryCategories } from "GuildDirectoryConstants.tsx";
@@ -29,7 +29,7 @@ function _addDirectoryGuildEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ function _addDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback2(5227);
+              let obj7 = callback2(5232);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
               obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
               const obj3 = { description: null, primary_category_id: null };
@@ -103,7 +103,7 @@ function _addDirectoryGuildEntry() {
             obj8[2] = body.body;
             obj.dispatch(obj8);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -144,7 +144,7 @@ function _updateDirectoryEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -210,7 +210,7 @@ function _updateDirectoryEntry() {
             obj6[2] = body.body;
             obj.dispatch(obj6);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -388,7 +388,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -495,7 +495,7 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = _modDef5227;
+  let obj = _modDef5232;
   obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;

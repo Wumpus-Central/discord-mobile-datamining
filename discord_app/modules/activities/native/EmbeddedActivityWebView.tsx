@@ -157,7 +157,7 @@ class BaseActivityWebView {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -407,7 +407,7 @@ class BaseActivityWebView {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -457,7 +457,7 @@ class BaseActivityWebView {
                     closure_1_30(items.map((arg0) => "^" + content_security_policy(table[26])(arg0).replace(/\\\*/g, ".*")));
                     closure_1_28(true);
                     c4 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   c4 = tmp;
@@ -598,7 +598,7 @@ class BaseActivityWebView {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -766,12 +766,12 @@ class BaseActivityWebView {
               if (null != left.override) {
                 _Math2 = Math;
                 left = left.override;
-                bound = require("module_0");
+                bound = require("../../../index.native.tsx");
               } else {
                 bound = num;
                 if (null != left.offset) {
                   _Math = Math;
-                  bound = require("module_0");
+                  bound = require("../../../index.native.tsx");
                 }
               }
               tmp47 = bound;
@@ -800,12 +800,12 @@ class BaseActivityWebView {
               if (null != right.override) {
                 _Math4 = Math;
                 right = right.override;
-                bound1 = require("module_0");
+                bound1 = require("../../../index.native.tsx");
               } else {
                 bound1 = num5;
                 if (null != right.offset) {
                   _Math3 = Math;
-                  bound1 = require("module_0");
+                  bound1 = require("../../../index.native.tsx");
                 }
               }
               tmp50 = bound1;
@@ -833,12 +833,12 @@ class BaseActivityWebView {
               if (null != top.override) {
                 _Math6 = Math;
                 top = top.override;
-                bound2 = require("module_0");
+                bound2 = require("../../../index.native.tsx");
               } else {
                 bound2 = num9;
                 if (null != top.offset) {
                   _Math5 = Math;
-                  bound2 = require("module_0");
+                  bound2 = require("../../../index.native.tsx");
                 }
               }
               tmp53 = bound2;
@@ -866,12 +866,12 @@ class BaseActivityWebView {
               if (null != bottom.override) {
                 _Math8 = Math;
                 bottom = bottom.override;
-                bound3 = require("module_0");
+                bound3 = require("../../../index.native.tsx");
               } else {
                 bound3 = num13;
                 if (null != bottom.offset) {
                   _Math7 = Math;
-                  bound3 = require("module_0");
+                  bound3 = require("../../../index.native.tsx");
                 }
               }
               tmp56 = bound3;
@@ -907,7 +907,7 @@ class BaseActivityWebView {
             str8 = "/";
             obj6[1] = "/" + first1 + "/";
             num17 = 0;
-            obj6[2] = require("module_0");
+            obj6[2] = require("../../../index.native.tsx");
             items12 = [];
             items12[0] = obj6;
             obj5[2] = items12;

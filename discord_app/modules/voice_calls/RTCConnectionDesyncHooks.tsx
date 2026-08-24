@@ -19,16 +19,16 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
   const _require = id;
   dependencyMap = voiceStates;
   let items = [closure_9, closure_10];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let desyncedVoiceStates = null;
     if (closure_0 === closure_1_10.getChannelId()) {
       desyncedVoiceStates = closure_1_9.getDesyncedVoiceStates();
     }
     return desyncedVoiceStates;
   });
-  let obj = _initialize;
+  let obj = initialize;
   const items1 = [stateFromStoresArray];
-  const React = _initialize.useStateFromStoresArray(items1, () => {
+  const React = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     if (null == closure_0) {
       let items = [];
     } else {
@@ -37,15 +37,15 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
     }
     return items;
   });
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const items2 = [closure_11];
-  stateFromStoresArray = _initialize.useStateFromStoresArray(items2, () => {
+  stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
     const mapped = closure_3.map((arg0) => user.getUser(arg0));
     return mapped.filter(id(voiceStates[13]).isNotNullish);
   });
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const items3 = [closure_7];
-  const stateFromStores1 = _initialize.useStateFromStores(items3, () => closure_1_7.getBasicChannel(closure_0));
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => closure_1_7.getBasicChannel(closure_0));
   const items4 = [stateFromStoresArray, ];
   let guild_id;
   if (stateFromStores1 != null) {
@@ -105,7 +105,7 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
 export const useDesyncedChannelParticipants = function useDesyncedChannelParticipants(arg0) {
   const _require = arg0;
   const items = [closure_9, closure_10];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let desyncedParticipants = null;
     if (closure_0 === closure_1_10.getChannelId()) {
       desyncedParticipants = closure_1_9.getDesyncedParticipants();
@@ -145,18 +145,18 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
   const _require = arg0;
   dependencyMap = id;
   const items = [stateFromStores2];
-  const stateFromStores = _initialize.useStateFromStores(items, () => stateFromStores2.getId() === closure_1);
-  const obj = _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateFromStores2.getId() === closure_1);
+  const obj = initialize;
   const items1 = [closure_10];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => channelId.getChannelId());
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => channelId.getChannelId());
   React = React.useRef(null);
-  const obj2 = _initialize;
+  const obj2 = initialize;
   [tmp4, closure_4] = stateFromStores1(React.useState(false), 2);
   const tmp3 = stateFromStores1(React.useState(false), 2);
   [tmp6, closure_5] = stateFromStores1(React.useState(false), 2);
   const tmp5 = stateFromStores1(React.useState(false), 2);
   const items2 = [closure_10, closure_12];
-  stateFromStores2 = _initialize.useStateFromStores(items2, () => {
+  stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let isUserConnectedResult = null != closure_1;
     if (isUserConnectedResult) {
       isUserConnectedResult = null != closure_0;
@@ -172,9 +172,9 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
     }
     return isUserConnectedResult;
   });
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const items3 = [closure_10, closure_12];
-  const stateFromStores3 = _initialize.useStateFromStores(items3, () => {
+  const stateFromStores3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
     let tmp2 = null != closure_1;
     if (tmp2) {
       tmp2 = null != closure_0;

@@ -5,7 +5,7 @@ import ME from "../../../Constants.tsx";
 import set3 from "../../emojis/EmojiConstants.tsx";
 import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
-import registerAssetDefault from "../../../../_runtime/06684_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/06720_registerAsset.js";
 import addRule from "ChatInputParser.tsx";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import closure_5 from "../../emojis/EmojiStore.tsx";
@@ -13,8 +13,6 @@ import closure_6 from "../../../stores/GuildRoleStore.tsx";
 import closure_7 from "../../../stores/PermissionStore.tsx";
 import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import { AutocompleteFormDivider } from "../../autocompleter/native/AutocompleteUtils.tsx";
-import { apexExperiment } from "../../game_mentions/GameMentionsMobileExperiment.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 import { getUsers } from "ApplicationCommandOptionValueParser.tsx";
 
 function findGameMentionTokens(text, name, items) {
@@ -297,7 +295,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = _getUsers;
+  let obj = getUsers;
   const users = obj.getUsers(channel);
   _require = (arg0) => arg0;
   let match = regex3.exec(arg1);
@@ -430,10 +428,10 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
   return items1;
 };
 export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
-  const GameMentionsMobileExperiment = _apexExperiment.GameMentionsMobileExperiment;
+  const GameMentionsMobileExperiment = require("../../game_mentions/GameMentionsMobileExperiment.tsx").GameMentionsMobileExperiment;
   const config = GameMentionsMobileExperiment.getConfig({ location: "game mention input highlight" });
   if (config.enabled) {
-    const IncludeGameMentionsInAutocomplete = _explicitContentFromProto.IncludeGameMentionsInAutocomplete;
+    const IncludeGameMentionsInAutocomplete = require("../../user_settings/UserSettings.tsx").IncludeGameMentionsInAutocomplete;
     if (IncludeGameMentionsInAutocomplete.getSetting()) {
       if (!tmp4) {
         arr = closure_9;
@@ -444,7 +442,7 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
           do {
             let tmp7 = _require;
             let tmp8 = dependencyMap;
-            let obj = _AutocompleteFormDivider;
+            let obj = AutocompleteFormDivider;
             let tmp9 = index;
             if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
               arr = items.push(index);
@@ -488,7 +486,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop4Result;
   const _require = arg1;
   let items = [];
-  dependencyMap = _getUsers.getChannels(channel);
+  dependencyMap = require("ApplicationCommandOptionValueParser.tsx").getChannels(channel);
   c3 = 0;
   function _loop4() {
     let arr = lib;

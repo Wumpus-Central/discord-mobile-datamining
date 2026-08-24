@@ -21,34 +21,34 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
   const stringResult = intl.string(messagesProxyDefault["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;
-    let text = intl6.string(tmp6(2789).u4QmWl);
+    let text = intl6.string(tmp6(2790).u4QmWl);
     let isDisabled = true;
   } else if (id.author.id === id) {
     const intl5 = tmp(1236).intl;
-    text = intl5.string(tmp6(2789)["8HU1M2"]);
+    text = intl5.string(tmp6(2790)["8HU1M2"]);
     isDisabled = true;
   } else {
     isDisabled = false;
     text = stringResult;
     if (!tmp3[0]) {
-      if (tmp(10929).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
+      if (tmp(10968).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
         const intl4 = tmp(1236).intl;
-        text = intl4.string(tmp6(2789).P0wwmM);
+        text = intl4.string(tmp6(2790).P0wwmM);
         isDisabled = true;
-      } else if (tmp(10929).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
+      } else if (tmp(10968).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
         const intl3 = tmp(1236).intl;
-        text = intl3.string(tmp6(2789)["43zohO"]);
+        text = intl3.string(tmp6(2790)["43zohO"]);
         isDisabled = true;
-      } else if (tmp(10929).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
+      } else if (tmp(10968).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
         const intl2 = tmp(1236).intl;
-        text = intl2.string(tmp6(2789).qRXats);
+        text = intl2.string(tmp6(2790).qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
-        if (tmp(10929).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
+        if (tmp(10968).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
           const intl7 = tmp(1236).intl;
-          text = intl7.string(tmp6(2789)["fac+eE"]);
+          text = intl7.string(tmp6(2790)["fac+eE"]);
           isDisabled = true;
         }
       }

@@ -48,7 +48,7 @@ function RestrictedUser(guildId) {
     obj2[0] = items3;
     const obj3 = { style: null, source: null, color: null };
     obj3[0] = tmp.icon;
-    obj3[1] = user(8122);
+    obj3[1] = user(8161);
     obj3[2] = user(712).unsafe_rawColors.WHITE;
     obj2[1] = tmp11(tmp2(1297).Icon, obj3);
     speaker = tmp11(tmp10, obj2);
@@ -65,7 +65,7 @@ function RestrictedUser(guildId) {
     const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
     const items6 = ["#", participant.user.discriminator];
     obj6[2] = items6;
-    tmp9Result = tmp9(tmp2(4734).Text, obj6);
+    tmp9Result = tmp9(tmp2(4739).Text, obj6);
   }
   items5[1] = tmp9Result;
   obj4[1] = items5;
@@ -179,9 +179,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = callback3();
   const tmp2 = items1(React.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8123);
+  let obj = channel(8162);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  obj1 = channel(8123);
+  obj1 = channel(8162);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
@@ -192,22 +192,22 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj[0] = intl.string(channel(1236).t.mbD50D);
   obj[1] = function onPress() {
     onAccept(channel);
-    onAccept(4342).hideActionSheet(closure_1_8);
+    onAccept(4346).hideActionSheet(closure_1_8);
   };
-  const items = [callback(channel(4745).Button, obj), ];
+  const items = [callback(channel(4750).Button, obj), ];
   obj1 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1236).intl;
   obj1[1] = intl2.string(channel(1236).t.CZGqeT);
   obj1[2] = function handleDismiss() {
-    onAccept(4342).hideActionSheet(closure_8);
+    onAccept(4346).hideActionSheet(closure_8);
   };
-  items[1] = callback(channel(4745).Button, obj1);
+  items[1] = callback(channel(4750).Button, obj1);
   obj[3] = items;
   items1 = [];
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
-  const obj2 = { scrollable: true, header: callback(StageBlockedUsersActionSheetHeader, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: callback2(channel(6803).SafeAreaPaddingView, obj), children: null };
+  const obj2 = { scrollable: true, header: callback(StageBlockedUsersActionSheetHeader, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: callback2(channel(6840).SafeAreaPaddingView, obj), children: null };
   const obj3 = { inActionSheet: true, contentContainerStyle: tmp.container, accessibilityLabel: null, sections: null, renderItem: null, itemSize: null };
-  const tmp4 = callback2(channel(6803).SafeAreaPaddingView, obj);
+  const tmp4 = callback2(channel(6840).SafeAreaPaddingView, obj);
   const intl3 = channel(1236).intl;
   obj3[2] = intl3.string(channel(1236).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -218,7 +218,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj3[5] = function itemSize() {
     return 48;
   };
-  const items3 = [callback(onAccept(8124), obj3), callback(View, { style: { height: tmp2[0] } })];
+  const items3 = [callback(onAccept(8163), obj3), callback(View, { style: { height: tmp2[0] } })];
   obj2[3] = items3;
-  return callback2(channel(6950).BottomSheet, obj2);
+  return callback2(channel(6988).BottomSheet, obj2);
 };

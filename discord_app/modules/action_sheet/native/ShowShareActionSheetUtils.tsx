@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
-import decideFileExtension from "../../media/FileExtensionUtils.tsx";
+import getExtensionFromContentType from "../../media/FileExtensionUtils.tsx";
 import SHARE_PREPARING_MODAL_KEY from "../../share/native/SharePreparingModalConstants.tsx";
 import apexExperiment from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
 
@@ -33,7 +33,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(6924);
+            tmpResult = tmp(6962);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj[0] = videoURI;
@@ -48,7 +48,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj[1] = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(6924).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(6962).decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj2[0] = source.shareURI;
             let tmp6;
@@ -81,5 +81,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_1_0, closure_1_1) {
-  return decideFileExtension.decideFileExtension(closure_1_0, closure_1_1, true);
+  return getExtensionFromContentType.decideFileExtension(closure_1_0, closure_1_1, true);
 };

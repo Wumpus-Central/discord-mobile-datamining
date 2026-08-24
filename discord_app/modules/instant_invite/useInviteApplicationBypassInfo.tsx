@@ -1,7 +1,6 @@
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
 import closure_2 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ GuildFeatures: c3, Permissions: c4 } = ME);
@@ -12,7 +11,7 @@ export const useInviteApplicationBypassInfo = function useInviteApplicationBypas
   const items = [closure_2];
   const items1 = [guild];
   let hasItem;
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0), items1);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.can(closure_1_4.KICK_MEMBERS, closure_0), items1);
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);

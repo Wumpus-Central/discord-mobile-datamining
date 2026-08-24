@@ -84,13 +84,13 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     obj[3] = emoji;
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4196).UNSAFE_markDismissibleContentAsDismissed(tmp4(1377).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
-    tmpResult = tmp(4342);
+    const result = tmp4(4200).UNSAFE_markDismissibleContentAsDismissed(tmp4(1377).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    tmpResult = tmp(4346);
     obj = { channelId: null, messageId: null, emoji: null };
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    tmpResult.openLazy(tmp4(2007)(7570, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
-    const tmp4Result = tmp4(4196);
+    tmpResult.openLazy(tmp4(2008)(7608, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = tmp4(4200);
   }
 };

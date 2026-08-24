@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   const callback = importAllResult.useCallback(() => {
     const result = guildId(closure_1_2[7]).openAutomodProfileQuarantineAlert(guildId);
   }, items2);
-  const automodReason = guildId(4027).getAutomodReason(stateFromStores);
+  const automodReason = guildId(4030).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl2 = tmp(1236).intl;
     let stringResult = intl2.string(tmp(1236).t.Viksoo);
@@ -43,9 +43,9 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
     stringResult1 = intl3.string(tmp(1236).t["8HW7r9"]);
   }
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
-  const obj2 = guildId(4027);
+  const obj2 = guildId(4030);
   tmp6 = GuildMemberFlags;
-  obj[3] = jsx(guildId(11633).ChatXIcon, {});
+  obj[3] = jsx(guildId(11682).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

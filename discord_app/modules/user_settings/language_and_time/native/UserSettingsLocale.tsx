@@ -8,9 +8,6 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function handleLanguageChange() {
@@ -41,7 +38,7 @@ function _handleLanguageChange() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -76,7 +73,7 @@ function _handleLanguageChange() {
             obj = callback(table[8]);
             obj.updateLocale(closure_0);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c4 = tmp;
@@ -103,13 +100,13 @@ let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function UserSettingsLocale() {
   const tmp = callback2();
   const _require = tmp;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_7];
   obj = { contentContainerStyle: tmp.content, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   obj = { bottom: true, children: null };
   obj1 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
-  const availableLocales = _getSystemLocale.getAvailableLocales();
+  const availableLocales = require("../../../../intl/index.native.tsx").getAvailableLocales();
   obj1[3] = availableLocales.map((localizedName) => {
     ({ name, value } = localizedName);
     let obj = { value, label: name, subLabel: null, icon: null };
@@ -119,8 +116,8 @@ const memoResult = importAllResult.memo(function UserSettingsLocale() {
     obj[3] = closure_1_8(closure_1_4, obj);
     return closure_1_8(lib(closure_1_2[13]).TableRadioRow, obj, name);
   });
-  obj[1] = jsx(_context.TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
-  obj[1] = jsx(_SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: null });
+  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
+  obj[1] = jsx(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, { bottom: true, children: null });
   return <closure_5 bottom>{null}</closure_5>;
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");

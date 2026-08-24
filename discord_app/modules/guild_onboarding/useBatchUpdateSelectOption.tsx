@@ -11,7 +11,7 @@ let result = require("set").fileFinishedImporting("modules/guild_onboarding/useB
 
 export default function useBatchUpdateSelectOption(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_5];
   let items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {

@@ -5,7 +5,6 @@ import _createSound from "native/SoundUtils.tsx";
 import closure_3 from "../soundpacks/SoundpackStore.tsx";
 import closure_4 from "../../stores/StreamerModeStore.tsx";
 import { SoundOutputChannel } from "Constants.tsx";
-import { _createSound } from "native/SoundUtils.tsx";
 
 require = arg1;
 let closure_6 = new timestampDefault("SoundUtils");
@@ -93,7 +92,7 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new __createSound.MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new require("native/SoundUtils.tsx").MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
     if (null != arg2) {
       mobileAudioSound.playWithListener().then((arg0) => {
         if (arg0) {

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsLevelCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
 import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.tsx";
@@ -178,10 +178,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   ({ guildId, powerup, nextPowerup, index, isScrollingRef } = arg0);
   importDefault = undefined;
   const tmp = callback();
-  let obj = isScrollingRef(8307);
+  let obj = isScrollingRef(8347);
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsLevelCard");
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
-  obj1 = isScrollingRef(11688);
+  obj1 = isScrollingRef(11737);
   const calculatePowerupCardStatus = obj1.useCalculatePowerupCardStatus(powerup, tmp6, false);
   const tmp9 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
   importDefault = tmp9;
@@ -220,10 +220,10 @@ export default function GuildPowerupsLevelCard(arg0) {
   }
   obj2[1] = str2;
   obj2[2] = powerup.title;
-  const items2 = [closure_10(isScrollingRef(4734).Text, obj2), closure_10(GuildPowerupLevelBody, { isActive: tmp6.type !== constants2.INACTIVE, index }), ];
+  const items2 = [closure_10(isScrollingRef(4739).Text, obj2), closure_10(GuildPowerupLevelBody, { isActive: tmp6.type !== constants2.INACTIVE, index }), ];
   const tmp19 = GuildLevelPowerupHeader;
   const tmp5Result = importDefaultResult1Default;
-  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(11693).GuildPowerupsCardFooter, obj4) });
+  items2[2] = closure_10(View, { style: tmp.footerContainer, children: closure_10(isScrollingRef(11742).GuildPowerupsCardFooter, obj4) });
   obj1[1] = items2;
   items1[1] = closure_11(View, obj1);
   obj[4] = items1;

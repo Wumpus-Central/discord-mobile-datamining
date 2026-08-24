@@ -230,8 +230,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
 };
 export const createAuditLogFilterActionData = function createAuditLogFilterActionData(closure_4) {
   const _require = closure_4;
-  const obj = _getPermissionChanges;
-  const mapped = _getPermissionChanges.ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+  const obj = getPermissionChanges;
+  const mapped = require("../AuditLogUtils.tsx").ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

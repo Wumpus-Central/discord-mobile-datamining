@@ -21,19 +21,19 @@ export default function useGuildProfileCTA(id) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  obj = _initialize;
+  obj = initialize;
   const items = [features];
   const stateFromStores = obj.useStateFromStores(items, () => features.getId());
   const items1 = [stateFromStores1];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => stateFromStores1.getGuild(id));
-  let obj2 = _initialize;
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => stateFromStores1.getGuild(id));
+  let obj2 = initialize;
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
-  const obj3 = _initialize;
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
+  const obj3 = initialize;
   const items4 = [stateFromStores];
   const items5 = [id, stateFromStores];
-  stateFromStores3 = _initialize.useStateFromStores(items4, () => {
+  stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items4, () => {
     let member = null;
     if (null != id) {
       member = stateFromStores.getMember(tmp, stateFromStores);
@@ -44,10 +44,10 @@ export default function useGuildProfileCTA(id) {
     }
     return null != joinedAt;
   }, items5);
-  const obj4 = _initialize;
+  const obj4 = initialize;
   const items6 = [stateFromStores2];
   const items7 = [id, arg2];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items6, () => {
+  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items6, () => {
     let inviteKeyForGuildId = dependencyMap;
     if (dependencyMap == null) {
       inviteKeyForGuildId = stateFromStores2.getInviteKeyForGuildId(id);
@@ -65,7 +65,7 @@ export default function useGuildProfileCTA(id) {
           if (num == null) {
             num = 0;
           }
-          obj[1] = id(1403).hasFlag(num, id(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
+          obj[1] = id(1403).hasFlag(num, id(8095).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
           const obj2 = id(1403);
           const tmp6 = id;
@@ -219,13 +219,13 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, set(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = obj.hasFlag(num, set(8095).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
         const tmp13 = set;
       }
     }
   }
-  const pendingFolderGuildIds = set(9535).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(9572).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -287,7 +287,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(9535);
+  const obj2 = set(9572);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

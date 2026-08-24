@@ -44,7 +44,7 @@ export const useAvatarsWithGuilds = function useAvatarsWithGuilds(arg0) {
 export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndUserPendingNameplate(user, guildId) {
   const _require = user;
   dependencyMap = guildId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
@@ -54,7 +54,7 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
     return member;
   });
   const items1 = [closure_3];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items1, () => ({ pendingNameplate: closure_1_3.getPendingChanges(closure_1).pendingNameplate, pendingErrors: closure_1_3.getErrors(closure_1).nameplate }));
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => ({ pendingNameplate: closure_1_3.getPendingChanges(closure_1).pendingNameplate, pendingErrors: closure_1_3.getErrors(closure_1).nameplate }));
   obj = { userNameplate: user.nameplate, guildNameplate: null, pendingNameplate: null, pendingErrors: null };
   let nameplate;
   ({ pendingNameplate, pendingErrors } = stateFromStoresObject);
@@ -72,7 +72,7 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
 export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId) {
   const _require = stateFromStores;
   dependencyMap = guildId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
@@ -85,7 +85,7 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
     return member;
   });
   const items1 = [closure_3];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: closure_1_3.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: closure_1_3.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: closure_1_3.getErrors(closure_1).displayNameStyles }));
+  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: closure_1_3.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: closure_1_3.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: closure_1_3.getErrors(closure_1).displayNameStyles }));
   let displayNameStyles;
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles, pendingErrors } = stateFromStoresObject);
   if (stateFromStores != null) {
@@ -164,17 +164,17 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
 export const useAvatarDecorationSettings = function useAvatarDecorationSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStoresObject(items, () => ({ pendingAvatarDecoration: closure_1_3.getPendingChanges(closure_0).pendingAvatarDecoration, errors: closure_1_3.getErrors(closure_0).avatarDecoration }));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingAvatarDecoration: closure_1_3.getPendingChanges(closure_0).pendingAvatarDecoration, errors: closure_1_3.getErrors(closure_0).avatarDecoration }));
 };
 export const useProfileEffectSettings = function useProfileEffectSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStoresObject(items, () => ({ pendingProfileEffect: closure_1_3.getPendingChanges(closure_0).pendingProfileEffect, errors: closure_1_3.getErrors(closure_0).profileEffect }));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingProfileEffect: closure_1_3.getPendingChanges(closure_0).pendingProfileEffect, errors: closure_1_3.getErrors(closure_0).profileEffect }));
 };
 export const useProfileFrameSettings = function useProfileFrameSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStoresObject(items, () => ({ pendingProfileFrame: closure_1_3.getPendingChanges(closure_0).pendingProfileFrame, errors: closure_1_3.getErrors(closure_0).profileFrame }));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingProfileFrame: closure_1_3.getPendingChanges(closure_0).pendingProfileFrame, errors: closure_1_3.getErrors(closure_0).profileFrame }));
 };
 export const getProfilePreviewValue = function getProfilePreviewValue(arg0) {
   ({ userValue, guildValue, pendingValue, guildId } = arg0);

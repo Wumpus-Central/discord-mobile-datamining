@@ -3,20 +3,19 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useOpenGameProfileModalDefault from "../../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import VoiceBadges from "../shared/FormComponents.tsx";
 import useIsVoiceChannelGamesExperimentEnabledDefault from "../../experiments/VoiceChannelGamesExperiment.tsx";
-import _modDef9744 from "../../../games/native/GameActivityIcon.tsx";
+import _modDef9783 from "../../../games/native/GameActivityIcon.tsx";
 import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import { importDefaultResult1 } from "../../../games/hooks/useGame.tsx";
 
 require = arg1;
 function GameRow(gameId) {
   gameId = gameId.gameId;
   let _require;
-  let obj = _importDefaultResult1;
+  let obj = importDefaultResult1;
   const data = obj.useGame(gameId).data;
-  obj = { gameId, source: _GameProfileEmbedAction.GameProfileSources.VoiceChannelGames };
+  obj = { gameId, source: require("../../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.VoiceChannelGames };
   const tmp4Result = useOpenGameProfileModalDefault(obj);
   _require = tmp4Result;
   if (null == data) {
@@ -30,7 +29,7 @@ function GameRow(gameId) {
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(_modDef9744, { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(_modDef9783, { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;
@@ -48,7 +47,7 @@ function GameRow(gameId) {
       obj3[0] = name;
       obj2[5] = intl2.formatToPlainString(tmp(1236).t["9sZWVp"], obj3);
     }
-    return jsx(tmp(6291).TableRow, obj2);
+    return jsx(tmp(6322).TableRow, obj2);
   }
   const tmp3 = importDefault;
   const tmp4 = useOpenGameProfileModalDefault;

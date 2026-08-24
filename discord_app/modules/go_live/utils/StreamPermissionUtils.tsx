@@ -10,7 +10,6 @@ import closure_6 from "../../../stores/GuildStore.tsx";
 import closure_7 from "../../../stores/PermissionStore.tsx";
 import closure_8 from "../../../stores/VoiceStateStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function canStreamInChannel(channel, closure_1_2, closure_1_3, arg3) {
@@ -160,7 +159,7 @@ export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_8, closure_6, closure_7, closure_3];
-  return _initialize.useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
 };
 export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_1_2, closure_1_3) {
   const items = [];

@@ -313,8 +313,8 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const tmp2 = self(38);
   const tmp3 = null == this._currentDispatchActionType;
   const tmp8 = _require;
-  _mark.mark(type.type);
-  const obj = _mark;
+  require("../../shared/utils/profiling.tsx").mark(type.type);
+  const obj = mark;
   addAll.add(type.type);
   const actionLogger = this.actionLogger;
   const logResult1 = actionLogger.log(type, (arg0) => {

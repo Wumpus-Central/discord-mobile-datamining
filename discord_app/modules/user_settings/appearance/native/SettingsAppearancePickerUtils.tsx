@@ -253,7 +253,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   let tmp = importDefault;
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(4097).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(4100).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return React.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

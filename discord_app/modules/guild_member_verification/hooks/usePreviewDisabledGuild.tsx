@@ -10,11 +10,11 @@ let result = require("set").fileFinishedImporting("modules/guild_member_verifica
 export default function usePreviewDisabledGuild(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
-  let obj = _initialize;
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
+  let obj = initialize;
   const tmp = _require;
   const items1 = [closure_5];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     const value = closure_1_5.get(closure_0);
     let guild;
     if (value != null) {

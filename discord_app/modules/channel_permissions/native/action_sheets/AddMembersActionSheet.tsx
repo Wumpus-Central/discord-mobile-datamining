@@ -206,7 +206,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = closure_8;
     obj4 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_8862");
+    tmp8Result = require("../../../../design/components/TagListInput/native/TagListInput.native.tsx");
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -397,17 +397,17 @@ export default function AddMembersActionSheet(channel) {
         if (tmp) {
           if (row.rowType === closure_2_14.ROLE) {
             closure_2 = closure_2 + 1;
-            items.push(closure_2_0(4979).permissionOverwriteForRole(row.id, items.type));
-            const obj = closure_2_0(4979);
+            items.push(closure_2_0(4984).permissionOverwriteForRole(row.id, items.type));
+            const obj = closure_2_0(4984);
           } else if (row.rowType === tmp2.MEMBER) {
             closure_1 = closure_1 + 1;
-            items.push(closure_2_0(4979).permissionOverwriteForUser(row.id, items.type));
-            const obj2 = closure_2_0(4979);
+            items.push(closure_2_0(4984).permissionOverwriteForUser(row.id, items.type));
+            const obj2 = closure_2_0(4984);
           }
         }
       });
       dependencyMap = 1;
-      yield closure_1_0(8851).savePermissionUpdates(closure_1_0.id, items);
+      yield closure_1_0(8888).savePermissionUpdates(closure_1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         c5 = 3;
@@ -415,9 +415,9 @@ export default function AddMembersActionSheet(channel) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        let obj = closure_1_0(4093);
+        let obj = closure_1_0(4096);
         const result = obj.memberOrRoleAddedToast(c2, c1);
-        obj1 = closure_1_1(4342);
+        obj1 = closure_1_1(4346);
         obj1.hideActionSheet();
         dependencyMap = 0;
       }
@@ -444,7 +444,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return closure_1_12.getGuild(guildId);
   });
-  let str = first(4984)(channel, true);
+  let str = first(4989)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -469,7 +469,7 @@ export default function AddMembersActionSheet(channel) {
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(6949).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(6987).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -480,7 +480,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(6950).BottomSheet, obj1);
+      return tmp11(tmp4(6988).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1236).intl;

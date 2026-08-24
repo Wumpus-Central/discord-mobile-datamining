@@ -37,7 +37,7 @@ class RoleItem {
       _HermesInternal = HermesInternal;
       str = "...";
       str2 = "";
-      name = "" + require("module_0") + "...";
+      name = "" + require("../../../index.native.tsx") + "...";
     }
     closure_2 = name;
     if (colorString == null) {
@@ -178,8 +178,8 @@ export default function UserProfileRolesCard(userId) {
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(7185), obj);
-    const tmp7 = guildId(7185);
+    tmp4 = callback(guildId(7223), obj);
+    const tmp7 = guildId(7223);
   }
   return tmp4;
 };

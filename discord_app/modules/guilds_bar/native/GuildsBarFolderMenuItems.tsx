@@ -2,18 +2,15 @@
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../../stores/SortedGuildStore.tsx";
 import { AnalyticsSections } from "../../../Constants.tsx";
-import { EnvelopeIcon } from "../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
-import { SettingsIcon } from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
 export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
   const _require = guildFolderMenuItems;
-  let obj = { IconComponent: _EnvelopeIcon.EnvelopeIcon, label: null, action: null };
-  const intl = _getSystemLocale.intl;
-  obj[1] = intl.string(_getSystemLocale.t.e6RscS);
+  let obj = { IconComponent: require("../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon, label: null, action: null };
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl.string(require("../../../intl/index.native.tsx").t.e6RscS);
   obj[2] = function action() {
     return closure_1_2(function*() {
       if (guildFolderById === 2) {
@@ -27,7 +24,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,9 +71,9 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
     })();
   };
   const items = [obj, ];
-  obj = { IconComponent: _SettingsIcon.SettingsIcon, label: null, action: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t.Dx7im5);
+  obj = { IconComponent: require("../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../../intl/index.native.tsx").t.Dx7im5);
   obj[2] = function action() {
     return closure_1_2(function*() {
       if (c2 === 2) {
@@ -90,7 +87,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -123,7 +120,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           } else {
             const result = arg1.showGuildsBarFolderModal(closure_0);
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

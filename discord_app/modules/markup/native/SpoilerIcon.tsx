@@ -1,6 +1,6 @@
 // discord_app/modules/markup/native/SpoilerIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/06607_inlineStyles.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

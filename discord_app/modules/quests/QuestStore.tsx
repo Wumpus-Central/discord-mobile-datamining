@@ -14,7 +14,6 @@ import closure_33 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_34 from "ConsoleQuestUIStore.tsx";
 import closure_35 from "VideoQuestUIStore.tsx";
 import { QuestsExperimentLocations } from "QuestConstants.tsx";
-import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 
 require = arg1;
 function initializeState() {
@@ -148,7 +147,7 @@ function _runExpirationCheck() {
   if (_require) {
     questStore.emitChange();
   }
-  let result = _getQuestDeliveryDataForPlacement.findNextUpcomingExpirationEpochMs(Array.from(store.values()));
+  let result = require("utils/QuestDataUtils.tsx").findNextUpcomingExpirationEpochMs(Array.from(store.values()));
   if (null != result) {
     const _Math = Math;
     const _Date = Date;
@@ -432,13 +431,13 @@ const questStore = new QuestStore(dispatcherDefault, {
       let tmp13 = mapped;
       let tmp14 = dependencyMap;
       let tmp15 = dependencyMap;
-      let obj5 = mapped(7451);
+      let obj5 = mapped(7489);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(6719).QuestContent.QUEST_BAR)) {
+      if (targetedContent.includes(mapped(6756).QuestContent.QUEST_BAR)) {
         let tmp17 = tmp12;
         let tmp18 = tmp14;
-        let tmp13Result = tmp13(7459);
+        let tmp13Result = tmp13(7497);
         obj1 = { location: null };
         let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
@@ -472,7 +471,7 @@ const questStore = new QuestStore(dispatcherDefault, {
         let tmp32 = mapped;
         let tmp33 = dependencyMap;
         let tmp34 = dependencyMap;
-        let obj10 = mapped(7451);
+        let obj10 = mapped(7489);
         let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
@@ -650,7 +649,7 @@ const questStore = new QuestStore(dispatcherDefault, {
           let tmp24 = map3;
           let tmp25 = tmp36;
           let tmp26 = tmp38;
-          let tmp37Result = tmp37(7451);
+          let tmp37Result = tmp37(7489);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }

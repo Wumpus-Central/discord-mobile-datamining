@@ -1,9 +1,7 @@
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -25,7 +23,7 @@ export default function SettingsAgeGroupResetAlert() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -45,12 +43,12 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(6702).resetAgeVerification();
+              obj1[0] = closure_1_0(6739).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            let obj2 = closure_1_0(4093);
+            let obj2 = closure_1_0(4096);
             const intl = closure_1_0(1236).intl;
             obj2.presentError(intl.string(closure_1_0(1236).t.fEptJP));
             const _Error = Error;
@@ -66,12 +64,12 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = closure_1_0(4657);
+            obj = closure_1_0(4663);
             obj.dismissAlert(closure_1_6);
             navigation.goBack();
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp29) {
           if (tmp4 === dependencyMap) {
@@ -92,13 +90,13 @@ export default function SettingsAgeGroupResetAlert() {
     }
     return applyArgumentsResult;
   }
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useNavigation();
   obj = { title: null, content: null, actions: null };
-  let intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_handleConfirm(2853)["bD//cU"]);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_handleConfirm(2853).FbTAmI);
+  let intl = require("../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(_handleConfirm(2854)["bD//cU"]);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(_handleConfirm(2854).FbTAmI);
   obj = { children: null };
   obj1 = {
     variant: "destructive",
@@ -114,15 +112,15 @@ export default function SettingsAgeGroupResetAlert() {
     },
     text: null
   };
-  const intl3 = _getSystemLocale.intl;
-  obj1[2] = intl3.string(_handleConfirm(2853).V822Mp);
-  const items = [callback(_getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
+  const intl3 = require("../../../../intl/index.native.tsx").intl;
+  obj1[2] = intl3.string(_handleConfirm(2854).V822Mp);
+  const items = [callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj1, "confirm"), ];
   let obj2 = { variant: "secondary", text: null };
-  const intl4 = _getSystemLocale.intl;
-  obj2[1] = intl4.string(_getSystemLocale.t["ETE/oC"]);
-  items[1] = callback(_getAlertModalItemKey.AlertActionButton, obj2, "cancel");
+  const intl4 = require("../../../../intl/index.native.tsx").intl;
+  obj2[1] = intl4.string(require("../../../../intl/index.native.tsx").t["ETE/oC"]);
+  items[1] = callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj2, "cancel");
   obj[0] = items;
-  obj[2] = callback2(_getAlertModalItemKey.AlertActions, obj);
-  return callback(_getAlertModalItemKey.AlertModal, obj);
+  obj[2] = callback2(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions, obj);
+  return callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertModal, obj);
 };
 export const SETTINGS_AGE_GROUP_RESET_ALERT_ID = "settings-age-group-reset";

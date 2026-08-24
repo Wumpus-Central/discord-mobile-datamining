@@ -59,7 +59,7 @@ prototype["computeVoiceFlags"] = function computeVoiceFlags() {
     isClipsEnabledResult = tmp11;
     obj3 = currentUserActiveStream;
   }
-  let tmpResult = tmp(4526);
+  let tmpResult = tmp(4531);
   let result = tmpResult.isDecoupledClipsEnabled();
   if (result) {
     visibleGame = visibleGame.getVisibleGame();

@@ -4,7 +4,6 @@ import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { setEmailToken } from "../../ChangeEmailStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
@@ -13,7 +12,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   let _require = isChangeEmail;
   let navigation;
-  let obj = _useNavigation;
+  let obj = useNavigation;
   navigation = obj.useNavigation();
   const items = [isChangeEmail, navigation];
   const callback = React.useCallback((arg0) => {
@@ -65,7 +64,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -97,7 +96,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         v0 = tmp;
@@ -105,9 +104,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
       }
     }
   });
-  const intl = _getSystemLocale.intl;
-  obj[3] = intl.string(_getSystemLocale.t["2x/2Uo"]);
-  const intl2 = _getSystemLocale.intl;
-  obj[4] = intl2.string(_getSystemLocale.t.PDTjLN);
-  return jsx(navigation(8574), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t["2x/2Uo"]);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj[4] = intl2.string(require("../../../../intl/index.native.tsx").t.PDTjLN);
+  return jsx(navigation(8613), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

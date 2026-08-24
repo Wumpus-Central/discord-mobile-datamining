@@ -22,7 +22,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+      const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -242,7 +242,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+      const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_11 : closure_12;
     }
     return messageGroupSpacing;
@@ -251,14 +251,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined

@@ -7,7 +7,6 @@ import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../stores/MessageStore.tsx";
 import { GiftIntentType } from "../PremiumConstants.tsx";
 import ME from "../../../Constants.tsx";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 ({ AnalyticEvents: error, Endpoints: closure_8 } = ME);
@@ -16,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/premium/gifting/Pre
 export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
   const _require = serverDismissalTimestampMs;
   const id2 = id.getId();
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   const value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     if (closure_1_4.getId() === callback) {

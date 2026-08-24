@@ -42,7 +42,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -82,8 +82,8 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   obj1[1] = tmp69;
                   obj1[2] = closure_6;
                   const merged = Object.assign((function getRequestPaginationParams(closure_0, aPIError, arg2, arg3, flag) {
-                    const tmp2 = arg3 === callback(4200).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (arg2 === callback(4200).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    const tmp2 = arg3 === callback(4204).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (arg2 === callback(4204).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== aPIError.length) {
                           let obj = { before: null };

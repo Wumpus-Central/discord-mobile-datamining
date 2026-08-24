@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/experiment/isDateValidDateOfBirth.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import tDefault from "../../../../../_runtime/03975_t.js";
+import tDefault from "../../../../../_runtime/03978_t.js";
 
 const result = set.fileFinishedImporting("modules/auth/native/experiment/isDateValidDateOfBirth.tsx");
 

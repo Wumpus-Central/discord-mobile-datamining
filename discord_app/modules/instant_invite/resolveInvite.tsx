@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
 import InviteSendStates from "Constants.tsx";
@@ -17,7 +17,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   importDefault = arg1;
   dependencyMap = inviteInstanceId;
-  let obj = _readSnowflake;
+  let obj = readSnowflake;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
@@ -155,8 +155,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = _modDef5227.get(obj1);
-    const tmp4Result = _modDef5227;
+    const value = _modDef5232.get(obj1);
+    const tmp4Result = _modDef5232;
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

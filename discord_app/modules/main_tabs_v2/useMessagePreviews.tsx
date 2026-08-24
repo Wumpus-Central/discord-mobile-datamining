@@ -3,7 +3,6 @@ import useIsNsfwGatedDefault from "../age_gate/useIsNsfwGated.tsx";
 import useLatestChannelMessageDefault from "../message_previews/useLatestChannelMessage.tsx";
 import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 import closure_4 from "../../stores/ReadStateStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
@@ -50,10 +49,10 @@ export default function useMessagePreview(guild_id) {
     disabled = useIsNsfwGatedDefault(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(4071).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(4074).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(4071).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(4074).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;
@@ -67,7 +66,7 @@ export default function useMessagePreview(guild_id) {
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guilds = closure_1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {

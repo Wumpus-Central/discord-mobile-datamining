@@ -4,7 +4,6 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import closure_3 from "../../../stores/UserStore.tsx";
 import closure_4 from "InitialMemberVerificationStore.tsx";
 import { setInitialVerification } from "InitialMemberVerificationStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
@@ -78,5 +77,5 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
 };

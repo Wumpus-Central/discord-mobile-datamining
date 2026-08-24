@@ -146,10 +146,10 @@ export const fetchApplication = function fetchApplication(applicationId, signal)
   let obj = dispatcherDefault;
   obj = { type: "APPLICATION_FETCH", applicationId };
   obj.dispatch(obj);
-  const HTTP = _sendRequest.HTTP;
-  obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: _sendRequest.rejectWithMigratedError() };
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
   const value = HTTP.get(obj);
-  const obj4 = _sendRequest;
+  const obj4 = sendRequest;
   return value.then((application) => {
     let obj = callback(table[3]);
     obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };

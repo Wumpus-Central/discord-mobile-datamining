@@ -7,10 +7,10 @@ import useWindowDimensions from "useWindowDimensions.native.tsx";
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_4115.makeMutable(obj);
+const mutable = module_4119.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_4115.makeMutable(obj);
+const mutable1 = module_4119.makeMutable(obj);
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
   uDefault(mutable, arg0);
   uDefault(mutable1, arg1);

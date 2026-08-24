@@ -1,25 +1,25 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
 import set from "../../../../_runtime/00002_set.js";
 import V6OrEarlierAPIError from "../../../errors/index.tsx";
-import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4662 from "../../../actions/native/AlertActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
   let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
   if (tmp3) {
-    let tmp4 = billingError.code === tmp(4061).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
+    let tmp4 = billingError.code === tmp(4064).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
     if (!tmp4) {
-      tmp4 = billingError.code === tmp(4061).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
+      tmp4 = billingError.code === tmp(4064).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
     }
     tmp3 = tmp4;
   }
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  let obj = activeLinkUserIds(7621);
+  let obj = activeLinkUserIds(7659);
   activeLinkUserIds = obj.getActiveLinkUserIds();
-  obj1 = _modDef4656;
+  obj1 = _modDef4662;
   obj = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1236).intl;
   obj[0] = intl.string(activeLinkUserIds(1236).t.QJKKrT);

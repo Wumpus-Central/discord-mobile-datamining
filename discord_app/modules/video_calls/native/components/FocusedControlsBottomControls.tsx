@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/FocusedControlsBottomControls.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4115 from "../../../reanimated/ReanimatedRexport.tsx";
-import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod4119 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../../design/animation/reanimated/timing/timing.tsx";
 import CallPTTButtonLooksDefault from "../../../../components_native/calls/CallPTTButton.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -13,7 +13,6 @@ import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
-import { CallPTTButtonLooks } from "../../../../components_native/calls/CallPTTButton.tsx";
 
 require = arg1;
 function FocusedControlsExpanded(children) {
@@ -58,9 +57,9 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(12502);
+  let obj = positionY(12556);
   const canShowTooltip = obj.useCanShowTooltip(positionY(691).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4115);
+  positionY(4119);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / closure_1_15, 1) };
   };
@@ -80,7 +79,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     const intl = tmp2(1236).intl;
     obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
     obj[1] = callback2(tmp2(1297).Tooltip, obj1);
-    tmp7 = callback2(_modDef4115.View, obj);
+    tmp7 = callback2(_modDef4119.View, obj);
   }
   return tmp7;
 }
@@ -90,7 +89,7 @@ function FocusedControlsAboveActionBarView(positionY) {
   const aboveActionBar = positionY.aboveActionBar;
   ({ onPressHeader, isExpanded } = positionY);
   const tmp = callback3();
-  let obj = positionY(4115);
+  let obj = positionY(4119);
   const fn = function _() {
     return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - closure_1_15), 0) };
   };
@@ -101,14 +100,14 @@ function FocusedControlsAboveActionBarView(positionY) {
   obj = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   obj1 = { style: tmp.aboveActionBarContainer, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(7124).ActionSheetHeaderBar, {}), ];
+  const items = [callback2(FocusedControlsBottomDrawerTooltip, { positionY }), callback2(positionY(7162).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     const obj2 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj2[0] = items1;
     obj2[1] = aboveActionBar;
-    tmp4Result = tmp4(offsetY(4115).View, obj2);
+    tmp4Result = tmp4(offsetY(4119).View, obj2);
   }
   items[2] = tmp4Result;
   obj1[1] = items;
@@ -240,10 +239,10 @@ class FocusedControlsBottomDrawer {
     first = tmp22[0];
     closure_6 = first;
     closure_7 = tmp22[1];
-    tmp19Result = require("module_4115");
-    sharedValue = require("module_0");
+    tmp19Result = require("../../../reanimated/ReanimatedRexport.tsx");
+    sharedValue = require("../../../../index.native.tsx");
     closure_8 = sharedValue;
-    tmp19Result1 = require("module_4115");
+    tmp19Result1 = require("../../../reanimated/ReanimatedRexport.tsx");
     class O {
       constructor() {
         tmp = closure_0;
@@ -262,14 +261,14 @@ class FocusedControlsBottomDrawer {
     O.__initData = closure_27;
     derivedValue = tmp19Result1.useDerivedValue(O);
     closure_9 = derivedValue;
-    tmp19Result2 = require("module_4115");
-    sharedValue1 = require("module_0");
+    tmp19Result2 = require("../../../reanimated/ReanimatedRexport.tsx");
+    sharedValue1 = require("../../../../index.native.tsx");
     closure_10 = sharedValue1;
-    tmp19Result3 = require("module_4115");
+    tmp19Result3 = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue2 = tmp19Result3.useSharedValue(false);
     closure_11 = sharedValue2;
-    tmp19Result4 = require("module_4115");
-    sharedValue3 = require("module_0");
+    tmp19Result4 = require("../../../reanimated/ReanimatedRexport.tsx");
+    sharedValue3 = require("../../../../index.native.tsx");
     closure_12 = sharedValue3;
     callback = onClose.useCallback(() => {
       const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
@@ -298,20 +297,20 @@ class FocusedControlsBottomDrawer {
     PanResult = Gesture.Pan();
     class M {
       constructor() {
-        obj = require("module_4115");
+        obj = require("../../../reanimated/ReanimatedRexport.tsx");
         tmp = obj.runOnJS(clearFocusTimer)();
         obj2 = closure_11;
         result = closure_11.set(0 !== closure_8.get());
-        result1 = require("module_0");
+        result1 = require("../../../../index.native.tsx");
         tmp4 = null != closure_8.get() && obj2.get();
         if (!tmp4) {
           tmp5 = closure_10;
-          result2 = require("module_0");
+          result2 = require("../../../../index.native.tsx");
         }
         return;
       }
     }
-    obj = { runOnJS: require("module_4115").runOnJS, clearFocusTimer: closure_8, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
+    obj = { runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, clearFocusTimer: closure_8, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
     M.__closure = obj;
     M.__workletHash = 9674965708496;
     M.__initData = closure_30;
@@ -376,43 +375,43 @@ class FocusedControlsBottomDrawer {
               openDrawerResult = openDrawer();
             } else {
               tmp24 = closure_10;
-              result3 = require("module_0");
+              result3 = require("../../../../index.native.tsx");
               tmp26 = closure_0;
               tmp27 = closure_2;
               obj7 = require("CONFIG_NEVER_ANIMATE_TIMING");
               tmp28 = closure_20;
-              result4 = obj2.set(require("module_0"));
+              result4 = obj2.set(require("../../../../index.native.tsx"));
               flag2 = false;
               result5 = obj.set(false);
               tmp31 = closure_0;
               tmp32 = closure_2;
-              obj8 = require("module_4115");
+              obj8 = require("../../../reanimated/ReanimatedRexport.tsx");
               tmp33 = resetFocusTimer;
               tmp34 = obj8.runOnJS(resetFocusTimer)();
               tmp35 = closure_0;
               tmp36 = closure_2;
-              obj9 = require("module_4115");
+              obj9 = require("../../../reanimated/ReanimatedRexport.tsx");
               tmp37 = handleClose;
               tmp38 = obj9.runOnJS(handleClose)();
             }
           }
           tmp9 = closure_10;
-          result6 = require("module_0");
+          result6 = require("../../../../index.native.tsx");
           tmp11 = closure_0;
           tmp12 = closure_2;
           obj4 = require("CONFIG_NEVER_ANIMATE_TIMING");
           tmp13 = closure_20;
-          result7 = obj2.set(require("module_0"));
+          result7 = obj2.set(require("../../../../index.native.tsx"));
           flag = false;
           result8 = obj.set(false);
           tmp16 = closure_0;
           tmp17 = closure_2;
-          obj5 = require("module_4115");
+          obj5 = require("../../../reanimated/ReanimatedRexport.tsx");
           tmp18 = resetFocusTimer;
           tmp19 = obj5.runOnJS(resetFocusTimer)();
           tmp20 = closure_0;
           tmp21 = closure_2;
-          obj6 = require("module_4115");
+          obj6 = require("../../../reanimated/ReanimatedRexport.tsx");
           tmp22 = handleClose;
           tmp23 = obj6.runOnJS(handleClose)();
         }
@@ -420,7 +419,7 @@ class FocusedControlsBottomDrawer {
         return;
       }
     }
-    obj1 = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: require("module_4115").runOnJS, handleOpen, startY: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: closure_19, TooltipActionCreators: require("dispatcher"), TooltipNames: require("keys").TooltipNames, TIMING_CONFIG_EXIT: closure_20, resetFocusTimer: closure_9, handleClose };
+    obj1 = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleOpen, startY: sharedValue1, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, TIMING_CONFIG: closure_19, TooltipActionCreators: require("dispatcher"), TooltipNames: require("keys").TooltipNames, TIMING_CONFIG_EXIT: closure_20, resetFocusTimer: closure_9, handleClose };
     H.__closure = obj1;
     H.__workletHash = 6790759206787;
     H.__initData = closure_28;
@@ -434,7 +433,7 @@ class FocusedControlsBottomDrawer {
     closure_8 = first1;
     tmp33 = tmp31[2];
     closure_9 = tmp33;
-    tmp19Result5 = require("module_4115");
+    tmp19Result5 = require("../../../reanimated/ReanimatedRexport.tsx");
     fn = function f() {
       let num = 0;
       if (!reveal) {
@@ -494,7 +493,7 @@ class FocusedControlsBottomDrawer {
         ComponentDispatch.unsubscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
       };
     }, items4);
-    tmp19Result6 = require("module_4115");
+    tmp19Result6 = require("../../../reanimated/ReanimatedRexport.tsx");
     class Z {
       constructor() {
         obj = { height: onDrawerOpen, transform: null };
@@ -546,9 +545,9 @@ class FocusedControlsBottomDrawer {
     items8[2] = children;
     items8[3] = tmp40(FocusedControlsExpanded, { expandedControls, availableHeight: diff2, positionY: first1 });
     obj5[1] = items8;
-    obj4[1] = tmp41(require("module_4115").View, obj5);
+    obj4[1] = tmp41(require("../../../reanimated/ReanimatedRexport.tsx").View, obj5);
     obj3[2] = tmp40(require("LegacyBaseButton").GestureDetector, obj4);
-    return tmp40(require("module_4115").View, obj3);
+    return tmp40(require("../../../reanimated/ReanimatedRexport.tsx").View, obj3);
   }
 }
 ({ View: c5, TouchableWithoutFeedback: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);
@@ -615,7 +614,7 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
-    obj[0] = _CallPTTButtonLooks.CallPTTButtonLooks.BLUR;
+    obj[0] = require("../../../../components_native/calls/CallPTTButton.tsx").CallPTTButtonLooks.BLUR;
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;

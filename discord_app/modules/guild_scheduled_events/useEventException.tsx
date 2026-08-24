@@ -1,6 +1,5 @@
 // discord_app/modules/guild_scheduled_events/useEventException.tsx
 import closure_2 from "GuildScheduledEventStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/guild_scheduled_eve
 export default function useEventException(arg0, arg1) {
   let _require = arg1;
   const items = [closure_2];
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const guildScheduledEvent = closure_1_2.getGuildScheduledEvent(closure_0);
     let prop;
     if (guildScheduledEvent != null) {

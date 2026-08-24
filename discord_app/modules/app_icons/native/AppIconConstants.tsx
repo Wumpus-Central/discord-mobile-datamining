@@ -2,33 +2,31 @@
 import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import FreemiumAppIconIds from "../AppIconTypes.tsx";
-import registerAssetDefault from "../../../../_runtime/07948_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/07949_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/07950_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/07951_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/07952_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/07953_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/07954_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/07955_registerAsset.js";
-import registerAssetDefault9 from "../../../../_runtime/07956_registerAsset.js";
-import registerAssetDefault10 from "../../../../_runtime/07957_registerAsset.js";
-import registerAssetDefault11 from "../../../../_runtime/07958_registerAsset.js";
-import registerAssetDefault12 from "../../../../_runtime/07959_registerAsset.js";
-import registerAssetDefault13 from "../../../../_runtime/07960_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/07961_registerAsset.js";
-import registerAssetDefault15 from "../../../../_runtime/07962_registerAsset.js";
-import registerAssetDefault16 from "../../../../_runtime/07963_registerAsset.js";
-import registerAssetDefault17 from "../../../../_runtime/07964_registerAsset.js";
-import registerAssetDefault18 from "../../../../_runtime/07965_registerAsset.js";
-import registerAssetDefault19 from "../../../../_runtime/07966_registerAsset.js";
-import registerAssetDefault20 from "../../../../_runtime/07967_registerAsset.js";
-import registerAssetDefault21 from "../../../../_runtime/07968_registerAsset.js";
-import registerAssetDefault22 from "../../../../_runtime/07969_registerAsset.js";
-import registerAssetDefault23 from "../../../../_runtime/07970_registerAsset.js";
-import registerAssetDefault24 from "../../../../_runtime/07971_registerAsset.js";
-import registerAssetDefault25 from "../../../../_runtime/07972_registerAsset.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
+import registerAssetDefault from "../../../../_runtime/07987_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/07988_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/07989_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/07990_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/07991_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/07992_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/07993_registerAsset.js";
+import registerAssetDefault8 from "../../../../_runtime/07994_registerAsset.js";
+import registerAssetDefault9 from "../../../../_runtime/07995_registerAsset.js";
+import registerAssetDefault10 from "../../../../_runtime/07996_registerAsset.js";
+import registerAssetDefault11 from "../../../../_runtime/07997_registerAsset.js";
+import registerAssetDefault12 from "../../../../_runtime/07998_registerAsset.js";
+import registerAssetDefault13 from "../../../../_runtime/07999_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/08000_registerAsset.js";
+import registerAssetDefault15 from "../../../../_runtime/08001_registerAsset.js";
+import registerAssetDefault16 from "../../../../_runtime/08002_registerAsset.js";
+import registerAssetDefault17 from "../../../../_runtime/08003_registerAsset.js";
+import registerAssetDefault18 from "../../../../_runtime/08004_registerAsset.js";
+import registerAssetDefault19 from "../../../../_runtime/08005_registerAsset.js";
+import registerAssetDefault20 from "../../../../_runtime/08006_registerAsset.js";
+import registerAssetDefault21 from "../../../../_runtime/08007_registerAsset.js";
+import registerAssetDefault22 from "../../../../_runtime/08008_registerAsset.js";
+import registerAssetDefault23 from "../../../../_runtime/08009_registerAsset.js";
+import registerAssetDefault24 from "../../../../_runtime/08010_registerAsset.js";
+import registerAssetDefault25 from "../../../../_runtime/08011_registerAsset.js";
 
 let obj = { id: FreemiumAppIconIds.PremiumAppIconIds.IN_RAINBOWS, iconSource: registerAssetDefault2, isPremium: true, name: null };
 let intl = getSystemLocale.intl;
@@ -190,9 +188,9 @@ export const getIcons = function getIcons() {
 };
 export const getIconById = function getIconById(currentAppIcon) {
   const _require = currentAppIcon;
-  let obj = { id: _FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t.ANxkLy);
+  let obj = { id: require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx").t.ANxkLy);
   items = [
     obj,
     ...items.filter((expiresAt) => {
@@ -215,7 +213,7 @@ export const getIconById = function getIconById(currentAppIcon) {
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
-    obj[0] = tmp(7947).FreemiumAppIconIds.DEFAULT;
+    obj[0] = tmp(7986).FreemiumAppIconIds.DEFAULT;
     obj[1] = registerAssetDefault;
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t.ANxkLy);

@@ -1,6 +1,6 @@
 // discord_app/modules/webauthn/native/nav_steps/PasskeyInitStep.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/14079_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14147_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -32,7 +32,7 @@ function CredentialList(navigation) {
     obj1[1] = tmp3.upsellText;
     let intl2 = tmp(1236).intl;
     obj1[2] = intl2.string(tmp(1236).t.FSNwFW);
-    items1[1] = callback2(tmp(4734).Text, obj1);
+    items1[1] = callback2(tmp(4739).Text, obj1);
     obj[1] = items1;
     return callback3(closure_6, obj);
   } else {
@@ -76,7 +76,7 @@ function CredentialList(navigation) {
       obj[2] = formatResult;
       return closure_1_9(navigation(_undefined[20]).TableRow, obj, label.id);
     });
-    return callback2(tmp(6286).TableRowGroup, obj2);
+    return callback2(tmp(6317).TableRowGroup, obj2);
   }
   const tmp4 = callback(React.useState(false), 2);
 }
@@ -136,6 +136,6 @@ export default function PasskeyInitStep(arg0) {
     obj1[0] = navigation;
     obj[1] = callback2(CredentialList, obj1);
     obj[0] = callback2(closure_6, obj);
-    return callback2(navigation(8083).Form, obj);
+    return callback2(navigation(8122).Form, obj);
   }
 };

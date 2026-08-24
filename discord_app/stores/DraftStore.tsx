@@ -7,7 +7,6 @@ import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "AuthenticationStore.tsx";
 import closure_5 from "ChannelStore.tsx";
 import closure_6 from "GuildAvailabilityStore.tsx";
-import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 
 const require = arg1;
 function handleChanged(type) {
@@ -218,14 +217,14 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish);
+    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish);
     const mapped = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish).toPairs().map((arg0) => {
+    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish).toPairs().map((arg0) => {
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
@@ -235,7 +234,7 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish).toPairs();
+    }).pickBy(require("../utils/GlobalUtils.tsx").isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };

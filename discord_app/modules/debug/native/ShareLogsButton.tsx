@@ -11,7 +11,7 @@ const memoResult = importAllResult.memo(function ShareLogsButton() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["Aw+09z"]);
   obj[1] = function onPress() {
-    let obj = callback(9067);
+    let obj = callback(9104);
     obj = { message: callback(7).stringify() };
     return obj.showShareActionSheet(obj, "Debug Logs");
   };

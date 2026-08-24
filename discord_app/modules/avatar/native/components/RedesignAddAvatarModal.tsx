@@ -48,7 +48,7 @@ export default function RedesignAddAvatarModal(route) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -73,7 +73,7 @@ export default function RedesignAddAvatarModal(route) {
               dependencyMap = 1;
               v0 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = closure_1_0(4838).openImagePicker(obj1);
+              obj2[0] = closure_1_0(4843).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -89,18 +89,18 @@ export default function RedesignAddAvatarModal(route) {
             if (null == base64) {
               pendingImage = undefined;
               if (null != closure_1_0) {
-                obj = closure_1_0(14007);
+                obj = closure_1_0(14075);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
-                obj2 = closure_1_0(8384);
+                obj2 = closure_1_0(8423);
                 obj4[1] = obj2.generateAvatarDescription();
                 pendingImage = obj.createPendingImage(obj4);
               }
-              obj3 = closure_1_0(8374);
+              obj3 = closure_1_0(8413);
               let obj5 = { avatar: null };
               obj5[0] = pendingImage;
               obj3.setPendingChanges(obj5);
-              obj5 = closure_1_0(8376);
+              obj5 = closure_1_0(8415);
               let str = "set";
               if (null == pendingImage) {
                 str = "remove";

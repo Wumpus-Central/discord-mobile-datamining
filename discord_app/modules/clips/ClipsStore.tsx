@@ -31,7 +31,7 @@ function _migrateDefaultStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4004).app;
+          const app = callback2(4007).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -93,7 +93,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4525);
+            obj = callback(4530);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }

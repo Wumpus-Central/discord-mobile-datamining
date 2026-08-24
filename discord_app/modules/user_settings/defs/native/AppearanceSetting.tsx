@@ -9,7 +9,6 @@ import useActiveThemeType from "../../../client_themes/native/useActiveTheme.tsx
 import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 import { ActiveThemeType } from "../../ThemeConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsAppearanceScreen } from "../../appearance/native/SettingsAppearanceScreen.tsx";
 
 require = arg1;
 function useAppearanceSettingTrailing() {
@@ -58,7 +57,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return SettingsAppearanceScreen.default;
+    return require("../../appearance/native/SettingsAppearanceScreen.tsx").default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

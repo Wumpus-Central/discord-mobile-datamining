@@ -1,7 +1,7 @@
 // discord_app/design/void/Button/native/Button.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
+import _modDef8154 from "../../LegacyText/native/LegacyText.tsx";
 import getClass from "../../../../utils/StylesheetUtils.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -96,7 +96,7 @@ class ButtonText {
       obj[2] = size;
       obj[3] = disabled;
       num = 0;
-      tmp5 = require("module_8115");
+      tmp5 = require("../../LegacyText/native/LegacyText.tsx");
       items = [, ];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;

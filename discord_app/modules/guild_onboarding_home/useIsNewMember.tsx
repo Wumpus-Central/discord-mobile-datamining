@@ -4,7 +4,6 @@ import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import closure_3 from "../impersonate/ImpersonateStore.tsx";
 import closure_4 from "../../stores/GuildMemberStore.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
@@ -12,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export default function useIsNewMember(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let flag = true;
     if (!closure_1_3.isFullServerPreview(callback)) {
       const selfMember = obj.getSelfMember(tmp);

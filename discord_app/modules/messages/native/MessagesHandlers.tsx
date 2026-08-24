@@ -2151,7 +2151,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -2265,7 +2265,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -2284,25 +2284,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(10739).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(10778).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(10739);
+                const obj10 = callback(10778);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4992).maybePerformReactiveCheck();
+                    obj1[0] = callback(4997).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(5001);
+                let obj3 = callback(5006);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(5001);
+                obj11 = callback(5006);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2315,9 +2315,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(5428);
+                obj = closure_1_1(5433);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(5254).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(5259).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

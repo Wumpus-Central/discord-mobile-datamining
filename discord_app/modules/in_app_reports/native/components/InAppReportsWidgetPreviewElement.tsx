@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import isFieldEmpty from "../../../user_profile/UserProfilePersonalWidget.tsx";
+import createDefaultFieldsSection from "../../../user_profile/UserProfilePersonalWidget.tsx";
 import useSharedStylesDefault from "../../../user_profile/native/UserProfileSharedStyles.tsx";
 import PersonalWidgetTextDefault from "../../../user_profile/native/UserProfilePersonalWidgetCard.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -21,7 +21,7 @@ export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
   const tmp = callback3();
   const tmp4 = useSharedStylesDefault();
-  if (widget instanceof isFieldEmpty.UserProfilePersonalWidget) {
+  if (widget instanceof createDefaultFieldsSection.UserProfilePersonalWidget) {
     let obj = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
@@ -38,10 +38,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(12174).WidgetSection, obj);
+        tmp6 = callback(tmp5(12226).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(5367);
+    tmp5Result = tmp5(5372);
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -51,7 +51,7 @@ export default function WidgetPreview(arg0) {
     obj2[0] = tmp.title;
     const intl = tmp5(1236).intl;
     obj2[3] = intl.string(tmp5(1236).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4734).Text, obj2), tmp6];
+    const items2 = [callback(tmp5(4739).Text, obj2), tmp6];
     obj1[1] = items2;
     tmp9 = callback2(View, obj1);
     const str = intl.string(tmp5(1236).t.SpsnDY);

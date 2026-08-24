@@ -10,7 +10,7 @@ import setDefault from "RegexUtils.tsx";
 import StickerFormat from "../modules/stickers/StickersTypes.tsx";
 import computeChannelName from "../modules/channel/useChannelName.tsx";
 import useCanSeeOnboardingHome from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
-import fuzzysearchDefault from "../../_runtime/06775_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06812_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import getGuildNameSuggestionDefault from "GuildUtils.tsx";
 import useGuildOnboardingAvailable from "../modules/guild_onboarding/useGuildOnboardingAvailable.tsx";
@@ -44,9 +44,7 @@ import closure_37 from "../stores/game_store/SKUStore.tsx";
 import ME from "../Constants.tsx";
 import { StaticChannelId } from "../modules/channel/ChannelConstants.tsx";
 import areArraysShallowlyEqual from "FunctionUtils.tsx";
-import { trackSearchStart } from "../modules/soundboard/searchSounds.tsx";
 import { _fetchDefaultSoundsFromApi2 } from "../modules/soundboard/SoundboardActionCreators.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 function NOOP() {
@@ -216,21 +214,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(6775)(toLocaleLowerCaseResult, str4) || tmp12(6775)(normalizeResult, str5);
+                                let tmp28 = tmp12(6812)(toLocaleLowerCaseResult, str4) || tmp12(6812)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(6775)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(6812)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(6775)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(6812)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(6775)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(6812)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(6775)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(6812)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -364,13 +362,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(4964).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(4969).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(4964).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(4969).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(4964).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(4964).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(4969).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(4969).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -890,10 +888,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4362).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4366).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4362);
-        const regExp1 = new RegExp(callback(4362).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4366);
+        const regExp1 = new RegExp(callback(4366).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -902,17 +900,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4362);
+        let obj2 = callback(4366);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4362).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4366).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4362).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4362);
-        let regExp1 = new RegExp(callback(4362).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4366).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4366);
+        let regExp1 = new RegExp(callback(4366).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4362).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4366).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -2032,11 +2030,11 @@ areArraysShallowlyEqual = {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(1903);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4362).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4366).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4362);
+        const obj3 = nextResult(4366);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4362).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4366).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {
@@ -2164,10 +2162,10 @@ areArraysShallowlyEqual = {
       tmp3 = !obj.hasFetchedAllSounds();
     }
     if (tmp3) {
-      const result = __fetchDefaultSoundsFromApi2.maybeFetchSoundboardSounds();
-      const obj2 = __fetchDefaultSoundsFromApi2;
+      const result = require("../modules/soundboard/SoundboardActionCreators.tsx").maybeFetchSoundboardSounds();
+      const obj2 = _fetchDefaultSoundsFromApi2;
     }
-    const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
@@ -2188,7 +2186,7 @@ areArraysShallowlyEqual = {
       return arg0;
     }, []);
     let arr = Array.from(sounds.values());
-    return _trackSearchStart.searchSounds(arg0, reduced, currentUser, channel);
+    return require("../modules/soundboard/searchSounds.tsx").searchSounds(arg0, reduced, currentUser, channel);
   },
   matchSentinel(arg0, arg1, closure_12) {
     const isMatch = regex.test(arg1);

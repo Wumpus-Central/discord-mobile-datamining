@@ -7,8 +7,6 @@ import useRegistrationUIStore from "RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../RegistrationConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { Background } from "../../../../_runtime/06319_Background.js";
-import { NavigatorWithCaptchaHook } from "components/Auth.tsx";
 
 const require = arg1;
 function trackRegTransition(overrideRegistrationOptions) {
@@ -151,7 +149,7 @@ export function getTrackRegTransition(closure_0) {
   };
 }
 export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
-  _require = React.useContext(_NavigatorWithCaptchaHook.TrackRegistrationContext);
+  _require = React.useContext(require("components/Auth.tsx").TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
@@ -165,7 +163,7 @@ export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(_Background.HeaderBackButton, {});
+  return jsx(require("../../../../_runtime/06350_Background.js").HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

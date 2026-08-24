@@ -17,11 +17,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(6832).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(6832);
+    channelIconComponentWithGuild = tmp(6870).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(6870);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(6876).TextIcon;
+    channelIconComponentWithGuild = tmp(6914).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
@@ -37,7 +37,7 @@ export default function TypingSubtitle(arg0) {
     const obj2 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj2[1] = items1;
-    tmp5Result = tmp5(tmp(4734).Text, obj2);
+    tmp5Result = tmp5(tmp(4739).Text, obj2);
   }
   const items2 = [tmp5Result, text];
   obj1[4] = items2;

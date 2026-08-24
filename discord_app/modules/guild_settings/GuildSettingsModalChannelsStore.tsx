@@ -121,7 +121,7 @@ let closure_23 = importDefaultResult.debounce(() => {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _getFavoritesAwareGuildName.isFavoritesGuildId(c13);
+    _require = require("../favorites/FavoritesUtils.tsx").isFavoritesGuildId(c13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
@@ -136,7 +136,7 @@ let closure_23 = importDefaultResult.debounce(() => {
     const arr = channels[closure_7];
     const arr2 = channels[closure_8];
     const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _getFavoritesAwareGuildName;
+    const obj = getFavoritesAwareGuildName;
   }
   guildSettingsModalChannelsStoreClass.emitChange();
 }, 500);
@@ -168,7 +168,7 @@ prototype["initGuild"] = function initGuild(closure_6) {
       closure_19[channel.id] = channel;
       return channel;
     });
-    _require = _getFavoritesAwareGuildName.isFavoritesGuildId(closure_13);
+    _require = require("../favorites/FavoritesUtils.tsx").isFavoritesGuildId(closure_13);
     const item2 = channels[constants.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       let canResult = "null" === channel.id || closure_0;
@@ -183,7 +183,7 @@ prototype["initGuild"] = function initGuild(closure_6) {
     const arr = channels[closure_7];
     const arr2 = channels[closure_8];
     const arr3 = channels[constants.GUILD_CATEGORY];
-    const obj = _getFavoritesAwareGuildName;
+    const obj = getFavoritesAwareGuildName;
   }
 };
 Object.defineProperty(prototype, "channels", {

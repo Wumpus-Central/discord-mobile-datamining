@@ -1,9 +1,9 @@
 // discord_app/modules/gif_picker/native/GIFPickerUtils.tsx
 import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
-import shouldRefreshAttachmentUrl from "../../messages/SignedAttachmentLinkUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import isRefreshableAttachmentUrlAll from "../../messages/AttachmentUrlUtils.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
-require = arg1;
+const require = arg1;
 function transformFavoriteGifUrl(url) {
   let combined = url;
   const str = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
@@ -25,10 +25,10 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9085);
+      const tmp14Result = tmp14(9122);
     }
-    obj6 = shouldRefreshAttachmentUrl;
-    tmp14 = require;
+    obj6 = isRefreshableAttachmentUrlAll;
+    tmp14 = importAll;
   }
   if (regex.test(arg1)) {
     const match = regex3.exec(arg1);
@@ -51,14 +51,14 @@ function transformFavoriteGifUrl(url) {
   const obj = isDiscordProxiedAssetUrlDefault;
 }
 require("ME").GIFPickerResultTypes;
-const re5 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
-const re6 = /(tenor\.com)/;
-const re7 = /-(?:.(?!-))+$/;
+const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
+const re7 = /(tenor\.com)/;
+const re8 = /-(?:.(?!-))+$/;
 let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(10199);
+  let obj = sortedFavoriteGIFs(10238);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {
@@ -67,9 +67,9 @@ export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
       let tmp2;
       if (sortedFavoriteGIFs.length > 0) {
         const obj = { type: null, name: null, src: null, format: null };
-        obj[0] = closure_1_4.FAVORITES;
-        const intl = sortedFavoriteGIFs(closure_1_2[5]).intl;
-        obj[1] = intl.string(sortedFavoriteGIFs(closure_1_2[5]).t.k8fFjp);
+        obj[0] = closure_1_5.FAVORITES;
+        const intl = sortedFavoriteGIFs(closure_1_3[5]).intl;
+        obj[1] = intl.string(sortedFavoriteGIFs(closure_1_3[5]).t.k8fFjp);
         obj[2] = tmp[0].src;
         obj[3] = tmp[0].format;
         tmp2 = obj;

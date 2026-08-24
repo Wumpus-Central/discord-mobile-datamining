@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef15849 from "../layout/SearchScreenSearchBar.tsx";
+import _modDef15946 from "../layout/SearchScreenSearchBar.tsx";
 import SearchFreezeContainerDefault from "../layout/SearchScreenLayout.tsx";
 import useSearchLayoutInsetTopDefault from "../../hooks/useSearchLayoutInsetTop.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
@@ -28,7 +28,7 @@ export default function SearchNavigatorScreen(navigation) {
   importDefault = undefined;
   const tmp = callback3();
   importDefault = tmp;
-  let obj = navigation(15847);
+  let obj = navigation(15944);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -48,12 +48,12 @@ export default function SearchNavigatorScreen(navigation) {
   obj = { gesture, children: null };
   obj1 = { style: items2, children: null };
   items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTopDefault() }];
-  const items3 = [callback(_modDef15849, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  const items3 = [callback(_modDef15946, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
   const tmp3 = useSearchLayoutInsetTopDefault();
   items3[1] = callback(View, { style: tmp.tabs, children: callback(SearchFreezeContainerDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj1[1] = items3;
   obj[1] = callback2(View, obj1);
-  items1[1] = callback(navigation(15624).NonCollapsableGestureDetector, obj);
+  items1[1] = callback(navigation(15690).NonCollapsableGestureDetector, obj);
   obj[0] = items1;
   return callback2(closure_7, obj);
 };

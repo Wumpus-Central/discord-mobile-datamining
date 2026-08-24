@@ -16,11 +16,11 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(5300);
+      let obj = callback(5305);
       obj = { analyticsLocations: null, analyticsSource: null };
-      const items = [callback2(7159).USER_SETTINGS];
+      const items = [callback2(7197).USER_SETTINGS];
       obj[0] = items;
-      obj[1] = callback2(7159).USER_SETTINGS;
+      obj[1] = callback2(7197).USER_SETTINGS;
       const result = obj.openCollectiblesShopMobile(obj);
       return false;
     };
@@ -29,7 +29,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return CollectiblesShopScreen.default;
+    return CollectiblesShopScreen /* CollectiblesShopScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

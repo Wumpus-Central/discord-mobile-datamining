@@ -3,7 +3,6 @@ import setDefault from "../../../utils/Durations.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
@@ -26,7 +25,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   }), 2);
   _require = now[1];
   const items = [closure_5];
-  let stateFromStores = _initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
     if (stateFromStores) {

@@ -165,13 +165,13 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
 };
 Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
-    return this.promotionType === CountryListMode.PromotionTypes.BOGO;
+    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.BOGO;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMarketingMoment", {
   get: function isMarketingMoment() {
-    return this.promotionType === CountryListMode.PromotionTypes.MARKETING_MOMENT;
+    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
   },
   set: undefined
 });
@@ -186,15 +186,15 @@ prototype["hasFlag"] = function hasFlag(arg0) {
 };
 prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
   const self = this;
-  if (this.countryListMode === CountryListMode.CountryListMode.ALLOWLIST) {
+  if (this.countryListMode === CountryListMode /* CountryListMode */.CountryListMode.ALLOWLIST) {
     const allowedCountries = self.allowedCountries;
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(7656).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(7656).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(7694).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(7694).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(7694).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(7694).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }

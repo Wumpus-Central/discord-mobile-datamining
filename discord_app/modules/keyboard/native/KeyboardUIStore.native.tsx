@@ -12,8 +12,6 @@ import _modDef1891 from "../KeyboardStateDebugging.tsx";
 import set from "../../../utils/PlatformUtils.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { dismissGlobalKeyboard } from "../../../utils/native/KeyboardManagerUtils.tsx";
-import { context } from "../../window/native/AppEntryKeyContext.tsx";
 
 function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   let tmp = arg0;
@@ -236,7 +234,7 @@ KeyboardEvents.addListener(str, (height) => {
   const _require = { keyboardHeight: height, keyboardDuration: height.duration, systemKeyboardOpen: true };
   importDefault = undefined;
   obj = _modDef1891;
-  _batchUpdates.batchUpdates(() => closure_1_11.setState((arg0) => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -246,8 +244,8 @@ KeyboardEvents.addListener(str, (height) => {
     }
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
-  const obj2 = _batchUpdates;
-  _dismissGlobalKeyboard.onKeyboardChanged(true);
+  const obj2 = batchUpdates;
+  require("../../../utils/native/KeyboardManagerUtils.tsx").onKeyboardChanged(true);
   const item = set1.forEach((arg0) => arg0(false));
 });
 const KeyboardEvents2 = KeyboardChatScrollView.KeyboardEvents;
@@ -256,7 +254,7 @@ KeyboardEvents2.addListener(str2, () => {
   const _require = { keyboardHeight: 0, systemKeyboardOpen: false };
   importDefault = undefined;
   obj = _modDef1891;
-  _batchUpdates.batchUpdates(() => closure_1_11.setState((arg0) => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -266,13 +264,13 @@ KeyboardEvents2.addListener(str2, () => {
     }
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
-  const obj2 = _batchUpdates;
-  _dismissGlobalKeyboard.onKeyboardChanged(false);
+  const obj2 = batchUpdates;
+  require("../../../utils/native/KeyboardManagerUtils.tsx").onKeyboardChanged(false);
   const item = set1.forEach((arg0) => arg0(false));
 });
 const subscription = _modDef1630.subscribe(() => {
   const _require = {};
-  _batchUpdates.batchUpdates(() => closure_1_11.setState((arg0) => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -290,7 +288,7 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
   let _require = keyboardParams;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = _context.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx").DEFAULT_APP_ENTRY_KEY;
   }
   const item = set.forEach((arg0) => arg0(closure_0, DEFAULT_APP_ENTRY_KEY));
   const item1 = set1.forEach((arg0) => {
@@ -306,7 +304,7 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
     return arg0(tmp2, DEFAULT_APP_ENTRY_KEY);
   });
   _require = { keyboardType: keyboardParams };
-  _batchUpdates.batchUpdates(() => closure_1_11.setState((arg0) => {
+  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];

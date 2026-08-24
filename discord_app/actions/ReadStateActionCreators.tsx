@@ -89,7 +89,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: 72, force: 180, context: null, location: null };
+      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "quest_app_store_overlay", force: null, context: "BULK_ACK", location: null };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;
@@ -113,6 +113,16 @@ export const localAck = function localAck(channelId) {
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
   let obj = dispatcherDefault;
   obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
+  obj.dispatch(obj);
+};
+export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
+  let obj = dispatcherDefault;
+  obj = { type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
+  obj.dispatch(obj);
+};
+export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
+  let obj = dispatcherDefault;
+  obj = { type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
   obj.dispatch(obj);
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {

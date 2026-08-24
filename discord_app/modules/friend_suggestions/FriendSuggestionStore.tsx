@@ -2,7 +2,7 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef5411 from "FriendSuggestionActionCreators.tsx";
+import _modDef5416 from "FriendSuggestionActionCreators.tsx";
 import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
 import closure_2 from "../../records/UserRecord.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
@@ -45,8 +45,8 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = _modDef5411.fetch();
-        const obj = _modDef5411;
+        const response = _modDef5416.fetch();
+        const obj = _modDef5416;
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();

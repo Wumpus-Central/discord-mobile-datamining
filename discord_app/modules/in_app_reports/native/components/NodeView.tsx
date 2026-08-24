@@ -67,19 +67,21 @@ function InfoView(node) {
     let obj = { style: null, children: null };
     const items = [tmp.infoBox, ];
     obj = { backgroundColor: null };
-    obj[0] = hexToRgba.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
+    let obj2 = hexToRgba;
+    obj[0] = obj2.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
     items[1] = obj;
     obj[0] = items;
     obj = { size: "md", color: null };
     obj[1] = tmp.infoBox.backgroundColor;
     const items1 = [callback2(CircleInformationIcon.CircleInformationIcon, obj), ];
-    obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-active", children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.infoBoxText;
-    obj1[3] = tmp3(info);
-    items1[1] = callback2(Text.Text, obj1);
+    obj2 = { variant: "text-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: null };
+    obj2[3] = tmp3(info);
+    obj1[1] = callback2(Text.Text, obj2);
+    items1[1] = callback2(closure_6, obj1);
     obj[1] = items1;
     tmp4 = callback3(closure_6, obj);
-    const obj3 = hexToRgba;
   }
   return tmp4;
 }
@@ -97,7 +99,7 @@ function ChildItem(child) {
   obj = { style: tmp.childButton, accessibilityRole: "button", onPress: callback(React.useState(() => () => closure_1.onPress(closure_0)), 1)[0], children: null };
   obj = { style: tmp.childContainer, children: null };
   obj1 = { style: tmp.childContent, children: null };
-  const items1 = [callback2(child(4734).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [callback2(child(4739).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
@@ -105,14 +107,14 @@ function ChildItem(child) {
     const obj3 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
     obj3[0] = tmp.debugText;
     obj3[3] = report_type;
-    stateFromStores = tmp9(tmp5(4734).Text, obj3);
+    stateFromStores = tmp9(tmp5(4739).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1[1] = items1;
   const items2 = [closure_17(closure_6, obj1), callback2(ArrowDefault, {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(5433).PressableHighlight, obj);
+  return callback2(child(5438).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -147,9 +149,9 @@ createCacheKey[3] = { alignSelf: "stretch", marginBottom: 24, paddingHorizontal:
 createCacheKey[4] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[5] = { lineHeight: 20, marginBottom: 8, textAlign: "center" };
 createCacheKey[6] = { lineHeight: 16, marginBottom: 8, textAlign: "center" };
-createCacheKey[7] = { alignSelf: "stretch", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
-createCacheKey[8] = { flex: 1, lineHeight: 18, marginStart: 8, marginTop: 3 };
-let obj1 = { alignSelf: "stretch", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+createCacheKey[7] = { alignSelf: "stretch", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
+createCacheKey[8] = { flex: 1, marginStart: 8 };
+let obj1 = { alignSelf: "stretch", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };
 createCacheKey[9] = { marginBottom: 8, borderRadius: ThemesDefault.radii.xs };
 let obj2 = { marginBottom: 8, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[10] = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: ThemesDefault.radii.xs };

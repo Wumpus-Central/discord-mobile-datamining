@@ -1,7 +1,6 @@
 // discord_app/modules/media_engine/useMuteAwareLocalVolume.tsx
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/MediaEngineStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_engine/useMuteAwareLocalVolume.tsx");
@@ -10,7 +9,7 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
   let obj = {
-    effectiveVolume: _initialize.useStateFromStores(items, () => {
+    effectiveVolume: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
       let num = 0;
       if (null != closure_0) {
         num = 0;

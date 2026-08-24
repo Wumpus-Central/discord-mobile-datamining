@@ -38,7 +38,7 @@ function _savePersistentCodesEnabled() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -76,10 +76,10 @@ function _savePersistentCodesEnabled() {
             if (1 === tmp8) {
               c6 = 0;
               dependencyMap = closure_5;
-              aPIError = new callback(4273).APIError(dependencyMap);
+              aPIError = new callback(4277).APIError(dependencyMap);
               obj1 = aPIError(709);
               obj1.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
-              obj2 = aPIError(4827);
+              obj2 = aPIError(4832);
               const obj3 = { title: null, body: null };
               const intl = callback(1236).intl;
               obj3[0] = intl.string(callback(1236).t.R0RpRX);
@@ -146,7 +146,7 @@ function _updatePersistentCodesEnabled() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ function _updatePersistentCodesEnabled() {
               })();
               dependencyMap = tmp19;
               if (null != tmp19) {
-                let obj2 = v0(9712);
+                let obj2 = v0(9751);
                 const intl = callback(1236).intl;
                 const string = intl.string;
                 const t = callback(1236).t;
@@ -223,7 +223,7 @@ function _updatePersistentCodesEnabled() {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -258,7 +258,7 @@ function _updatePersistentCodesEnabled() {
                         return obj;
                       } else {
                         c0 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } catch (tmp7) {
                       c0 = tmp;
@@ -290,7 +290,7 @@ function _updatePersistentCodesEnabled() {
             throw arg1;
           } else if (arg0 !== 2) {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             v0 = 3;
             obj = { value: null, done: true };

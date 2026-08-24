@@ -2,7 +2,6 @@
 import getChildMapping from "TransitionChildMapping.tsx";
 import closure_2 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import { getChildMapping } from "TransitionChildMapping.tsx";
 
 require = arg1;
 function _toPropertyKey(obj) {
@@ -196,7 +195,7 @@ prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, closure
   }
   const _currentlyTransitioningKeys = self._currentlyTransitioningKeys;
   _currentlyTransitioningKeys.delete(closure_1);
-  const childMapping = _getChildMapping.getChildMapping(self.props.children);
+  const childMapping = require("TransitionChildMapping.tsx").getChildMapping(self.props.children);
   if (flag) {
     if (null != childMapping) {
       if (childMapping.hasOwnProperty(closure_1)) {

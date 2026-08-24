@@ -3,7 +3,6 @@ import trackExposureToExperiment from "../ExperimentManager.tsx";
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../ExperimentStore.tsx";
 import closure_4 from "../apex/ApexExperimentStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
@@ -12,7 +11,7 @@ export const useExperimentAssignment = function useExperimentAssignment(experime
   const _require = experiment;
   dependencyMap = arg1;
   const items = [closure_3, closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (experiment.system === experiment(table[4]).ExperimentSystem.LEGACY) {
       const userExperimentDescriptor = closure_1_3.getUserExperimentDescriptor(tmp.name);
       let bucket;
@@ -49,7 +48,7 @@ export const useExperimentServerAssignment = function useExperimentServerAssignm
   const _require = experiment;
   dependencyMap = arg1;
   let items = [closure_3, closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let name = experiment;
     const items = [closure_1_3, closure_1_4];
     [obj, obj2] = closure_1_2(items, 2);

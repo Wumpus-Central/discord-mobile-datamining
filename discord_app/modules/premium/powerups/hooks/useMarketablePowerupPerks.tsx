@@ -3,7 +3,6 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import closure_4 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import set from "../../../../../_runtime/00002_set.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
@@ -14,7 +13,7 @@ const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMark
 export default function useMarketablePowerupPerks(arg0) {
   const _require = arg0;
   let items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let tmp2;
     if (stateForGuild != null) {
@@ -25,7 +24,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(11745)(arg0);
+  let tmp2 = stateFromStores(11794)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return React.useMemo(() => {

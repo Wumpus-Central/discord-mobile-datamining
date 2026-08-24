@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import frozen from "../ParentalConsentWarningTypes.tsx";
@@ -46,7 +46,7 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16776, dependencyMap.paths), "ParentalConsentWarningModal", obj);
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   }
 }
@@ -67,18 +67,18 @@ let prototype = function ParentalConsentWarningManager() {
         }
         return tmp;
       });
-      callback(16682).maybeFetchWarning();
+      callback(16778).maybeFetchWarning();
       if (!closure_6.shouldFetchToday()) {
         callback2(closure_6.getWarning());
       }
     },
     APP_STATE_UPDATE(state) {
       if (state.state === constants.ACTIVE) {
-        callback(16682).maybeFetchWarning();
+        callback(16778).maybeFetchWarning();
         if (!closure_6.shouldFetchToday()) {
           callback2(obj2.getWarning());
         }
-        const obj = callback(16682);
+        const obj = callback(16778);
         obj2 = closure_6;
       }
     },
@@ -101,16 +101,16 @@ let prototype = function ParentalConsentWarningManager() {
             if (warning != null) {
               const surfaces = warning.surfaces;
               if (surfaces != null) {
-                hasItem = surfaces.includes(callback(14225).ParentalConsentWarningSurface.BANNER);
+                hasItem = surfaces.includes(callback(14293).ParentalConsentWarningSurface.BANNER);
               }
             }
             if (true === hasItem) {
-              callback(16682).forceFetchWarning();
-              const obj2 = callback(16682);
+              callback(16778).forceFetchWarning();
+              const obj2 = callback(16778);
             }
           } else {
-            callback(16682).forceFetchWarning();
-            const obj = callback(16682);
+            callback(16778).forceFetchWarning();
+            const obj = callback(16778);
           }
         }
         tmp = undefined !== closure_3 && closure_3 !== someResult;
@@ -118,7 +118,7 @@ let prototype = function ParentalConsentWarningManager() {
     },
     LOGOUT() {
       c3 = undefined;
-      callback(16682).resetFetchState();
+      callback(16778).resetFetchState();
     }
   };
   return applyArgumentsResult;

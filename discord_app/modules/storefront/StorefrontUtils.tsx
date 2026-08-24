@@ -8,7 +8,6 @@ import closure_5 from "../../stores/UserStore.tsx";
 import closure_6 from "SKUPricesStore.tsx";
 import ME from "../../Constants.tsx";
 import { PremiumTypes } from "../premium/PremiumConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function useSKUPrice(sku) {
@@ -80,7 +79,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: 1359806465, storeHasPrice: -434843420 };
+    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -237,7 +236,7 @@ function formatSKUPrice(arg0, arg1) {
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontUtils.tsx");
 
 export const transformStorefrontPricesServer = function transformStorefrontPricesServer(storefront_pricing) {
-  let obj = { skuPriceMap: applyDefault.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
+  let obj = { skuPriceMap: applyDefault.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, storefrontPromotionIds: pricingResultId.storefront_promotion_ids, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
   const obj2 = applyDefault;
   obj[1] = applyDefault.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => callback(12).mapValues(arg0, (user_price) => {
     const obj = { userPrice: user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount })), prices: callback(table[6]).mapValues(user_price.prices, (arg0) => callback(table[6]).mapValues(arg0, (arr) => arr.map(() => { ... }))) };
@@ -296,14 +295,14 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const _require = tmp2;
   let stateFromStores;
   const items = [closure_4];
-  stateFromStores = _initialize.useStateFromStores(items, () => locale.locale);
+  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
   const items1 = [tmp2, stateFromStores];
   return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
 };
 export const useFormatSKUPrice = function useFormatSKUPrice(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => locale.locale);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
   const items1 = [arg0, stateFromStores];
   return React.useMemo(() => closure_1_14(closure_0, stateFromStores), items1);
 };
@@ -376,7 +375,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: 1359806465, storeHasPrice: -434843420 };
+    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

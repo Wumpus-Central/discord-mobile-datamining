@@ -13,8 +13,8 @@ let closure_5 = ApexExperiment.createApexExperiment({ name: "2026-03-message-boo
 class ForLaterFreemiumConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("module_38")(null != require.b, "Config is missing bookmark limit");
-    tmp3 = require("module_38")(null != require.r, "Config is missing reminder limit");
+    tmp2 = require("../../../_runtime/metro/00038__.js")(null != require.b, "Config is missing bookmark limit");
+    tmp3 = require("../../../_runtime/metro/00038__.js")(null != require.r, "Config is missing reminder limit");
     obj.enabled = global;
     ({ b: tmp.bookmarkLimit, r: tmp.reminderLimit } = require);
     return obj;

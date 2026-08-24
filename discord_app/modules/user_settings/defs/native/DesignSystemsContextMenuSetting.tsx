@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
   getComponent() {
-    return DemoContextMenu.default;
+    return DemoContextMenu /* DemoContextMenu */.default;
   }
 };
 const route = createToggle.createRoute(obj);

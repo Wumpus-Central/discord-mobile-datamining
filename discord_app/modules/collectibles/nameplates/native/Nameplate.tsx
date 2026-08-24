@@ -43,7 +43,7 @@ function NameplateInner(isFocused) {
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = callback2(flag3, isPressed, flag, flag2, flag5);
-  obj1 = flag6(4115);
+  obj1 = flag6(4119);
   let num = 1;
   if (flag6) {
     num = 0;
@@ -59,7 +59,7 @@ function NameplateInner(isFocused) {
       const result = sharedValue.set(obj.withTiming(1, obj));
     }
   }, items1);
-  let tmpResult = tmp(4115);
+  let tmpResult = tmp(4119);
   class A {
     constructor() {
       obj = { opacity: closure_1.get() };
@@ -71,9 +71,9 @@ function NameplateInner(isFocused) {
   A.__initData = closure_8;
   const animatedStyle = tmpResult.useAnimatedStyle(A);
   tmpResult = tmp(1946);
-  const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4310)());
-  const tmp6 = sharedValue(4310)();
-  const nameplateAssets = flag6(9222).getNameplateAssets(nameplate);
+  const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4314)());
+  const tmp6 = sharedValue(4314)();
+  const nameplateAssets = flag6(9259).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -105,25 +105,25 @@ function NameplateInner(isFocused) {
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
-    tmp15Result = callback(tmp5(4756), obj);
+    tmp15Result = callback(tmp5(4761), obj);
     const tmp15 = callback;
-    const tmp5Result = tmp5(4756);
+    const tmp5Result = tmp5(4761);
   }
   const items4 = [tmp15Result, ];
   const tmp13 = closure_6;
-  const tmpResult1 = flag6(9222);
+  const tmpResult1 = flag6(9259);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
       const obj2 = { url: null, style: null, autoplay: true };
       obj2[0] = str;
       obj2[1] = tmp4.img;
-      let tmp17 = callback(tmp(9217).APNGPlayer, obj2);
+      let tmp17 = callback(tmp(9254).APNGPlayer, obj2);
     }
     items4[1] = tmp17;
     obj[1] = items4;
-    return tmp13(tmp5(4115).View, obj);
+    return tmp13(tmp5(4119).View, obj);
   }
-  tmp17 = callback(tmp5(5449), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = callback(tmp5(5454), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {

@@ -1,7 +1,6 @@
 // discord_app/modules/game_store/TestModeUtils.tsx
 import closure_2 from "../activities/DeveloperActivityShelfStore.tsx";
 import closure_3 from "../../stores/game_store/TestModeStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
@@ -24,7 +23,7 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
   const _require = id;
   const items = [closure_3, closure_2];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let result = closure_1_3.inTestModeForApplication(tmp);

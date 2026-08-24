@@ -8,7 +8,6 @@ import closure_5 from "../../stores/ChannelStore.tsx";
 import closure_6 from "GuildOnboardingHomeSettingsStore.tsx";
 import closure_7 from "GuildOnboardingMemberActionStore.tsx";
 import ME from "../../Constants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 function _fetchGuildHomeSettings() {
@@ -34,8 +33,8 @@ function _fetchGuildHomeSettings() {
       obj4[1] = callback;
       obj2.dispatch(obj4);
       lib = yield "HermesInternal";
-      dependencyMap = callback(11453).settingsFromServer(lib.body);
-      const obj8 = callback(11453);
+      dependencyMap = callback(11502).settingsFromServer(lib.body);
+      const obj8 = callback(11502);
       const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
       obj6[1] = callback;
       obj6[2] = dependencyMap;
@@ -72,7 +71,7 @@ function _fetchNewMemberActions() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -126,8 +125,8 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(11453).actionsFromServer(lib.body);
-            const obj11 = callback(11453);
+            dependencyMap = callback(11502).actionsFromServer(lib.body);
+            const obj11 = callback(11502);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;
@@ -327,7 +326,7 @@ export const completeNewMemberAction = function completeNewMemberAction(c0, c1) 
         tmpResult.track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj);
       }
     }
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_9.GUILD_MEMBER_ACTION_UPDATE(c0, c1);
     HTTP.post(obj1);

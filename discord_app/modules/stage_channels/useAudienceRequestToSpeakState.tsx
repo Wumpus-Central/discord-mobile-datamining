@@ -1,6 +1,5 @@
 // discord_app/modules/stage_channels/useAudienceRequestToSpeakState.tsx
 import closure_2 from "../../stores/VoiceStateStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const obj = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };
@@ -11,7 +10,7 @@ export default function useAudienceRequestToSpeakState(arg0, arg1) {
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       if (null != closure_1) {
         const voiceStateForChannel = closure_1_2.getVoiceStateForChannel(tmp8, tmp);

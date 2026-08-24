@@ -96,7 +96,7 @@ let closure_13 = importAllResult.memo((emoji) => {
   obj1[4] = url;
   obj[1] = closure_9(EmojiDefault, obj1);
   obj[4] = closure_9(View, obj);
-  return closure_9(emoji(5433).PressableOpacity, obj);
+  return closure_9(emoji(5438).PressableOpacity, obj);
 });
 const obj8 = { height: 12, width: 12, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx");
@@ -120,7 +120,8 @@ export default importAllResult.memo((selectedEmoji) => {
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const found = frequentlyUsedReactionEmojis.filter((emoji) => {
     let obj = onPressEmoji(substr[15]);
-    obj = { emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI };
+    obj = { emoji, channel: "Array", intention: -1 };
+    obj[2] = constants.DEFAULT_REACT_EMOJI;
     return !obj.isEmojiFilteredOrLocked(obj);
   });
   substr = found.slice(0, rounded - 1);

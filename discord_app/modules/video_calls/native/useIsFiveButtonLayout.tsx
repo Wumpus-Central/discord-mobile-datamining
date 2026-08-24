@@ -10,10 +10,10 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
-  const obj = _initialize;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
+  const obj = initialize;
   const tmp = _require;
-  let isConnectedToVoiceChannel = _useIsConnectedToVoiceChannel.useIsConnectedToVoiceChannel(stateFromStores);
+  let isConnectedToVoiceChannel = require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(stateFromStores);
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -22,7 +22,7 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
     guild_id = null;
   }
   let guild_id1;
-  const obj3 = _useIsConnectedToVoiceChannel;
+  const obj3 = useIsConnectedToVoiceChannel;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }
@@ -33,8 +33,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp6 = guild_id(8698);
-  const tmp6Result = guild_id(8698)(guild_id1, id);
+  const tmp6 = guild_id(8735);
+  const tmp6Result = guild_id(8735)(guild_id1, id);
   const items1 = [closure_4];
   const items2 = [guild_id];
   const stateFromStores1 = tmp(589).useStateFromStores(items1, () => closure_1_4.getGuild(guild_id), items2);
@@ -53,8 +53,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp5Result = guild_id(8700);
-  const tmp5ResultResult = guild_id(8700)(id1);
+  const tmp5Result = guild_id(8737);
+  const tmp5ResultResult = guild_id(8737)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp6Result;
   }

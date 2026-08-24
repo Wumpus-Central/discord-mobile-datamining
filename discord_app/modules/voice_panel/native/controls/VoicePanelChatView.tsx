@@ -19,7 +19,7 @@ let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "h
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
   const windowDimensions = importAllResult.useContext(dismissPanelDefault).windowDimensions;
-  let obj = windowDimensions(4115);
+  let obj = windowDimensions(4119);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
   };
@@ -42,15 +42,15 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4329);
+    obj[1] = tmp(4333);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11435), obj);
-    const tmpResult = tmp(11435);
+    let tmp5Result = tmp5(tmp(11484), obj);
+    const tmpResult = tmp(11484);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4329);
+    obj[1] = tmp(4333);
     obj[2] = callback;
     tmp5Result = tmp5(IconButton.IconButton, obj);
   }

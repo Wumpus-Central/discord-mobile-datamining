@@ -10,7 +10,7 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "Array" });
+const merged = Object.assign({ initialized: false, callId: "r" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
@@ -32,7 +32,7 @@ export default function _default() {
   dependencyMap = undefined;
   let stateFromStores;
   id = id.getId();
-  obj = _initialize;
+  obj = initialize;
   const items = [closure_5];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -58,14 +58,14 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9748)();
+  const tmp3 = id(9787)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = _initialize.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
-  const obj2 = _initialize;
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  const obj2 = initialize;
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = _initialize.useStateFromStores(items3, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
     let channelId;
     if (channelId != null) {
       channelId = channelId.channelId;

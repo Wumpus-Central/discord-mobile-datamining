@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMessageUnreadGuildActionSheet(guildId) {
   const _require = guildId;
-  let obj = _updateGuildPreset;
+  let obj = updateGuildPreset;
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   ({ unread, notification } = guildPresetSettings);
   let stringResult;

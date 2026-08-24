@@ -2,12 +2,11 @@
 import set from "../../../../_runtime/00002_set.js";
 import context from "../../window/native/AppEntryKeyContext.tsx";
 import computeEntryStateDefault from "KeyboardUIStore.native.tsx";
-import { context } from "../../window/native/AppEntryKeyContext.tsx";
 
 const result = set.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default function useCustomKeyboardHeight() {
-  _require = _context.useAppEntryKey();
+  _require = require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
   return computeEntryStateDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
 };
 export const getCustomKeyboardHeight = function getCustomKeyboardHeight(arg0) {

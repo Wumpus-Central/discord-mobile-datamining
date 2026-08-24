@@ -37,13 +37,18 @@ for (const key10044 in require("prefix")) {
   arg5[key10044] = require("prefix")[key10044];
   continue;
 }
-for (const key10048 in require("fromDatabaseTransaction")) {
+for (const key10048 in require("malformedValueCount")) {
   let tmp11 = key10048;
-  arg5[key10048] = require("fromDatabaseTransaction")[key10048];
+  arg5[key10048] = require("malformedValueCount")[key10048];
   continue;
 }
-for (const key10052 in require("TableId")) {
+for (const key10052 in require("fromDatabaseTransaction")) {
   let tmp12 = key10052;
-  arg5[key10052] = require("TableId")[key10052];
+  arg5[key10052] = require("fromDatabaseTransaction")[key10052];
+  continue;
+}
+for (const key10056 in require("TableId")) {
+  let tmp13 = key10056;
+  arg5[key10056] = require("TableId")[key10056];
   continue;
 }

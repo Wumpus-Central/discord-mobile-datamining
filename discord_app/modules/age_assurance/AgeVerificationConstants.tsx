@@ -3,7 +3,6 @@ import ME from "../../Constants.tsx";
 import messagesProxyDefault from "AgeAssurance.messages.js";
 import AgeVerificationModalEntryPoint from "AgeVerificationAnalyticsUtils.tsx";
 import set from "../../../_runtime/00002_set.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 let items = [AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.NSFW_GUILD];
@@ -21,22 +20,22 @@ export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
   const _require = arg0;
   let obj = { title: null, description: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.HphYKp);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t["GCZC+9"]);
+  const intl = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx").t.HphYKp);
+  const intl2 = require("../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../intl/index.native.tsx").t["GCZC+9"]);
   const items = [obj, , ];
   obj = { title: null, description: null };
-  const intl3 = _getSystemLocale.intl;
-  obj[0] = intl3.string(_getSystemLocale.t.nkO4L3);
-  const intl4 = _getSystemLocale.intl;
-  obj[1] = intl4.string(_getSystemLocale.t.rHZFsH);
+  const intl3 = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl3.string(require("../../intl/index.native.tsx").t.nkO4L3);
+  const intl4 = require("../../intl/index.native.tsx").intl;
+  obj[1] = intl4.string(require("../../intl/index.native.tsx").t.rHZFsH);
   items[1] = obj;
   obj = { title: null, description: null };
-  const intl5 = _getSystemLocale.intl;
-  obj[0] = intl5.string(_getSystemLocale.t.aVwLfn);
-  const intl6 = _getSystemLocale.intl;
-  obj[1] = intl6.format(_getSystemLocale.t.n5vd1E, {
+  const intl5 = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl5.string(require("../../intl/index.native.tsx").t.aVwLfn);
+  const intl6 = require("../../intl/index.native.tsx").intl;
+  obj[1] = intl6.format(require("../../intl/index.native.tsx").t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = closure_1_1(closure_1_2[3]);
       obj.openUrl(closure_1_1(closure_1_2[4]).getArticleURL(closure_1_3.TIGGER_PAWTECT_SYSTEM_DMS));
@@ -47,6 +46,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   items[2] = obj;
   return items;
 };
+export const TRUSTED_PROVIDERS_URL = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";

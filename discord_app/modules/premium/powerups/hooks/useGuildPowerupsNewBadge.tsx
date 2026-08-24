@@ -6,7 +6,6 @@ import closure_5 from "../GuildPowerupsStore.tsx";
 import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "../constants/GuildPowerupsConstants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 
 const require = arg1;
 let closure_8 = require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
@@ -20,7 +19,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
   let _require;
   importDefault = undefined;
   _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   const tmp4Result = useGuildPowerupNewPerkMarketingVersionDefault(arg0, stateFromStores);
@@ -37,7 +36,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(_useSelectedDismissibleContent.useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = callback(require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
@@ -58,9 +57,9 @@ export default function useGuildPowerupsNewBadge(arg0) {
 export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildPowerupsNewBadge(guildId) {
   const _require = guildId;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
-  let obj = _initialize;
-  const tmp2Result = num(11672)(guildId, stateFromStores);
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
+  let obj = initialize;
+  const tmp2Result = num(11721)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

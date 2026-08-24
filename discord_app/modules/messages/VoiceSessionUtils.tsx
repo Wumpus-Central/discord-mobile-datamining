@@ -4,7 +4,6 @@ import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../user_affinities/UserAffinitiesV2Store.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";
 import closure_6 from "../../stores/UserStore.tsx";
-import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
 import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 
 const require = arg1;
@@ -34,7 +33,7 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return _maybeSortByProbability.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  return require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
@@ -65,7 +64,7 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   let _require = channel.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
-  let obj = _useNullableMessageAuthor;
+  let obj = useNullableMessageAuthor;
   const messageAuthor = obj.getMessageAuthor(channel_id);
   _require = channel_id;
   const call = channel_id.call;
@@ -90,7 +89,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = _maybeSortByProbability.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const result = require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
     const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
     return obj;

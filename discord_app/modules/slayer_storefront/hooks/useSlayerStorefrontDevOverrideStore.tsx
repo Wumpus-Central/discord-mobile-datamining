@@ -28,6 +28,14 @@ const tmp2 = keys.create()((arg0) => {
     isNitroEligibleForSocialLayerStorefront: false,
     setIsNitroEligibleForSocialLayerStorefront(isNitroEligibleForSocialLayerStorefront) {
       return callback({ isNitroEligibleForSocialLayerStorefront });
+    },
+    overrideCurrentPremiumPlanId: false,
+    setOverrideCurrentPremiumPlanId(overrideCurrentPremiumPlanId) {
+      return callback({ overrideCurrentPremiumPlanId });
+    },
+    currentPremiumPlanId: null,
+    setCurrentPremiumPlanId(currentPremiumPlanId) {
+      return callback({ currentPremiumPlanId });
     }
   };
 });

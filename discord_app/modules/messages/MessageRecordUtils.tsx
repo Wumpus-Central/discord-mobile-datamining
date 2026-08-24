@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import trimTrailingPunctuationDefault from "../coded_links/findCodedLinks.tsx";
 import _resolveGiftCode from "../../utils/GiftCodeUtils.tsx";
 import useNullableMessageAuthor from "useMessageAuthor.tsx";
@@ -41,8 +41,8 @@ function createMinimalMessageRecord(timestamp) {
   } else {
     const embeds = timestamp.embeds;
     const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-    items = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
-    const obj2 = _getEffectiveVideoProvider;
+    items = require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
+    const obj2 = getEffectiveVideoProvider;
   }
   obj.embeds = items;
   const date = new Date(timestamp.timestamp);
@@ -50,7 +50,7 @@ function createMinimalMessageRecord(timestamp) {
   if (components == null) {
     components = [];
   }
-  obj.components = _flattenComponents.transformComponents(components);
+  obj.components = require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(components);
   const NON_PARSED = constants3.NON_PARSED;
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
@@ -159,7 +159,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4819);
+  let tmp9Result = tmp9(4824);
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -169,7 +169,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4381);
+  tmp9Result = tmp9(4385);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -386,8 +386,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result8 = result7;
         if (null != message2.components) {
-          result8 = result7.set("components", _flattenComponents.transformComponents(message2.components));
-          const obj14 = _flattenComponents;
+          result8 = result7.set("components", require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(message2.components));
+          const obj14 = flattenComponents;
         }
         let result9 = result8;
         if (null != message2.role_subscription_data) {
@@ -485,8 +485,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
       } else {
         const embeds = message2.embeds;
         const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-        items3 = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
-        const obj9 = _getEffectiveVideoProvider;
+        items3 = require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
+        const obj9 = getEffectiveVideoProvider;
       }
       const result17 = result4.set("embeds", items3);
     }

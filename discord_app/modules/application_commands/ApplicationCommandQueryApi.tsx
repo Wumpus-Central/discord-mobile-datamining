@@ -34,7 +34,7 @@ function findCommandInSection(found, commandKey) {
       }
       let command;
       if (null != rootCommand) {
-        obj = _buildCommand;
+        obj = buildCommand;
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -61,7 +61,7 @@ let result = require("set").fileFinishedImporting("modules/application_commands/
 export const getCachedCommand = function getCachedCommand(type, commandKey) {
   closure_0 = arg2;
   if (null == commandKey) {
-    return { application: "r", command: "accessibilityRole" };
+    return { application: "Array", command: "ct" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -116,7 +116,7 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
         }
       }
     }
-    return { application: "r", command: "accessibilityRole" };
+    return { application: "Array", command: "ct" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -449,7 +449,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "r", application: "accessibilityRole" };
+    return { command: "Array", application: "ct" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

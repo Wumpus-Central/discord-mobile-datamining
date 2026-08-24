@@ -2,15 +2,15 @@
 import set2 from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import fetchUserAffinitiesV2 from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
 import onPostConnectionOpenDefault from "../shared/GiftIntentReconcilingManager.tsx";
-import closure_3 from "../../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../stores/MessageStore.tsx";
-import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_7 from "../PremiumGiftingIntentStore.tsx";
+import closure_2 from "../../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/MessageStore.tsx";
+import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../PremiumGiftingIntentStore.tsx";
 import GuildFeatures from "../../PremiumConstants.tsx";
 
 require = arg1;
-({ GiftIntentSecondaryAction: closure_8, GiftIntentType: c9 } = GuildFeatures);
+({ GiftIntentSecondaryAction: error, GiftIntentType: closure_8 } = GuildFeatures);
 onPostConnectionOpenDefault;
 class MobileGiftIntentCardManager extends tmp3 {
 }
@@ -21,21 +21,21 @@ prototype["isChannelEligible"] = function isChannelEligible(channel) {
 prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   let self = this;
   self = this;
-  closure_1 = id;
+  dependencyMap = id;
   const _require = closure_0;
-  const EnableFriendAnniversaryNotifications = _require(self[8]).EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications = require("../../../user_settings/UserSettings.tsx").EnableFriendAnniversaryNotifications;
   if (EnableFriendAnniversaryNotifications.getSetting()) {
-    if (!closure_7.isGiftIntentMessageInCooldown(closure_0)) {
+    if (!closure_6.isGiftIntentMessageInCooldown(closure_0)) {
       if (id === store.getChannelId()) {
         if (ready.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(tmp2[9]);
+            let tmpResult = tmp(7647);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
-            userAffinity = userAffinity.getUserAffinity(closure_0);
-            tmpResult = tmp(tmp2[10]);
+            const userAffinity = self.getUserAffinity(closure_0);
+            tmpResult = tmp(9214);
             let obj = { name: null, type: null, properties: null };
-            obj[0] = tmp(tmp2[11]).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
-            obj[1] = tmp(tmp2[11]).ImpressionTypes.VIEW;
+            obj[0] = tmp(503).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
+            obj[1] = tmp(503).ImpressionTypes.VIEW;
             obj = { gift_intent_type: null, dm_affinity: null, channel_id: null };
             obj[0] = tmp6.FRIEND_ANNIVERSARY;
             let dmProbability;
@@ -50,7 +50,7 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
           tmp6 = constants2;
         } else {
           obj5.whenReady(id, () => {
-            if (closure_1_6.getChannelId() === closure_1) {
+            if (closure_1_5.getChannelId() === closure_1) {
               self.maybeSendCard(tmp, closure_0);
             }
           });
@@ -63,15 +63,15 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
 prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedChannelIfEligible(channelId) {
   let self = this;
   self = this;
-  channel = channel.getChannel(channelId);
+  const channel = self.getChannel(channelId);
   if (null != channel) {
     if (self.isChannelEligible(channel)) {
       const _Set = Set;
       const set = new Set(channel.recipients);
-      const friendAnniversaries = closure_7.getFriendAnniversaries();
+      const friendAnniversaries = closure_6.getFriendAnniversaries();
       const found = friendAnniversaries.find((arg0) => set.has(arg0));
       if (null != found) {
-        const delayedCall = new found(set[12]).DelayedCall(1000, () => {
+        const delayedCall = new found(channel[12]).DelayedCall(1000, () => {
           self.maybeSendCard(channel.id, found);
         });
         delayedCall.delay();
@@ -79,18 +79,12 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
     }
   }
 };
-prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
-  if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
-    const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
-    const obj2 = fetchUserAffinitiesV2;
-  }
-};
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {
   const result = this.sendCardInSelectedChannelIfEligible(channelId.channelId);
 };
 prototype["sendGiftingPromptSystemMessagesIfEligible"] = function sendGiftingPromptSystemMessagesIfEligible() {
-  const result = this.maybeFetchUserAffinities();
-  const result1 = this.sendCardInSelectedChannelIfEligible(store.getChannelId());
+  const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
+  const result = this.sendCardInSelectedChannelIfEligible(store.getChannelId());
 };
 const mobileGiftIntentCardManager = new MobileGiftIntentCardManager();
 let result = require("set").fileFinishedImporting("modules/premium/gifting/native/MobileGiftIntentCardManager.tsx");

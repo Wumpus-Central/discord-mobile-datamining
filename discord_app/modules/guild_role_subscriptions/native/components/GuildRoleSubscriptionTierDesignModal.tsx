@@ -12,10 +12,8 @@ import { GuildRoleSubscriptionsTierScenes as closure_7 } from "../../GuildRoleSu
 import { UPLOAD_SMALL_SIZE } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
 import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
-import { pickImage } from "FormImagePicker.tsx";
 
 require = arg1;
 function MemberPreviews(role) {
@@ -41,8 +39,8 @@ function MemberPreviews(role) {
   return callback3(View, obj);
 }
 function Content() {
-  const tmp3 = role(13358)();
-  let obj = _useEditStateContext;
+  const tmp3 = role(13416)();
+  let obj = useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   obj1 = getRoleEmojisAll;
@@ -66,32 +64,32 @@ function Content() {
     tmp10 = obj;
   }
   const tmp6 = callback(obj1.useRoleColor(editStateId, guildId), 2);
-  const roleSubscriptionSettingsDisabled = _useRoleSubscriptionSettingsDisabled.useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = require("../../RoleSubscriptionSettingsDisabledContext.tsx").useRoleSubscriptionSettingsDisabled();
   obj = { children: null };
   const items1 = [callback2(MemberPreviews, { role }), , , , ];
   obj1 = { style: tmp3.header, children: null };
-  let tmpResult = tmp(8913);
+  let tmpResult = tmp(8950);
   const intl = tmp4(1236).intl;
-  obj1[1] = intl.string(_getSystemLocale.t.sEr1zr);
+  obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  tmpResult = tmp(16951);
+  tmpResult = tmp(17044);
   const intl2 = tmp4(1236).intl;
-  obj2[0] = intl2.string(_getSystemLocale.t.Glqj9m);
+  obj2[0] = intl2.string(require("../../../../intl/index.native.tsx").t.Glqj9m);
   obj2[1] = tmp10;
   obj2[2] = UPLOAD_SMALL_SIZE;
-  obj2[3] = _pickImage.PreviewShape.SQUIRCLE;
+  obj2[3] = require("FormImagePicker.tsx").PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "a" });
+    return callback({ icon: icon.uri, unicodeEmoji: "r" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);
   obj3 = { style: tmp3.header, children: null };
-  const tmp4Result = _useRoleSubscriptionSettingsDisabled;
+  const tmp4Result = useRoleSubscriptionSettingsDisabled;
   const intl3 = tmp4(1236).intl;
-  obj3[1] = intl3.string(_getSystemLocale.t["W7hH+z"]);
-  items1[3] = callback2(role(8913), obj3);
-  items1[4] = callback2(role(16989), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  obj3[1] = intl3.string(require("../../../../intl/index.native.tsx").t["W7hH+z"]);
+  items1[3] = callback2(role(8950), obj3);
+  items1[4] = callback2(role(17082), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

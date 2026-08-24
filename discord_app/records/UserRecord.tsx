@@ -296,7 +296,7 @@ const prototype = UserRecord.prototype;
 Object.defineProperty(prototype, "createdAt", {
   get: function createdAt() {
     const obj = DISCORD_EPOCH;
-    return new Date(DISCORD_EPOCH.extractTimestamp(this.id));
+    return new Date(require("../utils/SnowflakeUtils.tsx").extractTimestamp(this.id));
   },
   set: undefined
 });
@@ -473,7 +473,7 @@ prototype["isOnReverseTrial"] = function isOnReverseTrial() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === create /* create */.PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
@@ -485,7 +485,7 @@ prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === create /* create */.PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
@@ -497,7 +497,7 @@ prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === create.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === create /* create */.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -555,7 +555,7 @@ prototype["isFractionalPremium"] = function isFractionalPremium() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === create /* create */.PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -606,14 +606,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -642,7 +642,7 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return getNameplateData.getNameplateData(nameplate);
+    return getNameplateData /* getNameplateData */.getNameplateData(nameplate);
   },
   set: undefined
 });
@@ -654,7 +654,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = create.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = create /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },

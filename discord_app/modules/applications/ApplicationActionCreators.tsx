@@ -5,7 +5,6 @@ import closure_5 from "../../records/ApplicationRecord.tsx";
 import importDefaultResult from "ApplicationStore.tsx";
 import ME from "../../Constants.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function fetchApplication() {
@@ -39,7 +38,7 @@ function _fetchApplication() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -245,7 +244,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -403,7 +402,7 @@ export const useApplicationWithLoggedOutContext = function useApplicationWithLog
   const data = tmp.data;
   error = tmp.error;
   const obj = {
-    app: _initialize.useStateFromStores(items, () => {
+    app: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
       if (null == data) {
         const application = closure_1_4.getApplication(closure_0);
         if (null != application) {

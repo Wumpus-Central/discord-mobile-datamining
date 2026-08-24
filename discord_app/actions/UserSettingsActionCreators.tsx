@@ -7,7 +7,6 @@ import closure_5 from "../modules/user_settings/SelectivelySyncedUserSettingsSto
 import closure_6 from "../modules/user_settings/ThemeStore.tsx";
 import { ThemeTypes } from "../Constants.tsx";
 import SystemThemeState from "../modules/user_settings/ThemeConstants.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 ({ SystemTheme, SystemThemeState: closure_8 } = SystemThemeState);
@@ -63,7 +62,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -114,7 +113,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(4066).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(4069).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -143,7 +142,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
@@ -171,10 +170,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = closure_1_0(4066).ClientThemeSettings;
+            let ClientThemeSettings = closure_1_0(4069).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = closure_1_0(4066).DeveloperMode;
+            const DeveloperMode = closure_1_0(4069).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -206,11 +205,11 @@ export default {
   },
   updateLocale(arg0) {
     const _require = arg0;
-    const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("localization", (arg0) => {
       const StringValue = callback(closure_1_2[8]).StringValue;
       arg0.locale = StringValue.create({ value: callback });
-    }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
   },
   updateTheme(theme) {
     const _require = theme;
@@ -218,7 +217,7 @@ export default {
     obj = { theme };
     obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
     if (closure_5.shouldSync("appearance")) {
-      const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
         if (closure_1_7.DARK === theme) {
           let DARK = theme(closure_1_2[7]).Theme.DARK;
@@ -232,13 +231,13 @@ export default {
           DARK = theme(closure_1_2[7]).Theme.DARK;
         }
         arg0.theme = DARK;
-      }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
     }
   }
 };
 export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders) {
   const _require = compatibleGuildFolders;
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync("guildFolders", (arg0) => {
     arg0.folders = compatibleGuildFolders.map((guildIds) => {
       const GuildFolder = callback(table[7]).GuildFolder;
@@ -271,7 +270,7 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
       }
       return obj;
     });
-  }, _updateUserGuildSettings.UserSettingsDelay.FREQUENT_USER_ACTION);
+  }, require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.FREQUENT_USER_ACTION);
 };
 export const saveClientTheme = function saveClientTheme(backgroundGradientPresetId, INFREQUENT_USER_ACTION) {
   backgroundGradientPresetId = backgroundGradientPresetId.backgroundGradientPresetId;

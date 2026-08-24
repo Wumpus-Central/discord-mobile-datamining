@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 
 export default function useUserProfileMutuals(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_7];
   const tmp = stateFromStores(obj.useStateFromStoresArray(items, () => {
     const items = [closure_1_7.getMutualFriendsCount(lib.id), closure_1_7.getMutualFriends(lib.id), closure_1_7.getMutualGuilds(lib.id), closure_1_7.isFetchingProfile(lib.id), closure_1_7.isFetchingFriends(lib.id)];
@@ -22,10 +22,10 @@ export default function useUserProfileMutuals(arg0) {
   importDefault = tmp3;
   dependencyMap = tmp4;
   const items1 = [closure_5];
-  stateFromStores = _initialize.useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
-  const obj2 = _initialize;
+  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
+  const obj2 = initialize;
   const items2 = [closure_6];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
   const items3 = [tmp3, stateFromStores];
   let tmp7 = stateFromStores1(() => {
     let sortByResult = closure_1;
@@ -68,7 +68,7 @@ export default function useUserProfileMutuals(arg0) {
     }
     return dependencyMap;
   }, items4);
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const tmp9 = usePrevValueDefault(tmp2);
   const tmp10 = usePrevValueDefault(tmp7);
   obj = { mutualFriendsCount: tmp2, mutualFriends: null, mutualGuilds: null, isFetching: null, isFetchingFriends: null };

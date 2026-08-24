@@ -30,16 +30,16 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   const _require = guild;
   const items = [closure_2];
   const items1 = [guild];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return obj.can(closure_1_5.BAN_MEMBERS, tmp) || obj.can(closure_1_5.KICK_MEMBERS, tmp) || obj.can(closure_1_5.MODERATE_MEMBERS, tmp) || obj.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _initialize;
+  const obj = initialize;
   const tmp = _require;
   const items2 = [closure_3];
   const items3 = [guild];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_3.getGuildIncident(tmp.id);
@@ -48,8 +48,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8234).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8234);
+    hasDetectedActivityResult = tmp(8274).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8274);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -68,7 +68,7 @@ export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
@@ -78,12 +78,12 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
-  const obj = _initialize;
+  const obj = initialize;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -91,6 +91,6 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   if (id == null) {
     id = closure_4;
   }
-  const obj2 = _isInMentionRaidExperiment;
-  return _isInMentionRaidExperiment.useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
+  const obj2 = isInMentionRaidExperiment;
+  return require("../guild_automod/ExperimentUtils.tsx").useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

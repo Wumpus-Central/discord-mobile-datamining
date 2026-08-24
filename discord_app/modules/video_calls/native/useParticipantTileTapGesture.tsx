@@ -1,6 +1,6 @@
 // discord_app/modules/video_calls/native/useParticipantTileTapGesture.tsx
 import set from "../../../../_runtime/00002_set.js";
-import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06408_LegacyBaseButton.js";
 
 const result = set.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 

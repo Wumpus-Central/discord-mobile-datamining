@@ -24,27 +24,27 @@ function HideBadgeTile(badge) {
   const intl = badge(1236).intl;
   obj[7] = intl.string(badge(1236).t.TPp3Mq);
   obj[8] = callback;
-  obj = { badge, size: badge(14043).BADGE_TILE_ICON_SIZE, style: null };
+  obj = { badge, size: badge(14111).BADGE_TILE_ICON_SIZE, style: null };
   let badgeIconHidden;
   if (badge.hidden) {
     badgeIconHidden = tmp.badgeIconHidden;
   }
   obj[2] = badgeIconHidden;
-  const items2 = [closure_9(onToggle(14041), obj), ];
+  const items2 = [closure_9(onToggle(14109), obj), ];
   obj1 = { style: tmp.indicator, "aria-hidden": true, children: null };
   if (badge.hidden) {
     const obj2 = { size: "sm", color: null };
     obj2[1] = tmp7(712).colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT;
-    let tmp6Result = tmp6(tmp4(8605).EyeSlashIcon, obj2);
+    let tmp6Result = tmp6(tmp4(8642).EyeSlashIcon, obj2);
   } else {
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp7(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-    tmp6Result = tmp6(tmp4(8607).EyeIcon, obj3);
+    tmp6Result = tmp6(tmp4(8644).EyeIcon, obj3);
   }
   obj1[2] = tmp6Result;
   items2[1] = closure_9(View, obj1);
   obj[9] = items2;
-  return closure_10(badge(6292).Card, obj);
+  return closure_10(badge(6323).Card, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { grid: null, tile: null, badgeIconHidden: null, indicator: null, message: null, messageText: null };

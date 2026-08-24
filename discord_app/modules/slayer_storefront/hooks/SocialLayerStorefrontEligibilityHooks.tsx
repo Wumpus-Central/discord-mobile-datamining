@@ -6,7 +6,6 @@ import closure_4 from "../../user_profile/UserProfileStore.tsx";
 import closure_5 from "../../../stores/GuildStore.tsx";
 import closure_6 from "../../../stores/PresenceStore.tsx";
 import closure_7 from "../SocialLayerStorefrontStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");
@@ -57,7 +56,7 @@ export const useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds = func
   const _require = memo;
   let items = [closure_4, closure_7];
   const items1 = [memo];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
       let tmp4 = closure_1_4;
@@ -113,7 +112,7 @@ export const useUsersPlayingStorefrontEnabledGamesApplicationIds = function useU
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(9200).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(9237).useSlayerStorefrontDevApplicationIdOverride();
   let tmp3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];
@@ -150,7 +149,7 @@ export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlay
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(9200).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(9237).useSlayerStorefrontDevApplicationIdOverride();
   let arr3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];

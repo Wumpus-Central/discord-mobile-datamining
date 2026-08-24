@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
+import _modDef5265 from "../../../../actions/ModalActionCreators.tsx";
 import trackForumChannelSeenBatch from "../../tracking/Tracking.tsx";
 
 let c3 = "create-forum-post";
@@ -14,10 +14,10 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
   if (!tmp4) {
     obj = { guildId: null, channelId: null };
     ({ guildId: obj4[0], parentChannelId: obj4[1] } = guildId);
-    const result1 = tmp(7514).trackForumCreateNewPostStarted(obj);
-    const tmpResult = tmp(7514);
+    const result1 = tmp(7552).trackForumCreateNewPostStarted(obj);
+    const tmpResult = tmp(7552);
   }
-  _modDef5260.pushLazy(asyncRequireImpl(10166, dependencyMap.paths), guildId, c3);
+  _modDef5265.pushLazy(asyncRequireImpl(10205, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;
@@ -28,5 +28,5 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     const result = trackForumChannelSeenBatch.trackMobileForumComposerDismissed();
     const obj = trackForumChannelSeenBatch;
   }
-  _modDef5260.popWithKey(c3);
+  _modDef5265.popWithKey(c3);
 };

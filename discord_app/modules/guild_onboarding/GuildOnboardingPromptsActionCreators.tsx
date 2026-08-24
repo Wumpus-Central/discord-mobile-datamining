@@ -10,7 +10,6 @@ import closure_7 from "GuildOnboardingPromptsStore.tsx";
 import { serverApiResponseToClientState as closure_8 } from "GuildOnboardingPromptsConstants.tsx";
 import ME from "../../Constants.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 function fetchOnboardingPrompts(guildId) {
@@ -18,7 +17,7 @@ function fetchOnboardingPrompts(guildId) {
   let obj = dispatcherDefault;
   obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
   obj.dispatch(obj);
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
@@ -54,7 +53,7 @@ function _maybeFetchOnboardingPrompts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

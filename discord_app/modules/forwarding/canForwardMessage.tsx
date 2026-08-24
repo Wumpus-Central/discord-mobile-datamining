@@ -5,7 +5,6 @@ import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/GuildStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function canForwardMessage(state) {
@@ -103,5 +102,5 @@ export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
   const items = [closure_5, closure_2, closure_3, closure_4];
-  return _initialize.useStateFromStores(items, () => closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
 };

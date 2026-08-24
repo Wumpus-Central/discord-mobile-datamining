@@ -2,8 +2,6 @@
 import set from "../../../_runtime/00002_set.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 
 function getGuildPermissionSpec(permissionOptions) {
   let obj = {};
@@ -476,8 +474,8 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   arr = items.push(tmp2.MANAGE_WEBHOOKS);
   items.push(Permissions.MANAGE_GUILD);
   let obj = { title: null, permissions: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t["mYck+B"]);
+  const intl = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx").t["mYck+B"]);
   _require = tmp;
   obj[1] = items.map((arg0) => table[arg0.toString(arg0)]);
   const permissions = obj.permissions;
@@ -486,8 +484,8 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   const items2 = [, , , , , ];
   ({ CREATE_INSTANT_INVITE: arr4[0], CHANGE_NICKNAME: arr4[1], MANAGE_NICKNAMES: arr4[2], KICK_MEMBERS: arr4[3], BAN_MEMBERS: arr4[4], MODERATE_MEMBERS: arr4[5] } = Permissions);
   obj = { title: null, permissions: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[0] = intl2.string(_getSystemLocale.t.Ny49TN);
+  const intl2 = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl2.string(require("../../intl/index.native.tsx").t.Ny49TN);
   _require = tmp;
   obj[1] = items2.map((arg0) => table[arg0.toString(arg0)]);
   const permissions1 = obj.permissions;
@@ -501,7 +499,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   }
   obj = { title: null, permissions: null };
   const intl3 = tmp6(1236).intl;
-  obj[0] = intl3.string(_getSystemLocale.t.cKobO5);
+  obj[0] = intl3.string(require("../../intl/index.native.tsx").t.cKobO5);
   _require = tmp;
   obj[1] = found.map((arg0) => table[arg0.toString(arg0)]);
   const permissions2 = obj.permissions;
@@ -511,7 +509,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   ({ CONNECT: arr9[0], SPEAK: arr9[1], STREAM: arr9[2], USE_SOUNDBOARD: arr9[3], USE_EXTERNAL_SOUNDS: arr9[4], USE_VAD: arr9[5], PRIORITY_SPEAKER: arr9[6], MUTE_MEMBERS: arr9[7], DEAFEN_MEMBERS: arr9[8], MOVE_MEMBERS: arr9[9], SET_VOICE_CHANNEL_STATUS: arr9[10] } = Permissions);
   obj1 = { title: null, permissions: null };
   const intl4 = tmp6(1236).intl;
-  obj1[0] = intl4.string(_getSystemLocale.t["46Ra1b"]);
+  obj1[0] = intl4.string(require("../../intl/index.native.tsx").t["46Ra1b"]);
   _require = tmp;
   obj1[1] = items4.map((arg0) => table[arg0.toString(arg0)]);
   const permissions3 = obj1.permissions;
@@ -521,7 +519,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   ({ USE_APPLICATION_COMMANDS: arr11[0], USE_EMBEDDED_ACTIVITIES: arr11[1], USE_EXTERNAL_APPS: arr11[2] } = Permissions);
   const obj2 = { title: null, permissions: null };
   const intl5 = tmp6(1236).intl;
-  obj2[0] = intl5.string(_getSystemLocale.t["rrh/W6"]);
+  obj2[0] = intl5.string(require("../../intl/index.native.tsx").t["rrh/W6"]);
   _require = tmp;
   obj2[1] = items5.map((arg0) => table[arg0.toString(arg0)]);
   const permissions4 = obj2.permissions;
@@ -546,7 +544,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   }
   const obj4 = { title: null, permissions: null };
   const intl7 = tmp6(1236).intl;
-  obj4[0] = intl7.string(_getSystemLocale.t.b8lplT);
+  obj4[0] = intl7.string(require("../../intl/index.native.tsx").t.b8lplT);
   const items7 = [, ];
   ({ CREATE_EVENTS: arr15[0], MANAGE_EVENTS: arr15[1] } = Permissions);
   _require = tmp;
@@ -562,7 +560,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   items1.push(obj4);
   const obj5 = { title: null, permissions: null };
   const intl8 = tmp6(1236).intl;
-  obj5[0] = intl8.string(_getSystemLocale.t["3uI5CX"]);
+  obj5[0] = intl8.string(require("../../intl/index.native.tsx").t["3uI5CX"]);
   const items8 = [Permissions.ADMINISTRATOR];
   _require = tmp;
   obj5[1] = items8.map((arg0) => table[arg0.toString(arg0)]);
@@ -646,7 +644,7 @@ export const generateChannelAppsSection = function generateChannelAppsSection(ar
   }
   items[1] = prop;
   items[2] = Permissions.USE_EXTERNAL_APPS;
-  const found = items.filter(_isDiscordFrontendDevelopment.isNotNullish);
+  const found = items.filter(require("../../utils/GlobalUtils.tsx").isNotNullish);
   _require = arg0;
   obj[1] = found.map((arg0) => table[arg0.toString(arg0)]);
   return obj;

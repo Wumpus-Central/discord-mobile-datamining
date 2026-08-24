@@ -36,7 +36,7 @@ function _getSpotifyMetadataFromActivity() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -153,7 +153,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (observedAppRunning.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(7243).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(7281).setActiveDevice(socket.accountId, device.id);
         obj = { socket: null, device: null };
         obj[0] = socket;
         obj[1] = device;
@@ -222,7 +222,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
     if (socket.isPremium) {
       let resolved = Promise.resolve();
     } else {
-      const profile = socket(7243).getProfile(socket.accountId, socket.accessToken);
+      const profile = socket(7281).getProfile(socket.accountId, socket.accessToken);
       resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
@@ -230,7 +230,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
           return Promise.reject(error);
         }
       });
-      const obj = socket(7243);
+      const obj = socket(7281);
     }
     return resolved;
   }

@@ -1,13 +1,15 @@
 // discord_common/js/packages/rpc-schema/rpc-schema.tsx
 import set from "../../../../_runtime/00002_set.js";
+import CONTEXT_MENU_ICON_NAMES from "contextMenuIcons.tsx";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
+export const CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES.CONTEXT_MENU_ICON_NAMES;
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
   let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = request(13847).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(13910).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;

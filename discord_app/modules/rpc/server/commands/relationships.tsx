@@ -6,7 +6,7 @@ import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../stores/RelationshipStore.tsx";
 import closure_6 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
-import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);
@@ -64,7 +64,7 @@ obj[1] = function handler(socket) {
   }
   tmpResult = fromStringAll;
 };
-obj[RPCCommands.GET_RELATIONSHIPS] = createRPCCommand.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
+obj[RPCCommands.GET_RELATIONSHIPS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
 
 export default obj;

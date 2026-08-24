@@ -13,7 +13,7 @@ export default function useSimilarGames(arg0, arg1) {
   if (arg1) {
     tmp = !set.has(arg0);
   }
-  let obj = data(9168);
+  let obj = data(9205);
   const similarGameIds = obj.useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
@@ -22,7 +22,7 @@ export default function useSimilarGames(arg0, arg1) {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(5378);
+  let tmp3Result = tmp3(5383);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [closure_2];

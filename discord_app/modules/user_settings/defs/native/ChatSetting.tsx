@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.TEXT,
   getComponent() {
-    return VideoUploadQualityNitroUpsell.default;
+    return VideoUploadQualityNitroUpsell /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

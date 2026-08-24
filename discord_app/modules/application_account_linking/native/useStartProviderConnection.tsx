@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
-  let obj = _useProviderConnection;
+  let obj = useProviderConnection;
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
   _require = startConnection;
@@ -30,7 +30,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

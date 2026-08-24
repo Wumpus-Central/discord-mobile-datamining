@@ -1,7 +1,6 @@
 // discord_app/modules/soundboard/useCustomJoinSound.tsx
 import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
 import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "SoundboardConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let obj = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
@@ -11,7 +10,7 @@ export const CustomSoundType = obj;
 export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let guilds = closure_1_2.settings.guilds;
     guilds = undefined;
     if (guilds != null) {

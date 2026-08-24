@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import transitionTo from "../routing/router_utils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import computeSubtitle from "../guild_sidebar/ChannelListState.tsx";
 import ack from "../../actions/ReadStateActionCreators.tsx";
 import _bulkClearRecents from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -16,8 +16,6 @@ import ME from "../../Constants.tsx";
 import set from "../channel/ChannelConstants.tsx";
 import { ChannelListGuildActionRow } from "../guild_sidebar/GuildSidebarConstants.tsx";
 import { ReadStateTypes } from "../read_states/ReadStateConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
 require = arg1;
@@ -141,11 +139,11 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   const _require = guildId;
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
-  let obj = _UNSAFE_isDismissibleContentDismissed;
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.CHANNEL_BROWSER_NUX);
+  let obj = UNSAFE_isDismissibleContentDismissed;
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [closure_4];
   const items1 = [guildId];
-  closure_3 = _initialize.useStateFromStoresObject(items, () => {
+  closure_3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const obj = {};
     const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(closure_0);
     for (const key10009 in mutableGuildChannelsForGuild) {
@@ -193,7 +191,7 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
 export const useChannelBrowserChannelCount = function useChannelBrowserChannelCount(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
     return 0;

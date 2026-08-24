@@ -1,7 +1,7 @@
 // discord_app/utils/SKUUtils.tsx
 import set from "PlatformUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import tDefault from "../../_runtime/03975_t.js";
+import tDefault from "../../_runtime/03978_t.js";
 import matchPath from "../modules/routing/matchPathCompat.tsx";
 import _httpGetWithCountryCodeQuery from "StoreUtils.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";

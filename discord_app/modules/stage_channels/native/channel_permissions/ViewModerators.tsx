@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../stores/GuildMemberStore.tsx";
@@ -51,7 +51,7 @@ export default function ViewModerators(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -108,7 +108,7 @@ export default function ViewModerators(channel) {
             obj2 = v0(closure_2_3[9]);
             obj2.hideActionSheet();
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -218,5 +218,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(16042, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(16140, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

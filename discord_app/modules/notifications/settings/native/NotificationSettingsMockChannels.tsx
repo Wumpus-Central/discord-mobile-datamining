@@ -5,7 +5,6 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -22,16 +21,16 @@ export default function NotificationSettingsMockChannels(unreadSetting) {
   const tmp = callback2();
   const _require = tmp;
   let obj = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
-  const intl = _getSystemLocale.intl;
-  obj[3] = intl.string(_getSystemLocale.t.EjLobP);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.EjLobP);
   let items = [obj, , ];
   obj = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl2 = _getSystemLocale.intl;
-  obj[3] = intl2.string(_getSystemLocale.t.Wgpwpp);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl2.string(require("../../../../intl/index.native.tsx").t.Wgpwpp);
   items[1] = obj;
   obj = { badged: false, unread: false, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl3 = _getSystemLocale.intl;
-  obj[3] = intl3.string(_getSystemLocale.t.g9VImh);
+  const intl3 = require("../../../../intl/index.native.tsx").intl;
+  obj[3] = intl3.string(require("../../../../intl/index.native.tsx").t.g9VImh);
   items[2] = obj;
   if (unreadSetting.unreadSetting === UnreadSetting.ALL_MESSAGES) {
     items[1].resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;

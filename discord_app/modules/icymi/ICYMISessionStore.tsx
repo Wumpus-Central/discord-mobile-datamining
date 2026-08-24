@@ -8,7 +8,6 @@ import closure_3 from "../experiments/apex/ApexExperimentStore.tsx";
 import closure_4 from "../labs/LabFeatureStore.tsx";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
 import closure_6 from "ICYMIStore.tsx";
-import { DEFAULT_UX_VARIATION } from "ICYMIAnalytics.tsx";
 
 require = arg1;
 let c7 = 300000;
@@ -231,7 +230,7 @@ prototype["trackItemsLongImpression"] = function trackItemsLongImpression(items)
     let tmp19 = result;
     ({ interactionActionTypes: obj[13], interactionCount: obj[14], uxVariation } = tmp7);
     if (uxVariation == null) {
-      uxVariation = tmp11(9065).DEFAULT_UX_VARIATION;
+      uxVariation = tmp11(9102).DEFAULT_UX_VARIATION;
     }
     obj[15] = uxVariation;
     let tmp20 = result;
@@ -399,7 +398,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     const _Date = Date;
     tmp2.impressionEndTimestamp = Date.now();
     tmp2.impressionComplete = true;
-    const ICYMIAnalytics = _DEFAULT_UX_VARIATION.ICYMIAnalytics;
+    const ICYMIAnalytics = require("ICYMIAnalytics.tsx").ICYMIAnalytics;
     const obj = { icymiSessionId: null, impressionId: null, dwellTimeMs: null, itemId: null, itemType: null, dwellStartTimeMs: null, dwellEndTimeMs: null, triggerType: null, itemOccurenceCountInSession: null, itemFeedIndex: null, itemScore: null, isInitiallyVisible: null, itemChannelType: null, itemCardHeight: null, uxVariation: null, interactionActionTypes: null, interactionCount: null, sessionImpressionIndex: null };
     obj[0] = self._sessionId;
     obj[1] = tmp2.impressionId;
@@ -422,7 +421,7 @@ prototype["_endImpression"] = function _endImpression(itemId) {
     obj[13] = itemCardHeight;
     let DEFAULT_UX_VARIATION = tmp2.uxVariation;
     if (DEFAULT_UX_VARIATION == null) {
-      DEFAULT_UX_VARIATION = tmp5(9065).DEFAULT_UX_VARIATION;
+      DEFAULT_UX_VARIATION = tmp5(9102).DEFAULT_UX_VARIATION;
     }
     obj[14] = DEFAULT_UX_VARIATION;
     ({ interactionActionTypes: obj[15], interactionCount: obj[16], sessionImpressionIndex: obj[17] } = tmp2);

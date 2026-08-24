@@ -13,7 +13,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;
   const tmp = useGuildAppliedBoostCountDefault(arg0);
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
     let premiumTier;
     if (guild != null) {
@@ -24,7 +24,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
     }
     return premiumTier;
   });
-  const obj = _initialize;
+  const obj = initialize;
   const items1 = [closure_3];
   let num = 0;
   if (!obj2.useStateFromStores(items1, () => {

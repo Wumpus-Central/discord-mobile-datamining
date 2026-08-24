@@ -38,7 +38,7 @@ function getEmojiUnavailableReason(intention) {
         }
         let tmp13 = null != emoji && null != guildId;
         if (tmp13) {
-          const tmp14 = emoji.type === tmp3(4037).EmojiTypes.GUILD || null != emoji.guildId;
+          const tmp14 = emoji.type === tmp3(4040).EmojiTypes.GUILD || null != emoji.guildId;
           let tmp15 = !tmp14;
           if (tmp14) {
             tmp15 = guildId === emoji.guildId;
@@ -57,7 +57,7 @@ function getEmojiUnavailableReason(intention) {
           if (!callback4(intention)) {
             let tmp19 = null != emoji && null != guildId;
             if (tmp19) {
-              const tmp20 = emoji.type === tmp3(4037).EmojiTypes.GUILD || null != emoji.guildId;
+              const tmp20 = emoji.type === tmp3(4040).EmojiTypes.GUILD || null != emoji.guildId;
               let tmp21 = !tmp20;
               if (tmp20) {
                 tmp21 = guildId === emoji.guildId;
@@ -92,9 +92,9 @@ function getEmojiUnavailableReason(intention) {
               }
             }
           }
-          let tmp3Result = tmp3(6732);
+          let tmp3Result = tmp3(6769);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
-            tmp3Result = tmp3(4014);
+            tmp3Result = tmp3(4017);
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
           } else {
             let PREMIUM_LOCKED = null;
@@ -105,9 +105,9 @@ function getEmojiUnavailableReason(intention) {
                 if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                   PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                 }
-                tmp3Result1 = tmp3(6732);
+                tmp3Result1 = tmp3(6769);
               }
-              tmp27Result = tmp27(4039);
+              tmp27Result = tmp27(4042);
             }
             return PREMIUM_LOCKED;
           }

@@ -2,7 +2,6 @@
 import set from "../../../../../../_runtime/00002_set.js";
 import fromDatabaseTransaction from "Table.tsx";
 import TableId from "../types/index.tsx";
-import { TableId } from "../types/index.tsx";
 
 let MessageDao;
 class MessageDao {
@@ -75,7 +74,7 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _TableId.ConflictOptions.Replace;
+    Replace = require("../types/index.tsx").ConflictOptions.Replace;
   }
   const table = this.table;
   return table.putAll(arr.map((data) => {
@@ -167,7 +166,7 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = _TableId.ConflictOptions.Replace;
+    Replace = require("../types/index.tsx").ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   transaction.putAll(arr.map((data) => {

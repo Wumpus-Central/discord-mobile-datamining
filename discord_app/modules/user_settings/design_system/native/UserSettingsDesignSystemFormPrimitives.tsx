@@ -15,10 +15,6 @@ import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.
 import { NOOP } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Checkbox } from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
 require = arg1;
 function Radio() {
@@ -62,26 +58,26 @@ function Switch() {
   [tmp8, c0] = callback(React.useState(false), 2);
   const tmp7 = callback(React.useState(false), 2);
   const obj2 = { children: null };
-  const items = [callback2(_Text.Text, { variant: "heading-lg/bold", children: "Switch" }), callback2(_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/bold", children: "Switch" }), callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
   const obj3 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
-  obj3[2] = callback2(_TableSwitchRow.TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
-  items[2] = callback2(_TableRowGroupTitle.TableRowGroup, obj3);
+  obj3[2] = callback2(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
+  items[2] = callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj3);
   const obj5 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
   const merged1 = Object.assign(obj);
-  const items1 = [callback2(_TableSwitchRow.TableSwitchRow, { label: "When posted as links to chat" }), , , ];
+  const items1 = [callback2(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, { label: "When posted as links to chat" }), , , ];
   const merged2 = Object.assign(obj);
-  items1[1] = callback2(_TableSwitchRow.TableSwitchRow, { label: "When uploaded directly to Discord" });
+  items1[1] = callback2(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, { label: "When uploaded directly to Discord" });
   const merged3 = Object.assign({
     value: tmp8,
     onValueChange: React.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   });
-  items1[2] = callback2(_TableSwitchRow.TableSwitchRow, { label: "With image descriptions" });
-  items1[3] = callback2(_TableSwitchRow.TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
+  items1[2] = callback2(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, { label: "With image descriptions" });
+  items1[3] = callback2(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx").TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
   obj5[2] = items1;
-  items[3] = callback3(_TableRowGroupTitle.TableRowGroup, obj5);
+  items[3] = callback3(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj5);
   obj2[0] = items;
   return callback3(closure_8, obj2);
 }
@@ -99,7 +95,7 @@ function InlineCheckbox(startChecked) {
   const onToggle = React.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
-  return callback2(_Checkbox.Checkbox, { label, description, required, checked, onToggle });
+  return callback2(require("../../../../design/components/Checkbox/native/Checkbox.native.tsx").Checkbox, { label, description, required, checked, onToggle });
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };

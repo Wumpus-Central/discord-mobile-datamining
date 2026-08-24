@@ -26,7 +26,7 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   closure_1 = null != phone;
-  obj = __uploadContacts;
+  obj = _uploadContacts;
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     let tmp = null;

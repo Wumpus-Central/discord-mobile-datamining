@@ -45,11 +45,11 @@ export default {
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: GUILD_MEMBER_NICKResult, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj4 = _sendRequest;
+    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj4 = sendRequest;
     HTTP.patch(obj).then(() => {
       callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
     }, (status) => {

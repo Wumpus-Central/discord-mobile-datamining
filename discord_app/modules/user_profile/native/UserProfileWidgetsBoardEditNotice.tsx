@@ -8,7 +8,6 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 
 const require = arg1;
 noopAll;
@@ -27,7 +26,7 @@ export default function UserProfileWidgetsBoardEditNotice() {
   importDefault = useSharedStylesDefault();
   dependencyMap = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileWidgetsBoardEditNotice");
   let obj = { contentTypes: null, bypassAutoDismiss: true, children: null };
-  let items = [_DismissibleContent.DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
+  let items = [require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE];
   obj[0] = items;
   obj[2] = function children(markAsDismissed) {
     markAsDismissed = markAsDismissed.markAsDismissed;

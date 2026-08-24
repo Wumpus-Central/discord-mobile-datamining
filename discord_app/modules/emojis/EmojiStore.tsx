@@ -4,9 +4,9 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import dedupeEmojisByNameOrIdDefault from "utils/dedupeEmojisByNameOrId.tsx";
-import _modDef6734 from "../emoji_terms/EmojiTerms.tsx";
+import _modDef6771 from "../emoji_terms/EmojiTerms.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../experiments/ExperimentStore.tsx";
@@ -74,7 +74,7 @@ function _loadSavedEmojis() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ function _loadSavedEmojis() {
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loading = closure_1_29.Loading;
-                let obj2 = closure_1_0(1974);
+                let obj2 = closure_1_0(1975);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -165,7 +165,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      obj = callback(6766);
+      obj = callback(6803);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -310,7 +310,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    obj = callback(4012);
+    obj = callback(4015);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       c33 = null;
@@ -373,7 +373,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(6732).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(6769).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -382,7 +382,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = callback(6732);
+        obj = callback(6769);
       }
       tmp6 = someResult;
     }
@@ -626,7 +626,7 @@ class EmojiDisambiguations {
         tmp12 = nextResult;
         tmp13 = value;
         sorted = obj.sort((id, id2) => items(disambiguateEmoji[20]).compare(id2.id, id.id));
-        result = newlyAddedEmoji4.set(tmp8, require("module_0"));
+        result = newlyAddedEmoji4.set(tmp8, require("../../index.native.tsx"));
       } else {
         newlyAddedEmoji3 = obj.newlyAddedEmoji;
         tmp10 = nextResult;
@@ -795,7 +795,7 @@ prototype2["isFrequentlyUsedReactionEmojiWithoutFetchingLatest"] = function isFr
   if (null != id.id) {
     return frequentlyUsedReactionNamesAndIds.has(id.id);
   } else {
-    let result = parseRawEmojiObject.convertSurrogateToBase(id.surrogates);
+    let result = require("UnicodeEmojis.tsx").convertSurrogateToBase(id.surrogates);
     if (result == null) {
       result = id;
     }
@@ -947,7 +947,7 @@ let merged = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = parseRawEmojiObject.getByName(id1);
+    let byName = require("UnicodeEmojis.tsx").getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -980,7 +980,7 @@ const merged1 = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = parseRawEmojiObject.getByName(id1);
+    let byName = require("UnicodeEmojis.tsx").getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -1067,7 +1067,7 @@ Object.defineProperty(prototype3, "categories", {
 });
 Object.defineProperty(prototype3, "diversitySurrogate", {
   get: function diversitySurrogate() {
-    let str = parseRawEmojiObject.getDefaultDiversitySurrogate();
+    let str = require("UnicodeEmojis.tsx").getDefaultDiversitySurrogate();
     if (str == null) {
       str = "";
     }
@@ -1138,7 +1138,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4362).escape(formatted);
+  const escapeResult = formatted(4366).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1514,7 +1514,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
         }
       }
       obj = parseRawEmojiObject;
-      emoji = obj.getByName(parseRawEmojiObject.convertSurrogateToName(optimistic.emoji.name, false));
+      emoji = obj.getByName(require("UnicodeEmojis.tsx").convertSurrogateToName(optimistic.emoji.name, false));
       const obj2 = parseRawEmojiObject;
     } else {
       return false;
@@ -1524,7 +1524,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    obj = _modDef6734;
+    obj = _modDef6771;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {

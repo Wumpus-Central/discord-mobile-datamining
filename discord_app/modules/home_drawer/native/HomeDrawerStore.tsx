@@ -1,7 +1,7 @@
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
-import isIterable from "../../../../_runtime/04006_isIterable.js";
+import isIterable from "../../../../_runtime/04009_isIterable.js";
 import identity from "../../../../_runtime/00700_identity.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
@@ -9,12 +9,12 @@ const DM_WIDTH = ME.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   dependencyMap = arg1;
-  let obj = { panelX: _ReanimatedRexport.makeMutable(0), gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
-  const obj2 = _ReanimatedRexport;
-  obj[1] = _ReanimatedRexport.makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  let obj = { panelX: require("../../reanimated/ReanimatedRexport.tsx").makeMutable(0), gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
+  const obj2 = ReanimatedRexport;
+  obj[1] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
   obj[3] = { current: 0 };
-  const obj3 = _ReanimatedRexport;
-  obj[4] = _ReanimatedRexport.makeMutable(false);
+  const obj3 = ReanimatedRexport;
+  obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(false);
   obj[5] = function setPanelX(arg0) {
     ({ panelX, gestureState } = callback2());
     if ("open" === arg0) {

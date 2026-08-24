@@ -2,7 +2,6 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -11,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
-  return jsx(_NavigationStack.Navigator, {
+  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
     screens: useInitialValueDefault(() => ({
       [closure_1_4]: {
         fullscreen: true,

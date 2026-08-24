@@ -31,7 +31,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "tokenize must be called with bankDetails or bankLogin.", onButtonPress: "M16 6h-1v6h1V6Z" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "Contact Sync Suggestions", onButtonPress: "M4 10v4h1v1h3v-1h1v-4H4Z" };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {

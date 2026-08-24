@@ -14,12 +14,12 @@ const result = require("set").fileFinishedImporting("modules/stage_channels/Stag
 
 export const fillChunk = function fillChunk(arg0, arg1, arg2) {
   let tmp = arg2;
-  const obj = _apply;
+  const obj = apply;
   if (arg2 == null) {
     tmp = arg1;
   }
   _require = tmp;
-  return _apply.chunk(arg0, arg1).reduce((arg0, arg1) => {
+  return require("../../../_runtime/00012_apply.js").chunk(arg0, arg1).reduce((arg0, arg1) => {
     if (closure_0 <= arg1.length) {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = arg1;

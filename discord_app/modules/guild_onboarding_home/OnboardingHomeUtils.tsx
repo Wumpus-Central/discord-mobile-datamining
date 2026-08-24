@@ -7,7 +7,6 @@ import closure_5 from "../../stores/GuildStore.tsx";
 import closure_6 from "GuildOnboardingHomeSettingsStore.tsx";
 import ME from "../../Constants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;
 ({ GuildFeatures: error, ME: closure_8 } = ME);
@@ -19,7 +18,7 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
   importDefault = tmp;
   const items = [closure_4, closure_5, closure_3];
   const items1 = [guild_id, tmp];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     if (guild_id !== closure_1_8) {
       if (!obj3.isFavoritesGuildId(tmp2)) {
         let has = closure_1_5.getGuild(tmp2);
@@ -112,7 +111,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(5285).isGuildOnboardingSettingsAvailable(id);
+          let result = tmp14(5290).isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);

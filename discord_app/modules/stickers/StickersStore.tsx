@@ -32,7 +32,7 @@ function _loadSavedGuildStickers() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ function _loadSavedGuildStickers() {
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(1974);
+                let obj2 = closure_1_0(1975);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };

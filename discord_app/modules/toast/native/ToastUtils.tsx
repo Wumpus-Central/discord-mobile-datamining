@@ -18,7 +18,6 @@ import CircleInformationIcon from "../../../design/components/Icon/native/redesi
 import TrashIcon from "../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const VerificationCriteria = ME.VerificationCriteria;
 const result = set.fileFinishedImporting("modules/toast/native/ToastUtils.tsx");
@@ -44,7 +43,7 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
     obj[0] = username.username;
     stringResult = intl.formatToPlainString(getSystemLocale.t.b3eoD4, obj);
   }
-  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4312).UserPlusIcon, iconColor: "status-positive" };
+  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4316).UserPlusIcon, iconColor: "status-positive" };
   obj.open(obj);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
@@ -180,9 +179,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4326).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4330).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4328).XLargeIcon;
+    XLargeIcon = tmp4(4332).XLargeIcon;
   }
   obj[2] = XLargeIcon;
   let str = "icon-feedback-critical";
@@ -364,9 +363,9 @@ export const presentGuildMemberBio = function presentGuildMemberBio(guildName) {
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_BIO_TOAST", content: null, icon: null };
-  const intl = _getSystemLocale.intl;
+  const intl = require("../../../intl/index.native.tsx").intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_getSystemLocale.t.pOy2tm, obj);
+  obj[1] = intl.formatToPlainString(require("../../../intl/index.native.tsx").t.pOy2tm, obj);
   obj[2] = function icon() {
     return closure_0;
   };
@@ -376,9 +375,9 @@ export const presentGuildMemberPronouns = function presentGuildMemberPronouns(gu
   const _require = arg1;
   let obj = dispatcherDefault;
   obj = { key: "GUILD_IDENTITY_PRONOUNS_TOAST", content: null, icon: null };
-  const intl = _getSystemLocale.intl;
+  const intl = require("../../../intl/index.native.tsx").intl;
   obj = { guildName };
-  obj[1] = intl.formatToPlainString(_getSystemLocale.t.gPVLS0, obj);
+  obj[1] = intl.formatToPlainString(require("../../../intl/index.native.tsx").t.gPVLS0, obj);
   obj[2] = function icon() {
     return closure_0;
   };

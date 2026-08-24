@@ -8,9 +8,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16236;
+    let tmp4 = 16333;
   } else {
-    tmp4 = 16242;
+    tmp4 = 16339;
   }
   return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -44,7 +44,7 @@ class BaseActivityPanelUI {
     items1 = [, ];
     items1[0] = renderActivityPanelSystemUIManager();
     obj = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
-    items1[1] = jsx(require("wrapChildrenDefault").TransitionGroup, obj);
+    items1[1] = jsx(require("ManaContext").TransitionGroup, obj);
     obj[0] = items1;
     return jsxs(require("Layer").LayerScope, obj);
   }

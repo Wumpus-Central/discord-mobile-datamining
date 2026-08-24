@@ -1,6 +1,5 @@
 // discord_app/modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx
 import closure_2 from "../../../stores/ChannelStore.tsx";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/us
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_2.getChannel(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_2.getChannel(closure_0));
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.isPrivate();

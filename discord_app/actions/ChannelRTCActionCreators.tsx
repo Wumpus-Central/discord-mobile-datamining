@@ -4,7 +4,6 @@ import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import collectGuildAnalyticsMetadata from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import ME from "../Constants.tsx";
-import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
 
 ({ AppContext: c3, AnalyticEvents: c4, ComponentActions: c5 } = ME);
 const result = set.fileFinishedImporting("actions/ChannelRTCActionCreators.tsx");
@@ -73,7 +72,7 @@ export default {
         ComponentDispatch.dispatch(closure_1_5.FOCUS_CHANNEL_TEXT_AREA, { channelId: id });
       }, 0);
     } else {
-      let ComponentDispatch = _ComponentDispatcher.ComponentDispatch;
+      let ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx").ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
   },

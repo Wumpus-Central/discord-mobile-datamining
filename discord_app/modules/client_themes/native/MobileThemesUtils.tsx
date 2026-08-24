@@ -48,7 +48,7 @@ export const useCustomBackgroundGradient = function useCustomBackgroundGradient(
 export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackgroundGradient(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == mode) {
       return null;
     } else {
@@ -97,14 +97,14 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   return items1;
 };
 export const useAllMobileThemes = function useAllMobileThemes(mode) {
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = stateFromStores;
   }
-  let tmpResult = tmp(4309);
+  let tmpResult = tmp(4313);
   const customThemeDisplaySettings = tmpResult.useCustomThemeDisplaySettings(tmp4);
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {

@@ -4,7 +4,6 @@ import useGameProfileObscured from "../../game_profile/hooks/useGameProfileObscu
 import closure_3 from "../../games/GameStore.tsx";
 import closure_4 from "../../games/autocomplete/GameAutocompleteStore.tsx";
 import closure_5 from "../../../stores/UserStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
@@ -42,7 +41,7 @@ export const useGameMentionData = function useGameMentionData(gameId) {
   const _require = gameId;
   const items = [closure_3, closure_4, closure_5];
   const items1 = [gameId];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const currentUser = closure_1_5.getCurrentUser();
     const game = closure_1_3.getGame(gameId);
     const gameById = closure_1_4.getGameById(gameId);

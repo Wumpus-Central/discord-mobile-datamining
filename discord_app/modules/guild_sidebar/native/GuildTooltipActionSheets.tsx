@@ -1,5 +1,5 @@
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
-import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "../../guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx";
 import useIsEligibleForTierTemplateUpsellDefault from "../../guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx";
@@ -10,19 +10,19 @@ import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 function NUFChannelsActionSheetImporter() {
-  return asyncRequireImpl(12647, dependencyMap.paths);
+  return asyncRequireImpl(12701, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(15505, dependencyMap.paths);
+  return asyncRequireImpl(15570, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(15507, dependencyMap.paths);
+  return asyncRequireImpl(15572, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(15510, dependencyMap.paths);
+  return asyncRequireImpl(15575, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(15512, dependencyMap.paths);
+  return asyncRequireImpl(15577, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {

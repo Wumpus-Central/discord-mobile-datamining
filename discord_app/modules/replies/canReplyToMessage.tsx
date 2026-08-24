@@ -16,14 +16,14 @@ const result = require("set").fileFinishedImporting("modules/replies/canReplyToM
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
   dependencyMap = message;
-  const canUnarchiveThread = _useCanUnarchiveThread.useCanUnarchiveThread(channel);
-  const obj = _useCanUnarchiveThread;
+  const canUnarchiveThread = require("../threads/ThreadHooks.tsx").useCanUnarchiveThread(channel);
+  const obj = useCanUnarchiveThread;
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _useUserCommunicationDisabled;
+  const obj2 = useUserCommunicationDisabled;
   const items = [closure_3];
   let stateFromStores = tmp(589).useStateFromStores(items, () => {
     let tmp = null != channel;

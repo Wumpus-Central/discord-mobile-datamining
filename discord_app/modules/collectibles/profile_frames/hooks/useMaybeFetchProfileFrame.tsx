@@ -2,7 +2,6 @@
 import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame.native.tsx";
 import useProfileFrameDefault from "useProfileFrame.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
-import { apexExperiment } from "../../experiments/CollectiblesProfileFramesExperiment.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
@@ -10,7 +9,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/profile_
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
-  const isProfileFramesEnabled = _apexExperiment.useIsProfileFramesEnabled(location);
+  const isProfileFramesEnabled = require("../../experiments/CollectiblesProfileFramesExperiment.tsx").useIsProfileFramesEnabled(location);
   const tmp3 = useProfileFrameDefault(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];

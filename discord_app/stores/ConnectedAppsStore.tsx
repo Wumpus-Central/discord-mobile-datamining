@@ -1,7 +1,6 @@
 // discord_app/stores/ConnectedAppsStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import { apply } from "../../_runtime/00012_apply.js";
 
 let closure_2 = {};
 const Store = initializeDefault.Store;
@@ -23,7 +22,7 @@ prototype["isChildConnected"] = function isChildConnected(arg0) {
 };
 Object.defineProperty(prototype, "connections", {
   get: function connections() {
-    return apply.values(closure_2);
+    return require("../../_runtime/00012_apply.js").values(closure_2);
   },
   set: undefined
 });

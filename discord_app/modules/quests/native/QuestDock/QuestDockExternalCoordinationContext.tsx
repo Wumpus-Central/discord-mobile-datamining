@@ -16,7 +16,7 @@ obj[1] = function setRestingQuestDockMode(COLLAPSED) {
 
 };
 obj[2] = createFakeSharedValue.createFakeSharedValue(null);
-obj[3] = require("module_0");
+obj[3] = require("../../../../index.native.tsx");
 let context = importAllResult.createContext(obj);
 let closure_9 = set.isAndroid();
 let closure_10 = { code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}" };

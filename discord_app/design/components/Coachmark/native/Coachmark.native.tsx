@@ -34,8 +34,8 @@ class Coachmark {
     adjustmentX = tmp7.adjustmentX;
     tmp8 = graphic;
     ({ tooltipX, tooltipY } = tmp7);
-    obj = require("module_4115");
-    sharedValue = require("module_0");
+    obj = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+    sharedValue = require("../../../../index.native.tsx");
     closure_6 = sharedValue;
     items = [];
     items[0] = sharedValue;

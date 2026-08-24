@@ -10,7 +10,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const require = arg1;
 let obj = { duration: 100, easing: null };
-obj[1] = Easing.out(require("module_4115").Easing.quad);
+obj[1] = Easing.out(require("../../reanimated/ReanimatedRexport.tsx").Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 let closure_10 = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
 obj = { container: null };

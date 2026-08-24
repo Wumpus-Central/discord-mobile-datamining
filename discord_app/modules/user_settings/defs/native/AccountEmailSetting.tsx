@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AccountEmailSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef8561 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import _modDef8600 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -24,7 +24,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    _modDef8561.open(true);
+    _modDef8600.open(true);
   },
   withArrow: true
 };

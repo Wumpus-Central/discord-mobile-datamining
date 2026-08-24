@@ -155,7 +155,7 @@ const memoResult = importAllResult.memo((channelId) => {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback(channelId(6312).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return callback(channelId(6343).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
 let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 

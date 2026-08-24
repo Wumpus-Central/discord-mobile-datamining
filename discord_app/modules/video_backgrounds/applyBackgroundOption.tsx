@@ -70,7 +70,7 @@ function _applyBackgroundOption() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -92,13 +92,13 @@ function _applyBackgroundOption() {
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.NONE);
+                closure_1_10(tmp57, tmp58, callback(4574).FilterSettingsGraph.NONE);
                 c9 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else if (tmp59 === c7) {
-                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(tmp57, tmp58, callback(4574).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 if (typeof tmp59 !== "string") {
                   if (typeof tmp59 !== "number") {
@@ -163,7 +163,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9665)()[tmp59];
+                const tmp24 = callback2(9704)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {
@@ -256,7 +256,7 @@ function _applyBackgroundOptionLive() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -316,11 +316,11 @@ function _applyBackgroundOptionLive() {
               const result = obj.trackBackgroundOptionUpdated(callback, location, "Enabled");
             }
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp16) {
+        } catch (tmp24) {
           c5 = tmp;
-          throw tmp16;
+          throw tmp24;
         }
       }
     })();
@@ -356,7 +356,7 @@ function _applyBackgroundOptionPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -418,7 +418,7 @@ function _applyBackgroundOptionPreview() {
               const result1 = obj.trackBackgroundOptionUpdated(callback, location, "Preview");
             }
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c6 = tmp;

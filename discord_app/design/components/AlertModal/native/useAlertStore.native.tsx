@@ -35,7 +35,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4658)();
+    arr4(4664)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -52,7 +52,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
       tmp2 = key === c6;
     }
-    _batchUpdates.batchUpdates(() => {
+    require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
       closure_1_4.setState((alerts) => {
         alerts = alerts.alerts;
         return { alerts: alerts.filter((key) => key.key !== closure_0) };
@@ -63,9 +63,9 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4658)();
+      found(4664)();
     }
-    const obj = _batchUpdates;
+    const obj = batchUpdates;
   }
 };
 export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
@@ -76,7 +76,7 @@ export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallb
   if (0 === keys.getState().alerts.length) {
     markAccessibilityFocusDefault();
   }
-  _batchUpdates.batchUpdates(() => {
+  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_4.setState((alerts) => {
       alerts = [...alerts.alerts];
       const obj = { key: closure_0, node: closure_1, onDismiss: closure_2, dismissable: null };

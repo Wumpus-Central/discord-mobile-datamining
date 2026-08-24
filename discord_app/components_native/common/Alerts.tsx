@@ -1,8 +1,8 @@
 // discord_app/components_native/common/Alerts.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4662 from "../../actions/native/AlertActionCreators.tsx";
 import Dialog from "../../design/components/Dialog/native/Dialog.native.tsx";
-import _modDef6551 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
+import _modDef6582 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
 import getStoresDefault from "../../lib/ModalRegistry.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -30,7 +30,7 @@ let obj = {
     return importDefaultResult.shouldShowWarning();
   },
   getComponent() {
-    return render.default;
+    return render /* render */.default;
   }
 };
 items = [importDefaultResult];
@@ -42,7 +42,7 @@ obj = {
     return importDefaultResult1.shouldShowWarning();
   },
   getComponent() {
-    return render.default;
+    return render /* render */.default;
   }
 };
 items2 = [importDefaultResult1];
@@ -55,7 +55,7 @@ items1[2] = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return MobileSurvey.default;
+    return MobileSurvey /* MobileSurvey */.default;
   }
 };
 let closure_15 = new getStoresDefault(items1);
@@ -126,7 +126,7 @@ AlertWrapper.prototype["render"] = function render() {
     str = "alerts-component";
   }
   const props = self.props;
-  let obj = { onClose: _modDef4656.close };
+  let obj = { onClose: _modDef4662.close };
   ({ opacity, scale } = self.state);
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
   obj = { style: items, children: null };
@@ -139,11 +139,11 @@ AlertWrapper.prototype["render"] = function render() {
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
-  obj[2] = callback2(_modDef6551, obj);
+  obj[2] = callback2(_modDef6582, obj);
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "HermesInternal", props: "r" });
+let closure_18 = Object.freeze({ renderAlert: "getGuild", renderKey: "call", props: "HTTP" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -151,7 +151,7 @@ let obj1 = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return MobileSurvey.default;
+    return MobileSurvey /* MobileSurvey */.default;
   }
 };
 const tmp7 = new getStoresDefault(items1);
@@ -189,7 +189,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "HermesInternal", props: "r" };
+        return { renderAlert: "getGuild", renderKey: "call", props: "HTTP" };
       }
     }
   });

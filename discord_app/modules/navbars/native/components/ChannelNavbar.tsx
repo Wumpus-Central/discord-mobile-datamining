@@ -414,12 +414,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(6832);
+    let tmp2Result = tmp2(6870);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4984);
+    tmp2Result = tmp2(4989);
     channelName = tmp2Result.computeChannelName(stateFromStores, closure_11, closure_10);
   }
   let isDMResult;

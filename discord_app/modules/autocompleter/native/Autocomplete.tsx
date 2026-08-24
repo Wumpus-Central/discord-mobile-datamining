@@ -11,7 +11,7 @@ import TableRowInner from "../../../design/components/TableRow/native/TableRow.n
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../_runtime/08338_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08377_registerAsset.js";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
@@ -75,16 +75,16 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4219).getName(user);
-      const obj3 = guildId(4219);
+      nick = guildId(4223).getName(user);
+      const obj3 = guildId(4223);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
     obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9966), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8083).FormRow, obj);
+    obj[5] = closure_9(guildId(10005), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8122).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -215,7 +215,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(6683).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(6719).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

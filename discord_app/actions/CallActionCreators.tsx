@@ -1,13 +1,12 @@
 // discord_app/actions/CallActionCreators.tsx
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4975 from "SelectedChannelActionCreators.tsx";
+import _modDef4980 from "SelectedChannelActionCreators.tsx";
 import useCanRingToGuildVoiceChannel from "../modules/calls/useCanRing.tsx";
 import closure_3 from "../stores/ChannelStore.tsx";
 import closure_4 from "../stores/RelationshipStore.tsx";
 import closure_5 from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 require = arg1;
 ({ Endpoints: closure_6, AnalyticEvents: error, ChannelTypesSets: closure_8, ChannelTypes: c9 } = ME);
@@ -25,7 +24,7 @@ export default {
     if (null != arg3) {
       if (!blocked.isBlocked(arg3)) {
         const _require = user.getUser(arg3);
-        const HTTP = _sendRequest.HTTP;
+        const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
         let obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = self.CALL(id);
         const value = HTTP.get(obj);
@@ -34,7 +33,7 @@ export default {
           if (closure_3) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(4975).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(4980).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -62,11 +61,11 @@ export default {
             obj = { userId: closure_4, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4827).show(obj);
+          id(4832).show(obj);
         });
       }
     } else {
-      obj = _modDef4975;
+      obj = _modDef4980;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);

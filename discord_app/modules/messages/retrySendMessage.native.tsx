@@ -16,8 +16,8 @@ export default function retrySendMessage(id, id2, arr) {
   trackInviteDefault.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
     if (tmp17) {
-      __executeCommand.retryCommandMessage(id2, id, obj);
-      const obj6 = __executeCommand;
+      require("../application_commands/executeCommand.tsx").retryCommandMessage(id2, id, obj);
+      const obj6 = _executeCommand;
     }
     tmp17 = null != id2.interactionData && null != obj.applicationId;
   } else {

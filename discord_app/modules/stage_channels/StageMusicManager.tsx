@@ -10,7 +10,6 @@ import closure_7 from "StageInstanceStore.tsx";
 import closure_8 from "StageMusicStore.tsx";
 import createSoundForPack from "../sound_playback/SoundUtils.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "StageChannelParticipants.tsx";
 import { useStageParticipants } from "StageChannelParticipantStoreHooks.tsx";
 
 require = arg1;
@@ -138,10 +137,10 @@ export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
   const _require = channelId;
   const items = [closure_4];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
-  const obj = _initialize;
-  const stageParticipants = _useStageParticipants.useStageParticipants(channelId, _sortKey.StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _useStageParticipants;
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
+  const obj = initialize;
+  const stageParticipants = require("StageChannelParticipantStoreHooks.tsx").useStageParticipants(channelId, require("StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = useStageParticipants;
   const tmp2 = null != stageParticipants.find((voiceState) => {
     voiceState = voiceState.voiceState;
     return !voiceState.isVoiceMuted();

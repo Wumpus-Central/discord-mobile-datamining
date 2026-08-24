@@ -6,7 +6,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import setDefault from "AlertActionCreators.tsx";
-import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef5232 from "../utils/TrackedHTTPUtils.tsx";
 import shouldShowAgeGateForVoiceChannel from "../modules/age_gate/AgeGateUtils.tsx";
 import stopLurkingAll from "../modules/lurker_mode/LurkerActionCreators.tsx";
 import getPreviousSafeRouteForNsfwReturnDefault from "../modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx";
@@ -66,7 +66,7 @@ function _joinGuild() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -487,7 +487,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -565,7 +565,7 @@ export default {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp36) {
           c5 = tmp;
@@ -612,11 +612,11 @@ export default {
   kickUser(id, id1, c0) {
     const _require = id;
     closure_1 = id1;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     obj = { url: closure_16.GUILD_MEMBER(id, id1), query: obj, oldFormErrors: true, rejectWithError: null };
     obj = { reason: c0, moderator_report_id: arg3 };
-    obj[3] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
+    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.del(obj).then(() => {
       let obj = id1(closure_1_3[14]);
       obj = { type: "GUILD_MEMBER_REMOVE_LOCAL", guildId: closure_0, userId: id1 };
@@ -625,7 +625,7 @@ export default {
   },
   setCommunicationDisabledUntil(moderator_report_id) {
     ({ guildId, userId, communicationDisabledUntilTimestamp, duration, reason, location: _location } = moderator_report_id);
-    let obj = _modDef5227;
+    let obj = _modDef5232;
     obj = { url: closure_16.GUILD_MEMBER(guildId, userId), reason, body: { communication_disabled_until: communicationDisabledUntilTimestamp, moderator_report_id: moderator_report_id.moderatorReportId }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
     obj1 = { guild_id: guildId, target_user_id: userId, duration: null, reason: null, communication_disabled_until: null, location: null };
@@ -701,7 +701,7 @@ export default {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -794,7 +794,7 @@ export default {
               }
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp45) {
             c3 = tmp45;
@@ -834,7 +834,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -962,7 +962,7 @@ export default {
       const obj5 = closure_1_0(530);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(7286);
+      const obj = closure_1_1(7324);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -976,7 +976,7 @@ export default {
   },
   deleteRole(closure_1_4, id) {
     const _require = closure_1_4;
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const obj = { url: closure_16.GUILD_ROLE(closure_1_4, id), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: closure_16.GUILD_ROLE(closure_1_4, id), oldFormErrors: true, rejectWithError: true }).then(() => {
       const result = closure_1_1(closure_1_3[30]).checkGuildTemplateDirty(closure_0);
@@ -994,7 +994,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(7286);
+      const obj = closure_1_1(7324);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1011,7 +1011,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(7286);
+      const obj = closure_1_1(7324);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1143,7 +1143,7 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(5267);
+            let tmp11Result = tmp11(5272);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
               tmp11Result = tmp11(1222);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
@@ -1197,7 +1197,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1246,7 +1246,7 @@ export default {
             obj5[2] = body;
             obj.dispatch(obj5);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           dependencyMap = tmp;
@@ -1278,7 +1278,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1325,7 +1325,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -1354,7 +1354,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1412,7 +1412,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           v0 = tmp;
@@ -1435,7 +1435,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1475,7 +1475,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;
@@ -1486,8 +1486,8 @@ export default {
   },
   fetchGuildRoleConnectionsEligibility(guildId, id) {
     const _require = id;
-    const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    let obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
     const value = HTTP.get(obj);
     return value.then((body) => {
       body = body.body;
@@ -1512,7 +1512,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1547,7 +1547,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;
@@ -1571,7 +1571,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1606,7 +1606,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;

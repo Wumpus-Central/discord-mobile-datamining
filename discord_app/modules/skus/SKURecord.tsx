@@ -1,6 +1,6 @@
 // discord_app/modules/skus/SKURecord.tsx
 import toJSDefault from "../../lib/Record.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
 import closure_3 from "../../records/ApplicationRecord.tsx";
@@ -246,7 +246,7 @@ Object.defineProperty(prototype, "isTheGameAwardsWinner", {
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
@@ -267,7 +267,7 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
       const obj = hasFlag;
     }
     available = hasFlagResult;
@@ -275,13 +275,13 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
+  return hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
       hasFlagResult = tmp(1403).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
       const tmpResult = tmp(1403);

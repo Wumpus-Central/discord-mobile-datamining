@@ -24,10 +24,10 @@ class MobileCacheSnapshotStore extends Store {
     tmp2 = new tmp2(tmp3, obj, arg1, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp2;
-    tmp5 = require("module_38");
+    tmp5 = require("../../_runtime/metro/00038__.js");
     tmp5Result = tmp5(null != tmp2.getClass().displayName, "Snapshot stores need a display name");
-    tmp7 = require("module_38")(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
-    tmp8 = require("module_38")(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
+    tmp7 = require("../../_runtime/metro/00038__.js")(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
+    tmp8 = require("../../_runtime/metro/00038__.js")(!("WRITE_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action");
     allStores = MobileCacheSnapshotStore.allStores;
     arr = allStores.push(tmp2);
     return tmp2;

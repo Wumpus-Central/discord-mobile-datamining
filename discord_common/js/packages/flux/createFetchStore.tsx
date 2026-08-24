@@ -120,7 +120,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -190,7 +190,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                         c6 = HermesBuiltin.apply(items1, undefined);
                         if (c6 === closure_1_8) {
                           c7 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         } else {
                           if (null != c6) {
                             if (!(function isCachedDataStale(useStoreState, closure_1_9) {
@@ -207,7 +207,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                               }
                             })(useStoreState, closure_1_9)) {
                               c7 = 3;
-                              return { value: "HermesInternal", done: "HermesInternal" };
+                              return { value: "HermesInternal", done: null };
                             }
                           }
                           failureLockedUntil = closure_1_3.getState().failureLockedUntil;
@@ -215,7 +215,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                             const _Date2 = Date;
                             if (Date.now() < failureLockedUntil) {
                               c7 = 3;
-                              return { value: "HermesInternal", done: "HermesInternal" };
+                              return { value: "HermesInternal", done: null };
                             }
                           }
                         }
@@ -488,7 +488,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -548,7 +548,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp7) {
           c4 = tmp;
@@ -575,7 +575,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -638,7 +638,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -665,7 +665,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -731,7 +731,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;

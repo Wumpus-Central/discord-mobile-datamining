@@ -5,7 +5,6 @@ import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
 import closure_3 from "../../stores/GuildStore.tsx";
 import closure_4 from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 const GuildFeatures = ME.GuildFeatures;
@@ -14,16 +13,16 @@ const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIs
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
-  _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
+  initialize;
   [][0] = closure_4;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const obj = _initialize;
+  const obj = initialize;
   const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _set.useIsUserInCreatorMonetizationEligibleCountry();
+  const isUserInCreatorMonetizationEligibleCountry = require("../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

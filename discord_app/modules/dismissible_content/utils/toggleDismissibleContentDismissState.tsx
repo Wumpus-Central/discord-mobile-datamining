@@ -3,18 +3,17 @@ import set from "../../../../_runtime/00002_set.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../stores/SelectedGuildStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../DismissibleContentUnsafeUtils.tsx";
 
 noop.useCallback;
 let result = set.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
   obj = { cooldownDurationMs: stateFromStores(687).Millis.WEEK, guildId: stateFromStores };
-  let result = _UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  let result = require("../DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
   obj = {

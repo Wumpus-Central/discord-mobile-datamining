@@ -19,26 +19,26 @@ export const useSafetyHubClassifications = function useSafetyHubClassifications(
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
   const _require = classificationId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getClassification(closure_0));
   const items1 = [closure_5];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_5.getClassificationRequestState(closure_0));
-  const obj2 = _initialize;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_5.getClassificationRequestState(closure_0));
+  const obj2 = initialize;
   let tmp = _require;
   const items2 = [closure_5];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => store.getIsDsaEligible());
-  const obj3 = _initialize;
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => store.getIsDsaEligible());
+  const obj3 = initialize;
   const items3 = [closure_5];
-  let stateFromStores3 = _initialize.useStateFromStores(items3, () => store.getIsAppealEligible());
-  const obj4 = _initialize;
+  let stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => store.getIsAppealEligible());
+  const obj4 = initialize;
   if (obj5.isGuildClassification(stateFromStores)) {
     const guild_metadata = stateFromStores.guild_metadata;
     let member_type;
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(5439).MemberType.OWNER) {
+    if (member_type === tmp(5444).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

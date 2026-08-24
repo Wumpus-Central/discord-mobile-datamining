@@ -119,7 +119,7 @@ export default function PollAnswerInput(answer) {
     if (null != channel) {
       closure_1_4.dismiss();
       let obj = answer(channelId[14]);
-      obj = { channel: null, onPressEmoji: null, pickerIntention: null, startExpanded: false, autoFocus: false };
+      obj = { channel: null, onPressEmoji: null, pickerIntention: null };
       obj[0] = channel;
       obj[1] = function onPressEmoji(arg0) {
         callback(arg0, closure_1);

@@ -11,7 +11,7 @@ class LocalPresenceStateManager extends tmp2 {
     tmp3.switchingAccounts = false;
     emitPresenceUpdate = tmp3.emitPresenceUpdate;
     tmp4 = require("rateLimit");
-    tmp3.didCommit = require("module_5");
+    tmp3.didCommit = require("../../../_runtime/00005_asyncGeneratorStep.js");
     tmp3.socket = global;
     return tmp3;
   }

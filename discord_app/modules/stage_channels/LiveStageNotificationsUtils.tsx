@@ -2,7 +2,6 @@
 import closure_2 from "../../stores/GuildMemberCountStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
@@ -11,7 +10,7 @@ export const useCanSendStageStartNotification = function useCanSendStageStartNot
   const _require = first;
   const items = [closure_3];
   const items1 = [first];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);

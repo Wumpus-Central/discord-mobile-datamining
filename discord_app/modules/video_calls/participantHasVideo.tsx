@@ -3,7 +3,6 @@ import closure_2 from "../../stores/AuthenticationStore.tsx";
 import closure_3 from "../../stores/MediaEngineStore.tsx";
 import ParticipantTypes from "../calls/CallConstants.tsx";
 import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function canRenderParticipantVideo(participant, closure_1_4) {
@@ -82,5 +81,5 @@ export { canRenderParticipantVideo };
 export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8(closure_0, closure_1_3));
 };

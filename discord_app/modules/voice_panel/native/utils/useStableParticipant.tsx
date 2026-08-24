@@ -5,7 +5,6 @@ import closure_4 from "../../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../../stores/MediaEngineStore.tsx";
 import closure_6 from "../../../../stores/UserStore.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function areStableParticipantsEqual(arg0, arg1) {
@@ -27,25 +26,25 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_3, closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1, arg2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != callback) {
       const participant = closure_1_3.getParticipant(callback2, tmp);
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0.785, isSelf: 0.607 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 41.774, isSelf: 42.358 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4796).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4796);
-          obj[6] = callback(4797).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4801).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4801);
+          obj[6] = callback(4802).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(11444)(participant);
+        const tmp15 = callback2(11493)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

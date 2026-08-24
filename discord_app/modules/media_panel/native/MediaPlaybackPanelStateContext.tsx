@@ -18,7 +18,7 @@ obj[8] = function dismissPanel() {
   error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj[9] = require("module_0");
+obj[9] = require("../../../index.native.tsx");
 obj[10] = createFakeSharedValue.createFakeSharedValue(true);
 obj[11] = createFakeSharedValue.createFakeSharedValue(false);
 obj[12] = createFakeSharedValue.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });

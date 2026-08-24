@@ -31,16 +31,16 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmpResult = tmp(8186);
+    let tmpResult = tmp(8226);
     const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
-    tmpResult = tmp(8186);
+    tmpResult = tmp(8226);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(7979).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(8018).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(11751).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(11800).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(11753).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(11802).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;
@@ -74,12 +74,12 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     obj5[4] = tmp23;
     obj5[5] = username;
-    items2[1] = closure_5(tmp(4734).Text, obj5);
-    items2[2] = closure_5(tmp(4734).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = closure_5(tmp(4739).Text, obj5);
+    items2[2] = closure_5(tmp(4739).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp4.messageText;
     obj6[3] = getBoostRowMessageTextDefault(row);
-    items2[3] = closure_5(tmp(4734).Text, obj6);
+    items2[3] = closure_5(tmp(4739).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
     let str4 = "text-xs/semibold";
@@ -95,7 +95,7 @@ function GuildPowerupsRecentActivityRow(row) {
     obj7[1] = str5;
     obj7[2] = tmp4.timestamp;
     obj7[3] = calendarFormatResult;
-    items1[2] = closure_5(tmp(4734).Text, obj7);
+    items1[2] = closure_5(tmp(4739).Text, obj7);
     obj[1] = items1;
     return closure_6(View, obj);
   }
@@ -132,7 +132,7 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     obj[1] = str;
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t.yM9Krm);
-    const items = [closure_5(tmp(4734).Text, obj), ];
+    const items = [closure_5(tmp(4739).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp4.boostContainer;
     obj1[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));

@@ -1,7 +1,6 @@
 // discord_app/modules/guild_products/GuildProductsEligibility.tsx
 import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
@@ -10,7 +9,7 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

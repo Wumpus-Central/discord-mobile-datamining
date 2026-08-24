@@ -37,12 +37,12 @@ prototype = function Reaction() {
   obj.users = new Map();
   return obj;
 }.prototype;
-prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
-  ({ name, id } = emoji);
+prototype["ensure"] = function ensure(arg0, arg1, arg2) {
+  ({ name, id } = arg1);
   if (id == null) {
     id = "";
   }
-  const combined = "" + messageId + ":" + name + ":" + id + ":" + reactionType;
+  const combined = "" + arg0 + ":" + name + ":" + id + ":" + arg2;
   let tmp3 = dependencyMap[combined];
   if (tmp3 == null) {
     if (typeof prototype !== "function") {

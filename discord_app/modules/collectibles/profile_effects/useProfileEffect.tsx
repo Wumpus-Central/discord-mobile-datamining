@@ -3,7 +3,6 @@ import closure_2 from "../../../../_runtime/00019_noop.js";
 import closure_3 from "../CollectiblesCategoryStore.tsx";
 import closure_4 from "../CollectiblesPurchaseStore.tsx";
 import { isProfileEffectRecord } from "../records/ProfileEffectRecord.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
@@ -11,7 +10,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/profile_
 export default function useProfileEffect(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = closure_1_3.getProduct(tmp);
       let first;

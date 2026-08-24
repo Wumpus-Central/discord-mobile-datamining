@@ -1,6 +1,5 @@
 // discord_app/modules/messages/useLongestChannelMessageBeforeReply.tsx
 import closure_2 from "../../stores/MessageStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");
@@ -10,7 +9,7 @@ export const useLongestChannelMessageBeforeReply = function useLongestChannelMes
   dependencyMap = recipientId;
   const items = [closure_2];
   const items1 = [id, recipientId];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != closure_1) {
       const messages = closure_1_2.getMessages(closure_0);
       const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);

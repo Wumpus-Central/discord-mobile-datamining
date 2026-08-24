@@ -1,7 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx
 import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
 let items = [, , ];
@@ -34,7 +33,7 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
 export const useGuildEligibleForTierTemplates = function useGuildEligibleForTierTemplates(guildId) {
   const _require = guildId;
   items = [closure_2];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {

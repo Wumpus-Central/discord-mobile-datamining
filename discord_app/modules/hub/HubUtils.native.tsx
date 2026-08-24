@@ -1,11 +1,11 @@
 // discord_app/modules/hub/HubUtils.native.tsx
-import _modDef11922 from "native/components/HubEmailConnectionModalActionCreators.tsx";
+import _modDef11971 from "native/components/HubEmailConnectionModalActionCreators.tsx";
 import closure_2 from "../../stores/InviteStore.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 let closure_3 = importDefaultResult.throttle((code) => {
   invite = invite.getInvite(code.code);
-  _modDef11922.open({ invite });
+  _modDef11971.open({ invite });
 }, 1000, { trailing: false });
 const obj = {
   onOpenHubInvite(invite) {

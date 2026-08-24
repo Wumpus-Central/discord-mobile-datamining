@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupListRule.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import tDefault from "../../../_runtime/04092_t.js";
+import tDefault from "../../../_runtime/04095_t.js";
 import closure_10 from "../../index.native.tsx";
 
 const re2 = /\n{2,}$/;
@@ -8,7 +8,7 @@ const re3 = /(?:^|\n)( *)$/;
 let regExp = new RegExp("^" + "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +".replace("%INDENT_CAPTURE_PATTERN%", " *"));
 const re5 = / *\n$/;
 let regExp1 = new RegExp("^( *)((?:[*-]|\\d+\\.)) [\\s\\S]+?(?:\\n(?! )(?!\\1(?:[*-]|\\d+\\.) )|$)");
-const regExp2 = new RegExp("^\\n" + require("module_1"));
+const regExp2 = new RegExp("^\\n" + require("../debug/logAppStart.tsx"));
 const re8 = /^\n/;
 const re9 = /\n *$/;
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;

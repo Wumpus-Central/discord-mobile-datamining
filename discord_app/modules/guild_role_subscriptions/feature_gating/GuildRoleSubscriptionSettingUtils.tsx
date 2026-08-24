@@ -6,7 +6,6 @@ import closure_3 from "../../../stores/PermissionStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { useShouldHideGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 
 function computeGuildRoleSubscriptionSettingsVisibility(guild) {
@@ -51,7 +50,7 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
 }
 function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   const _require = stateFromStores;
-  obj = _initialize;
+  obj = initialize;
   const items = [closure_3];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -62,16 +61,16 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return canResult;
   }, items1);
   const items2 = [closure_4];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
       tmp3 = closure_1_2(tmp2, tmp);
     }
     return tmp3;
   });
-  const obj2 = _initialize;
-  const isUserInCreatorMonetizationEligibleCountry = _set.useIsUserInCreatorMonetizationEligibleCountry();
-  _useShouldHideGuildPurchaseEntryPoints;
+  const obj2 = initialize;
+  const isUserInCreatorMonetizationEligibleCountry = require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+  useShouldHideGuildPurchaseEntryPoints;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -159,7 +158,7 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);

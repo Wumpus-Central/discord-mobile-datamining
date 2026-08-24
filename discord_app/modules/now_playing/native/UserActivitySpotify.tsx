@@ -2,13 +2,12 @@
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import Button from "../../../design/void/native.tsx";
 import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
-import _modDef4090 from "../../../lib/native/Linking.tsx";
-import registerAssetDefault from "../../../../_runtime/08352_registerAsset.js";
+import _modDef4093 from "../../../lib/native/Linking.tsx";
+import registerAssetDefault from "../../../../_runtime/08391_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import { Button } from "../../../design/void/native.tsx";
 
 require = arg1;
 ({ Linking: c4, View: c5 } = get_ActivityIndicator);
@@ -116,7 +115,7 @@ prototype["render"] = function render() {
   const self = this;
   const parts = this.props.artists.split("; ");
   const _require = parts.length - 1;
-  return callback(_Button.LegacyText, { children: parts.map((children) => self.renderLink(children, arg1, arg1 === closure_0)) });
+  return callback(require("../../../design/void/native.tsx").LegacyText, { children: parts.map((children) => self.renderLink(children, arg1, arg1 === closure_0)) });
 };
 const PureComponent3 = importAllResult.PureComponent;
 class SpotifyAlbum extends PureComponent3 {
@@ -170,8 +169,8 @@ export const openUrl = function openUrl(arg0, ALBUM, album_id) {
     });
     const openURLResult = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
-    catchPromise = _modDef4090.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
-    const obj = _modDef4090;
+    catchPromise = _modDef4093.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
+    const obj = _modDef4093;
   }
   return catchPromise;
 };
@@ -247,7 +246,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: registerAssetDefault };
-  obj[0] = callback(activity(4745).Button.Icon, obj);
+  obj[0] = callback(activity(4750).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
@@ -273,7 +272,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj[1] = callback(activity(4745).Button, obj);
+  obj[1] = callback(activity(4750).Button, obj);
   return callback(closure_5, obj);
 };
 export { SpotifyTrack };

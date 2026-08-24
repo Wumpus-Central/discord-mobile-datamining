@@ -19,7 +19,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting2;
   let obj = createCacheKey;
   obj = { seeMoreLabelColor: messageOptions(712).colors.TEXT_DEFAULT };
-  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4310)());
+  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4314)());
   const RenderEmbeds = explicitContentFromProto.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
@@ -53,7 +53,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(10066), obj);
+  return setting2(messageOptions(10105), obj);
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((message) => {
@@ -160,11 +160,11 @@ const memoResult2 = importAllResult.memo((message) => {
     obj[4] = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5026)(message);
+  const tmp3 = merged(5031)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   obj = {};
-  const merged2 = Object.assign(message(8159).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8198).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
   obj.renderReplies = false;
   obj.renderThreadEmbeds = false;

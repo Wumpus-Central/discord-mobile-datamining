@@ -97,7 +97,7 @@ prototype["getStripe"] = function getStripe() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ prototype["getStripe"] = function getStripe() {
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(4472).getStripe();
+              obj1[0] = closure_1_1(4476).getStripe();
               return obj1;
             }
           }
@@ -134,7 +134,7 @@ prototype["getStripe"] = function getStripe() {
           closure_0.stripe = arg1;
         }
         if (null == closure_0.stripe) {
-          let obj2 = closure_1_0(4467);
+          let obj2 = closure_1_0(4471);
           throw obj2.dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;
@@ -230,7 +230,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -289,7 +289,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
           closure_1 = arg1;
           c2.performRedirect(closure_1);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp20) {
         c3 = tmp;
@@ -350,7 +350,7 @@ prototype["confirmPayment"] = function confirmPayment() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

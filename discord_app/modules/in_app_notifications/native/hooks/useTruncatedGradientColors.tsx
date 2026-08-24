@@ -9,7 +9,7 @@ let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });
 const result = set.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
 export default function useTruncatedGradientColors() {
-  let obj = token(4097);
+  let obj = token(4100);
   token = obj.useToken(ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   obj = {
     gradientColors: useMemo(() => {

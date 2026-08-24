@@ -14,7 +14,7 @@ let result = require("set").fileFinishedImporting("modules/payments/native/utils
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
   let _require = GiftPurchaseButton;
-  let obj = _apexExperiment;
+  let obj = apexExperiment;
   obj = { location: GiftPurchaseButton };
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled(obj);
   _require = undefined;
@@ -35,7 +35,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

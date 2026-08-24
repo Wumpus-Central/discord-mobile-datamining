@@ -6,8 +6,6 @@ import isActionRequiredDefault from "../core/isActionRequired.tsx";
 import closure_3 from "../auth/LoginRequiredActionStore.tsx";
 import closure_4 from "../../stores/UserRequiredActionStore.tsx";
 import identity from "../../../_runtime/00700_identity.js";
-import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { set } from "DismissibleContentFatigueConfig.tsx";
 
 require = arg1;
 function withContent(currentlyShown, content) {
@@ -26,7 +24,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -248,9 +246,9 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
 };
 export const addCandidateContent = function addCandidateContent(content) {
   const _require = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
-  _batchUpdates.batchUpdates(() => {
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -275,7 +273,7 @@ export const addCandidateContent = function addCandidateContent(content) {
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  _batchUpdates.batchUpdates(() => {
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
     closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

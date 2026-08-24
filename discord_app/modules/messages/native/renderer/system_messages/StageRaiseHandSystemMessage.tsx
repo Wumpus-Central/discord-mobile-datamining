@@ -36,14 +36,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4981).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4986).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8187)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8227)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
@@ -58,14 +58,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
       obj3[1] = message;
       obj2[0] = obj3;
       obj1[0] = intl3.formatToParts(tmp(1236).t["qDAX++"], obj2);
-      obj1[1] = tmp6(1993).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      obj1[1] = tmp6(1994).getArticleURL(constants.EPHEMERAL_MESSAGES);
       const intl4 = tmp(1236).intl;
       obj1[2] = intl4.string(tmp(1236).t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = tmp6(1993);
+      const tmp6Result = tmp6(1994);
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(8188)(roleStyle));
+  const merged = Object.assign(tmp6(8228)(roleStyle));
   return obj;
 };

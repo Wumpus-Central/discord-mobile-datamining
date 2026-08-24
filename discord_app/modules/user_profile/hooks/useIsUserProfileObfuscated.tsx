@@ -1,6 +1,5 @@
 // discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
 import closure_2 from "../UserProfileStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
@@ -8,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useIsUserProfileObfuscated(flags) {
   const _require = flags;
   const items = [closure_2];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_2.getUserProfile(id.id));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.getUserProfile(id.id));
   let bio;
   if (stateFromStores != null) {
     bio = stateFromStores.bio;

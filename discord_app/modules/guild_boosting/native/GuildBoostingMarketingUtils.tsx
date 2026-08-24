@@ -6,28 +6,28 @@ const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoo
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
   if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
-    return tmp(7939).ReactionIcon;
-  } else if (tmp(4266).PerkIcons.SOUNDBOARD === perkIcon) {
-    return tmp(7993).SoundboardIcon;
-  } else if (tmp(4266).PerkIcons.ANIMATED === perkIcon) {
-    return tmp(10211).GifIcon;
-  } else if (tmp(4266).PerkIcons.AUDIO === perkIcon) {
-    return tmp(11697).HeadphonesIcon;
-  } else if (tmp(4266).PerkIcons.STREAM === perkIcon) {
-    return tmp(11699).ScreenArrowIcon;
-  } else if (tmp(4266).PerkIcons.UPLOAD === perkIcon) {
-    return tmp(7942).UploadIcon;
-  } else if (tmp(4266).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
-    return tmp(8859).ShieldUserIcon;
-  } else if (tmp(4266).PerkIcons.CUSTOMIZATION === perkIcon) {
-    return tmp(11700).ImagesIcon;
-  } else if (tmp(4266).PerkIcons.VANITY === perkIcon) {
-    return tmp(9410).StarIcon;
-  } else if (tmp(4266).PerkIcons.STAGE_VIDEO === perkIcon) {
-    return tmp(6892).StageIcon;
-  } else if (tmp(4266).PerkIcons.STICKER === perkIcon) {
-    return tmp(7990).StickerIcon;
+    return tmp(7978).ReactionIcon;
+  } else if (tmp(4270).PerkIcons.SOUNDBOARD === perkIcon) {
+    return tmp(8032).SoundboardIcon;
+  } else if (tmp(4270).PerkIcons.ANIMATED === perkIcon) {
+    return tmp(10250).GifIcon;
+  } else if (tmp(4270).PerkIcons.AUDIO === perkIcon) {
+    return tmp(11746).HeadphonesIcon;
+  } else if (tmp(4270).PerkIcons.STREAM === perkIcon) {
+    return tmp(11748).ScreenArrowIcon;
+  } else if (tmp(4270).PerkIcons.UPLOAD === perkIcon) {
+    return tmp(7981).UploadIcon;
+  } else if (tmp(4270).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
+    return tmp(8896).ShieldUserIcon;
+  } else if (tmp(4270).PerkIcons.CUSTOMIZATION === perkIcon) {
+    return tmp(11749).ImagesIcon;
+  } else if (tmp(4270).PerkIcons.VANITY === perkIcon) {
+    return tmp(9447).StarIcon;
+  } else if (tmp(4270).PerkIcons.STAGE_VIDEO === perkIcon) {
+    return tmp(6930).StageIcon;
+  } else if (tmp(4270).PerkIcons.STICKER === perkIcon) {
+    return tmp(8029).StickerIcon;
   } else {
-    return tmp(7939).ReactionIcon;
+    return tmp(7978).ReactionIcon;
   }
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/10228_registerAsset.js";
-import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
+import registerAssetDefault from "../../../../../_runtime/10267_registerAsset.js";
+import _modDef14059 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
@@ -12,15 +12,13 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function VideoUploadQualityNitroUpsell() {
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useStackNavigation();
   const tmp3 = callback2();
-  obj1 = _defaultAreStatesEqual;
+  obj1 = defaultAreStatesEqual;
   const items = [closure_5, closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => {
     premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
@@ -28,9 +26,9 @@ function VideoUploadQualityNitroUpsell() {
     return arr(table[11]).hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription);
   });
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.format(_getSystemLocale.t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
-  const children = [callback(_Text.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.format(require("../../../../intl/index.native.tsx").t["Up+hSO"], { supportURL: "https://support.discord.com/hc/articles/9665451164951" });
+  const children = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
   let tmp7Result = !stateFromStores;
   if (!stateFromStores) {
     obj = { style: null, children: null };
@@ -52,10 +50,10 @@ function VideoUploadQualityNitroUpsell() {
       const obj = closure_1_1(closure_1_2[17]);
     };
     obj4[2] = intl2.format(tmp(1236).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4734).Text, obj4);
+    items2[1] = tmp7(tmp(4739).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(6292).Card, obj1);
+    obj[1] = tmp7(tmp(6323).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;
@@ -163,5 +161,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef13991, { node });
+  return callback(_modDef14059, { node });
 };

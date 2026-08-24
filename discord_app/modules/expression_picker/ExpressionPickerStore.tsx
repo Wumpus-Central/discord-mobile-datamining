@@ -1,9 +1,9 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
 import set from "../../../_runtime/00002_set.js";
 import ExpressionPickerViewType2 from "ExpressionPickerConstants.tsx";
-import uniqueIdDefault from "../../../_runtime/05261_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05266_uniqueId.js";
 import identity from "../../../_runtime/00700_identity.js";
-import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
+import createJSONStorage from "../../../_runtime/04246_createJSONStorage.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let ExpressionPickerViewType = ExpressionPickerViewType2.ExpressionPickerViewType;
@@ -24,7 +24,7 @@ export const openExpressionPicker = function openExpressionPicker(arg0, arg1, ar
   const _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) {
   const state = withEqualityFnResult.getState();
@@ -78,8 +78,8 @@ export const toggleExpressionPicker = function toggleExpressionPicker(arg0, arg1
         const state1 = withEqualityFnResult.getState();
         let _require = state1;
         if (null !== state1.activeView) {
-          _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
-          const obj3 = _batchUpdates;
+          require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+          const obj3 = batchUpdates;
         }
       }
     }
@@ -87,11 +87,11 @@ export const toggleExpressionPicker = function toggleExpressionPicker(arg0, arg1
   _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const setExpressionPickerView = function setExpressionPickerView(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, lastActiveView: closure_1_4.getState().activeView }));
+  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ activeView: closure_0, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const setSearchQuery = function setSearchQuery(arg0) {
   const _require = arg0;

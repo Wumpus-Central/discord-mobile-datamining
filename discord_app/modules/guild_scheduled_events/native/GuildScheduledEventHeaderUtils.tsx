@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 import getRRule from "../utils/ScheduleUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/08896_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08933_registerAsset.js";
 import scheduledEventSort from "../GuildScheduledEventStore.tsx";
 
 ({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
@@ -31,7 +31,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(8129);
+      tmp8Result = tmp8(8168);
     }
     let entity_type;
     if (event != null) {
@@ -44,11 +44,11 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     let ICON_FEEDBACK_CRITICAL = tmp8(712).colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
   } else if (tmp7) {
-    tmp8Result = tmp8(12405);
+    tmp8Result = tmp8(12457);
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(12405);
+    tmp8Result = tmp8(12457);
     const intl3 = tmp(1236).intl;
     stringResult1 = intl3.string(tmp(1236).t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -66,9 +66,9 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
         formatToPlainStringResult = intl.string(tmp(1236).t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(12405);
+      tmp8Result = tmp8(12457);
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(12405);
+      const tmp8Result1 = tmp8(12457);
     }
   }
   if (isCanceled) {

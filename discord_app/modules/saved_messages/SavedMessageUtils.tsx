@@ -1,12 +1,11 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import { UnknownChannelRecord } from "../../records/ChannelRecord.tsx";
 import closure_6 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function _savedMessageJumpToMessage() {
@@ -29,7 +28,7 @@ function _savedMessageJumpToMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,11 +78,11 @@ function _savedMessageJumpToMessage() {
               if (null == closure_2.recipients) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else if (closure_2.recipients.length > 1) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 obj1 = lib(closure_2[8]);
                 const recipients = closure_2.recipients;
@@ -112,7 +111,7 @@ function _savedMessageJumpToMessage() {
           }
           lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), { openChannel: true });
           constants = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp30) {
           closure_4 = tmp30;
           if (tmp4 === c5) {
@@ -174,7 +173,7 @@ export const useDueInString = function useDueInString(arg0) {
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
   const _require = savedMessage;
   const items = [closure_6];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
   const items1 = [stateFromStores, savedMessage];
   return React.useMemo(() => {
     let tmp = stateFromStores;

@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/11948_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/11997_registerAsset.js";
 import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HappeningNowCard.tsx";
-import registerAssetDefault2 from "../../../../../../_runtime/15355_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../_runtime/15356_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../_runtime/15357_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/15419_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../_runtime/15420_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../_runtime/15421_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../../../stores/GuildChannelStore.tsx";

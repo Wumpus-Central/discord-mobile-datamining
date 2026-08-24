@@ -3,7 +3,6 @@ import closure_3 from "../../stores/GuildChannelStore.tsx";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "../../stores/GuildChannelStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
@@ -12,7 +11,7 @@ export default function useSendMessageChannelCount(arg0) {
   const _require = arg0;
   let items = [closure_3];
   const items1 = [arg0];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let items = closure_1_3.getChannels(closure_0)[closure_1_4];
     if (items == null) {
       items = [];

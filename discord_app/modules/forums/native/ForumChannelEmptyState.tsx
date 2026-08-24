@@ -24,9 +24,9 @@ const memoResult = importAllResult.memo((topViewHeight) => {
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   let obj2 = AccessibilityAnnouncer;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(11946);
+    let tmp4Result = tmp4(11995);
   } else {
-    tmp4Result = tmp4(11947);
+    tmp4Result = tmp4(11996);
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [closure_5(closure_4, obj), , ];

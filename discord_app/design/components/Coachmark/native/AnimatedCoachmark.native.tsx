@@ -1,5 +1,5 @@
 // discord_app/design/components/Coachmark/native/AnimatedCoachmark.native.tsx
-import _modDef4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import AnimatedRenderItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import Coachmark from "Coachmark.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -19,7 +19,7 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     tmpResult = tmp(Coachmark.CoachmarkContainer, obj);
   }
   obj[2] = tmpResult;
-  return jsx(_modDef4115.View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(_modDef4119.View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("set").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
@@ -28,7 +28,7 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   importDefault = undefined;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(9274);
+  let obj = visible(9311);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {

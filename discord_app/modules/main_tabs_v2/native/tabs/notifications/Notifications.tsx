@@ -20,7 +20,6 @@ import { YouBarNavigatorScreens } from "../../MainTabsConstants.tsx";
 import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { ForLaterFreemiumConfig } from "../../../../saved_messages/ForLaterExperiment.tsx";
 
 require = arg1;
@@ -46,9 +45,9 @@ class Notifications {
     }
     tmp = closure_10();
     tmp2 = require("context");
-    layoutEffect = closure_3.useLayoutEffect(() => callback(5066).trackAppUIViewed(), []);
+    layoutEffect = closure_3.useLayoutEffect(() => callback(5071).trackAppUIViewed(), []);
     callback = closure_3.useCallback(() => {
-      const navigation = callback(4230).getRootNavigationRef();
+      const navigation = callback(4234).getRootNavigationRef();
       if (null != navigation) {
         if (navigation.canGoBack()) {
           navigation.goBack();
@@ -146,7 +145,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
   let _require;
   const tmp = callback3();
-  let obj = _ForLaterFreemiumConfig;
+  let obj = ForLaterFreemiumConfig;
   const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
   const ref = importAllResult.useRef(null);
   const tmp8 = CoachmarkImgDefault(ref);
@@ -167,13 +166,13 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1236).intl;
     obj1[1] = intl.string(tmp5(1236).t["13/7kX"]);
     obj1[2] = goBack;
-    obj1[3] = tmp12(tmp5(15659).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5433).PressableOpacity, obj1), , ];
+    obj1[3] = tmp12(tmp5(15728).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(5438).PressableOpacity, obj1), , ];
     const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: null, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     obj2[2] = tmp.headerText;
     const intl2 = tmp5(1236).intl;
     obj2[5] = intl2.string(tmp5(1236).t.HcoRu0);
-    items1[1] = tmp12(tmp5(4734).Text, obj2);
+    items1[1] = tmp12(tmp5(4739).Text, obj2);
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.actionButtons;
     tmp10Result = null;
@@ -181,19 +180,19 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       const obj4 = { children: null };
       const obj5 = { ref: null, type: null, onOpen: null };
       obj5[0] = ref;
-      let tmp2Result = tmp2(15660);
-      obj5[1] = tmp5(8489).SavedMessageSortTypes.BOOKMARK;
+      let tmp2Result = tmp2(15729);
+      obj5[1] = tmp5(8528).SavedMessageSortTypes.BOOKMARK;
       obj5[2] = callback;
       const items2 = [tmp12(tmp2Result, obj5), ];
       const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(15660);
-      obj6[0] = tmp5(8489).SavedMessageSortTypes.REMINDER;
+      tmp2Result = tmp2(15729);
+      obj6[0] = tmp5(8528).SavedMessageSortTypes.REMINDER;
       obj6[1] = callback;
       items2[1] = tmp12(tmp2Result, obj6);
       obj4[0] = items2;
       tmp10Result = tmp10(closure_8, obj4);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(15662), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(15731), {})];
     obj3[1] = items3;
     items1[2] = tmp10(tmp11, obj3);
     obj[1] = items1;
@@ -201,7 +200,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   }
   const obj7 = { children: null };
   obj[1] = tmp10Result;
-  const items4 = [closure_7(_SafeAreaPaddingView.SafeAreaPaddingView, obj), ];
+  const items4 = [closure_7(require("../../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj), ];
   const items5 = [tmp.headerBorder];
   items4[1] = closure_7(View, { style: items5 });
   obj7[0] = items4;

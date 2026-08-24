@@ -1,7 +1,6 @@
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
 import closure_2 from "../impersonate/ImpersonateStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
@@ -9,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding/us
 export default function useGuildOnboardingAvailable(features) {
   const _require = features;
   const items = [closure_2];
-  let stateFromStores = _initialize.useStateFromStores(items, () => {
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;

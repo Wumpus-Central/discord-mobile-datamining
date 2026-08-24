@@ -11,7 +11,6 @@ import closure_4 from "../../../../stores/ReadStateStore.tsx";
 import { ThemeTypes } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function VoiceChatCallScreenHeaderIconInner(onPress) {
@@ -62,7 +61,7 @@ export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  return _initialize.useStateFromStoresObject(items, () => ({ unreadCount: closure_1_4.getUnreadCount(closure_0), mentionCount: closure_1_4.getMentionCount(closure_0) }), items1);
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ unreadCount: closure_1_4.getUnreadCount(closure_0), mentionCount: closure_1_4.getMentionCount(closure_0) }), items1);
 };
 export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderIcon(arg0) {
   let obj = { theme: ThemeTypes.DARK, children: null };

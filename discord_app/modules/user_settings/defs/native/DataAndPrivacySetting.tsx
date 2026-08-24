@@ -15,9 +15,9 @@ createToggle = {
   screen: createToggle,
   usePreNavigationAction() {
     return React.useCallback(() => {
-      const consents = callback(14212).fetchConsents();
-      const obj = callback(14212);
-      const harvestStatus = callback(14215).fetchHarvestStatus();
+      const consents = callback(14280).fetchConsents();
+      const obj = callback(14280);
+      const harvestStatus = callback(14283).fetchHarvestStatus();
       return true;
     }, []);
   }
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
-    return DataAndPrivacySettings.default;
+    return DataAndPrivacySettings /* DataAndPrivacySettings */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

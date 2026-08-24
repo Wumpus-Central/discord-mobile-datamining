@@ -5,8 +5,6 @@ import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMess
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
-import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
 const require = arg1;
 class NotificationSettingsMessageNotification {
@@ -85,7 +83,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
   let obj = {
     context: "guild",
     style: style.style,
-    setting: _updateGuildPreset.useGuildPresetSettings(style.guildId).notification,
+    setting: require("../utils/notificationSettingsGuildFlagUtils.tsx").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
@@ -99,7 +97,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
   let obj = {
     context: "channel",
     style: style.style,
-    setting: _useChannelPresetSettings.useChannelPresetSettings(style.channel).notification,
+    setting: require("../utils/notficationSettingsChannelFlagUtils.tsx").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };

@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import isIterable from "../../../../_runtime/04006_isIterable.js";
-import wrapChildrenDefault from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import isIterable from "../../../../_runtime/04009_isIterable.js";
+import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../stores/ChannelStore.tsx";
@@ -11,7 +11,7 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 require = arg1;
 function VoicePanel(arg0) {
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(channelId.channelId);
@@ -36,7 +36,7 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function VoicePanelContainer() {
   const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
-  return jsx(wrapChildrenDefault.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  return jsx(ManaContext.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 

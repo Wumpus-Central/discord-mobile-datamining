@@ -18,7 +18,6 @@ import withContent from "DismissibleContentShownStateStore.tsx";
 import { ContentDismissActionType } from "DismissibleContentConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import set from "../../../_runtime/00002_set.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function addVersionedDismissedContent(GUILD_POWERUP_NOTIFICATION, versionedDismissibleContentCurrentVersion, nextNumTimesDismissed) {
@@ -72,7 +71,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -104,7 +103,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
             return obj;
           } else {
             table = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           table = tmp;
@@ -171,7 +170,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -207,7 +206,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c6 = tmp;
@@ -245,7 +244,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -284,7 +283,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           c6 = tmp;
@@ -321,7 +320,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -356,7 +355,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c5 = tmp;
@@ -609,7 +608,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "r" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {
@@ -705,7 +704,7 @@ export const useIsSingleUseGuildDismissibleContentDismissed = function useIsSing
   const _require = dismissibleContent;
   closure_1 = arg1;
   const items = [closure_5];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null != dismissibleContent;
     if (tmp2) {
       let flag2 = true;

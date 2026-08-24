@@ -3,7 +3,6 @@ import closure_2 from "../../stores/ChannelStore.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import closure_4 from "../../stores/SelectedChannelStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
@@ -42,7 +41,7 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let flag = false;
     if (null != closure_0) {
       const CALLABLE = closure_1_5.CALLABLE;

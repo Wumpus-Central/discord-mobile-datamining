@@ -1,11 +1,10 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import set from "../../../_runtime/00002_set.js";
 import setDefault from "../../utils/Durations.tsx";
-import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
+import _modDef10540 from "../app_state/DiscordAppState.native.tsx";
 import getIsEligibleForQuests from "lib/QuestsEligibility.tsx";
 import noop from "../../../_runtime/00019_noop.js";
 import closure_5 from "QuestStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
@@ -22,18 +21,18 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
     if ("active" === obj2.getState()) {
       if (!fetchingQuestToDeliverByPlacement.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
         if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          let tmpResult = tmp(10477);
+          let tmpResult = tmp(10516);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(10477);
+          tmpResult = tmp(10516);
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
       obj4 = fetchingQuestToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(10477).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(10477);
+      tmp(10516).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(10516);
     }
-    obj2 = _modDef10501;
+    obj2 = _modDef10540;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);
@@ -127,7 +126,7 @@ export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBI
   const _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
     let value = questAdDecisionByPlacement.get(closure_0);
     if (value == null) {

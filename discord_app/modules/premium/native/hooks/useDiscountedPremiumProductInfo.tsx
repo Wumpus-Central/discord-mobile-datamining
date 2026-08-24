@@ -26,7 +26,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = _initialize;
+  let obj = initialize;
   const items1 = [stateFromStores];
   const items2 = [memo];
   stateFromStores = obj.useStateFromStores(items1, () => {

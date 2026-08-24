@@ -50,7 +50,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return PremiumScreen.default;
+    return PremiumScreen /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -8,7 +8,6 @@ import closure_8 from "../../../stores/ChannelStore.tsx";
 import closure_9 from "../../../stores/MediaEngineStore.tsx";
 import closure_10 from "../../../stores/RTCConnectionStore.tsx";
 import ParticipantTypes from "../../calls/CallConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ({ isStreamParticipant: unpackModuleId, isUserParticipant: closure_12, ParticipantTypes: map1 } = ParticipantTypes);
@@ -18,7 +17,7 @@ export default function usePipVideoOrStream(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_5, closure_6];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != c0) {
       let videoParticipants = closure_1_4.getVideoParticipants(tmp);
     } else {

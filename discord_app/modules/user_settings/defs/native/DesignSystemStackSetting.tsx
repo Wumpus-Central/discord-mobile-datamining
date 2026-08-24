@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_STACK,
   getComponent() {
-    return StackBlock.default;
+    return StackBlock /* StackBlock */.default;
   }
 };
 const route = createToggle.createRoute(obj);

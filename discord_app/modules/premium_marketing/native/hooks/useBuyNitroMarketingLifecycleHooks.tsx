@@ -4,8 +4,6 @@ import closure_3 from "../../../../../_runtime/00019_noop.js";
 import usePremiumPlanPurchasedStore from "../../../premium/native/PremiumPlanPurchasedStore.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
 
 const require = arg1;
 ({ reset: c4, usePremiumPlanPurchasedStore: c5 } = usePremiumPlanPurchasedStore);
@@ -22,7 +20,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _usePromotionMarketingComponent.usePromotionMarketingComponent(_MarketingComponentType.MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = require("../../../premium/hooks/usePromotionMarketingComponent.tsx").usePromotionMarketingComponent(require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -47,9 +45,9 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     let BuyNitroPurchaseLock = initialLoadCompleted(_navigator[10]).BuyNitroPurchaseLock;
     BuyNitroPurchaseLock.end();
     return () => {
-      const BuyNitroPurchaseLock = callback(7932).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = callback(7971).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(7932).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = callback(7971).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
     };
   }, []);

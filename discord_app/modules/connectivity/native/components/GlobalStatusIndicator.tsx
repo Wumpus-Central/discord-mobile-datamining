@@ -7,7 +7,6 @@ import closure_9 from "../../../native_menu/native/NativeMenuStore.tsx";
 import closure_10 from "../../../../stores/ChannelStore.tsx";
 import closure_11 from "../../../../stores/RTCConnectionStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 ({ View: c4, StyleSheet: c5, TouchableWithoutFeedback: closure_6, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
@@ -153,7 +152,7 @@ export default function GlobalStatusIndicator(children) {
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
   const _require = globalStatusIndicatorState;
-  const sharedValue = _ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

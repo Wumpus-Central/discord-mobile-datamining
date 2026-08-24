@@ -5,7 +5,6 @@ import closure_3 from "../../../../stores/GuildStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 
 const require = arg1;
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: c4, PowerupActiveStatusType: c5 } = BoostedGuildTiers);
@@ -14,7 +13,7 @@ const result = require("set").fileFinishedImporting("modules/premium/powerups/ho
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   const _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -28,8 +27,8 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   }, items1);
   let tmp6 = tmp3.type !== constants.INACTIVE;
   if (!tmp6) {
-    tmp6 = skuId.skuId === _VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp7 = skuId.skuId === _VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp6 = skuId.skuId === require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp7 = skuId.skuId === require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp8 = tmp6;
   if (!tmp6) {

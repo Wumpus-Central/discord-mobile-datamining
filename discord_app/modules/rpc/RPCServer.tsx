@@ -2,13 +2,14 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { TransportTypes } from "Constants.tsx";
 import ME from "../../Constants.tsx";
 
-({ AnalyticEvents: c4, RPCCloseCodes: c5, RPCCommands: closure_6, RPCErrors: error, RPCEvents: closure_8 } = ME);
+const require = arg1;
+({ AnalyticEvents: c5, RPCCloseCodes: closure_6, RPCCommands: error, RPCErrors: closure_8, RPCEvents: c9 } = ME);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
-let closure_10 = [];
+let closure_11 = [];
 let result = require("set").fileFinishedImporting("modules/rpc/RPCServer.tsx");
 class RPCServer {
   constructor(arg0) {
@@ -71,17 +72,17 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
   closure_2 = arg1;
   self = this;
   const promise = new Promise((arg0) => {
-    if (null != lib.nonce) {
+    if (null != closure_2.nonce) {
       if ("" !== tmp.nonce) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_COMMAND;
+          obj[0] = closure_1_8.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
-          let tmp15 = self(authorization[5]);
+          let tmp15 = lib(closure_2[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
           throw tmp15;
-        } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
+        } else if (lib(closure_2[6])(lib.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
           if (typeof tmp25.scope === "object") {
@@ -93,30 +94,30 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_5.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_8.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
   });
   const nextPromise = new Promise((arg0) => {
-    if (null != lib.nonce) {
+    if (null != closure_2.nonce) {
       if ("" !== tmp.nonce) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_COMMAND;
+          obj[0] = closure_1_8.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
-          let tmp15 = self(authorization[5]);
+          let tmp15 = lib(closure_2[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
           throw tmp15;
-        } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
+        } else if (lib(closure_2[6])(lib.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
           if (typeof tmp25.scope === "object") {
@@ -128,21 +129,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_5.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_8.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
     closure_0 = arg0;
     closure_0 = undefined;
-    closure_0 = lib((arg0, arg1) => {
+    closure_0 = self((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       c4 = 0;
@@ -159,7 +160,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -193,15 +194,15 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_2 = arg1;
-              self(table[8])(null != closure_0.validation, "command.validation must not be null");
+              callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
               const args = closure_2_2.args;
               closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = closure_3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
+                  obj[0] = closure_3_8.INVALID_PAYLOAD;
+                  const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -229,17 +230,17 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
     });
   });
   const nextPromise1 = new Promise((arg0) => {
-    if (null != lib.nonce) {
+    if (null != closure_2.nonce) {
       if ("" !== tmp.nonce) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_COMMAND;
+          obj[0] = closure_1_8.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
-          let tmp15 = self(authorization[5]);
+          let tmp15 = lib(closure_2[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
           throw tmp15;
-        } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
+        } else if (lib(closure_2[6])(lib.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
           if (typeof tmp25.scope === "object") {
@@ -251,21 +252,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_5.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_8.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
     closure_0 = arg0;
     closure_0 = undefined;
-    closure_0 = lib((arg0, arg1) => {
+    closure_0 = self((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       c4 = 0;
@@ -282,7 +283,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -316,15 +317,15 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_2 = arg1;
-              self(table[8])(null != closure_0.validation, "command.validation must not be null");
+              callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
               const args = closure_2_2.args;
               closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = closure_3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
+                  obj[0] = closure_3_8.INVALID_PAYLOAD;
+                  const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -351,31 +352,46 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       return applyArgumentsResult;
     });
   }).then((handler) => {
-    const obj = { socket: closure_1, server: self, cmd: lib.cmd, evt: lib.evt, nonce: lib.nonce, args: null, isSocketConnected: null, signal: null };
-    let args = lib.args;
-    if (args == null) {
-      args = {};
+    if (lib.source.type === closure_1_4.POST_MESSAGE) {
+      let obj = self(closure_2[9]);
+      obj = { cmd: null, iframeId: null, args: null };
+      obj[0] = closure_2.cmd;
+      obj[1] = tmp.source.iframeId;
+      let args = closure_2.args;
+      if (args == null) {
+        args = {};
+      }
+      obj[2] = args;
+      const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+      if (null != interceptRpcCommandResult) {
+        return interceptRpcCommandResult.result;
+      }
     }
-    obj[5] = args;
+    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
+    let args1 = closure_2.args;
+    if (args1 == null) {
+      args1 = {};
+    }
+    obj[5] = args1;
     obj[6] = function isSocketConnected() {
       sockets = sockets.sockets;
       return sockets.has(closure_1);
     };
-    obj[7] = closure_1.abortController.signal;
+    obj[7] = lib.abortController.signal;
     return handler.handler(obj);
   });
   new Promise((arg0) => {
-    if (null != lib.nonce) {
+    if (null != closure_2.nonce) {
       if ("" !== tmp.nonce) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_COMMAND;
+          obj[0] = closure_1_8.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
-          let tmp15 = self(authorization[5]);
+          let tmp15 = lib(closure_2[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
           throw tmp15;
-        } else if (self(authorization[6])(authorization.authorization.scopes, tmp25.scope)) {
+        } else if (lib(closure_2[6])(lib.authorization.scopes, tmp25.scope)) {
           obj = { command: null, scope: null, application_id: null, socket_scope: null };
           obj[0] = cmd;
           if (typeof tmp25.scope === "object") {
@@ -387,21 +403,21 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_5.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = closure_1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_8.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new lib(closure_2[5])({ errorCode: closure_1_8.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
     closure_0 = arg0;
     closure_0 = undefined;
-    closure_0 = lib((arg0, arg1) => {
+    closure_0 = self((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       c4 = 0;
@@ -418,7 +434,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -452,15 +468,15 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_2 = arg1;
-              self(table[8])(null != closure_0.validation, "command.validation must not be null");
+              callback(closure_2[8])(null != closure_0.validation, "command.validation must not be null");
               const args = closure_2_2.args;
               closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = closure_3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
+                  obj[0] = closure_3_8.INVALID_PAYLOAD;
+                  const tmp8 = new closure_3_1(closure_3_2[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -487,19 +503,34 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       return applyArgumentsResult;
     });
   }).then((handler) => {
-    const obj = { socket: closure_1, server: self, cmd: lib.cmd, evt: lib.evt, nonce: lib.nonce, args: null, isSocketConnected: null, signal: null };
-    let args = lib.args;
-    if (args == null) {
-      args = {};
+    if (lib.source.type === closure_1_4.POST_MESSAGE) {
+      let obj = self(closure_2[9]);
+      obj = { cmd: null, iframeId: null, args: null };
+      obj[0] = closure_2.cmd;
+      obj[1] = tmp.source.iframeId;
+      let args = closure_2.args;
+      if (args == null) {
+        args = {};
+      }
+      obj[2] = args;
+      const interceptRpcCommandResult = obj.interceptRpcCommand(obj);
+      if (null != interceptRpcCommandResult) {
+        return interceptRpcCommandResult.result;
+      }
     }
-    obj[5] = args;
+    obj = { socket: tmp, server: self, cmd: closure_2.cmd, evt: closure_2.evt, nonce: closure_2.nonce, args: null, isSocketConnected: null, signal: null };
+    let args1 = closure_2.args;
+    if (args1 == null) {
+      args1 = {};
+    }
+    obj[5] = args1;
     obj[6] = function isSocketConnected() {
       sockets = sockets.sockets;
       return sockets.has(closure_1);
     };
-    obj[7] = closure_1.abortController.signal;
+    obj[7] = lib.abortController.signal;
     return handler.handler(obj);
-  }).then((arg0) => self.dispatch(closure_1, lib.nonce, lib.cmd, null, arg0)).catch((code) => self.error(closure_1, lib.nonce, lib.cmd, code.code, code.message));
+  }).then((arg0) => self.dispatch(closure_1, closure_2.nonce, closure_2.cmd, null, arg0)).catch((code) => self.error(closure_1, closure_2.nonce, closure_2.cmd, code.code, code.message));
 };
 prototype["setCommandHandler"] = function setCommandHandler(arg0, arg1) {
   this.commands[arg0] = arg1;
@@ -591,32 +622,32 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   }
   return tmp;
 };
-prototype["getSubscription"] = function getSubscription(closure_1, closure_1_2, closure_1_3) {
+prototype["getSubscription"] = function getSubscription(closure_1, closure_1_10, closure_1_3) {
   closure_0 = closure_1;
-  closure_1 = closure_1_2;
+  closure_1 = closure_1_10;
   closure_2 = closure_1_3;
   const subscriptions = this.subscriptions;
   return subscriptions.find((socket) => {
-    let isEqualResult = socket.socket === callback;
+    let isEqualResult = socket.socket === closure_0;
     if (isEqualResult) {
-      isEqualResult = socket.evt === table;
+      isEqualResult = socket.evt === callback;
     }
     if (isEqualResult) {
-      isEqualResult = callback(table[3]).isEqual(socket.args, closure_2);
+      isEqualResult = callback(table[3]).isEqual(socket.args, table);
       const obj = callback(table[3]);
     }
     return isEqualResult;
   });
 };
-prototype["addSubscription"] = function addSubscription(closure_1, closure_1_2, closure_1_3, closure_2) {
+prototype["addSubscription"] = function addSubscription(closure_1, closure_1_10, closure_1_3, closure_2) {
   let tmp = closure_2;
   if (closure_2 === undefined) {
     tmp = null;
   }
   const self = this;
   const dispatch = this.dispatch;
-  const bindResult = dispatch.bind(this, closure_1, null, constants3.DISPATCH, closure_1_2);
-  if (null == this.getSubscription(closure_1, closure_1_2, closure_1_3)) {
+  const bindResult = dispatch.bind(this, closure_1, null, constants3.DISPATCH, closure_1_10);
+  if (null == this.getSubscription(closure_1, closure_1_10, closure_1_3)) {
     const subscriptions = self.subscriptions;
     let obj = { update: null, dispatch: null, prevState: null, socket: null, evt: null, args: null };
     obj[0] = tmp;
@@ -629,23 +660,23 @@ prototype["addSubscription"] = function addSubscription(closure_1, closure_1_2, 
     }
     obj[2] = tmpResult;
     obj[3] = closure_1;
-    obj[4] = closure_1_2;
+    obj[4] = closure_1_10;
     obj[5] = closure_1_3;
     subscriptions.push(obj);
     const result = self.dispatchIsSubscribedUpdate();
   }
 };
 prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) {
-  importDefault = arg0;
-  dependencyMap = arg1;
-  closure_2 = arg2;
+  closure_0 = arg0;
+  importDefault = arg1;
+  dependencyMap = arg2;
   applyDefault.remove(this.subscriptions, (socket) => {
-    let isEqualResult = socket.socket === callback;
+    let isEqualResult = socket.socket === closure_0;
     if (isEqualResult) {
-      isEqualResult = socket.evt === table;
+      isEqualResult = socket.evt === callback;
     }
     if (isEqualResult) {
-      isEqualResult = callback(table[3]).isEqual(socket.args, closure_2);
+      isEqualResult = callback(table[3]).isEqual(socket.args, table);
       const obj = callback(table[3]);
     }
     return isEqualResult;
@@ -653,7 +684,7 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["removeSubscriptions"] = function removeSubscriptions(abortController) {
-  importDefault = abortController;
+  closure_0 = abortController;
   applyDefault.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
@@ -667,8 +698,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     tmp = "" !== combined;
   }
   if (tmp) {
-    let arr = closure_10;
-    let flag = closure_10.includes(combined);
+    let arr = closure_11;
+    let flag = closure_11.includes(combined);
     if (!flag) {
       arr = arr.unshift(combined);
       arr.splice(50);
@@ -680,8 +711,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     const subscriptions = this.subscriptions;
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === RELATIONSHIP_UPDATE) {
-        let tmp5 = typeof closure_2 === "function";
-        if (typeof closure_2 === "function") {
+        let tmp5 = typeof targetsFrame === "function";
+        if (typeof targetsFrame === "function") {
           tmp5 = !tmp13(evt);
         }
         if (!tmp5) {
@@ -691,18 +722,18 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
             if (args == null) {
               args = {};
             }
-            const obj2 = callback(RELATIONSHIP_UPDATE[3]);
+            const obj2 = RELATIONSHIP_UPDATE(targetsFrame[3]);
             const _Object = Object;
-            tmp = !obj2.isEqual(tmp13, callback(RELATIONSHIP_UPDATE[3]).pick(args, Object.keys(tmp13)));
-            const obj3 = callback(RELATIONSHIP_UPDATE[3]);
+            tmp = !obj2.isEqual(tmp13, RELATIONSHIP_UPDATE(targetsFrame[3]).pick(args, Object.keys(tmp13)));
+            const obj3 = RELATIONSHIP_UPDATE(targetsFrame[3]);
           }
           tmp5 = tmp;
         }
         if (!tmp5) {
-          if (typeof callback === "function") {
-            callback = tmp6(evt);
+          if (typeof closure_0 === "function") {
+            closure_0 = tmp6(evt);
           }
-          self.dispatch(evt.socket, null, closure_1_6.DISPATCH, evt.evt, callback);
+          self.dispatch(evt.socket, null, closure_1_7.DISPATCH, evt.evt, closure_0);
         }
       }
     });
@@ -718,28 +749,28 @@ prototype["updateSubscriptions"] = function updateSubscriptions() {
 };
 prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
   const self = this;
-  dependencyMap = socket;
-  closure_2 = arg1;
+  importDefault = socket;
+  dependencyMap = arg1;
   closure_3 = timeout;
   let tmp = arg1();
   if (!tmp) {
     if (0 !== timeout) {
-      closure_4 = removeSubscription(12).uniqueId();
-      removeSubscription = function removeSubscription(arg0) {
+      closure_4 = applyDefault.uniqueId();
+      function removeSubscription() {
 
-      };
+      }
       const promise = new Promise((arg0, closure_1) => {
         closure_0 = arg0;
         socket = closure_1;
-        timeout = setTimeout(() => {
+        table = setTimeout(() => {
           if (typeof closure_0 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          closure_1_5.removeSubscription(callback2, closure_1_9, { uniqueId: closure_1_4 });
+          closure_1_5.removeSubscription(callback2, closure_1_10, { uniqueId: closure_1_4 });
           error = new Error("timeout");
           callback2(error);
-        }, closure_3 * removeSubscription(socket[9]).Millis.SECOND);
-        self.addSubscription(socket, closure_1_9, { uniqueId: closure_4 }, () => {
+        }, closure_3 * socket(table[10]).Millis.SECOND);
+        self.addSubscription(socket, closure_1_10, { uniqueId: closure_4 }, () => {
           const tmp = callback3();
           if (tmp) {
             const _clearTimeout = clearTimeout;
@@ -752,7 +783,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         if (typeof removeSubscription !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        self.removeSubscription(closure_1, closure_1_9, { uniqueId: closure_4 });
+        self.removeSubscription(closure_1, closure_1_10, { uniqueId: closure_4 });
         return arg0;
       });
     }

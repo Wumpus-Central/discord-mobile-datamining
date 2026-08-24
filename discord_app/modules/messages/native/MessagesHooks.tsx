@@ -7,7 +7,6 @@ import { updateShouldShowJumpToPresentButton as closure_7 } from "../../chat_inp
 import closure_8 from "../../../stores/GuildAvailabilityStore.tsx";
 import closure_9 from "../../../stores/GuildStore.tsx";
 import closure_10 from "../../../stores/PresenceStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
@@ -26,7 +25,7 @@ export const useMessageAuthorActivities = function useMessageAuthorActivities(ar
   }, items);
   const items1 = [closure_10];
   const items2 = [memo];
-  return _initialize.useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 };
 export const useFetchMessageApplications = function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
@@ -57,7 +56,7 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
   const _require = stateFromStores4;
   const items = [closure_9, closure_8];
   const items1 = [stateFromStores4];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
     const obj = {};
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();

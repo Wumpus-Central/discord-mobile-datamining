@@ -10,9 +10,9 @@ const result = require("set").fileFinishedImporting("modules/experiments/trigger
 export const useCommonTriggerPoint = function useCommonTriggerPoint(OpenNitroTriggerPoint) {
   const _require = OpenNitroTriggerPoint;
   let items = [closure_4];
-  const obj = _initialize;
+  const obj = initialize;
   const items1 = [OpenNitroTriggerPoint, , ];
-  [arr2[1], arr2[2]] = callback(_initialize.useStateFromStoresArray(items, () => {
+  [arr2[1], arr2[2]] = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
     return items;
   }), 2);

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4119 from "../../../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../../_runtime/00019_noop.js";
@@ -15,7 +15,6 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../../utils/PlatformUtils.tsx";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 
 const require = arg1;
 function isPrivateChannelMatch(arr, recipients) {
@@ -88,7 +87,7 @@ function _findMatchingPrivateChannelId() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -167,7 +166,7 @@ function Header(title) {
   const numInGroup = title.numInGroup;
   const items = [numInGroup];
   const memo = React.useMemo(() => closure_1_1(closure_1_2[22])() - (numInGroup + 1), items);
-  let obj = numInGroup(4115);
+  let obj = numInGroup(4119);
   const fn = function s() {
     let obj = numInGroup(closure_1_2[23]);
     let num = 0;
@@ -182,13 +181,13 @@ function Header(title) {
     obj[1] = numInGroup(closure_1_2[23]).withTiming(num2);
     return obj;
   };
-  obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4664).withTiming };
+  obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4671).withTiming };
   fn.__closure = obj;
   fn.__workletHash = 12426216833792;
   fn.__initData = closure_24;
   obj = { style: callback5().header, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items1 = [callback3(numInGroup(8492).GenericHeaderTitle, { title: title.title }), ];
+  const items1 = [callback3(numInGroup(8531).GenericHeaderTitle, { title: title.title }), ];
   obj1 = { style: animatedStyle, variant: "text-xs/medium", color: null, children: null };
   let str = "text-muted";
   if (0 === memo) {
@@ -227,22 +226,22 @@ function ChatPreview(channelId) {
     obj.track(closure_1_12.MESSAGE_COMPOSER_TRANSITIONED, obj);
     navigateToChannel(channelId);
   }, items1);
-  navigateToChannel(15973)(callback);
+  navigateToChannel(16070)(callback);
   let obj = { style: tmp.background, children: null };
   obj = { style: tmp.container, children: null };
   obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
-  const items2 = [callback3(navigateToChannel(10546), obj), ];
+  const items2 = [callback3(navigateToChannel(10585), obj), ];
   obj1 = { portal: null };
   const ref = React.useRef(null);
   obj1[0] = channelId(500).isAndroid();
-  items2[1] = callback3(channelId(15975).PortalKeyboardRenderer, obj1);
+  items2[1] = callback3(channelId(16072).PortalKeyboardRenderer, obj1);
   obj[1] = items2;
   obj[1] = callback4(View, obj);
   return callback3(View, obj);
 }
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = _modDef4115.createAnimatedComponent(require("Text").Text);
+let closure_19 = _modDef4119.createAnimatedComponent(require("Text").Text);
 let obj = { container: { flex: 1 }, background: null, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = obj;
@@ -275,9 +274,9 @@ export default function NewMessageScreen(navigation) {
   let stateFromStores1;
   let tmp = callback5();
   dependencyMap = tmp;
-  const insets = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5441)({ includeKeyboardHeight: true }).insets;
+  const insets = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5446)({ includeKeyboardHeight: true }).insets;
   stateFromStores = insets;
-  FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4761)(() => {
+  FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4766)(() => {
     let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[20]);
     obj = { source_page: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID };
     obj.track(closure_1_12.MESSAGE_COMPOSER_OPENED, obj);
@@ -293,7 +292,7 @@ export default function NewMessageScreen(navigation) {
   first = tmp6[0];
   React = tmp6[1];
   let tmp2 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-  let tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7139);
+  let tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7177);
   [tmp8, c6] = first(obj.useState(false), 2);
   let tmp7 = first(obj.useState(false), 2);
   [tmp10, c7] = first(obj.useState(false), 2);
@@ -340,7 +339,7 @@ export default function NewMessageScreen(navigation) {
       FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(709).unsubscribe("CHANNEL_DELETE", handleChannelDelete);
     };
   }, items2);
-  obj1 = _initialize;
+  obj1 = initialize;
   const items3 = [FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID];
   stateFromStores = obj1.useStateFromStores(items3, () => FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.getChannel(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID));
   const items4 = [first, stateFromStores];
@@ -359,7 +358,7 @@ export default function NewMessageScreen(navigation) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -472,7 +471,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           let obj = callback2(709);
           obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { id: callback(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "text" };
+          obj = { id: callback(5394).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "applicationId" };
           obj[1] = obj;
           obj.dispatch(obj);
         };
@@ -537,7 +536,7 @@ export default function NewMessageScreen(navigation) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -568,8 +567,8 @@ export default function NewMessageScreen(navigation) {
                 const items = [];
                 HermesBuiltin.arraySpread(c4, 0);
                 if (-1 === index) {
-                  if (arr.length >= FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(15974)() - 1) {
-                    let obj5 = callback(4093);
+                  if (arr.length >= FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(16071)() - 1) {
+                    let obj5 = callback(4096);
                     obj5.showMaxGroupMembers();
                     FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(698).track(closure_2_12.MESSAGE_COMPOSER_MAX_USERS_ADDED);
                     c4 = 3;
@@ -587,7 +586,7 @@ export default function NewMessageScreen(navigation) {
                 closure_1_7(false);
                 c4 = 3;
               } else {
-                let obj3 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4770);
+                let obj3 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4775);
                 c3 = 1;
                 c4 = 1;
                 obj3 = { value: null, done: false };
@@ -644,7 +643,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (first.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(5394).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         obj = { channelId: null, navigateToChannel: null, tagListInputRef: null };
         obj[0] = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
@@ -659,7 +658,7 @@ export default function NewMessageScreen(navigation) {
   closure_10 = tmp28;
   let tmp9 = first(obj.useState(false), 2);
   const items10 = [callback];
-  stateFromStores1 = _initialize.useStateFromStores(items10, () => callback.getRelationshipCount() > 0);
+  stateFromStores1 = require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items10, () => callback.getRelationshipCount() > 0);
   const items11 = [navigation, stateFromStores1, 0 === first.length];
   const items12 = [navigation];
   const memo = obj.useMemo(() => {
@@ -722,7 +721,7 @@ export default function NewMessageScreen(navigation) {
     obj[1] = closure_1_17(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[39]), obj);
     return closure_1_17(c6, obj);
   }, items13);
-  obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7159).NEW_MESSAGE_COMPOSER).analyticsLocations, children: callback3(tmp2(11539), obj1) };
+  obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7197).NEW_MESSAGE_COMPOSER).analyticsLocations, children: callback3(tmp2(11588), obj1) };
   obj1 = { actions: memo, noResultActions: memo1, rowMode: stateFromStores1.NONE, tagListInputRef: ref, onSelectUser: callback1, onQueryChanged: callback3, selectedUserIds: first, withAffinitySuggestions: true, overrideResults: tmp26Result, withGuildMembers: tmp28, withGDMNames: true, forceSearchResults: tmp10, onForceSearchResults: callback2, defaultNoResultsFound: memo2, autoFocusSearch: true };
-  return callback3(_context.AnalyticsLocationProvider, obj);
+  return callback3(require("../../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
 };

@@ -50,7 +50,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(12127);
+    let tmp8Result = tmp8(12179);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;
@@ -62,8 +62,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4984).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result1 = tmp8(4984);
+      channelName = tmp8(4989).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result1 = tmp8(4989);
     }
   }
   if (!channelName) {
@@ -122,8 +122,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4984).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result2 = tmp8(4984);
+      channelName1 = tmp8(4989).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result2 = tmp8(4989);
     }
   }
   obj.channelName = channelName1;

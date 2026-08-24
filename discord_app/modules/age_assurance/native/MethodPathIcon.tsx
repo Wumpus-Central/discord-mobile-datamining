@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/MethodPathIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStylesDefault from "../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../_runtime/06607_inlineStyles.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/age_assurance/nativ
 
 export default function MethodPathIcon(icon) {
   let _require;
-  let obj = _map;
+  let obj = map;
   _require = obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   obj = { style: callback().container, children: null };
   obj = { width: 24, height: 24, viewBox: "0 0 24 24", children: null };

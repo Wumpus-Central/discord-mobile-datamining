@@ -61,7 +61,7 @@ export default function StickerPickerListRow(stickers) {
   }
   const tmp6 = callback2();
   closure_6 = tmp6;
-  let AnimateStickers = stickers(4066).AnimateStickers;
+  let AnimateStickers = stickers(4069).AnimateStickers;
   closure_7 = AnimateStickers.useSetting();
   items = [];
   if (nativeRow) {
@@ -78,7 +78,7 @@ export default function StickerPickerListRow(stickers) {
           ({ id: obj4[0], name: obj4[1], format_type: obj4[2] } = tmp12);
           let tmp20 = stickers;
           let tmp21 = dependencyMap;
-          let obj4 = stickers(10119);
+          let obj4 = stickers(10158);
           let tmp22 = closure_7;
           obj[3] = obj4.getStickerAssetUrl(tmp12, closure_7, first);
           obj[4] = first;
@@ -90,7 +90,7 @@ export default function StickerPickerListRow(stickers) {
           obj = { stickerId: null, stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false };
           let tmp14 = stickers;
           tmp15 = dependencyMap;
-          obj[2] = stickers(4964).StickerFormat.PNG;
+          obj[2] = stickers(4969).StickerFormat.PNG;
           arr = items.push(obj);
         }
         num5 = num5 + 1;

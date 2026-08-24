@@ -2,17 +2,17 @@
 import set from "../../../../../../../_runtime/00002_set.js";
 import getEmbedThemeColorsDefault from "getEmbedThemeColors.tsx";
 import metadataDefault from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import registerAssetDefault from "../../../../../../../_runtime/12741_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../../_runtime/12742_registerAsset.js";
-import registerAssetDefault3 from "../../../../../../../_runtime/12743_registerAsset.js";
-import registerAssetDefault4 from "../../../../../../../_runtime/12744_registerAsset.js";
-import registerAssetDefault5 from "../../../../../../../_runtime/12745_registerAsset.js";
-import registerAssetDefault6 from "../../../../../../../_runtime/12746_registerAsset.js";
-import registerAssetDefault7 from "../../../../../../../_runtime/12747_registerAsset.js";
-import registerAssetDefault8 from "../../../../../../../_runtime/12748_registerAsset.js";
-import registerAssetDefault9 from "../../../../../../../_runtime/12749_registerAsset.js";
-import registerAssetDefault10 from "../../../../../../../_runtime/12750_registerAsset.js";
-import registerAssetDefault11 from "../../../../../../../_runtime/12751_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/12796_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../_runtime/12797_registerAsset.js";
+import registerAssetDefault3 from "../../../../../../../_runtime/12798_registerAsset.js";
+import registerAssetDefault4 from "../../../../../../../_runtime/12799_registerAsset.js";
+import registerAssetDefault5 from "../../../../../../../_runtime/12800_registerAsset.js";
+import registerAssetDefault6 from "../../../../../../../_runtime/12801_registerAsset.js";
+import registerAssetDefault7 from "../../../../../../../_runtime/12802_registerAsset.js";
+import registerAssetDefault8 from "../../../../../../../_runtime/12803_registerAsset.js";
+import registerAssetDefault9 from "../../../../../../../_runtime/12804_registerAsset.js";
+import registerAssetDefault10 from "../../../../../../../_runtime/12805_registerAsset.js";
+import registerAssetDefault11 from "../../../../../../../_runtime/12806_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../../stores/AuthenticationStore.tsx";
 import closure_6 from "../../../../../../stores/GiftCodeStore.tsx";
@@ -69,13 +69,13 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
       if (obj2.isThemeDark(forcedTheme)) {
-        const embedBackground = _getGradientColorByPercentage.getEmbedBackground();
+        const embedBackground = require("../../../../../client_themes/native/ClientThemesUtils.tsx").getEmbedBackground();
         let tmp5Result = closure_4(embedBackground);
         if (tmp5Result == null) {
           tmp5Result = backgroundColor;
         }
         tmp4 = tmp5Result;
-        const tmp3Result = _getGradientColorByPercentage;
+        const tmp3Result = getGradientColorByPercentage;
         const tmp5 = closure_4;
       }
       obj[1] = tmp4;

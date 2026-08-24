@@ -64,7 +64,7 @@ class VoicePanelFloatingCTAContainer {
     closure_11 = memo;
     obj3 = require("useFloatingCTAProps");
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    obj4 = require("module_4115");
+    obj4 = require("../../../reanimated/ReanimatedRexport.tsx");
     class A {
       constructor() {
         tmp = wrapperSpecs;
@@ -73,7 +73,7 @@ class VoicePanelFloatingCTAContainer {
         controlsDefaultWidth = obj.getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
         tmp4 = state;
         num = 1;
-        if (state === require("wrapChildrenDefault").TransitionStates.YEETED) {
+        if (state === require("ManaContext").TransitionStates.YEETED) {
           num = 0;
         }
         obj = { bottom: controlsSpecs.get().height + 16, width: controlsDefaultWidth, marginLeft: -1 * require("t")(controlsDefaultWidth / 2), opacity: null, transform: null };
@@ -81,14 +81,14 @@ class VoicePanelFloatingCTAContainer {
         fn = function t(arg0) {
           let tmp = arg0;
           if (arg0) {
-            tmp = closure_3 === closure_1_0(closure_1_2[20]).TransitionStates.YEETED;
+            tmp = closure_3 === closure_1_0(closure_1_2[12]).TransitionStates.YEETED;
           }
           if (tmp) {
             closure_1_0(closure_1_2[18]).runOnJS(closure_4)();
             const obj = closure_1_0(closure_1_2[18]);
           }
         };
-        obj1 = { state: tmp4, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, cleanUp };
+        obj1 = { state: tmp4, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp };
         fn.__closure = obj1;
         fn.__workletHash = 7334460639890;
         fn.__initData = closure_1_14;
@@ -118,7 +118,7 @@ class VoicePanelFloatingCTAContainer {
         return obj;
       }
     }
-    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("wrapChildrenDefault").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("module_4115").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
+    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("ManaContext").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
     A.__closure = obj;
     A.__workletHash = 3338259366067;
     A.__initData = closure_13;

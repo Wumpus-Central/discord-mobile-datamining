@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/content_inventory/u
 
 export default function useEntryActivityAndApplication(extra) {
   const _require = extra;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMatchingActivity(closure_0));
   let application_id;
@@ -22,13 +22,13 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(7145)(items1), 2);
+  const tmp7 = callback(first(7183)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
   const tmp = _require;
-  const tmp4 = first(7145);
+  const tmp4 = first(7183);
   const items2 = [closure_4];
-  obj[1] = _initialize.useStateFromStores(items2, () => {
+  obj[1] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;

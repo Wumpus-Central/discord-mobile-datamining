@@ -4,7 +4,6 @@ import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../user_settings/ThemeStore.tsx";
 import closure_5 from "../ClientThemesBackgroundStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getCustomThemesName } from "MobileThemesUtils.tsx";
 
 require = arg1;
 function getGuildThemeName() {
@@ -14,16 +13,16 @@ function getGuildThemeName() {
 const result = require("set").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(4228)();
+  const tmp = stateFromStores(4232)();
   const _require = tmp;
   let items = [closure_4];
-  stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => theme.theme);
-  let obj = _defaultAreStatesEqual;
+  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => theme.theme);
+  let obj = defaultAreStatesEqual;
   const items1 = [closure_5];
-  const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => gradientPreset.gradientPreset);
-  const obj2 = _defaultAreStatesEqual;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  const obj2 = defaultAreStatesEqual;
   const items2 = [tmp, stateFromStores];
-  const customBackgroundGradient = _getCustomThemesName.useCustomBackgroundGradient();
+  const customBackgroundGradient = require("MobileThemesUtils.tsx").useCustomBackgroundGradient();
   let memo = React.useMemo(() => {
     let tmp3 = null;
     if (null != callback) {

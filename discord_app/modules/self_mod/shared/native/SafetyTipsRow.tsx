@@ -4,7 +4,6 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 const require = arg1;
 noopAll;
@@ -18,5 +17,5 @@ export default function SafetyTipsRow(arg0) {
   let _require;
   ({ index, tip, description, end } = arg0);
   _require = callback();
-  return jsx(_TableRowInner.TableRow, { icon: jsx((children) => closure_1_3(closure_1_2, { style: lib.indexContainer, children: closure_1_3(lib(closure_1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index }), label: tip, subLabel: description, end });
+  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { icon: jsx((children) => closure_1_3(closure_1_2, { style: lib.indexContainer, children: closure_1_3(lib(closure_1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index }), label: tip, subLabel: description, end });
 };

@@ -8,8 +8,6 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "../CaptchaTestUtils.tsx";
 import set from "../../../../../_runtime/00002_set.js";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
 function CaptchaTestScreen(arg0) {
@@ -34,7 +32,7 @@ function CaptchaTestScreen(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -225,7 +223,7 @@ export default function CaptchaTestModal() {
     return obj;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
-  return callback(_NavigationStack.Navigator, obj);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
+  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
 };

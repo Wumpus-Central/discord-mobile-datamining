@@ -5,9 +5,6 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/MessageStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { CircleInformationIcon } from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 function HiddenMedia(length) {
@@ -29,11 +26,11 @@ function HiddenMedia(length) {
 
   ];
   obj = { style: tmp.mediaHiddenRow, children: null };
-  const items1 = [callback(_CircleInformationIcon.CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
+  const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx").CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
   obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  let intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t["VGf+K3"]);
-  items1[1] = callback(_Text.Text, obj);
+  let intl = require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx").t["VGf+K3"]);
+  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[1] = items1;
   items[1] = callback2(View, obj);
   obj[0] = items;

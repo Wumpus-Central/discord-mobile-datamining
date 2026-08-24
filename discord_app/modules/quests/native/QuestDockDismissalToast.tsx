@@ -2,18 +2,16 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/07919_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07958_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
 function QuestDockDismissalNotification() {
   const _require = callback();
   let obj = { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: null };
-  const intl = _getSystemLocale.intl;
+  const intl = require("../../../intl/index.native.tsx").intl;
   obj = {
     arrowHook() {
       let obj = { style: closure_0.toastArrowForwardIconContainer, children: null };
@@ -22,8 +20,8 @@ function QuestDockDismissalNotification() {
       return closure_1_5(closure_1_4, obj);
     }
   };
-  obj[2] = intl.format(_getSystemLocale.t.dYE1px, obj);
-  return jsx(_Text.Text, {
+  obj[2] = intl.format(require("../../../intl/index.native.tsx").t.dYE1px, obj);
+  return jsx(require("../../../design/components/Text/native/Text.tsx").Text, {
     arrowHook() {
       let obj = { style: closure_0.toastArrowForwardIconContainer, children: null };
       obj = { resizeMode: "contain", source: closure_1_1(closure_1_2[7]), style: closure_0.toastArrowForwardIcon };

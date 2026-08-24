@@ -13,7 +13,7 @@ const result = require("set").fileFinishedImporting("components_native/MobileSur
 
 export default function MobileSurvey() {
   const _require = callback();
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];
@@ -33,7 +33,7 @@ export default function MobileSurvey() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -65,7 +65,7 @@ export default function MobileSurvey() {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -114,8 +114,8 @@ export default function MobileSurvey() {
     obj[5] = function renderConfirmRightIcon() {
       return closure_1_7(lib(closure_1_2[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE, size: lib(closure_1_2[12]).Icon.Sizes.SMALL, source: stateFromStores(closure_1_2[14]) });
     };
-    tmp5 = jsx(stateFromStores(4763), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(4763);
+    tmp5 = jsx(stateFromStores(4768), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(4768);
   }
   return tmp5;
 };

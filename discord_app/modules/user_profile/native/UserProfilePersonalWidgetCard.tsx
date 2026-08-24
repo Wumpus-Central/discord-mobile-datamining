@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04761_LinearGradient.js";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import GifTagDefault from "GifTag.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -148,7 +148,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp27Result = tmp27(tmp20(8989), obj7);
+      tmp27Result = tmp27(tmp20(9026), obj7);
     }
     items2[2] = tmp27Result;
     obj3[1] = items2;
@@ -264,7 +264,7 @@ export default function UserProfilePersonalWidgetCard(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(7988).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8027).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -274,10 +274,10 @@ export default function UserProfilePersonalWidgetCard(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12186), obj);
+    tmp4Result = tmp4(tmp5(12238), obj);
   }
   obj[3] = tmp4Result;
-  const tmp6 = disableInteraction(7185);
+  const tmp6 = disableInteraction(7223);
   const sections = widget.sections;
   obj[4] = callback2(closure_7, {
     style: tmp.sectionsContainer,

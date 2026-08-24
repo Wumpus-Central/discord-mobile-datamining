@@ -3,7 +3,7 @@ import recurseReplaceContentTree from "../../RPCHelpers.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../../Constants.tsx";
-import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import CONTEXT_MENU_ICON_NAMES from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
 require = arg1;
 ({ RPCCommands, RPCErrors: c4, ApplicationFlags: c5 } = ME);
@@ -16,7 +16,7 @@ obj = {
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
-obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = createRPCCommand.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);
+obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);
 obj = {
   scope: require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsScope,
   handler(socket) {
@@ -33,7 +33,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ obj = {
     })();
   }
 };
-obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = createRPCCommand.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, obj);
+obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, obj);
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
 
 export default obj;

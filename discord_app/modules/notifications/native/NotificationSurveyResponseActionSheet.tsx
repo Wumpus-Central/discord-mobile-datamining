@@ -6,7 +6,7 @@ import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import registerAssetDefault from "../../../../_runtime/10835_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10874_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -43,8 +43,8 @@ export default function NotificationSurveyResponseActionSheet(header) {
     obj[0] = header;
     obj = { onPress: null };
     obj[0] = onClose;
-    obj[1] = callback(tmp3(7176).ActionSheetCloseButton, obj);
-    tmp5 = callback(tmp3(6949).BottomSheetTitleHeader, obj);
+    obj[1] = callback(tmp3(7214).ActionSheetCloseButton, obj);
+    tmp5 = callback(tmp3(6987).BottomSheetTitleHeader, obj);
   }
   obj = { children: null };
   const items = [tmp5, ];

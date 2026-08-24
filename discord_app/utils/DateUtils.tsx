@@ -2,7 +2,7 @@
 import timestampDefault from "../modules/debug/Logger.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import tDefault from "../../_runtime/03975_t.js";
+import tDefault from "../../_runtime/03978_t.js";
 import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import importDefaultResult from "../modules/user_settings/LocaleStore.tsx";
@@ -17,8 +17,8 @@ function syncHourCycleToIntlConfig() {
   const setting = TimestampHourCycle.getSetting();
   let result = setting !== create.TimestampHourCycle.AUTO;
   if (result) {
-    result = tmp4(4080).supportsSystemDateFormatter();
-    const tmp4Result = tmp4(4080);
+    result = tmp4(4083).supportsSystemDateFormatter();
+    const tmp4Result = tmp4(4083);
   }
   const values = Object.values(tmp4(1236).intl.formatConfig.time);
   const iter = values[Symbol.iterator]();
@@ -100,7 +100,7 @@ function differenceInCalendarDays(str, str2) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = tmp(3975)(date);
+    obj2 = tmp(3978)(date);
   }
   obj = tDefault;
   if (setting == null) {
@@ -110,7 +110,7 @@ function dateFormat(date, LL, setting) {
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
   let tmp7 = table[combined];
   if (null == tmp7) {
-    const tmp9 = tmp(4082)(LL);
+    const tmp9 = tmp(4085)(LL);
     table[combined] = tmp9;
     tmp7 = tmp9;
   }
@@ -194,7 +194,7 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = tmp(3975)(timestamp);
+      tmp8 = tmp(3978)(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
@@ -215,10 +215,10 @@ export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = tmp(3975)(timestamp);
+      tmp6 = tmp(3978)(timestamp);
     }
     let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = tmp(3975);
+    tmpResult = tmp(3978);
   } else {
     str2 = "L";
     if (tmp2Result > -7) {
@@ -257,8 +257,8 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, tmp(3975)(timestamp), tmp(3975)(date));
-    const tmp6 = tmp(3975)(timestamp);
+    str5 = localeDataResult.calendar(str, tmp(3978)(timestamp), tmp(3978)(date));
+    const tmp6 = tmp(3978)(timestamp);
   }
   return dateFormat(timestamp, str5);
 };

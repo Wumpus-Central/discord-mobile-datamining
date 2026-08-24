@@ -281,7 +281,7 @@ function _scheduleGuildResyncs() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -429,7 +429,7 @@ function _scheduleGuildResyncs() {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           c4 = tmp;
@@ -479,7 +479,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _getCachedPrivateChannelObfuscation;
+  let obj = getCachedPrivateChannelObfuscation;
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;
@@ -494,14 +494,14 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = _v1.v4();
+      const v4Result = require("../../../_runtime/00514_v1.js").v4();
       obj = { guildId: null, requestId: null, source: "integrity_check", requestedUserId: null };
       obj[0] = guild_id;
       obj[1] = v4Result;
       obj[3] = id.getId();
       tmp14[guild_id] = obj;
       requestId = v4Result;
-      const tmp4Result = _v1;
+      const tmp4Result = v1;
     }
     if (!tmp8) {
       obj = { guild_id: null, request_id: null };

@@ -6,8 +6,6 @@ import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { ProfilePreviewWrapper } from "IndividualProductPreview.tsx";
 
 const require = arg1;
 ({ useCallback: c4, useState: c5 } = noop);
@@ -30,7 +28,7 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     }, []),
     children: null
   };
-  if (product.type === _CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+  if (product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
     obj[0] = product;
     obj[1] = tmp3;
@@ -46,7 +44,7 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     obj1[1] = tmp3;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
-    obj[1] = tmp7(_ProfilePreviewWrapper.IndividualProductPreview, obj1);
+    obj[1] = tmp7(require("IndividualProductPreview.tsx").IndividualProductPreview, obj1);
     tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;

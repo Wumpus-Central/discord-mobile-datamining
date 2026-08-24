@@ -1,8 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import compactDefault from "../../../../_runtime/09244_compact.js";
+import compactDefault from "../../../../_runtime/09281_compact.js";
 import closure_3 from "../CollectiblesPurchaseStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;
 function getProductPurchaseState(closure_1_5, skuId) {
@@ -17,7 +15,7 @@ function getProductPurchaseState(closure_1_5, skuId) {
   if (skuId != null) {
     type = skuId.type;
   }
-  if (_CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
+  if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE === type) {
     if (!tmp) {
       tmp = items.length > 0 && tmp3Result.length === items.length;
       const tmp7 = items.length > 0 && tmp3Result.length === items.length;
@@ -65,5 +63,5 @@ export { getProductPurchaseState };
 export const useProductPurchaseState = function useProductPurchaseState(product) {
   const _require = product;
   const items = [closure_3];
-  return _initialize.useStateFromStoresObject(items, () => closure_1_4(closure_1_3, closure_0));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => closure_1_4(closure_1_3, closure_0));
 };

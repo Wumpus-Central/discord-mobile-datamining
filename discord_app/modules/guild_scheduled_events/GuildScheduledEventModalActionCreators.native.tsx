@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02008_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import getRRule from "utils/ScheduleUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -17,7 +17,7 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = getRRule;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(asyncRequireImpl(8794, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(asyncRequireImpl(8831, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -38,7 +38,7 @@ function _transitionToEventDetailsFromInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -80,7 +80,7 @@ function _transitionToEventDetailsFromInvite() {
             obj[2] = recurrenceId;
             closure_6(obj);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c5 = tmp;
@@ -114,5 +114,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 export const openEndEventModal = function openEndEventModal(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(12410, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(12462, dependencyMap.paths), closure_4, obj);
 };

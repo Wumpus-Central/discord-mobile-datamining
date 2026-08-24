@@ -69,7 +69,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
   obj1[3] = intl.string(guildId(1236).t.Wi9LEV);
-  const items4 = [callback2(guildId(4734).Text, obj1), , ];
+  const items4 = [callback2(guildId(4739).Text, obj1), , ];
   const obj2 = { style: tmp.button, children: null };
   const intl2 = tmp2(1236).intl;
   const string = intl2.string;
@@ -86,7 +86,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   obj3[2] = str;
   obj3[3] = callback;
-  obj2[1] = callback2(guildId(4745).Button, obj3);
+  obj2[1] = callback2(guildId(4750).Button, obj3);
   items4[1] = callback2(closure_4, obj2);
   let hasItem;
   if (stateFromStores != null) {
@@ -98,24 +98,24 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1236).intl;
     obj4[2] = intl3.string(tmp2(1236).t["KG1V/E"]);
-    tmp17Result = tmp17(tmp2(4734).Text, obj4);
+    tmp17Result = tmp17(tmp2(4739).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;
   obj[1] = items4;
   const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [callback2(closure_5, { source: stateFromStores(14149), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [callback2(closure_5, { source: stateFromStores(14217), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1236).intl;
   obj9[2] = intl4.format(guildId(1236).t["FK0+iX"], {});
-  obj8[1] = callback2(guildId(4734).Text, obj9);
+  obj8[1] = callback2(guildId(4739).Text, obj9);
   items6[1] = callback2(closure_4, obj8);
   obj6[1] = items6;
   items5[1] = closure_13(closure_4, obj6);
   obj[1] = items5;
-  const items7 = [closure_13(closure_4, obj), callback2(guildId(6550).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj), callback2(guildId(6581).NavScrim, {})];
   obj5[0] = items7;
   return closure_13(closure_14, obj5);
 };

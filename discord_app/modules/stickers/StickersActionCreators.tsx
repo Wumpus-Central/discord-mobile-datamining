@@ -8,7 +8,6 @@ import closure_7 from "../../stores/UserStore.tsx";
 import closure_8 from "StickersStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
 function _fetchStickerPack() {
@@ -63,7 +62,7 @@ function _fetchStickerPacks() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -179,7 +178,7 @@ function _fetchSticker() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -223,7 +222,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4823);
+              obj = body(4828);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -236,7 +235,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4823);
+            obj10 = body(4828);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -273,7 +272,7 @@ function _fetchGuildStickersWithCreator() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -328,7 +327,7 @@ function _fetchGuildStickersWithCreator() {
             });
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c5 = tmp;
@@ -364,7 +363,7 @@ function _deleteGuildSticker() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -399,7 +398,7 @@ function _deleteGuildSticker() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -595,7 +594,7 @@ export const clearStickerPreview = function clearStickerPreview(channelId, draft
 };
 export const favoriteSticker = function favoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     let tmp = stickerIds;
@@ -634,7 +633,7 @@ export const favoriteSticker = function favoriteSticker(id) {
 };
 export const unfavoriteSticker = function unfavoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);

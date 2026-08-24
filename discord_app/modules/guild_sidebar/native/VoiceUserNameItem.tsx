@@ -5,7 +5,6 @@ import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/native/useDisplayNameStylesFont.tsx";
 
 const require = arg1;
@@ -22,7 +21,7 @@ export default function VoiceUserNameItem(arg0) {
   ({ guildId, color, variant } = arg0);
   const tmp = callback3();
   let obj = { userId: user.id, guildId };
-  obj1 = _DISPLAY_NAME_STYLES_FONT_FAMILY_MAP;
+  obj1 = DISPLAY_NAME_STYLES_FONT_FAMILY_MAP;
   const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStylesDefault(obj) });
   const tmp4 = useDisplayNameStylesDefault(obj);
   [tmp8, c0] = callback(React.useState(0), 2);
@@ -63,8 +62,8 @@ export default function VoiceUserNameItem(arg0) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(4219).getName(user);
-    const tmp2Result = tmp2(4219);
+    nick = tmp2(4223).getName(user);
+    const tmp2Result = tmp2(4223);
   }
   const items1 = [nick, ];
   if (isGuest) {
@@ -72,11 +71,11 @@ export default function VoiceUserNameItem(arg0) {
     const intl = tmp5(1236).intl;
     const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
     obj2[3] = items2;
-    isGuest = tmp18(tmp5(4734).Text, obj2);
+    isGuest = tmp18(tmp5(4739).Text, obj2);
   }
   items1[1] = isGuest;
   obj[5] = items1;
-  const items3 = [closure_6(_Text.Text, obj), ];
+  const items3 = [closure_6(require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
     const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
@@ -87,7 +86,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15387), obj4);
+    obj3[2] = callback2(tmp2(15451), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

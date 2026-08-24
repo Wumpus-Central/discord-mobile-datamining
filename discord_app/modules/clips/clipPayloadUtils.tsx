@@ -43,7 +43,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      closure_1 = _apexExperiment.isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      closure_1 = require("GameEventsOnPlayerExperiment.tsx").isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
         editMetadata = editMetadata.editMetadata;
@@ -98,7 +98,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         const tmp10 = map;
       }
-      const obj2 = _apexExperiment;
+      const obj2 = apexExperiment;
     }
   }
 };

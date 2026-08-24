@@ -63,6 +63,15 @@ prototype["getFetchStateForApplicationId"] = function getFetchStateForApplicatio
     return closure_3[combined];
   }
 };
+prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(arg0) {
+  if (null != arg0) {
+    let prop;
+    if (dependencyMap[arg0] != null) {
+      prop = tmp2.storefrontPromotionIds;
+    }
+    return prop;
+  }
+};
 prototype["getRewardsForSkuId"] = function getRewardsForSkuId(id) {
   if (null != id) {
     if (null != dependencyMap[id]) {

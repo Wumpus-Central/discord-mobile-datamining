@@ -15,7 +15,7 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1236).intl;
     let stringResult = intl.string(interval(1236).t.WZG1BU);
   } else {
-    let obj = interval(14577);
+    let obj = interval(14645);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   obj = {

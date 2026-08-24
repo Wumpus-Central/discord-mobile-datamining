@@ -5,8 +5,6 @@ import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 import { UserSettingsDelay } from "../user_settings/UserSettingsConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
@@ -25,7 +23,7 @@ export const useIsContentDismissed = function useIsContentDismissed(arg0, arg1) 
   const _require = arg0;
   closure_1 = arg1;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const dismissedGuildContent = closure_1_3.getDismissedGuildContent(closure_1);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {
@@ -39,7 +37,7 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   const _require = true;
   importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
   dependencyMap = closure_0;
-  let obj = _updateUserGuildSettings;
+  let obj = updateUserGuildSettings;
   const result = obj.updateUserGuildSettings(closure_0, (dismissedGuildContent) => {
     dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
     let hasBitResult = null != dismissedGuildContent;
@@ -56,7 +54,7 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
     obj = { type: null, guild_id: null, action: null };
-    obj[0] = _DismissibleContent.DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK];
+    obj[0] = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK];
     obj[1] = closure_0;
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
@@ -70,7 +68,7 @@ export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, gu
   const _require = false;
   closure_1 = dc;
   dependencyMap = guildId;
-  const result = _updateUserGuildSettings.updateUserGuildSettings(guildId, (dismissedGuildContent) => {
+  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(guildId, (dismissedGuildContent) => {
     dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {

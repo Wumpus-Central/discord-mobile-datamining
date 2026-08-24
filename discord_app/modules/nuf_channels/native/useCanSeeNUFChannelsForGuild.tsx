@@ -4,7 +4,6 @@ import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
@@ -13,7 +12,7 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
   const _require = id;
   const items = [closure_4, closure_3, closure_2];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const currentUser = closure_1_4.getCurrentUser();
     if (null != currentUser) {
       if (obj3.isNewUser(currentUser)) {

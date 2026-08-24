@@ -15,7 +15,6 @@ import ME from "../Constants.tsx";
 import { RowType } from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
 import jsxProd from "../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
-import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
 
 const require = arg1;
 function ChannelTypeRow(selected) {
@@ -162,7 +161,7 @@ class CreateChannel {
     closure_7 = canResult1;
     tmp11 = closure_14;
     currentUser = closure_14.getCurrentUser();
-    tmp13 = require("module_38")(null != currentUser, "CreateChannel: user cannot be undefined");
+    tmp13 = require("../../_runtime/metro/00038__.js")(null != currentUser, "CreateChannel: user cannot be undefined");
     str = require("computeChannelName")(stateFromStores1);
     obj3 = onChannelCreated;
     if (str == null) {
@@ -740,6 +739,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_NavigationStack.Navigator, { screens, initialRouteStack });
+  return callback(require("../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

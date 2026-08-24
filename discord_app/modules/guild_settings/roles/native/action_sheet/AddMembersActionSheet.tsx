@@ -113,7 +113,7 @@ class AddMembersBody {
     tmp8 = length;
     tmp9 = closure_9;
     obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: null, inActionSheet: null };
-    tmp4Result = require("module_8862");
+    tmp4Result = require("../../../../../design/components/TagListInput/native/TagListInput.native.tsx");
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.vMiCaQ);
     values = Object.values(pendingAdditions);

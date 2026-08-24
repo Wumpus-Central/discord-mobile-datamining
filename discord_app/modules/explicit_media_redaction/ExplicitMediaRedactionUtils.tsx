@@ -116,12 +116,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(5006);
+        let tmp3Result = tmp3(5011);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(5006);
+        tmp3Result = tmp3(5011);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -172,8 +172,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(5006).distribution(obj, sum);
-      const tmp10Result = tmp10(5006);
+      tmp10(5011).distribution(obj, sum);
+      const tmp10Result = tmp10(5011);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

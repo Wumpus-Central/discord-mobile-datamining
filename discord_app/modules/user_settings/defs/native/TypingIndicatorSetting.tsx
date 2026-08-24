@@ -29,7 +29,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.TYPING_INDICATOR,
   getComponent() {
-    return CustomTypingIndicatorEditScreen.default;
+    return CustomTypingIndicatorEditScreen /* CustomTypingIndicatorEditScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

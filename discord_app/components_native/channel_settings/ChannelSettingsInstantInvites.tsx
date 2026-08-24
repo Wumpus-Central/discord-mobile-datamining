@@ -1,10 +1,10 @@
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef8636 from "../../modules/fastest_list/FastestList.android.tsx";
-import registerAssetDefault from "../../../_runtime/09973_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/09974_registerAsset.js";
-import _modDef16038 from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
+import _modDef8673 from "../../modules/fastest_list/FastestList.android.tsx";
+import registerAssetDefault from "../../../_runtime/10012_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/10013_registerAsset.js";
+import _modDef16136 from "../../modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -36,10 +36,10 @@ export default function ConnectedChannelSettingsInstantInvites() {
   const callback = memo.useCallback((arg0) => {
     callback(arg0 + lib.gap.height);
   }, items);
-  obj1 = _initialize;
+  obj1 = initialize;
   const items1 = [memo1];
   dependencyMap = obj1.useStateFromStores(items1, () => memo1.getChannel());
-  let obj2 = _initialize;
+  let obj2 = initialize;
   const items2 = [memo1];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => memo1.getInvites());
   invites = stateFromStoresObject.invites;
@@ -70,7 +70,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items3);
   const tmp3 = invites(memo.useState(undefined), 2);
   const items4 = [closure_7];
-  const stateFromStoresArray = _initialize.useStateFromStoresArray(items4, () => {
+  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items4, () => {
     if (null != closure_2) {
       const sortedLinkedChannelsForGuild = closure_1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
       let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
@@ -86,18 +86,18 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items5);
   const items6 = [memo1.length];
   const effect = memo.useEffect(() => {
-    callback(8132).setSection(constants.INSTANT_INVITES);
+    callback(8171).setSection(constants.INSTANT_INVITES);
   }, []);
   const items7 = [memo1];
   const callback1 = memo.useCallback((arg0, arg1) => {
     if ("invite" === memo1[arg1].type) {
       let obj = { invite: null };
       obj[0] = tmp.data;
-      let tmp5 = closure_1_9(closure_1_1(9948), obj);
+      let tmp5 = closure_1_9(closure_1_1(9987), obj);
     } else {
       obj = { channel: null };
       obj[0] = tmp.data;
-      tmp5 = closure_1_9(lib(9948).LinkedChannelInvite, obj);
+      tmp5 = closure_1_9(lib(9987).LinkedChannelInvite, obj);
     }
     return tmp5;
   }, items7);
@@ -123,16 +123,16 @@ export default function ConnectedChannelSettingsInstantInvites() {
       obj1[3] = callback1;
       obj1[4] = tmp.gap.height;
       obj1[5] = useSafeAreaInsetsDefault().bottom;
-      obj[1] = callback(_modDef8636, obj1);
+      obj[1] = callback(_modDef8673, obj1);
       let tmp16Result = callback(stateFromStoresArray, obj);
     }
   }
   obj2 = { style: tmp.content, children: null };
   tmp = callback;
-  const items8 = [callback(tmpResult(6549).SceneLoadingIndicator, {}), ];
+  const items8 = [callback(tmpResult(6580).SceneLoadingIndicator, {}), ];
   tmpResult = null;
   if (memo1.length > 0) {
-    tmp2 = _modDef16038;
+    tmp2 = _modDef16136;
     obj = { item: null, onMeasured: null };
     memo1 = memo1[0];
     obj[0] = memo1;

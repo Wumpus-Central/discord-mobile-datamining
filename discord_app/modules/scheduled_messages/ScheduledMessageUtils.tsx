@@ -4,7 +4,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
+import tDefault from "../../../_runtime/03978_t.js";
 import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -20,7 +20,7 @@ require = arg1;
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("module_38")(null != arg1.limit, "Config is missing scheduled message limit");
+    tmp2 = require("../../../_runtime/metro/00038__.js")(null != arg1.limit, "Config is missing scheduled message limit");
     obj.enabled = global;
     obj.limit = arg1.limit;
     return obj;

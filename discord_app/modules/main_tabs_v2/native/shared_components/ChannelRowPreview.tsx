@@ -196,7 +196,7 @@ class NativeChannelRowPreview {
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
       let obj = new gifAutoPlay(seeMoreLabelColor[24])();
-      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, renderComponents: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       obj.setOptions(obj);
       return obj;
     }, items);
@@ -246,7 +246,7 @@ let closure_9 = importAllResult.memo((arg0) => {
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlockedOrIgnored(message.message.author.id), items1);

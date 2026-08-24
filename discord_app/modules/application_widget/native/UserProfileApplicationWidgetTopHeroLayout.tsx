@@ -1,7 +1,7 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../_runtime/06352__isNativeReflectConstruct.js";
+import LinearGradientDefault from "../../../../_runtime/04761_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/06383__isNativeReflectConstruct.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -10,7 +10,6 @@ import { CARD_PADDING } from "../../user_profile/native/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
-import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
@@ -37,26 +36,26 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let _require;
   const tmp = callback4();
   [tmp3, c0] = callback(React.useState(null), 2);
-  let obj = _resolvedValuesFromUserApplicationIdentityProfile;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  obj1 = _resolvedValuesFromUserApplicationIdentityProfile;
+  obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = _resolvedValuesFromUserApplicationIdentityProfile;
+  let obj2 = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = _resolvedValuesFromUserApplicationIdentityProfile;
+  let obj3 = resolvedValuesFromUserApplicationIdentityProfile;
   const hero_image = topConfig.components.hero_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (hero_image != null) {
     image = hero_image.fields.image;
   }
-  const items = [_resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
+  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx").ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   obj = { style: tmp.root, children: null };
   const items1 = [header.header, , ];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
-  const items2 = [callback2(_formatDurationNarrow.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_formatDurationNarrow.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_formatDurationNarrow.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_formatDurationNarrow.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx").FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj1[1] = items2;
   const items3 = [callback3(closure_6, obj1), ];
   obj2 = { style: tmp.heroImageColumn, children: null };
@@ -64,7 +63,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   if (tmp14Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp14Result = tmp14(tmp4(12278).ImageSkeleton, obj3);
+    tmp14Result = tmp14(tmp4(12330).ImageSkeleton, obj3);
   }
   obj2[1] = tmp14Result;
   items3[1] = callback2(closure_6, obj2);

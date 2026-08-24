@@ -5,7 +5,6 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import useWebBrowserSettingOptions from "SelectWebBrowserSetting.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingsWebBrowserScreen } from "../../web_browser/native/SettingsWebBrowserScreen.tsx";
 
 obj = {
   useTitle() {
@@ -22,7 +21,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.BROWSER,
   getComponent() {
-    return SettingsWebBrowserScreen.default;
+    return require("../../web_browser/native/SettingsWebBrowserScreen.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);

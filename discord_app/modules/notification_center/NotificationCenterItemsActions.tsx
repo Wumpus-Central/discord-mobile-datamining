@@ -26,7 +26,7 @@ function _fetchNotificationCenterItems() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -94,7 +94,7 @@ function _fetchNotificationCenterItems() {
               c6 = 3;
               c7 = 1;
               let obj6 = { value: null, done: false };
-              obj6[0] = callback(5227).get(obj3);
+              obj6[0] = callback(5232).get(obj3);
               return obj6;
             }
           } else if (2 === tmp7) {
@@ -306,7 +306,7 @@ function _deleteNotificationCenterItem() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -375,7 +375,7 @@ function _deleteNotificationCenterItem() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           closure_3 = tmp19;

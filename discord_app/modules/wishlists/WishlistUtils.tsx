@@ -32,15 +32,11 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
   if (isSKUWishlistItemRecord(sku)) {
     if (sku.sku.productLine === SKUProductLines.SOCIAL_LAYER_GAME_ITEM) {
-      let prop = isWishlistOwner.isSocialLayerStorefrontMobilePurchasingEnabled;
-      if (prop) {
-        if (!isWishlistOwner) {
-          isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = useSKUPrice;
-        }
-        prop = isWishlistOwner;
+      if (!isWishlistOwner) {
+        isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
+        const obj = useSKUPrice;
       }
-      let tmp2 = prop;
+      let tmp2 = isWishlistOwner;
     }
     return tmp2;
   }

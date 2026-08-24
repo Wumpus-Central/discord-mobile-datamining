@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TOOLTIP,
   getComponent() {
-    return Content.default;
+    return Content /* Content */.default;
   }
 };
 const route = createToggle.createRoute(obj);

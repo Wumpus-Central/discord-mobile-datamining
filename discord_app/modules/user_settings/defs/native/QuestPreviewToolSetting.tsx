@@ -22,7 +22,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return SettingsQuestPreviewScreen.default;
+    return SettingsQuestPreviewScreen /* SettingsQuestPreviewScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

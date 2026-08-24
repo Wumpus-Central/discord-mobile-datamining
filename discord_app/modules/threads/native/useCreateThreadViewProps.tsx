@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/threads/native/useC
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
   const _require = tmp;
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   const items = [closure_3];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {

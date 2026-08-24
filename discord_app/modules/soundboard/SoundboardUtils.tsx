@@ -18,7 +18,6 @@ import closure_8 from "SoundboardStore.tsx";
 import MAX_LENGTH_SOUND_NAME from "SoundboardConstants.tsx";
 import ME from "../../Constants.tsx";
 import { ExpressionPickerViewType } from "../expression_picker/ExpressionPickerConstants.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 require = arg1;
 function hasPermissionToPlaySound(guildId, guild_id) {
@@ -117,7 +116,7 @@ function _maybePlayCustomJoinSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -201,7 +200,7 @@ function _maybePlayCustomJoinSound() {
             }
           }
           sound2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp33) {
           sound2 = tmp;
           throw tmp33;
@@ -287,8 +286,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4219).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4219);
+      const result = tmp(4223).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4223);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
         items1.push(tmp(1377).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
@@ -301,7 +300,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
 export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
   const _require = closure_0;
   closure_1 = arg1;
-  const result = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (arg0) => {
+  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(closure_0, (arg0) => {
     arg0.joinSound = undefined;
     let obj = { guildId: callback, changeType: callback(closure_1_2[13]).AnalyticsChangeType.REMOVED, soundType: callback(closure_1_2[13]).AnalyticsSoundType.ENTRY, location: callback2 };
     const guildId = obj.guildId;
@@ -317,13 +316,13 @@ export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
     obj[3] = soundType;
     obj[4] = soundSource;
     callback2(closure_1_2[23]).track(closure_1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
   const _require = closure_0;
   closure_1 = arg1;
   dependencyMap = arg2;
-  const result = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (joinSound) => {
+  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(closure_0, (joinSound) => {
     const AnalyticsSoundSource = callback(table[13]).AnalyticsSoundSource;
     if (lib.guildId === closure_1_10) {
       let CUSTOM = AnalyticsSoundSource.DEFAULT;
@@ -352,7 +351,7 @@ export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
     obj[3] = tmp6(tmp5[13]).AnalyticsSoundType.ENTRY;
     obj[4] = CUSTOM;
     obj.track(closure_1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSoundExternallyDeleted(location_stack) {
   expandEventPropertiesDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: location_stack.location });

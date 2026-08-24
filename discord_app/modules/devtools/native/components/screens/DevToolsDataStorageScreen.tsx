@@ -11,7 +11,6 @@ import closure_7 from "../../../../../stores/AuthenticationStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import { createStandardNavigationFactories } from "../../../../../../_runtime/01501_createStandardNavigationFactories.js";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 require = arg1;
 function DevToolsPersistedStoresActionSheet(store) {
@@ -19,10 +18,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(6949).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(7177).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
-  return jsx(store(7175).ActionSheet, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(6987).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(7215).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
+  return jsx(store(7213).ActionSheet, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -63,13 +62,13 @@ let closure_11 = importAllResult.memo(() => {
 let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
-    const result = callback(1971).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    const obj = callback(1971);
-    callback(4094).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    const result = callback(1972).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+    const obj = callback(1972);
+    callback(4097).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {
-  let obj = _createStandardNavigationFactories;
+  let obj = createStandardNavigationFactories;
   _require = obj.useNavigation();
   obj = {
     label: "View Cache Stats",
@@ -78,7 +77,7 @@ let closure_13 = importAllResult.memo(() => {
       navigation.navigate("cacheStats");
     }
   };
-  return jsx(_TableRowInner.TableRow, {
+  return jsx(require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {

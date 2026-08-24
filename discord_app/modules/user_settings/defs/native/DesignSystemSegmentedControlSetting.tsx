@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
   getComponent() {
-    return UserSettingsDesignSystemSegmentedControl.default;
+    return UserSettingsDesignSystemSegmentedControl /* UserSettingsDesignSystemSegmentedControl */.default;
   }
 };
 const route = createToggle.createRoute(obj);

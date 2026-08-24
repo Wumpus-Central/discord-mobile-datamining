@@ -26,12 +26,7 @@ import ME from "../../../Constants.tsx";
 import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 import { apply } from "../../../../_runtime/00012_apply.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { shortenAndLocalizeNumber } from "../../../utils/NumberUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../QuestTypes.tsx";
 import { getQuestDeliveryDataForPlacement } from "../utils/QuestDataUtils.tsx";
-import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
 import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
 
 require = arg1;
@@ -67,7 +62,7 @@ function useQuests(arg0) {
   isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(589);
-  isEligibleForQuests = obj(10685).getIsEligibleForQuests();
+  isEligibleForQuests = obj(10724).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -91,11 +86,11 @@ function useQuests(arg0) {
       }
       if (flag) {
         dependencyMap(true);
-        obj = obj(10477);
+        obj = obj(10516);
         const currentQuests = obj.fetchCurrentQuests();
         if (obj2.isMac()) {
-          const state = hasFetched(10501).getState();
-          const obj3 = hasFetched(10501);
+          const state = hasFetched(10540).getState();
+          const obj3 = hasFetched(10540);
         }
         obj2 = obj(500);
       }
@@ -221,9 +216,9 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       questHomeHero = questHomeHero.questHomeHero;
       if (null != questHomeHero) {
         if (!questHomeHero.isQuestHomeHeroShelfEnabled) {
-          let tmp50Result = tmp50(7474);
+          let tmp50Result = tmp50(7512);
           const result2 = tmp50Result.isQuestFeaturedByHero(questHomeHero, id.id);
-          tmp50Result = tmp50(7474);
+          tmp50Result = tmp50(7512);
           let num2 = 1;
           if (result2) {
             num2 = c28;
@@ -231,13 +226,13 @@ function defaultSortFn(id, id2, questHomeHero, get) {
           return num2;
         }
       }
-      const questType = tmp50(7474).getQuestType(id.config);
-      const tmp50Result1 = tmp50(7474);
-      const questType1 = tmp50(7474).getQuestType(id2.config);
-      const tmp50Result2 = tmp50(7474);
-      const result3 = tmp50(7476).hasWatchVideoOnMobileTasks(id);
-      const tmp50Result3 = tmp50(7476);
-      const result4 = tmp50(7476).hasWatchVideoOnMobileTasks(id2);
+      const questType = tmp50(7512).getQuestType(id.config);
+      const tmp50Result1 = tmp50(7512);
+      const questType1 = tmp50(7512).getQuestType(id2.config);
+      const tmp50Result2 = tmp50(7512);
+      const result3 = tmp50(7514).hasWatchVideoOnMobileTasks(id);
+      const tmp50Result3 = tmp50(7514);
+      const result4 = tmp50(7514).hasWatchVideoOnMobileTasks(id2);
       if (result3 !== result4) {
         if (!result3) {
           return num3;
@@ -250,7 +245,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       }
       if (questType !== questType1) {
         num3 = 1;
-        if (questType === tmp50(7479).QuestType.VIDEO) {
+        if (questType === tmp50(7517).QuestType.VIDEO) {
           num3 = c28;
         }
       }
@@ -307,7 +302,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
         num10 = c28;
       }
       num5 = num10;
-      const tmp50Result4 = tmp50(7476);
+      const tmp50Result4 = tmp50(7514);
     }
     const obj9 = getQuestDeliveryDataForPlacement;
     const tmp19 = null != completedAt2;
@@ -375,22 +370,22 @@ function doesQuestPassTaskFilter(quest) {
     obj[0] = quest;
     let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
     if (!hasPlayOnDesktopTaskResult) {
-      let tmp2Result = tmp2(7476);
+      let tmp2Result = tmp2(7514);
       obj = { quest: null };
       obj[0] = quest;
       hasPlayOnDesktopTaskResult = tmp2Result.hasStreamOnDesktopTask(obj);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      tmp2Result = tmp2(7476);
+      tmp2Result = tmp2(7514);
       hasPlayOnDesktopTaskResult = tmp2Result.hasPlayActivityTask(quest);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7476).isConsoleQuest(quest);
-      const tmp2Result1 = tmp2(7476);
+      hasPlayOnDesktopTaskResult = tmp2(7514).isConsoleQuest(quest);
+      const tmp2Result1 = tmp2(7514);
     }
     if (!hasPlayOnDesktopTaskResult) {
-      hasPlayOnDesktopTaskResult = tmp2(7476).isInGameQuest(quest);
-      const tmp2Result2 = tmp2(7476);
+      hasPlayOnDesktopTaskResult = tmp2(7514).isInGameQuest(quest);
+      const tmp2Result2 = tmp2(7514);
     }
     return hasPlayOnDesktopTaskResult;
   } else {
@@ -429,7 +424,7 @@ function sortQuests(arr) {
     if (0 !== filters.length) {
       let found = arr;
       if (0 !== filters.length) {
-        _require = _apply.groupBy(filters, "group");
+        _require = require("../../../../_runtime/00012_apply.js").groupBy(filters, "group");
         found = arr.filter((arg0) => {
           closure_0 = arg0;
           const entries = Object.entries(closure_0);
@@ -444,7 +439,7 @@ function sortQuests(arr) {
             return 0 === arr.length || arr.some((arg0) => callback(closure_0, arg0.filter));
           });
         });
-        let obj2 = _apply;
+        let obj2 = apply;
       }
       obj = found;
     }
@@ -471,7 +466,7 @@ function sortQuests(arr) {
           let tmp8 = nextResult;
           let tmp9 = callback;
           let tmp10 = dependencyMap;
-          let obj2 = callback(7474);
+          let obj2 = callback(7512);
           let tmp11 = constants;
           if (obj2.hasVariant(nextResult, constants.RENEWABLE_END_DATE)) {
             let tmp12 = nextResult;
@@ -486,8 +481,8 @@ function sortQuests(arr) {
     return map;
   })(obj, tmp2.currentUserId, tmp2.isRenewableEndDateSortEnabled);
   return obj.sort((arg0, arg1) => {
-    const isQuestExpiredResult = callback(7451).isQuestExpired(arg0);
-    obj = callback(7451);
+    const isQuestExpiredResult = callback(7489).isQuestExpired(arg0);
+    obj = callback(7489);
     const tmp2 = !isQuestExpiredResult;
     if (tmp2 !== !obj2.isQuestExpired(arg1)) {
       let num = 1;
@@ -603,14 +598,14 @@ function isQuestHiddenFromQuestHome(userStatus) {
 function useIsQuestProgressing(quest) {
   let _require = quest;
   const items = [closure_12];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_12.isProgressingOnDesktop(quest.id));
+  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.isProgressingOnDesktop(quest.id));
   _require = quest;
   const items1 = [quest];
   _require = quest;
   const memo = React.useMemo(() => quest(first[21]).isQuestProgressingOnConsole(quest), items1);
-  obj = _initialize;
+  obj = initialize;
   const items2 = [closure_12];
-  const items3 = [quest, _initialize.useStateFromStores(items2, () => closure_1_12.getOptimisticProgress(quest.id, quest(closure_1_2[31]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
+  const items3 = [quest, require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_1_12.getOptimisticProgress(quest.id, quest(closure_1_2[31]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
   const memo1 = React.useMemo(() => quest(closure_1_2[32]).isVideoQuestProgressing(quest), items3);
   if (!stateFromStores) {
     stateFromStores = memo;
@@ -683,17 +678,17 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
       obj = { currentProgressingPlatform: closure_1_13.CONSOLE };
       const str = quest(first[42]);
       obj = { currentProgressingPlatform: closure_1_13.DESKTOP };
-      const withResult = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE);
+      const withResult = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE);
       obj1 = { currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE };
-      const withResult1 = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP);
+      const withResult1 = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP);
       const obj2 = { currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP };
-      const withResult2 = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE);
+      const withResult2 = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE);
       const obj3 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE };
-      const withResult3 = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP);
+      const withResult3 = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP);
       const obj4 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.DESKTOP };
-      const withResult4 = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE);
-      const withResult5 = match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP);
-      return match.with(obj, () => callback(6719).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6719).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.DESKTOP }, () => callback(6719).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
+      const withResult4 = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE);
+      const withResult5 = match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP);
+      return match.with(obj, () => callback(6756).TaskPlatformScreen.CONSOLE).with(obj, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.CONSOLE }, () => callback(6756).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: closure_1_13.DESKTOP }, () => callback(6756).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
         if (closure_4) {
           if (closure_3) {
             let SELECT = closure_1_0(closure_1_2[43]).TaskPlatformScreen.SELECT;
@@ -882,13 +877,13 @@ export const useFilteredQuests = function useFilteredQuests(ALL, closure_4) {
 export const useClaimedQuests = function useClaimedQuests() {
   const _require = React.useRef(false);
   const items = [closure_12];
-  let claimedQuests = _initialize.useStateFromStoresArray(items, () => {
+  let claimedQuests = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const claimedQuests = closure_12.claimedQuests;
     return Array.from(claimedQuests.values());
   });
-  obj = _initialize;
+  obj = initialize;
   const items1 = [closure_12];
-  const isFetchingClaimedQuests = _initialize.useStateFromStores(items1, () => closure_12.isFetchingClaimedQuests);
+  const isFetchingClaimedQuests = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_12.isFetchingClaimedQuests);
   const items2 = [isFetchingClaimedQuests];
   const effect = React.useEffect(() => {
     let current = isFetchingClaimedQuests;
@@ -911,17 +906,17 @@ export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest,
   const _require = quest;
   const items = [closure_12];
   const items1 = [quest];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != c0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = closure_1_12.isQuestExpired(tmp.id);
     }
     return isQuestExpiredResult;
   }, items1);
-  obj = _initialize;
-  const result = __getDefaultRewardName.hasVirtualCurrencyReward(quest.config);
-  const obj2 = __getDefaultRewardName;
-  const result1 = __getDefaultRewardName.hasPremiumOrbQuantity(quest.config);
+  obj = initialize;
+  const result = require("../utils/QuestRewardUtils.tsx").hasVirtualCurrencyReward(quest.config);
+  const obj2 = _getDefaultRewardName;
+  const result1 = require("../utils/QuestRewardUtils.tsx").hasPremiumOrbQuantity(quest.config);
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = result;
@@ -930,7 +925,7 @@ export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest,
     tmp4 = result1;
   }
   if (tmp4) {
-    tmp4 = questOrbMultiplierEligibility !== _items.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    tmp4 = questOrbMultiplierEligibility !== require("../utils/QuestOrbMultiplierUtils.tsx").QuestOrbMultiplierEligibilityType.INELIGIBLE;
   }
   return tmp4;
 };
@@ -938,7 +933,7 @@ export const useQuestOrbRewardMultiplier = function useQuestOrbRewardMultiplier(
   const _require = questId;
   const items = [closure_12];
   const items1 = [questId];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const quest = closure_1_12.getQuest(questId);
     let questOrbMultiplier = null;
     if (null != quest) {
@@ -952,7 +947,7 @@ export const useIsQuestExpired = function useIsQuestExpired(deliveredQuest) {
   const _require = deliveredQuest;
   const items = [closure_12];
   const items1 = [deliveredQuest];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != c0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = closure_1_12.isQuestExpired(tmp.id);
@@ -968,7 +963,7 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
   const _require = userStatus;
   closure_1 = arg1;
   const items = [closure_7];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let channelId;
     if (channelId != null) {
       channelId = channelId.channelId;
@@ -979,13 +974,13 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
     }
     return channel;
   });
-  obj = _initialize;
+  obj = initialize;
   const tmp = _require;
   const items1 = [closure_12];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => null != obj.questEnrollmentBlockedUntil, []);
-  const obj2 = _initialize;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => null != obj.questEnrollmentBlockedUntil, []);
+  const obj2 = initialize;
   const items2 = [closure_9];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -993,7 +988,7 @@ export const useIsQuestEligibleForMembersListPopout = function useIsQuestEligibl
     }
     return id;
   });
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const items3 = [closure_12];
   const items4 = [userStatus];
   if (null != userStatus) {
@@ -1069,7 +1064,7 @@ export const useOnOpenGameClick = function useOnOpenGameClick(quest) {
 export const useIsQuestProgressingOnDesktop = function useIsQuestProgressingOnDesktop(arg0) {
   const _require = arg0;
   const items = [closure_12];
-  return _initialize.useStateFromStores(items, () => closure_1_12.isProgressingOnDesktop(quest.id));
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.isProgressingOnDesktop(quest.id));
 };
 export const useIsQuestProgressingOnConsole = function useIsQuestProgressingOnConsole(arg0) {
   closure_0 = arg0;
@@ -1079,7 +1074,7 @@ export const useIsQuestProgressingOnConsole = function useIsQuestProgressingOnCo
 export const useIsQuestProgressingVideoQuest = function useIsQuestProgressingVideoQuest(arg0) {
   const _require = arg0;
   const items = [closure_12];
-  const items1 = [arg0, _initialize.useStateFromStores(items, () => closure_1_12.getOptimisticProgress(quest.id, quest(closure_1_2[31]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
+  const items1 = [arg0, require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.getOptimisticProgress(quest.id, quest(closure_1_2[31]).FirstPartyQuestTaskTypes.WATCH_VIDEO))];
   return React.useMemo(() => quest(closure_1_2[32]).isVideoQuestProgressing(quest), items1);
 };
 export { useIsQuestProgressing };
@@ -1110,7 +1105,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   obj = accounts(589);
   const tmp = accounts;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7476).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7514).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1118,8 +1113,8 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  let obj2 = accounts(7476);
-  closure_4 = tmp(10687).useGetQuestImpressionId();
+  let obj2 = accounts(7514);
+  closure_4 = tmp(10726).useGetQuestImpressionId();
   return () => {
     obj = accounts(closure_1_2[30]);
     if (c3) {
@@ -1185,7 +1180,7 @@ export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberL
     }
     return Array.from(set);
   }, items1);
-  const items2 = [arg0, stateFromStores, stateFromStores(7145)(memo)];
+  const items2 = [arg0, stateFromStores, stateFromStores(7183)(memo)];
   memo1 = React.useMemo(() => {
     const result = memo1(closure_1_2[20]).filterQuestsForSocialEntrypoints(stateFromStores, closure_1_15);
     obj = memo1(closure_1_2[20]);
@@ -1301,7 +1296,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1396,7 +1391,7 @@ export const useWaitingForConsoleConnection = function useWaitingForConsoleConne
   ({ xboxAccounts, playstationAccounts } = memo);
   obj = accounts(589);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(7476).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(7514).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1523,7 +1518,7 @@ export const useQuestCompletionDetails = function useQuestCompletionDetails(ques
   if (arg1 === undefined) {
     flag = false;
   }
-  obj = _initialize;
+  obj = initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (typeof useQuestTaskDetails !== "function") {
@@ -1597,12 +1592,12 @@ export const useQuestCompletionDetails = function useQuestCompletionDetails(ques
     obj[2] = combined;
     return obj;
   }
-  combined = _shortenAndLocalizeNumber.formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
+  combined = require("../../../utils/NumberUtils.tsx").formatPercent(stateFromStores, percentComplete, { roundingMode: "floor" });
 };
 export const useSelectedTaskPlatform = function useSelectedTaskPlatform(arg0) {
   const _require = arg0;
   const items = [closure_12];
-  const items1 = [_initialize.useStateFromStores(items, () => closure_1_12.selectedTaskPlatform(closure_0)), ];
+  const items1 = [require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_12.selectedTaskPlatform(closure_0)), ];
   const items2 = [arg0];
   items1[1] = React.useCallback((platform) => quest(first[15]).selectTaskPlatform(quest, platform), items2);
   return items1;
@@ -1664,7 +1659,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   const items5 = [userStatus];
   userStatus = userStatus.userStatus;
   let enrolledAt;
-  const stateFromStores = _initialize.useStateFromStores(items4, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items4, () => {
     let isQuestExpiredResult = null != c0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = closure_1_12.isQuestExpired(tmp.id);
@@ -1680,7 +1675,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   if (userStatus2 != null) {
     completedAt = userStatus2.completedAt;
   }
-  const DESKTOP = tmp8(6723).FirstPartyQuestTaskTypesSets.DESKTOP;
+  const DESKTOP = tmp8(6760).FirstPartyQuestTaskTypesSets.DESKTOP;
   let hasItem = DESKTOP.has(tmp4.taskType);
   if (hasItem) {
     hasItem = tmp4.percentComplete > 0;
@@ -1696,22 +1691,22 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   }
   if (tmp12) {
     if (!hasItem) {
-      hasItem = 0 === tmp4.percentComplete && callback(useTaskPlatformScreen(userStatus, tmp4), 1)[0] === tmp8(6719).TaskPlatformScreen.DESKTOP;
-      const tmp16 = 0 === tmp4.percentComplete && callback(useTaskPlatformScreen(userStatus, tmp4), 1)[0] === tmp8(6719).TaskPlatformScreen.DESKTOP;
+      hasItem = 0 === tmp4.percentComplete && callback(useTaskPlatformScreen(userStatus, tmp4), 1)[0] === tmp8(6756).TaskPlatformScreen.DESKTOP;
+      const tmp16 = 0 === tmp4.percentComplete && callback(useTaskPlatformScreen(userStatus, tmp4), 1)[0] === tmp8(6756).TaskPlatformScreen.DESKTOP;
     }
     tmp12 = hasItem;
   }
   let tmp8Result = tmp8(500);
   let tmp17 = tmp8Result.isWeb() && tmp12;
   if (tmp17) {
-    tmp8Result = tmp8(10689);
+    tmp8Result = tmp8(10728);
     tmp17 = !tmp8Result.isQuestSupportedOnWeb(userStatus);
   }
-  const obj2 = _initialize;
+  const obj2 = initialize;
   tmp14 = null != completedAt;
-  let isMacResult = _set.isMac();
+  let isMacResult = require("../../../utils/PlatformUtils.tsx").isMac();
   if (isMacResult) {
-    isMacResult = tmp4.taskType === tmp8(6723).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
+    isMacResult = tmp4.taskType === tmp8(6760).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
   }
   if (isMacResult) {
     isMacResult = tmp12;
@@ -1913,8 +1908,8 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    isDismissedResult = _getQuestDeliveryDataForPlacement.isDismissed(userStatus.userStatus, _QuestsVisibleMessagesChangedSource.QuestContent.ACTIVITY_PANEL);
-    obj = _getQuestDeliveryDataForPlacement;
+    isDismissedResult = require("../utils/QuestDataUtils.tsx").isDismissed(userStatus.userStatus, require("../QuestTypes.tsx").QuestContent.ACTIVITY_PANEL);
+    obj = getQuestDeliveryDataForPlacement;
   }
   let tmp5 = userStatus;
   if (userStatus == null) {
@@ -1924,7 +1919,7 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   const items = [closure_12];
   const items1 = [tmp5];
   let claimedAt;
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let isQuestExpiredResult = null != c0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = closure_1_12.isQuestExpired(tmp.id);
@@ -1937,12 +1932,12 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
       claimedAt = userStatus.claimedAt;
     }
   }
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const tmp11 = null != claimedAt;
   const tmp6 = _require;
   const tmp8 = closure_12;
   const items2 = [tmp8];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
   if (!isDismissedResult) {
     isDismissedResult = stateFromStores;
   }
@@ -2105,7 +2100,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(loca
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -2179,7 +2174,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(loca
                 v0(false);
               }
               v0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp32) {
             closure_2 = tmp32;
@@ -2240,7 +2235,7 @@ export const useQuestHomeBounties = function useQuestHomeBounties() {
 };
 export const useQuestBarImpressionSurvey = function useQuestBarImpressionSurvey(questCreative) {
   const _require = questCreative;
-  const DropsOptedOut = _explicitContentFromProto.DropsOptedOut;
+  const DropsOptedOut = require("../../user_settings/UserSettings.tsx").DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
   const userStatus = questCreative.userStatus;
   let enrolledAt;
@@ -2251,13 +2246,13 @@ export const useQuestBarImpressionSurvey = function useQuestBarImpressionSurvey(
   const items = [setting, null != enrolledAt, questCreative.id];
   return React.useCallback(() => {
     if (!dependencyMap) {
-      let fireSurveyAction = questCreative(9880).SurveyActionTypes;
-      fireSurveyAction = questCreative(9873).fireSurveyAction;
+      let fireSurveyAction = questCreative(9919).SurveyActionTypes;
+      fireSurveyAction = questCreative(9912).fireSurveyAction;
       obj = { quest_id: null };
       obj[0] = questCreative.id;
       fireSurveyAction(setting ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN, obj);
       const tmp4 = setting ? fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_OUT : fireSurveyAction.AD_IMPRESSION_QUEST_BAR_OPT_IN;
-      const tmp7 = questCreative(9873);
+      const tmp7 = questCreative(9912);
     }
   }, items);
 };

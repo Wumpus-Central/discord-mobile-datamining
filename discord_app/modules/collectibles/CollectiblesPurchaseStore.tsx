@@ -27,7 +27,7 @@ Object.defineProperty(prototype, "isClaiming", {
   set: undefined
 });
 Object.defineProperty(prototype, "purchases", {
-  get: function purchases(hasPreviouslyFetched, arg1) {
+  get: function purchases() {
     return map;
   },
   set: undefined

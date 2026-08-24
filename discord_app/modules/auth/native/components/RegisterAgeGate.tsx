@@ -9,7 +9,7 @@ import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { AuthStates } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../../_runtime/03975_t.js";
+import importDefaultResult from "../../../../../_runtime/03978_t.js";
 import subtractResult from "../../../../../_runtime/00100_getConstants.js";
 
 const require = arg1;
@@ -27,7 +27,7 @@ const cloneResult = utcResult.clone();
 let closure_18 = utcResult.clone().endOf("year").toDate();
 const endOfResult = utcResult.clone().endOf("year");
 const cloneResult1 = utcResult.clone();
-let closure_19 = require("module_100").toDate();
+let closure_19 = require("../../../../../_runtime/00100_getConstants.js").toDate();
 let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
 
 export default function RegisterAgeGate() {

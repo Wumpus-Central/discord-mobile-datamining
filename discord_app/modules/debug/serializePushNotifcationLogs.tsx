@@ -1,7 +1,6 @@
 // discord_app/modules/debug/serializePushNotifcationLogs.tsx
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 ({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);
 const result = set.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
@@ -11,9 +10,9 @@ export default function serializePushNotificationLogs(arr) {
   if (0 === arr.length) {
     return "No logs";
   } else {
-    const Storage = _Storage.Storage;
+    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     let value = Storage.get(closure_2);
-    const Storage2 = _Storage.Storage;
+    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
     value = Storage2.get(closure_3);
     let str2 = "";
     if (null != value) {

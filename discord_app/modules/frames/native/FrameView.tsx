@@ -100,4 +100,20 @@ const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
 const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
+export const InlineFrameView = function InlineFrameView(frameId) {
+  frameId = frameId.frameId;
+  let tmp = null;
+  const merged = Object.assign(frameId, Object.create(null));
+  let obj = frameId(589);
+  const items = [closure_5];
+  const items1 = [frameId];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(closure_1_5.getFrame(frameId)), items1);
+  if (null != stateFromStores) {
+    obj = { frame: null };
+    obj[0] = stateFromStores;
+    const merged1 = Object.assign(merged);
+    tmp = <FrameViewInner frame={null} />;
+  }
+  return tmp;
+};
 export const FrameView = memoResult;

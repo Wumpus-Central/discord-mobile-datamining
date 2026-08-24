@@ -11,9 +11,9 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
   dependencyMap = messageId;
   closure_2 = attachmentId;
   const items = [closure_2];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
-  let obj = _defaultAreStatesEqual;
-  closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
+  let obj = defaultAreStatesEqual;
+  closure_3 = require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -29,16 +29,16 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     }
     return found;
   }
-  const obj2 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId;
+  const obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
   const _require = channelId;
   dependencyMap = messageId;
   closure_2 = embedId;
   const items = [closure_2];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
-  let obj = _defaultAreStatesEqual;
-  closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
+  let obj = defaultAreStatesEqual;
+  closure_3 = require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -54,5 +54,5 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     }
     return found;
   }
-  const obj2 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId;
+  const obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
 };

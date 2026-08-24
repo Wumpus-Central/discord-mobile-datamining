@@ -3,18 +3,13 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import isGuildMemberDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12334_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/12335_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/12386_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/12387_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { SearchField } from "../../../../../design/components/TextField/native/SearchField.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
 require = arg1;
 function EmptyGuildList() {
@@ -33,7 +28,7 @@ function GuildList(recipientId) {
   dependencyMap = undefined;
   let callback;
   dependencyMap = callback4();
-  let obj = recipientId(12331);
+  let obj = recipientId(12383);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -55,7 +50,7 @@ function GuildList(recipientId) {
     }
     obj = { paddingTop: null, paddingBottom: null };
     obj[0] = num;
-    obj[1] = source(5441)().insets.bottom + source(712).space.PX_16;
+    obj[1] = source(5446)().insets.bottom + source(712).space.PX_16;
     obj[1] = obj;
     obj[2] = items;
     obj[3] = function renderSectionHeader(section) {
@@ -77,7 +72,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj[6] = EmptyGuildList;
-    return closure_6(tmp(9450).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(9487).UserProfileStackedActionSheetSectionList, obj);
   }
   obj1 = { title: null, data: null };
   const intl = tmp(1236).intl;
@@ -109,9 +104,9 @@ export default function GuildInviteActionSheet(arg0) {
   const tmp2 = callback(React.useState(""), 2);
   _require = tmp2[1];
   let obj = { title: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t.HvoZQD);
-  obj = { scrollable: true, startExpanded: true, header: callback2(_RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
+  const intl = require("../../../../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../../../../intl/index.native.tsx").t.HvoZQD);
+  obj = { scrollable: true, startExpanded: true, header: callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, obj), contentStyles: tmp.content, children: null };
   obj = { style: tmp.searchbarWrapper, children: null };
   obj1 = {
     onChange(arg0) {
@@ -119,16 +114,16 @@ export default function GuildInviteActionSheet(arg0) {
     },
     placeholder: null
   };
-  const intl2 = _getSystemLocale.intl;
-  obj1[1] = intl2.string(_getSystemLocale.t.uohsSv);
-  const items = [callback2(_SearchField.SearchField, obj1), ];
+  const intl2 = require("../../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl2.string(require("../../../../../intl/index.native.tsx").t.uohsSv);
+  const items = [callback2(require("../../../../../design/components/TextField/native/SearchField.native.tsx").SearchField, obj1), ];
   const obj2 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const intl3 = _getSystemLocale.intl;
-  const tmp3 = callback2(_RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj2[2] = intl3.format(_getSystemLocale.t["4UyUHh"], { xDays: isGuildMemberDefault.INVITE_OPTIONS_7_DAYS.label });
-  items[1] = callback2(_Text.Text, obj2);
+  const intl3 = require("../../../../../intl/index.native.tsx").intl;
+  const tmp3 = callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, obj);
+  obj2[2] = intl3.format(require("../../../../../intl/index.native.tsx").t["4UyUHh"], { xDays: isGuildMemberDefault.INVITE_OPTIONS_7_DAYS.label });
+  items[1] = callback2(require("../../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback3(View, obj), callback2(GuildList, { query: tmp2[0], recipientId, source })];
   obj[4] = items1;
-  return callback3(_Background.BottomSheet, obj);
+  return callback3(require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
 };

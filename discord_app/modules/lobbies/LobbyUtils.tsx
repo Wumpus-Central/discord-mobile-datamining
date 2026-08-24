@@ -1,7 +1,6 @@
 // discord_app/modules/lobbies/LobbyUtils.tsx
 import closure_2 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
@@ -30,7 +29,7 @@ export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, clo
 export const useCanUnlinkLobbyChannel = function useCanUnlinkLobbyChannel(channel) {
   const _require = channel;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
       let tmp3 = null != tmp;
       if (tmp3) {

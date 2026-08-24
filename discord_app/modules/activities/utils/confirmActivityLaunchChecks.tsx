@@ -34,7 +34,7 @@ function _getOrFetchApplicationForLaunch() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,16 +74,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(8735)(callback, callback2);
+              obj2[0] = callback2(8772)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             closure_4 = closure_5;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(8775).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(8775).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(709);
             const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -96,12 +96,12 @@ function _getOrFetchApplicationForLaunch() {
               dependencyMap = null;
             }
             obj3[4] = dependencyMap;
-            const aPIError = new callback(4273).APIError(closure_4);
+            const aPIError = new callback(4277).APIError(closure_4);
             obj3[5] = aPIError;
             obj3[6] = PRIVATE_CHANNEL;
             obj2.dispatch(obj3);
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;
@@ -159,7 +159,7 @@ function _confirmActivityChange() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -203,13 +203,13 @@ function _confirmActivityChange() {
                   if (value != null) {
                     _location = value.location;
                   }
-                  const channel = closure_1_4.getChannel(_undefined(4011).getEmbeddedActivityLocationChannelId(_location));
+                  const channel = closure_1_4.getChannel(_undefined(4014).getEmbeddedActivityLocationChannelId(_location));
                   if (null != value) {
                     if (null != channel) {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(8739)(tmp, channel, () => {
+                      _undefined2(8776)(tmp, channel, () => {
                         let obj = value(table[10])();
                         obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);
@@ -276,7 +276,7 @@ function _confirmActivityAgeGate() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -446,7 +446,7 @@ function _confirmExternalAppLaunch() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

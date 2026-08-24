@@ -13,7 +13,6 @@ import closure_9 from "../../stores/PermissionStore.tsx";
 import { OnboardingConnectionType } from "GuildOnboardingPromptsConstants.tsx";
 import ME from "../../Constants.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 require = arg1;
 function isChattableChannel(guild_id) {
@@ -101,7 +100,7 @@ export const ONBOARDING_EPOCH = date;
 export const useGuildOnboardingSettingsAvailable = function useGuildOnboardingSettingsAvailable(arg0) {
   const _require = arg0;
   const items = [closure_8, closure_9];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_8.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -309,7 +308,7 @@ export { isChattableChannel };
 export const useIsChattableChannel = function useIsChattableChannel(arg0) {
   const _require = arg0;
   const items = [closure_4];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const channel = closure_1_4.getChannel(callback);
     let isNotNullishResult = callback(closure_1_3[13]).isNotNullish(channel);
     if (isNotNullishResult) {
@@ -432,7 +431,7 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
   closure_1 = arg1;
   let items = [closure_6];
   let items1 = [arg0, arg1];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [];
     const items1 = [];
     const iter = closure_1_6.getChannels(callback)[closure_1_7][Symbol.iterator]();

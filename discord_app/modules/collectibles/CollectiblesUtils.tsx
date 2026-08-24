@@ -14,7 +14,6 @@ import fromServer5 from "records/ShopAssetConfigRecord.tsx";
 import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 import items from "CollectiblesShopConstants.tsx";
 import ME from "../../Constants.tsx";
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 
 function getItemRecordsFromPurchases(arr, PROFILE_EFFECT) {
@@ -153,7 +152,7 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
             NITRO = obj.THIRDPARTY;
           }
         }
-        tmp4Result = tmp4(5315);
+        tmp4Result = tmp4(5320);
       }
       return NITRO;
     }
@@ -290,7 +289,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
       const tmpResult = tmp(500);
     }
     DEFAULT = constants3.DEFAULT;
-    obj = _set;
+    obj = set;
     tmp = _require;
   }
 };
@@ -330,7 +329,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
         return obj;
       } else {
         if (!obj5.isAndroid()) {
-          const tmp20Result = _set;
+          const tmp20Result = set;
         }
         _require = DISCORD_ORB;
         const tmp11 = product.prices[hasShopDiscount ? constants3.PREMIUM_TIER_2 : constants3.DEFAULT];
@@ -362,7 +361,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
         return obj;
       }
     } else {
-      obj = _set;
+      obj = set;
       if (obj.isAndroid()) {
         if (DISCORD_ORB !== CurrencyCodes.DISCORD_ORB) {
           let DEFAULT = constants3.MOBILE;
@@ -450,7 +449,7 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
       type = type.type;
     }
     let tmp12 = tmp4;
-    if (type === _CollectiblesItemType.CollectiblesItemType.BUNDLE) {
+    if (type === require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE) {
       tmp12 = tmp4;
       if (hasShopDiscount) {
         obj = {};
@@ -612,12 +611,12 @@ export const getProfileEffects = function getProfileEffects(stateFromStores, fir
   return apply.uniqBy(items, "skuId");
 };
 export const groupProfileEffects = function groupProfileEffects(arr, arr) {
-  const tmp = getItemRecordsFromPurchases(arr, _CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
+  const tmp = getItemRecordsFromPurchases(arr, require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.PROFILE_EFFECT);
   _require = tmp;
-  arr = getItemRecordsFromCategories(arr, _CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
+  arr = getItemRecordsFromCategories(arr, require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.PROFILE_EFFECT);
   return {
     purchased: tmp,
-    shopPreviews: getItemRecordsFromCategories(arr, _CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT).filter((skuId) => {
+    shopPreviews: getItemRecordsFromCategories(arr, require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.PROFILE_EFFECT).filter((skuId) => {
       skuId = skuId.skuId;
       return !skuId.some((skuId) => skuId.skuId === skuId);
     })

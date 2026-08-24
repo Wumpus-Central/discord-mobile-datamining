@@ -3,7 +3,6 @@ import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import closure_3 from "../../../stores/PresenceStore.tsx";
 import { ActivityTypes } from "../../../Constants.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function _findPlayingActivity(type) {
@@ -57,7 +56,7 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const _require = stream;
   const items = [closure_3];
   const items1 = [stream];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let obj = closure_1_3;
     let tmp2 = null;
     if (null != closure_0) {

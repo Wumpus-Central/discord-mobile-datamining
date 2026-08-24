@@ -9,7 +9,7 @@ import { useEditStateStore } from "../edit_state/GuildRoleSubscriptionEditStore.
 import closure_9 from "GuildRoleSubscriptionTierTemplatesStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { ChannelFlags } from "../../channel/ChannelConstants.tsx";
-import importDefaultResult from "../../../../_runtime/04385_allSettled.js";
+import importDefaultResult from "../../../../_runtime/04389_allSettled.js";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 require = arg1;
@@ -64,7 +64,7 @@ function _createChannelsFromTemplateTierBenefits() {
           obj[0] = arr;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -158,13 +158,13 @@ let result = require("set").fileFinishedImporting("modules/guild_role_subscripti
 export const useChannelWithTemplateFallback = function useChannelWithTemplateFallback(ref_id) {
   const _require = ref_id;
   const items = [closure_6];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
-  let obj = _defaultAreStatesEqual;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
+  let obj = defaultAreStatesEqual;
   const items1 = [closure_9];
-  let stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
-  let obj3 = _defaultAreStatesEqual;
+  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
+  let obj3 = defaultAreStatesEqual;
   const items2 = [closure_7];
-  const stateFromStores2 = _defaultAreStatesEqual.useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
     let obj = stateFromStores;
@@ -199,7 +199,7 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
 export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   const _require = guildId;
   const items = [closure_7];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_1 = useEditStateStore((listings) => listings.listings);
   if (undefined !== price_tier) {
